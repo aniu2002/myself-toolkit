@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<maps>
+    <map table="gif_info" clazz="com.sparrow.app.information.domain.GifInfo" desc="">
+        <key>id</key>
+        <select>
+            SELECT * FROM gif_info WHERE id=?
+        </select>
+        <insert>
+            INSERT INTO gif_info(id,alias,icons,gif_url,gif_desc) VALUES(:id,:alias,:icons,:gifUrl,:gifDesc)
+        </insert>
+        <update>
+            UPDATE gif_info SET alias=:alias,icons=:icons,gif_url=:gifUrl,gif_desc=:gifDesc WHERE id=:id
+        </update>
+        <delete>
+            DELETE FROM gif_info WHERE id=?
+        </delete>
+        <query>
+            SELECT * FROM gif_info
+        </query>
+    </map>
+	<map table="lf_members" clazz="com.sparrow.app.information.domain.LfMembers" desc="">
+		<key>id</key>
+		<select>
+			SELECT * FROM lf_members WHERE id=?
+		</select>
+		<insert>
+			INSERT INTO lf_members(name,qq,sex,age,bra,phone,province,city,district,referee_name,referee_qq,price_p,price_pp,price_desc,simple_desc,special,checked,leval,comment,images,create_date,mark) VALUES(:name,:qq,:sex,:age,:bra,:phone,:province,:city,:district,:refereeName,:refereeQq,:priceP,:pricePp,:priceDesc,:simpleDesc,:special,:checked,:leval,:comment,:images,:createDate,:mark)
+		</insert>
+		<update>
+			UPDATE lf_members SET name=:name,qq=:qq,sex=:sex,age=:age,bra=:bra,phone=:phone,province=:province,city=:city,district=:district,referee_name=:refereeName,referee_qq=:refereeQq,price_p=:priceP,price_pp=:pricePp,price_desc=:priceDesc,simple_desc=:simpleDesc,special=:special,checked=:checked,leval=:leval,comment=:comment,update_date=:updateDate,mark=:mark WHERE id=:id
+		</update>
+		<delete>
+			DELETE FROM lf_members WHERE id=?
+		</delete>
+		<query>
+			SELECT * FROM lf_members
+		</query>
+	</map>
+    <map table="primary_school" clazz="com.sparrow.app.information.domain.PrimarySchool" desc="">
+        <key>id</key>
+        <select>
+            SELECT * FROM primary_school WHERE id=?
+        </select>
+        <insert>
+            INSERT INTO primary_school(open_id,name,phone,nick_name,sex,language,city,province,country,head_image) VALUES(:openId,:name,:phone,:nickName,:sex,:language,:city,:province,:country,:headImage)
+        </insert>
+        <update>
+            UPDATE primary_school SET open_id=:openId,name=:name,phone=:phone,nick_name=:nickName,sex=:sex,language=:language,city=:city,province=:province,country=:country,head_image=:headImage WHERE id=:id
+        </update>
+        <delete>
+            DELETE FROM primary_school WHERE id=?
+        </delete>
+        <query>
+            SELECT * FROM primary_school
+        </query>
+    </map>
+</maps>

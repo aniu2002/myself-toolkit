@@ -1,0 +1,173 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>lf_members——资源管理</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="/app/js/bootstrap/css/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/app/js/bootstrap/css/bootstrap-responsive.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/app/js/common/popui/pop-ui.css" type="text/css"/>
+    <link rel="stylesheet" href="/app/css/tooltip/tooltip.css" type="text/css"/>
+    <link rel="stylesheet" href="/app/css/style.css" type="text/css"/>
+    <style type="text/css">
+    .table td i{margin:0 2px;}
+    .active_el { background-color: #AAAAAA;color: #FFFFFF;}</style>
+    <script type="text/javascript" src="/app/js/jquery/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="/app/js/jquery/jquery-migrate-1.1.1.min.js"></script>
+    <script type="text/javascript" src="/app/js/bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/app/js/common/common.js"></script>
+    <script type="text/javascript" src="/app/js/common/page.js"></script>
+    <script type="text/javascript" src="/app/js/common/crud-grid-new.js"></script>
+    <script type="text/javascript" src="/app/js/common/popui/pop-ui.js"></script>
+    <script type="text/javascript" src="/app/js/common/backend.js"></script>
+    <script type="text/javascript">
+        <!--
+        var columns=[
+                'x',
+          {name:'id',label:'ID',width:'30',render:'_idx',hidden:true,noe:true},
+          {name:'name',label:'昵称',editor:'text',vtype:'required',search:true,max:32},
+          {name:'qq',label:'QQ',editor:'text',vtype:'required',search:true,max:32},
+          {name:'sex',label:'性别',editor:'text',vtype:'required',hidden:true,max:1},
+          {name:'age',label:'年龄',render:'number',editor:'text',vtype:'required',hidden:true,max:11},
+          {name:'bra',label:'罩B',editor:'text',vtype:'required',hidden:true,max:1},
+          {name:'phone',label:'手机',editor:'text',vtype:'required',max:32},
+          {name:'province',label:'省',editor:'text',vtype:'required',hidden:true,max:32},
+          {name:'city',label:'市',editor:'text',vtype:'required',hidden:true,max:32},
+          {name:'district',label:'区域',editor: 'select', src:'dist-f', search: true,vtype:'required',max:32},
+          {name:'refereeName',label:'上报人',editor:'text',vtype:'required',max:32},
+          {name:'refereeQq',label:'上报qq',editor:'text',vtype:'required',hidden:true,max:32},
+          {name:'priceP',label:'价格P',render:'number',editor:'text',vtype:'required',max:11},
+          {name:'pricePp',label:'价格PP',render:'number',editor:'text',vtype:'required',max:11},
+          {name:'priceDesc',label:'价格描述',editor:'text',vtype:'required',hidden:true,max:64},
+          {name:'simpleDesc',label:'描述',editor:'text',vtype:'required',hidden:true,max:128},
+          {name:'special',label:'特长',editor:'text',vtype:'required',max:64},
+          {name:'checked',label:'体验',max:11,render:function(v){
+              if(v==1)
+                 return '<div style="background-color:#ff564d;text-align: center;">√</div>';
+              else
+                 return '&nbsp;';
+          }},
+          {name:'leval',label:'级别',editor:'select',src:'leval',vtype:'required',search:true,max:11,render:'$',wrap:function(t,v){
+              if(v==0)
+                 return '<div style="background-color:#bbbbbb;text-align: center;"><font color="red" >'+t+'</font></div>';
+              else
+                 return t;
+          }},
+          {name:'comment',label:'评价',editor:'text',vtype:'required',hidden:true,max:256},
+          {name:'images',label:'图片',render:'img',editor:'text',vtype:'required',hidden:true,max:512},
+          {name:'mark',label:'标记',render:'number',editor:'text',vtype:'required',hidden:true,max:11},
+          {name:'createDate',label:'创建时间', render:'time',vtype:'required',hidden:true,width:'120px',max:19},
+          {name:'updateDate',label:'更新时间', render:'time',vtype:'required',hidden:true,max:19}
+	    ];
+        var _url='/cmd/lf/lf_members';
+        var _baseUrl='http://127.0.0.1:9081/app';
+        var _imgRoot='http://127.0.0.1:9081/img';
+        var _UI;
+       
+        var rowDblClick=function(r){
+        	self.location="/cmd/lf/lf_members?_t=dts&id="+r._id;
+        };
+
+        var _Pov=null;
+        var _Fel;
+        function showExportDlg() {
+            PopDialog.open('exportDiv', {title:'数据导出', w:530,h:200, cb:exportData});
+        }
+        function exportData(){
+            var type=$('#type').val();
+            var template=$('#template').val();
+            var syn=$('#syn').val();
+            Common.post('/cmd/lf/lf_members', {_t: 'exp', type:type, template: template, syn: syn}, function (rs) {
+                if (rs.code == 0) {
+                    _$P.open(rs.msg, function () {
+                                return true;
+                            },  function (pov, pBar, msg) {
+                                window.open('/excel/' + msg);
+                            }
+                    );
+                } else
+                    alert(rs.msg);
+            });
+        }
+
+        $(document).ready(function() {
+            _CRUD_.baseUrl=_imgRoot;
+        	_UI = _CRUD_.renderTable({
+            	url:_url,
+            	cols:columns,
+                idField:'id',
+                pBar: 2,
+                rowSelect:true,
+            	searchEl:'#searchForm',
+            	rowDblClick:rowDblClick,
+            	showDetail:true,
+            	showMenu:false,
+            	canOp:true,
+                opBar: [
+                    {
+                        name: '刷新',
+                        func: function (grid) {
+                            grid.reload();
+                        }
+                    },
+                    {
+                        name: 'Excel模板',
+                        func: function (grid) {
+                            window.open('/excel/lf-imp.xls');
+                        }
+                    },
+                    {
+                        name: '导出数据',
+                        func: function (grid) {
+                            showExportDlg();
+                        }
+                    }
+                ]
+             });
+            Common.bindCBox('template','/cmd/data/tool?_t=emp');
+        });
+        -->
+    </script>
+</head>
+<body>
+<div style="margin-left: 50px;margin-right: 20px;margin-top: 10px;margin-bottom: 20px;">
+        <div id="searchForm">
+        </div>
+        <div id="grid">
+        </div>
+        <div id="pageBar" class="pagination" style="margin-top:0px;">
+        </div>
+</div>
+<div id="exportDiv" style="display:none;margin-top:10px;width:510px;">
+    <table class="table table-striped table-bordered table-condensed table-hover" id="upTable" width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+            <td width="80">导出模板:</td>
+            <td align="left">
+                <select id="template" name="template">
+
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td width="80">导出类型:</td>
+            <td align="left">
+                <select id="type" name="type">
+                    <option value="xls">Excel</option>
+                    <option value="csv">Csv</option>
+                    <option value="txt">Txt</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td width="80">导出方式:</td>
+            <td align="left">
+                <select id="syn" name="syn">
+                    <option value="false">异步导出</option>
+                    <option value="true">同步导出</option>
+                </select>
+            </td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

@@ -1,0 +1,171 @@
+.flowbar {
+	top: 0px;
+	left: 0px;
+	background: none repeat scroll 0 0 #EFEFEF;
+	border-bottom: 1px solid #CCCCCC;
+	height: 28px;
+	padding: 1px 1px;
+}
+
+.table-bordered {
+	-moz-border-bottom-colors: none;
+	-moz-border-left-colors: none;
+	-moz-border-right-colors: none;
+	-moz-border-top-colors: none;
+	border-collapse: separate;
+	border-color: #DDDDDD #DDDDDD #DDDDDD -moz-use-text-color;
+	border-image: none;
+	border-radius: 4px 4px 4px 4px;
+	border-style: solid solid solid none;
+	border-width: 1px 1px 1px 0;
+}
+
+.table {
+	margin-bottom: 18px;
+	background-color: rgba(0, 0, 0, 0);
+	border-collapse: collapse;
+	border-spacing: 0;
+	max-width: 100%;
+}
+
+.table thead th {
+	vertical-align: bottom;
+}
+
+.table-bordered th,.table-bordered td {
+	border-left: 1px solid #DDDDDD;
+}
+
+.table th {
+	font-weight: bold;
+}
+
+.table th,.table td {
+	border-top: 1px solid #DDDDDD;
+	line-height: 18px;
+	padding: 8px;
+	text-align: left;
+	vertical-align: top;
+}
+
+.input {
+	border-top: 1px solid #666666;
+	border-left: 1px solid #666666;
+	border-bottom: 1px solid #E6E6E6;
+	border-right: 1px solid #E6E6E6;
+	font size: 9pt
+}
+a.l-btn {
+  background-position: right 0;
+  text-decoration: none;
+  display: inline-block;
+  zoom: 1;
+  height: 24px;
+  padding-right: 18px;
+  cursor: pointer;
+  outline: none;
+}
+a.l-btn-plain {
+  padding-right: 5px;
+  border: 0;
+  padding: 1px 6px 1px 1px;
+}
+a.l-btn-disabled {
+  color: #ccc;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  cursor: default;
+}
+a.l-btn span.l-btn-left {
+  display: inline-block;
+  background-position: 0 -48px;
+  padding: 4px 0px 4px 18px;
+  line-height: 16px;
+  height: 16px;
+}
+a.l-btn-plain span.l-btn-left {
+  padding-left: 5px;
+}
+a.l-btn span span.l-btn-text {
+  display: inline-block;
+  vertical-align: baseline;
+  width: auto;
+  height: 16px;
+  line-height: 16px;
+  font-size: 12px;
+  padding: 0;
+  margin: 0;
+}
+a.l-btn span span.l-btn-icon-left {
+  padding: 0 0 0 20px;
+  background-position: left 0;
+}
+a.l-btn span span.l-btn-icon-right {
+  padding: 0 20px 0 0;
+  background-position: right 0;
+}
+
+.icon-blank{
+	background:url('icons/blank.gif') no-repeat 0 0;
+}
+.icon-add{
+	background:url('icons/edit_add.png') no-repeat 0 0;
+}
+.icon-edit{
+	background:url('icons/pencil.png') no-repeat 0 0;
+}
+.icon-remove{
+	background:url('icons/edit_remove.png') no-repeat 0 0;
+}
+.icon-save{
+	background:url('icons/filesave.png') no-repeat 0 0;
+}
+.icon-cut{
+	background:url('icons/cut.png') no-repeat 0 0;
+}
+.icon-ok{
+	background:url('icons/ok.png') no-repeat 0 0;
+}
+.icon-no{
+	background:url('icons/no.png') no-repeat 0 0;
+}
+.icon-cancel{
+	background:url('icons/cancel.png') no-repeat 0 0;
+}
+.icon-reload{
+	background:url('icons/reload.png') no-repeat 0 0;
+}
+.icon-search{
+	background:url('icons/search.png') no-repeat 0 0;
+}
+.icon-print{
+	background:url('icons/print.png') no-repeat 0 0;
+}
+.icon-help{
+	background:url('icons/help.png') no-repeat 0 0;
+}
+.icon-undo{
+	background:url('icons/undo.png') no-repeat 0 0;
+}
+.icon-redo{
+	background:url('icons/redo.png') no-repeat 0 0;
+}
+.icon-back{
+	background:url('icons/back.png') no-repeat 0 0;
+}
+.icon-sum{
+	background:url('icons/sum.png') no-repeat 0 0;
+}
+.icon-tip{
+	background:url('icons/tip.png') no-repeat 0 0;
+}
+
+.icon-mini-add{
+	background:url('icons/mini_add.png') no-repeat 0 0;
+}
+.icon-mini-edit{
+	background:url('icons/mini_edit.png') no-repeat 0 0;
+}
+.icon-mini-refresh{
+	background:url('icons/mini_refresh.png') no-repeat 0 0;
+}

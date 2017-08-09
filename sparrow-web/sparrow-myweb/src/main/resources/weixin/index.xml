@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Articles>
+    <item>
+        <Title>元田小学</Title>
+        <PicUrl><![CDATA[http://firebird.5166.info/app/img/pri/video.jpg]]></PicUrl>
+        <Url><![CDATA[http://firebird.5166.info/app/views/primary/list.html]]></Url>
+    </item>
+    <item>
+        <Title>成员列表</Title>
+        <PicUrl><![CDATA[http://firebird.5166.info/app/img/pri/gangqin.jpg]]></PicUrl>
+        <Url><![CDATA[http://firebird.5166.info/cmd/primary/primary_school?_t=ls]]></Url>
+    </item>
+</Articles>

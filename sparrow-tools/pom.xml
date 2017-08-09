@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.sparrow</groupId>
+        <artifactId>sparrow-egg</artifactId>
+        <version>1.1</version>
+    </parent>
+    <artifactId>sparrow-tools</artifactId>
+    <name>sparrow-tools</name>
+    <description>sparrow-tools</description>
+    <version>1.1</version>
+    <packaging>pom</packaging>
+
+    <properties>
+        <appname>sparrow-tools</appname>
+        <tools.version>1.1</tools.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- 内部引用 -->
+            <dependency>
+                <groupId>com.sparrow</groupId>
+                <artifactId>sparrow-tools-gen</artifactId>
+                <version>${tools.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sparrow</groupId>
+                <artifactId>sparrow-tools-ssh</artifactId>
+                <version>${tools.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sparrow</groupId>
+                <artifactId>sparrow-tools-data</artifactId>
+                <version>${tools.version}</version>
+            </dependency>
+ 
+        </dependencies>
+    </dependencyManagement>
+    <modules>
+        <module>sparrow-tools-gen</module>
+        <module>sparrow-tools-ssh</module>
+        <module>sparrow-tools-data</module>
+    </modules>
+</project>

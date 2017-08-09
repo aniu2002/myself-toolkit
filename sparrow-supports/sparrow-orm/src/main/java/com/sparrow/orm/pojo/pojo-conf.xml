@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pojos>
+	<item table="apply" clazz="com.dili.dd.cornucopia.bps.domain.Apply" desc="管理所有用户的申请信息和状态  ">
+		<key>autoID</key>
+		<select>
+			SELECT * FROM apply WHERE autoID=?
+		</select>
+		<insert>
+			INSERT INTO
+			apply(userID,telephone,email,typeID,title,contants,state,handleResult,handleUser,reportID,expectLevel,completeTime,businessID)
+			VALUES(:userID,:telephone,:email,:typeID,:title,:contants,:state,:handleResult,:handleUser,:reportID,:expectLevel,:completeTime,:businessID)
+		</insert>
+		<update>
+			UPDATE apply SET
+			userID=:userID,telephone=:telephone,email=:email,typeID=:typeID,title=:title,contants=:contants,state=:state,handleResult=:handleResult,handleUser=:handleUser,reportID=:reportID,expectLevel=:expectLevel,completeTime=:completeTime,businessID=:businessID
+			WHERE autoID=:autoID
+		</update>
+		<delete>
+			DELETE FROM apply WHERE autoID=?
+		</delete>
+		<query>
+			SELECT * FROM apply
+		</query>
+	</item>
+	<item table="applyTypeDictionary"
+		class="com.dili.dd.cornucopia.bps.domain.ApplyTypeDictionary" desc="管理所有的申请类型">
+		<key>id</key>
+		<select>
+			SELECT * FROM applyTypeDictionary WHERE id=?
+		</select>
+		<insert>
+			INSERT INTO applyTypeDictionary(typeName,typeDesc)
+			VALUES(:typeName,:typeDesc)
+		</insert>
+		<update>
+			UPDATE applyTypeDictionary SET
+			typeName=:typeName,typeDesc=:typeDesc WHERE id=:id
+		</update>
+		<delete>
+			DELETE FROM applyTypeDictionary WHERE id=?
+		</delete>
+		<query>
+			SELECT * FROM applyTypeDictionary
+		</query>
+	</item>
+	<item table="businessSys" class="com.dili.dd.cornucopia.bps.domain.BusinessSys"
+		desc="管理所有业务烯烃的基本信息">
+		<key>autoID</key>
+		<select>
+			SELECT * FROM businessSys WHERE autoID=?
+		</select>
+		<insert>
+			INSERT INTO
+			businessSys(businessID,name,url,description,isHangUp,level)
+			VALUES(:businessID,:name,:url,:description,:isHangUp,:level)
+		</insert>
+		<update>
+			UPDATE businessSys SET
+			businessID=:businessID,name=:name,url=:url,description=:description,isHangUp=:isHangUp,level=:level
+			WHERE autoID=:autoID
+		</update>
+		<delete>
+			DELETE FROM businessSys WHERE autoID=?
+		</delete>
+		<query>
+			SELECT * FROM businessSys
+		</query>
+	</item>
+	<item table="chartExample" class="com.dili.dd.cornucopia.bps.domain.ChartExample"
+		desc="用户第一次看到的效果图">
+		<key>autoID</key>
+		<select>
+			SELECT * FROM chartExample WHERE autoID=?
+		</select>
+		<insert>
+			INSERT INTO chartExample(id,name,exampleURL)
+			VALUES(:id,:name,:exampleURL)
+		</insert>
+		<update>
+			UPDATE chartExample SET
+			id=:id,name=:name,exampleURL=:exampleURL WHERE autoID=:autoID
+		</update>
+		<delete>
+			DELETE FROM chartExample WHERE autoID=?
+		</delete>
+		<query>
+			SELECT * FROM chartExample
+		</query>
+	</item>
+	<item table="chartTypeDictionary"
+		class="com.dili.dd.cornucopia.bps.domain.ChartTypeDictionary" desc="保存图类型的表，表示图是一个表格，文本， 或者是折线等其他图形">
+		<key>id</key>
+		<select>
+			SELECT * FROM chartTypeDictionary WHERE id=?
+		</select>
+		<insert>
+			INSERT INTO chartTypeDictionary(name,example)
+			VALUES(:name,:example)
+		</insert>
+		<update>
+			UPDATE chartTypeDictionary SET name=:name,example=:example
+			WHERE id=:id
+		</update>
+		<delete>
+			DELETE FROM chartTypeDictionary WHERE id=?
+		</delete>
+		<query>
+			SELECT * FROM chartTypeDictionary
+		</query>
+	</item>
+	<item table="contact" class="com.dili.dd.cornucopia.bps.domain.Contact"
+		desc="管理所有的更新订阅信息">
+		<key>autoID</key>
+		<select>
+			SELECT * FROM contact WHERE autoID=?
+		</select>
+		<insert>
+			INSERT INTO
+			contact(id,instanceID,reportID,desktop_id,userID,sendType,sendRule,isCancel,op_time)
+			VALUES(:id,:instanceID,:reportID,:desktopId,:userID,:sendType,:sendRule,:isCancel,:opTime)
+		</insert>
+		<update>
+			UPDATE contact SET
+			id=:id,instanceID=:instanceID,reportID=:reportID,desktop_id=:desktopId,userID=:userID,sendType=:sendType,sendRule=:sendRule,isCancel=:isCancel,op_time=:opTime
+			WHERE autoID=:autoID
+		</update>
+		<delete>
+			DELETE FROM contact WHERE autoID=?
+		</delete>
+		<query>
+			SELECT * FROM contact
+		</query>
+	</item>
+	<item table="desktop" class="com.dili.dd.cornucopia.bps.domain.Desktop"
+		desc="是一类报表的集合">
+		<key>autoID</key>
+		<select>
+			SELECT * FROM desktop WHERE autoID=?
+		</select>
+		<insert>
+			INSERT INTO
+			desktop(onlyID,title,typeID,isHangUp,createTime,updateTime,summitReportLevel,description,user_id,business_id,layout_id)
+			VALUES(:onlyID,:title,:typeID,:isHangUp,:createTime,:updateTime,:summitReportLevel,:description,:userId,:businessId,:layoutId)
+		</insert>
+		<update>
+			UPDATE desktop SET
+			onlyID=:onlyID,title=:title,typeID=:typeID,isHangUp=:isHangUp,createTime=:createTime,updateTime=:updateTime,summitReportLevel=:summitReportLevel,description=:description,user_id=:userId,business_id=:businessId,layout_id=:layoutId
+			WHERE autoID=:autoID
+		</update>
+		<delete>
+			DELETE FROM desktop WHERE autoID=?
+		</delete>
+		<query>
+			SELECT * FROM desktop
+		</query>
+	</item>
+	<item table="deskTopLayout" class="com.dili.dd.cornucopia.bps.domain.DeskTopLayout"
+		desc="指数在桌面中的布局方式">
+		<key>id</key>
+		<select>
+			SELECT * FROM deskTopLayout WHERE id=?
+		</select>
+		<insert>
+			INSERT INTO deskTopLayout(layoutName,length,width)
+			VALUES(:layoutName,:length,:width)
+		</insert>
+		<update>
+			UPDATE deskTopLayout SET
+			layoutName=:layoutName,length=:length,width=:width WHERE id=:id
+		</update>
+		<delete>
+			DELETE FROM deskTopLayout WHERE id=?
+		</delete>
+		<query>
+			SELECT * FROM deskTopLayout
+		</query>
+	</item>
+	<item table="instanceArgumentValue"
+		class="com.dili.dd.cornucopia.bps.domain.InstanceArgumentValue" desc="实例与参数值得对应关系">
+		<key>autoID</key>
+		<select>
+			SELECT * FROM instanceArgumentValue WHERE autoID=?
+		</select>
+		<insert>
+			INSERT INTO
+			instanceArgumentValue(ID,argumentID,argumentValue,paramVariable)
+			VALUES(:id,:argumentID,:argumentValue,:paramVariable)
+		</insert>
+		<update>
+			UPDATE instanceArgumentValue SET
+			ID=:id,argumentID=:argumentID,argumentValue=:argumentValue,paramVariable=:paramVariable
+			WHERE autoID=:autoID
+		</update>
+		<delete>
+			DELETE FROM instanceArgumentValue WHERE autoID=?
+		</delete>
+		<query>
+			SELECT * FROM instanceArgumentValue
+		</query>
+	</item>
+	<item table="instanceOrderInDeskTop"
+		class="com.dili.dd.cornucopia.bps.domain.InstanceOrderInDeskTop" desc="记录实例在桌面中的标号，标号从1开始">
+		<key>autoID</key>
+		<select>
+			SELECT * FROM instanceOrderInDeskTop WHERE autoID=?
+		</select>
+		<insert>
+			INSERT INTO
+			instanceOrderInDeskTop(instanceID,UserID,deskTopID,locationCode,layoutID,report_id)
+			VALUES(:instanceID,:userID,:deskTopID,:locationCode,:layoutID,:reportId)
+		</insert>
+		<update>
+			UPDATE instanceOrderInDeskTop SET
+			instanceID=:instanceID,UserID=:userID,deskTopID=:deskTopID,locationCode=:locationCode,layoutID=:layoutID,report_id=:reportId
+			WHERE autoID=:autoID
+		</update>
+		<delete>
+			DELETE FROM instanceOrderInDeskTop WHERE autoID=?
+		</delete>
+		<query>
+			SELECT * FROM instanceOrderInDeskTop
+		</query>
+	</item>
+	<item table="levelDictionary" class="com.dili.dd.cornucopia.bps.domain.LevelDictionary"
+		desc="管理所有的级别">
+		<key>id</key>
+		<select>
+			SELECT * FROM levelDictionary WHERE id=?
+		</select>
+		<insert>
+			INSERT INTO levelDictionary(levelDesc) VALUES(:levelDesc)
+		</insert>
+		<update>
+			UPDATE levelDictionary SET levelDesc=:levelDesc WHERE id=:id
+		</update>
+		<delete>
+			DELETE FROM levelDictionary WHERE id=?
+		</delete>
+		<query>
+			SELECT * FROM levelDictionary
+		</query>
+	</item>
+	<item table="notice" class="com.dili.dd.cornucopia.bps.domain.Notice"
+		desc="">
+		<key>id</key>
+		<select>
+			SELECT * FROM notice WHERE id=?
+		</select>
+		<insert>
+			INSERT INTO notice(title,type,create_time,update_time)
+			VALUES(:title,:type,:createTime,:updateTime)
+		</insert>
+		<update>
+			UPDATE notice SET
+			title=:title,type=:type,create_time=:createTime,update_time=:updateTime
+			WHERE id=:id
+		</update>
+		<delete>
+			DELETE FROM notice WHERE id=?
+		</delete>
+		<query>
+			SELECT * FROM notice
+		</query>
+	</item>
+	<item table="notice_relation" class="com.dili.dd.cornucopia.bps.domain.NoticeRelation"
+		desc="">
+		<key>id</key>
+		<select>
+			SELECT * FROM notice_relation WHERE id=?
+		</select>
+		<insert>
+			INSERT INTO notice_relation(notice_id,img_url,description)
+			VALUES(:noticeId,:imgUrl,:description)
+		</insert>
+		<update>
+			UPDATE notice_relation SET
+			notice_id=:noticeId,img_url=:imgUrl,description=:description WHERE
+			id=:id
+		</update>
+		<delete>
+			DELETE FROM notice_relation WHERE id=?
+		</delete>
+		<query>
+			SELECT * FROM notice_relation
+		</query>
+	</item>
+	<item table="reportBase" class="com.dili.dd.cornucopia.bps.domain.ReportBase"
+		desc="包含报表的基本信息">
+		<key>autoID</key>
+		<select>
+			SELECT * FROM reportBase WHERE autoID=?
+		</select>
+		<insert>
+			INSERT INTO
+			reportBase(reportCode,reportName,levelID,reportTypeID,chartTypeID,isHangUp,chartExampleID,state,createUserID,description,updateTime,createTime,desktop_id,visualizationID)
+			VALUES(:reportCode,:reportName,:levelID,:reportTypeID,:chartTypeID,:isHangUp,:chartExampleID,:state,:createUserID,:description,:updateTime,:createTime,:desktopId,:visualizationID)
+		</insert>
+		<update>
+			UPDATE reportBase SET
+			reportCode=:reportCode,reportName=:reportName,levelID=:levelID,reportTypeID=:reportTypeID,chartTypeID=:chartTypeID,isHangUp=:isHangUp,chartExampleID=:chartExampleID,state=:state,createUserID=:createUserID,description=:description,updateTime=:updateTime,createTime=:createTime,desktop_id=:desktopId,visualizationID=:visualizationID
+			WHERE autoID=:autoID
+		</update>
+		<delete>
+			DELETE FROM reportBase WHERE autoID=?
+		</delete>
+		<query>
+			SELECT * FROM reportBase
+		</query>
+	</item>
+	<item table="reportDataParam" class="com.dili.dd.cornucopia.bps.domain.ReportDataParam"
+		desc="将数据实例与参数实例的参数对应起来">
+		<key>autoID</key>
+		<select>
+			SELECT * FROM reportDataParam WHERE autoID=?
+		</select>
+		<insert>
+			INSERT INTO
+			reportDataParam(ID,alias,visualizationID,paramVariable,paramName,valueType,reportId)
+			VALUES(:id,:alias,:visualizationID,:paramVariable,:paramName,:valueType,:reportId)
+		</insert>
+		<update>
+			UPDATE reportDataParam SET
+			ID=:id,alias=:alias,visualizationID=:visualizationID,paramVariable=:paramVariable,paramName=:paramName,valueType=:valueType,reportId=:reportId
+			WHERE autoID=:autoID
+		</update>
+		<delete>
+			DELETE FROM reportDataParam WHERE autoID=?
+		</delete>
+		<query>
+			SELECT * FROM reportDataParam
+		</query>
+	</item>
+	<item table="reportInstance" class="com.dili.dd.cornucopia.bps.domain.ReportInstance"
+		desc="保存用户做参数选择的表">
+		<key>autoID</key>
+		<select>
+			SELECT * FROM reportInstance WHERE autoID=?
+		</select>
+		<insert>
+			INSERT INTO reportInstance(ID,reportID,continerID,urls)
+			VALUES(:id,:reportID,:continerID,:urls)
+		</insert>
+		<update>
+			UPDATE reportInstance SET
+			ID=:id,reportID=:reportID,continerID=:continerID,urls=:urls WHERE
+			autoID=:autoID
+		</update>
+		<delete>
+			DELETE FROM reportInstance WHERE autoID=?
+		</delete>
+		<query>
+			SELECT * FROM reportInstance
+		</query>
+	</item>
+	<item table="reportTypeDictionary"
+		class="com.dili.dd.cornucopia.bps.domain.ReportTypeDictionary" desc="报表的类型，当前分为实时报表和离线报表两种">
+		<key>id</key>
+		<select>
+			SELECT * FROM reportTypeDictionary WHERE id=?
+		</select>
+		<insert>
+			INSERT INTO reportTypeDictionary(name) VALUES(:name)
+		</insert>
+		<update>
+			UPDATE reportTypeDictionary SET name=:name WHERE id=:id
+		</update>
+		<delete>
+			DELETE FROM reportTypeDictionary WHERE id=?
+		</delete>
+		<query>
+			SELECT * FROM reportTypeDictionary
+		</query>
+	</item>
+	<item table="reportUserDeskTopItem"
+		class="com.dili.dd.cornucopia.bps.domain.ReportUserDeskTopItem" desc="管理报表和桌面的关系  ">
+		<key>autoID</key>
+		<select>
+			SELECT * FROM reportUserDeskTopItem WHERE autoID=?
+		</select>
+		<insert>
+			INSERT INTO reportUserDeskTopItem(reportID,desktopID)
+			VALUES(:reportID,:desktopID)
+		</insert>
+		<update>
+			UPDATE reportUserDeskTopItem SET
+			reportID=:reportID,desktopID=:desktopID WHERE autoID=:autoID
+		</update>
+		<delete>
+			DELETE FROM reportUserDeskTopItem WHERE autoID=?
+		</delete>
+		<query>
+			SELECT * FROM reportUserDeskTopItem
+		</query>
+	</item>
+	<item table="reportVIArguments" class="com.dili.dd.cornucopia.bps.domain.ReportVIArguments"
+		desc="保存报表中配置的可视化实例和报表页面参数的显示位置">
+		<key>autoID</key>
+		<select>
+			SELECT * FROM reportVIArguments WHERE autoID=?
+		</select>
+		<insert>
+			INSERT INTO
+			reportVIArguments(ID,alias,visualizationID,instanceType,argumentsDesc,RowNumber,showName,paramVariable,resultKey,ColumnNumber,valueShowType,defaultValue,reportID)
+			VALUES(:id,:alias,:visualizationID,:instanceType,:argumentsDesc,:rowNumber,:showName,:paramVariable,:resultKey,:columnNumber,:valueShowType,:defaultValue,:reportID)
+		</insert>
+		<update>
+			UPDATE reportVIArguments SET
+			ID=:id,alias=:alias,visualizationID=:visualizationID,instanceType=:instanceType,argumentsDesc=:argumentsDesc,RowNumber=:rowNumber,showName=:showName,paramVariable=:paramVariable,resultKey=:resultKey,ColumnNumber=:columnNumber,valueShowType=:valueShowType,defaultValue=:defaultValue,reportID=:reportID
+			WHERE autoID=:autoID
+		</update>
+		<delete>
+			DELETE FROM reportVIArguments WHERE autoID=?
+		</delete>
+		<query>
+			SELECT * FROM reportVIArguments
+		</query>
+	</item>
+	<item table="sysUser" class="com.dili.dd.cornucopia.bps.domain.SysUser"
+		desc="系统用户">
+		<key>id</key>
+		<select>
+			SELECT * FROM sysUser WHERE id=?
+		</select>
+		<insert>
+			INSERT INTO
+			sysUser(user_name,login_name,login_pwd,user_phone,user_email)
+			VALUES(:userName,:loginName,:loginPwd,:userPhone,:userEmail)
+		</insert>
+		<update>
+			UPDATE sysUser SET
+			user_name=:userName,login_name=:loginName,login_pwd=:loginPwd,user_phone=:userPhone,user_email=:userEmail
+			WHERE id=:id
+		</update>
+		<delete>
+			DELETE FROM sysUser WHERE id=?
+		</delete>
+		<query>
+			SELECT * FROM sysUser
+		</query>
+	</item>
+	<item table="user" class="com.dili.dd.cornucopia.bps.domain.User"
+		desc="保存用户信息，用户信息来自于passport与本系统结合的数据">
+		<key>autoID</key>
+		<select>
+			SELECT * FROM user WHERE autoID=?
+		</select>
+		<insert>
+			INSERT INTO
+			user(userID,thirdpartyID,thirdpartySysName,userType,account,userName,telePhone,email,levelID,createTime,modifyTime)
+			VALUES(:userID,:thirdpartyID,:thirdpartySysName,:userType,:account,:userName,:telePhone,:email,:levelID,:createTime,:modifyTime)
+		</insert>
+		<update>
+			UPDATE user SET
+			userID=:userID,thirdpartyID=:thirdpartyID,thirdpartySysName=:thirdpartySysName,userType=:userType,account=:account,userName=:userName,telePhone=:telePhone,email=:email,levelID=:levelID,createTime=:createTime,modifyTime=:modifyTime
+			WHERE autoID=:autoID
+		</update>
+		<delete>
+			DELETE FROM user WHERE autoID=?
+		</delete>
+		<query>
+			SELECT * FROM user
+		</query>
+	</item>
+	<item table="userBusinessItem" class="com.dili.dd.cornucopia.bps.domain.UserBusinessItem"
+		desc="将用户与业务系统区分开">
+		<key>autoID</key>
+		<select>
+			SELECT * FROM userBusinessItem WHERE autoID=?
+		</select>
+		<insert>
+			INSERT INTO userBusinessItem(userID,businessID,ishangup)
+			VALUES(:userID,:businessID,:ishangup)
+		</insert>
+		<update>
+			UPDATE userBusinessItem SET
+			userID=:userID,businessID=:businessID,ishangup=:ishangup WHERE
+			autoID=:autoID
+		</update>
+		<delete>
+			DELETE FROM userBusinessItem WHERE autoID=?
+		</delete>
+		<query>
+			SELECT * FROM userBusinessItem
+		</query>
+	</item>
+	<item table="userDesktopBusinessItem"
+		class="com.dili.dd.cornucopia.bps.domain.UserDesktopBusinessItem"
+		desc="管理用户在不同业务系统中和容器的关系">
+		<key>autoID</key>
+		<select>
+			SELECT * FROM userDesktopBusinessItem WHERE autoID=?
+		</select>
+		<insert>
+			INSERT INTO
+			userDesktopBusinessItem(ID,userID,deskTopID,businessID,layoutID)
+			VALUES(:id,:userID,:deskTopID,:businessID,:layoutID)
+		</insert>
+		<update>
+			UPDATE userDesktopBusinessItem SET
+			ID=:id,userID=:userID,deskTopID=:deskTopID,businessID=:businessID,layoutID=:layoutID
+			WHERE autoID=:autoID
+		</update>
+		<delete>
+			DELETE FROM userDesktopBusinessItem WHERE autoID=?
+		</delete>
+		<query>
+			SELECT * FROM userDesktopBusinessItem
+		</query>
+	</item>
+</pojos>

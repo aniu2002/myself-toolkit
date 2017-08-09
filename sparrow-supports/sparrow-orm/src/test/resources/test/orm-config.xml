@@ -1,0 +1,25 @@
+<define>
+	<bean id="logInfo" claz="au.core.service.interceptor.LoggingMethodOnterceptor">
+		<setter property="configFile" value="conf/mysqlconfig.properties"></setter>
+	</bean>
+	
+	<bean id="sessionFactory" claz="au.orm.session.AnnotationCfgSessionFactory"
+		lazy="false" initMethod="initialize" destroyMethod="destroy">
+		<setter property="configFile" value="testcfg/config4mysql.properties"></setter>
+		<setter property="scanPath" value="classpath:au/app/**/domain/**/*.class"></setter>
+	</bean>
+	 
+	<bean id="transManager" claz="au.orm.trans.TransManager">
+		<setter property="sessionFactory" ref="sessionFactory"></setter>
+	</bean>
+	<bean id="transInterceptor" claz="au.core.service.interceptor.TranscationInterceptor">
+		<setter property="transManager" ref="transManager"></setter>
+	</bean> 
+	<bean id="hitTemplate" claz="au.orm.template.SimpleHitTemplate">
+		<setter property="sessionFactory" ref="sessionFactory"></setter>
+	</bean>
+	
+	<bean id="baseDao" claz="au.orm.dao.BaseDao">
+		<setter property="sessionFactory" ref="sessionFactory"></setter>
+	</bean>
+</define>

@@ -1,0 +1,4 @@
+<define>
+	<annotation base="com.sparrow.app.system.service" expression="*Impl.class" transManager="transManager">
+	</annotation>
+</define>

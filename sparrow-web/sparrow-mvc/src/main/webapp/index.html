@@ -1,0 +1,238 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>管理主页</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <link rel="stylesheet" href="js/bootstrap/css/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="js/bootstrap/css/bootstrap-responsive.min.css" type="text/css"/>
+    <link rel="stylesheet" href="css/bootstrap.ext.css" type="text/css"/>
+    <link rel="stylesheet" href="css/style.css" type="text/css"/>
+    <style type="text/css">
+		#main {padding:0;margin:0;}
+		#main .container-fluid{padding:0 7px 0 10px;}
+		#header {margin:0 0 10px;position:static;}
+		#header li {font-size:14px;_font-size:12px;}
+		#header .brand {font-family:Helvetica, Georgia, Arial, sans-serif, "黑体";font-size:26px;padding-left:33px;}
+		#footer {margin:8px 0 0 0;padding:3px 0 0 0;font-size:11px;text-align:center;border-top:2px solid #0663A2;}
+		#footer, #footer a {color:#999;}
+	</style>
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container-fluid">
+            <div class="brand">SPE平台</div>
+            <div class="nav-collapse">
+            	<ul class="nav pull-right">
+            	    <li><a href="main.html" id="devInfo" target="contentFrame">开发</a></li>
+            		<li><a href="#" id="userInfo">您好, 管理员</a></li>
+					<li><a href="/cmd/sys/user?_t=out" x="x" title="退出登录">退出</a></li>
+				</ul>
+			</div>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<div class="container-fluid">
+    <div class="row-fluid">
+         <!-- 横行占比例为2 -->
+        <div id="menuDiv" class="accordion span2">
+            <div class="accordion-group">
+                <div class="accordion-heading">
+                    <a title="" href="#collapse43" data-parent="#menuDiv" data-toggle="collapse" class="accordion-toggle">
+                        <i class="icon-chevron-down"></i>&nbsp;App配置
+                    </a>
+                </div>
+                <div class="accordion-body in" id="collapse43">
+                    <div class="accordion-inner">
+                        <ul class="nav nav-list">
+                         <!--   <li><a href="mngr/provider/provider_list.html" target="contentFrame"><i class="icon-lock"></i>&nbsp;Source</a></li>
+                            <li><a href="mngr/provider/source_list.html" target="contentFrame"><i class="icon-leaf"></i>&nbsp;Provider</a></li>-->
+                            <li><a href="mngr/app/app.html" target="contentFrame"><i class="icon-star"></i>&nbsp;App应用</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-group">
+			    <div class="accordion-heading">
+			    	<a title="" href="#collapse44" data-parent="#menuDiv" data-toggle="collapse" class="accordion-toggle">
+			    	  <i class="icon-chevron-down"></i>&nbsp;数据配置
+			    	</a>
+			    </div>
+			    <div class="accordion-body collapse" id="collapse44">
+					<div class="accordion-inner">
+						<ul class="nav nav-list">
+                            <li><a href="mngr/db/sys_db.html" target="contentFrame"><i class="icon-star"></i>&nbsp;连接池配置</a></li>
+                            <li><a href="tools/base-data.html" target="contentFrame"><i class="icon-leaf"></i>&nbsp;数据配置</a></li>
+                            <!--<li><a href="mngr/source_mngr.html" target="contentFrame"><i class="icon-lock"></i>&nbsp;数据源管理</a></li>-->
+                        </ul>
+				    </div>
+			    </div>
+			</div>
+            <div class="accordion-group">
+                <div class="accordion-heading">
+                    <a title="" href="#collapse45" data-parent="#menuDiv" data-toggle="collapse" class="accordion-toggle">
+                        <i class="icon-chevron-down"></i>&nbsp;系统工具
+                    </a>
+                </div>
+                <div class="accordion-body collapse" id="collapse45">
+                    <div class="accordion-inner">
+                        <ul class="nav nav-list">
+                            <li><a href="tools/request_proc.html" target="contentFrame"><i class="icon-leaf"></i>&nbsp;日志监控</a></li>
+                            <li><a href="tools/config_set.html" target="contentFrame"><i class="icon-lock"></i>&nbsp;参数配置</a></li>
+                            <li><a href="tools/chart.html" target="contentFrame"><i class="icon-star"></i>&nbsp;聊天咨询</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="contentDiv" class="span10" style="overflow-y:auto;">
+            <iframe id="contentFrame" name="contentFrame" runat="server" frameborder="no" border="0" marginwidth="0"
+                    marginheight="0" scrolling="no" allowtransparency="yes"
+                    style="width:100%;" src="main.html"></iframe>
+        </div>
+    </div>
+    <footer>
+        <div align="center">&copy; Power by Aniu 2014-2018</div>
+    </footer>
+</div>
+<script type="text/javascript" src="js/jquery/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="js/bootstrap/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/common/common.js"></script>
+<script type="text/javascript">
+    <!--
+    var activeEl = null
+    function navigatePage(evt) {
+        evt.stopPropagation();
+        evt.preventDefault();
+        var url = $(this).attr('href')
+        var x = $(this).attr('x')
+        if(url=='#') return;
+        if(x=='x') {
+        	self.location=url;
+        	return;
+        }
+        showPage(url, $("#contentFrame"), $(this).parent())
+    }
+    function showPage(url, renderEl, linkEl) {
+        setClickedItem(linkEl);
+        waitingQuery();
+        renderEl.attr("src",url);
+        renderEl.load(function(){
+        	cancelWaiting();
+        });
+       // renderEl.src = url;
+    }
+    function setClickedItem(linkEl) {
+        if (linkEl) {
+            if (activeEl)
+                activeEl.removeClass("active");
+            linkEl.addClass("active");
+        }
+        activeEl = linkEl
+    }
+    var _FrameEl;
+    $(document).ready(function () {
+        var hgt = 1200;//$(window).height();
+        //1500;//
+        $('#contentFrame').css({
+          'height':hgt + 'px'
+        });
+        _FrameEl=$("#contentFrame");
+        Common.load('menu.html',function(html){
+        	//$('#menuDiv').prepend(html);
+        	initMenu();
+        });
+        Common.xhr('/cmd/sys/user?_t=cur',$('#userInfo'));
+        window.toLoginPage=function(v){
+        	if(v==1)
+                self.location='/app/loginCmd.html';
+            else
+                self.location='/app/login.html';
+        };
+    });
+    var openFrame=function(url){
+    	waitingQuery();
+    	url=url;//+"?_="+(new Date()).getTime();
+    	var el=_FrameEl;
+    	el.attr('src',url);
+    };
+    function initMenu(){
+    	$("#topMenu li a").click(function(){
+			$("#topMenu li.menu").removeClass("active");
+			$(this).parent().addClass("active");
+		});
+
+        $("#topMenuR li a").click(function(evt){
+        	var el=$(this);
+        	var toggle=el.attr('data-toggle');
+        	if(toggle=='dropdown')
+        		return;
+        	evt.stopPropagation();
+	        evt.preventDefault();
+	        var url=el.attr('href');
+	        if(url=='#')
+	            return;
+	        var x = $(this).attr('x')
+	        if(x=='x') {
+	         	self.location=url;
+	         	return;
+	        }
+	        openFrame(el.attr('href'));
+        });
+
+    	$(".accordion-heading a").click(function(){
+			$('.accordion-toggle i').removeClass('icon-chevron-down');
+			$('.accordion-toggle i').addClass('icon-chevron-right');
+			var el=$(this);
+			var s=el.attr('href');
+			var nel=$(s);
+			if(!nel.hasClass('in')){
+				$(this).children('i').removeClass('icon-chevron-right');
+				$(this).children('i').addClass('icon-chevron-down');
+			}
+		});
+
+        // left tree item click
+		$(".accordion-body a").click(function(evt){
+			evt.stopPropagation();
+	        evt.preventDefault();
+			$("#menuDiv li").removeClass("active");
+			$("#menuDiv li i").removeClass("icon-white");
+			var el=$(this);
+			el.parent().addClass("active");
+			el.children("i").addClass("icon-white");
+			openFrame(el.attr('href'));
+		});
+		_FrameEl.load(function(){
+         	cancelWaiting();
+        });
+    }
+
+    function waitingQuery() {
+    	var height = document.body.clientHeight-10;
+    	var width=document.body.clientWidth-10;
+    	var word_left = width / 2 - 150;
+    	var _html = "<div id='loading' style='position: absolute;cursor:wait; left:0px;width:"+width+"px;height:"
+    			+ height
+    			+ "px;top:0;background:#E0ECFF;opacity:0.8;filter:alpha(opacity=80);'>"
+    			+ "<span style='position: relative; left:"
+    			+ word_left
+    			+ "px;top:250px;width:180px;height:16px;padding:12px 5px 10px 30px;"
+    			+ " background:#fff no-repeat scroll 5px 10px;border:2px solid #ccc;color:#000;'>Loading..."
+    			+ "</span></div>";
+    	$(document.body).append(_html);
+    };
+
+    function cancelWaiting() {
+    	$('#loading').remove();
+    };
+    -->
+</script>
+</body>
+</html>

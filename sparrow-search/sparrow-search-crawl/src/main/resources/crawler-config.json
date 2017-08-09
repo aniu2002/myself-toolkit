@@ -1,0 +1,127 @@
+{
+  "retryNum": 2,
+  "singleThread": false,
+  "urlFilter": true,
+  "pool": {
+    "min": 15,
+    "max": 30,
+    "size": 500,
+    "period": 2,
+    "single": true,
+    "useDefault": true
+  },
+  "site": {
+    "id": "diaoyuren",
+    "name": "钓鱼人",
+    "url": "http://www.diaoyu123.com/",
+    "links": null,
+    "entryFiles": [
+      "classpath:dy-entries.json"
+    ]
+  },
+  "page": {
+    "ignoreFirst": true,
+    "endExpress": "",
+    "entryExpress": "${page}.html",
+    "fillZero": false,
+    "placeholders": 2,
+    "start": 1,
+    "end": -1
+  },
+  "selector": {
+    "nameExpress": "",
+    "contentExpress": ".v-l-content>p",
+    "itemExpress": [
+      ".content-list.content-list-tutor>ul>li>dl>dt>a"
+    ],
+    "urlExpress": [
+      "href"
+    ]
+  },
+  "store": {
+    "clazz": "sql",
+    "saveFile": false,
+    "gzip": true,
+    "fileDir": "",
+    "fileExt": "",
+    "alias": "test",
+    "path": "d:/_crawler/tmp",
+    "tempDir": "d:/_crawler/tmp",
+    "props": {
+      "jdbc.driver": "com.mysql.jdbc.Driver",
+      "jdbc.url": "jdbc:mysql://127.0.0.1:3306/sparrow_is?useUnicode=true&characterEncoding=UTF-8",
+      "jdbc.user": "root",
+      "jdbc.password": "123456",
+      "jdbc.showSql": "true",
+      "jdbc.formatSql": "false",
+      "need.checkData": "true",
+      "check.field":"uuid",
+      "check.index":"0",
+      "data.check.type": "cache",
+      "need.updateData": "false",
+      "data.insert.sql": "INSERT INTO crawl_data(uuid,site_id,site_name,site_url,page_url,detail_url,title,subject,content,publish_time,time) VALUES(:uuid,:siteId,:siteName,:siteUrl,:pageUrl,:detailUrl,:title,:subject,:content,:publishTime,:time)"
+    }
+  },
+  "format": {
+    "formatter": "configureFormat",
+    "classMap": "com.sparrow.collect.domain.CrawlData",
+    "fieldMaps": [
+      {
+        "name": "uuid",
+        "express": "md5",
+        "expressType": 0
+      },
+      {
+        "name": "siteId",
+        "express": "siteId",
+        "expressType": 4
+      },
+      {
+        "name": "siteName",
+        "express": "siteName",
+        "expressType": 4
+      },
+      {
+        "name": "siteUrl",
+        "express": "url",
+        "expressType": 4
+      },
+      {
+        "name": "pageUrl",
+        "express": "url",
+        "expressType": 5
+      },
+      {
+        "name": "detailUrl",
+        "express": "url",
+        "expressType": 3
+      },
+      {
+        "name": "title",
+        "express": "title",
+        "expressType": 3
+      },
+      {
+        "name": "subject",
+        "express": "title",
+        "expressType": 4
+      },
+      {
+        "name": "content",
+        "express": "content",
+        "expressType": 3
+      },
+      {
+        "name": "publishTime",
+        "express": "time",
+        "expressType": 0
+      },
+      {
+        "name": "time",
+        "express": "time",
+        "expressType": 0
+      }
+    ]
+  },
+  "entries": null
+}

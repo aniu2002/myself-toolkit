@@ -1,0 +1,1 @@
+<li><a href="/app/views/${moduleName}/${destSource}.html" target="contentFrame">${itemName?if_exists}管理</a></li>

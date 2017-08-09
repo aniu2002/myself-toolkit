@@ -1,0 +1,1 @@
+<li><a href="/app/views/${navPath}/list.html"><i class="icon-leaf"></i>&nbsp;${itemName?if_exists}</a></li>

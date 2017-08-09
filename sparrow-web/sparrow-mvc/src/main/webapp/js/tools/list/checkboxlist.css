@@ -1,0 +1,15 @@
+.defaultRowClass{font-size: 12px;color: #363544;text-align:left;line-height:10px;display:block}
+.overStyle{background-color:#000066;font-size: 12px;color:#FFFFFF;text-align:left;line-height:10px;cursor:default}
+.outStyle{background-color:#003366;font-size: 12px;color:#FFFFFF;text-align:left;line-height:10px;cursor:default}
+.clickStyle{background-color:#477BC4;font-size: 12px;color: #ffffff;font-family:"宋体";font-style: normal;text-align:center;line-height:10px}
+.cellStyle{}
+.rowStyle{font-family:"宋体";font-size:12px;text-align:center;line-height:10px;background-color:#F0EEE1}
+.mainLayer{position:absolute;background-color:#FFFFFF;color:#000000;font-size:12px;text-align:left;display:none}
+.container{text-align:left;height:100px;border:1px solid #666666;overflow-y:scroll}
+.titlebar{text-align:left;height:20px;background-color: #eeeeee;border-top-width: 1px;border-right-width: 1px;border-left-width: 1px;border-top-style: solid;border-right-style: solid;border-left-style: solid;border-top-color: #666666;border-right-color: #666666;border-left-color:#666666;}
+.spanbar{ margin-left:5px; margin-top:3px; position:absolute}
+.spanbar1{ margin-left:35px; margin-top:3px; position:absolute}
+.checkbox{margin:1px;width:15px;height:15px;}
+.cked{margin:1px;display:block;background-color:highlight;color:highlighttext}
+.nocked{margin:1px;display:block}
+.ocontainer{margin-left:3px;margin-top:3px;width:100%;overflow:auto;border: 2px inset #FFFFFF}

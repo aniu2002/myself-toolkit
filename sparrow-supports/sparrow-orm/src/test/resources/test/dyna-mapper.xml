@@ -1,0 +1,10 @@
+<define>
+	<bean id="sqlMapManager" claz="au.orm.conf.SqlMapManager">
+		<setter property="sessionFactory" ref="sessionFactory"></setter>
+	</bean>
+	<bean id="mapperScanner" claz="au.core.dyna.proxy.MapperScannerConfigurer">
+		<setter property="sqlMapManager" ref="sqlMapManager"></setter>
+		<setter property="hitTemplate" ref="hitTemplate"></setter>
+		<setter property="basePackage" value="au.core.biz"></setter>
+	</bean>
+</define>

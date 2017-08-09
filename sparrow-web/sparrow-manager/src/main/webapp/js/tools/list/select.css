@@ -1,0 +1,7 @@
+.defaultRowClass{font-size: 12px;color: #363544;text-align:left;line-height:10px}
+.overStyle{background-color:#000066;font-size: 12px;color:#FFFFFF;text-align:left;line-height:10px;cursor:default}
+.outStyle{background-color:#003366;font-size: 12px;color:#FFFFFF;text-align:left;line-height:10px;cursor:default}
+.clickStyle{background-color:#477BC4;font-size: 12px;color: #ffffff;font-family:"宋体";font-style: normal;text-align:center;line-height:10px}
+.cellStyle{}
+.rowStyle{font-family:"宋体";font-size:12px;text-align:center;line-height:10px;background-color:#F0EEE1}
+.mainLayer{position:absolute;height:100px;margin:-1px 0 0 -1px;background-color:#eeeeee;border:1px solid #666666;color:#000000;font-size:12px; text-align:center;display:none;overflow-y:scroll}

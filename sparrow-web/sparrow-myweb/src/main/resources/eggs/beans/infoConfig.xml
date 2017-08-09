@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+    <!-- service bean configuration -->
+    <bean name="lfMembersService" clazz="com.sparrow.app.information.service.LfMembersService">
+        <property name="baseDao" ref="baseDao"/>
+    </bean>
+    <bean name="primarySchoolService" clazz="com.sparrow.app.information.service.PrimarySchoolService">
+        <property name="baseDao" ref="baseDao"/>
+    </bean>
+    <bean name="gifInfoService" clazz="com.sparrow.app.information.service.GifInfoService">
+        <property name="baseDao" ref="baseDao"/>
+    </bean>
+
+    <!-- command bean configuration -->
+    <bean name="lfMembersCmd" parameter="lf/lf_members" clazz="com.sparrow.app.information.command.LfMembersCommand"
+          init="initialize">
+        <property name="lfMembersService" ref="lfMembersService"/>
+        <property name="operateTemplate" ref="operateTemplate"/>
+        <property name="dataToolCommand" ref="dataToolCommand"/>
+    </bean>
+    <bean name="primarySchoolCmd" parameter="primary/primary_school"
+          clazz="com.sparrow.app.information.command.PrimarySchoolCommand">
+        <property name="primarySchoolService" ref="primarySchoolService"/>
+    </bean>
+    <bean name="gifInfoCommand" parameter="gif/gif_info"
+          clazz="com.sparrow.app.information.command.GifInfoCommand">
+        <property name="gifInfoService" ref="gifInfoService"/>
+    </bean>
+</beans>

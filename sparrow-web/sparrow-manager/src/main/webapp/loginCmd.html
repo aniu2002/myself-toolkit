@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <title>系统 </title>
+    <link rel="stylesheet" href="js/bootstrap/css/bootstrap.css" type="text/css"/>
+    <link rel="stylesheet" href="js/bootstrap/css/bootstrap-responsive.css" type="text/css"/>
+</head>
+<body>
+<div class="modal hide" id="modal_div" role="dialog" data-backdrop="static">
+<form action="/authc" method="POST">
+    <div class="modal-header">
+        <h3 id="modal_header">输入用户信息</h3>
+    </div>
+    <div class="modal-body" id="modal_body">
+        <div><font id="msg" color="red"></font></div></br>
+         输入昵称：<input id="fromUser" name="username" style="height: 35px;" type="text" value=""/>
+         <br/>
+         输入密码：<input id="userpwd" name="password" style="height: 35px;" type="password" value=""/>
+    </div>
+    <div class="modal-footer">
+        <input id="ua" class="btn btn-primary" type="submit" value="确定" />
+    </div>
+ </form>
+</div>
+<script src="js/jquery/jquery-1.7.1.min.js" type="text/javascript"></script>
+<script src="js/bootstrap/bootstrap.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/common/common.js"></script>
+<script type="text/javascript">
+    function checkLoginWin(form){
+        var u=$('#fromUser').val();
+        var p=$('#userpwd').val();
+        u=$.trim(u);
+        p=$.trim(p);
+        if(u=='') {
+            var el=$('#msg');
+            el.empty();
+            el.append('登录名不能为空');
+            return false;
+        }else if(p==''){
+            var el=$('#msg');
+            el.empty();
+            el.append('密码不能为空');
+            return false;
+        }
+        return true;
+    }
+    $(document).ready(function() {
+        if(window.top==window.self){
+            $("#modal_div").modal();
+            Common.ajax('/cmd/error',null,function(d){
+                if(d.error)
+                    $('#msg').append(d.error);
+                if(d.user)
+                    $('#fromUser').val(d.user);
+            });
+        }else if(self.parent.toLoginPage)
+            self.parent.toLoginPage(1);
+    });
+</script>
+</body>
+</html>

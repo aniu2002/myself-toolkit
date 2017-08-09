@@ -1,0 +1,22 @@
+<message>
+    <app>
+        <group>taobao</group>
+        <name>asd</name>
+        <version>1.0</version>
+        <desc>呵呵哈哈</desc>
+    </app>
+    <location>
+        <ip>192.168.100.193</ip>
+        <host>liujian-pc</host>
+        <shell>shell</shell>
+        <log>hehe</log>
+    </location>
+    <machine>
+        <mem>888,6.74%</mem>
+        <cpu></cpu>
+        <disk></disk>
+    </machine>
+    <extend>
+        <info flag="-1" type="hehe">我是内容</info>
+    </extend>
+</message>

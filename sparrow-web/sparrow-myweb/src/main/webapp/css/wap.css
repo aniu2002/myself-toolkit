@@ -1,0 +1,217 @@
+/*sprite*/
+.intro .name label,.row .tag,.class-name,.address .glyphicon{
+	background:url(images/sprite.png) no-repeat;
+}
+
+/* bootstrap reset */
+@-ms-viewport       { width: device-width; }
+@-webkit-viewport   { width: device-width; }
+@-moz-viewport      { width: device-width; }
+@-ms-viewport       { width: device-width; }
+@-o-viewport        { width: device-width; }
+@viewport           { width: device-width; }
+body{
+	overflow:hidden;
+}
+.container{
+	padding:0;
+	margin:0;
+}
+.col-xs-12{
+	padding:0;
+}
+.form-control{
+	border:0;
+	box-shadow:none;
+}
+.row{
+	margin:0;
+}
+.fl{
+	float:left;
+}
+.fwnm{
+	font-weight:normal;
+}
+.posr{
+	position:relative;
+}
+.posa{
+	position:absolute;
+}
+.layout:after{clear:both;content:'\20';height:0;display:block}
+.layout{margin:0 auto;*display:inline-block}
+/*font*/
+.ffms{
+	font-family:'microsoft yahei',Arial;
+}
+
+/* custom */
+.wap_video{
+/* 	position: absolute;
+	top: 0;
+	left: 0; */
+	min-width:100%;
+	min-height:auto;
+	border-bottom:5px solid #f7f7f7;
+}
+.wap_rows{
+	padding:5px 0;
+	border-bottom:1px solid #CCC;
+}
+.intro .row{
+	height:50%;
+}
+.intro .name{
+	font-size:15px;
+}
+.intro .name label{
+	font-weight:normal;
+	margin:0 15px 0 5px;
+	padding-left:26px;
+	padding-top:3px;
+	background-position:0px -49px;
+}
+.row .tag,.row .cont{
+	font-size:14px;
+	line-height:28px;
+}
+.row label{
+	margin-bottom:0;
+}
+.class .list{
+	margin-bottom:15px;
+}
+.avatar{
+	padding:0;
+
+}
+.row .tag{
+	padding-left:30px;
+	margin-right:10px;
+}
+.row .school .tag{
+	background:none;
+}
+.skill .tag{
+	background-position:0 0px;
+}
+.address .tag{
+	background-position:0 -197px;
+}
+.info .address{
+	background:none;
+}
+.info .address .tag{
+	color:#00b386;
+}
+.address .glyphicon{
+	float:right;
+	background-position:0 -349px;
+	width:22px;
+	height:22px;
+	text-indent:-9999px;
+}
+.title{
+	background-color:#00b386;
+	color:#FFF;
+	padding:10px;
+	font-size:20px;
+	font-family:'microsoft yahei',Arial;
+}
+.class{
+	margin-bottom:15px;
+}
+.class .container{
+	padding:15px 5px;
+}
+.class-name{
+	padding-left:22px;
+	height:50px;
+}
+.title-content{
+	border-bottom:1px solid #CCC;
+}
+.class-name,.class-price{
+	font-size:20px;
+	background-position:0 -385px;
+}
+.class-price {
+	text-align:right;
+	color:#d44a30;
+}
+.class-price small{
+	color:#333;
+}
+.class .btn-group{
+	margin-top:15px;
+}
+.class .week{
+	margin:15px 0;
+	padding:0;
+}
+.class .week li{
+	float:left;
+	width:14.28%;
+	height:54px;
+	list-style:none;
+}
+.class .week li span{
+	width:40px;
+	height:40px;
+	margin:0 auto;
+	display:block;
+	font-size:14px;
+	color:#FFF;
+	text-align:center;
+	line-height:40px;
+	background-color:#C5C5C5;
+	border-radius:20px;
+}
+.class .week .cur span{
+	background-color:#00b386;
+	background-position:0px -100px;
+}
+.class .wap_rows{
+	border-bottom:0;
+	padding:5px 15px;
+}
+.class .date .tag{
+	background-position:0 -104px;
+}
+.class .time .tag{
+	background-position:0 -151px;
+}
+.class .address .tag{
+	background-position:0 -197px;
+	color:#333;
+}
+.class .remark .tag{
+	background-position:0 -250px;
+	width:30px;
+    height:30px;
+}
+.class .submit{
+	height:50px;
+	line-height:28px;
+}
+.class .submit .glyphicon{
+	background:url(images/btn.png) no-repeat;
+	width:21px;
+	height:21px;
+	margin:0 5px 0 0;
+	vertical-align:bottom;
+	top:-2px;
+}
+.wap_app .btn{
+	width:50%;
+	height:220px;
+	bottom:0;
+	text-indent:-9999px;
+}
+.wap_app .lf{
+	left:0;
+}
+.wap_app .rg{
+	left:50%;
+}

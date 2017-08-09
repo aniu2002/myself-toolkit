@@ -1,0 +1,266 @@
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <title>系统 </title>
+    <link rel="stylesheet" href="../js/bootstrap/css/bootstrap.css" type="text/css"/>
+    <link rel="stylesheet" href="../js/bootstrap/css/bootstrap-responsive.css" type="text/css"/>
+</head>
+<body>
+<div class="hero-unit">
+    <div>
+        <div style='margin-top: 0px;margin-left: 7px;background-color: #dddddd;'> .
+            <table border="0" style="font-size: 12">
+                <tr>
+                    <td width="500">
+                        <div id="DContainer" style="overflow-y:auto;height: 260px;background-color: #ffffff;">
+                            <div id="msgDetail"
+                                 style="margin-top:1px;margin-left:2px;margin-right:2px;background-color: #ffffff;">
+                            </div>
+                        </div>
+                    </td>
+                    <td width="400">
+                        <div id="userContainer" style="overflow-y:auto;height: 260px;background-color: #ffffff;">
+                            <div id="userList"
+                                 style="margin-top:1px;margin-left:2px;margin-right:2px;background-color: #ffffff;">
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <div id="aDetail" style="margin-top: 0px;margin-left: 10px;">
+                <br/>
+                消息：<input id="msgInput" name="msgInput" style="height: 35px;width: 500px;" type="text" value=""/> <br/>
+                <input id="sendMsg" type="button" value="发送"/>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal hide" id="modal_div" role="dialog" data-backdrop="static">
+    <div class="modal-header">
+        <h3 id="modal_header">输入用户信息</h3>
+    </div>
+    <div class="modal-body" id="modal_body">
+         输入昵称：<input id="fromUser" name="fromUser" style="height: 35px;" type="text" value=""/>
+    </div>
+    <div class="modal-footer">
+        <button id="userSave" class="btn btn-primary">确定</button>
+    </div>
+</div>
+<div id="warnTips"
+     style="background-color: #ffffff;display: none;position: absolute;top: 5px;left:10px;height:30px;border:1px solid #666666;">
+    <div style="margin-left: 10px;margin-top: 5px;"><span id="warnMsg" style="color: #ff3300;">发送的太快了，休息休息吧！</span>
+    </div>
+</div>
+<script src="../js/jquery/jquery-1.7.1.min.js" type="text/javascript"></script>
+<script src="../js/bootstrap/bootstrap.min.js" type="text/javascript"></script>
+<script src="../js/common/common.js" type="text/javascript"></script>
+<script src="../js/common/event.js" type="text/javascript"></script>
+<script type="text/javascript">
+var msgTemplate = "<div style='margin-top: 2px;'>【{from2}】&nbsp;&nbsp;&nbsp;{time}</div><div style='margin-top: 0px;margin-left: 7px;background-color: #FFFFFF;'><span>&nbsp;&nbsp;&nbsp; {msg}</span></div>";
+var msgOtTemplate = "<div style='margin-top: 2px;background-color: #FFFFFF; color: {id};'>【{from2}】&nbsp;&nbsp;&nbsp;{time}&nbsp;&nbsp;【{ip_addr}】</div>" +
+        "<div style='background-color: #FFFFFF;color: {id};'><span style='margin-top: 0px;margin-left: 7px;'>&nbsp;&nbsp;&nbsp; {msg}</span></div>";
+var userName = null;
+var colorSet = {};
+$(document).ready(function() {
+    var msgEl = $("#msgDetail"),msgContainer = $('#DContainer');
+    var msgTmp = new HtmlTemp(msgTemplate, null);
+    var msgOtTmp = new HtmlTemp(msgOtTemplate, {
+        id:function(ids) {
+            if (colorSet[ids] == undefined)
+                colorSet[ids] = getColor();
+            return colorSet[ids];
+        }
+    });
+
+    $("#modal_div").modal();
+    var dk = new DK({url:'/event'});
+    $(window).unload(function () {
+        dk.leave();
+    });
+
+    var polling = function() {
+        dk.subscribe("chart", function(data) {
+            if (data.length) {
+                for (var i = 0; i < data.length; i++) {
+                    appendItem(msgEl, data[i], msgOtTmp, dk.sessionId);
+                }
+            } else
+                appendItem(msgEl, data, msgOtTmp, dk.sessionId);
+            msgContainer.animate({ scrollTop:msgEl.height() }, 1000);
+            return true;
+        });
+    };
+    var listenFunc = function () {
+        dk.join("chart", {label: "所有数据",user:userName}, function(id) {
+            dk.sessions("chart", function(user) {
+                if (user.data) {
+                    var ls = user.data;
+                    for (var i = 0; i < ls.length; i++) {
+                        appendUser(ls[i]);
+                    }
+                }
+                polling();
+            });
+        });
+
+    };
+    var loginFunc = function(evt) {
+        evt.stopPropagation();
+        evt.preventDefault();
+        var from = $("#fromUser").val();
+        if (from == '') {
+            alert("请输入昵称！");
+            return;
+        } else {
+            userName = from;
+            listenFunc();
+            $("#modal_div").modal("hide");
+        }
+    };
+    $("#fromUser").keydown(function(evt) {
+        switch (evt.keyCode) {
+            case 13:
+                loginFunc(evt);
+                break;
+        }
+    });
+    $("#userSave").click(loginFunc);
+
+    var fg = false;
+    $("#msgInput").keydown(function(evt) {
+        switch (evt.keyCode) {
+            case 13:
+                sendFun(evt);
+                break;
+        }
+    });
+    var sendFun = function(evt) {
+        var msg = $("#msgInput").val();
+        if (msg == '') {
+            $('#warnMsg').text("别急，不能发送空消息！");
+            showLayer('#warnTips', '#msgInput');
+            window.setTimeout(function() {
+                hideLayer('#warnTips');
+            }, 4000);
+            return;
+        }
+        if (fg) {
+            showLayer('#warnTips', '#msgInput');
+            $('#warnMsg').text("发送的太快了，休息休息吧！");
+            window.setTimeout(function() {
+                hideLayer('#warnTips');
+            }, 4000);
+            return;
+        }
+        evt.stopPropagation();
+        evt.preventDefault();
+        var time = new Date().format("yyyy-MM-dd hh:mm:ss");
+        fg = true;
+        dk.publish(userName, "chart", msg, time, function(s) {
+            if (s == 0) {
+                appendItem(msgEl, {
+                    event:DK.E_DATA,
+                    from2:userName,
+                    msg:msg,
+                    to:"all",
+                    time:time
+                }, msgTmp, dk.sessionId);
+                msgContainer.animate({ scrollTop:msgEl.height() }, 1000);
+            }
+        });
+        $("#msgInput").val('')
+        setTimeout(function() {
+            fg = false;
+        }, 5000);
+    };
+    $("#sendMsg").click(sendFun);
+});
+
+var counter = 0;
+var userInfoTmp = new HtmlTemp("<div id='itm{id}' style='margin-top: 2px;background-color: #FFFFFF; color: #0000ff;'>"
+        + "【{user}】&nbsp;&nbsp;&nbsp;{time}&nbsp;&nbsp;{host} - (<span id='sp{id}' style='color: #ff6633'>在线</span>)</div>", {
+    online:function(v) {
+        if (v == '1')
+            return "<font color='#ff6633'>在线</font>";
+        else
+            return "<font color='#bbbbbb'>离线</font>"
+    }
+});
+var olUserTmp = new HtmlTemp("【{user}】&nbsp;&nbsp;&nbsp;{time}&nbsp;&nbsp;{host} - ({online})", {
+    online:function(v, d) {
+        if (v == '1')
+            return "<span id='sp" + d.id + "' style='color: #ff6633'>在线</span>";
+        else
+            return "<span id='sp" + d.id + "' style='color: #999999'></span>"
+    }
+});
+function appendUser(data, fg) {
+    if (data.fg) {
+        if (data.online == '0') {
+            var itm = $('#sp' + data.id);
+            if (itm) {
+                itm.css({color: '#999999'});
+                itm.text("离线");
+            }
+            return;
+        } else {
+            var itm = $('#itm' + data.id);
+            if (itm.length > 0) {
+                itm.empty();
+                itm.append(olUserTmp.render(data));
+                return;
+            }
+        }
+    }
+    var msgEl = $("#userList"),msgContainer = $('#userContainer');
+    msgContainer.animate({ scrollTop:msgEl.height() }, 1000);
+    msgEl.append(userInfoTmp.render(data));
+}
+function appendItem(el, data, msgTmp, sessionId) {
+    if (data.event == DK.E_DATA) {
+        var item = data;
+        if (item.from == sessionId) return;
+        if (item.user) {
+            appendUser(item, true);
+            return;
+        }
+        counter++;
+        if (counter > 100) {
+            el.empty();
+            counter = 0;
+        }
+        //item.color = getColor();
+        el.append(msgTmp.render(item));
+    }
+}
+var ARR = [0,1,2,3,4,5,6,7,8,9,'A','B','C','D','E','F'];
+//获取随机颜色的值
+function getColor() {
+    var color = "#";
+    for (var i = 0; i < 6; i++) {
+        var c = parseInt(Math.random() * 16);
+        c = ARR[c];
+        color = color + c;
+    }
+    return color;
+}
+function showLayer(id, ref) {
+    var position = $(ref).position();
+    var top = position.top - $(id).outerHeight();
+    var el = $(id);
+    el.css({
+        top:top + 'px',
+        width: $(ref).outerWidth() + 'px',
+        left:position.left + 'px'
+    });
+    el.show();
+}
+
+function hideLayer(id) {
+    $(id).hide();
+}
+</script>
+</body>
+</html>

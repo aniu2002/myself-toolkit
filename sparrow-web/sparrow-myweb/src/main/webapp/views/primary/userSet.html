@@ -1,0 +1,64 @@
+<html lang="zh-CN">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/app/js/mobile/jquery.mobile-1.3.2.min.css"/>
+    <script type="text/javascript" src="/app/js/mobile/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="/app/js/mobile/jquery.mobile-1.3.2.min.js"></script>
+    <title>用户设置</title>
+</head>
+<body>
+<div data-role="page" style="font-size:200%">
+    <div data-role="content">
+        <form id="signupForm" method="POST" action="http://firebird.5166.info/cmd/primary/primary_school?_t=up">
+            <div data-role="fieldcontain">
+                <label for="userName">联系人：</label>
+                <input type="hidden" id="openid" name="openid" value="${openid}" />
+                <input id="userName" name="name" type="text" value="${name?if_exists}"/>
+                <label for="phoneNo">手机号：</label>
+                <input id="phoneNo" name="phone" type="text" value="${phone?if_exists}"/>
+            </div>
+            <button type="button" data-inline="true" value="提　交" onclick="submitUser();">提　交</button>
+            <p><font id="errorMsg" color="red"></font></p>
+        </form>
+    </div>
+</div>
+</body>
+<script type="text/javascript">
+    var submits=false;
+    function submitUser(){
+        if(submits) return;
+        submits=false;
+        var un=$('#userName').val();
+        var pn=$('#phoneNo').val();
+        if(un==''||pn==''){
+            $('#errorMsg').text("为了方便联系你，请输入联系信息");
+            return false;
+        }
+        //$('#signupForm').submit();
+        var data={
+            name:un,
+            phone:pn,
+            openid:$('#openid').val()
+         };
+        ajaxSubmit(data);
+        return true;
+    }
+    function ajaxSubmit(data){
+        $.ajax({
+            type : 'POST',
+            url : 'http://firebird.5166.info/cmd/primary/primary_school?_t=up',
+            cache : false,
+            contentType : "application/x-www-form-urlencoded;charset=UTF-8",
+            dataType : "text",
+            data : data,
+            error : function(xqr){},
+            success : function(text, status, jqXHR) {
+                alert(text);
+                //window.location.reload();
+                window.location.href='http://firebird.5166.info/app/views/primary/list.html';
+            }
+        });
+    }
+</script>
+</html>

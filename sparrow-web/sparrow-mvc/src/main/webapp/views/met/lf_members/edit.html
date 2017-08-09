@@ -1,0 +1,76 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>lf_members——资源管理</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="/app/js/bootstrap/css/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/app/js/bootstrap/css/bootstrap-responsive.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/app/css/tooltip/tooltip.css" type="text/css"/>
+    <link rel="stylesheet" href="/app/css/style.css" type="text/css"/>
+    <style type="text/css">
+    .table td i{margin:0 2px;}
+    .active_el { background-color: #AAAAAA;color: #FFFFFF;}</style>
+    <script type="text/javascript" src="/app/js/jquery/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="/app/js/jquery/jquery-migrate-1.1.1.min.js"></script>
+    <script type="text/javascript" src="/app/js/bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/app/js/common/common.js"></script>
+    <script type="text/javascript" src="/app/js/common/page.js"></script>
+    <script type="text/javascript" src="/app/js/common/crud-grid.js"></script>
+    <script type="text/javascript">
+        var columns=[
+          {name:'id',label:'ID',width:'30',render:'_idx',hidden:true,noe:true},
+          {name:'name',label:'昵称',editor:'text',vtype:'required',search:true,max:32},
+          {name:'qq',label:'QQ',editor:'text',vtype:'required',search:true,max:32},
+          {name:'sex',label:'性别',editor:'text',vtype:'required',search:true,max:1},
+          {name:'age',label:'年龄',render:'number',editor:'text',vtype:'required',search:true,max:10},
+          {name:'bra',label:'罩B',editor:'text',vtype:'required',search:true,max:1},
+          {name:'phone',label:'手机',editor:'text',vtype:'required',search:true,max:32},
+          {name:'province',label:'省',editor:'text',vtype:'required',search:true,max:32},
+          {name:'city',label:'市',editor:'text',vtype:'required',search:true,max:32},
+          {name:'district',label:'区域',editor:'text',vtype:'required',search:true,max:32},
+          {name:'refereeName',label:'推荐人',editor:'text',vtype:'required',search:true,max:32},
+          {name:'refereeQq',label:'推荐qq',editor:'text',vtype:'required',search:true,max:32},
+          {name:'priceP',label:'价格P',render:'number',editor:'text',vtype:'required',search:true,max:10},
+          {name:'pricePp',label:'价格PP',render:'number',editor:'text',vtype:'required',search:true,max:10},
+          {name:'priceDesc',label:'价格描述',editor:'text',vtype:'required',search:true,max:64},
+          {name:'simpleDesc',label:'描述',editor:'text',vtype:'required',search:true,max:128},
+          {name:'special',label:'特长',editor:'text',vtype:'required',search:true,max:64},
+          {name:'checked',label:'体验否',render:'number',editor:'text',vtype:'required',search:true,max:10},
+          {name:'leval',label:'级别',render:'number',editor:'text',vtype:'required',search:true,max:10},
+          {name:'comment',label:'评价',editor:'text',vtype:'required',search:true,max:256},
+          {name:'images',label:'图片',render:'img',editor:'text',vtype:'required',search:true,max:512},
+          {name:'createDate',label:'创建时间',render:'date',editor:'text',vtype:'required',search:true,max:19},
+          {name:'updateDate',label:'更新时间',render:'date',editor:'text',vtype:'required',search:true,max:19},
+          {name:'mark',label:'标记',render:'number',editor:'text',vtype:'required',search:true,max:10}
+	    ];
+        var _url='/cmd/met/lf_members';
+        var _baseUrl='/cmd';
+        var _imgRoot='/images';
+        var _id = '${id}';
+        var _dlg;
+        $(document).ready(function() {
+        	_dlg = new _Panel({cols:columns,url:_url});
+		    _dlg._redirectUrl='/app/views/lf_members/list.html';
+			_dlg.title='信息';
+			_dlg.draw();
+			Common.ajax(_url, {_t:'da',id:_id}, function(data) {
+				 _dlg.render(data);
+				 _dlg.endDraw();
+			});
+        });
+    </script>
+</head>
+<body>
+<ul class="nav nav-tabs">
+	<li><a href="/app/views/lf_members/list.html">列表</a></li>
+	<li class="active"><a href="#">编辑</a></li>
+</ul>
+<div id="searchForm"> 
+</div>
+<div id="grid">
+</div>
+<div id="pageBar" class="pagination" style="margin:10px 0;">
+</div>
+</body>
+</html>

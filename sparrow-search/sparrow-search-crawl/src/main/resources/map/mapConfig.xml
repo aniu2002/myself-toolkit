@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<maps>
+	<map table="crawl_data" clazz="com.sparrow.collect.domain.CrawlData" desc="">
+		<key>uuid</key>
+		<select>
+			SELECT * FROM crawl_data WHERE uuid=?
+		</select>
+		<insert>
+			INSERT INTO crawl_data(uuid,site_id,site_name,site_url,page_url,detail_url,title,subject,content,publish_time,time) VALUES(:uuid,:siteId,:siteName,:siteUrl,:pageUrl,:detailUrl,:title,:subject,:content,:publishTime,:time)
+		</insert>
+		<update>
+			UPDATE crawl_data SET site_id=:siteId,site_name=:siteName,site_url=:siteUrl,page_url=:pageUrl,detail_url=:detailUrl,title=:title,subject=:subject,content=:content,publish_time=:publishTime,time=:time WHERE uuid=:uuid
+		</update>
+		<delete>
+			DELETE FROM crawl_data WHERE uuid=?
+		</delete>
+		<query>
+			SELECT * FROM crawl_data
+		</query>
+	</map>
+</maps>

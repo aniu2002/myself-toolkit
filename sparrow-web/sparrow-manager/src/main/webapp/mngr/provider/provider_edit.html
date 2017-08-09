@@ -1,0 +1,96 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Provider管理</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="/app/js/bootstrap/css/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/app/js/bootstrap/css/bootstrap-responsive.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/app/css/tooltip/tooltip.css" type="text/css"/>
+    <link rel="stylesheet" href="/app/css/style.css" type="text/css"/>
+    <style type="text/css">
+    .table td i{margin:0 2px;}
+    .active_el { background-color: #AAAAAA;color: #FFFFFF;}</style>
+    <script type="text/javascript" src="/app/js/jquery/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="/app/js/jquery/jquery-migrate-1.1.1.min.js"></script>
+    <script type="text/javascript" src="/app/js/bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/app/js/common/common.js"></script>
+    <script type="text/javascript" src="/app/js/common/page.js"></script>
+    <script type="text/javascript" src="/app/js/common/crud-grid-cmd.js"></script>
+    <script type="text/javascript">
+        <!--
+        var columns=[
+            {name:'name',id:'provider',label:'名称',readOnly:true},
+            {name:'desc',id:'description',label:'描述'},
+            {name:'source',id:'source',label:'资源',editor:'select',vtype:'required',src:"srcCfg-${app}",max:32},
+            {name:'type',label:'类型',editor:'select',vtype:'required',src:"providerTypes",max:32},
+            {name:'script',label:'执行脚本',colspan:2,editor:'textarea',vtype:'required',width:700,height:100}
+	    ];
+        var _url='/cmd/sys/provider?app=${app}';
+        var _baseUrl='http://127.0.0.1:9081/app';
+        var _imgRoot='http://127.0.0.1:9081/img';
+        var _name = '${name}';
+        var _app = '${app}';
+        var _dlg;
+
+        var advanceSet=function(){
+            var ds = $('#source').val();
+            var pd = $('#provider').val();
+            var label = $('#description').val();
+            self.location='/cmd/sys/pdc?_t=gp&provider='+pd+'&source='+ds+'&label='+label+'&app='+_app;
+        };
+        var func=function(){
+            var footers={
+               btns:[{
+                   label:'高级设置',
+                   func:function(dlg){
+                       var fields = dlg._form.getFields();
+                       if (dlg._form && dlg._validator.checkFields(fields)) {
+                           dlg._form.ajaxSubmit(function (s) {
+                               if (s.code != 0) {
+                                   alert(s.msg);
+                                   return;
+                               }
+                               advanceSet();
+                           });
+                       }
+                   }
+               }]
+            };
+            _dlg = new _Panel({cols:columns,url:_url,footers:footers});
+            _dlg.colspan=2;
+            //_dlg._redirectUrl='/cmd/sys/provider?_t=list&app=${app}';
+            _dlg.title='信息';
+//            _dlg.afterSubmit=function(){
+//                var ds = $('#source').val();
+//                var pd = $('#provider').val();
+//                var label = $('#description').val();
+//                self.location='/cmd/sys/pdc?_t=gp&provider='+pd+'&source='+ds+'&label='+label+'&app='+_app;
+//            };
+            _dlg.draw();
+            Common.get('/cmd/sys/provider' , {_t:'dp',app:_app,name:_name}, function(data) {
+                _dlg.render(data);
+                _dlg.endDraw();
+            });
+        }
+        $(document).ready(function() {
+            Common.loadSource('srcCfg-${app}',function(){
+                func();
+            });
+        });
+        -->
+    </script>
+</head>
+<body>
+<ul class="nav nav-tabs">
+	<li><a href="/cmd/sys/provider?_t=list&app=${app}">Provider列表</a></li>
+	<li class="active"><a href="#">Provider信息</a></li>
+</ul>
+<div id="searchForm">
+</div>
+<div id="grid">
+</div>
+<div id="pageBar" class="pagination" style="margin:10px 0;">
+</div>
+</body>
+</html>

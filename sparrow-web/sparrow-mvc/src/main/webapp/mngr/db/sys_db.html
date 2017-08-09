@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>数据源——资源管理</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="/app/js/bootstrap/css/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/app/js/bootstrap/css/bootstrap-responsive.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/app/css/tooltip/tooltip.css" type="text/css"/>
+    <link rel="stylesheet" href="/app/css/style.css" type="text/css"/>
+    <style type="text/css">
+    .table td i{margin:0 2px;}
+    .active_el { background-color: #AAAAAA;color: #FFFFFF;}</style>
+    <script type="text/javascript" src="/app/js/jquery/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="/app/js/jquery/jquery-migrate-1.1.1.min.js"></script>
+    <script type="text/javascript" src="/app/js/bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/app/js/common/common.js"></script>
+    <script type="text/javascript" src="/app/js/common/page.js"></script>
+    <script type="text/javascript" src="/app/js/common/crud-grid-cmd.js"></script>
+    <script type="text/javascript">
+        <!--
+        var columns=[
+          'x',
+          {name:'id',label:'序号',width:'30',render:'_idx',hidden:true,noe:true},
+          {name:'name',label:'名称',width:'100'},
+          {name:'type',label:'类型',editor:'select',vtype:'required',src:"sqlType",search:true,max:32},
+          {name:'user',label:'User',editor:'text',vtype:'required',search:true,max:32},
+          {name:'driver',label:'驱动',editor:'pwd',vtype:'required',max:32},
+          {name:'url',label:'链接地址',editor:'text',vtype:'required',max:32},
+          //{name:'userEmail',label:'用户邮箱',editor:'text',vtype:'required',max:32},
+          {name:'op',label:'操作',width:'90',align:'left',render:function(v,data){
+        	  v=data.id;
+        	  var s='<a href="/cmd/sys/db?_t=edit&id='+v+'">编辑</a>&nbsp;<a href="/cmd/sys/db?_t=detail&id='+v+'">详情</a>&nbsp;<a href="#" onclick="delRow('+v+')">删除</a>';
+        	  return s;
+          },noe:true}
+	    ];
+        var _url='/cmd/sys/db';
+        var _baseUrl='http://127.0.0.1:9081/app';
+        var _imgRoot='http://127.0.0.1:9081/img';
+        var _UI;
+       
+        var rowDblClick=function(r){
+        	self.location="/cmd/sys/db?_t=edit&id="+r._id;
+        };
+        var delRow = function(v){
+        	_CRUD_.openAlert({
+				confirm : '确认删除该记录么?',
+				ok : function() {
+					_CRUD_.deleteRow(_UI.url, v, _UI.grid);
+				}
+			});
+        };
+        $(document).ready(function() {
+            _CRUD_.baseUrl=_imgRoot;
+        	_UI = _CRUD_.renderTable({
+            	url:_url,
+            	cols:columns,
+            	idFeild:'id', 
+            	searchEl:'#searchForm',
+            	rowDblClick:rowDblClick,
+            	opBar:[_CRUD_.opBar[0],_CRUD_.opBar[1], {
+                        name:'清空数据源缓存',
+                        func:function(grid){
+                            Common.post('/cmd/source',{_t:'clean'},function(e){
+                                alert(e.msg);
+                            });
+                        }
+                    }],
+            	showDetail:true,
+            	showMenu:true,
+            	canOp:true
+             });
+        });
+        -->
+    </script>
+</head>
+<body>
+<ul class="nav nav-tabs">
+	<li class="active"><a href="#">连接池</a></li>
+	<li><a href="sys_db_add.html">增加连接池</a></li>
+</ul>
+<div id="searchForm"> 
+</div>
+<div id="grid">
+</div>
+<div id="pageBar" class="pagination" style="margin-top:0px;">
+</div>
+</body>
+</html>

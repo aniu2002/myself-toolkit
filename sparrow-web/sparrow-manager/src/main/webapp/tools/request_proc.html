@@ -1,0 +1,50 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<title>系统</title>
+<link rel="stylesheet" href="../js/bootstrap/css/bootstrap.css"
+	type="text/css" />
+<link rel="stylesheet" href="../js/bootstrap/css/bootstrap-responsive.css"
+	type="text/css" />
+</head>
+<body>
+<div class="hero-unit">
+    <div id="DContainer" style="overflow-y:auto;height: 560px;background-color: #ffffff;">
+        <div id="taskDetail" style="margin-top:1px;margin-left:2px;margin-right:2px;background-color: #ffffff;">
+        </div>
+    </div>
+</div>
+<script src="../js/jquery/jquery-1.7.1.min.js" type="text/javascript"></script>
+<script src="../js/bootstrap/bootstrap.min.js" type="text/javascript"></script>
+<script src="../js/common/common.js" type="text/javascript"></script>
+<script src="../js/common/event-x.js" type="text/javascript"></script>
+<script type="text/javascript">
+var counter=0;
+function appendData(d){
+  var el=$('#taskDetail');
+  if(counter>100){
+	 el.empty();
+     counter=0;
+  }
+  counter++;
+  if(d.indexOf('[ERROR]')!=-1)
+   	el.append('<font color="red">&nbsp;'+d.substring()+'</font><br/>');
+  else
+    el.append("&nbsp;"+d+"<br/>");
+}
+function scrollDiv(){
+	var el=$('#taskDetail');
+	$('#DContainer').animate({ scrollTop:el.height() });
+}
+$(document).ready(function() {
+    var dk = new DK({url:'/event/process',handler: appendData,after:scrollDiv});
+    $(window).unload(function () {
+        dk.leave();
+    });
+    dk.listen();
+});
+</script>
+</body>
+</html>

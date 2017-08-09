@@ -1,0 +1,103 @@
+{
+  "pool": {
+    "min": 100,
+    "max": 100,
+    "size": 100,
+    "period": 2,
+    "single": true,
+    "useDefault": true
+  },
+  "page": {
+    "ignoreFirst": true,
+    "endExpress": "",
+    "entryExpress": "${page}.html",
+    "fillZero": false,
+    "placeholders": 2,
+    "start": 1,
+    "end": -1
+  },
+  "selector": {
+    "nameExpress": "",
+    "contentExpress": ".v-l-content>p",
+    "itemExpress": [
+      ".content-list.content-list-tutor>ul>li>dl>dt>a"
+    ],
+    "urlExpress": [
+      "href"
+    ]
+  },
+  "store": {
+    /** 在saveFile为false情况下，file以文件方式存储每个详情信息 ,db  ,batch ,sql 以sql模板导入*/
+    "clazz": "file",
+    /** true 直接将详情url保存为文件，一般在文件下载时使用 */
+    "saveFile": false,
+    /** 是否gzip压缩内容 */
+    "gzip": true,
+    "fileDir": "",
+    "fileExt": "",
+    /** 临时文件路径 */
+    "tempDataDir": "",
+    /** file存储时候，一个大文件存储多个详情页面的结构(根据format的配置) */
+    "alias": "test",
+    "path": "d:/",
+    /** 如果存储是 html或者content，则不需要经过format处理，直接存字符串 */
+    "type": "content",
+    "props": {
+      "jdbc.driver": "com.mysql.jdbc.Driver",
+      "jdbc.url": "jdbc:mysql://127.0.0.1:3306/sparrow_is?useUnicode=true&characterEncoding=UTF-8",
+      "jdbc.user": "root",
+      "jdbc.password": "root",
+      // 显示sql
+      "jdbc.showSql": "true",
+      // 格式化sql
+      "jdbc.formatSql": "false",
+      // 是否要检查数据存在，uuid 是 url的md5
+      "need.checkData": "true",
+      // database select uuid 来检查，也可以使用缓存，cache 百克利db
+      "data.check.type": "db",
+      // 数据存在 是否更新
+      "need.updateData": "true"
+    }
+  },
+  "format": {
+    // format 的实现类,bean 的format 和 array的format
+    "formatter":"configure",
+    // 格式化映射类
+    "classMap": "",
+    "fieldMaps": [
+      {
+        "name": "",
+        "express": "",
+        "expressType": 1
+      },
+      {
+        "name": "",
+        "express": "",
+        // 0 = custom set[uuid,time,md5],
+        // 1 = element text ，
+        // 2 = attribute value ,
+        // 3 = crawler data ,
+        // 4 = site entry data ,
+        // 5 = page entry
+        "expressType": 1
+      }
+    ]
+  },
+  "site": {
+    "id": "diaoyuren",
+    "name": "钓鱼人",
+    "url": "http://www.diaoyu123.com/",
+    //是否启用 url排重过滤
+    "urlFilter": true,
+    //http抓取尝试次数
+    "retryNum": 2,
+    //是否单线程抓取，否则是多线程并发抓取
+    "singleThread": true,
+    "links": null,
+    // [".content>li>a"]
+    "entryFiles": [
+      "classpath:dy-entries.json"
+    ]
+  },
+  "entries": null
+}

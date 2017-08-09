@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>lf_members——资源管理</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="/app/js/bootstrap/css/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/app/js/bootstrap/css/bootstrap-responsive.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/app/js/common/popui/pop-ui.css" type="text/css"/>
+    <link rel="stylesheet" href="/app/css/tooltip/tooltip.css" type="text/css"/>
+    <link rel="stylesheet" href="/app/css/style.css" type="text/css"/>
+    <style type="text/css">
+    .table td i{margin:0 2px;}
+    .active_el { background-color: #AAAAAA;color: #FFFFFF;}</style>
+    <script type="text/javascript" src="/app/js/jquery/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="/app/js/jquery/jquery-migrate-1.1.1.min.js"></script>
+    <script type="text/javascript" src="/app/js/bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/app/js/common/common.js"></script>
+    <script type="text/javascript" src="/app/js/common/page.js"></script>
+    <script type="text/javascript" src="/app/js/common/crud-grid-new.js"></script>
+    <script type="text/javascript" src="/app/js/common/popui/pop-ui.js"></script>
+    <script type="text/javascript">
+        var columns=[
+            {name:'id',label:'ID',width:'30',render:'_idx',hidden:true,noe:true},
+            {name:'name',label:'昵称',editor:'text',vtype:'required',max:32},
+            {name:'qq',label:'QQ',editor:'text',vtype:'num',max:32},
+            {name:'sex',label:'性别',editor:'select',src:'sex',vtype:'required',max:1},
+            {name:'age',label:'年龄',render:'number',editor:'text',vtype:'num',search:true,max:11},
+            {name:'bra',label:'罩B',editor:'select',src:'bra',vtype:'required',max:1},
+            {name:'phone',label:'手机',editor:'text',max:32},
+            {name:'district',label:'区域',editor:'text',vtype:'required',max:32},
+            {name:'refereeName',label:'上报人',editor:'text',vtype:'required',max:32},
+            {name:'refereeQq',label:'上报qq',editor:'text',vtype:'num',hidden:true,max:32},
+            {name:'special',label:'特长',editor:'text',vtype:'required',max:64},
+            {name:'priceP',label:'价格P',render:'number',editor:'text',vtype:'num',max:11},
+            {name:'pricePp',label:'价格PP',render:'number',editor:'text',vtype:'num',max:11},
+            {name:'leval',label:'级别',render:'number',editor:'select',src:'leval',vtype:'required',max:11},
+            {name:'checked',label:'体验否',render:'number',editor:'checkbox',vtype:'required',search:true,hidden:true,max:11},
+            {name:'priceDesc',label:'价格描述',editor:'textarea', max:64},
+            {name:'simpleDesc',label:'简单描述',editor:'textarea', max:128},
+            {name:'comment',label:'评价',editor:'textarea', max:256,vtype:'max',colspan:2,width:'550px',height:'100px'},
+            {name:'images',label:'图片',editor:'img',vtype:'max',max:512,colspan:2}
+        ];
+        var _url='/cmd/lf/lf_members';
+        var _baseUrl='http://127.0.0.1:9081/app';
+        var _imgRoot='http://127.0.0.1:9081/img';
+        var _id = '${id}';
+        var _dlg;
+        $(document).ready(function() {
+        	_dlg = new _Panel({cols:columns,url:_url,colspan:2});
+		    _dlg._redirectUrl='/app/views/lf/list.html';
+            _dlg._disable=true;
+			_dlg.title='编辑信息';
+			_dlg.draw();
+			Common.ajax(_url, {_t:'da',id:_id}, function(data) {
+				 _dlg.render(data);
+				 _dlg.endDraw();
+			});
+        });
+    </script>
+</head>
+<body>
+<ul class="nav nav-tabs">
+	<li><a href="/app/views/lf/list.html">列表</a></li>
+	<li class="active"><a href="#">编辑</a></li>
+</ul>
+<div id="searchForm"> 
+</div>
+<div id="grid">
+</div>
+<div id="pageBar" class="pagination" style="margin:10px 0;">
+</div>
+</body>
+</html>

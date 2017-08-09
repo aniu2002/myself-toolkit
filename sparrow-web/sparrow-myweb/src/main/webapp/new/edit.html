@@ -1,0 +1,294 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>保存用户信息，用户信息来自于passport与本系统结合的数据——资源管理</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="/app/js/bootstrap/css/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/app/js/bootstrap/css/bootstrap-responsive.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/app/css/tooltip/tooltip.css" type="text/css"/>
+    <link rel="stylesheet" href="/app/js/common/popui/pop-ui.css" type="text/css"/>
+    <link rel="stylesheet" href="/app/css/style.css" type="text/css"/>
+    <style type="text/css">
+        .table td i {
+            margin: 0 2px;
+        }
+        .active_el {
+            background-color: #AAAAAA;
+            color: #FFFFFF;
+        }</style>
+    <script type="text/javascript" src="/app/js/jquery/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="/app/js/jquery/jquery-migrate-1.1.1.min.js"></script>
+    <script type="text/javascript" src="/app/js/bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/app/js/common/common.js"></script>
+    <script type="text/javascript" src="/app/js/common/page.js"></script>
+    <script type="text/javascript" src="/app/js/common/crud-grid.js"></script>
+    <script type="text/javascript" src="/app/js/common/popui/pop-ui.js"></script>
+    <script type="text/javascript">
+
+        var columns = [
+
+             {name: 'name', label: '账号', editor: 'text',vtype:'required max', max: 50, colspan: 2, disabled: true},
+             {name: 'tel', label: '手机号', editor: 'text', vtype: 'max', max: 32, colspan: 2, disabled: true},
+             {name: 'real_name', label: '姓名', editor: 'text', vtype: 'required max', max: 32, colspan: 2, disabled: true},
+             {name: 'mail', label: '邮箱', editor: 'text', vtype: 'max', max: 200, colspan: 2, disabled: true},
+             {name: 'department', label: '部门', editor: 'text', vtype: 'max', max: 20, colspan: 2},
+             {name: 'status', label: '状态', id: 'status', editor: 'radiogroup', values: '1_启用,0_禁用', vtype: 'required', max: 3},
+             {name: 'roleSel', id: 'roleSel', label: '角色', colspan: 2, editor: 'btnTxtEx', btnTitle: '选择',
+                       onSet: function (e, gxt) {
+                        _$UIRole.grid.setDefVal(roleArray);
+                       	_$UIRole.grid.reload();
+                       	_$PopRole.show();
+                       }
+             },
+             {name: 'tagSel', id: 'tagSel', label: '市场标签', colspan: 2, editor: 'btnTxtEx', btnTitle: '选择',
+                       onSet: function (e, gxt) {
+                        _$UITag.grid.setDefVal(tagArray);
+                       	_$UITag.grid.reload();
+                       	_$PopTag.show();
+                       }
+             }
+        ];
+               
+        var columnRoles = [
+              'x',
+               {name: 'id', label: 'ID', render: '_idx', hidden: true, noe: true},
+               {name: 'name', label: '角色名', vtype: 'required max', search: true, max: 50},
+               {name: 'description', label: '角色描述', vtype: 'required max',  max: 200},
+               {name: 'app_id', label: '应用系统', render: '$', editor: 'select', src: 'business', search: true, max: 4 }
+        ];
+               
+        var columnTags = [
+              'x',
+                {name: 'id', label: 'ID', render: '_idx', hidden: true, noe: true},
+                {name: 'name', label: '标签名', vtype: 'required max', search: true, max:50},
+                {name: 'tag', label: '标签内容', vtype: 'required max', max: 50},
+                {name: 'app_id', label: '业务系统', render: '$', editor: 'select', src: 'business', search: true, max: 19}
+        ];
+
+        var _url = '/cmd/bps/user';
+        var _roleUrl = '/cmd/sys/role';
+        var _tagUrl = '/cmd/bps/tags';
+        var _baseUrl = 'http://127.0.0.1:9081/app';
+        var _imgRoot = 'http://127.0.0.1:9081/img';
+        var _id = '${id}';
+        var _dlg;
+        var _$PopRole;
+        var _$UIRole;
+        var _$PopTag;
+        var _$UITag;
+        var tagArray;
+        var roleArray;
+        var _uid;
+
+        $(document).ready(function () {
+        	tagArray = new Array;
+        	roleArray = new Array;
+        	
+        	initSelRoleGrid(columnRoles);
+        	initSelTagGrid(columnTags);
+        	
+        	_dlg = new _PanelUser({cols: columns, url: _url, btnName:"保存", submit: doSubmit});
+            _dlg._redirectUrl = '/app/views/user/list.html';
+            _dlg.title = '编辑用户信息';
+            _dlg.draw();
+            Common.ajax(_url, {_t: 'daTagRole', id: _id}, function (data) {
+                if (typeof(data.code) != "undefined" && data.code != 0) {
+                    var warnCfg = {
+                        confirm: '<font color="red">' + data.msg + '</font>',
+                        title: '警告'
+                    }
+                    _CRUD_.openAlert(warnCfg);
+                    return;
+                }
+            	
+            	var tags = data.tags;
+                var roles = data.roles;
+                _uid = data.uid;
+            	
+                if(tags){
+                	$(tags).each(function (index, itm){
+                		tagArray.push($(itm).attr("id"));
+                	});
+                }
+                
+                if(roles){
+                	$(roles).each(function (index, itm){
+                		roleArray.push($(itm).attr("id"));
+                	});
+                }
+                
+            	_dlg.render(data);
+                _dlg.endDraw();
+                
+                var statusVal = data.status;
+                $("#status").find("input[type='radio']").each(function(){
+                    if ($(this).val() == statusVal) {
+                    	$(this).prop("checked", true);
+                    }
+                })
+            });
+        });
+        
+        function doSubmit(dlg) {
+            var fields = dlg._form.getFields();
+            if (dlg._validator.checkFields(fields)) {
+                fields = dlg._form.getParameters();
+   
+                var tags = "", roles = "";
+                if(tagArray && tagArray.length > 0){
+                	for(var i=0; i < tagArray.length; i++){
+                		tags += tagArray[i] + ","
+                	}
+                	
+                	tags = tags.substring(0, tags.length - 1);
+                }
+                
+                if(roleArray && roleArray.length > 0){
+                	for(var j=0; j < roleArray.length; j++){
+                		roles += roleArray[j] + ","
+                	}
+                	
+                	roles = roles.substring(0, roles.length - 1);
+                }
+                
+                var status = $("#status").find("input[type='radio']:checked").val();
+                
+                var data = {};
+                data._method = 'PUT';
+                data.mail=fields.mail; 
+                data.department=fields.department;
+                data.real_name=fields.real_name; 
+                data.tel=fields.tel; 
+                data.name=fields.name;
+                data.status = status;
+                data.id = _id;
+                data.uid= _uid;
+                data.tagsStr = tags;
+                data.rolesStr = roles;
+                var _urlAdd = _url + '?_t=withRoleTag';
+                
+                Common.post(_urlAdd, data, function (dt) {
+                    if (typeof(dt.code) != "undefined" && dt.code != 0) {
+                        var warnCfg = {
+                            confirm: '<font color="red">' + dt.msg + '</font>',
+                            title: '警告'
+                        }
+                        _CRUD_.openAlert(warnCfg);
+                        return;
+                    }
+                    var alertCfg = {
+                        confirm: '保存成功!',
+                        title: '提示'
+                    }
+                    _CRUD_.openAlert(alertCfg);
+                    $('html, body').animate({scrollTop: 0}, 0);
+                    self.location = '/app/views/user/list.html';
+                });
+            }
+        }
+        
+        function initSelRoleGrid(cols) {
+            if (_$PopRole)
+                return;
+            _$PopRole = PopDialog.pop({title: '选择角色',
+                renderto: 'popRoleSelUi', dragEnable: true,
+                width: 800, height: 400,
+                modal: true});
+            _$PopRole.callback = function () {
+                var v = {
+                    roleIds: {}
+                }
+                v.roleIds = _CRUD_.getSelectedVal(_$UIRole.grid);
+                roleArray.splice(0, roleArray.length); 
+                if (v.roleIds) {
+                	var ids = v.roleIds.split(",");
+                	for(var i = 0; i < ids.length; i++){
+                		roleArray.push(ids[i]);
+                	}
+                }
+            }
+
+            Common.loadSource('business', function () {
+                _$UIRole = _CRUD_.renderTable({
+                   id: '#roleSelGrid',
+                   cols: cols,
+                   url: _roleUrl,
+                   idFeild: 'id',
+                   searchEl: '#roleSelSearchForm',
+                   maskBd: true,
+                   limit: 100,
+                   pBar: '#roleSelPageBar',
+                   showDetail: true,
+                   showMenu: false,
+                   canOp: false
+                });
+            });
+        }
+
+        function initSelTagGrid(cols) {
+            if (_$PopTag)
+                return;
+            _$PopTag = PopDialog.pop({title: '选择标签',
+                renderto: 'popTagSelUi', dragEnable: true,
+                width: 800, height: 400,
+                modal: true});
+            _$PopTag.callback = function () {
+                var v = {
+                    tagIds: {}
+                }
+                v.tagIds = _CRUD_.selectIds(_$UITag.grid);
+                tagArray.splice(0, tagArray.length); 
+                if (v.tagIds) {
+                	var ids = v.tagIds.split(",");
+                	for(var i = 0; i < ids.length; i++){
+                		tagArray.push(ids[i]);
+                	}
+                }
+            }
+
+            Common.loadSource('business', function () {
+            	_$UITag = _CRUD_.renderTable({
+                   id: '#tagSelGrid',
+                   cols: cols,
+                   url: _tagUrl,
+                   idFeild: 'id',
+                   searchEl: '#tagSelSearchForm',
+                   maskBd: true,
+                   limit: 100,
+                   pBar: '#tagSelPageBar',
+                   showDetail: true,
+                   showMenu: false,
+                   canOp: false
+                });
+            });
+        }
+    </script>
+
+</head>
+<body>
+<ul class="nav nav-tabs">
+    <li><a href="/app/views/user/list.html?_f=20150805">用户列表</a></li>
+    <li class="active"><a href="#">编辑用户信息</a></li>
+</ul>
+
+<div id="popRoleSelUi" style="margin-top:10px;margin-right:10px;display:none;">
+    <div id="roleSelSearchForm">
+    </div>
+    <div id="roleSelGrid">
+    </div>
+    <div id="roleSelPageBar" class="pagination" style="margin:10px 0;">
+    </div>
+</div>
+
+<div id="popTagSelUi" style="margin-top:10px;margin-right:10px;display:none;">
+    <div id="tagSelSearchForm">
+    </div>
+    <div id="tagSelGrid">
+    </div>
+    <div id="tagSelPageBar" class="pagination" style="margin:10px 0;">
+    </div>
+</div>
+
+</body>
+</html>

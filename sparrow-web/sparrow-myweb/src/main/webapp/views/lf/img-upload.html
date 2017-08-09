@@ -1,0 +1,144 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>任务类型定义——资源管理</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="/app/js/bootstrap/css/bootstrap.min.css" type="text/css" />
+<link rel="stylesheet" href="/app/js/bootstrap/css/bootstrap-responsive.min.css" type="text/css" />
+</head>
+<body>
+	<center>
+		<br />
+	</center>
+	<div id="uploadDiv">
+		<form enctype="multipart/form-data" action="/cmd/lf/lf_members" method="post"
+			onsubmit="return checkFileType(this);" target="hideFrame">
+			<input name="id" type="hidden" value="${id}" />
+            <input name="_t" type="hidden" value="up" />
+            <input name="_m" type="hidden" value="lf" />
+			<table class="table table-striped table-bordered table-condensed table-hover" id="upTable" width="100%" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+				    <td width="80">选择文件:</td>
+					<td align="left">
+						<input type="hidden" id="fPath" name="fPath" /> 
+						<input type="file" name="file" onchange="fPath.value=this.value" />
+					</td>
+				</tr>
+				<tr>
+				    <td>&nbsp;</td>
+					<td align="left">
+						<input id="addFileBtn" type="button" value="增加" />&nbsp;&nbsp;<input type="submit" value="提交" />
+					</td>
+				</tr>
+			</table>
+		</form>
+	</div>
+<script type="text/javascript" src="/app/js/jquery/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="/app/js/common/common.js"></script>
+<script type="text/javascript">
+var isFirst=true;
+var fields=['fPath'];
+var _TP=['img','gif','jpeg','png','jpg'];
+var _MSG='需要图片文件格式';
+function checkTypes(tp){
+	for(var i=0;i<_TP.length;i++){
+		var vr=_TP[i];
+		if(tp==vr) 
+			return true;
+	}
+	return false;
+}
+function checkFileType(fm){
+	for(var i=0;i<fields.length;i++){
+	   var vf=fields[i];
+	   var fel=fm[vf];
+	   if(!fel) continue;
+	   var pa=fel.value;
+       var p=pa.substring(pa.lastIndexOf('.')+1);
+       p=p.toLowerCase();
+       var reg=/[^\x00-\xff]/g;
+       if (reg.test(pa)==true){
+    	   alert("文件名规定不能有汉字");
+    	   return false;
+       }
+       if(checkTypes(p))
+          continue;
+       else{
+    	  alert(_MSG);
+    	  return false;   
+       }
+    }
+	Common.mask($('#uploadDiv'),'文件上传中...');
+	return true;
+}
+function handleFrameBack(cb) {
+	try {
+        alert("保存成功")
+        Common.unMask($('#uploadDiv'));
+        $('#uploadDiv').empty();
+        if(parent.callback)
+          parent.callback();
+	}catch (e) {
+		alert(e);
+	}
+}
+function handleState(frame){
+	 if(typeof(frame.readyState)== 'undefined' || frame.readyState=="complete"){
+	 	 if(isFirst) {
+             isFirst = false;
+             return;
+         }
+        var doc;
+        var id=frame.id;
+        if(frame.contentWindow){
+            doc = frame.contentWindow.document;
+        }else {
+            doc = (frame.contentDocument || window.frames[id].document);
+        }
+        var r={};
+        if(doc && doc.body){
+            r.responseText = doc.body.innerHTML;
+        }
+        if(doc && doc.XMLDocument){
+            r.responseXML = doc.XMLDocument;
+        }else {
+            r.responseXML = doc;
+        }
+        handleFrameBack(r);
+	 }
+  }
+  var ct=0;
+  var itms={};
+  function delItem(n){
+	  var el=itms[n];
+	  if(el)
+		  el.remove();
+  }
+  $(document).ready(function() {
+	  $('#addFileBtn').click(function(){
+		  ct++;
+		  var fnm='fPath'+ct;
+		  var el=$('<tr><td>选择文件:</td><td align="left">'+
+		  '<input type="hidden" id="'+fnm+'" name="'+fnm+'" />'+
+		  '<input type="file" name="file'+ct+'" onchange="'+fnm+'.value=this.value" />'+ 
+		  '&nbsp;<input type="button" value="删除" onclick="delItem(\''+fnm+'\')"/></td></tr>');
+		  itms[fnm]=el;
+		  $('#upTable').prepend(el);
+		  fields[fields.length]=fnm;
+	  });
+  });
+  function bindFrameOnLoad(){
+      var el=document.getElementById('hideFrame');
+      var evt=document.all ? "readystatechange" : "load";
+      Utils.addEvent(el,evt,function(){
+          if (document.all && this.readyState != "loaded" && this.readyState != "complete") {
+              return;
+          }
+          handleState(this);
+      })
+  }
+</script>
+<iframe id="hideFrame" name="hideFrame" frameborder="0" height="0" width="0" style="display: none" onload="handleState(this);"></iframe>
+</body>
+</html>

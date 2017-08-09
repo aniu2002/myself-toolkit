@@ -1,0 +1,83 @@
+[ {
+	id : 'ui',
+	name : 'UI控件',
+	type : 'combox',//显示类型
+	defVal : 'text',
+	data : [ {
+	    id: 'noe',
+		type : 'all',
+		name : '忽略编辑'
+   },{
+	    id: 'checkbox',
+		type : 'all',
+		name : 'checkbox'
+   },{
+	    id: 'text',
+		type : 'all',
+		name : '输入框'
+   },{
+	    id: 'textarea',
+		type : 'all',
+		name : 'textarea'
+   },{
+	    id: 'pwd',
+		type : 'all',
+		name : '密码框'
+   },{
+	    id: 'select',
+		type : 'all',
+		name : '选择框'
+   },{
+	    id: 'read',
+		type : 'all',
+		name : '只读框'
+   },{
+	    id: 'source',
+		type : 'all',
+		name : '资源'
+   },{
+	    id: 'date',
+		type : 'all',
+		name : '日期控件'
+   },{
+	    id: 'time',
+		type : 'all',
+		name : '时间控件'
+   }]
+}, {
+	id : 'vtype',
+	name : '验证',
+	type : 'combox',
+	defVal : 'required',
+	data : [  {
+	    id:'required',
+        type : 'all',// 过滤字段类型
+        name : '非空'
+    },{
+        id:'num',
+		type : 'int',// 过滤字段类型
+		name : '数字验证'
+	}, {
+	    id:'date',
+		type : 'date',
+		name : '日期认证'
+	} ]
+}, {
+	id : 'coldef',
+	name : '列定义',
+	defVal : true,
+	type : 'checkbox'// combox
+}, {
+	id : 'search',
+	name : '查询定义',
+	defVal : false,
+	type : 'checkbox'
+}, {
+	id : 'label',
+	fd:'desc',
+	name : '字段描述',
+	type : 'text'
+}/*, {
+	id : 'ot',
+	name : '其他'
+} */ ]

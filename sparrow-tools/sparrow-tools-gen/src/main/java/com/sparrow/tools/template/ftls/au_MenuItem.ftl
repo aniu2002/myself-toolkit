@@ -1,0 +1,1 @@
+<li><a href="/app/views/${destSource}/list.html"><i class="icon-leaf"></i>&nbsp;${itemName?if_exists}管理</a></li>

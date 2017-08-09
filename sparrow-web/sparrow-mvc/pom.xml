@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.sparrow</groupId>
+        <artifactId>sparrow-web</artifactId>
+        <version>1.1</version>
+    </parent>
+    <artifactId>sparrow-mvc</artifactId>
+    <name>sparrow-mvc</name>
+    <description>sparrow-mvc</description>
+    <version>1.1</version>
+    <packaging>jar</packaging>
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.sparrow</groupId>
+            <artifactId>sparrow-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.sparrow</groupId>
+            <artifactId>sparrow-common</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.sparrow</groupId>
+            <artifactId>sparrow-orm</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.sparrow</groupId>
+            <artifactId>sparrow-service</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.sparrow</groupId>
+            <artifactId>sparrow-service-ext</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.sparrow</groupId>
+            <artifactId>sparrow-http</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.sparrow</groupId>
+            <artifactId>sparrow-web-server</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.sparrow</groupId>
+            <artifactId>sparrow-web-controller</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.sparrow</groupId>
+            <artifactId>sparrow-tools-gen</artifactId>
+        </dependency>
+
+        <!-- other dependency -->
+        <dependency>
+            <groupId>commons-digester</groupId>
+            <artifactId>commons-digester</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.sleepycat</groupId>
+            <artifactId>je</artifactId>
+        </dependency>
+
+    </dependencies>
+</project>

@@ -1,0 +1,76 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Provider配置管理</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="/app/js/bootstrap/css/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/app/js/bootstrap/css/bootstrap-responsive.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/app/css/tooltip/tooltip.css" type="text/css"/>
+    <link rel="stylesheet" href="/app/css/style.css" type="text/css"/>
+    <style type="text/css">
+    .table td i{margin:0 2px;}
+    .active_el { background-color: #AAAAAA;color: #FFFFFF;}</style>
+    <script type="text/javascript" src="/app/js/jquery/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="/app/js/jquery/jquery-migrate-1.1.1.min.js"></script>
+    <script type="text/javascript" src="/app/js/bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/app/js/common/common.js"></script>
+    <script type="text/javascript" src="/app/js/common/page.js"></script>
+    <script type="text/javascript" src="/app/js/common/crud-grid-cmd.js"></script>
+    <script type="text/javascript">
+        <!--
+        var _app='${app}';
+        var columns=[
+            {name:'name',id:'provider',label:'名称'},
+            {name:'desc',id:'description',label:'描述'},
+            {name:'source',id:'source',label:'资源',editor:'select',vtype:'required',src:"srcCfg-${app}",max:32},
+            {name:'type',label:'类型',editor:'select',vtype:'required',src:"providerTypes",max:32},
+            {name:'script',label:'执行脚本',colspan:2,editor:'textarea',vtype:'required',width:700,height:100}
+	    ];
+        var _url='/cmd/sys/provider?app='+_app;
+        var _baseUrl='http://127.0.0.1:9081/app';
+        var _imgRoot='http://127.0.0.1:9081/img';
+        var _dlg;
+		$(document).ready(function() {
+            var footers={
+                okLabel:'下一步',
+                ok:function(dlg){
+                    var fields = dlg._form.getFields();
+                    if (dlg._validator && dlg._validator.checkFields(fields)) {
+                        var ds = $('#source').val();
+                        var label = $('#description').val();
+                        self.location = '/cmd/sys/pdc?_t=gp&source=' + ds + '&label=' + label + '&app=' + _app;
+                    }
+                }
+            };
+            //,footers:footers
+			_dlg = new _Panel({cols:columns,url:_url});
+            _dlg.colspan=2;
+			//_dlg._redirectUrl='/cmd/sys/provider?_t=list&app=${app}';
+			_dlg.title='Provider信息';
+            _dlg.afterSubmit=function(){
+                var ds = $('#source').val();
+                var pd = $('#provider').val();
+                var label = $('#description').val();
+                self.location='/cmd/sys/pdc?_t=gp&provider='+pd+'&source='+ds+'&label='+label+'&app='+_app;
+            };
+			_dlg.draw();
+			_dlg.render();
+			_dlg.endDraw();
+		});
+        -->
+    </script>
+</head>
+<body>
+<ul class="nav nav-tabs">
+	<li><a href="/cmd/sys/provider?_t=list&app=${app}">Provider列表</a></li>
+	<li class="active"><a href="#">增加Provider</a></li>
+</ul>
+<div id="searchForm">
+</div>
+<div id="grid">
+</div>
+<div id="pageBar" class="pagination" style="margin:10px 0;">
+</div>
+</body>
+</html>

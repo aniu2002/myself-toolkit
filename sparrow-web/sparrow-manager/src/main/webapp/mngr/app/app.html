@@ -1,0 +1,184 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>app应用——资源管理</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="/app/js/bootstrap/css/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/app/js/bootstrap/css/bootstrap-responsive.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/app/css/tooltip/tooltip.css" type="text/css"/>
+    <link rel="stylesheet" href="/app/css/style.css" type="text/css"/>
+    <link rel="stylesheet" href="/app/js/common/popui/pop-ui.css" type="text/css"/>
+    <style type="text/css">
+    .table td i{margin:0 2px;}
+    .active_el { background-color: #AAAAAA;color: #FFFFFF;}</style>
+    <script type="text/javascript" src="/app/js/jquery/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="/app/js/jquery/jquery-migrate-1.1.1.min.js"></script>
+    <script type="text/javascript" src="/app/js/bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/app/js/common/common.js"></script>
+    <script type="text/javascript" src="/app/js/common/page.js"></script>
+    <script type="text/javascript" src="/app/js/common/crud-grid-cmd.js"></script>
+    <script type="text/javascript" src="/app/js/common/popui/pop-ui.js"></script>
+    <script type="text/javascript">
+        <!--
+        var _Ps;
+        var _Pov;
+        var _Done;
+        var _Token;
+
+        var _url='/cmd/sys/app';
+        var _baseUrl='http://127.0.0.1:9081/app';
+        var _imgRoot='http://127.0.0.1:9081/img';
+        var _UI;
+
+        var fetchProcess = function (t,p) {
+            Common.post('/cmd/backend/msg',{_token: t}, function (d) {
+                p.process(d.percent);
+                if (d.msgs) {
+                    for (var i = 0; i < d.msgs.length; i++)
+                        $('#detail').text(d.msgs[i]);
+                }
+                if (d.state == 1) {
+                    window.setTimeout(function(){
+                        fetchProcess(t,p);
+                    }, 800);
+                } else {
+                    $('#detail').text(d.result + ' , 耗时:' + d.costSeconds + '秒');
+                    //document.getElementById('showIndex').style.display = 'block';
+                    _Done = true;
+                   // _Pov.hide();
+                }
+            });
+        };
+        function processNotify(t){
+            if (_Ps == null)
+                _Ps = Common.createProcess({el: '#proc'});
+
+            if (_Pov == null) {
+                _Pov = new PopDialog(500, 80, 100, 70);
+                _Pov.titleText = '任务进度';
+                _Pov.model = true;
+                _Pov.renderId = 'taskProcessDlg';
+                _Pov.dragEnable = true;
+                _Pov.preHide = function () {
+                    return _Done;
+                };
+                _Pov.afterHide=function(){
+                    _UI.grid.reload();
+                };
+            }
+            _Pov.show();
+            fetchProcess(t,_Ps);
+        };
+
+        var columns=[
+          'x',
+          {name:'id',label:'序号',width:'30',render:'_idx',hidden:true,noe:true},
+          {name:'name',label:'名称',width:'70'},
+          {name:'desc',label:'描述',width:'100'},
+          {name:'type',label:'类型',editor:'select',vtype:'required',src:"sqlType",search:true,max:32},
+          {name:'sourceName',label:'数据源',editor:'text',vtype:'required',max:32},
+          {name:'sourceId',label:'数据源Id',editor:'select',src:'dbs',hidden:true,vtype:'required',search:true,max:32},
+         // {name:'appHome',label:'根路径',editor:'text',vtype:'required',max:32},
+        //  {name:'webRootPath',label:'web路径',editor:'text',vtype:'required',max:32},
+        //  {name:'configPath',label:'配置路径',editor:'text',vtype:'required',max:32},
+          {name:'processId',label:'进程id',editor:'text',vtype:'required',max:32,render:function(v){
+                if(v)
+                    return v;
+               else
+                    return "无";
+          }},
+          {name:'webPort',label:'服务端口',editor:'text',vtype:'required num',max:32},
+          {name:'started',label:'启动与否',editor:'text',vtype:'required',max:32,render:function(v){
+              var img='/app/icons/status/stop.png';
+              if(v==1)
+               img='/app/icons/status/run.png';
+              return '<img src="'+img+'" />';
+          }},
+          {name:'opt',label:'配置',width:'80',align:'left',render:function(v,data){
+                v=data.name;
+                var s='<a href="#" onclick="cfgSource(\''+v+'\')">Source</a>&nbsp;<a href="#" onclick="cfgProvider(\''+v+'\')">Provider</a>';
+                return s;
+            },noe:true},
+          {name:'opx',label:'服务',width:'40',align:'left',render:function(v,data){
+                v=data.id;
+                var s;
+               if(data.started==1)
+                   s='<a href="#" onclick="stopServer('+v+')">停止</a>&nbsp;';
+               else
+                   s='<a href="#" onclick="startServer('+v+')">启动</a>&nbsp;';
+                return s;
+          },noe:true},
+          {name:'op',label:'操作',width:'120',align:'left',render:function(v,data){
+        	  v=data.id;
+        	  var s='<a href="/cmd/sys/app?_t=edit&id='+v+'">编辑</a>&nbsp;<a href="/cmd/sys/meta?_t=gp&app='+data.name+'&source='+data.sourceName+'&label='+data.desc+'">工程</a>&nbsp;<a href="/cmd/sys/app?_t=detail&id='+v+'">详情</a>&nbsp;<a href="#" onclick="delRow('+v+')">删除</a>';
+        	  return s;
+          },noe:true}
+	    ];
+
+        var rowDblClick=function(r){
+        	self.location="/cmd/sys/app?_t=edit&id="+r._id;
+        };
+        var startServer=function(v){
+            Common.post(_url, {_t:'start',app:v}, function(d){
+                //_CRUD_.openAlert(d.msg);
+                _Token = d.token;
+                processNotify(_Token );
+            });
+        };
+        var stopServer=function(v){
+            Common.post(_url, {_t:'stop',app:v}, function(d){
+                _CRUD_.openAlert(d.msg);
+                _UI.grid.reload();
+            });
+        };
+        var cfgSource=function(v){
+            self.location="/cmd/sys/provider?_t=sl&app="+v;
+        };
+        var cfgProvider=function(v){
+            self.location="/cmd/sys/provider?_t=list&app="+v;
+        };
+        var delRow = function(v){
+        	_CRUD_.openAlert({
+				confirm : '确认删除该记录么?',
+				ok : function() {
+					_CRUD_.deleteRow(_UI.url, v, _UI.grid);
+				}
+			});
+        };
+        $(document).ready(function() {
+            _CRUD_.baseUrl=_imgRoot;
+        	_UI = _CRUD_.renderTable({
+            	url:_url,
+            	cols:columns,
+            	idFeild:'id',
+            	searchEl:'#searchForm',
+            	rowDblClick:rowDblClick,
+            	opBar: _CRUD_.opBar,
+            	showDetail:true,
+            	showMenu:false,
+            	canOp:true
+             });
+        });
+        -->
+    </script>
+</head>
+<body>
+<ul class="nav nav-tabs">
+	<li class="active"><a href="#">App应用</a></li>
+	<li><a href="app_add.html">增加App应用</a></li>
+</ul>
+<div id="searchForm">
+</div>
+<div id="grid">
+</div>
+<div id="pageBar" class="pagination" style="margin-top:0px;">
+</div>
+<div id="taskProcessDlg" style="display:none;">
+    <div id="detail" style="margin-top:5px;margin-left:3px;margin-right:2px;font-size:13;overflow-y:auto;height:30px;background-color: #ffffff;">
+
+    </div>
+    <div id="proc" style="width:485px;"></div>
+</div>
+</body>
+</html>

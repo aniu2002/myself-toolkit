@@ -1,0 +1,144 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>gif_info——资源</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="/app/js/bootstrap/css/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/app/js/bootstrap/css/bootstrap-responsive.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/app/css/tooltip/tooltip.css" type="text/css"/>
+    <link rel="stylesheet" href="/app/css/style.css" type="text/css"/>
+    <style type="text/css">
+    .table td i{margin:0 2px;}
+    .active_el { background-color: #AAAAAA;color: #FFFFFF;}
+    </style>
+</head>
+<body>
+<ul class="nav nav-tabs">
+    <li class="active"><a href="#">动态图列表</a></li>
+</ul>
+<div id="searchForm">
+</div>
+<div id="grid" class="container-fluid">
+</div>
+<div id="pageBar" class="pagination" style="margin-top:0px;">
+</div>
+</body>
+<script type="text/javascript" src="/app/js/jquery/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="/app/js/jquery/jquery-migrate-1.1.1.min.js"></script>
+<script type="text/javascript" src="/app/js/bootstrap/bootstrap.min.js"></script>
+<script type="text/javascript" src="/app/js/common/common.js"></script>
+<script type="text/javascript" src="/app/js/common/page.js"></script>
+<script type="text/javascript" src="/app/js/common/crud-grid-new.js"></script>
+<script type="text/javascript">
+ var url="/cmd/gif/gif_info";
+ var grid=$('#grid');
+ var page=1;
+ var _limit=20;
+
+ var confirmDelete=function(id,pt){
+    _CRUD_.openAlert({
+        confirm: '确认删除磁盘上的图片么?',
+        ok: function () {
+            deleteResource(id, pt);
+        }
+    });
+ }
+ var deleteResource=function(id,pt){
+    var cfg = {};
+    cfg._pt = pt;
+    cfg.id = id;
+    cfg._method='delete';
+    var reqCfg = {
+        type: "POST",
+        url: url,
+        cache: false,
+        datatype: "json",
+        data: cfg,
+        error: function (xhr, status, err) {
+        },
+        success: function (data, status) {
+           //alert(data.msg);
+        }
+    };
+    reqCfg.contentType = "application/x-www-form-urlencoded;charset=UTF-8";
+    $.ajax(reqCfg);
+ }
+ var appendCell=function(data,row){
+    var el=$('<div class="span4" />');
+    if(data){
+       //el.append('<img ori="/giff/'+data.icons+'" src="/app/img/defaultx.png" class="img-responsive"/>');
+       if(data.icons)
+          el.append('<img src="/giff/'+data.icons+'" class="img-responsive"/>');
+       else
+          el.append('<img src="/app/images/defaultx.png"/>');
+      el.append('<br/><label>'+data.alias+'</label>&nbsp;&nbsp;'
+                 + '<a href="/cmd/gif/gif_info?id='+data.id+'&_t=dt" target="_blank">详情</a>&nbsp;&nbsp;');
+       var h=$('<a href="#" sid="'+data.id+'" pt="'+data.icons+'">X</a>');
+       el.append(h);
+       h.click(function(e){
+           var _s=$(this);
+           confirmDelete(_s.attr('sid'),_s.attr('pt'));
+       });
+    }else
+       el.append('<label>&nbsp;</label>');
+    row.append(el);
+ }
+
+ var appendRow=function(data,i,m){
+    var el=$('<div class="row-fluid" style="margin-top:10px;" />');
+    for(var j=0;j<m;j++){
+        var idx=i+j;
+        if(idx>=data.length)
+          appendCell(undefined,el);
+        else
+          appendCell(data[i+j],el);
+    }
+    grid.append(el);
+ }
+
+ var handleData=function(data){
+    var m=3;
+    grid.empty();
+    for(var i=0;i<data.length;i=i+m){
+       appendRow(data,i,m);
+    }
+    //Common.imgLazyLoad(grid);
+ }
+ var loadPage=function(p,limit){
+    var cfg = {};
+    cfg.limit = limit;
+    cfg.page = p;
+    cfg._method='get';
+    var reqCfg = {
+        type: "POST",
+        url: url,
+        cache: false,
+        datatype: "json",
+        data: cfg,
+        error: function (xhr, status, err) {
+        },
+        success: function (data, status) {
+           handleData(data.rows);
+           var total = data.total;
+           pageBar.drawPageBar(total,p);
+        }
+    };
+    reqCfg.contentType = "application/x-www-form-urlencoded;charset=UTF-8";
+    $.ajax(reqCfg);
+ }
+ var pageBar = new LPageBar({
+        el: "#pageBar",
+        limit: _limit,
+        stepSize: 15,
+        onPageCut: loadPage
+    });
+ var loadData=function(p,s){
+     loadPage(p,s);
+ }
+$(document).ready(function() {
+    loadData(1,_limit);
+});
+
+</script>
+</html>

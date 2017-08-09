@@ -1,0 +1,130 @@
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <title>抓取工程管理系统</title>
+    <link rel="stylesheet" href="../js/bootstrap/css/bootstrap.css" type="text/css"/>
+    <link rel="stylesheet" href="../js/bootstrap/css/bootstrap-responsive.css" type="text/css"/>
+</head>
+<body>
+<br/>
+    <div id="DContainer" style="overflow-y: auto;">
+        <div>&nbsp;&nbsp;参数配置 - 选择配置
+            <select id="cfgSelect">
+                <option value="system">系统配置</option>
+                <option value="config4mysql">数据库配置</option>
+                <option value="module">模块配置</option>
+            </select>
+        </div>
+        <div style='margin-top: 0px;margin-left: 7px;background-color: #dddddd;'> .
+            <table style="font-size:14;">
+                <tbody id="cfgTable">
+                </tbody>
+            </table>
+        </div>
+        <div id="addLayer" style="display: none;">
+            Key:<input type="text" style="width:220px;height: 30px;" name="keyInput" id="keyInput" value=""/>&nbsp;&nbsp;
+            Value:<input type="text" style="width:350px;height: 30px;" name="valueInput" id="valueInput" value=""/>
+            &nbsp;&nbsp;<input type='button' id='addKeyValue' value='确定'/>
+        </div>
+        <div>
+            &nbsp;&nbsp;参数配置 &nbsp;&nbsp;<input type='button' id='addItem' value='增加'/>
+            &nbsp;&nbsp;<input type='button' id='sysSave' value='保存'/>
+        </div>
+    </div>
+<script src="../js/jquery/jquery-1.7.1.min.js" type="text/javascript"></script>
+<script src="../js/bootstrap/bootstrap.min.js" type="text/javascript"></script>
+<script src="../js/common/common.js" type="text/javascript"></script>
+<script type="text/javascript">
+    var gData = null;
+    var urlPath = "/rest/sys/properties";
+    var _cfg='system';
+    $(document).ready(function() {
+        var hgt = $(window).height() - 30;
+        $('#DContainer').css({
+            'height':hgt + 'px'
+        });
+
+        //_cfg = $('#cfgSelect').val();
+        $('#sysSave').click(function() {
+            var el = $('#cfgTable');
+            el.find('input').each(function() {
+                var nel = $(this);
+                var n = nel.attr('name');
+                var value = nel.val();
+                gData[n] = value;
+            });
+            saveCfg();
+        });
+        $("#addItem").click(function() {
+            var el = $('#addLayer');
+            el.css({display:'block'});
+        });
+        $('#cfgSelect').change(function() {
+        	_cfg= $(this).val();
+            ajaxRequest(urlPath+'/'+_cfg, 'GET', null, initCfgTable);
+        });
+        $("#addKeyValue").click(function() {
+            var el = $('#addLayer');
+            el.css({display:'none'});
+
+            var tel = $('#cfgTable');
+            var key = $('#keyInput').val();
+            var val = $('#valueInput').val();
+            tel.append('<tr><td>&nbsp;&nbsp;' + key + ':</td><td><input type="text" style="width: 620px;height: 25px;" name="' + key + '" value="' + val + '" /></td></tr>')
+        });
+        ajaxRequest(urlPath+'/'+_cfg, 'GET', null, initCfgTable);
+    });
+
+    function initCfgTable(text) {
+        var data = eval('(' + text + ')')
+        gData = {};
+        var el = $('#cfgTable');
+        el.empty();
+        el.append('<tr><td width="100">&nbsp;</td><td width="100">&nbsp;</td></tr>');
+        for (var k=0;k<data.length;k++) {
+        	var d=data[k];
+        	var ky=d.k;
+        	gData[ky]=d.v;
+            if (ky.indexOf('pwd') != -1 || ky.indexOf('password') != -1)
+                el.append('<tr><td>&nbsp;&nbsp;' + ky + ':</td><td><input type="password" style="width: 620px;height: 30px;" name="' + ky + '" value="' + d.v + '" /></td></tr>')
+            else
+                el.append('<tr><td>&nbsp;&nbsp;' + ky + ':</td><td><input type="text" style="width: 620px;height: 30px;" name="' + ky + '" value="' + d.v + '" /></td></tr>')
+        }
+    }
+    function ajaxRequest(url, method, data, func,type,ctype) {
+    	type=type||'text';
+    	ctype=ctype||'application/x-www-form-urlencoded';
+        var xhr = $.ajax({type:method,
+            url: url,
+            contentType:ctype,
+            cache:false,
+            dataType:type,
+            ifModified :true ,
+            //ajaxStart : waitingQuery,
+            data : data,
+            statusCode: {
+                302: function() {
+                    alert('page not found');
+                }
+            },
+            error: Common.errorLoad,
+            success: function (text, status, jqXHR) {
+                if (func) func(text, status)
+            }
+        });
+        return xhr;
+    }
+
+    function saveCfg() {
+       // gData['_cfg'] = conf['_cfg'];
+       var str = JSON.stringify(gData);
+        ajaxRequest(urlPath+'/'+_cfg, 'POST', str, function(data) {
+            //var data = eval('(' + text + ')');
+            alert(data.msg);
+        },'json','application/json');
+    }
+</script>
+</body>
+</html>

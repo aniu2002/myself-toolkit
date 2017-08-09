@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <messages>
+        <!-- 关注时提醒 -->
+        <message id="default" type="text">
+            <![CDATA[
+            亲，欢迎加入，若有疑问请用相机拍下疑点，我们将尽快给您解答。
+            ]]>
+        </message>
+        <!-- 输入时提醒 -->
+        <message id="typeReplay" type="text">
+            <![CDATA[
+            亲，你输入格式不正确，请参考下面提示：#
+            1、查看品类 #
+            2、查看笑话 #
+            3、查看色情段子 #
+            4、查看图文列表 #
+            +、查看笑话 #
+            -、查看新闻 #
+            /+城市、查看城市天气 #
+            ]]>
+        </message>
+        <message id="linkx" type="text">
+            <![CDATA[
+            http://firebird.5166.info/index.html
+            ]]>
+        </message>
+        <message id="unSupport" type="text">
+            <![CDATA[
+            非常抱歉，系统暂时不支持该操作。
+            ]]>
+        </message>
+
+        <message id="brands" type="text">
+            <![CDATA[
+            凉糕、冰奶茶、冰激凌、冰冻可乐、冰冻果汁等冷饮
+            ]]>
+        </message>
+        <message id="simJoke" type="text">
+            <![CDATA[
+            读书时三人晚上翻墙出去包夜，第一个跳下去的大喊一声啊，后面两人问怎么了？
+            回答没事脚扭了快过来帮我，第二个跳下去的大喊一声，日，后面问怎么了？
+            回答没事快过来都在等你，第三个跳下去的大喊一声，草，污水沟
+            ]]>
+        </message>
+        <message id="sexyMsg" type="text">
+            <![CDATA[
+            大哥，你别在摸了！你摸了上面摸下面，毛都让你摸掉了，这么嫩的皮，被你摸的都流水了！你让俺以后怎么卖？这桃都是新鲜的，您不买就算了！
+            ]]>
+        </message>
+        <message id="tks" type="text">
+            <![CDATA[
+             谢谢你的支持！
+            ]]>
+        </message>
+        <message id="songs" type="text">
+            <![CDATA[
+             今天没有好的推荐，有就第一时间通知你！
+            ]]>
+        </message>
+        <message id="binding" type="fmt">
+            <![CDATA[
+             点击进入:<a href="http://firebird.5166.info/weixin/config?action=at&openId=${fromUserName}">来绑定我</a>
+            ]]>
+        </message>
+        <message id="updateInfo" type="fmt">
+            <![CDATA[
+             <a href="http://firebird.5166.info/cmd/primary/primary_school?_t=set&openid=${fromUserName}">修改信息</a>
+            ]]>
+        </message>
+        <!-- 通过上传图片得到media_id -->
+        <message id="img" type="image">
+            {media_id}
+        </message>
+        <!-- 通过上传多媒体文件，得到的media_id -->
+        <message id="voice" type="voice">
+            {media_id}
+        </message>
+
+        <message id="news" type="news">
+            classpath:weixin/news_reply.xml
+        </message>
+
+        <message id="index" type="newsExt">
+            classpath:weixin/index.xml
+        </message>
+
+        <message id="file" type="file">
+            classpath:weixin/welcome.txt
+        </message>
+
+        <message id="tuLing" type="proxy">
+            com.sparrow.weixin.handler.impl.TuLingCustomHandler
+        </message>
+        <message id="joke" type="proxy">
+            com.sparrow.weixin.handler.blog.JokeCustomHandler
+        </message>
+        <message id="blogNews" type="proxy">
+            com.sparrow.weixin.handler.blog.NewsCustomHandler
+        </message>
+        <message id="weather" type="proxy">
+            com.sparrow.weixin.handler.blog.WeatherCustomHandler
+        </message>
+        <message id="welcome" type="proxy">
+            com.sparrow.app.weixin.SubscribeCustomHandler
+        </message>
+    </messages>
+
+    <!-- 事件回复 -->
+    <delegate>
+        <entry key="subscribe" msg="#welcome"/>
+        <!-- menu click -->
+        <entry key="click" msg="#welcome">
+            <rule name="1" msg="#tks"/>
+            <rule name="2" />
+            <rule name="3" msg="#binding"/>
+            <rule name="7" msg="#updateInfo"/>
+        </entry>
+        <entry key="view" msg="#default">
+            <rule name="1" msg="#!"/>
+        </entry>
+        <entry key="location" msg="#!"/>
+        <entry key="unsubscribe" msg="#!"/>
+    </delegate>
+
+    <dispatch>
+        <entry key="voice" msg="#unSupport"/>
+        <entry key="video" msg="#unSupport"/>
+        <!-- 这个是提交位置 分享位置的时候的类型 -->
+        <entry key="location" msg="#unSupport"/>
+        <entry key="image" msg="#unSupport"/>
+        <entry key="link" msg="#unSupport"/>
+        <entry key="event" ref-tag="delegate"/>
+        <entry key="text" msg="#index">
+            <!-- msg="#typeReplay" -->
+            <rule name="?" msg="#welcome"/>
+            <rule name="1" msg="#brands"/>
+            <rule name="2" msg="#simJoke"/>
+            <rule name="3" msg="#sexyMsg"/>
+            <rule name="4" msg="#news"/>
+            <rule name="+" msg="#joke"/>
+            <rule name="-" msg="#blogNews"/>
+            <rule name="*" msg="#linkx"/>
+            <rule name="tl" msg="#welcome"/>
+            <rule name="weather" msg="#weather"/>
+        </entry>
+    </dispatch>
+</config>

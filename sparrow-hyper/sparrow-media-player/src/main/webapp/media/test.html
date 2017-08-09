@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>你最喜欢的歌曲</title>
+<script src="html5-media/jquery-1.8.2.min.js"></script>
+<script src="html5-media/flowplayer.js"></script>
+<script src="html5-media/html5media.js"></script>
+</head>
+<!-- http://html5media.googlecode.com/svn/trunk/src/html5media.min.js -->
+<body>
+<div>
+	<video id="vedioCon" src="http://192.168.0.100:5080/vod/mp4/eason.mp4" width="620" height="440" controls></video>
+	<!-- <video id="vedioConx" src="/vod/mp4/eason.mp4" width="620" height="440"
+		poster="/vod/mp4/test.jpg" controls></video> -->
+</div>
+<!-- autobuffer autoplay -->
+<br/>
+<div>
+	<!-- <input type='button' value="Eason" onclick="oPlay('eason.mp4');" />
+	<input type='button' value=">>" onclick="oPlay('v089.mp4');" /> -->
+	重复<input type="checkbox" value="0" onclick="setLoop(this);"/>
+	<input type='button' value="播放全部" onclick="playAll();" />
+	<input type='button' value="<<" onclick="playPrev();" />
+	<input type='button' value=">>" onclick="playNext();" />
+	<input type='button' value="暂停" onclick="pausePlay();" />
+	<input type='button' value="开始" onclick="startPlay();" />
+	<input type='button' value="停止" onclick="stopPlay();" />
+</div>
+	<script>
+		var video = null;
+		
+		function playMediaList(){
+			 $.ajax({type:'get',
+				url:'/app/media/playList.txt',
+	            cache:false,
+	            dataType:"text",
+			    success:function(text){
+			      var data = eval('(' + text + ')');
+			      doReset(data);
+			      video.play(data);
+			    }
+			   });﻿
+		}
+		
+		$(document).ready(function() {
+			$.html5media();
+			video=window._getPlayer('vedioCon');
+		});
+		
+		function oPlay(f) {
+			video.play("http://192.168.0.100:5080/vod/mp4/" + f);
+		}
+		function playAll(){
+			playMediaList();
+		}
+		function playNext(){
+			video._playNext();	
+		}
+		function playPrev(){
+			video._playPrev();	
+		}
+		function pausePlay(){
+			video.pause();
+		}
+		function stopPlay(){
+			video.stop();
+		}
+		function startPlay(){
+			video.start();
+		}
+		function doReset(data) {
+			for(var i=0;i<data.length;i++){
+				var f=data[i];
+				data[i]="http://192.168.0.100:5080" + f;
+			}
+		}
+		function setLoop(ele){
+			if(ele.checked)
+				video.loop=true;
+			else
+				video.loop=false;
+		}
+	</script>
+</body>
+</html>

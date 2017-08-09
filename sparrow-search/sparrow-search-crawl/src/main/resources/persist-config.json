@@ -1,0 +1,68 @@
+{
+  "sql": "INSERT INTO gif_info(alias,icons,gif_url,gif_desc) VALUES(?,?,?,?)",
+  "props": {
+    "jdbc.driver": "com.mysql.jdbc.Driver",
+    "jdbc.url": "jdbc:mysql://127.0.0.1:3306/lf_info?useUnicode=true&characterEncoding=UTF-8",
+    "jdbc.user": "root",
+    "jdbc.password": "123456",
+    "jdbc.showSql": "true",
+    "jdbc.formatSql": "false"
+  },
+  "fieldMaps": [
+    {
+      "name": "uuid",
+      "express": "md5",
+      "expressType": 0
+    },
+    {
+      "name": "siteId",
+      "express": "siteId",
+      "expressType": 4
+    },
+    {
+      "name": "siteName",
+      "express": "siteName",
+      "expressType": 4
+    },
+    {
+      "name": "siteUrl",
+      "express": "url",
+      "expressType": 4
+    },
+    {
+      "name": "pageUrl",
+      "express": "url",
+      "expressType": 5
+    },
+    {
+      "name": "detailUrl",
+      "express": "url",
+      "expressType": 3
+    },
+    {
+      "name": "title",
+      "express": "title",
+      "expressType": 3
+    },
+    {
+      "name": "subject",
+      "express": "title",
+      "expressType": 4
+    },
+    {
+      "name": "content",
+      "express": "content",
+      "expressType": 3
+    },
+    {
+      "name": "publishTime",
+      "express": "time",
+      "expressType": 0
+    },
+    {
+      "name": "time",
+      "express": "time",
+      "expressType": 0
+    }
+  ]
+}

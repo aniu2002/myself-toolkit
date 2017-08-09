@@ -1,0 +1,507 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>验证</title>
+<style>
+    .test {
+        border: 2px #e4e4e4 solid;
+        background-color: #fff;
+        height: 200px;
+        width: 200px;
+    }
+</style>
+<link rel="stylesheet" href="/app/css/grid/grid.css" type="text/css"/>
+<link rel="stylesheet" href="/app/js/tools/base.css" type="text/css"/>
+<script type="text/javascript" src="/app/js/jquery/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="/app/js/tools/grid.js"></script>
+<script type="text/javascript" src="/app/js/tools/ajax.js"></script>
+<script type="text/javascript" src="/app/js/tools/popui/pop-ui.js"></script>
+<script type="text/javascript" src="/app/js/tools/tools.js"></script>
+<script type="text/javascript" src="/app/js/tools/list/checkboxlist.js"></script>
+<script type="text/javascript" src="/app/js/common/json2.min.js"></script>
+<script type="text/javascript" src="/app/js/common/common.js"></script>
+<script type="text/javascript">
+<!--
+var module = '${app}';
+var source = '${source}';
+var label = '${label}';
+var _provider = '${provider}';
+var tabEditor = new TEditor();
+var columns = [
+    {
+        field: "name",
+        align: "left",
+        fixed: true,
+        icon: '/app/js/tools/images/ico_6.gif',
+        render: function (val, obj) {
+            var v = val;
+            if (obj.size)
+                v = v + '(' + obj.size + ')';
+            if (obj.primary)
+                return '<img src="/app/js/tools/images/ico_12.gif" alt="主键"/>&nbsp;<font color="red">'
+                        + v + '</font>';
+            else
+                return '<img src="/app/js/tools/images/ico_13.gif" alt="字段"/>&nbsp;'
+                        + v;
+        },
+        cellType: 0,
+        width: 200,
+        header: "字段名"
+    },
+    {
+        field: "type",
+        cellType: 0,
+        align: "left",
+        render: function (val, obj) {
+            var v = val;
+            if (obj.notNull)
+                v = v + '-<font color="blue">非空</font>';
+            return v;
+        },
+        width: 150,
+        header: "类型"
+    },
+    {
+        field: "desc",
+        cellType: 0,
+        editType: 0,
+        align: "left",
+        //hidden : true,
+        width: 200,
+        header: "描述信息"
+    },
+    {
+        field: "field",
+        cellType: 0,
+        editType: 1,
+        align: "left",
+        width: 150,
+        header: "对象属性"
+    }
+];
+var dataEditor = null;
+var curTable = null;
+var columnSetting = {};
+var _Plugins = {};
+function initGrid(val) {
+    if (val == 0)
+        return;
+    curTable = val;
+    module = $('#module').val();
+    var fnl = function () {
+        if (dataEditor == null)
+            dataEditor = createTaData('tdata');
+        dataEditor.resetTab({
+            force: true,
+            url: '/cmd/sys/pdc?_t=pdcData&module=' + module + '&provider=' + val
+        });
+    };
+    _ajax('/cmd/sys/pdc?_t=setting&module=' + module + '&provider=' + val, function (d) {
+        d = d || {}
+        var cols = d.cols;
+        var cdf = undefined;
+        if (cols) {
+            columnSetting[val] = cols;
+            cdf = cols.split(',');
+        }
+        if (d.setting && d.setting.length)
+            tabEditor.drawGrid(d.setting, cdf);
+        else
+            tabEditor.gxload('/cmd/sys/pdc?_t=pdcInfo&provider=' + val + '&module=' + module, cdf);
+        //fnl();
+    });
+}
+function createTaData(id) {
+    var tabEditor = new TEditor();
+    tabEditor.boundTo(id);
+    return tabEditor;
+}
+function editorForPlugin(cellEditor, editRef, editType) {
+    var col = editRef.column;
+    var rowdata = editRef.data;
+    var grid = editRef.grid;
+    var field = editRef.field;
+
+    cellEditor.options.length = 0;
+    cellEditor.options[0] = new Option("请选择", "");
+
+    var javaType = rowdata['simpleType'];
+    var data = col.source;
+    if (data == null || typeof (data) === 'undefined')
+        return;
+    if (data.items)
+        data = data.items;
+    var j = 1, code, name
+
+    for (var i = 0; i < data.length; i++) {
+        var da = data[i];
+        code = da.type;
+        if (code == 'all' || (javaType == code)) {
+            name = da.name;
+            cellEditor.options[j++] = new Option(name, da.id);
+        }
+    }
+}
+
+function edtorCreateJava(cellEditor, editRef, editType) {
+    cellEditor.options.length = 0;
+    cellEditor.options[0] = new Option("请选择", "");
+    var grid = editRef.grid;
+    var rowdata = editRef.data;
+    var field = editRef.field;
+
+    var javaType = rowdata["javaType"];
+    var data = grid.dataSource[field];
+    if (data == null || typeof (data) === 'undefined')
+        return;
+    if (data.items)
+        data = data.items;
+    var j = 1, code, name
+    for (var i = 0; i < data.length; i++) {
+        if (javaType != data[i].type)
+            continue;
+        code = name = data[i].name;
+        cellEditor.options[j] = new Option(name, code);
+        j++;
+    }
+}
+function pluginRender(val, obj, column) {
+    if (val) {
+        var s = column.source;
+        if (s && s.length)
+            for (var i = 0; i < s.length; i++) {
+                var im = s[i];
+                if (val === im.id)
+                    return im.name;
+            }
+    }
+    return val;
+}
+function getHeaders(result) {
+    var cols = columns;
+    var j = cols.length;
+    for (var i = 0; i < result.length; i++) {
+        var rt = result[i];
+        var et = 0;
+        var ct = 0;
+        if (typeof (rt.type) == 'undefined')
+            et = 1;
+        else if (rt.type == 'checkbox')
+            ct = 2;
+        else if (rt.type == 'text')
+            ct = 1;
+        else if (rt.type == 'combox')
+            et = 2;
+        var cl = {
+            field: rt.id,
+            cellType: ct,
+            editType: et,
+            width: 100,
+            //hidden : true,
+            header: rt.name
+        };
+        if (rt.fd)
+            cl.field = rt.fd;
+        if (et == 2 && rt.data) {
+            cl.source = rt.data;
+            cl.render = pluginRender;
+            cl.editorCreated = editorForPlugin;
+        }
+        cl.defVal = rt.defVal;
+        cl.extend = true;
+        cols[j++] = cl;
+        _Plugins[rt.id] = rt;
+    }
+    cols[j++] = {
+        field: "field",
+        header: "操作",
+        cellType: 0,
+        editType: 0,
+        align: "left",
+        width: 80,
+        render: function (v, obj) {
+            _CurObj = obj;
+            var str = '<button onclick="editDetail(\'' + v + '\');">高级</button>';
+            return str;
+        }
+    };
+    return cols;
+}
+var _CurObj;
+function editDetail(v, obj) {
+    editField();
+}
+function editField() {
+    if (_Pox == null) {
+        _Pox = new PopDialog(600, 350, 20, 25);
+        _Pox.titleText = '参数编辑';
+        _Pox.model = true;
+        _Pox.renderId = 'editorDiv';
+        _Pox.dragEnable = true;
+        _Pox.preHide = function () {
+            return true;
+        };
+    }
+    _Pox.show();
+}
+function initTablesMeta() {
+    $('#module').val(module);
+    //$('#module').attr("disabled", true);
+    $('#label').val(label);
+    //$('#label').attr("disabled", true);
+
+    _ajax('/app/js/tools/plugins.json', function (d) {
+        var hds = getHeaders(d);
+        generateTables(hds);
+        initGrid(_provider);
+    });
+}
+function generateTables(hds) {
+    tabEditor.dataRoot = "items";
+    tabEditor.customDef = true;
+    tabEditor.columnSet = function (s) {
+        if (curTable == null)
+            return;
+        columnSetting[curTable] = s;
+    };
+    tabEditor.columnDef = {
+        id: "name",
+        columns: hds || columns
+    };
+    tabEditor.render("test");
+}
+
+function saveConfig() {
+    //getChangedRows
+    var g = tabEditor.getAllRows();
+    var data = {
+        table: curTable,
+        cols: columnSetting[curTable],
+        app:module,
+        setting: g
+    };
+    saveData(curTable, data);
+}
+function saveData(provider, data) {
+    if (provider == null || data == null) {
+        alert("provider未选择");
+        return;
+    }
+    var str = JSON.stringify(data);
+    module = $('#module').val();
+    var y = document.getElementById("providers").value;
+    var re = {
+        url: '/cmd/sys/pdc?_t=setting&module=' + module + "&provider=" + y,
+        method: 'POST',
+        responseType: "json",
+        args: str,
+        dataType: 'application/json',
+        timeout: 10000,
+        success: function (result, type, status) {
+            alert(result.msg);
+        },
+        error: function (errorMsg, responseType, status) {
+            alert(errorMsg);
+        }
+    };
+    AjaxReq.sendRequest(re);
+}
+function clearConfig() {
+    module = $('#module').val();
+    var y = document.getElementById("providers").value;
+    _ajax("/cmd/sys/pdc?_t=clear&module=" + module + "&provider=" + y, function (result) {
+        alert(result.msg);
+    }, {
+        table: curTable
+    }, 'POST');
+}
+var _Pov = null;
+var _Pox = null;
+var _Ps = null;
+var _Done = false;
+var _Token = null;
+function generateModule() {
+    var ps;
+    module = $('#module').val();
+    _ajax("/cmd/sys/pdc?_t=install&module=" + module + "&provider=" + curTable, function (result) {
+        _Done = false;
+        _Token = result.token;
+        processInfo(_Token, _Ps);
+    }, {
+        label: $('#label').val(),
+        token: 'install',
+        pack: $('#pack').val(),
+        reload: true
+    }, 'POST');
+    if (_Ps == null)
+        _Ps = Common.createProcess({el: '#proc'});
+    ;
+
+    if (_Pov == null) {
+        _Pov = new PopDialog(800, 350, 20, 25);
+        _Pov.titleText = '任务进度';
+        _Pov.model = true;
+        _Pov.renderId = 'taskProcessDlg';
+        _Pov.dragEnable = true;
+        _Pov.preHide = function () {
+            return _Done;
+        };
+    }
+    _Pov.show();
+}
+function _ajax(url, func, args, method) {
+    method = method || 'GET';
+    var re = {
+        url: url,
+        method: method,
+        force: true,
+        responseType: "json",
+        args: args,
+        timeout: 10000,
+        success: func,
+        error: function (errorMsg, responseType, status) {
+            alert(errorMsg);
+        }
+    };
+    AjaxReq.sendRequest(re);
+}
+
+function redirectToBrowse() {
+    if (module != '') {
+        window.open("/app/mngr/project/browse-pdc.html?module=" + module+"&provider="+_provider);
+    }
+}
+-->
+</script>
+</head>
+<body onload="initTablesMeta();">
+<table align="center" width="100%">
+    <tr>
+        <td align="left">
+           <div style="border:1px solid black; padding:3px;margin-left: 2px;"> 脚本: ${script}</div>
+        </td>
+    </tr>
+    <tr>
+        <td align="left">
+            <input type="hidden" name="providers" id="providers" value="${provider}" />
+            <input id="module" type="hidden" value="test"/>
+            <input id="label" type="hidden" value="测试"/>
+            包路径:<input id="pack" type="text" value="com.dili.bps.backend" style="width:270px;"/>&nbsp;
+            <input type="button" value="保存设置" onclick="saveConfig();"/>&nbsp;
+            <input type="button" value="清除设置" onclick="clearConfig();"/>&nbsp;
+            <input id="browse" type="button" value="浏览" onclick="redirectToBrowse();"/>&nbsp;
+            <!--<a href="/cmd/sys/provider?_t=list&app=${app}">返回列表</a>-->
+            <a href="/cmd/sys/provider?_t=edit&name=${provider}&app=${app}">返回</a>
+        </td>
+    </tr>
+    <!--<tr>-->
+        <!--<td align="left">-->
+             <!--<input type="button"-->
+                                                                    <!--value="生成模块" onclick="generateModule();"/>-->
+
+            <!--<div id="display"></div>-->
+				<!--<span id="showIndex" style="display: none;"> <a href="/app/idx.html" target="_blank">查看</a>-->
+			<!--</span></td>-->
+    <!--</tr>-->
+    <tr>
+        <td align="left">
+            <div id="test"></div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div id="tdata"></div>
+        </td>
+    </tr>
+</table>
+<div id="taskProcessDlg" style="display:none;">
+    <div id="DContainer"
+         style="margin-top:1px;margin-left:2px;margin-right:2px;background-color: #ffffff;border:1px solid #5a667b;font-size:13;overflow-y:auto;height:300px;background-color: #ffffff;">
+        <div id="taskDetail">
+        </div>
+    </div>
+    <div id="proc" style="width:785px;"></div>
+</div>
+<div id="editorDiv" style="display:none;">
+    <div id="editorDetail">
+        <table align="center" width="90%">
+            <tr>
+                <td align="left" width="100">render资源</td>
+                <td align="left"><input id="renderSrc" type="text" value=""/></td>
+            </tr>
+            <tr>
+                <td align="left">select资源</td>
+                <td align="left"><input id="selectSrc" type="text" value=""/></td>
+            </tr>
+            <tr>
+                <td align="left">增加</td>
+                <td align="left"><input id="insertEnable" type="checkbox" value="0"/></td>
+            </tr>
+            <tr>
+                <td align="left">修改</td>
+                <td align="left"><input id="updateEnable" type="checkbox" value=""/></td>
+            </tr>
+        </table>
+    </div>
+</div>
+<script type="text/javascript">
+    <!--
+    var element = document;
+    if (typeof (element.onselectstart) != 'undefined') {
+        // IE下禁止元素被选取
+        element.onselectstart = new Function("return false");
+    } else {
+        // firefox下禁止元素被选取的变通办法
+        //element.onmousedown = new Function("return false");
+        //element.onmouseup = new Function("return true");
+    }
+    function processInfo($token, p) {
+        var el = $('#taskDetail');
+        el.empty();
+        p.process(2);
+        var tfn = function () {
+            fn($token);
+        };
+        var fn = function (t) {
+            _ajax('/cmd/backend/msg', function (d) {
+                p.process(d.percent);
+                if (d.msgs) {
+                    for (var i = 0; i < d.msgs.length; i++)
+                        appendData(d.msgs[i]);
+                }
+                if (d.state == 1) {
+                    window.setTimeout(tfn, 800);
+                } else {
+                    appendData(d.result + ' , 耗时:' + d.costSeconds + '秒');
+                    //document.getElementById('showIndex').style.display = 'block';
+                    _Done = true;
+                }
+                scrollDiv();
+            }, {_token: t}, 'POST');
+        };
+        tfn();
+        //var timer=window.setInterval(tfn,2000);
+    }
+    ;
+    var counter = 0;
+    function appendData(d) {
+        var el = $('#taskDetail');
+        if (counter > 200) {
+            el.empty();
+            counter = 0;
+        }
+        counter++;
+        if (d.charAt(0) == '%')
+            el.append('<font color="red">&nbsp;' + d.substring(1) + '</font><br/>');
+        else
+            el.append("&nbsp;" + d + "<br/>");
+    }
+    function scrollDiv() {
+        var el = $('#taskDetail');
+        $('#DContainer').animate({ scrollTop: el.height() });
+    }
+    -->
+</script>
+</body>
+</html>

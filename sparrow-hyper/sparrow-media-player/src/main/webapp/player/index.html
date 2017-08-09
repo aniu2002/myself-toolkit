@@ -1,0 +1,102 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<!-- A minimal Flowplayer setup to get you started -->
+  
+
+	<!-- 
+		include flowplayer JavaScript file that does  
+		Flash embedding and provides the Flowplayer API.
+	-->
+	<script type="text/javascript" src="flowplayer-3.2.6.min.js"></script>
+	
+	<!-- some minimal styling, can be removed -->
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
+	<!-- page title -->
+	<title>Minimal Flowplayer setup</title>
+
+</head><body>
+ 
+	<!-- RTMP Host : <input type='text' id="rtmpHost" value="127.0.0.1" width="200"/><input type='button' value="Set" onclick="oPlay();"/> -->
+	<input type='button' value="Play" onclick="oPlay();"/>
+	<input type='button' value="Play" onclick="oPlay('ol1.flv');"/>
+	<div>
+        <a href="dj.flv" style="display: block; width: 520px; height: 330px"
+            id="player1"></a>
+        <script>
+		var player=null;
+		function oPlay(f){
+		var host=location.hostname || document.domain;
+		f=f||'dj.flv';
+       if(player==null) player = flowplayer("player1", "flowplayer-3.2.7.swf",{   
+        clip: {   
+            provider: 'rtmp',  
+            live: false,  
+            autoBuffering: true,      //是否自动缓冲视频，默认true
+            autoPlay: false,  
+            url:'dj.flv'  
+        },   
+          
+        plugins: {   
+            rtmp: {   
+                url: 'flowplayer.rtmp-3.2.3.swf',   
+                netConnectionUrl: 'rtmp://'+host+'/vod/'   
+            },  
+              
+            controls: {   
+                url: 'flowplayer.controls-3.2.5.swf',  
+                autoHide:'always',  
+                play: true,   
+                scrubber: true,   
+                playlist: false,  
+                tooltips: {   
+                    buttons: true,   
+                    play:'Play',  
+                    fullscreen: 'Full' ,  
+                    fullscreenExit:'Normal',  
+                    pause:'Pause',  
+                    mute:'Mute',  
+                    unmute:'Unmute'  
+                }   
+            }  
+        }  
+       
+    });
+	
+	  player.play(f);
+	}  
+        </script>
+ 
+    </div>
+</body>
+<script src="/app/bootstrap/jquery-1.7.1.min.js" type="text/javascript"></script>
+<script src="/app/bootstrap/common.js" type="text/javascript"></script>
+<script src="/app/bootstrap/event.js" type="text/javascript"></script>
+<script type="text/javascript">
+var dk = new DK({url:'/event'});
+$(document).ready(function() {
+	oPlay('birth-day.mp3');
+    $(window).unload(function () {
+        dk.leave();
+    });
+    var polling = function() {
+        dk.subscribe("player", function(data) {
+            if (data.length) {
+                var jd=data[0];
+                if(jd['from2']=='msgPage'){
+                	oPlay(jd['msg']);
+                }
+            }  
+            return true;
+        });
+    };
+    var listenFunc = function () {
+        dk.join("player", {label: "all",user:"test"}, function(id) {
+                polling();
+        });
+    };
+
+    listenFunc();
+});
+</script>
+</html>

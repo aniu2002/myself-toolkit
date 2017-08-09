@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+    <!-- service bean configuration -->
+    <bean name="luceneService" clazz="com.sparrow.app.lucene.NewLuceneService" init="initialize">
+    </bean>
+
+    <bean name="luceneIndexer" clazz="com.sparrow.collect.lucene.indexer.LuceneIndexer" init="initialize">
+        <property name="indexPath" value="E:\_server\playServer\config\index" />
+    </bean>
+</beans>

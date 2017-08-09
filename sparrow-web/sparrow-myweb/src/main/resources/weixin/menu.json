@@ -1,0 +1,27 @@
+{
+    "button":[
+        {
+            "type":"click",
+            "name":"查看通讯录",
+            "key":"2"
+        },
+        {
+            "type":"view",
+            "name":"绑定用户",
+            "url":"http://firebird.5166.info/weixin/config?action=at"
+        },
+        {
+            "name":"修改信息",
+            "sub_button":[
+                {
+                    "type":"view",
+                    "name":"修改信息",
+                    "url":"http://firebird.5166.info/weixin/config?action=et"
+                },
+                {
+                    "type":"click",
+                    "name":"赞一下我们",
+                    "key":"1"
+                }]
+        }]
+}

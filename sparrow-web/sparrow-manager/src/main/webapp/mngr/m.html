@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>H5地理位置Demo</title>
+    <script src="/app/js/jquery/jquery-1.7.1.min.js" type="text/javascript"></script>
+    <script src="/app/js/common/common.js" type="text/javascript"></script>
+    <script src="/app/js/baiduConvertor.js" type="text/javascript"></script>
+    <!--<script type="text/javascript" src="http://api.map.baidu.com/api?v=1.5&ak=9fb983ecd9b505f8fedcc9ab07c65e3e"></script>
+    <script type="text/javascript" src="http://developer.baidu.com/map/jsdemo/demo/convertor.js"></script>-->
+</head>
+<body>
+<div id="aaa" style="border:#ccc solid 1px; width:697px; height:500px;"></div>
+<script type="text/javascript">
+    function fetchGps() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function (p) {
+                        var latitude = p.coords.latitude;//纬度
+                        var longitude = p.coords.longitude;//经度
+                        noticeFunc(longitude, latitude);
+                    }, function (e) {
+                        var aa = e.code + "\n" + e.message;
+                        alert(aa);
+                    }
+            );
+        } else {
+            alert("浏览器不支持html5来获取地理位置信息");
+        }
+    }
+    function noticeFunc(a, b) {
+        var gpsPoint = {lng: a, lat: b};
+        BMap.Convertor.translate(gpsPoint, 0, function (x, y) {
+            Common.post('/cmd/sys/pdc', {_t: 'gps', x: x, y: y}, function (e) {
+               // alert(e.msg);
+            });
+        });
+    }
+
+    $(document).ready(function () {
+        window.setInterval(function () {
+            fetchGps();
+        }, 30000);
+    });
+</script>
+</body>
+</html>

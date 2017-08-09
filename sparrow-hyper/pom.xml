@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.sparrow</groupId>
+        <artifactId>sparrow-egg</artifactId>
+        <version>1.1</version>
+    </parent>
+    <artifactId>sparrow-hyper</artifactId>
+    <name>sparrow-hyper</name>
+    <description>sparrow-hyper</description>
+    <version>1.1</version>
+    <packaging>pom</packaging>
+
+    <properties>
+        <appname>sparrow-hyper</appname>
+        <hyper.version>1.1</hyper.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- 内部引用 -->
+            <dependency>
+                <groupId>com.sparrow</groupId>
+                <artifactId>sparrow-ftp-server</artifactId>
+                <version>${hyper.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sparrow</groupId>
+                <artifactId>sparrow-ftp-client</artifactId>
+                <version>${hyper.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sparrow</groupId>
+                <artifactId>sparrow-file-transfer</artifactId>
+                <version>${hyper.version}</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+    <modules>
+        <module>sparrow-embed-server</module>
+        <module>sparrow-flv-server</module>
+        <module>sparrow-media-player</module>
+		<module>sparrow-ftp-server</module>
+        <module>sparrow-snmp-server</module>
+        <module>sparrow-ftp-client</module>
+        <module>sparrow-file-transfer</module>
+    </modules>
+</project>

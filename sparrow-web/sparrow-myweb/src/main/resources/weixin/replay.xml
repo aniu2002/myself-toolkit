@@ -1,0 +1,34 @@
+<xml>
+    <ToUserName>o54TRt2tQOSsNDrHeKc7RTgaGMWY</ToUserName>
+    <FromUserName>gh_15734fcd7470</FromUserName>
+    <CreateTime><![CDATA[1433502076398]]></CreateTime>
+    <MsgType><![CDATA[text]]></MsgType>
+    <ArticleCount><![CDATA[4]]></ArticleCount>
+    <Articles>
+        <item>
+            <Title>西龙门客栈-红心二锅头</Title>
+            <PicUrl><![CDATA[http://img6.dili7.com/images/i2/b3aec56515a74d30817b535b97fb6bb1.jpg]]></PicUrl>
+            <Url><![CDATA[http://img6.dili7.com/images/i2/b3aec56515a74d30817b535b97fb6bb1.jpg]]></Url>
+        </item>
+        <item>
+            <Title>冷淡杯-0</Title>
+            <PicUrl><![CDATA[http://img2.dili7.com/images/cms/928fb69daa54462c910c44dd3fc4814c.jpg]]></PicUrl>
+            <Url><![CDATA[http://img2.dili7.com/images/cms/928fb69daa54462c910c44dd3fc4814c.jpg]]></Url>
+        </item>
+        <item>
+            <Title>冷淡杯-1</Title>
+            <PicUrl><![CDATA[http://img2.dili7.com/images/cms/928fb69daa54462c910c44dd3fc4814c.jpg]]></PicUrl>
+            <Url><![CDATA[http://img2.dili7.com/images/cms/928fb69daa54462c910c44dd3fc4814c.jpg]]></Url>
+        </item>
+        <item>
+            <Title>冷淡杯-2</Title>
+            <PicUrl><![CDATA[http://img2.dili7.com/images/cms/928fb69daa54462c910c44dd3fc4814c.jpg]]></PicUrl>
+            <Url><![CDATA[http://firebird.5166.info/weixin/config?action=binding&openId=${fromUserName}&_t=${time}]]></Url>
+        </item>
+        <item>
+            <Title>绑定成员</Title>
+            <PicUrl><![CDATA[http://firebird.5166.info/app/img/pri/jianshen.jpg]]></PicUrl>
+            <Url><![CDATA[http://firebird.5166.info/weixin/config?action=at&openId=${fromUserName}&_t=${time}]]></Url>
+        </item>
+    </Articles>
+</xml>

@@ -1,0 +1,166 @@
+/* indent for all tree children excepts root */
+.TreeNode {
+	background-image: url('images/i.gif');
+	background-position: top left;
+	background-repeat: repeat-y;
+	margin-left: 19px;
+	z-index: 100;
+}
+
+.SelectedInsertNode {
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+	border-bottom-color: #333333;
+	font-size: 15px;
+	color: #FF6600;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #FF9900;
+}
+
+.TreeExpand {
+	width: 18px;
+	height: 18px;
+	float: left;
+	display: inline;
+	background-repeat: no-repeat;
+}
+
+.TreeIsRoot {
+	margin-left: 0;
+}
+
+/* left vertical line (grid) for all nodes */
+.TreeIsLast {
+	background-image: url('images/i_half.gif');
+	background-repeat: no-repeat;
+}
+
+.TreeExpandOpen .TreeExpand {
+	background-image: url('images/expand_minus.gif');
+}
+
+/* closed is higher priority than open */
+.TreeExpandClosed .TreeExpand {
+	background-image: url('images/expand_plus.gif');
+}
+
+/* highest priority */
+.TreeExpandLeaf .TreeExpand {
+	background-image: url('images/expand_leaf.gif');
+}
+
+.TreeExpandLoading {
+	width: 18px;
+	height: 18px;
+	float: left;
+	display: inline;
+	background-repeat: no-repeat;
+	background-image: url('images/expand_loading.gif');
+}
+
+.TreeContent {
+	min-height: 18px;
+	min-width: 18px;
+	margin-left: 18px;
+	/* cursor: default; */
+	/* can't make inline - multiline bugs */
+}
+
+.TreeIEContent {
+	height: 18px;
+}
+
+/* same style as IE selection */
+.TreeNodeEmphasized {
+	background-color: Highlight;
+	color: HighlightText;
+}
+
+.TreeContent .RichTextEditable,.TreeContent .RichTextEditable iframe {
+	background-color: #ffc;
+	color: black;
+}
+
+/* don't use :focus due to opera's lack of support on div's */
+.TreeLabelOther {
+	outline: 1px invert dotted;
+}
+
+.TreeLabelFocused {
+	color: #FFFFFF;
+	background-color: #003366;
+	border-right-color: #FFFFFF;
+	border-left-color: #FFFFFF;
+	border-width: 1px;
+	border-style: solid;
+	cursor: hand;
+}
+
+.TreeLabelDefault {
+	color: #333333;
+	background-color: #FFFFFF;
+}
+
+.defaultLabel {
+	cursor:hand;
+}
+
+.divcontext {
+	font-size: 12px;
+	font-style: normal;
+	line-height: 35px;
+	color: #333333;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	margin-right: 10px;
+	border-left-style: solid;
+	border-top-color: #FFFFFF;
+	border-right-color: #CCCCCC;
+	border-bottom-color: #666666;
+	border-left-color: #FFFFFF;
+	background-color: #CCCCCC;
+}
+
+.divHeader {
+	font-size: 12px;
+	font-style: normal;
+	line-height: 20px;
+	color: #000000;
+	background-color: #eeeeee;
+	border: 1px solid #666666;
+}
+/* highest priority */
+.TreeIconDocument {
+	background-image: url('images/document.gif');
+}
+
+.TreeExpandOpen .TreeIconFolder {
+	background-image: url('images/open.gif');
+}
+
+.TreeExpandClosed .TreeIconFolder {
+	background-image: url('images/closed.gif');
+}
+
+.TreeIconFolderx {
+	background-image: url('images/closed.gif');
+}
+
+/* generic class for docIcon */
+.TreeIcon {
+	width: 18px;
+	height: 18px;
+	float: left;
+	display: inline;
+	background-repeat: no-repeat;
+}
+
+div.TreeContent {
+	margin-left: 36px;
+}

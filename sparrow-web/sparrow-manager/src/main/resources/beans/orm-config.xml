@@ -1,0 +1,23 @@
+<define>
+	<bean id="sessionFactory" claz="com.sparrow.orm.session.annotation.AnnotationCfgSessionFactory"
+		lazy="false" initMethod="initialize" destroyMethod="destroy">
+		<setter property="configFile" value="classpath:conf/config4mysql.properties"></setter>
+		<setter property="scanPath" value="classpath:com/sparrow/manager/domain/**/*.class"></setter>
+	</bean>
+	 
+	<bean id="transManager" claz="com.sparrow.orm.trans.TransManager">
+		<setter property="sessionFactory" ref="sessionFactory"></setter>
+	</bean>
+
+	<bean id="transInterceptor" claz="com.sparrow.service.interceptor.TranscationInterceptor">
+		<setter property="transManager" ref="transManager"></setter>
+	</bean> 
+	
+	<bean id="hitTemplate" claz="com.sparrow.orm.template.SimpleHitTemplate">
+		<setter property="sessionFactory" ref="sessionFactory"></setter>
+	</bean>
+	
+	<bean id="baseDao" claz="com.sparrow.orm.dao.BaseDao">
+		<setter property="sessionFactory" ref="sessionFactory"></setter>
+	</bean>
+</define>

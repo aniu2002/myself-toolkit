@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.sparrow</groupId>
+        <artifactId>sparrow-egg</artifactId>
+        <version>1.1</version>
+    </parent>
+    <artifactId>sparrow-supports</artifactId>
+    <name>sparrow-supports</name>
+    <description>sparrow-supports</description>
+    <version>1.1</version>
+    <packaging>pom</packaging>
+
+
+    <properties>
+        <appname>sparrow-supports</appname>
+        <supports.version>1.1</supports.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- 内部引用 -->
+            <dependency>
+                <groupId>com.sparrow</groupId>
+                <artifactId>sparrow-orm</artifactId>
+                <version>${supports.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sparrow</groupId>
+                <artifactId>sparrow-service</artifactId>
+                <version>${supports.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sparrow</groupId>
+                <artifactId>sparrow-service-ext</artifactId>
+                <version>${supports.version}</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+    <modules>
+        <module>sparrow-file-pool</module>
+        <module>sparrow-orm</module>
+        <module>sparrow-message</module>
+        <module>sparrow-service</module>
+        <module>sparrow-service-ext</module>
+    </modules>
+</project>

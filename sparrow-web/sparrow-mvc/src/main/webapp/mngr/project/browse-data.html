@@ -1,0 +1,56 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>数据</title>
+    <style>
+        .test {
+            border: 2px #e4e4e4 solid;
+            background-color: #fff;
+            height: 200px;
+            width: 200px;
+        }
+    </style>
+    <link rel="stylesheet" href="/app/css/grid/grid.css" type="text/css"/>
+    <link rel="stylesheet" href="/app/js/tools/base.css" type="text/css"/>
+    <script type="text/javascript" src="/app/js/common/common.js"></script>
+    <script type="text/javascript" src="/app/js/tools/grid.js"></script>
+    <script type="text/javascript" src="/app/js/tools/ajax.js"></script>
+    <script type="text/javascript" src="/app/js/tools/popui/pop-ui.js"></script>
+    <script type="text/javascript" src="/app/js/tools/tools.js"></script>
+    <script type="text/javascript" src="/app/js/tools/list/checkboxlist.js"></script>
+    <script type="text/javascript">
+        <!--
+        var dataEditor;
+        var paras = Utils.getUrlParas();
+        var fnl = function () {
+            if (dataEditor == null) {
+                dataEditor = createTaData('tdata');
+                dataEditor.customDef = true;
+            }
+
+            dataEditor.resetTab({
+                force: true,
+                url: '/cmd/sys/meta?_t=tableData&table=' + paras.table + '&source='+paras.source
+            });
+        };
+
+        function createTaData(id) {
+            var tabEditor = new TEditor();
+            tabEditor.boundTo(id);
+            return tabEditor;
+        }
+
+        -->
+    </script>
+</head>
+<body onload="fnl();">
+<table align="center" width="98%">
+    <tr>
+        <td>
+            <div id="tdata"></div>
+        </td>
+    </tr>
+</table>
+</body>
+</html>

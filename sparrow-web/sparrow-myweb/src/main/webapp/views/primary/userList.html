@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html lang="zh">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0" />
+    <title>元田小学列表</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="/app/js/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/app/css/wap.css?_t=222dd">
+    <script type="text/javascript">
+        if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+            var msViewportStyle = document.createElement("style")
+            msViewportStyle.appendChild(
+                    document.createTextNode(
+                            "@-ms-viewport{width:auto!important}"
+                    )
+            )
+            document.getElementsByTagName("head")[0].appendChild(msViewportStyle)
+        }
+    </script>
+</head>
+<body>
+<div class="container">
+    <div class="class ffms">
+        <section class="title">同学列表(${total?if_exists}个人)</section>
+        <#list rows as item>
+            <div class="row" style="margin-top:10px;border-bottom:1px solid #CCC;">
+                <div class="wap_rows row">
+                    <span>姓名: &nbsp;
+                        <#if item.name??>
+                            ${item.name}
+                        <#else>
+                            未设置
+                        </#if>
+                    </span>
+                    &nbsp;&nbsp;手机: &nbsp;${item.phone?if_exists}
+                </div>
+                <div class="wap_rows row">
+                   微信昵称:  &nbsp;${item.nickName?if_exists} &nbsp;&nbsp;
+                    <#if (item.sex==1)>
+                        男
+                    <#else>
+                        女
+                    </#if>
+                    - ${item.language?if_exists}
+                </div>
+                <div class="wap_rows row">
+                    <div class="address">
+                        <label class="tag fwnm">${item.country?if_exists} - ${item.province?if_exists} - ${item.city?if_exists}</label>
+                    </div>
+                </div>
+                <div class="wap_rows row">
+                    <div class="remark" style="width:30px;float:left;">
+                        <label class="tag" style="height:35px;">&nbsp;</label>
+                    </div>
+                    <div class="fwnm" style="margin-top:3px;padding-left:30px;">
+                        <img src="${item.headImage?if_exists}" style="width:70px;height:80px;"/>
+                    </div>
+                </div>
+            </div>
+        </#list>
+    </div>
+ </div>
+</body>
+</html>

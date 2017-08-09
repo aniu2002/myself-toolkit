@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+    <!-- import export tools -->
+    <bean name="storeManager" clazz="com.sparrow.data.tools.store.StoreManager">
+        <property name="basePath" value="default"/>
+        <property name="useDatePath" value="true"/>
+        <property name="useRandomName" value="true"/>
+    </bean>
+
+    <bean name="equalValidator" clazz="com.sparrow.data.tools.validate.validators.EqualsValidator">
+        <property name="express" value="admin"/>
+    </bean>
+
+    <bean name="validatorManager" clazz="com.sparrow.data.tools.validate.ValidatorManager">
+        <map name="validators">
+            <entry name="num" clazz="com.sparrow.data.tools.validate.validators.NumberValidator"/>
+            <entry name="equal" ref="equalValidator"/>
+            <entry name="require" clazz="com.sparrow.data.tools.validate.validators.NotEmptyValidator"/>
+            <entry name="real" clazz="com.sparrow.data.tools.validate.validators.RealNumberValidator"/>
+            <entry name="positive" clazz="com.sparrow.data.tools.validate.validators.PositiveValidator"/>
+            <entry name="barcode" clazz="com.sparrow.data.tools.validate.validators.BarcodeValidator"/>
+            <entry name="qq" clazz="com.sparrow.app.data.validators.QQCheckValidator"/>
+        </map>
+    </bean>
+    <bean name="statusManager" clazz="com.sparrow.data.tools.concurrency.StatusManager">
+        <property name="importHandles" value="20"/>
+        <property name="maxSize" value="50"/>
+    </bean>
+
+    <bean name="importTemplateDao" clazz="com.sparrow.data.service.imports.dao.ImportTemplateDaoImpl">
+        <property name="operateTemplate" ref="operateTemplate"/>
+    </bean>
+    <bean name="batchExportDao" clazz="com.sparrow.data.service.exports.dao.JdbcBatchExportDaoImpl">
+        <property name="operateTemplate" ref="operateTemplate"/>
+    </bean>
+
+    <bean name="importConfiguration" clazz="com.sparrow.data.service.imports.config.ImportConfigurationImpl" init="initialize">
+        <property name="importTemplateDao" ref="importTemplateDao"/>
+    </bean>
+
+    <bean name="importFacade" clazz="com.sparrow.data.service.imports.ImportFacadeImpl">
+        <property name="importTemplateDao" ref="importTemplateDao"/>
+        <property name="importConfiguration" ref="importConfiguration"/>
+        <property name="statusManager" ref="statusManager"/>
+        <property name="validatorManager" ref="validatorManager"/>
+    </bean>
+
+    <bean name="exportFacade" clazz="com.sparrow.data.service.exports.ExportFacadeImpl">
+        <property name="batchExportDao" ref="batchExportDao"/>
+        <property name="importConfiguration" ref="importConfiguration"/>
+        <property name="statusManager" ref="statusManager"/>
+        <property name="storeManager" ref="storeManager"/>
+    </bean>
+    <!-- command bean configuration -->
+    <bean name="dataToolCommand" parameter="data/tool" clazz="com.sparrow.app.data.DataToolCommand">
+        <property name="importFacade" ref="importFacade"/>
+        <property name="exportFacade" ref="exportFacade"/>
+        <property name="importConfiguration" ref="importConfiguration" />
+    </bean>
+</beans>

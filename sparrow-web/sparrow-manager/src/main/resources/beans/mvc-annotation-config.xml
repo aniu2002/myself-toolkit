@@ -1,0 +1,4 @@
+<define>
+	<annotation base="com.sparrow.app.system.controller" expression="*Controller.class">
+	</annotation>
+</define>

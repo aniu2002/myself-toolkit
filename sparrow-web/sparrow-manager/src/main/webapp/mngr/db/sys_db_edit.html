@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>数据源——资源管理</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="/app/js/bootstrap/css/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/app/js/bootstrap/css/bootstrap-responsive.min.css" type="text/css"/>
+    <link rel="stylesheet" href="/app/css/tooltip/tooltip.css" type="text/css"/>
+    <link rel="stylesheet" href="/app/css/style.css" type="text/css"/>
+    <style type="text/css">
+    .table td i{margin:0 2px;}
+    .active_el { background-color: #AAAAAA;color: #FFFFFF;}</style>
+    <script type="text/javascript" src="/app/js/jquery/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="/app/js/jquery/jquery-migrate-1.1.1.min.js"></script>
+    <script type="text/javascript" src="/app/js/bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/app/js/common/common.js"></script>
+    <script type="text/javascript" src="/app/js/common/page.js"></script>
+    <script type="text/javascript" src="/app/js/common/crud-grid-new.js"></script>
+    <script type="text/javascript">
+        var columns=[
+            {name:'id',label:'ID',width:'30',render:'_idx',hidden:true,noe:true},
+            {name:'name',label:'名称'},
+            {name:'type',label:'类型',editor:'select',vtype:'required',src:"sqlType",max:32},
+            {name:'user',label:'用户',editor:'text',vtype:'required',search:true,max:32},
+            {name:'password',label:'密码',editor:'pwd',vtype:'required',search:true,max:32},
+            {name:'driver',label:'驱动',editor:'text',vtype:'required',max:32},
+            {name:'url',label:'链接地址',editor:'textarea',vtype:'required',max:32,width:'500px',colspan:2},
+            {name:'maxIdle',label:'最大连接数',editor:'text',vtype:'required',max:32},
+            {name:'maxActive',label:'最大活动数',editor:'text',vtype:'required',max:32},
+            {name:'minIdle',label:'最小连接数',editor:'text',vtype:'required',max:32},
+            {name:'maxWait',label:'最大等待数',editor:'text',vtype:'required',max:32},
+            {name:'longTimeFlag',label:'始终保持链接',editor:'checkbox',vtype:'required',max:32,colspan:2},
+            {name:'showSql',label:'显示sql',editor:'checkbox',vtype:'required',max:32,colspan:2},
+            {name:'formatSql',label:'格式化sql',editor:'checkbox',vtype:'required',max:32,colspan:2}
+	    ];
+        var _url='/cmd/sys/db';
+        var _baseUrl='http://127.0.0.1:9081/app';
+        var _imgRoot='http://127.0.0.1:9081/img';
+        var _id = '${id}';
+        var _dlg;
+        $(document).ready(function() {
+        	_dlg = new _Panel({cols:columns,url:_url});
+            _dlg.colspan=2;
+		    _dlg._redirectUrl='/app/mngr/db/sys_db.html';
+			_dlg.title='用户信息';
+			_dlg.draw();
+			Common.get(_url , {_t:'data',id:_id}, function(data) {
+				 _dlg.render(data);
+				 _dlg.endDraw();
+			});
+        });
+    </script>
+</head>
+<body>
+<ul class="nav nav-tabs">
+	<li><a href="/app/mngr/db/sys_db.html">连接池</a></li>
+	<li class="active"><a href="#">编辑连接池</a></li>
+</ul>
+<div id="searchForm">
+</div>
+<div id="grid">
+</div>
+<div id="pageBar" class="pagination" style="margin:10px 0;">
+</div>
+</body>
+</html>
