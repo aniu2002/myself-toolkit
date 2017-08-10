@@ -17,12 +17,14 @@ import java.io.File;
 import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.concurrent.atomic.AtomicLong;
 
 /**
  * Created by Administrator on 2017/7/30 0030.
  */
 public class SaveDownData {
     public static void main(String args[]) {
+        //  saveRecord();
         writeBloomData();
     }
 
@@ -47,20 +49,25 @@ public class SaveDownData {
         sqlStore.close();
     }
 
+    static final AtomicLong counter=new AtomicLong(0);
     static void writeBloomData() {
         PersistConfig config = JsonMapper.bean(FileIOUtil.readString("classpath:persist-config.json"),
                 PersistConfig.class);
         Session session = new Session(new DataSourceConnectionFactory(config.getProps()));
 
         final UrlCheck urlCheck = UrlCheck4Guava.getInstance("D:\\fanhao\\extract");
-        session.query("select icons from gif_info", new ResultSetHandler() {
+
+        session.query("select icons,gif_url,gif_desc from gif_info", new ResultSetHandler() {
             @Override
             public void handle(ResultSet rs) throws SQLException {
-                String url = rs.getString("icons");
+                String url = rs.getString("gif_url") + "/" + rs.getString("icons");
                 System.out.println(url);
                 urlCheck.add(url);
+                urlCheck.add(rs.getString("gif_desc"));
+                counter.incrementAndGet();
             }
         });
         urlCheck.close();
+        System.out.println(counter.get());
     }
 }
