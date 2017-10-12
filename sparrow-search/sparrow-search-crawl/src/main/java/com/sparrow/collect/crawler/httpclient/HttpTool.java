@@ -277,7 +277,7 @@ public class HttpTool {
 
     public static HttpResp doInvokeMethod(HttpClient _client,
                                           HttpRequestBase method, String charset) throws Exception {
-        HttpResponse resp = null;
+        HttpResponse resp;
         HttpEntity entity = null;
         String html = null;
         int status = -1;

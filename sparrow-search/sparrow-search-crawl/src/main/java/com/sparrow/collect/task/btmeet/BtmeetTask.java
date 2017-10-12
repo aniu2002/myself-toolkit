@@ -21,7 +21,7 @@ public class BtmeetTask extends AbstractTask {
 
         SiteEntry entry = new SiteEntry();
         entry.setTitle("BT搜索");
-        entry.setUrl("http://www.btmeet.org/search");
+        entry.setUrl("http://www.btwhat.net/search");
         entry.setPageStart(1);
         entry.setPageEnd(6);
 

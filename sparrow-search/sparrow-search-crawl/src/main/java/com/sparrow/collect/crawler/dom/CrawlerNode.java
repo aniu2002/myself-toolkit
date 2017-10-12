@@ -11,11 +11,15 @@ public interface CrawlerNode {
 
     String attr(String attributeKey);
 
-    void attr(String key,String val);
+    void attr(String key, String val);
 
     int childSize();
 
     CrawlerNode childNode(int idx);
 
     String nodeName();
+
+    CrawlerNode parent();
+
+    CrawlerNode next();
 }

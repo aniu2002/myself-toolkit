@@ -1,7 +1,9 @@
 package com.sparrow.collect.task.gif;
 
-import com.sparrow.collect.cache.bloom.UrlCheck;
-import com.sparrow.collect.cache.bloom.UrlCheck4Guava;
+import com.sparrow.collect.crawler.check.DuplicateUrlCheck;
+import com.sparrow.collect.crawler.check.UrlCheck;
+import com.sparrow.collect.crawler.check.UrlCheck4Guava;
+import com.sparrow.collect.crawler.check.UrlCheck4HashSet;
 import com.sparrow.collect.orm.extractor.ResultSetHandler;
 import com.sparrow.collect.orm.jdbc.DataSourceConnectionFactory;
 import com.sparrow.collect.orm.session.Session;
@@ -24,22 +26,29 @@ import java.util.concurrent.atomic.AtomicLong;
  */
 public class SaveDownData {
     public static void main(String args[]) {
-        //  saveRecord();
-        writeBloomData();
+        saveRecord();
+        //writeBloomData();
     }
 
     static void saveRecord() {
+        File rootDir = new File("D:\\fanhao\\extract");
         PersistConfig config = JsonMapper.bean(FileIOUtil.readString("classpath:persist-config.json"),
                 PersistConfig.class);
         FileDataSqlStore sqlStore = new FileDataSqlStore(config);
         sqlStore.initialize();
-        BufferedReader reader = FileIOUtil.getBufferedReader(new File("D:\\fanhao\\extract\\ad.txt"), FileIOUtil.DEFAULT_ENCODING);
+        BufferedReader reader = FileIOUtil.getBufferedReader(new File(rootDir, "ad.txt"), FileIOUtil.DEFAULT_ENCODING);
+
+        UrlCheck urlCheck = (rootDir.isDirectory() && rootDir.exists()) ?
+                UrlCheck4HashSet.getInstance(rootDir.getPath(), "store_dup.dat")
+                : DuplicateUrlCheck.DEFAULT_CHECK;
+        sqlStore.setUrlCheck(urlCheck);
         try {
             String line;
             while ((line = reader.readLine()) != null) {
-                if (StringUtils.isEmpty(line.trim()))
+                String l = line.trim();
+                if (StringUtils.isEmpty(l))
                     continue;
-                sqlStore.save(line);
+                sqlStore.save(l);
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -47,16 +56,17 @@ public class SaveDownData {
             IOUtils.closeQuietly(reader);
         }
         sqlStore.close();
+        urlCheck.close();
     }
 
-    static final AtomicLong counter=new AtomicLong(0);
+    static final AtomicLong counter = new AtomicLong(0);
+
     static void writeBloomData() {
         PersistConfig config = JsonMapper.bean(FileIOUtil.readString("classpath:persist-config.json"),
                 PersistConfig.class);
         Session session = new Session(new DataSourceConnectionFactory(config.getProps()));
 
         final UrlCheck urlCheck = UrlCheck4Guava.getInstance("D:\\fanhao\\extract");
-
         session.query("select icons,gif_url,gif_desc from gif_info", new ResultSetHandler() {
             @Override
             public void handle(ResultSet rs) throws SQLException {

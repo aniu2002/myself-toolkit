@@ -7,24 +7,26 @@ import com.sparrow.collect.task.Context;
 
 import java.io.File;
 
-public class GifTask extends AbstractTask {
+public class GifExtTask extends AbstractTask {
 
     public void execute(Context ctx) {
-        AbstractPageSelector selector = new GifSelector();
-        selector.setPageItemSelectExpress(".excerpt.excerpt-one>header>h2>a");
+        AbstractPageSelector selector = new GifExtSelector();
+        selector.setPageItemSelectExpress(".article>h1>a");
         selector.setUrlSelectExpress("href");
 
-        GifCrawler crawler = new GifCrawler(new File(
-                "D:\\fanhao\\extract"));
-        crawler.setPageCheck(false);
+        GifCrawler crawler = new GifExtCrawler(new File(
+                "D:\\fanhao\\extract2"));
+        crawler.setPageCheck(true);
         crawler.setSiteCheck(false);
-        crawler.setDetailCheck(false);
-        crawler.setGifItemSelect(".article-content>p");
+        crawler.setDetailCheck(true);
+        crawler.setUseProxy(false);
+       // crawler.setGifItemSelect(".content>p:gt(3)");
+        crawler.setGifItemSelect("p>img");
         crawler.setSelector(selector);
 
         SiteEntry entry = new SiteEntry();
-        entry.setTitle("2014");
-        entry.setUrl("http://www.dongde.in/category");
+        entry.setTitle("2017");
+        entry.setUrl("https://www.fanhaojia.cc/fanhao/gif");
         entry.setPageStart(1);
         entry.setPageEnd(100);
 

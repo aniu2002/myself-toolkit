@@ -14,6 +14,7 @@ public class TaskMain {
         TASK_MAP.put("configure", "com.sparrow.collect.task.special.ConfigureTask");
         TASK_MAP.put("multi", "com.sparrow.collect.task.special.MultiEntryCrawlerTask");
         TASK_MAP.put("scope", "com.sparrow.collect.task.special.ScopeCrawlerTask");
+        TASK_MAP.put("gifx", "com.sparrow.collect.task.gif.GifExtTask");
     }
 
 

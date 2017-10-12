@@ -1,7 +1,7 @@
 package com.sparrow.collect.crawler.simple;
 
-import com.sparrow.collect.cache.bloom.DuplicateUrlCheck;
-import com.sparrow.collect.cache.bloom.UrlCheck;
+import com.sparrow.collect.crawler.check.DuplicateUrlCheck;
+import com.sparrow.collect.crawler.check.UrlCheck;
 import com.sparrow.collect.crawler.AbstractCrawler;
 import com.sparrow.collect.crawler.conf.CrawlerConfig;
 import com.sparrow.collect.crawler.conf.pool.PoolConfig;
@@ -24,16 +24,11 @@ import com.sparrow.collect.crawler.selector.ConfiguredPageSelector;
 import com.sparrow.collect.crawler.selector.DefaultPageSelector;
 import com.sparrow.collect.crawler.selector.IPageSelector;
 import com.sparrow.collect.log.CrawlerLog;
-import com.sparrow.collect.orm.ParsedSql;
-import com.sparrow.collect.orm.utils.NamedParameterUtils;
 import com.sparrow.collect.store.*;
-import com.sparrow.collect.utils.BeanUtils;
 import com.sparrow.collect.utils.PathResolver;
 import org.apache.commons.lang3.StringUtils;
 
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.util.Map;
 import java.util.concurrent.ThreadPoolExecutor;
 
 /**

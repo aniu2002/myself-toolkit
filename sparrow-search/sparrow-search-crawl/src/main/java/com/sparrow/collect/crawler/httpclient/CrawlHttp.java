@@ -34,9 +34,12 @@ public class CrawlHttp {
         headers.put("Accept",
                 "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8");
         headers.put("Accept-Language", "zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3");
+        headers.put("Accept-Encoding", "gzip, deflate");
         // headers.put("X-Requested-With", "XMLHttpRequest");
+        headers.put("Upgrade-Insecure-Requests", "1");
+        headers.put("Host", "www.alegev.com");
         headers.put("User-Agent",
-                "Mozilla/5.0 (Windows NT 6.3; WOW64; rv:36.0) Gecko/20100101 Firefox/36.0");
+                "Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0");
         // headers.put("Host", "www.tuicool.com");
         // headers.put("Referer", "http://www.tuicool.com/");
     }

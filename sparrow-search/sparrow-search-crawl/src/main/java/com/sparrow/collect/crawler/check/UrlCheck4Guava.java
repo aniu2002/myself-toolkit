@@ -1,4 +1,4 @@
-package com.sparrow.collect.cache.bloom;
+package com.sparrow.collect.crawler.check;
 
 import com.google.common.hash.BloomFilter;
 import com.google.common.hash.Funnel;
@@ -31,10 +31,14 @@ public class UrlCheck4Guava implements UrlCheck {
     };
 
     private UrlCheck4Guava(String dir) {
+        this(dir, "guava_bloom.dat");
+    }
+
+    private UrlCheck4Guava(String dir, String fileName) {
         File f = new File(dir);
         if (!f.exists())
             f.mkdirs();
-        this.file = new File(f, "guava_bloom.dat");
+        this.file = new File(f, fileName);
         BloomFilter tmp = null;
         if (file.exists()) {
             FileInputStream fileInputStream = null;
@@ -65,6 +69,16 @@ public class UrlCheck4Guava implements UrlCheck {
             synchronized (synObject) {
                 if (instance == null)
                     instance = new UrlCheck4Guava(dir);
+            }
+        }
+        return instance;
+    }
+
+    public static final UrlCheck4Guava getInstance(String dir, String name) {
+        if (instance == null) {
+            synchronized (synObject) {
+                if (instance == null)
+                    instance = new UrlCheck4Guava(dir, name);
             }
         }
         return instance;

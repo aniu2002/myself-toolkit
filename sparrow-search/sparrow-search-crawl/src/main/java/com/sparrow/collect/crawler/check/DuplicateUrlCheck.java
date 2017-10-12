@@ -1,4 +1,6 @@
-package com.sparrow.collect.cache.bloom;
+package com.sparrow.collect.crawler.check;
+
+import com.sparrow.collect.cache.bloom.CustomBloomFilter;
 
 import java.io.File;
 import java.io.FileInputStream;

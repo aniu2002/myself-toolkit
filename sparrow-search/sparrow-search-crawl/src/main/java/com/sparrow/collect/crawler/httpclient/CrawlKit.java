@@ -181,41 +181,57 @@ public class CrawlKit {
     }
 
     private HttpResp doExecute(CrawlHttp http, HttpReq request,
-                               boolean useProxy, int retry) throws Exception {
-        HttpResp resp = null;
-        int count = retry;
+                               boolean useProxy, int ret) throws Exception {
+        HttpResp resp;
+        int count = ret;
+        int retry = ret + 1;
         boolean needRetry = true;
 
-        while (needRetry && retry > 0) {
+        do {
             try {
                 boolean useProxyTmp = useProxy;
-                if (retry > 0 && retry % 10 == 0)
+                if (retry > 0 && retry % 2 == 0)
                     useProxyTmp = false;
                 if (useProxyTmp) {
                     ProxyKit.setProxyHost(request, proxyRuleName);
-                } else if (useProxy)
+                } else if (useProxy) {
                     request.setProxyHost(null);
+                }
                 resp = http.execute(request);
                 if (resp.status == 200) {
                     needRetry = false;
                     return resp;
                 } else {
                     int status = resp.getStatus();
+                    if (retry > 0)
+                        logger.error("Retry : {} {}", status, request.url);
+                    else
+                        logger.error("Resp : {} {}", status, request.url);
                     retry -= 1;
-                    //Thread.sleep
-                    logger.info("Retry: {} {}", status, request.url);
                 }
             } catch (ConnectTimeoutException e) {
-                logger.error("Retry:" + request.url + ", - " + e.getMessage());
+                if (retry > 0)
+                    logger.error("Timeout Retry:" + request.url);
+                else
+                    logger.error("Timeout:" + request.url);
                 retry -= 1;
+                resp = new HttpResp(-1, null, e.getMessage());
             } catch (IOException e) {
-                logger.error("Retry:" + request.url + ", - " + e.getMessage());
+                if (retry > 0)
+                    logger.error("IO Failed Retry:" + request.url + ", - " + e.getMessage());
+                else
+                    logger.error("IO Failed:" + request.url);
                 retry -= 1;
+                resp = new HttpResp(-1, null, e.getMessage());
             }
-        }
+        } while (needRetry && retry > 0);
+
         if (retry == 1)
             return resp;
-        throw new Exception("Failure: retry " + count + " times, URL:" + request.url);
+        if (count > 1 && resp == null)
+            throw new Exception("Failure: retry " + count + " times, URL:" + request.url);
+        else
+            return resp;
     }
 
     public static void main(String args[]) {

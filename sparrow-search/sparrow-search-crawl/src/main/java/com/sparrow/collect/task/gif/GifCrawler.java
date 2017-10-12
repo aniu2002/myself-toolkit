@@ -1,10 +1,11 @@
 package com.sparrow.collect.task.gif;
 
 
-import com.sparrow.collect.cache.bloom.DuplicateUrlCheck;
-import com.sparrow.collect.cache.bloom.UrlCheck;
-import com.sparrow.collect.cache.bloom.UrlCheck4Guava;
+import com.sparrow.collect.crawler.check.DuplicateUrlCheck;
+import com.sparrow.collect.crawler.check.UrlCheck;
+import com.sparrow.collect.crawler.check.UrlCheck4Guava;
 import com.sparrow.collect.crawler.AbstractCrawler;
+import com.sparrow.collect.crawler.check.UrlCheck4HashSet;
 import com.sparrow.collect.crawler.conf.pool.PoolFactory;
 import com.sparrow.collect.crawler.data.CrawlerData;
 import com.sparrow.collect.crawler.data.EntryData;
@@ -15,6 +16,7 @@ import com.sparrow.collect.crawler.httpclient.CrawlHttp;
 import com.sparrow.collect.crawler.httpclient.CrawlKit;
 import com.sparrow.collect.crawler.httpclient.HttpResp;
 import com.sparrow.collect.crawler.selector.IPageSelector;
+import com.sparrow.collect.log.CrawlerLog;
 import com.sparrow.collect.utils.FileIOUtil;
 import com.sparrow.collect.utils.PathResolver;
 import org.apache.commons.lang3.StringUtils;
@@ -37,15 +39,17 @@ public class GifCrawler extends AbstractCrawler {
     final UrlCheck urlCheck;
     protected IPageSelector selector;
     private boolean singleThread = true;
-    BufferedWriter writer;
-
-    public boolean isSingleThread() {
-        return singleThread;
-    }
+    private BufferedWriter writer;
+    private CrawlerLog crawlerLog;
+    private String gifItemSelect;
+    private boolean pageCheck;
+    private boolean siteCheck;
+    private boolean detailCheck = true;
+    private boolean useProxy = true;
 
     public GifCrawler(File rootDir) {
         this.rootDir = rootDir;
-        this.urlCheck = (rootDir.isDirectory() && rootDir.exists()) ? UrlCheck4Guava.getInstance(this.rootDir.getPath())
+        this.urlCheck = (rootDir.isDirectory() && rootDir.exists()) ? UrlCheck4HashSet.getInstance(this.rootDir.getPath())
                 : DuplicateUrlCheck.DEFAULT_CHECK;
         if (!rootDir.exists())
             rootDir.mkdirs();
@@ -54,11 +58,28 @@ public class GifCrawler extends AbstractCrawler {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        this.crawlerLog = new CrawlerLog(rootDir.getPath());
     }
 
-    private boolean pageCheck;
-    private boolean siteCheck;
-    private boolean detailCheck = true;
+    public boolean isSingleThread() {
+        return singleThread;
+    }
+
+    public boolean isUseProxy() {
+        return useProxy;
+    }
+
+    public void setUseProxy(boolean useProxy) {
+        this.useProxy = useProxy;
+    }
+
+    public String getGifItemSelect() {
+        return gifItemSelect;
+    }
+
+    public void setGifItemSelect(String gifItemSelect) {
+        this.gifItemSelect = gifItemSelect;
+    }
 
     public void setSiteCheck(boolean siteCheck) {
         this.siteCheck = siteCheck;
@@ -80,6 +101,10 @@ public class GifCrawler extends AbstractCrawler {
 
     public void setPageCheck(boolean pageCheck) {
         this.pageCheck = pageCheck;
+    }
+
+    protected boolean ignoreErrorStatusData() {
+        return true;
     }
 
     @Override
@@ -111,15 +136,26 @@ public class GifCrawler extends AbstractCrawler {
         urlCheck.add(url);
     }
 
+    protected int sleepSeconds() {
+        return 0;
+    }
+
     @Override
     protected CrawlerData doCrawlData(EntryData entry) {
         HttpResp resp = this.kit.getHtml(entry.getUrl(), null,
-                CrawlHttp.headers, "UTF-8", true, 2);
+                CrawlHttp.headers, "UTF-8", this.useProxy, 1);
         CrawlerData data = new CrawlerData();
         data.setHtml(resp.getHtml());
         data.setTitle(entry.getTitle());
         data.setUrl(entry.getUrl());
         data.setStatus(resp.getStatus());
+        if (this.sleepSeconds() > 0) {
+            try {
+                Thread.sleep(this.sleepSeconds() * 1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
         return data;
     }
 
@@ -131,6 +167,10 @@ public class GifCrawler extends AbstractCrawler {
         entryData.setTitle(siteEntry.getTitle());
         entryData.setUrl(realUrl);
         return entryData;
+    }
+
+    protected void writeErrorLog(String status, String url, String reason) {
+        this.crawlerLog.writeLine("crawl", status, url, reason);
     }
 
     boolean isImgNode(CrawlerNode node) {
@@ -147,16 +187,6 @@ public class GifCrawler extends AbstractCrawler {
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }
-
-    public static void main(String args[]) {
-        CacheWrap wrap = new CacheWrap(new GifCrawler(new File("d:/")), new CrawlerData());
-        wrap.appendIcon(" img 1");
-        wrap.appendIcon(" img 2");
-
-        wrap.setTitle("test2-");
-        wrap.appendIcon(" img 2");
-        wrap.end();
     }
 
     AtomicLong num = new AtomicLong(0);
@@ -189,68 +219,6 @@ public class GifCrawler extends AbstractCrawler {
         wrap.end();
     }
 
-    public static boolean isImage(String srcFileName) {
-        FileInputStream imgFile;
-        byte[] b = new byte[10];
-        int l;
-        try {
-            imgFile = new FileInputStream(srcFileName);
-            l = imgFile.read(b);
-            imgFile.close();
-        } catch (Exception e) {
-            return false;
-        }
-        if (l == 10) {
-            byte b0 = b[0];
-            byte b1 = b[1];
-            byte b2 = b[2];
-            byte b3 = b[3];
-            byte b6 = b[6];
-            byte b7 = b[7];
-            byte b8 = b[8];
-            byte b9 = b[9];
-            if (b0 == (byte) 'G' && b1 == (byte) 'I' && b2 == (byte) 'F') {
-                return true;
-            } else if (b1 == (byte) 'P' && b2 == (byte) 'N' && b3 == (byte) 'G') {
-                return true;
-            } else if (b6 == (byte) 'J' && b7 == (byte) 'F' && b8 == (byte) 'I' && b9 == (byte) 'F') {
-                return true;
-            } else {
-                return false;
-            }
-        } else {
-            return false;
-        }
-    }
-
-    void handleOneGifx(Iterator<CrawlerNode> iterator, CrawlerData crawlerData) {
-        StringBuilder sb = new StringBuilder();
-        // CacheWrap wrap=new CacheWrap(this,crawlerData);
-        while (iterator.hasNext()) {
-            CrawlerNode crawlerNode = iterator.next();
-            String t = crawlerNode.attr("class");
-            if (StringUtils.equalsIgnoreCase(t, "post-copyright"))
-                return;
-            CrawlerNode fNode = crawlerNode.childSize() > 0 ? crawlerNode.childNode(0) : crawlerNode;
-            if (!this.isImgNode(fNode)) {
-                this.writeLog(this.correctTitle(fNode.text()), sb.toString(), null, crawlerData);
-                sb.delete(0, sb.length());
-            } else {
-                String url = fNode.attr("src");
-                String relativePath = "img" + File.separatorChar +
-                        PathResolver.getFileName(url);
-                File f = new File(this.rootDir, relativePath);
-                sb.append(",").append(relativePath);
-                if (this.checkUrl(url) && f.length() > 0) {
-                    log.warn(" -- URL skip download - {}", url);
-                    continue;
-                }
-                this.downFile(url, f);
-                this.cacheUrl(url);
-            }
-        }
-    }
-
     @Override
     protected void handleCrawlerData(CrawlerData crawlerData,
                                      SiteEntry siteEntry,
@@ -259,7 +227,7 @@ public class GifCrawler extends AbstractCrawler {
             return;
         CrawlerDom dom = this.createCrawlerDom(crawlerData);
         crawlerData.setDom(dom);
-        List<CrawlerNode> items = dom.selectNodes(".article-content>p");
+        List<CrawlerNode> items = dom.selectNodes(this.getGifItemSelect());
         if (items == null || items.isEmpty())
             return;
         this.handleOneGif(items.iterator(), crawlerData);
@@ -277,10 +245,13 @@ public class GifCrawler extends AbstractCrawler {
     }
 
     protected final void downFile(String url, File file) {
+        boolean f = true;
         if (!file.exists())
-            this.kit.saveStream(url, file, CrawlHttp.headers, true);
+            f = this.kit.saveStream(url, file, CrawlHttp.headers, true);
         else if (file.length() == 0)
-            this.kit.saveStream(url, file, CrawlHttp.headers, true);
+            f = this.kit.saveStream(url, file, CrawlHttp.headers, true);
+        if (!f)
+            this.writeErrorLog("404", url, "un download");
     }
 
     @Override
@@ -350,6 +321,7 @@ public class GifCrawler extends AbstractCrawler {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        this.crawlerLog.close();
         System.out.println("exists imgs  : " + num.get());
     }
 }

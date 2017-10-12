@@ -23,9 +23,7 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 import java.util.concurrent.ThreadPoolExecutor;
 
 public class BtmeetCrawler extends AbstractCrawler {
@@ -72,19 +70,20 @@ public class BtmeetCrawler extends AbstractCrawler {
     @Override
     protected CrawlerData doCrawlData(EntryData entry) {
         HttpResp resp = this.kit.getHtml(entry.getUrl(), null,
-                CrawlHttp.headers, "UTF-8", false, 2);
+                CrawlHttp.headers, "UTF-8", true, 2);
         if (resp.getStatus() != 200) {
             this.writeErrorLog(String.valueOf(resp.getStatus()), entry.getUrl(), resp.getError());
             return null;
         }
         CrawlerData data = new CrawlerData();
         data.setHtml(resp.getHtml());
+        data.setStatus(resp.getStatus());
         data.setTitle(entry.getTitle());
         data.setUrl(entry.getUrl());
         return data;
     }
 
-    Set set = new HashSet<String>();
+    Set set = new HashSet<>();
 
     @Override
     protected boolean checkUrl(String url) {
@@ -97,7 +96,7 @@ public class BtmeetCrawler extends AbstractCrawler {
         EntryData entryData = new EntryData();
         entryData.setTitle(siteEntry.getTitle());
         int idx = url.lastIndexOf('.');
-        if (idx != -1) {
+        if (idx != -1 && num > 1) {
             url = url.substring(0, idx) + "/" + num + "-1.html";
         }
         entryData.setUrl(url);
@@ -117,7 +116,7 @@ public class BtmeetCrawler extends AbstractCrawler {
     }
 
     protected void writeErrorLog(String status, String url, String reason) {
-        this.printWriter.println(String.format("%s-%s", status, url));
+        this.printWriter.println(String.format("%s-[%s]-%s", status, url, reason));
     }
 
     String findTitle(Elements elements) {
@@ -147,6 +146,7 @@ public class BtmeetCrawler extends AbstractCrawler {
             return;
         //String size = dom.text(".panel-body>ol>li .cpill.yellow-pill"); >1g
         String size = doc.select(".detail-table.detail-width>tbody>tr>td:nth-last-child(2)").text();
+        String hot = doc.select(".detail-table.detail-width>tbody>tr>td:nth-last-child(3)").text();
         int idx = size.indexOf(' ');
         String unit = "GB";
         if (idx != -1) {
@@ -157,7 +157,7 @@ public class BtmeetCrawler extends AbstractCrawler {
             return;
         System.out.println("size : " + size + "/" + unit);
         try {
-            this.writer.write(title + " [" + size + " " + unit + "] " + bt + FileIOUtil.LINE_SEPARATOR);
+            this.writer.write(title + " [" + size + " " + unit + " / hot: " + hot + "] " + bt + " - " + crawlerData.getUrl() + FileIOUtil.LINE_SEPARATOR);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -215,7 +215,8 @@ public class BtmeetCrawler extends AbstractCrawler {
     @Override
     public void exec(final SiteEntry siteEntry) {
         List<String> list = this.getKeywords();
-        for (String key : list) {
+        for (String k : list) {
+            String key = k.replace(" ", "%20");
             final SiteEntry se = new SiteEntry();
             se.setTitle(key);
             se.setUrl(siteEntry.getUrl() + "/" + key + ".html");

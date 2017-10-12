@@ -71,7 +71,7 @@ public class CustomBloomFilter {
         return ret;
     }
 
-    void writeObject(OutputStream out) throws IOException {
+    public void writeObject(OutputStream out) throws IOException {
         // 压缩
         ObjectOutputStream objOut = new ObjectOutputStream(new GZIPOutputStream(out));
         objOut.writeObject(this.bits);
@@ -81,7 +81,7 @@ public class CustomBloomFilter {
         // out.defaultWriteObject();
     }
 
-    void readObject(InputStream in) throws IOException, ClassNotFoundException {
+    public void readObject(InputStream in) throws IOException, ClassNotFoundException {
         ObjectInputStream objIn = new ObjectInputStream(new GZIPInputStream(in));
         this.bits = (BitSet) objIn.readObject();
         objIn.close();

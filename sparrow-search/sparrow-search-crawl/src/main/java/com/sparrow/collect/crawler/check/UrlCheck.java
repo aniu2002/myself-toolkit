@@ -1,4 +1,4 @@
-package com.sparrow.collect.cache.bloom;
+package com.sparrow.collect.crawler.check;
 
 /**
  * Project Name: test-parent

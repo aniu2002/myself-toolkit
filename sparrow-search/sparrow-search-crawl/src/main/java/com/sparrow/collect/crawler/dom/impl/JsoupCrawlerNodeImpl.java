@@ -52,4 +52,14 @@ public class JsoupCrawlerNodeImpl implements CrawlerNode {
     public String nodeName() {
         return this.node.nodeName();
     }
+
+    @Override
+    public CrawlerNode parent() {
+        return null;
+    }
+
+    @Override
+    public CrawlerNode next() {
+        return null;
+    }
 }

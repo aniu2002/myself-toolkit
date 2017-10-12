@@ -23,7 +23,7 @@ public class FileRowFormat implements DataFormat<String> {
         idx = sub.indexOf('-');
         String refUrl = sub.substring(idx + 1).trim();
         String gifUrl = refUrl;
-        idx = sub.indexOf('>');
+        idx = refUrl.indexOf('>');
         if (idx != -1) {
             gifUrl = refUrl.substring(idx + 1).trim();
             refUrl = refUrl.substring(0, idx);

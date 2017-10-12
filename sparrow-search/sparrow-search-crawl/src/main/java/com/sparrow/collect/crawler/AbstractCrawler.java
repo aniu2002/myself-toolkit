@@ -146,17 +146,19 @@ public abstract class AbstractCrawler {
             if (crawlerData != null) {
                 this.pageExecute(crawlerData, siteEntry, pEntry);
                 this.handlePageData(crawlerData, siteEntry, pEntry);
-                this.cacheUrl(pEntry.getUrl());
+                if (this.needPageCheck())
+                    this.cacheUrl(pEntry.getUrl());
             } else {
                 this.broken = true;
                 //不忽略掉非200状态的请求，下次就不请求
-                if (!this.ignoreErrorStatusData())
+                if (this.needPageCheck() && !this.ignoreErrorStatusData())
                     this.cacheUrl(pEntry.getUrl());
             }
             this.getListener().pageEnd(pEntry);
             num++;
         } while (this.goOn(crawlerData, num, max));
-        this.cacheUrl(siteEntry.getUrl());
+        if (this.needSiteCheck())
+            this.cacheUrl(siteEntry.getUrl());
         this.getListener().siteEnd(siteEntry);
     }
 
@@ -164,7 +166,7 @@ public abstract class AbstractCrawler {
         try {
             this.pageExecute(siteEntry);
         } catch (NoMorePageException e) {
-            e.printStackTrace();
+            log.error("No more page to crawl!");
         }
     }
 
@@ -202,12 +204,17 @@ public abstract class AbstractCrawler {
         this.getListener().detailEnter(itemEntry);
         CrawlerData crawlerData = this.doCrawlData(itemEntry, siteEntry.getContentExpress());
         this.getListener().detailEnd(crawlerData);
-
         if (crawlerData != null) {
             this.handleCrawlerData(crawlerData, siteEntry, pageEntry);
+            if (this.needDetailCheck())
+                this.cacheUrl(itemEntry.getUrl());
+        } else if (this.needDetailCheck() && !ignoreErrorStatusData()) {
             this.cacheUrl(itemEntry.getUrl());
-        } else if (!ignoreErrorStatusData()) {
-            this.cacheUrl(itemEntry.getUrl());
+        }
+        if (crawlerData == null) {
+            this.writeErrorLog("-1", itemEntry.getUrl(), "--- unkown");
+        } else if (crawlerData.getStatus() != 200) {
+            this.writeErrorLog(String.valueOf(crawlerData.getStatus()), itemEntry.getUrl(), crawlerData.getPageType());
         }
     }
 

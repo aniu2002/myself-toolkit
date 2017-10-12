@@ -1,6 +1,6 @@
 package com.sparrow.collect.store.check;
 
-import com.sparrow.collect.cache.bloom.DuplicateUrlCheck;
+import com.sparrow.collect.crawler.check.DuplicateUrlCheck;
 import com.sparrow.collect.utils.PropertyUtils;
 
 /**

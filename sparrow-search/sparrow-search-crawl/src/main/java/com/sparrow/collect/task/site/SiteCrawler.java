@@ -1,7 +1,7 @@
 package com.sparrow.collect.task.site;
 
-import com.sparrow.collect.cache.bloom.DuplicateUrlCheck;
-import com.sparrow.collect.cache.bloom.UrlCheck;
+import com.sparrow.collect.crawler.check.DuplicateUrlCheck;
+import com.sparrow.collect.crawler.check.UrlCheck;
 import com.sparrow.collect.crawler.AbstractCrawler;
 import com.sparrow.collect.crawler.conf.pool.PoolFactory;
 import com.sparrow.collect.crawler.data.CrawlerData;

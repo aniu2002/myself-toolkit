@@ -54,4 +54,13 @@ public class JsoupCrawlerElementImpl implements CrawlerNode {
     public String nodeName() {
         return this.element.nodeName();
     }
+
+    @Override
+    public CrawlerNode parent() {
+        return JsoupTools.covertToCrNode(this.element.parent());
+    }
+
+    public CrawlerNode next() {
+        return JsoupTools.covertToCrNode(this.element.nextElementSibling());
+    }
 }
