@@ -6,13 +6,13 @@ package ${controllerPackage};
 
 /* import ${pojoClass}; */
 import ${basePackage}.domain.${pojoClassName};
-import com.sparrow.http.command.Request;
-import com.sparrow.http.command.Response;
-import com.sparrow.http.command.BeanWrapper;
-import com.sparrow.http.command.BaseCommand;
-import com.sparrow.http.command.resp.FreeMarkerResponse;
-import com.sparrow.http.command.resp.JsonResponse;
-import com.sparrow.http.command.resp.OkResponse;
+import com.sparrow.core.http.command.Request;
+import com.sparrow.core.http.command.Response;
+import com.sparrow.core.http.command.BeanWrapper;
+import com.sparrow.core.http.command.BaseCommand;
+import com.sparrow.core.http.command.resp.FreeMarkerResponse;
+import com.sparrow.core.http.command.resp.JsonResponse;
+import com.sparrow.core.http.command.resp.OkResponse;
 
 import ${servicePackName}.${pojoClassName}Service;
 

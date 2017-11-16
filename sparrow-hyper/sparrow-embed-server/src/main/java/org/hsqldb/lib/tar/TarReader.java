@@ -352,7 +352,7 @@ public class TarReader {
                 outPipe.write(archive.readBuffer, 0, modulus);
             }
 
-            outPipe.flush();    // Do any good on a pipe?
+            outPipe.flush();    // Do any good on a services?
         } catch (IOException ioe) {
             if (inPipe != null) {
                 inPipe.close();

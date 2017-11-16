@@ -35,7 +35,7 @@ public class AnnotationHelper implements ContextLoadListener {
         for (Class<?> claz : clazs) {
             System.out.println("-- Scan Bean : # " + claz.getName() + " # ");
             SimpleBeanConfig sbcfg = null;
-            if (claz.isAnnotationPresent(Repository.class)) {
+            if (claz.isAnnotationPresent(BeanEntity.class)) {
                 sbcfg = getSampleConfig(claz);
             }
             if (sbcfg == null)
@@ -46,7 +46,7 @@ public class AnnotationHelper implements ContextLoadListener {
     }
 
     public static SimpleBeanConfig getSampleConfig(Class<?> clazz) {
-        Repository beanAnno = clazz.getAnnotation(Repository.class);
+        BeanEntity beanAnno = clazz.getAnnotation(BeanEntity.class);
         String beanName = beanAnno.value();
         if (StringUtils.isEmpty(beanName)) {
             beanName = clazz.getSimpleName();
@@ -199,15 +199,12 @@ public class AnnotationHelper implements ContextLoadListener {
         if (StringUtils.isEmpty(basep))
             return;
         basep = basep.replace('.', '/');
-        if (org.apache.commons.lang3.StringUtils.endsWith(acfg.getExpression(), "class"))
-            args[0] = "classpath*:" + basep + "/**/" + acfg.getExpression();
-        else
-            args[0] = "classpath*:" + basep + "/**/" + acfg.getExpression() + ".class";
+        args[0] = "classpath*:" + basep + "/**/" + acfg.getExpression();
         Class<?>[] clazs = ClassSearch.getInstance().searchClass(args);
         for (Class<?> claz : clazs) {
             SimpleBeanConfig sbcfg = null;
             boolean scanDrivenAnnotation = false;
-            if (claz.isAnnotationPresent(Repository.class)) {
+            if (claz.isAnnotationPresent(BeanEntity.class)) {
                 sbcfg = getSampleConfig(claz);
             } else if (claz.isAnnotationPresent(Service.class)) {
                 sbcfg = getServiceConfig(claz);

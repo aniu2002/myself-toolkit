@@ -73,34 +73,34 @@
 
         var columns=[
           'x',
-          {name:'id',label:'序号',width:'30',render:'_idx',hidden:true,noe:true},
-          {name:'name',label:'名称',width:'70'},
-          {name:'desc',label:'描述',width:'100'},
-          {name:'type',label:'类型',editor:'select',vtype:'required',src:"sqlType",search:true,max:32},
-          {name:'sourceName',label:'数据源',editor:'text',vtype:'required',max:32},
-          {name:'sourceId',label:'数据源Id',editor:'select',src:'dbs',hidden:true,vtype:'required',search:true,max:32},
-         // {name:'appHome',label:'根路径',editor:'text',vtype:'required',max:32},
-        //  {name:'webRootPath',label:'web路径',editor:'text',vtype:'required',max:32},
-        //  {name:'configPath',label:'配置路径',editor:'text',vtype:'required',max:32},
-          {name:'processId',label:'进程id',editor:'text',vtype:'required',max:32,render:function(v){
+          {title:'id',label:'序号',width:'30',render:'_idx',hidden:true,noe:true},
+          {title:'title',label:'名称',width:'70'},
+          {title:'desc',label:'描述',width:'100'},
+          {title:'type',label:'类型',editor:'select',vtype:'required',src:"sqlType",search:true,max:32},
+          {title:'sourceName',label:'数据源',editor:'text',vtype:'required',max:32},
+          {title:'sourceId',label:'数据源Id',editor:'select',src:'dbs',hidden:true,vtype:'required',search:true,max:32},
+         // {title:'appHome',label:'根路径',editor:'text',vtype:'required',max:32},
+        //  {title:'webRootPath',label:'web路径',editor:'text',vtype:'required',max:32},
+        //  {title:'configPath',label:'配置路径',editor:'text',vtype:'required',max:32},
+          {title:'processId',label:'进程id',editor:'text',vtype:'required',max:32,render:function(v){
                 if(v)
                     return v;
                else
                     return "无";
           }},
-          {name:'webPort',label:'服务端口',editor:'text',vtype:'required num',max:32},
-          {name:'started',label:'启动与否',editor:'text',vtype:'required',max:32,render:function(v){
+          {title:'webPort',label:'服务端口',editor:'text',vtype:'required num',max:32},
+          {title:'started',label:'启动与否',editor:'text',vtype:'required',max:32,render:function(v){
               var img='/app/icons/status/stop.png';
               if(v==1)
                img='/app/icons/status/run.png';
               return '<img src="'+img+'" />';
           }},
-          {name:'opt',label:'配置',width:'80',align:'left',render:function(v,data){
-                v=data.name;
+          {title:'opt',label:'配置',width:'80',align:'left',render:function(v,data){
+                v=data.title;
                 var s='<a href="#" onclick="cfgSource(\''+v+'\')">Source</a>&nbsp;<a href="#" onclick="cfgProvider(\''+v+'\')">Provider</a>';
                 return s;
             },noe:true},
-          {name:'opx',label:'服务',width:'40',align:'left',render:function(v,data){
+          {title:'opx',label:'服务',width:'40',align:'left',render:function(v,data){
                 v=data.id;
                 var s;
                if(data.started==1)
@@ -109,9 +109,9 @@
                    s='<a href="#" onclick="startServer('+v+')">启动</a>&nbsp;';
                 return s;
           },noe:true},
-          {name:'op',label:'操作',width:'120',align:'left',render:function(v,data){
+          {title:'op',label:'操作',width:'120',align:'left',render:function(v,data){
         	  v=data.id;
-        	  var s='<a href="/cmd/sys/app?_t=edit&id='+v+'">编辑</a>&nbsp;<a href="/cmd/sys/meta?_t=gp&app='+data.name+'&source='+data.sourceName+'&label='+data.desc+'">工程</a>&nbsp;<a href="/cmd/sys/app?_t=detail&id='+v+'">详情</a>&nbsp;<a href="#" onclick="delRow('+v+')">删除</a>';
+        	  var s='<a href="/cmd/sys/app?_t=edit&id='+v+'">编辑</a>&nbsp;<a href="/cmd/sys/meta?_t=gp&app='+data.title+'&source='+data.sourceName+'&label='+data.desc+'">工程</a>&nbsp;<a href="/cmd/sys/app?_t=detail&id='+v+'">详情</a>&nbsp;<a href="#" onclick="delRow('+v+')">删除</a>';
         	  return s;
           },noe:true}
 	    ];

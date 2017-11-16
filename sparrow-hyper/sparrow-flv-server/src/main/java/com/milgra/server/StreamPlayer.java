@@ -73,7 +73,7 @@ public class StreamPlayer extends OStream
 	 * @param videoChannelX - outgoing video packets rtmp channel
 	 * @param audioChannelX - outgoing audio packets rtmp channel
 	 * @param nameX - name of wanted stream
-	 * @param controllerX - related stream controller
+	 * @param controllerX - related stream web
 	 */
 	
 	public StreamPlayer ( int idX , 
@@ -178,7 +178,7 @@ public class StreamPlayer extends OStream
 	}
 	
 	/**
-	 * Disables playing, send out play failed message
+	 * Disables playing, send out play failed services
 	 */
 	
 	public void disable ( )

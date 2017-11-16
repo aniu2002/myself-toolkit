@@ -4,7 +4,7 @@
 <head>
     <title>小学同学列表</title>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta title="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/app/js/bootstrap/css/bootstrap.min.css" type="text/css"/>
     <link rel="stylesheet" href="/app/js/bootstrap/css/bootstrap-responsive.min.css" type="text/css"/>
     <link rel="stylesheet" href="/app/css/tooltip/tooltip.css" type="text/css"/>
@@ -21,12 +21,12 @@
     <script type="text/javascript">
         var columns=[
 //          'x',
-//          {name:'id',label:'ID',width:'30',render:'_idx',hidden:true,noe:true},
-//          {name:'openId',label:'唯一号',editor:'text',vtype:'required',max:36},
-            {name:'headImage',label:'',width:'55px',render:function(v){
+//          {title:'id',label:'ID',width:'30',render:'_idx',hidden:true,noe:true},
+//          {title:'openId',label:'唯一号',editor:'text',vtype:'required',max:36},
+            {title:'headImage',label:'',width:'55px',render:function(v){
                 return '<img src="'+v+'" style="width:50px;height:60px;"/>';
             },editor:'text',vtype:'required',max:256},
-           {name:'name',label:'',editor:'text',vtype:'required',max:36,
+           {title:'title',label:'',editor:'text',vtype:'required',max:36,
               render:function(v,data){
                   var s='女'
                   if(data.sex==1)
@@ -41,20 +41,20 @@
                   return inner;
               }
            }
-//          {name:'phone',label:'电话',editor:'text',vtype:'required',max:32},
-//          {name:'nickName',label:'昵称',editor:'text',vtype:'required',max:36},
-//          {name:'sex',label:'性别',render:function(v){
+//          {title:'phone',label:'电话',editor:'text',vtype:'required',max:32},
+//          {title:'nickName',label:'昵称',editor:'text',vtype:'required',max:36},
+//          {title:'sex',label:'性别',render:function(v){
 //              if(v==1)
 //                 return "男";
 //              else
 //                 return '女';
 //          },editor:'text',vtype:'required',max:11},
-//          {name:'language',label:'语言',editor:'text',vtype:'required',max:8},
-//          {name:'city',label:'城市',editor:'text',vtype:'required',max:36},
-//          {name:'province',label:'省份',editor:'text',vtype:'required',max:36},
-//          {name:'country',label:'国家',editor:'text',vtype:'required',max:36},
+//          {title:'language',label:'语言',editor:'text',vtype:'required',max:8},
+//          {title:'city',label:'城市',editor:'text',vtype:'required',max:36},
+//          {title:'province',label:'省份',editor:'text',vtype:'required',max:36},
+//          {title:'country',label:'国家',editor:'text',vtype:'required',max:36},
 
-// ,         {name:'op',label:'操作',width:'90',align:'left',render:function(v,data){
+// ,         {title:'op',label:'操作',width:'90',align:'left',render:function(v,data){
 //        	  v=data.id;
 //        	  var s='<a href="/cmd/primary/primary_school?_t=et&id='+v+'">编辑</a>&nbsp;<a href="#" onclick="delRow('+v+')">删除</a>';
 //        	  return s;

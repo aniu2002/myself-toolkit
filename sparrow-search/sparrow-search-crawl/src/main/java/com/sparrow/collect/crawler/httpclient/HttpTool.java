@@ -1,48 +1,11 @@
 package com.sparrow.collect.crawler.httpclient;
 
-import java.io.BufferedInputStream;
-import java.io.BufferedOutputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.OutputStream;
-import java.io.Reader;
-import java.net.URI;
-import java.nio.charset.Charset;
-import java.security.KeyManagementException;
-import java.security.NoSuchAlgorithmException;
-import java.security.cert.CertificateException;
-import java.security.cert.X509Certificate;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-
-import javax.net.ssl.SSLContext;
-import javax.net.ssl.TrustManager;
-import javax.net.ssl.X509TrustManager;
-
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.StringUtils;
-import org.apache.http.Header;
-import org.apache.http.HeaderElement;
-import org.apache.http.HttpEntity;
-import org.apache.http.HttpException;
-import org.apache.http.HttpRequest;
-import org.apache.http.HttpRequestInterceptor;
-import org.apache.http.HttpResponse;
-import org.apache.http.HttpResponseInterceptor;
-import org.apache.http.HttpVersion;
-import org.apache.http.NameValuePair;
-import org.apache.http.ParseException;
+import org.apache.http.*;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.entity.GzipDecompressingEntity;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.client.methods.HttpPost;
-import org.apache.http.client.methods.HttpRequestBase;
+import org.apache.http.client.methods.*;
 import org.apache.http.client.params.ClientPNames;
 import org.apache.http.client.utils.URLEncodedUtils;
 import org.apache.http.conn.scheme.PlainSocketFactory;
@@ -54,15 +17,26 @@ import org.apache.http.entity.ContentType;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.impl.conn.PoolingClientConnectionManager;
 import org.apache.http.message.BasicNameValuePair;
-import org.apache.http.params.BasicHttpParams;
-import org.apache.http.params.CoreConnectionPNames;
-import org.apache.http.params.CoreProtocolPNames;
-import org.apache.http.params.HttpParams;
-import org.apache.http.params.HttpProtocolParamBean;
+import org.apache.http.params.*;
 import org.apache.http.protocol.HTTP;
 import org.apache.http.protocol.HttpContext;
 import org.apache.http.util.CharArrayBuffer;
 import org.apache.http.util.EntityUtils;
+
+import javax.net.ssl.SSLContext;
+import javax.net.ssl.TrustManager;
+import javax.net.ssl.X509TrustManager;
+import java.io.*;
+import java.net.URI;
+import java.nio.charset.Charset;
+import java.security.KeyManagementException;
+import java.security.NoSuchAlgorithmException;
+import java.security.cert.CertificateException;
+import java.security.cert.X509Certificate;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
 
 /**
  * Created by IntelliJ IDEA. User: YZC Date: 12-11-8 Time: 上午11:47 To change
@@ -277,10 +251,22 @@ public class HttpTool {
 
     public static HttpResp doInvokeMethod(HttpClient _client,
                                           HttpRequestBase method, String charset) throws Exception {
-        HttpResponse resp;
+        try {
+            return entityToResp(_client.execute(method), charset);
+        } catch (Exception e) {
+            throw e;
+        } finally {
+            method.releaseConnection();
+        }
+    }
+
+    public static HttpResp doInvokeMethodx(HttpClient _client,
+                                           HttpRequestBase method, String charset) throws Exception {
+        HttpResponse resp = null;
         HttpEntity entity = null;
         String html = null;
         int status = -1;
+
         try {
             resp = _client.execute(method);
             entity = resp.getEntity();
@@ -306,8 +292,19 @@ public class HttpTool {
             if (request.body != null)
                 post.setEntity(request.body);
             mt = post;
+        } else if ("put".equalsIgnoreCase(method)) {
+            HttpPut put = new HttpPut(url);
+            if (request.body != null)
+                put.setEntity(request.body);
+            mt = put;
+        } else if ("delete".equalsIgnoreCase(method)) {
+            mt = new HttpDelete(url);
         } else
             mt = new HttpGet(url);
+
+        if (logger.isInfoEnabled())
+            logger.info("Http request : " + mt);
+
         if (headers != null && (!headers.isEmpty())) {
             if (logger.isDebugEnabled())
                 logger.debug("Headers: " + headers);
@@ -488,6 +485,51 @@ public class HttpTool {
             instream.close();
         }
 
+    }
+
+    public static HttpResp entityToResp(HttpResponse response, String defaultCharset) throws IOException, ParseException {
+        HttpEntity entity = response.getEntity();
+        if (entity == null)
+            throw new IllegalArgumentException("HTTP entity may not be null");
+        InputStream inputStream = entity.getContent();
+        if (inputStream == null)
+            return null;
+        String html;
+        String type = "text/html";
+        int status = response.getStatusLine().getStatusCode();
+        try {
+            if (entity.getContentLength() > 2147483647L)
+                throw new IllegalArgumentException("HTTP entity too large to be buffered in memory");
+            int i = (int) entity.getContentLength();
+            if (i < 0)
+                i = 4096;
+            ContentType contentType = ContentType.getOrDefault(entity);
+            type = contentType.getMimeType();
+            Charset charset = contentType.getCharset();
+            if (charset == null) {
+                charset = Charset.forName(defaultCharset);
+            } else if (charset == GB2312)
+                charset = GBK;
+            if (charset == null) {
+                charset = HTTP.DEF_CONTENT_CHARSET;
+            }
+            Reader reader = new InputStreamReader(inputStream, charset);
+            CharArrayBuffer buffer = new CharArrayBuffer(i);
+            char[] tmp = new char[1024];
+            int l;
+            while ((l = reader.read(tmp)) != -1) {
+                buffer.append(tmp, 0, l);
+            }
+            html = buffer.toString();
+            IOUtils.closeQuietly(reader);
+        } finally {
+            IOUtils.closeQuietly(inputStream);
+            if (entity != null)
+                EntityUtils.consume(entity);
+        }
+        HttpResp resp = new HttpResp(status, html);
+        resp.setContentType(type);
+        return resp;
     }
 
     public static String entityToString(HttpEntity entity, String defaultCharset)

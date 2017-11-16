@@ -104,7 +104,7 @@ public class RtmpEncoder extends OProcess
 	public void addBuffer ( )
 	{
 
-		// System.out.println( System.currentTimeMillis() + " " + controller.client.id + " RtmpEncoder.addBuffer " );
+		// System.out.println( System.currentTimeMillis() + " " + web.client.id + " RtmpEncoder.addBuffer " );
 
 		buffer = ByteBuffer.allocate( Library.IOBUFFER );
 		bufferList.add( buffer );
@@ -119,7 +119,7 @@ public class RtmpEncoder extends OProcess
 	public void takePackets ( ArrayList < RtmpPacket > packetListX )
 	{
 
-		// System.out.println( System.currentTimeMillis() + " " + controller.client.id + " RtmpEncoder.getPAckets " );
+		// System.out.println( System.currentTimeMillis() + " " + web.client.id + " RtmpEncoder.getPAckets " );
 
 		for ( RtmpPacket packet : packetListX ) encode( packet );
 		packetListX.clear( );
@@ -148,7 +148,7 @@ public class RtmpEncoder extends OProcess
 	public void encode ( RtmpPacket packetX )
 	{
 		
-		// System.out.println( System.currentTimeMillis( ) + " " + controller.client.id + " RtmpEncoder.encode " + packetX );
+		// System.out.println( System.currentTimeMillis( ) + " " + web.client.id + " RtmpEncoder.encode " + packetX );
 		
 		// reset size
 
@@ -292,7 +292,7 @@ public class RtmpEncoder extends OProcess
 	public void step ( )
 	{
 		
-		//System.out.println( System.currentTimeMillis() + " " + controller.client.id + " RtmpEncoder.step " );
+		//System.out.println( System.currentTimeMillis() + " " + web.client.id + " RtmpEncoder.step " );
 		
 		if ( !bufferList.isEmpty( ) )
 		{
@@ -323,7 +323,7 @@ public class RtmpEncoder extends OProcess
 			catch ( IOException exception )
 			{
 				
-				// System.out.println( System.currentTimeMillis() + " " + controller.client.id + " EXCEPTION RtmpEncoder.step " +	exception.getMessage( ) );
+				// System.out.println( System.currentTimeMillis() + " " + web.client.id + " EXCEPTION RtmpEncoder.step " +	exception.getMessage( ) );
 
 				if ( !controller.closed ) controller.close( exception.getMessage( ) );
 				

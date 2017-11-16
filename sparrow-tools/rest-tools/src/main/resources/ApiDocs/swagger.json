@@ -1,0 +1,86 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "Agent端REST接口api文档",
+    "version": "v1",
+    "title": "Agent端REST服务文档",
+    "termsOfService": "http://www.github.com/kongchen/swagger-maven-plugin",
+    "contact": {
+      "name": "Agent Api Support",
+      "url": "http://www.unionbigdata.com",
+      "email": "yuanzhengchu@unionbigdata.com"
+    },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    }
+  },
+  "host": "127.0.0.1:8090",
+  "basePath": "/api",
+  "tags": [
+    {
+      "name": "Job Service"
+    }
+  ],
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "paths": {
+    "/api/job/{runningId}/{jobId}": {
+      "get": {
+        "tags": [
+          "Job Service"
+        ],
+        "summary": "{runningId}/{jobId}",
+        "description": "{runningId}/{jobId} Service Endpoint",
+        "operationId": "{runningId}/{jobId}",
+        "produces": [
+            "application/json;charset=utf-8"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "jobId",
+            "description": "jobId",
+            "required": true,
+            "schema": {
+              "type" : "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "runningId",
+            "description": "runningId",
+            "required": true,
+            "schema": {
+              "type" : "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "String text",
+            "schema": {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "SimpleRequest": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "sex": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

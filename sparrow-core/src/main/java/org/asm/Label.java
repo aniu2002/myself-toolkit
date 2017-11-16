@@ -432,12 +432,12 @@ public class Label {
 	}
 
 	/**
-	 * Returns true if this basic block and the given one belong to a common
+	 * Returns true if this basic block and the given one belong to a zk
 	 * subroutine.
 	 * 
 	 * @param block
 	 *            another basic block.
-	 * @return true if this basic block and the given one belong to a common
+	 * @return true if this basic block and the given one belong to a zk
 	 *         subroutine.
 	 */
 	boolean inSameSubroutine(final Label block) {

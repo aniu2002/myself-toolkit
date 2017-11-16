@@ -730,7 +730,7 @@ public class MultipartStream {
 
         /**
          * Constructs a <code>MalformedStreamException</code> with no
-         * detail message.
+         * detail services.
          */
         public MalformedStreamException() {
             super();
@@ -738,9 +738,9 @@ public class MultipartStream {
 
         /**
          * Constructs an <code>MalformedStreamException</code> with
-         * the specified detail message.
+         * the specified detail services.
          *
-         * @param message The detail message.
+         * @param message The detail services.
          */
         public MalformedStreamException(String message) {
             super(message);
@@ -760,7 +760,7 @@ public class MultipartStream {
 
         /**
          * Constructs an <code>IllegalBoundaryException</code> with no
-         * detail message.
+         * detail services.
          */
         public IllegalBoundaryException() {
             super();
@@ -768,9 +768,9 @@ public class MultipartStream {
 
         /**
          * Constructs an <code>IllegalBoundaryException</code> with
-         * the specified detail message.
+         * the specified detail services.
          *
-         * @param message The detail message.
+         * @param message The detail services.
          */
         public IllegalBoundaryException(String message) {
             super(message);

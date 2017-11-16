@@ -3,8 +3,6 @@ package com.sparrow.collect.crawler.httpclient.proxy;
 import com.sparrow.collect.crawler.httpclient.HttpResp;
 import com.sparrow.collect.crawler.httpclient.CrawlHttp;
 import com.sparrow.collect.crawler.httpclient.HttpReq;
-import org.apache.commons.lang3.StringUtils;
-import org.apache.http.HttpHost;
 import org.codehaus.jackson.map.ObjectMapper;
 
 import java.util.HashMap;
@@ -23,26 +21,8 @@ public class ProxyKit {
     private static final String baseProxyUrl = "http://proxy.tuan800-inc.com";
     static Map<String, Queue<ProxyInfo>> proxyMap = new HashMap<String, Queue<ProxyInfo>>();
     static Map<String, ProxyCacheBean> proxyBeanCache = new HashMap<String, ProxyCacheBean>();
-    static ProxyInfo DEFAULT_PROXY = new ProxyInfo("127.0.0.1", 1080);
 
     public static ProxyInfo getProxy(String ruleName) {
-        return DEFAULT_PROXY;
-    }
-
-    public static void setProxyHost(HttpReq req) {
-        setProxyHost(req, "r");
-    }
-
-    public static void setProxyHost(HttpReq req, String ruleName) {
-        ProxyInfo info = ProxyKit.getProxy(ruleName);
-        if (info == null || StringUtils.isEmpty(info.getIp()))
-            return;
-        HttpHost hcProxyHost = new HttpHost(info.getIp(), info.getPort());
-        logger.info(" **** Set proxy host : {}-{}", info.getIp(), info.getPort());
-        req.setProxyHost(hcProxyHost);
-    }
-
-    public static ProxyInfo getProxyForApi(String ruleName) {
         Queue<ProxyInfo> proxyQueue = getProxyQueueFromProxyMap(ruleName);
         int queueSize = proxyQueue.size();
         if (proxyQueue.isEmpty() || queueSize <= 10) {

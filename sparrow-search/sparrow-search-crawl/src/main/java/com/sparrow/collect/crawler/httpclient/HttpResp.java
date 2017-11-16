@@ -11,11 +11,13 @@ import java.util.Map;
  * To change this template use File | Settings | File Templates.
  */
 public class HttpResp {
+    public static final HttpResp DEFAULT = new HttpResp();
     URI host;
     Map<String, String> headers;
     String html;
     int status;
     String error;
+    String contentType;
 
     public HttpResp() {
         this(-1, null);
@@ -36,6 +38,14 @@ public class HttpResp {
         this.html = html;
         this.status = status;
         this.error = error;
+    }
+
+    public String getContentType() {
+        return contentType;
+    }
+
+    public void setContentType(String contentType) {
+        this.contentType = contentType;
     }
 
     public String getError() {

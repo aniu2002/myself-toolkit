@@ -1,7 +1,7 @@
 package ${packageName};
 
 import java.util.List;
-import com.sparrow.orm.page.PageResult;
+import com.sparrow.core.orm.page.PageResult;
 
 <#if (pojoIdType??)>import ${pojoIdType};</#if>
 import ${pojoClass};

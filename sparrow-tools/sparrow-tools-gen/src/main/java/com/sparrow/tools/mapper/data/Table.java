@@ -136,7 +136,7 @@ public class Table {
 		}
 	}
 
-	public Set<String> getImports() {
+	public Collection<String> getImports() {
 		return imports;
 	}
 

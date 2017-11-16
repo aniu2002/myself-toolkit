@@ -1409,7 +1409,7 @@ final class Frame {
 			} else if ((t & (DIM | BASE_KIND)) == (u & (DIM | BASE_KIND))) {
 				if ((u & BASE_KIND) == OBJECT) {
 					// if t is also a reference type, and if u and t have the
-					// same dimension merge(u,t) = dim(t) | common parent of the
+					// same dimension merge(u,t) = dim(t) | zk parent of the
 					// element types of u and t
 					v = (t & DIM) | OBJECT | cw.getMergedType(t & BASE_VALUE, u & BASE_VALUE);
 				} else {

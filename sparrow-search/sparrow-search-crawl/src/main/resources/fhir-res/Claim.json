@@ -1,0 +1,289 @@
+{
+  "resourceType": "Bundle",
+  "id": "3e7ea371-61a2-4dc4-8fd4-1306bc432418",
+  "meta": {
+    "lastUpdated": "2017-05-11T17:57:09.245+08:00"
+  },
+  "type": "searchset",
+  "total": 66406,
+  "link": [
+    {
+      "relation": "self",
+      "url": "http://10.10.15.38:8083/resources/Claim?_count=50"
+    },
+    {
+      "relation": "next",
+      "url": "http://10.10.15.38:8083/resources?_getpages=9938da0c-08f1-46fd-83b3-f524818b8e5e&_getpagesoffset=50&_count=50&_bundletype=searchset"
+    }
+  ],
+  "entry": [
+    {
+      "fullUrl": "http://10.10.15.38:8083/resources/Claim/3",
+      "resource": {
+        "resourceType": "Claim",
+        "id": "3",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2016-06-11T14:56:10.543+08:00"
+        },
+        "extension": [
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/invoice-id",
+            "valueString": "9"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/cancel-type",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/extension/cli-register-paymays",
+            "extension": [
+              {
+                "url": "http://www.nestvision.com/platform/app/data/v1/extension/cli-register-paymay",
+                "extension": [
+                  {
+                    "url": "urn:oid:2.16.156.10011.2.3.1.198",
+                    "valueCode": "2"
+                  },
+                  {
+                    "url": "http://www.nestvision.com/platform/app/data/v1/number/pay-amount",
+                    "valueDecimal": 2
+                  }
+                ]
+              },
+              {
+                "url": "http://www.nestvision.com/platform/app/data/v1/extension/cli-register-paymay",
+                "extension": [
+                  {
+                    "url": "urn:oid:2.16.156.10011.2.3.1.198",
+                    "valueCode": "3"
+                  }
+                ]
+              },
+              {
+                "url": "http://www.nestvision.com/platform/app/data/v1/extension/cli-register-paymay",
+                "extension": [
+                  {
+                    "url": "urn:oid:2.16.156.10011.2.3.1.198",
+                    "valueCode": "4"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "type": "professional",
+        "identifier": [
+          {
+            "system": "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-charges-id",
+            "value": "2001"
+          }
+        ],
+        "item": [
+          {
+            "extension": [
+              {
+                "url": "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+                "valueString": "6"
+              },
+              {
+                "url": "http://www.nestvision.com/platform/app/data/v1/identifier/recipe-id",
+                "valueString": "11"
+              },
+              {
+                "url": "http://www.nestvision.com/platform/app/data/v1/number/submit-ratio",
+                "valueDecimal": 1
+              },
+              {
+                "url": "http://www.nestvision.com/platform/app/data/v1/number/self-amount",
+                "valueDecimal": 2
+              }
+            ],
+            "sequence": 2,
+            "type": {
+              "system": "http://www.nestvision.com/platform/app/data/v1/code/acc-code",
+              "code": "3"
+            },
+            "service": {
+              "system": "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/item-code",
+              "code": "12345",
+              "display": "5"
+            },
+            "serviceModifier": [
+              {
+                "system": "http://www.nestvision.com/platform/app/data/v1/code/medicalins/item-code",
+                "code": "12"
+              }
+            ],
+            "modifier": [
+              {
+                "system": "http://www.nestvision.com/platform/app/data/v1/code/medicalins/medication-category",
+                "code": "0"
+              }
+            ],
+            "quantity": {
+              "value": 8,
+              "unit": "9",
+              "system": "http://www.nestvision.com/platform/app/data/v1/code/item-unit"
+            },
+            "unitPrice": {
+              "value": 7,
+              "unit": "人民币",
+              "system": "urn:iso:std:iso:4217",
+              "code": "CYN"
+            },
+            "net": {
+              "value": 10,
+              "unit": "人民币",
+              "system": "urn:iso:std:iso:4217",
+              "code": "CYN"
+            }
+          }
+        ],
+        "total": {
+          "value": 8,
+          "unit": "人民币元",
+          "system": "urn:iso:std:iso:4217",
+          "code": "CNY"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://10.10.15.38:8083/resources/Claim/4",
+      "resource": {
+        "resourceType": "Claim",
+        "id": "4",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2016-06-12T08:48:59.657+08:00"
+        },
+        "extension": [
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/invoice-id",
+            "valueString": "9"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/cancel-type",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/extension/cli-register-paymays",
+            "extension": [
+              {
+                "url": "http://www.nestvision.com/platform/app/data/v1/extension/cli-register-paymay",
+                "extension": [
+                  {
+                    "url": "urn:oid:2.16.156.10011.2.3.1.198",
+                    "valueCode": "2"
+                  },
+                  {
+                    "url": "http://www.nestvision.com/platform/app/data/v1/number/pay-amount",
+                    "valueDecimal": 2
+                  }
+                ]
+              },
+              {
+                "url": "http://www.nestvision.com/platform/app/data/v1/extension/cli-register-paymay",
+                "extension": [
+                  {
+                    "url": "urn:oid:2.16.156.10011.2.3.1.198",
+                    "valueCode": "3"
+                  }
+                ]
+              },
+              {
+                "url": "http://www.nestvision.com/platform/app/data/v1/extension/cli-register-paymay",
+                "extension": [
+                  {
+                    "url": "urn:oid:2.16.156.10011.2.3.1.198",
+                    "valueCode": "4"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "type": "professional",
+        "identifier": [
+          {
+            "system": "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-charges-id",
+            "value": "2001"
+          }
+        ],
+        "item": [
+          {
+            "extension": [
+              {
+                "url": "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+                "valueString": "6"
+              },
+              {
+                "url": "http://www.nestvision.com/platform/app/data/v1/identifier/recipe-id",
+                "valueString": "11"
+              },
+              {
+                "url": "http://www.nestvision.com/platform/app/data/v1/number/submit-ratio",
+                "valueDecimal": 1
+              },
+              {
+                "url": "http://www.nestvision.com/platform/app/data/v1/number/self-amount",
+                "valueDecimal": 2
+              }
+            ],
+            "sequence": 2,
+            "type": {
+              "system": "http://www.nestvision.com/platform/app/data/v1/code/acc-code",
+              "code": "3"
+            },
+            "service": {
+              "system": "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/item-code",
+              "code": "12345",
+              "display": "5"
+            },
+            "serviceModifier": [
+              {
+                "system": "http://www.nestvision.com/platform/app/data/v1/code/medicalins/item-code",
+                "code": "12"
+              }
+            ],
+            "modifier": [
+              {
+                "system": "http://www.nestvision.com/platform/app/data/v1/code/medicalins/medication-category",
+                "code": "0"
+              }
+            ],
+            "quantity": {
+              "value": 8,
+              "unit": "9",
+              "system": "http://www.nestvision.com/platform/app/data/v1/code/item-unit"
+            },
+            "unitPrice": {
+              "value": 7,
+              "unit": "人民币",
+              "system": "urn:iso:std:iso:4217",
+              "code": "CYN"
+            },
+            "net": {
+              "value": 10,
+              "unit": "人民币",
+              "system": "urn:iso:std:iso:4217",
+              "code": "CYN"
+            }
+          }
+        ],
+        "total": {
+          "value": 8,
+          "unit": "人民币元",
+          "system": "urn:iso:std:iso:4217",
+          "code": "CNY"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    }
+  ]
+}

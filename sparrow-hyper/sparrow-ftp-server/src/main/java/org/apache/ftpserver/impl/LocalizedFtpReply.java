@@ -289,7 +289,7 @@ public class LocalizedFtpReply extends DefaultFtpReply {
 			varVal = String.valueOf(code);
 		}
 
-		// output message
+		// output services
 		else if (varName.equals(OUTPUT_MSG)) {
 			varVal = basicMsg;
 		}

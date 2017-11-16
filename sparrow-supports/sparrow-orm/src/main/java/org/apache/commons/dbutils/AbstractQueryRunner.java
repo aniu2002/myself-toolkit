@@ -325,7 +325,7 @@ public abstract class AbstractQueryRunner {
     }
 
     /**
-     * Throws a new exception with a more informative error message.
+     * Throws a new exception with a more informative error services.
      *
      * @param cause
      *            The original exception that will be chained to the new

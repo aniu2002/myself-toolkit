@@ -1,7 +1,7 @@
 /**  
  * Project Name:http-server  
  * File Name:AnnotationController.java  
- * Package Name:com.sparrow.core.http.controller  
+ * Package Name:com.sparrow.core.http.web
  * Date:2014-1-3上午11:44:27  
  *  
  */
@@ -36,7 +36,7 @@ public class AnnotationController implements ActionController {
 
 	@Override
 	public void addControllerBean(ActionBeanConfig cfg) {
-		System.out.println("controller : " + cfg.getClaz());
+		System.out.println("web : " + cfg.getClaz());
 	}
 
 	@Override
@@ -55,8 +55,4 @@ public class AnnotationController implements ActionController {
 
 	}
 
-	@Override
-	public void setBeanConfig(String config) {
-
-	}
 }

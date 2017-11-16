@@ -145,7 +145,7 @@ public class DefaultFtpServerContext implements FtpServerContext {
     }
 
     /**
-     * Get message resource.
+     * Get services resource.
      */
     public MessageResource getMessageResource() {
         return messageResource;

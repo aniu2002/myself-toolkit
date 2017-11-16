@@ -80,14 +80,14 @@ public class GeneratorTool {
 
     public static void main(String args[]) {
         GeneratorTool gcd = new GeneratorTool();
-        gcd.setBasePath("D:\\workspace\\_code_src"); //SystemConfig.SOURCE_DIR
+        gcd.setBasePath("D:\\workspace\\_code"); //SystemConfig.SOURCE_DIR
         gcd.setModule("diaoyu");
         gcd.setLabel("钓鱼人");
         gcd.setPackPath("com.sparrow.collect.website.domain");
-        gcd.setDbConfig("classpath:conf/config4mysql.properties");
-        gcd.setMdConfig("classpath:conf/module.properties");
+        gcd.setDbConfig("classpath:config4mysql.properties");
+        gcd.setMdConfig("classpath:module.properties");
 
-        //FileUtil.clearSub(new File(gcd.getBasePath()));
+        FileUtil.clearSub(new File(gcd.getBasePath()));
 
         gcd.genPojo();
         gcd.genServiceCode();

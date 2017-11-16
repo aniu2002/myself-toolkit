@@ -9,17 +9,9 @@ public interface CrawlerNode {
 
     String text();
 
+    String html();
+
     String attr(String attributeKey);
 
-    void attr(String key, String val);
-
-    int childSize();
-
-    CrawlerNode childNode(int idx);
-
-    String nodeName();
-
-    CrawlerNode parent();
-
-    CrawlerNode next();
+    void attr(String key,String val);
 }

@@ -312,7 +312,7 @@ implements ActionListener, WindowListener, KeyListener {
                     "invalid argrument " + currentArg + " try:  java... "
                     + DatabaseManagerSwing.class.getName() + " --help");
 
-                // No reason to localize, since the main syntax message is
+                // No reason to localize, since the main syntax services is
                 // not localized.
             }
         }
@@ -365,7 +365,7 @@ implements ActionListener, WindowListener, KeyListener {
         System.out.println(
             "Usage: java DatabaseManager [--options]\n"
             + "where options include:\n"
-            + "    --help                show this message\n"
+            + "    --help                show this services\n"
             + "    --driver <classname>  jdbc driver class\n"
             + "    --url <name>          jdbc url\n"
             + "    --user <name>         username used for connection\n"

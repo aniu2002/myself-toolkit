@@ -100,7 +100,7 @@ public abstract class ConfigureHelper {
 
     private static void parseMsgConfig(Element root, DispatchConfig dispatchConfig) {
         Element element = root.element("messages");
-        Iterator<Element> iterator = element.elementIterator("message");
+        Iterator<Element> iterator = element.elementIterator("services");
         Element ele;
         String str;
         while (iterator.hasNext()) {

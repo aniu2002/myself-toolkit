@@ -125,14 +125,16 @@ public class CodeGeneratorEx {
         String module = "test";
         String moduleLabel = "报表后台管理";
 
+        String userHome = FileMnger.STORE_DIR;
+        String codePath = userHome.concat("/_tmp/src");
         // String bytePath = userHome.concat("/_tmp/target");
 
         CodeGeneratorEx codeGenerator = new CodeGeneratorEx();
-        codeGenerator.setBasePath("D:\\workspace\\_code\\sparrow-egg\\sparrow-web\\sparrow-myweb\\src\\main\\java");
-        codeGenerator.setPackageName("com.sparrow.app.information");
+        codeGenerator.setBasePath(codePath);
         codeGenerator.setProperty(properties);
         codeGenerator.setModuleName(module);
         codeGenerator.setModuleLabel(moduleLabel);
+        codeGenerator.setPackageName("com.dili.dd.cornucopia.bps");
         // codeGenerator.setTableFilter("test_*");
         // codeGenerator.setExcludeFilter("bt_*");
         codeGenerator.setLog(log);
@@ -147,7 +149,7 @@ public class CodeGeneratorEx {
                 String value = prop.getProperty(key);
                 if (log != null)
                     log.info("add module matcher : " + key + " - " + value);
-                matcher.addModule(key, value);
+                matcher.addModule(value, key);
             }
             codeGenerator.setMatcher(matcher);
         }

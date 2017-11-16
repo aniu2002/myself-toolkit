@@ -82,7 +82,7 @@ import org.apache.mina.core.write.WriteRequest;
  * 
  * By default, all event types but <tt>sessionCreated</tt>, <tt>filterWrite</tt>,
  * <tt>filterClose</tt> and <tt>filterSetTrafficMask</tt> are submitted to the
- * underlying executor, which is most common setting.
+ * underlying executor, which is most zk setting.
  * <p>
  * If you want to submit only a certain set of event types, you can specify them
  * in the constructor.  For example, you could configure a thread pool for

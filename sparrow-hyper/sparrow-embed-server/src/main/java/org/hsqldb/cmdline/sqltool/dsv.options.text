@@ -11,7 +11,7 @@ Here are the special commands to initiate DSV and CSV imports and exports.
                            eXport table or query to DSV text file (options \x?)
     \xq {TABLE|:[appendage]|SELECT...}   
                            Ditto, but writes traditional CSV double-quoting.
-Export commands must specify either a table name, a 1-line SQL query (with no
+Export commands must specify either a table title, a 1-line SQL query (with no
 terminating ';') , or ':'.  ':' means to use the last edit buffer, which you
 set up by entering a SQL query in raw mode, or interactively recall or edit a
 previous command.
@@ -44,7 +44,7 @@ Default value/behavior is in [square brackets].
     *DSV_SKIP_PREFIX   M     Comment line prefix in DSV files.  ["#"]
                              Set to "" (empty String) to disable commenting.
     *DSV_TARGET_FILE   X     File which exports will write to
-                              [source table name + ".dsv", or ".csv" for \xq]
+                              [source table title + ".dsv", or ".csv" for \xq]
     *DSV_TARGET_TABLE  M     Table which imports will write to
                               [DSV filename without extension]
     *DSV_TRIM_ALL      M     If set to "true", trim leading and trailing

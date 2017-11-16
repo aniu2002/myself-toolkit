@@ -1,57 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns:ivy="antlib:org.apache.ivy.ant" name="mmseg4j" default="dist">
+<project xmlns:ivy="antlib:org.apache.ivy.ant" title="mmseg4j" default="dist">
 
 	<property file="build.properties" />
-	<property name="project.name" value="${ant.project.name}" />
+	<property title="project.title" value="${ant.project.title}" />
 
-	<property name="src.java.dir" value="src" />
-	<property name="src.test.dir" value="test" />
-	<property name="build.dir" value="build" />
-	<property name="build.java.dir" value="build/classes/java" />
-	<property name="build.test.dir" value="build/classes/test" />
-	<property name="build.classes.dir" value="build/classes" />
-	<property name="extlib.dir" value="lib" />
+	<property title="src.java.dir" value="src" />
+	<property title="src.test.dir" value="test" />
+	<property title="build.dir" value="build" />
+	<property title="build.java.dir" value="build/classes/java" />
+	<property title="build.test.dir" value="build/classes/test" />
+	<property title="build.classes.dir" value="build/classes" />
+	<property title="extlib.dir" value="lib" />
 	
-	<property name="ivy.jar.dir" value="${basedir}/ivy" />
-	<property name="ivy.jar.file" value="${ivy.jar.dir}/ivy.jar" />
+	<property title="ivy.jar.dir" value="${basedir}/ivy" />
+	<property title="ivy.jar.file" value="${ivy.jar.dir}/ivy.jar" />
 
-	<property name="lib.dir" location="lib" />
+	<property title="lib.dir" location="lib" />
 	
 	<!-- 定义类路径 -->
 	<path id="compile.class.path">
 		<fileset dir="${lib.dir}/compile">
-			<include name="*.jar" />
+			<include title="*.jar" />
 		</fileset>
 	</path>
 
 	<path id="java.class.path">
 		<dirset dir="${build.java.dir}">
-			<include name="**" />
+			<include title="**" />
 		</dirset>
 	</path>
 	
-	<target name="resolve" description="--> retrieve dependencies with ivy" depends="install-ivy">
+	<target title="resolve" description="--> retrieve dependencies with ivy" depends="install-ivy">
 		<ivy:retrieve pattern="${lib.dir}/[conf]/[artifact]-[revision].[ext]" />
 	</target>
 
-	<target name="download-ivy" unless="skip.download">
+	<target title="download-ivy" unless="skip.download">
 		<mkdir dir="${ivy.jar.dir}" />
 		<echo message="installing ivy..." />
 		<get src="http://repo1.maven.org/maven2/org/apache/ivy/ivy/${ivy.install.version}/ivy-${ivy.install.version}.jar" dest="${ivy.jar.file}" usetimestamp="true" />
 	</target>
 
-	<target name="install-ivy" depends="download-ivy" description="--> install ivy">
+	<target title="install-ivy" depends="download-ivy" description="--> install ivy">
 		<path id="ivy.lib.path">
 			<fileset dir="${ivy.jar.dir}" includes="*.jar" />
 		</path>
 		<taskdef resource="org/apache/ivy/ant/antlib.xml" uri="antlib:org.apache.ivy.ant" classpathref="ivy.lib.path" />
 	</target>
 	
-	<target name="init" depends="resolve">
+	<target title="init" depends="resolve">
 		<mkdir dir="${build.java.dir}" />
 	</target>
 
-	<target name="compile.java" depends="init">
+	<target title="compile.java" depends="init">
 		<javac destdir="${build.java.dir}" 
 			debug="true" debuglevel="lines,source"
 			encoding="UTF-8" source="1.5" target="1.5">
@@ -60,122 +60,122 @@
 		</javac>
 	</target>
 
-	<target name="compile" depends="compile.java">
+	<target title="compile" depends="compile.java">
 	</target>
 
-	<target name="build.java" depends="compile.java">
+	<target title="build.java" depends="compile.java">
 		<copy todir="${build.java.dir}" preservelastmodified="true">
 			<fileset dir="${src.java.dir}">
-				<include name="**/*.*" />
-				<exclude name="**/*.java" />
+				<include title="**/*.*" />
+				<exclude title="**/*.java" />
 			</fileset>
 		</copy>
 		<copy file="data/chars.dic" todir="${build.java.dir}/data" preservelastmodified="true" />
 		<copy file="data/units.dic" todir="${build.java.dir}/data" preservelastmodified="true" />
 	</target>
 
-	<target name="dist" depends="build.java,jar,jar-with-dic,jar.core,jar.core-with-dic,jar.analysis,jar.solr" />
+	<target title="dist" depends="build.java,jar,jar-with-dic,jar.core,jar.core-with-dic,jar.analysis,jar.solr" />
 
-	<target name="jar" depends="build.java">
-		<jar destfile="${build.dir}/${project.name}-all-${version}.jar" basedir="${build.java.dir}" >
+	<target title="jar" depends="build.java">
+		<jar destfile="${build.dir}/${project.title}-all-${version}.jar" basedir="${build.java.dir}" >
 			<manifest>
-				<attribute name="Main-Class" value="com.chenlb.mmseg4j.example.Complex"/>
+				<attribute title="Main-Class" value="com.chenlb.mmseg4j.example.Complex"/>
 			</manifest>
 		</jar>
 	</target>
-	<target name="jar-with-dic" depends="build.java">
+	<target title="jar-with-dic" depends="build.java">
 		<copy file="data/words.dic" todir="${build.java.dir}/data" preservelastmodified="true" />
-		<jar destfile="${build.dir}/${project.name}-all-with-dic-${version}.jar" basedir="${build.java.dir}" >
+		<jar destfile="${build.dir}/${project.title}-all-with-dic-${version}.jar" basedir="${build.java.dir}" >
 			<manifest>
-				<attribute name="Main-Class" value="com.chenlb.mmseg4j.example.Complex"/>
+				<attribute title="Main-Class" value="com.chenlb.mmseg4j.example.Complex"/>
 			</manifest>
 		</jar>
 		<delete file="${build.java.dir}/data/words.dic" />
 	</target>
-	<target name="jar.core" depends="build.java">
-		<jar destfile="${build.dir}/${project.name}-core-${version}.jar" basedir="${build.java.dir}" >
+	<target title="jar.core" depends="build.java">
+		<jar destfile="${build.dir}/${project.title}-core-${version}.jar" basedir="${build.java.dir}" >
 			<manifest>
-				<attribute name="Main-Class" value="com.chenlb.mmseg4j.example.Complex"/>
+				<attribute title="Main-Class" value="com.chenlb.mmseg4j.example.Complex"/>
 			</manifest>
-			<exclude name="**/analysis/**"/>
-			<exclude name="**/solr/**"/>
+			<exclude title="**/analysis/**"/>
+			<exclude title="**/solr/**"/>
 		</jar>
 	</target>
-	<target name="jar.core-with-dic" depends="build.java">
+	<target title="jar.core-with-dic" depends="build.java">
 		<copy file="data/words.dic" todir="${build.java.dir}/data" preservelastmodified="true" />
-		<jar destfile="${build.dir}/${project.name}-core-with-dic-${version}.jar" basedir="${build.java.dir}" >
+		<jar destfile="${build.dir}/${project.title}-core-with-dic-${version}.jar" basedir="${build.java.dir}" >
 			<manifest>
-				<attribute name="Main-Class" value="com.chenlb.mmseg4j.example.Complex"/>
+				<attribute title="Main-Class" value="com.chenlb.mmseg4j.example.Complex"/>
 			</manifest>
-			<exclude name="**/analysis/**"/>
-			<exclude name="**/solr/**"/>
+			<exclude title="**/analysis/**"/>
+			<exclude title="**/solr/**"/>
 		</jar>
 		<delete file="${build.java.dir}/data/words.dic" />
 	</target>
-	<target name="jar.analysis" depends="build.java">
-		<jar destfile="${build.dir}/${project.name}-analysis-${version}.jar" basedir="${build.java.dir}" >
-			<include name="**/analysis/**"/>
+	<target title="jar.analysis" depends="build.java">
+		<jar destfile="${build.dir}/${project.title}-analysis-${version}.jar" basedir="${build.java.dir}" >
+			<include title="**/analysis/**"/>
 		</jar>
 	</target>
-	<target name="jar.solr" depends="build.java">
-		<jar destfile="${build.dir}/${project.name}-solr-${version}.jar" basedir="${build.java.dir}" >
-			<include name="**/solr/**"/>
+	<target title="jar.solr" depends="build.java">
+		<jar destfile="${build.dir}/${project.title}-solr-${version}.jar" basedir="${build.java.dir}" >
+			<include title="**/solr/**"/>
 		</jar>
 	</target>
-	<target name="zip" depends="dist">
-		<delete file="${build.dir}/${project.name}-${version}.zip"></delete>
+	<target title="zip" depends="dist">
+		<delete file="${build.dir}/${project.title}-${version}.zip"></delete>
 		<!--mkdir dir="temp-zip/lib"/-->
 		<copy todir="temp-zip/dist" preservelastmodified="true">
 			<fileset dir="${build.dir}">
-				<include name="${project.name}-*-${version}.jar"/>
-				<include name="${project.name}-core-with-dic-${version}.jar"/>
-				<exclude name="${project.name}-all-${version}.jar"/>
+				<include title="${project.title}-*-${version}.jar"/>
+				<include title="${project.title}-core-with-dic-${version}.jar"/>
+				<exclude title="${project.title}-all-${version}.jar"/>
 			</fileset>
 		<!--
 			<fileset dir="lib">
-				<include name="*.jar"/>
+				<include title="*.jar"/>
 			</fileset>
 		-->
 		</copy>
 		
 		<copy todir="temp-zip" preservelastmodified="true">
 			<fileset dir="${build.dir}">
-				<include name="${project.name}-all-${version}.jar"/>
-				<include name="${project.name}-all-with-dic-${version}.jar"/>
+				<include title="${project.title}-all-${version}.jar"/>
+				<include title="${project.title}-all-with-dic-${version}.jar"/>
 			</fileset>
 			<fileset dir="">
-				<include name="*.txt"/>
-				<include name="src/**"/>
-				<include name="test/**"/>
-				<include name="pom.xml"/>
-				<include name="mmseg4j-all/pom.xml"/>
-				<include name="mmseg4j-all-with-dic/pom.xml"/>
-				<include name="mmseg4j-analysis/pom.xml"/>
-				<include name="mmseg4j-core/pom.xml"/>
-				<include name="mmseg4j-core-with-dic/pom.xml"/>
-				<include name="mmseg4j-solr/pom.xml"/>
-				<!--include name="lib/**"/-->
-				<include name="data/*.dic"/>
-				<include name="build.properties"/>
-				<include name="build.xml"/>
-				<include name="ivy.xml"/>
+				<include title="*.txt"/>
+				<include title="src/**"/>
+				<include title="test/**"/>
+				<include title="pom.xml"/>
+				<include title="mmseg4j-all/pom.xml"/>
+				<include title="mmseg4j-all-with-dic/pom.xml"/>
+				<include title="mmseg4j-analysis/pom.xml"/>
+				<include title="mmseg4j-core/pom.xml"/>
+				<include title="mmseg4j-core-with-dic/pom.xml"/>
+				<include title="mmseg4j-solr/pom.xml"/>
+				<!--include title="lib/**"/-->
+				<include title="data/*.dic"/>
+				<include title="build.properties"/>
+				<include title="build.xml"/>
+				<include title="ivy.xml"/>
 			</fileset>
 		</copy>
-		<zip destfile="${build.dir}/${project.name}-${version}.zip" basedir="temp-zip">
+		<zip destfile="${build.dir}/${project.title}-${version}.zip" basedir="temp-zip">
 		</zip>
 		<delete dir="temp-zip"></delete>
 	</target>
-	<target name="clean">
+	<target title="clean">
 		<delete includeEmptyDirs="true">
 			<fileset dir="${build.classes.dir}">
-				<include name="**/*.class" />
+				<include title="**/*.class" />
 			</fileset>
 		</delete>
 	</target>
-	<target name="clean-all">
+	<target title="clean-all">
 		<delete includeEmptyDirs="true" failonerror="off">
 			<fileset dir="${build.dir}">
-				<include name="**/*.*"/>
+				<include title="**/*.*"/>
 			</fileset>
 			<fileset dir="${build.classes.dir}"></fileset>
 		</delete>

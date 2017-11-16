@@ -6,7 +6,7 @@ package com.sparrow.app.information.domain;
  *  ============================== <br/>
  *	选择: SELECT * FROM primary_school WHERE id=? <br/>
  *	统计: SELECT COUNT(1) FROM primary_school <br/>
- *	插入: INSERT INTO primary_school(id,open_id,name,phone,nick_name,sex,language,city,province,country,head_image) VALUES(:id,:openId,:name,:phone,:nickName,:sex,:language,:city,:province,:country,:headImage) <br/>
+ *	插入: INSERT INTO primary_school(open_id,name,phone,nick_name,sex,language,city,province,country,head_image) VALUES(:openId,:name,:phone,:nickName,:sex,:language,:city,:province,:country,:headImage) <br/>
  *	更新: UPDATE primary_school SET open_id=:openId,name=:name,phone=:phone,nick_name=:nickName,sex=:sex,language=:language,city=:city,province=:province,country=:country,head_image=:headImage WHERE id=:id <br/>
  *	删除: DELETE FROM primary_school WHERE id=? <br/>
  *  ============================== <br/>

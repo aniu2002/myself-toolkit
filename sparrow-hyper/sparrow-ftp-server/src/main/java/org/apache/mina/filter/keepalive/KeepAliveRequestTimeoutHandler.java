@@ -24,7 +24,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * Tells {@link KeepAliveFilter} what to do when a keep-alive response message
+ * Tells {@link KeepAliveFilter} what to do when a keep-alive response services
  * was not received within a certain timeout.
  *
  * @author <a href="http://mina.apache.org">Apache MINA Project</a>
@@ -41,7 +41,7 @@ public interface KeepAliveRequestTimeoutHandler {
     };
 
     /**
-     * Logs a warning message, but doesn't do anything else.
+     * Logs a warning services, but doesn't do anything else.
      */
     static KeepAliveRequestTimeoutHandler LOG = new KeepAliveRequestTimeoutHandler() {
         private final Logger LOGGER =
@@ -49,7 +49,7 @@ public interface KeepAliveRequestTimeoutHandler {
 
         public void keepAliveRequestTimedOut(
                 KeepAliveFilter filter, IoSession session) throws Exception {
-            LOGGER.warn("A keep-alive response message was not received within " +
+            LOGGER.warn("A keep-alive response services was not received within " +
                     "{} second(s).", filter.getRequestTimeout());
         }
     };
@@ -61,7 +61,7 @@ public interface KeepAliveRequestTimeoutHandler {
         public void keepAliveRequestTimedOut(
                 KeepAliveFilter filter, IoSession session) throws Exception {
             throw new KeepAliveRequestTimeoutException(
-                    "A keep-alive response message was not received within " +
+                    "A keep-alive response services was not received within " +
                     filter.getRequestTimeout() + " second(s).");
         }
     };
@@ -76,7 +76,7 @@ public interface KeepAliveRequestTimeoutHandler {
         public void keepAliveRequestTimedOut(
                 KeepAliveFilter filter, IoSession session) throws Exception {
             LOGGER.warn("Closing the session because a keep-alive response " +
-                    "message was not received within {} second(s).",
+                    "services was not received within {} second(s).",
                     filter.getRequestTimeout());
             session.close(true);
         }
@@ -94,7 +94,7 @@ public interface KeepAliveRequestTimeoutHandler {
 
     /**
      * Invoked when {@link KeepAliveFilter} couldn't receive the response for
-     * the sent keep alive message.
+     * the sent keep alive services.
      */
     void keepAliveRequestTimedOut(KeepAliveFilter filter, IoSession session) throws Exception;
 }

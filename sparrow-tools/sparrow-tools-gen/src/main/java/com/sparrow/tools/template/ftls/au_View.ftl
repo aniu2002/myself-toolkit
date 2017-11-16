@@ -21,7 +21,7 @@
         var columns=[
           'x',
           ${gridItems},
-          {name:'op',label:'操作',width:'90',align:'left',render:function(v,data){
+          {title:'op',label:'操作',width:'90',align:'left',render:function(v,data){
         	  v=data.id;
         	  var s='<a href="/cmd/${subModule}/${restRoot}?_t=et&id='+v+'">编辑</a>&nbsp;<a href="#" onclick="delRow('+v+')">删除</a>';
         	  return s;

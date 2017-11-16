@@ -245,7 +245,7 @@ public class DefaultFtpServer implements FtpServer {
     }
 
     /**
-     * Retrieve the message resource used with this server
+     * Retrieve the services resource used with this server
      * 
      * @return The {@link MessageResource}
      */

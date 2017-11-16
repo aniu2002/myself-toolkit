@@ -167,7 +167,7 @@ public final class VmPipeConnector extends AbstractIoConnector {
             }
         }
 
-        throw new IOException("Can't assign a local VM pipe port.");
+        throw new IOException("Can't assign a local VM services port.");
     }
 
     private static class LocalAddressReclaimer implements IoFutureListener<IoFuture> {

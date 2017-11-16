@@ -20,16 +20,16 @@
     <script type="text/javascript">
         <!--
         var columns=[
-            {name:'name',id:'provider',label:'名称',readOnly:true},
-            {name:'desc',id:'description',label:'描述'},
-            {name:'source',id:'source',label:'资源',editor:'select',vtype:'required',src:"srcCfg-${app}",max:32},
-            {name:'type',label:'类型',editor:'select',vtype:'required',src:"providerTypes",max:32},
-            {name:'script',label:'执行脚本',colspan:2,editor:'textarea',vtype:'required',width:700,height:100}
+            {title:'title',id:'provider',label:'名称',readOnly:true},
+            {title:'desc',id:'description',label:'描述'},
+            {title:'source',id:'source',label:'资源',editor:'select',vtype:'required',src:"srcCfg-${app}",max:32},
+            {title:'type',label:'类型',editor:'select',vtype:'required',src:"providerTypes",max:32},
+            {title:'script',label:'执行脚本',colspan:2,editor:'textarea',vtype:'required',width:700,height:100}
 	    ];
         var _url='/cmd/sys/provider?app=${app}';
         var _baseUrl='http://127.0.0.1:9081/app';
         var _imgRoot='http://127.0.0.1:9081/img';
-        var _name = '${name}';
+        var _name = '${title}';
         var _app = '${app}';
         var _dlg;
 
@@ -68,7 +68,7 @@
 //                self.location='/cmd/sys/pdc?_t=gp&provider='+pd+'&source='+ds+'&label='+label+'&app='+_app;
 //            };
             _dlg.draw();
-            Common.get('/cmd/sys/provider' , {_t:'dp',app:_app,name:_name}, function(data) {
+            Common.get('/cmd/sys/provider' , {_t:'dp',app:_app,title:_name}, function(data) {
                 _dlg.render(data);
                 _dlg.endDraw();
             });

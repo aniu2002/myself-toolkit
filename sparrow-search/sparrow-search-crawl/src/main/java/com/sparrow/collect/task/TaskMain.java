@@ -14,7 +14,6 @@ public class TaskMain {
         TASK_MAP.put("configure", "com.sparrow.collect.task.special.ConfigureTask");
         TASK_MAP.put("multi", "com.sparrow.collect.task.special.MultiEntryCrawlerTask");
         TASK_MAP.put("scope", "com.sparrow.collect.task.special.ScopeCrawlerTask");
-        TASK_MAP.put("gifx", "com.sparrow.collect.task.gif.GifExtTask");
     }
 
 
@@ -24,7 +23,7 @@ public class TaskMain {
     public static void main(String[] args) {
         // start("crawler");
         long time = System.currentTimeMillis();
-        start("gif");
+        start("site");
         time = System.currentTimeMillis() - time;
         System.out.println(String.format("cost : %s s", time / 1000));
     }

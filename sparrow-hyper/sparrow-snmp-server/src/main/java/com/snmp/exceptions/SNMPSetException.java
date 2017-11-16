@@ -48,7 +48,7 @@ public class SNMPSetException extends SNMPRequestException
     */
     
     /**
-    *    Create exception with message string.
+    *    Create exception with services string.
     */
     /*
     public SNMPSetException(String s)
@@ -68,7 +68,7 @@ public class SNMPSetException extends SNMPRequestException
     
     
     /**
-    *    Create exception with errorIndex, errorStatus and message string
+    *    Create exception with errorIndex, errorStatus and services string
     */
     
     public SNMPSetException(String message, int errorIndex, int errorStatus)

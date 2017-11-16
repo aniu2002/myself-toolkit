@@ -37,6 +37,10 @@ public class CrawlKit {
                 retry);
     }
 
+    public HttpResp getHtml(String url) {
+        return this.executeExt(url, "GET", null, CrawlHttp.headers, CrawlHttp.UTF8, false, 1);
+    }
+
     public HttpResp getHtml(String url, Map<String, String> params,
                             Map<String, String> headers, String encode, boolean useProxy) {
         return this.executeExt(url, "GET", params, headers, encode, useProxy, 1);
@@ -47,6 +51,75 @@ public class CrawlKit {
                           int retry) {
         return this.execute(url, "POST", param, headers, encode, useProxy,
                 retry);
+    }
+
+    public HttpResp get(String url) {
+        return this.get(url, null);
+    }
+
+    public HttpResp get(String url, String paraStr) {
+        return this.get(url, paraStr, null);
+    }
+
+    public HttpResp get(String url, String paraStr, String contentType) {
+        return this.execute(url, CrawlHttp.GET, paraStr, contentType);
+    }
+
+    public HttpResp post(String url) {
+        return this.post(url, null);
+    }
+
+    public HttpResp post(String url, String body) {
+        return this.post(url, body, CrawlHttp.JSON_ENCODING);
+    }
+
+    public HttpResp post(String url, String body, String contentType) {
+        return this.execute(url, CrawlHttp.POST, body, contentType);
+    }
+
+    public HttpResp put(String url) {
+        return this.put(url, null);
+    }
+
+    public HttpResp put(String url, String body) {
+        return this.put(url, body, CrawlHttp.JSON_ENCODING);
+    }
+
+    public HttpResp put(String url, String body, String contentType) {
+        return this.execute(url, CrawlHttp.PUT, body, contentType);
+    }
+
+    public HttpResp delete(String url) {
+        return this.delete(url, null);
+    }
+
+    HttpResp delete(String url, String body) {
+        return this.delete(url, body, null);
+    }
+
+    HttpResp delete(String url, String body, String contentType) {
+        return this.execute(url, CrawlHttp.DELETE, body, contentType);
+    }
+
+    public HttpResp execute(String url, String method, String body, String contentType) {
+        CrawlHttp http = new CrawlHttp();
+        HttpReq request = new HttpReq(url, method, CrawlHttp.UTF8, CrawlHttp.headers);
+        if (StringUtils.isNotEmpty(body)) {
+            if (StringUtils.isEmpty(contentType))
+                request.setParaStr(body);
+            else
+                request.setBody(body, contentType);
+        }
+        HttpResp resp = HttpResp.DEFAULT;
+        try {
+            resp = doExecute(http, request, false, 1);
+            if (resp.status == 200) {
+                return resp;
+            }
+        } catch (Exception e) {
+            logger.error("{}", e.getMessage());
+        }
+        return resp;
     }
 
     public ByteArrayOutputStream image3(String imageUrl, boolean useProxy,
@@ -77,20 +150,6 @@ public class CrawlKit {
 
     public boolean saveStream(String url, File file) {
         return this.saveStream(url, file, null);
-    }
-
-    public boolean saveStream(String imageUrl, File file, Map<String, String> headers, boolean useProxy) {
-        CrawlHttp http = new CrawlHttp(true, true);
-        HttpReq request = new HttpReq(imageUrl, headers);
-        boolean proxy = useProxy;
-        if (imageUrl.indexOf("sinaimg.cn") != -1)
-            proxy = false;
-        if (proxy)
-            ProxyKit.setProxyHost(request);
-        boolean fg = http.downloadStream(request, file);
-        if (!fg)
-            file.delete();
-        return fg;
     }
 
     public boolean saveStream(String imageUrl, File file, Map<String, String> headers) {
@@ -164,7 +223,7 @@ public class CrawlKit {
         // set request parameters ,while post method will invoke setBody method
         // set formed submit
         request.setParaStr(param);
-        HttpResp resp = null;
+        HttpResp resp = HttpResp.DEFAULT;
         try {
             resp = doExecute(http, request, useProxy, retry);
             if (resp.status == 200) {
@@ -172,66 +231,52 @@ public class CrawlKit {
             }
         } catch (Exception e) {
             logger.error("{}", e.getMessage());
-            if (resp == null)
-                resp = new HttpResp();
-            resp.status = 0;
-            resp.html = null;
         }
         return resp;
     }
 
     private HttpResp doExecute(CrawlHttp http, HttpReq request,
-                               boolean useProxy, int ret) throws Exception {
-        HttpResp resp;
-        int count = ret;
-        int retry = ret + 1;
+                               boolean useProxy, int retry) throws Exception {
+        HttpResp resp = HttpResp.DEFAULT;
+        int count = retry;
         boolean needRetry = true;
 
-        do {
+        while (needRetry && retry > 0) {
             try {
                 boolean useProxyTmp = useProxy;
-                if (retry > 0 && retry % 2 == 0)
+                if (retry > 0 && retry % 10 == 0)
                     useProxyTmp = false;
                 if (useProxyTmp) {
-                    ProxyKit.setProxyHost(request, proxyRuleName);
-                } else if (useProxy) {
+                    ProxyInfo proxyInfo = ProxyKit.getProxy(proxyRuleName);
+                    if (proxyInfo != null
+                            && StringUtils.isNotBlank(proxyInfo.getIp())) {
+                        HttpHost hcProxyHost = new HttpHost(proxyInfo.getIp(),
+                                proxyInfo.getPort());
+                        request.setProxyHost(hcProxyHost);
+                    }
+                } else if (useProxy)
                     request.setProxyHost(null);
-                }
                 resp = http.execute(request);
                 if (resp.status == 200) {
                     needRetry = false;
                     return resp;
                 } else {
                     int status = resp.getStatus();
-                    if (retry > 0)
-                        logger.error("Retry : {} {}", status, request.url);
-                    else
-                        logger.error("Resp : {} {}", status, request.url);
                     retry -= 1;
+                    //Thread.sleep
+                    // if(status==404)
+                    // logger.info("Retry: {} {}", status, request.url);
                 }
             } catch (ConnectTimeoutException e) {
-                if (retry > 0)
-                    logger.error("Timeout Retry:" + request.url);
-                else
-                    logger.error("Timeout:" + request.url);
+                logger.error("Retry:" + request.url + ", - " + e.getMessage());
                 retry -= 1;
-                resp = new HttpResp(-1, null, e.getMessage());
             } catch (IOException e) {
-                if (retry > 0)
-                    logger.error("IO Failed Retry:" + request.url + ", - " + e.getMessage());
-                else
-                    logger.error("IO Failed:" + request.url);
+                logger.error("Retry:" + request.url + ", - " + e.getMessage());
                 retry -= 1;
-                resp = new HttpResp(-1, null, e.getMessage());
             }
-        } while (needRetry && retry > 0);
-
-        if (retry == 1)
-            return resp;
-        if (count > 1 && resp == null)
-            throw new Exception("Failure: retry " + count + " times, URL:" + request.url);
-        else
-            return resp;
+        }
+        return resp;
+        //throw new Exception("Failure: retry " + count + " times, URL:" + request.url);
     }
 
     public static void main(String args[]) {

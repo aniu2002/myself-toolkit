@@ -32,15 +32,12 @@ public class SingleAppStarter extends Thread {
                 .append(" -Dprovider.store.path=").append(this.appHome + "/conf/data-provider.xml")
                 .append(" -Dsource.config.path=").append(this.appHome + "/conf/source-config.xml")
                 .append(" -Dapp.name=").append(this.appName)
-                .append(" -Duse.system.props=true")
-                .append(" -Dsecurity.enable=true")
-                .append(" -Dadmin.pwd=123456")
                 .append(" -Dconsole.host=").append(SystemConfig.getProperty("web.server.host",
                 "127.0.0.1"))
                 .append(" -Dconsole.port=").append(SystemConfig.getSysInt("web.server.port", 9097))
                 .append(" -Dapp.home=").append(this.appHome);
 
-        this.exec(this.appName, this.appHome, "com.sparrow.server.WebCmdServer", sb.toString(), null);
+        this.exec(this.appName, this.appHome, "com.sparrow.boot.WebCmdServer", sb.toString(), null);
     }
 
     public void stopNow() {

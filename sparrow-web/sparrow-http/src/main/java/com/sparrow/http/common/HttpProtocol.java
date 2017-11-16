@@ -1,7 +1,7 @@
 /**  
  * Project Name:http-server  
  * File Name:HttpdProtocol.java  
- * Package Name:com.sparrow.core.http.common  
+ * Package Name:com.sparrow.core.http.zk
  * Date:2014-1-3上午10:45:46  
  * Copyright (c) 2014, Boco.com All Rights Reserved.  
  *  

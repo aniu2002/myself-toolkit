@@ -35,7 +35,7 @@ public class MsgFormat {
         char c;
         int i = 0, ns = 0, rl, st;
 
-        String key, value;
+        String key = null, value;
         StringBuilder sb = new StringBuilder();
         while (i < len) {
             c = ar[i];

@@ -18,10 +18,10 @@ Resolve PL variable values, which MAY have been set, like: *{:VARNAME}.
 SqlTool reserves variables with names beginning with * for special purposes.
  These are called SqlTool system variables.  Variables beginning with a
  letter and followed by zero or more letters, digits, or _, are 'user' vars.
-Resolve System Property values (which you may not set) like: ${property.name}.
+Resolve System Property values (which you may not set) like: ${property.title}.
 Resolve PL variables in logical expressions, like (*VARNAME == 1).  [No curlies]
-When purposefully telling SqlTool a variable's "name", like to make an
- assignment, write just the name like:  VARNAME = 1.  [Bare names]
+When purposefully telling SqlTool a variable's "title", like to make an
+ assignment, write just the title like:  VARNAME = 1.  [Bare names]
 Use PL vars in math expressions, like ((NEWVAR = VARNAME * 3)).  [Bare names]
 Auto. variable ? is set to the very latest SQL datum fetched (or update count).
     Query:  The value of the last field of the last row returned.

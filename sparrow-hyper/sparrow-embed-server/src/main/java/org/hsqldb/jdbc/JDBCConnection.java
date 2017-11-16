@@ -281,7 +281,7 @@ import org.hsqldb.types.Type;
  * </div> <p>
  *
  * For the persistent, in-process database connection <b>&lt;url&gt;</b>,
- * the <b>&lt;path&gt;</b> component is the path prefix common to all of
+ * the <b>&lt;path&gt;</b> component is the path prefix zk to all of
  * the files that compose the database. <p>
  *
  * From 1.7.2, although other files may be involved (such as transient working
@@ -396,7 +396,7 @@ import org.hsqldb.types.Type;
  * <tt>Locale.ENGLISH</tt> mixed case paths. The rationale for converting to
  * lower case is that not all pkzip implementations guarantee path case is
  * preserved when archiving resources, and conversion to lower case seems to
- * be the most common occurrence (although there is also no actual guarantee
+ * be the most zk occurrence (although there is also no actual guarantee
  * that the conversion is <tt>Locale.ENGLISH</tt>).<p>
  *
  * More importantly, <b>res:</b> <b>'&lt;path&gt;'</b> components <em>must</em>

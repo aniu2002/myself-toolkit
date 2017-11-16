@@ -65,7 +65,7 @@ public class Stream {
 	private StreamPlayer player;
 	private StreamReader reader;
 
-	// remote client's controller
+	// remote client's web
 
 	public ClientController client;
 

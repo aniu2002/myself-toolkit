@@ -19,17 +19,17 @@
     <script type="text/javascript" src="/app/js/common/crud-grid.js"></script>
     <script type="text/javascript">
         var columns=[
-          {name:'id',label:'ID',width:'30',render:'_idx',hidden:true,noe:true},
-          {name:'openId',label:'唯一号',editor:'text',vtype:'required',max:36},
-          {name:'name',label:'姓名',editor:'text',vtype:'required',max:36},
-          {name:'phone',label:'电话',editor:'text',vtype:'required',max:32},
-          {name:'nickName',label:'昵称',editor:'text',vtype:'required',max:36},
-          {name:'sex',label:'性别',render:'number',editor:'text',vtype:'required',max:11},
-          {name:'language',label:'语言',editor:'text',vtype:'required',max:8},
-          {name:'city',label:'城市',editor:'text',vtype:'required',max:36},
-          {name:'province',label:'省份',editor:'text',vtype:'required',max:36},
-          {name:'country',label:'国家',editor:'text',vtype:'required',max:36},
-          {name:'headImage',label:'头像',render:'img',editor:'text',vtype:'required',max:256}
+          {title:'id',label:'ID',width:'30',render:'_idx',hidden:true,noe:true},
+          {title:'openId',label:'唯一号',editor:'text',vtype:'required',max:36},
+          {title:'title',label:'姓名',editor:'text',vtype:'required',max:36},
+          {title:'phone',label:'电话',editor:'text',vtype:'required',max:32},
+          {title:'nickName',label:'昵称',editor:'text',vtype:'required',max:36},
+          {title:'sex',label:'性别',render:'number',editor:'text',vtype:'required',max:11},
+          {title:'language',label:'语言',editor:'text',vtype:'required',max:8},
+          {title:'city',label:'城市',editor:'text',vtype:'required',max:36},
+          {title:'province',label:'省份',editor:'text',vtype:'required',max:36},
+          {title:'country',label:'国家',editor:'text',vtype:'required',max:36},
+          {title:'headImage',label:'头像',render:'img',editor:'text',vtype:'required',max:256}
 	    ];
 	    var _id = '${id}';
         var _url='/cmd/primary/primary_school?_t=da&id='+id;

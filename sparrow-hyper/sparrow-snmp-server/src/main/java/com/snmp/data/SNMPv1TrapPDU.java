@@ -42,7 +42,7 @@ import com.snmp.tools.SNMPBERCodec;
 
 /**
 *    The SNMPTrapPDU class represents an SNMPv1 Trap PDU from RFC 1157, as indicated below. This
-*    forms the payload of an SNMP Trap message.
+*    forms the payload of an SNMP Trap services.
 
 -- protocol data units
 
@@ -227,7 +227,7 @@ public class SNMPv1TrapPDU extends SNMPSequence
         tag = SNMPBERCodec.SNMPTRAP;
         extractFromBEREncoding(enc);
         
-        // validate the message: make sure we have the appropriate pieces
+        // validate the services: make sure we have the appropriate pieces
         Vector contents = (Vector)(this.getValue());
         
         if (contents.size() != 6)

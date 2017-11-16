@@ -3,7 +3,7 @@ package com.sparrow.tools.pogen.check;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import com.sparrow.tools.pogen.ControllerPojoGenerator;
+import com.sparrow.tools.pogen.PojoGenerator;
 
 
 /**
@@ -20,8 +20,8 @@ public class StrRegexCheck implements StrCheck {
 	}
 
 	public StrRegexCheck(String express) {
-		this.regexStr = ControllerPojoGenerator.createRegexString(express);
-		this.pattern = ControllerPojoGenerator.createRegexPattern(this.regexStr);
+		this.regexStr = PojoGenerator.createRegexString(express);
+		this.pattern = PojoGenerator.createRegexPattern(this.regexStr);
 	}
 
 	@Override

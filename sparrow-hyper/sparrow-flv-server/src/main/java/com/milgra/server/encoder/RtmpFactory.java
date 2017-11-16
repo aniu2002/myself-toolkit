@@ -99,7 +99,7 @@ public class RtmpFactory
 	
 	/**
 	 * Creates a stream control packet
-	 * @param typeX type of message
+	 * @param typeX type of services
 	 * @param idX stream id
 	 * @return packet
 	 */
@@ -196,7 +196,7 @@ public class RtmpFactory
 		RtmpPacket packet = new RtmpPacket( );
 		WrapperList arguments = new WrapperList( );
 		
-		// fill up sample packet message arguments
+		// fill up sample packet services arguments
 		
 		arguments.add( "|RtmpSampleAccess" );
 		arguments.add( audioX );
@@ -251,7 +251,7 @@ public class RtmpFactory
 	}
 	
 	/**
-	 * Creates a play stop message
+	 * Creates a play stop services
 	 * @param streamIdX
 	 * @param streamNameX
 	 * @return

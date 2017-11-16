@@ -28,20 +28,20 @@
 
         var columns = [
 
-             {name: 'name', label: '账号', editor: 'text',vtype:'required max', max: 50, colspan: 2, disabled: true},
-             {name: 'tel', label: '手机号', editor: 'text', vtype: 'max', max: 32, colspan: 2, disabled: true},
-             {name: 'real_name', label: '姓名', editor: 'text', vtype: 'required max', max: 32, colspan: 2, disabled: true},
-             {name: 'mail', label: '邮箱', editor: 'text', vtype: 'max', max: 200, colspan: 2, disabled: true},
-             {name: 'department', label: '部门', editor: 'text', vtype: 'max', max: 20, colspan: 2},
-             {name: 'status', label: '状态', id: 'status', editor: 'radiogroup', values: '1_启用,0_禁用', vtype: 'required', max: 3},
-             {name: 'roleSel', id: 'roleSel', label: '角色', colspan: 2, editor: 'btnTxtEx', btnTitle: '选择',
+             {title: 'title', label: '账号', editor: 'text',vtype:'required max', max: 50, colspan: 2, disabled: true},
+             {title: 'tel', label: '手机号', editor: 'text', vtype: 'max', max: 32, colspan: 2, disabled: true},
+             {title: 'real_name', label: '姓名', editor: 'text', vtype: 'required max', max: 32, colspan: 2, disabled: true},
+             {title: 'mail', label: '邮箱', editor: 'text', vtype: 'max', max: 200, colspan: 2, disabled: true},
+             {title: 'department', label: '部门', editor: 'text', vtype: 'max', max: 20, colspan: 2},
+             {title: 'status', label: '状态', id: 'status', editor: 'radiogroup', values: '1_启用,0_禁用', vtype: 'required', max: 3},
+             {title: 'roleSel', id: 'roleSel', label: '角色', colspan: 2, editor: 'btnTxtEx', btnTitle: '选择',
                        onSet: function (e, gxt) {
                         _$UIRole.grid.setDefVal(roleArray);
                        	_$UIRole.grid.reload();
                        	_$PopRole.show();
                        }
              },
-             {name: 'tagSel', id: 'tagSel', label: '市场标签', colspan: 2, editor: 'btnTxtEx', btnTitle: '选择',
+             {title: 'tagSel', id: 'tagSel', label: '市场标签', colspan: 2, editor: 'btnTxtEx', btnTitle: '选择',
                        onSet: function (e, gxt) {
                         _$UITag.grid.setDefVal(tagArray);
                        	_$UITag.grid.reload();
@@ -52,18 +52,18 @@
                
         var columnRoles = [
               'x',
-               {name: 'id', label: 'ID', render: '_idx', hidden: true, noe: true},
-               {name: 'name', label: '角色名', vtype: 'required max', search: true, max: 50},
-               {name: 'description', label: '角色描述', vtype: 'required max',  max: 200},
-               {name: 'app_id', label: '应用系统', render: '$', editor: 'select', src: 'business', search: true, max: 4 }
+               {title: 'id', label: 'ID', render: '_idx', hidden: true, noe: true},
+               {title: 'title', label: '角色名', vtype: 'required max', search: true, max: 50},
+               {title: 'description', label: '角色描述', vtype: 'required max',  max: 200},
+               {title: 'app_id', label: '应用系统', render: '$', editor: 'select', src: 'business', search: true, max: 4 }
         ];
                
         var columnTags = [
               'x',
-                {name: 'id', label: 'ID', render: '_idx', hidden: true, noe: true},
-                {name: 'name', label: '标签名', vtype: 'required max', search: true, max:50},
-                {name: 'tag', label: '标签内容', vtype: 'required max', max: 50},
-                {name: 'app_id', label: '业务系统', render: '$', editor: 'select', src: 'business', search: true, max: 19}
+                {title: 'id', label: 'ID', render: '_idx', hidden: true, noe: true},
+                {title: 'title', label: '标签名', vtype: 'required max', search: true, max:50},
+                {title: 'tag', label: '标签内容', vtype: 'required max', max: 50},
+                {title: 'app_id', label: '业务系统', render: '$', editor: 'select', src: 'business', search: true, max: 19}
         ];
 
         var _url = '/cmd/bps/user';
@@ -160,7 +160,7 @@
                 data.department=fields.department;
                 data.real_name=fields.real_name; 
                 data.tel=fields.tel; 
-                data.name=fields.name;
+                data.title=fields.title;
                 data.status = status;
                 data.id = _id;
                 data.uid= _uid;

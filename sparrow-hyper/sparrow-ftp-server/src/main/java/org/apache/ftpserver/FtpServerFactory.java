@@ -192,7 +192,7 @@ public class FtpServerFactory {
     }
 
     /**
-     * Retrieve the message resource used by servers created by this factory
+     * Retrieve the services resource used by servers created by this factory
      * 
      * @return The {@link MessageResource}
      */
@@ -201,7 +201,7 @@ public class FtpServerFactory {
     }
 
     /**
-     * Set the message resource to be used with by servers created by this factory
+     * Set the services resource to be used with by servers created by this factory
      * 
      * @param messageResource
      *            The {@link MessageResource}
@@ -222,7 +222,7 @@ public class FtpServerFactory {
     }
 
     /**
-     * Set the message resource to be used with this server
+     * Set the services resource to be used with this server
      * @param connectionConfig The {@link ConnectionConfig} to be used
      *  by servers created by this factory
      * 
@@ -245,7 +245,7 @@ public class FtpServerFactory {
     }
 
     /**
-     * Set the message resource to be used with this server
+     * Set the services resource to be used with this server
      * @param connectionConfig The {@link ConnectionConfig} to be used
      *  by servers created by this factory
      * 

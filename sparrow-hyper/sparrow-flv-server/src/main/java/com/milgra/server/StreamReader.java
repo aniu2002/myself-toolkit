@@ -481,7 +481,7 @@ public class StreamReader extends OProcess {
 	}
 
 	/**
-	 * Send stop related rtmp message
+	 * Send stop related rtmp services
 	 */
 
 	public void sendStop() {

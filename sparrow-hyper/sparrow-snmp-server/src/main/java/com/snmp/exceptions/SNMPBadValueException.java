@@ -46,7 +46,7 @@ public class SNMPBadValueException extends Exception
     
     
     /**
-    *    Create exception with message string.
+    *    Create exception with services string.
     */
     
     public SNMPBadValueException(String s)

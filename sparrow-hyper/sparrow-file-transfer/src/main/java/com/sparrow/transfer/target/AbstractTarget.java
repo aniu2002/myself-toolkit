@@ -17,7 +17,7 @@ import com.sparrow.transfer.protocol.ProtocolMessage;
  * 代表一个调度器最终操作的源或目标。
  */
 public abstract class AbstractTarget {
-	/** protocol message */
+	/** protocol services */
 	protected ProtocolMessage protocolMessage;
 	/**
 	 * 是否该对象已经被初始化。 If the actor target was initialized.
@@ -51,7 +51,7 @@ public abstract class AbstractTarget {
 	public AbstractTarget(ProtocolMessage pmsg) throws TaskException {
 		if (pmsg == null) {
 			throw new TaskException(StatusCode.PROTOCOL_UNKOWN,
-					"The protocol message is null .. ");
+					"The protocol services is null .. ");
 		}
 		this.protocolMessage = pmsg;
 		if (pmsg != null)

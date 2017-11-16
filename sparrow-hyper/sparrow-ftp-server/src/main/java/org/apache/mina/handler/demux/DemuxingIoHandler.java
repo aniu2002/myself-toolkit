@@ -39,15 +39,15 @@ import org.apache.mina.util.IdentityHashSet;
  * {@link #removeReceivedMessageHandler(Class)}.
  * </p>
  * <p>
- * When <code>message</code> is received through a call to
+ * When <code>services</code> is received through a call to
  * {@link #messageReceived(IoSession, Object)} the class of the
- * <code>message</code> object will be used to find a {@link MessageHandler} for
- * that particular message type. If no {@link MessageHandler} instance can be
- * found for the immediate class (i.e. <code>message.getClass()</code>) the
+ * <code>services</code> object will be used to find a {@link MessageHandler} for
+ * that particular services type. If no {@link MessageHandler} instance can be
+ * found for the immediate class (i.e. <code>services.getClass()</code>) the
  * interfaces implemented by the immediate class will be searched in depth-first
  * order. If no match can be found for any of the interfaces the search will be
  * repeated recursively for the superclass of the immediate class
- * (i.e. <code>message.getClass().getSuperclass()</code>).
+ * (i.e. <code>services.getClass().getSuperclass()</code>).
  * </p>
  * <p>
  * Consider the following type hierarchy (<code>Cx</code> are classes while
@@ -64,7 +64,7 @@ import org.apache.mina.util.IdentityHashSet;
  *      |        I3
  *    Object
  * </pre>
- * When <code>message</code> is of type <code>C3</code> this hierarchy will be
+ * When <code>services</code> is of type <code>C3</code> this hierarchy will be
  * searched in the following order:
  * <code>C3, I7, I8, I9, I3, I4, C2, I5, I6, C1, I1, I2, I3, I4, Object</code>.
  * </p>
@@ -232,13 +232,13 @@ public class DemuxingIoHandler extends IoHandlerAdapter {
             handler.handleMessage(session, message);
         } else {
             throw new UnknownMessageTypeException(
-                    "No message handler found for message type: " +
+                    "No services handler found for services type: " +
                     message.getClass().getSimpleName());
         }
     }
 
     /**
-     * Invoked when a message written by IoSession.write(Object) is sent out.
+     * Invoked when a services written by IoSession.write(Object) is sent out.
      * 
      * <b>Warning !</b> If you are to overload this method, be aware that you 
      * _must_ call the messageHandler in your own method, otherwise it won't 
@@ -251,7 +251,7 @@ public class DemuxingIoHandler extends IoHandlerAdapter {
             handler.handleMessage(session, message);
         } else {
             throw new UnknownMessageTypeException(
-                    "No handler found for message type: " +
+                    "No handler found for services type: " +
                     message.getClass().getSimpleName());
         }
     }
@@ -370,7 +370,7 @@ public class DemuxingIoHandler extends IoHandlerAdapter {
         /*
          * Make sure the handler is added to the cache. By updating the cache
          * here all the types (superclasses and interfaces) in the path which
-         * led to a match will be cached along with the immediate message type.
+         * led to a match will be cached along with the immediate services type.
          */
         if (handler != null) {
             handlerCache.put(type, handler);

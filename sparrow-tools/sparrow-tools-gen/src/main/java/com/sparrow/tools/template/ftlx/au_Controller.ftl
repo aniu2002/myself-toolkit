@@ -1,14 +1,14 @@
 package ${controllerPackage};
 
 import java.util.List;
-import com.sparrow.http.common.QueryTool;
-import com.sparrow.service.annotation.Autowired;
-import com.sparrow.server.web.OpResult;
-import com.sparrow.server.web.annotation.PathVariable;
-import com.sparrow.server.web.annotation.ReqMapping;
-import com.sparrow.server.web.annotation.WebController;
+import com.sparrow.core.http.common.HttpTool;
+import com.sparrow.core.service.annotation.Autowired;
+import com.sparrow.core.web.OpResult;
+import com.sparrow.core.web.annotation.PathVariable;
+import com.sparrow.core.web.annotation.ReqMapping;
+import com.sparrow.core.web.annotation.WebController;
 
-import com.sparrow.orm.page.PageResult;
+import com.sparrow.core.orm.page.PageResult;
 
 <#if (pojoIdType??)>import ${pojoIdType};</#if>
 import ${servicePackName}.${serviceName};
@@ -63,7 +63,7 @@ public class ${pojoClassName}Controller {
 	 * @param ${regularPojoName} 
 	 *        ${tableDesc?if_exists}查询条件
 	 * @return 返回分页包装信息, 如:<br/>
-	 *         {total:1,rows:[{id:'2',name:'haha'}]} 
+	 *         {total:1,rows:[{id:'2',title:'haha'}]}
 	 * @throws Exception 
 	 *         可能抛出业务操作异常
 	 */
@@ -95,7 +95,7 @@ public class ${pojoClassName}Controller {
     
      @ReqMapping(value = "/delete",method = ReqMapping.DELETE)
     public OpResult batchDelete(String id) throws Exception {
-       List<${pojoIdSimpleType}> ids = QueryTool.toList(id,${pojoIdSimpleType}.class);
+       List<${pojoIdSimpleType}> ids = HttpTool.toList(id,${pojoIdSimpleType}.class);
        this.${fServiceName}.batchDelete${pojoClassName}(ids);
        return OpResult.OK;
     }

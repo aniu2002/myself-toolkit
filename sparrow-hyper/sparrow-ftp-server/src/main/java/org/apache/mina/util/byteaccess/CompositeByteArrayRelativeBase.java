@@ -27,7 +27,7 @@ import org.apache.mina.util.byteaccess.CompositeByteArray.CursorListener;
 
 
 /**
- * Provides common functionality between the
+ * Provides zk functionality between the
  * <code>CompositeByteArrayRelativeReader</code> and
  * <code>CompositeByteArrayRelativeWriter</code>.
  * 

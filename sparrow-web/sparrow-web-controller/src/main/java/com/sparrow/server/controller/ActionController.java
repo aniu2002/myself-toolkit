@@ -1,7 +1,7 @@
 /**
  * Project Name:http-server  
  * File Name:ActionController.java  
- * Package Name:com.sparrow.core.http.controller  
+ * Package Name:com.sparrow.core.http.web
  * Date:2014-1-3上午11:41:58  
  * Copyright (c) 2014, Boco.com All Rights Reserved.  
  *
@@ -32,8 +32,6 @@ public interface ActionController {
     void addControllerConfig(ActionBeanConfig cfg);
 
     void resetController(List<ActionBeanConfig> beans);
-
-    void setBeanConfig(String config);
 
     void removeController(String name);
 }

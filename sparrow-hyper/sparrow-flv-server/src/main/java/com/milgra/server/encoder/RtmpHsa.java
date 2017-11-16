@@ -118,7 +118,7 @@ public class RtmpHsa extends OProcess
 	public void step ( ) 
 	{
 		
-		//System.out.println( System.currentTimeMillis( ) + " " + controller.id + " RtmpHsa.step" );
+		//System.out.println( System.currentTimeMillis( ) + " " + web.id + " RtmpHsa.step" );
 		
 		try
 		{
@@ -140,7 +140,7 @@ public class RtmpHsa extends OProcess
 	public void sendStamp ( ) throws IOException
 	{
 		
-		// System.out.println( System.currentTimeMillis( ) + " " + controller.id + " RtmpHsa.sendStamp " + 1537 );
+		// System.out.println( System.currentTimeMillis( ) + " " + web.id + " RtmpHsa.sendStamp " + 1537 );
 
 		try
 		{
@@ -165,7 +165,7 @@ public class RtmpHsa extends OProcess
 	public void receiveAnswer ( ) throws IOException
 	{
 
-		// System.out.println( System.currentTimeMillis( ) + " " + controller.id + " RtmpHsa.receiveAnswer " );
+		// System.out.println( System.currentTimeMillis( ) + " " + web.id + " RtmpHsa.receiveAnswer " );
 		
 		try
 		{
@@ -207,7 +207,7 @@ public class RtmpHsa extends OProcess
 	public void sendConnection ( ) throws IOException
 	{
 		
-		// System.out.println( System.currentTimeMillis( ) + " " + controller.id + " RtmpHsa.sendConnection " + 1536 );
+		// System.out.println( System.currentTimeMillis( ) + " " + web.id + " RtmpHsa.sendConnection " + 1536 );
 
 		try
 		{

@@ -235,7 +235,7 @@ public class ScopeCrawler extends ConfiguredCrawler {
         try {
             if (StringUtils.isEmpty(crawlerData.getHtml()))
                 return;
-            CrawlerDom dom = this.createCrawlerDom(crawlerData);
+            CrawlerDom dom = this.createCrDom(crawlerData);
             if (StringUtils.isNotEmpty(siteEntry.getContentExpress())) {
                 crawlerData.setContent(dom.text(siteEntry.getContentExpress()));
             }

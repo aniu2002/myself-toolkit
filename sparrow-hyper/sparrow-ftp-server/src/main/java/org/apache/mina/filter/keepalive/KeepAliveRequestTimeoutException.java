@@ -21,7 +21,7 @@ package org.apache.mina.filter.keepalive;
 
 /**
  * A {@link RuntimeException} which is thrown when a keep-alive response
- * message was not received within a certain timeout.
+ * services was not received within a certain timeout.
  * 
  * @author <a href="http://mina.apache.org">Apache MINA Project</a>
  */

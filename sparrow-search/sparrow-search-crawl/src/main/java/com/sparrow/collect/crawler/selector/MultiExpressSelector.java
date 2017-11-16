@@ -3,15 +3,12 @@ package com.sparrow.collect.crawler.selector;
 import com.sparrow.collect.crawler.data.EntryData;
 import com.sparrow.collect.crawler.dom.CrawlerDom;
 import com.sparrow.collect.crawler.dom.CrawlerNode;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.List;
 
 
 public class MultiExpressSelector implements IPageSelector {
-    static final Logger logger = LoggerFactory.getLogger(AbstractPageSelector.class);
     private List<AbstractPageSelector> selectors = new ArrayList<AbstractPageSelector>();
 
     public void addSelector(AbstractPageSelector selector) {
@@ -33,13 +30,12 @@ public class MultiExpressSelector implements IPageSelector {
         for (CrawlerNode node : nodes) {
             String url = node.attr(selector.getUrlSelectExpress());
             String title = node.text();
-            if (selector.ignore(url, title)) {
-                logger.warn("Ignore url : {}", url);
+            if (selector.ignore(url, title))
                 continue;
-            }
             EntryData entryData = new EntryData();
             entryData.setTitle(title);
             entryData.setUrl(url);
+            entryData.setPageType(selector.getType());
             selector.correctDom(node, entryData, parentPage);
             selector.correct(entryData, parentPage);
             entries.add(entryData);

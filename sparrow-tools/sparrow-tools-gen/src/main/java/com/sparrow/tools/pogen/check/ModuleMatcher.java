@@ -64,13 +64,13 @@ public class ModuleMatcher {
 
 	public void addRegCheck(StrCheck strCheck) {
 		if (this.regChecks == null)
-			this.regChecks = new ArrayList();
+			this.regChecks = new ArrayList<StrCheck>();
 		this.regChecks.add(strCheck);
 	}
 
 	public void addNormalCheck(StrCheck strCheck) {
 		if (this.checks == null)
-			this.checks = new ArrayList();
+			this.checks = new ArrayList<StrCheck>();
 		this.checks.add(strCheck);
 	}
 

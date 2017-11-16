@@ -1,0 +1,14 @@
+{
+  "resourceType": "Subscription",
+  "id": "20906",
+  "meta": {
+    "versionId": "1",
+    "lastUpdated": "2017-03-07T00:02:58.876+08:00"
+  },
+  "criteria": "Patient?",
+  "status": "active",
+  "channel": {
+    "type": "rest-hook",
+    "endpoint": "http://192.168.2.145:8088/mpi/collection/patient"
+  }
+}

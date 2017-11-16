@@ -21,24 +21,24 @@
     <script type="text/javascript" src="/app/js/common/popui/pop-ui.js"></script>
     <script type="text/javascript">
         var columns=[
-          {name:'id',label:'ID',width:'30',render:'_idx',hidden:true,noe:true},
-          {name:'name',label:'昵称',editor:'text',vtype:'required',search:true,max:32},
-          {name:'qq',label:'QQ',editor:'text',vtype:'required',max:32},
-          {name:'sex',label:'性别',editor:'text',vtype:'required',hidden:true,max:1},
-          {name:'age',label:'年龄',render:'number',editor:'text',vtype:'required',search:true,hidden:true,max:11},
-          {name:'bra',label:'罩B',editor:'text',vtype:'required',search:true,max:1},
-          {name:'phone',label:'手机',editor:'text',vtype:'required',max:32},
-          {name:'province',label:'省',editor:'text',vtype:'required',hidden:true,max:32},
-          {name:'city',label:'市',editor:'text',vtype:'required',hidden:true,max:32},
-          {name:'district',label:'区域',editor:'text',vtype:'required',max:32},
-          {name:'refereeName',label:'上报人',editor:'text',vtype:'required',max:32},
-          {name:'refereeQq',label:'上报qq',editor:'text',vtype:'required',hidden:true,max:32},
-          {name:'priceP',label:'价格P',render:'number',editor:'text',vtype:'required',max:11},
-          {name:'pricePp',label:'价格PP',render:'number',editor:'text',vtype:'required',max:11},
-          {name:'priceDesc',label:'价格描述',editor:'text',vtype:'required',hidden:true,max:64},
-          {name:'simpleDesc',label:'描述',editor:'text',vtype:'required',max:128},
-          {name:'special',label:'特长',editor:'text',vtype:'required',max:64},
-          {name:'checked',label:'体验否',max:11,render:function(v){
+          {title:'id',label:'ID',width:'30',render:'_idx',hidden:true,noe:true},
+          {title:'title',label:'昵称',editor:'text',vtype:'required',search:true,max:32},
+          {title:'qq',label:'QQ',editor:'text',vtype:'required',max:32},
+          {title:'sex',label:'性别',editor:'text',vtype:'required',hidden:true,max:1},
+          {title:'age',label:'年龄',render:'number',editor:'text',vtype:'required',search:true,hidden:true,max:11},
+          {title:'bra',label:'罩B',editor:'text',vtype:'required',search:true,max:1},
+          {title:'phone',label:'手机',editor:'text',vtype:'required',max:32},
+          {title:'province',label:'省',editor:'text',vtype:'required',hidden:true,max:32},
+          {title:'city',label:'市',editor:'text',vtype:'required',hidden:true,max:32},
+          {title:'district',label:'区域',editor:'text',vtype:'required',max:32},
+          {title:'refereeName',label:'上报人',editor:'text',vtype:'required',max:32},
+          {title:'refereeQq',label:'上报qq',editor:'text',vtype:'required',hidden:true,max:32},
+          {title:'priceP',label:'价格P',render:'number',editor:'text',vtype:'required',max:11},
+          {title:'pricePp',label:'价格PP',render:'number',editor:'text',vtype:'required',max:11},
+          {title:'priceDesc',label:'价格描述',editor:'text',vtype:'required',hidden:true,max:64},
+          {title:'simpleDesc',label:'描述',editor:'text',vtype:'required',max:128},
+          {title:'special',label:'特长',editor:'text',vtype:'required',max:64},
+          {title:'checked',label:'体验否',max:11,render:function(v){
               var ng='×'
               var cl='#bbbbbb;';
               if(v==1) {
@@ -47,23 +47,23 @@
               }
                return '<div style="background-color:'+cl+'width:40px;height:20px;text-align: center;">'+ng+'</div>';
             }},
-          {name:'leval',label:'级别',editor:'select',src:'leval',vtype:'required',search:true,max:11,render:'$',wrap:function(t,v){
+          {title:'leval',label:'级别',editor:'select',src:'leval',vtype:'required',search:true,max:11,render:'$',wrap:function(t,v){
                 if(v==0)
                     return '<div style="background-color:#bbbbbb;width:50px;height:20px;text-align: center;"><font color="red" >'+t+'</font></div>';
                 else
                     return t;
             }},
-          {name:'comment',label:'评价',editor:'text',vtype:'required',hidden:true,max:256},
-          {name:'images',label:'图片',editor:'text',vtype:'required',hidden:true,max:512,render:function(v){
+          {title:'comment',label:'评价',editor:'text',vtype:'required',hidden:true,max:256},
+          {title:'images',label:'图片',editor:'text',vtype:'required',hidden:true,max:512,render:function(v){
               var s= (v==null)?[]:v.split(',');
               var bs='';
               for(var i=0;i < s.length;i++)
                bs=bs+'&nbsp;<img src="'+s[i]+'" style="width:230px;height:320px;cursor:pointer;" onclick="showBigImg(this);" />';
               return  bs;
           }}
-          //,{name:'createDate',label:'创建时间',render:'time',editor:'time',vtype:'required',max:19},
-          //{name:'updateDate',label:'更新时间',render:'time',editor:'time',vtype:'required',hidden:true,max:19}
-          //,{name:'mark',label:'标记',render:'number',editor:'text',vtype:'required',hidden:true,max:11}
+          //,{title:'createDate',label:'创建时间',render:'time',editor:'time',vtype:'required',max:19},
+          //{title:'updateDate',label:'更新时间',render:'time',editor:'time',vtype:'required',hidden:true,max:19}
+          //,{title:'mark',label:'标记',render:'number',editor:'text',vtype:'required',hidden:true,max:11}
 	    ];
         function showBigImg(el){
             _ImgShow($(el).attr('src'));

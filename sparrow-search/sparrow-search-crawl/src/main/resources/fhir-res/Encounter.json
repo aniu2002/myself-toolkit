@@ -1,0 +1,1430 @@
+{
+  "resourceType" : "Bundle",
+  "id" : "bbd0d4d2-2083-42db-a908-f4972df9aafa",
+  "meta" : {
+    "lastUpdated" : "2017-05-11T17:57:22.504+08:00"
+  },
+  "type" : "searchset",
+  "total" : 257095,
+  "link" : [ {
+    "relation" : "self",
+    "url" : "http://10.10.15.38:8083/resources/Encounter?_count=50"
+  }, {
+    "relation" : "next",
+    "url" : "http://10.10.15.38:8083/resources?_getpages=c1b273b4-e6e2-425c-a5d3-0c32f9d9c84d&_getpagesoffset=50&_count=50&_bundletype=searchset"
+  } ],
+  "entry" : [ {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Encounter/722",
+    "resource" : {
+      "resourceType" : "Encounter",
+      "id" : "722",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-16T18:13:00.591+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inpatient-registration-id",
+        "value" : "2016000011"
+      } ],
+      "status" : "planned",
+      "class" : "inpatient",
+      "period" : {
+        "start" : "2016-04-14T15:42:38",
+        "end" : "2016-04-19T15:32:00"
+      },
+      "hospitalization" : {
+        "preAdmissionIdentifier" : {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/text/inh-id",
+          "value" : "1"
+        }
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Encounter/723",
+    "resource" : {
+      "resourceType" : "Encounter",
+      "id" : "723",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-16T18:14:01.977+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/in-mode-code",
+        "valueCode" : "无"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/out-mode-code",
+        "valueCode" : "2"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/fee-code",
+        "valueCode" : "13"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inpatient-registration-id",
+        "value" : "2016000011"
+      } ],
+      "status" : "planned",
+      "class" : "inpatient",
+      "period" : {
+        "start" : "2016-04-14T15:42:38",
+        "end" : "2016-04-19T15:32:00"
+      },
+      "hospitalization" : {
+        "preAdmissionIdentifier" : {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/text/inh-id",
+          "value" : "1"
+        }
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Encounter/724",
+    "resource" : {
+      "resourceType" : "Encounter",
+      "id" : "724",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-16T18:15:23.059+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/in-mode-code",
+        "valueCode" : "无"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/out-mode-code",
+        "valueCode" : "2"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/fee-code",
+        "valueCode" : "13"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inpatient-registration-id",
+        "value" : "2016000011"
+      } ],
+      "status" : "planned",
+      "class" : "inpatient",
+      "period" : {
+        "start" : "2016-04-14T15:42:38",
+        "end" : "2016-04-19T15:32:00"
+      },
+      "hospitalization" : {
+        "preAdmissionIdentifier" : {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/text/inh-id",
+          "value" : "1"
+        }
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Encounter/725",
+    "resource" : {
+      "resourceType" : "Encounter",
+      "id" : "725",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-16T18:18:15.469+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/in-mode-code",
+        "valueCode" : "无"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/out-mode-code",
+        "valueCode" : "2"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/fee-code",
+        "valueCode" : "13"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inpatient-registration-id",
+        "value" : "2016000011"
+      } ],
+      "status" : "planned",
+      "class" : "inpatient",
+      "period" : {
+        "start" : "2016-04-14T15:42:38",
+        "end" : "2016-04-19T15:32:00"
+      },
+      "hospitalization" : {
+        "preAdmissionIdentifier" : {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/text/inh-id",
+          "value" : "1"
+        }
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Encounter/728",
+    "resource" : {
+      "resourceType" : "Encounter",
+      "id" : "728",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-16T18:36:13.435+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/in-mode-code",
+        "valueCode" : "无"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/out-mode-code",
+        "valueCode" : "2"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/fee-code",
+        "valueCode" : "13"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inpatient-registration-id",
+        "value" : "2016000011"
+      } ],
+      "status" : "planned",
+      "class" : "inpatient",
+      "patient" : {
+        "reference" : "Patient/721",
+        "display" : "陈相廷"
+      },
+      "period" : {
+        "start" : "2016-04-14T15:42:38",
+        "end" : "2016-04-19T15:32:00"
+      },
+      "hospitalization" : {
+        "preAdmissionIdentifier" : {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/text/inh-id",
+          "value" : "1"
+        }
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Encounter/729",
+    "resource" : {
+      "resourceType" : "Encounter",
+      "id" : "729",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-16T18:37:31.910+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/in-dpid",
+        "valueReference" : {
+          "reference" : "Organization/602"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/in-mode-code",
+        "valueCode" : "无"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/out-dpid",
+        "valueReference" : {
+          "reference" : "Organization/602"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/out-mode-code",
+        "valueCode" : "2"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/fee-code",
+        "valueCode" : "13"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inpatient-registration-id",
+        "value" : "2016000011"
+      } ],
+      "status" : "planned",
+      "class" : "inpatient",
+      "patient" : {
+        "reference" : "Patient/721",
+        "display" : "陈相廷"
+      },
+      "period" : {
+        "start" : "2016-04-14T15:42:38",
+        "end" : "2016-04-19T15:32:00"
+      },
+      "hospitalization" : {
+        "preAdmissionIdentifier" : {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/text/inh-id",
+          "value" : "1"
+        }
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Encounter/955",
+    "resource" : {
+      "resourceType" : "Encounter",
+      "id" : "955",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-17T11:09:36.469+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-registration-id",
+        "value" : "GG1603280001"
+      } ],
+      "status" : "arrived",
+      "class" : "outpatient",
+      "patient" : {
+        "reference" : "Patient/61",
+        "display" : "张振环"
+      },
+      "appointment" : {
+        "reference" : "Appointment/954"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Encounter/969",
+    "resource" : {
+      "resourceType" : "Encounter",
+      "id" : "969",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-17T11:51:40.179+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-registration-id",
+        "value" : "GG1603290163"
+      } ],
+      "status" : "arrived",
+      "class" : "outpatient",
+      "patient" : {
+        "reference" : "Patient/967",
+        "display" : "杨晓丹"
+      },
+      "appointment" : {
+        "reference" : "Appointment/968"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Encounter/982",
+    "resource" : {
+      "resourceType" : "Encounter",
+      "id" : "982",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-17T13:34:47.362+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-registration-id",
+        "value" : "GG1603290163"
+      } ],
+      "status" : "arrived",
+      "class" : "outpatient",
+      "patient" : {
+        "reference" : "Patient/967",
+        "display" : "杨晓丹"
+      },
+      "appointment" : {
+        "reference" : "Appointment/968"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Encounter/988",
+    "resource" : {
+      "resourceType" : "Encounter",
+      "id" : "988",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-17T13:46:57.066+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/in-dpid",
+        "valueReference" : {
+          "reference" : "Organization/596"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/in-mode-code",
+        "valueCode" : "2"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/out-dpid",
+        "valueReference" : {
+          "reference" : "Organization/596"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/out-mode-code",
+        "valueCode" : "2"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/fee-code",
+        "valueCode" : "12"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inpatient-registration-id",
+        "value" : "2016002161"
+      } ],
+      "status" : "planned",
+      "class" : "inpatient",
+      "patient" : {
+        "reference" : "Patient/987",
+        "display" : "铁梅"
+      },
+      "period" : {
+        "start" : "2016-04-22T16:39:52",
+        "end" : "2016-04-27T12:52:00"
+      },
+      "hospitalization" : {
+        "preAdmissionIdentifier" : {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/text/inh-id",
+          "value" : "1"
+        }
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Encounter/1016",
+    "resource" : {
+      "resourceType" : "Encounter",
+      "id" : "1016",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-17T14:42:10.118+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-registration-id",
+        "value" : "GG1603290341"
+      } ],
+      "status" : "arrived",
+      "class" : "outpatient",
+      "patient" : {
+        "reference" : "Patient/1011",
+        "display" : "麻雨菲"
+      },
+      "appointment" : {
+        "reference" : "Appointment/1015"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Encounter/1018",
+    "resource" : {
+      "resourceType" : "Encounter",
+      "id" : "1018",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-17T14:42:32.546+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-registration-id",
+        "value" : "GG1603290341"
+      } ],
+      "status" : "arrived",
+      "class" : "outpatient",
+      "patient" : {
+        "reference" : "Patient/1011",
+        "display" : "麻雨菲"
+      },
+      "appointment" : {
+        "reference" : "Appointment/1017"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Encounter/2823",
+    "resource" : {
+      "resourceType" : "Encounter",
+      "id" : "2823",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-18T07:51:20.943+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-registration-id",
+        "value" : "GG1606180026"
+      } ],
+      "status" : "arrived",
+      "class" : "outpatient",
+      "patient" : {
+        "reference" : "Patient/2821",
+        "display" : "王玉良"
+      },
+      "appointment" : {
+        "reference" : "Appointment/2822"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Encounter/2827",
+    "resource" : {
+      "resourceType" : "Encounter",
+      "id" : "2827",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-18T07:52:03.106+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-registration-id",
+        "value" : "GG1606180031"
+      } ],
+      "status" : "arrived",
+      "class" : "outpatient",
+      "patient" : {
+        "reference" : "Patient/2825",
+        "display" : "张瑞志"
+      },
+      "appointment" : {
+        "reference" : "Appointment/2826"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Encounter/2829",
+    "resource" : {
+      "resourceType" : "Encounter",
+      "id" : "2829",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-18T07:52:44.945+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-registration-id",
+        "value" : "GG1606180035"
+      } ],
+      "status" : "arrived",
+      "class" : "outpatient",
+      "patient" : {
+        "reference" : "Patient/91",
+        "display" : "范海霞"
+      },
+      "appointment" : {
+        "reference" : "Appointment/2828"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Encounter/2832",
+    "resource" : {
+      "resourceType" : "Encounter",
+      "id" : "2832",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-18T07:53:39.776+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-registration-id",
+        "value" : "GG1606180040"
+      } ],
+      "status" : "arrived",
+      "class" : "outpatient",
+      "patient" : {
+        "reference" : "Patient/2830",
+        "display" : "辛玉增"
+      },
+      "appointment" : {
+        "reference" : "Appointment/2831"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Encounter/2835",
+    "resource" : {
+      "resourceType" : "Encounter",
+      "id" : "2835",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-18T07:54:06.677+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-registration-id",
+        "value" : "GG1606180041"
+      } ],
+      "status" : "arrived",
+      "class" : "outpatient",
+      "patient" : {
+        "reference" : "Patient/2833",
+        "display" : "李宇彤"
+      },
+      "appointment" : {
+        "reference" : "Appointment/2834"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Encounter/2837",
+    "resource" : {
+      "resourceType" : "Encounter",
+      "id" : "2837",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-18T07:54:10.276+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-registration-id",
+        "value" : "GG1606180043"
+      } ],
+      "status" : "arrived",
+      "class" : "outpatient",
+      "patient" : {
+        "reference" : "Patient/732",
+        "display" : "王中"
+      },
+      "appointment" : {
+        "reference" : "Appointment/2836"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Encounter/2840",
+    "resource" : {
+      "resourceType" : "Encounter",
+      "id" : "2840",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-18T07:55:28.433+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-registration-id",
+        "value" : "GG1606180048"
+      } ],
+      "status" : "arrived",
+      "class" : "outpatient",
+      "patient" : {
+        "reference" : "Patient/2838",
+        "display" : "刘淑芳"
+      },
+      "appointment" : {
+        "reference" : "Appointment/2839"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Encounter/2843",
+    "resource" : {
+      "resourceType" : "Encounter",
+      "id" : "2843",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-18T07:57:19.717+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-registration-id",
+        "value" : "GG1606180057"
+      } ],
+      "status" : "arrived",
+      "class" : "outpatient",
+      "patient" : {
+        "reference" : "Patient/2841",
+        "display" : "杨娜"
+      },
+      "appointment" : {
+        "reference" : "Appointment/2842"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Encounter/2846",
+    "resource" : {
+      "resourceType" : "Encounter",
+      "id" : "2846",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-18T07:57:48.024+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-registration-id",
+        "value" : "GG1606180059"
+      } ],
+      "status" : "arrived",
+      "class" : "outpatient",
+      "patient" : {
+        "reference" : "Patient/2844",
+        "display" : "王海鹏"
+      },
+      "appointment" : {
+        "reference" : "Appointment/2845"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Encounter/2849",
+    "resource" : {
+      "resourceType" : "Encounter",
+      "id" : "2849",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-18T07:57:55.589+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-registration-id",
+        "value" : "GG1606180060"
+      } ],
+      "status" : "arrived",
+      "class" : "outpatient",
+      "patient" : {
+        "reference" : "Patient/2847",
+        "display" : "冯仲祥"
+      },
+      "appointment" : {
+        "reference" : "Appointment/2848"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Encounter/2854",
+    "resource" : {
+      "resourceType" : "Encounter",
+      "id" : "2854",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-18T07:58:08.280+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-registration-id",
+        "value" : "GG1606180061"
+      } ],
+      "status" : "arrived",
+      "class" : "outpatient",
+      "patient" : {
+        "reference" : "Patient/2850",
+        "display" : "刘红"
+      },
+      "appointment" : {
+        "reference" : "Appointment/2853"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Encounter/2856",
+    "resource" : {
+      "resourceType" : "Encounter",
+      "id" : "2856",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-18T07:58:11.998+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-registration-id",
+        "value" : "GG1606180062"
+      } ],
+      "status" : "arrived",
+      "class" : "outpatient",
+      "patient" : {
+        "reference" : "Patient/2852",
+        "display" : "安文仿"
+      },
+      "appointment" : {
+        "reference" : "Appointment/2855"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Encounter/2859",
+    "resource" : {
+      "resourceType" : "Encounter",
+      "id" : "2859",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-18T07:59:42.000+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-registration-id",
+        "value" : "GG1606180069"
+      } ],
+      "status" : "arrived",
+      "class" : "outpatient",
+      "patient" : {
+        "reference" : "Patient/2857",
+        "display" : "韩翠平"
+      },
+      "appointment" : {
+        "reference" : "Appointment/2858"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Encounter/2862",
+    "resource" : {
+      "resourceType" : "Encounter",
+      "id" : "2862",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-18T07:59:57.915+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-registration-id",
+        "value" : "GG1606180070"
+      } ],
+      "status" : "arrived",
+      "class" : "outpatient",
+      "patient" : {
+        "reference" : "Patient/2860",
+        "display" : "马瑞旺"
+      },
+      "appointment" : {
+        "reference" : "Appointment/2861"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Encounter/2865",
+    "resource" : {
+      "resourceType" : "Encounter",
+      "id" : "2865",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-18T08:00:03.383+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-registration-id",
+        "value" : "GG1606180071"
+      } ],
+      "status" : "arrived",
+      "class" : "outpatient",
+      "patient" : {
+        "reference" : "Patient/2863",
+        "display" : "康磊"
+      },
+      "appointment" : {
+        "reference" : "Appointment/2864"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Encounter/2869",
+    "resource" : {
+      "resourceType" : "Encounter",
+      "id" : "2869",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-18T08:00:28.097+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-registration-id",
+        "value" : "GG1606180072"
+      } ],
+      "status" : "arrived",
+      "class" : "outpatient",
+      "patient" : {
+        "reference" : "Patient/2867",
+        "display" : "林艳华"
+      },
+      "appointment" : {
+        "reference" : "Appointment/2868"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Encounter/2872",
+    "resource" : {
+      "resourceType" : "Encounter",
+      "id" : "2872",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-18T08:00:44.538+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-registration-id",
+        "value" : "GG1606180073"
+      } ],
+      "status" : "arrived",
+      "class" : "outpatient",
+      "patient" : {
+        "reference" : "Patient/2870",
+        "display" : "孟庆彬"
+      },
+      "appointment" : {
+        "reference" : "Appointment/2871"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Encounter/2876",
+    "resource" : {
+      "resourceType" : "Encounter",
+      "id" : "2876",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-18T08:01:31.575+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-registration-id",
+        "value" : "GG1606180077"
+      } ],
+      "status" : "arrived",
+      "class" : "outpatient",
+      "patient" : {
+        "reference" : "Patient/2874",
+        "display" : "金桂荣"
+      },
+      "appointment" : {
+        "reference" : "Appointment/2875"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Encounter/2878",
+    "resource" : {
+      "resourceType" : "Encounter",
+      "id" : "2878",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-18T08:01:35.573+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-registration-id",
+        "value" : "GG1606180078"
+      } ],
+      "status" : "arrived",
+      "class" : "outpatient",
+      "patient" : {
+        "reference" : "Patient/2873",
+        "display" : "王艳华"
+      },
+      "appointment" : {
+        "reference" : "Appointment/2877"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Encounter/2882",
+    "resource" : {
+      "resourceType" : "Encounter",
+      "id" : "2882",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-18T08:02:24.094+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-registration-id",
+        "value" : "GG1606180084"
+      } ],
+      "status" : "arrived",
+      "class" : "outpatient",
+      "patient" : {
+        "reference" : "Patient/2880",
+        "display" : "白如玉"
+      },
+      "appointment" : {
+        "reference" : "Appointment/2881"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Encounter/2885",
+    "resource" : {
+      "resourceType" : "Encounter",
+      "id" : "2885",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-18T08:02:53.127+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-registration-id",
+        "value" : "GG1606180085"
+      } ],
+      "status" : "arrived",
+      "class" : "outpatient",
+      "patient" : {
+        "reference" : "Patient/2883",
+        "display" : "徐汉军"
+      },
+      "appointment" : {
+        "reference" : "Appointment/2884"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Encounter/2888",
+    "resource" : {
+      "resourceType" : "Encounter",
+      "id" : "2888",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-18T08:03:14.026+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-registration-id",
+        "value" : "GG1606180087"
+      } ],
+      "status" : "arrived",
+      "class" : "outpatient",
+      "patient" : {
+        "reference" : "Patient/2886",
+        "display" : "肖秀招"
+      },
+      "appointment" : {
+        "reference" : "Appointment/2887"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Encounter/2891",
+    "resource" : {
+      "resourceType" : "Encounter",
+      "id" : "2891",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-18T08:03:56.590+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-registration-id",
+        "value" : "GG1606180090"
+      } ],
+      "status" : "arrived",
+      "class" : "outpatient",
+      "patient" : {
+        "reference" : "Patient/2889",
+        "display" : "李蕊涵"
+      },
+      "appointment" : {
+        "reference" : "Appointment/2890"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Encounter/2894",
+    "resource" : {
+      "resourceType" : "Encounter",
+      "id" : "2894",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-18T08:04:17.662+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-registration-id",
+        "value" : "GG1606180091"
+      } ],
+      "status" : "arrived",
+      "class" : "outpatient",
+      "patient" : {
+        "reference" : "Patient/145",
+        "display" : "张梦涵"
+      },
+      "appointment" : {
+        "reference" : "Appointment/2893"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Encounter/2898",
+    "resource" : {
+      "resourceType" : "Encounter",
+      "id" : "2898",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-18T08:06:07.164+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-registration-id",
+        "value" : "GG1606180099"
+      } ],
+      "status" : "arrived",
+      "class" : "outpatient",
+      "patient" : {
+        "reference" : "Patient/999",
+        "display" : "祁秀兰"
+      },
+      "appointment" : {
+        "reference" : "Appointment/2897"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Encounter/2900",
+    "resource" : {
+      "resourceType" : "Encounter",
+      "id" : "2900",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-18T08:06:10.438+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-registration-id",
+        "value" : "GG1606180100"
+      } ],
+      "status" : "arrived",
+      "class" : "outpatient",
+      "patient" : {
+        "reference" : "Patient/2896",
+        "display" : "牛豹"
+      },
+      "appointment" : {
+        "reference" : "Appointment/2899"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Encounter/2903",
+    "resource" : {
+      "resourceType" : "Encounter",
+      "id" : "2903",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-18T08:06:20.527+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-registration-id",
+        "value" : "GG1606180101"
+      } ],
+      "status" : "arrived",
+      "class" : "outpatient",
+      "patient" : {
+        "reference" : "Patient/2901",
+        "display" : "李海龙"
+      },
+      "appointment" : {
+        "reference" : "Appointment/2902"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Encounter/2909",
+    "resource" : {
+      "resourceType" : "Encounter",
+      "id" : "2909",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-18T08:07:32.098+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-registration-id",
+        "value" : "GG1606180104"
+      } ],
+      "status" : "arrived",
+      "class" : "outpatient",
+      "patient" : {
+        "reference" : "Patient/2907",
+        "display" : "郭晓宁"
+      },
+      "appointment" : {
+        "reference" : "Appointment/2908"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Encounter/2912",
+    "resource" : {
+      "resourceType" : "Encounter",
+      "id" : "2912",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-18T08:08:02.061+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-registration-id",
+        "value" : "GG1606180106"
+      } ],
+      "status" : "arrived",
+      "class" : "outpatient",
+      "patient" : {
+        "reference" : "Patient/2906",
+        "display" : "吴清华"
+      },
+      "appointment" : {
+        "reference" : "Appointment/2911"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Encounter/2916",
+    "resource" : {
+      "resourceType" : "Encounter",
+      "id" : "2916",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-18T08:08:39.523+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-registration-id",
+        "value" : "GG1606180107"
+      } ],
+      "status" : "arrived",
+      "class" : "outpatient",
+      "patient" : {
+        "reference" : "Patient/2914",
+        "display" : "李桂芬"
+      },
+      "appointment" : {
+        "reference" : "Appointment/2915"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Encounter/2923",
+    "resource" : {
+      "resourceType" : "Encounter",
+      "id" : "2923",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-18T08:10:30.159+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-registration-id",
+        "value" : "GG1606180114"
+      } ],
+      "status" : "arrived",
+      "class" : "outpatient",
+      "patient" : {
+        "reference" : "Patient/2920",
+        "display" : "刘天洪"
+      },
+      "appointment" : {
+        "reference" : "Appointment/2922"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Encounter/2927",
+    "resource" : {
+      "resourceType" : "Encounter",
+      "id" : "2927",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-18T08:11:13.282+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-registration-id",
+        "value" : "GG1606180117"
+      } ],
+      "status" : "arrived",
+      "class" : "outpatient",
+      "patient" : {
+        "reference" : "Patient/2925",
+        "display" : "王玉华"
+      },
+      "appointment" : {
+        "reference" : "Appointment/2926"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Encounter/2930",
+    "resource" : {
+      "resourceType" : "Encounter",
+      "id" : "2930",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-18T08:11:18.808+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-registration-id",
+        "value" : "GG1606180118"
+      } ],
+      "status" : "arrived",
+      "class" : "outpatient",
+      "patient" : {
+        "reference" : "Patient/2928",
+        "display" : "马龙"
+      },
+      "appointment" : {
+        "reference" : "Appointment/2929"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Encounter/2932",
+    "resource" : {
+      "resourceType" : "Encounter",
+      "id" : "2932",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-18T08:11:37.446+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-registration-id",
+        "value" : "GG1606180120"
+      } ],
+      "status" : "arrived",
+      "class" : "outpatient",
+      "patient" : {
+        "reference" : "Patient/2781",
+        "display" : "张琦"
+      },
+      "appointment" : {
+        "reference" : "Appointment/2931"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Encounter/2935",
+    "resource" : {
+      "resourceType" : "Encounter",
+      "id" : "2935",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-18T08:11:49.251+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-registration-id",
+        "value" : "GG1606180121"
+      } ],
+      "status" : "arrived",
+      "class" : "outpatient",
+      "patient" : {
+        "reference" : "Patient/2933",
+        "display" : "刘敬"
+      },
+      "appointment" : {
+        "reference" : "Appointment/2934"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Encounter/2939",
+    "resource" : {
+      "resourceType" : "Encounter",
+      "id" : "2939",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-18T08:12:01.178+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-registration-id",
+        "value" : "GG1606180122"
+      } ],
+      "status" : "arrived",
+      "class" : "outpatient",
+      "patient" : {
+        "reference" : "Patient/2936",
+        "display" : "王纪航"
+      },
+      "appointment" : {
+        "reference" : "Appointment/2938"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Encounter/2941",
+    "resource" : {
+      "resourceType" : "Encounter",
+      "id" : "2941",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-18T08:12:12.968+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-registration-id",
+        "value" : "GG1606180123"
+      } ],
+      "status" : "arrived",
+      "class" : "outpatient",
+      "patient" : {
+        "reference" : "Patient/759",
+        "display" : "吴然"
+      },
+      "appointment" : {
+        "reference" : "Appointment/2940"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Encounter/2949",
+    "resource" : {
+      "resourceType" : "Encounter",
+      "id" : "2949",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-18T08:13:23.354+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-registration-id",
+        "value" : "GG1606180128"
+      } ],
+      "status" : "arrived",
+      "class" : "outpatient",
+      "patient" : {
+        "reference" : "Patient/2947",
+        "display" : "肖倩"
+      },
+      "appointment" : {
+        "reference" : "Appointment/2948"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  } ]
+}

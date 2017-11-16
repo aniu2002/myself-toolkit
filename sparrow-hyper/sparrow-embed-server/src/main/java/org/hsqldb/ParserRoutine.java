@@ -87,7 +87,7 @@ public class ParserRoutine extends ParserDML {
 
                     if (e.dataType.typeCode != dataType.typeCode) {
 
-                        // error message
+                        // error services
                         throw unexpectedToken();
                     }
 
@@ -347,7 +347,7 @@ public class ParserRoutine extends ParserDML {
             if (variables[i].getColumn().getParameterMode()
                     == SchemaObject.ParameterModes.PARAM_IN) {
 
-                // todo - use more specific error message
+                // todo - use more specific error services
                 throw Error.error(ErrorCode.X_0U000);
             }
 
@@ -411,7 +411,7 @@ public class ParserRoutine extends ParserDML {
             if (targets[i].getColumn().getParameterMode()
                     == SchemaObject.ParameterModes.PARAM_IN) {
 
-                // todo - use more specific error message
+                // todo - use more specific error services
                 throw Error.error(ErrorCode.X_0U000);
             }
 
@@ -470,7 +470,7 @@ public class ParserRoutine extends ParserDML {
             if (col.getParameterMode()
                     == SchemaObject.ParameterModes.PARAM_IN) {
 
-                // todo - use more specific error message
+                // todo - use more specific error services
                 throw Error.error(ErrorCode.X_0U000,
                                   col.getName().statementName);
             }
@@ -1394,7 +1394,7 @@ public class ParserRoutine extends ParserDML {
         if (!routine.isTrigger() && isSimpleName() && !isReservedKey()) {
             label = readNewSchemaObjectName(SchemaObject.LABEL, false);
 
-            // todo - improved error message
+            // todo - improved error services
             if (token.tokenType != Tokens.COLON) {
                 throw unexpectedToken(label.getNameString());
             }

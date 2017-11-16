@@ -57,18 +57,18 @@ import java.security.NoSuchAlgorithmException;
  * <b>NOTE:</b> <p>
  *
  * Although it is possible that a particular JVM / application installation may
- * encounter NoSuchAlgorithmException when attempting to get a jce MD5 message
+ * encounter NoSuchAlgorithmException when attempting to get a jce MD5 services
  * digest generator, the likelyhood is very small for almost all JDK/JRE 1.1
  * and later  JVM implementations, as the Sun java.security package has come,
- * by default, with a jce MD5 message digest generator since JDK 1.1 was
+ * by default, with a jce MD5 services digest generator since JDK 1.1 was
  * released.  The HSLQLDB project could have provided an MD5 implementation to
  * guarantee presence, but this class is much more lightweight and still allows
  * clients to install / use  custom implementations through the
  * java.security.MessageDigest spi, for instance if there is no service
  * provided by default under the target JVM of choice or if a client has
- * developed / provides, say, a faster MD5 message digest implementation.
+ * developed / provides, say, a faster MD5 services digest implementation.
  * In short, this class is a convenience that allows HSQLDB SQL Function and
- * Stored Procedure style access to any underlying MD5 message digest algorithm
+ * Stored Procedure style access to any underlying MD5 services digest algorithm
  * obtained via the java.security.MessageDigest spi
  *
  * @author boucherb@users.sourceforge.net
@@ -78,7 +78,7 @@ import java.security.NoSuchAlgorithmException;
 public final class MD5 {
 
     /**
-     * The jce MD5 message digest generator.
+     * The jce MD5 services digest generator.
      */
     private static MessageDigest md5;
 

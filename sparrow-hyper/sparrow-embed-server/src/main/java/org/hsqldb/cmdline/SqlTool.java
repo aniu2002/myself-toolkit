@@ -281,7 +281,7 @@ public class SqlTool {
      *
      * @param arg  Run "java... org.hsqldb.cmdline.SqlTool --help" for syntax.
      * @throws SqlToolException  Upon any fatal error, with useful
-     *                          reason as the exception's message.
+     *                          reason as the exception's services.
      */
     public static void objectMain(String[] arg) throws SqlToolException {
         logger.finer("Invoking SqlTool");
@@ -521,7 +521,7 @@ public class SqlTool {
                     // My best guess is that the encoding here will be however
                     // we read the SQL text from the command-line, which will
                     // be the platform default encoding.  Therefore, don't
-                    // specify an encoding for this pipe.
+                    // specify an encoding for this services.
                     try {
                         tmpWriter.write(sqlText + LS);
                         tmpWriter.flush();

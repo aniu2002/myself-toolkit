@@ -67,13 +67,6 @@ public class MapperGenerator {
         return new File(file, name + ".java");
     }
 
-    public static File getPackFile(String base, String pack, String name) {
-        File file = new File(base, getFilePath(pack));
-        if (!file.exists())
-            file.mkdirs();
-        return new File(file, name);
-    }
-
     static void setColumnType(TableColumn column, int sqlType, int columnSize,
                               int decimalDigits) {
         Class<?> rv = String.class;

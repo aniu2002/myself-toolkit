@@ -25,7 +25,7 @@ package com.au.app.modules;
 /*
  
  	Tasks of Stress
- 		- accept conneciton of controller
+ 		- accept conneciton of web
  		- open remote connections to given tested server
  		- on successful connection, start playing a stream
  
@@ -53,7 +53,7 @@ public class Stress implements IModule
 	public int counter;
 	public int streamId;
 	
-	// client - controller client
+	// client - web client
 	// testedUrl - url of tested server
 
 	public Client client;
@@ -187,7 +187,7 @@ public class Stress implements IModule
 		
 	}
 	/**
-	 * Invoke from controller
+	 * Invoke from web
 	 * @param eventX event
 	 */
 	

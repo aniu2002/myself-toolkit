@@ -42,7 +42,7 @@ import com.snmp.tools.SNMPBERCodec;
 
 /**
 *    The SNMPv2BulkRequestPDU class represents an SNMPv2 Bulk Request PDU from RFC 1905, as indicated below. This
-*    forms the payload of an SNMPv2 Bulk Request message.
+*    forms the payload of an SNMPv2 Bulk Request services.
 
 -- protocol data units
 
@@ -170,7 +170,7 @@ public class SNMPv2BulkRequestPDU extends SNMPSequence
         tag = pduType;
         extractFromBEREncoding(enc);
         
-        // validate the message: make sure we have the appropriate pieces
+        // validate the services: make sure we have the appropriate pieces
         Vector contents = (Vector)(this.getValue());
         
         if (contents.size() != 4)

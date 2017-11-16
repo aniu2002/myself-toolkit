@@ -1,18 +1,20 @@
 package com.sparrow.collect.task.site;
 
-import com.sparrow.collect.crawler.check.DuplicateUrlCheck;
-import com.sparrow.collect.crawler.check.UrlCheck;
+import com.sparrow.collect.cache.bloom.DuplicateUrlCheck;
+import com.sparrow.collect.cache.bloom.UrlCheck;
 import com.sparrow.collect.crawler.AbstractCrawler;
 import com.sparrow.collect.crawler.conf.pool.PoolFactory;
 import com.sparrow.collect.crawler.data.CrawlerData;
 import com.sparrow.collect.crawler.data.EntryData;
 import com.sparrow.collect.crawler.data.SiteEntry;
 import com.sparrow.collect.crawler.dom.CrawlerDom;
+import com.sparrow.collect.crawler.dom.CrawlerNode;
 import com.sparrow.collect.crawler.httpclient.CrawlKit;
 import com.sparrow.collect.crawler.httpclient.HttpResp;
 import com.sparrow.collect.crawler.selector.IPageSelector;
 import com.sparrow.collect.crawler.selector.MultiExpressSelector;
 import com.sparrow.collect.crawler.selector.NormalPageSelector;
+import com.sparrow.collect.crawler.selector.SelectType;
 import com.sparrow.collect.utils.CollectionUtils;
 import com.sparrow.collect.utils.FileIOUtil;
 import com.sparrow.collect.utils.PathResolver;
@@ -36,6 +38,7 @@ public class SiteCrawler extends AbstractCrawler {
     final UrlCheck urlCheck;
 
     private String ignoreList[];
+    private String acceptList[];
     private AtomicLong counter = new AtomicLong(0);
 
     private boolean singleThread = true;
@@ -176,13 +179,20 @@ public class SiteCrawler extends AbstractCrawler {
         try {
             if (StringUtils.isEmpty(crawlerData.getHtml()))
                 return;
-            CrawlerDom dom = this.createCrawlerDom(crawlerData);
-            crawlerData.setDom(dom);
-            if (StringUtils.isNotEmpty(siteEntry.getContentExpress())) {
-                crawlerData.setContent(dom.text(siteEntry.getContentExpress()));
-            }
+            CrawlerDom dom = this.createCrDom(crawlerData);
             IPageSelector curSelector = this.getSelector();
             List<EntryData> entries = curSelector.selectPageEntries(dom, pageEntry);
+            crawlerData.setDom(dom);
+            boolean setIt = false;
+            if (StringUtils.isNotEmpty(siteEntry.getContentExpress())) {
+                CrawlerNode node = dom.selectNode(siteEntry.getContentExpress());
+                if (node != null) {
+                    crawlerData.setContent(node.html());
+                    setIt = true;
+                }
+            }
+            if (!setIt)
+                crawlerData.setContent(dom.toHtml());
             this.storeCrawlerData(crawlerData, siteEntry, pageEntry);
 /*            System.out.println(" --- " + crawlerData.getUrl());
             for (EntryData en : entries)
@@ -204,6 +214,7 @@ public class SiteCrawler extends AbstractCrawler {
             return;
         }
         String siteHost = this.host;
+        logger.info(" Host set : {} ", siteHost);
         for (EntryData en : entries) {
             if (StringUtils.isEmpty(en.getUrl())) {
                 continue;
@@ -224,11 +235,12 @@ public class SiteCrawler extends AbstractCrawler {
                     if (logger.isWarnEnabled())
                         logger.warn("url {} has crawled", str);
                     continue;
-                } else if (!this.hasFile(str)) {
-                    if (logger.isWarnEnabled())
-                        logger.warn("url {} has not file", str);
-                    continue;
                 }
+                /** else if (!this.hasFile(str)) {
+                 if (logger.isWarnEnabled())
+                 logger.warn("url {} is not file", str);
+                 continue;
+                 }*/
                 en.setUrl(str);
                 en.setDeep(crawlEntry.getDeep() + 1);
                 this.crawlNextSeed(en);
@@ -245,9 +257,31 @@ public class SiteCrawler extends AbstractCrawler {
     }
 
     public void crawlNextSeed(EntryData entryData) {
-        if (this.skipCrawlUrl(entryData.getUrl()))
+        if (this.ignoreEntry(entryData))
             return;
         this.handleDetail(entryData, this.siteEntry, entryData);
+    }
+
+    protected boolean ignoreEntry(EntryData entryData) {
+        String type = entryData.getPageType();
+        logger.info(" --@@####-- Page type : {}", type);
+        if (StringUtils.equals(type, IPageSelector.CSS.type)
+                || StringUtils.equals(type, IPageSelector.IMG.type)
+                || StringUtils.equals(type, IPageSelector.SCRIPT.type))
+            return false;
+        String url = entryData.getUrl();
+        boolean notAct = !this.acceptCrawlUrl(url);
+        if (this.skipCrawlUrl(url) && notAct)
+            return true;
+        return false;
+    }
+
+    public String[] getAcceptList() {
+        return acceptList;
+    }
+
+    public void setAcceptList(String[] acceptList) {
+        this.acceptList = acceptList;
     }
 
     boolean skipCrawlUrl(String url) {
@@ -255,7 +289,18 @@ public class SiteCrawler extends AbstractCrawler {
         if (igl == null || igl.length == 0)
             return false;
         for (String s : igl) {
-            if (StringUtils.equals(s, url))
+            if (StringUtils.equals(s, url) || StringUtils.startsWith(url, s))
+                return true;
+        }
+        return false;
+    }
+
+    boolean acceptCrawlUrl(String url) {
+        String igl[] = this.acceptList;
+        if (igl == null || igl.length == 0)
+            return false;
+        for (String s : igl) {
+            if (StringUtils.equals(s, url) || StringUtils.startsWith(url, s))
                 return true;
         }
         return false;
@@ -297,7 +342,9 @@ public class SiteCrawler extends AbstractCrawler {
             }
             CrawlerData data = new CrawlerData();
             data.setHtml(resp.getHtml());
+            data.setContent(data.getHtml());
             data.setTitle(entry.getTitle());
+            data.setContentType(resp.getContentType());
             data.setUrl(entry.getUrl());
             data.setPageType(entry.getPageType());
             return data;
@@ -306,7 +353,6 @@ public class SiteCrawler extends AbstractCrawler {
                 String path = this.getSavePath(entry.getUrl());
                 this.kit.saveStream(entry.getUrl(),
                         new File(this.rootDir, path), headers);
-                //System.out.println(String.format("--- %s -> %s", suffix, path));
             } catch (Throwable t) {
                 System.out.println(" exception : " + entry.getUrl());
             }
@@ -353,10 +399,36 @@ public class SiteCrawler extends AbstractCrawler {
                    EntryData pageEntry) {
         String path = this.getSavePath(crawlerData.getUrl());
         if (StringUtils.isNotEmpty(path)) {
+            String html = crawlerData.getContent();
+            /**
+             if (crawlerData.getDom() != null && StringUtils.isNotEmpty(siteEntry.getContentExpress()))
+             html = crawlerData.getDom().selectNode(siteEntry.getContentExpress()).html();
+             else
+             html = crawlerData.getDom().toHtml();*/
             // System.out.println(String.format("--- html -> %s", path));
+            System.out.println(" Content Type : " + crawlerData.getContentType());
+            String suffix = "html";
+            if (StringUtils.indexOf(crawlerData.getContentType(), "json") != -1)
+                suffix = "json";
+            else if (StringUtils.indexOf(crawlerData.getContentType(), "text/plain") != -1)
+                suffix = "text";
+            else if (StringUtils.indexOf(crawlerData.getContentType(), "txt/plain") != -1)
+                suffix = "txt";
+            else if (StringUtils.indexOf(crawlerData.getContentType(), "xml") != -1)
+                suffix = "xml";
+            else if (StringUtils.indexOf(crawlerData.getContentType(), "rss") != -1)
+                suffix = "rss";
+            else if (StringUtils.indexOf(crawlerData.getContentType(), "md") != -1)
+                suffix = "md";
+            else if (StringUtils.indexOf(crawlerData.getContentType(), "css") != -1)
+                suffix = "css";
+            else if (StringUtils.indexOf(crawlerData.getContentType(), "js") != -1)
+                suffix = "js";
+            else if (StringUtils.indexOf(crawlerData.getContentType(), "javascript") != -1)
+                suffix = "js";
             FileIOUtil.writeFile(
-                    new File(this.rootDir, path),
-                    crawlerData.getDom().toHtml(), "UTF-8"
+                    new File(this.rootDir, path + "." + suffix),
+                    html, "UTF-8"
             );
         }
     }

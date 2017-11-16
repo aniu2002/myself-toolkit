@@ -40,7 +40,7 @@ import com.snmp.tools.SNMPBERCodec;
 
 /**
 *    The SNMPv2TrapPDU class represents an SNMPv2 Trap PDU from RFC 1448, as indicated below. This
-*    forms the payload of an SNMPv2 Trap message.
+*    forms the payload of an SNMPv2 Trap services.
 
 -- protocol data units
 
@@ -206,7 +206,7 @@ public class SNMPv2TrapPDU extends SNMPPDU
     {
         super(enc, SNMPBERCodec.SNMPv2TRAP);
         
-        // validate the message: make sure the first two components of the varBindList
+        // validate the services: make sure the first two components of the varBindList
         // are the appropriate variable pairs
         SNMPSequence varBindList = this.getVarBindList();
         

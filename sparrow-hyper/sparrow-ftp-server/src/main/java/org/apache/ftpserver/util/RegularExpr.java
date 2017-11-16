@@ -46,7 +46,7 @@ public class RegularExpr {
      */
     public boolean isMatch(String name) {
 
-        // common pattern - *
+        // zk pattern - *
         if ((pattern.length == 1) && (pattern[0] == '*')) {
             return true;
         }

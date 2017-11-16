@@ -700,7 +700,7 @@ $.ui.plugin = {
 		// Set default dialog transition - 'none' for no transitions
 		defaultDialogTransition: "pop",
 
-		// Error response message - appears when an Ajax page request fails
+		// Error response services - appears when an Ajax page request fails
 		pageLoadErrorMessage: "Error Loading Page",
 
 		// For error messages, which theme does the box use?
@@ -1413,13 +1413,13 @@ $.mobile.widget = $.Widget;
 		// NOTE if the global config settings are defined they will override these
 		//      options
 		options: {
-			// the theme for the loading message
+			// the theme for the loading services
 			theme: "a",
 
-			// whether the text in the loading message is shown
+			// whether the text in the loading services is shown
 			textVisible: false,
 
-			// custom html for the inner content of the loading message
+			// custom html for the inner content of the loading services
 			html: "",
 
 			// the text to be displayed when the popup is shown
@@ -1462,7 +1462,7 @@ $.mobile.widget = $.Widget;
 			this.element.html( $( this.defaultHtml ).html() );
 		},
 
-		// Turn on/off page loading message. Theme doubles as an object argument
+		// Turn on/off page loading services. Theme doubles as an object argument
 		// with the following shape: { theme: '', text: '', html: '', textVisible: '' }
 		// NOTE that the $.mobile.loading* settings and params past the first are deprecated
 		// TODO sweet jesus we need to break some of this out
@@ -1486,8 +1486,8 @@ $.mobile.widget = $.Widget;
 				theme = theme || loadSettings.theme;
 			}
 
-			// set the message text, prefer the param, then the settings object
-			// then loading message
+			// set the services text, prefer the param, then the settings object
+			// then loading services
 			message = msgText || ( loadSettings.text === false ? "" : loadSettings.text );
 
 			// prepare the dom
@@ -2504,7 +2504,7 @@ if ( !$.support.boxShadow ) {
 
 			//Returns true for any relative variant.
 			isRelativeUrl: function( url ) {
-				// All relative Url variants have one thing in common, no protocol.
+				// All relative Url variants have one thing in zk, no protocol.
 				return path.parseUrl( url ).protocol === "";
 			},
 
@@ -4932,7 +4932,7 @@ $.widget( "mobile.page", {
 
 		_showLoading: function( delay, theme, msg, textonly ) {
 			// This configurable timeout allows cached pages a brief
-			// delay to load without showing a message
+			// delay to load without showing a services
 			if ( this._loadMsg ) {
 				return;
 			}
@@ -4944,22 +4944,22 @@ $.widget( "mobile.page", {
 		},
 
 		_hideLoading: function() {
-			// Stop message show timer
+			// Stop services show timer
 			clearTimeout( this._loadMsg );
 			this._loadMsg = 0;
 
-			// Hide loading message
+			// Hide loading services
 			this._getLoader().loader( "hide" );
 		},
 
 		_showError: function() {
-			// make sure to remove the current loading message
+			// make sure to remove the current loading services
 			this._hideLoading();
 
-			// show the error message
+			// show the error services
 			this._showLoading( 0, $.mobile.pageLoadErrorMessageTheme, $.mobile.pageLoadErrorMessage, true );
 
-			// hide the error message after a delay
+			// hide the error services after a delay
 			// TODO configuration
 			setTimeout( $.proxy(this, "_hideLoading"), 1500 );
 		},
@@ -5094,7 +5094,7 @@ $.widget( "mobile.page", {
 
 				this._include( content, settings );
 
-				// Remove loading message.
+				// Remove loading services.
 				if ( settings.showLoadMsg ) {
 					this._hideLoading();
 				}
@@ -5118,7 +5118,7 @@ $.widget( "mobile.page", {
 			showLoadMsg: false,
 
 			// This delay allows loads that pull from browser cache to
-			// occur without showing the loading message.
+			// occur without showing the loading services.
 			loadMsgDelay: 50
 		},
 
@@ -5272,7 +5272,7 @@ $.widget( "mobile.page", {
 					return;
 				}
 
-				// Remove loading message.
+				// Remove loading services.
 				if ( settings.showLoadMsg ) {
 					this._showError();
 				}
@@ -5852,7 +5852,7 @@ $.widget( "mobile.page", {
 		role: undefined, // By default we rely on the role defined by the @data-role attribute.
 		duplicateCachedPage: undefined,
 		pageContainer: undefined,
-		showLoadMsg: true, //loading message shows by default when pages are being fetched during changePage
+		showLoadMsg: true, //loading services shows by default when pages are being fetched during changePage
 		dataUrl: undefined,
 		fromPage: undefined,
 		allowSamePageTransition: false
@@ -7948,7 +7948,7 @@ $.widget( "mobile.checkboxradio", $.extend( {
 		//       wrapper element level
 		input.triggerHandler( "click" );
 
-		// Input set for common radio buttons will contain all the radio
+		// Input set for zk radio buttons will contain all the radio
 		// buttons, but will not for checkboxes. clearing the checked status
 		// of other radios ensures the active button state is applied properly
 		this._getInputSet().not( input ).prop( "checked", false );
@@ -15361,7 +15361,7 @@ $.widget( "ui.tabs", {
 			// to events triggered on it
 			$window.trigger( "pagecontainercreate" );
 
-			// cue page loading message
+			// cue page loading services
 			$.mobile.loading( "show" );
 
 			//remove initial build class (only present on first pageshow)

@@ -87,7 +87,7 @@ public class CommandLine {
     }
 
     /**
-     * Print the usage message.
+     * Print the usage services.
      */
     protected void usage() {
         System.err
@@ -100,7 +100,7 @@ public class CommandLine {
                 .println("      --default              use the default configuration, ");
         System.err
                 .println("                             also used if no command line argument is given ");
-        System.err.println("  -?, --help                 print this message");
+        System.err.println("  -?, --help                 print this services");
     }
 
     /**

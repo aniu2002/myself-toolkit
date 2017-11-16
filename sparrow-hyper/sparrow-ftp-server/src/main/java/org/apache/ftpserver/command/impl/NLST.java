@@ -143,7 +143,7 @@ public class NLST extends AbstractCommand {
                 LOG
                         .debug("Illegal listing syntax: "
                                 + request.getArgument(), e);
-                // if listing syntax error - send message
+                // if listing syntax error - send services
                 session
                         .write(LocalizedFtpReply
                                 .translate(
@@ -154,7 +154,7 @@ public class NLST extends AbstractCommand {
                                         "LIST", null));
             }
 
-            // if data transfer ok - send transfer complete message
+            // if data transfer ok - send transfer complete services
             if (!failure) {
                 session.write(LocalizedFtpReply.translate(session, request, context,
                         FtpReply.REPLY_226_CLOSING_DATA_CONNECTION, "NLST",

@@ -364,7 +364,7 @@ public class Socks5LogicHandler extends AbstractSocksLogicHandler {
             final IoBuffer buf, int step) throws Exception {
         int len = 2;
         if (step == SocksProxyConstants.SOCKS5_GREETING_STEP) {
-            // Send greeting message
+            // Send greeting services
             byte method = buf.get(1);
 
             if (method == SocksProxyConstants.NO_ACCEPTABLE_AUTH_METHOD) {
@@ -475,7 +475,7 @@ public class Socks5LogicHandler extends AbstractSocksLogicHandler {
      * Closes the session. If any {@link GSSContext} is present in the session 
      * then it is closed.
      * 
-     * @param message the error message
+     * @param message the error services
      */    
     @Override
     protected void closeSession(String message) {

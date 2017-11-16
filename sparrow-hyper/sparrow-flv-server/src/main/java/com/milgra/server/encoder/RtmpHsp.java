@@ -59,7 +59,7 @@ public class RtmpHsp extends OProcess
 	
 	/**
 	 * Creates a RtmpHsp instane
-	 * @param controllerX the socket controller instance
+	 * @param controllerX the socket web instance
 	 */	
 	
 	public RtmpHsp ( SocketController controllerX )
@@ -100,7 +100,7 @@ public class RtmpHsp extends OProcess
 	public void step ( )
 	{
 		
-		// System.out.println( System.currentTimeMillis( ) + " " + controller.id + " RtmpHsp.step" );
+		// System.out.println( System.currentTimeMillis( ) + " " + web.id + " RtmpHsp.step" );
 		
 		try
 		{
@@ -124,7 +124,7 @@ public class RtmpHsp extends OProcess
 	public void receiveStamp ( ) throws IOException
 	{
 			
-		//System.out.println( System.currentTimeMillis( ) + " " + controller.id + " RtmpHsp.receiveStamp" );
+		//System.out.println( System.currentTimeMillis( ) + " " + web.id + " RtmpHsp.receiveStamp" );
 
 		try 
 		{
@@ -163,7 +163,7 @@ public class RtmpHsp extends OProcess
 	public void sendAnswer ( ) throws IOException
 	{
 		
-		// System.out.println( System.currentTimeMillis( ) + " " + controller.id + " RtmpHsp.sendAnswer " + 3073 );
+		// System.out.println( System.currentTimeMillis( ) + " " + web.id + " RtmpHsp.sendAnswer " + 3073 );
 		
 		try
 		{

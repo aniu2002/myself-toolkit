@@ -2887,7 +2887,7 @@ public class ParserDQL extends ParserBase {
 
     /**
      *     <value expression> ::=
-     *   <common value expression>
+     *   <zk value expression>
      *   | <boolean value expression>
      *   | <row value expression>
      *
@@ -3980,14 +3980,14 @@ public class ParserDQL extends ParserBase {
 
             if (args.length != degree) {
 
-                // SQL error message
+                // SQL error services
                 throw unexpectedToken();
             }
 
             for (int j = 0; j < degree; j++) {
                 if (args[j].getType() == OpTypes.ROW) {
 
-                    // SQL error message
+                    // SQL error services
                     throw unexpectedToken();
                 }
             }
@@ -5916,7 +5916,7 @@ public class ParserDQL extends ParserBase {
         if (token.namePrefix != null) {
             if (!token.namePrefix.equals(schemaName.name)) {
 
-                // todo - better error message
+                // todo - better error services
                 throw Error.error(ErrorCode.X_42505, token.namePrefix);
             }
 
@@ -5924,7 +5924,7 @@ public class ParserDQL extends ParserBase {
                 if (!token.namePrePrefix.equals(
                         database.getCatalogName().name)) {
 
-                    // todo - better error message
+                    // todo - better error services
                     throw Error.error(ErrorCode.X_42505, token.namePrefix);
                 }
             }

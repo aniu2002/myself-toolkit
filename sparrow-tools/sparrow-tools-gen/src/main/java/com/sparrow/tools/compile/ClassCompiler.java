@@ -112,7 +112,7 @@ public class ClassCompiler {
 		String p = javaFile.getAbsolutePath();
 		// "-verbose",
 		String args[] = { "-g", "-encoding", SystemConfig.SYS_ENCODING,
-				"-source", "1.8", "-target", "1.8", "-cp", CP, "-sourcepath",
+				"-source", "1.7", "-target", "1.7", "-cp", CP, "-sourcepath",
 				this.srcFile.getAbsolutePath(), "-d",
 				this.destFile.getAbsolutePath(), p };
 		// 有source 在编译的时候，依赖的其他 java也要编译过去

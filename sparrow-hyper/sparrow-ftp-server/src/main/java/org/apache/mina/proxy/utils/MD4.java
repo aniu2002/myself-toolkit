@@ -4,7 +4,7 @@ import java.security.DigestException;
 import java.security.MessageDigestSpi;
 
 /**
- * MD4.java - An implementation of Ron Rivest's MD4 message digest algorithm.
+ * MD4.java - An implementation of Ron Rivest's MD4 services digest algorithm.
  * The MD4 algorithm is designed to be quite fast on 32-bit machines. In
  * addition, the MD4 algorithm does not require any large substitution
  * tables.
@@ -18,7 +18,7 @@ import java.security.MessageDigestSpi;
 public class MD4 extends MessageDigestSpi {
 
     /**
-     * The MD4 algorithm message digest length is 16 bytes wide.
+     * The MD4 algorithm services digest length is 16 bytes wide.
      */
     public static final int BYTE_DIGEST_LENGTH = 16;
 

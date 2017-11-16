@@ -56,7 +56,7 @@ public class SocketController extends OProcess
 
 	// state indicators
 	
-	// closed - controller is closed, no more data in/out
+	// closed - web is closed, no more data in/out
 	// closeInited - we have to close in two steps
 	// closeSwitch - second close step flag
 	
@@ -117,7 +117,7 @@ public class SocketController extends OProcess
 		
 	/**
 	 * Closes socketController
-	 * @param messageX message
+	 * @param messageX services
 	 */
 	
 	public void close ( String messageX )
@@ -145,7 +145,7 @@ public class SocketController extends OProcess
 	}
 
 	/**
-	 * Connects controller to a socket channel
+	 * Connects web to a socket channel
 	 * @param socketX SocketChannel
 	 * @param modeX client mode
 	 */

@@ -44,7 +44,6 @@ public abstract class WebServer {
         this.httpServer.setPort(this.port);
 
         this.controller = new CommandController();
-
     }
 
     public final void regCommand(String path, Command command) {
@@ -73,10 +72,6 @@ public abstract class WebServer {
         String path = System.getProperty("bean.cfg.path", "classpath:eggs/beans/*.xml");
         beanContext = new BeanContext(path, watcher);
         return beanContext;
-    }
-
-    protected void customConfig() {
-
     }
 
     protected final void configHandler(String path, HttpHandler httpHandler) {
@@ -117,7 +112,6 @@ public abstract class WebServer {
         BeanContext context = this.loadCommand();
         this.configCommand(context);
         this.configHandler(context);
-        this.customConfig();
         this.httpServer.addCmdHandler("/cmd", this.controller, this.getFileUploadHandler());
         if (SystemConfig.ENABLE_SECURITY) {
             this.httpServer.addSecurityHandler("/authc", new SecurityHandler(this.getBRealm(context), "/authc", "/app/index.html"));

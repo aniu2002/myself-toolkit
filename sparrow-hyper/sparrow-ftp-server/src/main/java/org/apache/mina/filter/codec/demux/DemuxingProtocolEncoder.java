@@ -32,7 +32,7 @@ import org.apache.mina.util.CopyOnWriteMap;
 import org.apache.mina.util.IdentityHashSet;
 
 /**
- * A composite {@link ProtocolEncoder} that demultiplexes incoming message
+ * A composite {@link ProtocolEncoder} that demultiplexes incoming services
  * encoding requests into an appropriate {@link MessageEncoder}.
  *
  * <h2>Disposing resources acquired by {@link MessageEncoder}</h2>
@@ -100,7 +100,7 @@ public class DemuxingProtocolEncoder implements ProtocolEncoder {
         synchronized (type2encoderFactory) {
             if (type2encoderFactory.containsKey(messageType)) {
                 throw new IllegalStateException(
-                        "The specified message type (" + messageType.getName() + ") is registered already.");
+                        "The specified services type (" + messageType.getName() + ") is registered already.");
             }
             
             type2encoderFactory.put(messageType, factory);
@@ -134,7 +134,7 @@ public class DemuxingProtocolEncoder implements ProtocolEncoder {
             encoder.encode(session, message, out);
         } else {
             throw new UnknownMessageTypeException(
-                    "No message encoder found for message: " + message);
+                    "No services encoder found for services: " + message);
         }
     }
 
@@ -198,7 +198,7 @@ public class DemuxingProtocolEncoder implements ProtocolEncoder {
         /*
          * Make sure the encoder is added to the cache. By updating the cache
          * here all the types (superclasses and interfaces) in the path which
-         * led to a match will be cached along with the immediate message type.
+         * led to a match will be cached along with the immediate services type.
          */
         if (encoder != null) {
             state.findEncoderCache.put(type, encoder);

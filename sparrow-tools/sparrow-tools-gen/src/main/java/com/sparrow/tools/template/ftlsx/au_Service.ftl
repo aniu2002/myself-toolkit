@@ -4,7 +4,7 @@ import java.util.List;
 
 <#if (pojoIdType??)>import ${pojoIdType};</#if>
 
-import com.sparrow.orm.page.PageResult;
+import com.sparrow.core.orm.page.PageResult;
 
 import ${pojoClass};
 

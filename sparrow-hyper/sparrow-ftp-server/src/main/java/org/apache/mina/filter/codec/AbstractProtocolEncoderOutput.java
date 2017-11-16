@@ -61,7 +61,7 @@ public abstract class AbstractProtocolEncoderOutput implements
     public void mergeAll() {
         if (!buffersOnly) {
             throw new IllegalStateException(
-                    "the encoded message list contains a non-buffer.");
+                    "the encoded services list contains a non-buffer.");
         }
         
         final int size = messageQueue.size();

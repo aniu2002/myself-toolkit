@@ -109,7 +109,7 @@ import org.hsqldb.result.ResultConstants;
  * +-----------------+-------------+----------+------------------------------+
  * |    OPTION       |    TYPE     | DEFAULT  |         DESCRIPTION          |
  * +-----------------+-------------+----------+------------------------------|
- * | --help          |             |          | prints this message          |
+ * | --help          |             |          | prints this services          |
  * | --address       | name|number | any      | server inet address          |
  * | --port          | number      | 9001/544 | port at which server listens |
  * | --database.i    | [type]spec  | 0=test   | path of database i           |
@@ -674,7 +674,7 @@ public class Server implements HsqlSocketRequestHandler {
 
     /**
      * Retrieves a character sequence describing this server's current state,
-     * including the message of the last exception, if there is one and it
+     * including the services of the last exception, if there is one and it
      * is still in context.
      *
      * @return this server's state represented as a character sequence.
@@ -1089,7 +1089,7 @@ public class Server implements HsqlSocketRequestHandler {
     /**
      * Sets the PrintWriter to which server messages are logged. <p>
      *
-     * Setting this attribute to null disables server message logging
+     * Setting this attribute to null disables server services logging
      *
      * @param pw the PrintWriter to which server messages are logged
      */
@@ -1457,10 +1457,10 @@ public class Server implements HsqlSocketRequestHandler {
     }
 
     /**
-     * Prints the specified message, s, formatted to identify that the print
+     * Prints the specified services, s, formatted to identify that the print
      * operation is against this server instance.
      *
-     * @param msg The message to print
+     * @param msg The services to print
      */
     protected void print(String msg) {
 
@@ -1516,22 +1516,22 @@ public class Server implements HsqlSocketRequestHandler {
     }
 
     /**
-     * Prints the specified message, s, prepended with a timestamp representing
+     * Prints the specified services, s, prepended with a timestamp representing
      * the current date and time, formatted to identify that the print
      * operation is against this server instance.
      *
-     * @param msg the message to print
+     * @param msg the services to print
      */
     final void printWithTimestamp(String msg) {
         print(HsqlDateTime.getSystemTimeString() + " " + msg);
     }
 
     /**
-     * Prints a message formatted similarly to print(String), additionally
+     * Prints a services formatted similarly to print(String), additionally
      * identifying the current (calling) thread. Replaces old method
      * trace(String msg).
      *
-     * @param msg the message to print
+     * @param msg the services to print
      */
     protected void printWithThread(String msg) {
 
@@ -1541,11 +1541,11 @@ public class Server implements HsqlSocketRequestHandler {
     }
 
     /**
-     * Prints an error message to this Server object's errWriter.
-     * The message is formatted similarly to print(String),
+     * Prints an error services to this Server object's errWriter.
+     * The services is formatted similarly to print(String),
      * additionally identifying the current (calling) thread.
      *
-     * @param msg the message to print
+     * @param msg the services to print
      */
     protected void printError(String msg) {
 
@@ -1565,7 +1565,7 @@ public class Server implements HsqlSocketRequestHandler {
      *
      * Printing occurs iff isSilent() is false. <p>
      *
-     * The message is formatted similarly to print(String), additionally
+     * The services is formatted similarly to print(String), additionally
      * indicating the connection identifier.  <p>
      *
      * For Server instances, cid is typically the value assigned to each
@@ -2094,7 +2094,7 @@ public class Server implements HsqlSocketRequestHandler {
         printWithThread("openServerSocket() exiting");
     }
 
-    /** Prints a timestamped message indicating that this server is online */
+    /** Prints a timestamped services indicating that this server is online */
     private void printServerOnlineMessage() {
 
         String s = getProductName() + " " + getProductVersion()
@@ -2438,15 +2438,15 @@ public class Server implements HsqlSocketRequestHandler {
     }
 
     /**
-     * Prints message for the specified key, without any special
-     * formatting. The message content comes from the server
+     * Prints services for the specified key, without any special
+     * formatting. The services content comes from the server
      * resource bundle and thus may localized according to the default
      * JVM locale.<p>
      *
      * Uses System.out directly instead of Trace.printSystemOut() so it
      * always prints, regardless of Trace settings.
      *
-     * @param key for message
+     * @param key for services
      */
     protected static void printHelp(String key) {
         System.out.println(BundleHandler.getString(serverBundleHandle, key));

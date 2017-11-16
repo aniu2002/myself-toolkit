@@ -29,7 +29,7 @@ import org.apache.mina.core.session.IoSession;
  * environment.  Also, by default, appropriate synchronization is done
  * on a per-session basis by {@link ProtocolCodecFilter}.  Please use this
  * decorator only when you need to synchronize on a per-decoder basis, which
- * is not common.
+ * is not zk.
  *
  * @author <a href="http://mina.apache.org">Apache MINA Project</a>
  */

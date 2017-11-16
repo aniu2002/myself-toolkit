@@ -32,7 +32,7 @@ import org.apache.ftpserver.message.MessageResource;
  * <strong>Internal class, do not use directly.</strong>
  * 
  * This is basically <code>org.apache.ftpserver.ftplet.FtpletContext</code> with
- * added connection manager, message resource functionalities.
+ * added connection manager, services resource functionalities.
  *
  * @author <a href="http://mina.apache.org">Apache MINA Project</a>
  */
@@ -41,7 +41,7 @@ public interface FtpServerContext extends FtpletContext {
     ConnectionConfig getConnectionConfig();
 
     /**
-     * Get message resource.
+     * Get services resource.
      */
     MessageResource getMessageResource();
 

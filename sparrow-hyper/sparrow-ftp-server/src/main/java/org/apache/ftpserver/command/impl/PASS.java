@@ -223,7 +223,7 @@ public class PASS extends AbstractCommand {
             session.setLogin(fsview);
             stat.setLogin(session);
 
-            // everything is fine - send login ok message
+            // everything is fine - send login ok services
             session.write(LocalizedFtpReply.translate(session, request, context,
                     FtpReply.REPLY_230_USER_LOGGED_IN, "PASS", userName));
             if (anonymous) {

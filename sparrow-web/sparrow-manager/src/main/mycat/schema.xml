@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<!DOCTYPE mycat:schema SYSTEM "schema.dtd">
+<mycat:schema xmlns:mycat="http://org.opencloudb/">
+
+    <schema title="testdb" checkSQLschema="false" sqlMaxLimit="100">
+        <!-- auto sharding by id (long)  auto-sharding-long -->
+       <!--    <table title="test1" dataNode="dn1,dn2,dn3" rule="mod-long"/> -->
+        <table title="test_s" dataNode="dn4" rule="mod-long" />
+    </schema>
+
+    <schema title="fhir" checkSQLschema="false" sqlMaxLimit="100">
+        <!-- auto sharding by id (long)  auto-sharding-long -->
+        <table title="HFJ_FORCED_ID" dataNode="dn5"  />
+        <table title="HFJ_HISTORY_TAG" dataNode="dn5"  />
+        <table title="HFJ_RESOURCE" dataNode="dn5"  />
+        <table title="HFJ_RES_LINK" dataNode="dn5"   />
+        <table title="HFJ_RES_TAG" dataNode="dn5"  />
+        <table title="HFJ_RES_VER" dataNode="dn5"  />
+        <table title="HFJ_SEARCH" dataNode="dn5"  />
+        <table title="HFJ_SEARCH_INCLUDE" dataNode="dn5"  />
+        <table title="HFJ_SEARCH_RESULT" dataNode="dn5"  />
+        <table title="HFJ_SPIDX_COORDS" dataNode="dn5"  />
+        <table title="HFJ_SPIDX_DATE" dataNode="dn5"  />
+        <table title="HFJ_SPIDX_NUMBER" dataNode="dn5"  />
+        <table title="HFJ_SPIDX_QUANTITY" dataNode="dn5"  />
+        <table title="HFJ_SPIDX_STRING" dataNode="dn5"  />
+        <table title="HFJ_SPIDX_TOKEN" dataNode="dn5"  />
+        <table title="HFJ_SPIDX_URI" dataNode="dn5"  />
+        <table title="HFJ_SUBSCRIPTION" dataNode="dn5"  />
+        <table title="HFJ_SUBSCRIPTION_FLAG_RES" dataNode="dn5"  />
+        <table title="HFJ_SUBSCRIPTION_REST_REC" dataNode="dn5"  />
+        <table title="HFJ_TAG_DEF" dataNode="dn5"  />
+        <table title="TENANT" dataNode="dn5"  />
+        <table title="TRM_CODESYSTEM" dataNode="dn5"  />
+        <table title="TRM_CODESYSTEM_VER" dataNode="dn5"  />
+        <table title="TRM_CONCEPT" dataNode="dn5"  />
+        <table title="TRM_CONCEPT_PC_LINK" dataNode="dn5"  />
+    </schema>
+
+<!--
+    <dataNode title="dn1" dataHost="localhost1" database="testdb" />
+    <dataNode title="dn2" dataHost="localhost2" database="testdb1" />
+    <dataNode title="dn3" dataHost="localhost3" database="testdb2" /> -->
+    <dataNode title="dn4" dataHost="localhost4" database="testdb" />
+    <dataNode title="dn5" dataHost="localhost5" database="fhir" />
+
+<!--
+    <dataHost title="localhost1" maxCon="1000" minCon="1" balance="0"
+              dbType="postgres" dbDriver="jdbc">
+        <heartbeat>select 1</heartbeat>
+        <writeHost host="hostM1" url="jdbc:postgresql://127.0.0.1:5432/testdb"
+                   user="postgres" password="postgres">
+        </writeHost>
+    </dataHost>
+ 
+    <dataHost title="localhost2" maxCon="1000" minCon="1" balance="0"
+              dbType="postgres" dbDriver="jdbc">
+        <heartbeat>select 1</heartbeat>
+        <writeHost host="hostM1" url="jdbc:postgresql://127.0.0.1:5432/testdb1"
+                   user="postgres" password="postgres">
+        </writeHost>
+    </dataHost>
+
+    <dataHost title="localhost3" maxCon="1000" minCon="1" balance="0"
+              dbType="postgres" dbDriver="jdbc">
+        <heartbeat>select 1</heartbeat>
+        <writeHost host="hostM1" url="jdbc:postgresql://127.0.0.1:5432/testdb2"
+                   user="postgres" password="postgres">
+        </writeHost>
+    </dataHost>
+
+    <dataHost title="localhost4" maxCon="1000" minCon="1" balance="1"
+              writeType="0" dbType="postgres" dbDriver="jdbc" switchType="2" slaveThreshold="100">
+        <heartbeat>select 1</heartbeat>
+        <writeHost host="hostM1" url="jdbc:postgresql://192.168.2.171:5432/testdb"
+                   user="postgres" password="postgres">
+            <readHost host="hostS1" url="jdbc:postgresql://192.168.2.199:5432/testdb" user="postgres" password="postgres" />
+        </writeHost>
+        <writeHost host="hostM2" url="jdbc:postgresql://192.168.2.199:5432/testdb"
+                   user="postgres" password="postgres">
+        </writeHost>
+    </dataHost> -->
+
+    <dataHost title="localhost4" maxCon="1000" minCon="1" balance="1"
+              writeType="0" dbType="mysql" dbDriver="native" switchType="2" slaveThreshold="100">
+        <heartbeat>show slave status</heartbeat>
+        <writeHost host="hostM1" url="192.168.2.171:3306"
+                   user="root" password="123456">
+               <readHost host="hostS1" url="192.168.2.199:3306" user="root" password="123456" />
+        </writeHost>
+        <writeHost host="hostM2" url="192.168.2.199:3306"
+                   user="root" password="123456">
+        </writeHost>
+    </dataHost>
+
+    <dataHost title="localhost5" maxCon="1000" minCon="1" balance="0"
+              dbType="mysql" dbDriver="native">
+        <heartbeat>select 1</heartbeat>
+        <writeHost host="hostM1" url="192.168.2.171:3306"
+                   user="root" password="123456">
+        </writeHost>
+    </dataHost>
+</mycat:schema>

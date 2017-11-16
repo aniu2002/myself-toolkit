@@ -12,5 +12,5 @@ OR
     [--overwrite] file/path.tar[.gz] db/dir [regex1...]
     (extracts entry files to the specified db/dir).
 
-N.b. the db/base/path includes file base name, like in JDBC URLs, whereas
+N.b. the db/base/path includes file base title, like in JDBC URLs, whereas
 db/dir is a proper 'directory'.

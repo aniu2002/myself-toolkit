@@ -4,7 +4,7 @@
 <#assign location = data.location>
 <#if appInfo??>
     <div style="color: #003399;font-weight:bolder;margin-left: 6px;padding-top: 7px;">
-        ${appInfo.group} - ${appInfo.name}&nbsp;(${data.date})
+        ${appInfo.group} - ${appInfo.title}&nbsp;(${data.date})
     </div>
     <div style="margin-left: 12px;font-size:13;font-style:italic;">- 基本信息</div>
     <div style="margin-left: 24px;font-size: 12;">

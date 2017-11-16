@@ -1,7 +1,5 @@
 package com.sparrow.collect.utils;
 
-import org.apache.commons.lang3.StringUtils;
-
 public class PathResolver {
     static final String EMPTY_STRING = "";
 
@@ -44,8 +42,6 @@ public class PathResolver {
     }
 
     public static String getFilePath(String file) {
-        if (StringUtils.isEmpty(file))
-            return "";
         int x = file.lastIndexOf("/");
         // unix
         if (x >= 0) {

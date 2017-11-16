@@ -41,7 +41,7 @@ import org.hsqldb.result.ResultConstants;
 
 /**
  * Base class for HSQLDB's implementations of java.sql.Statement and
- * java.sql.PreparedStatement. Contains common members and methods.
+ * java.sql.PreparedStatement. Contains zk members and methods.
  *
  * @author fredt@usrs
  * @version 2.0.1

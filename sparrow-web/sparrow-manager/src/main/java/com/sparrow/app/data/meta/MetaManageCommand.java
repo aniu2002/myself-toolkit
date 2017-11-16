@@ -1,6 +1,5 @@
 package com.sparrow.app.data.meta;
 
-import com.sparrow.app.generator.SimpleGeneratorTool;
 import com.sparrow.common.backend.ProcessJob;
 import com.sparrow.common.backend.ProcessResult;
 import com.sparrow.common.concurrency.PoolManger;
@@ -380,7 +379,7 @@ class ProcessJobUk extends ProcessJob implements Log {
 
             SpeEnvironment.setInfoHolder(holder);
 
-            SimpleGeneratorTool gcd = new SimpleGeneratorTool();
+            GeneratorTool gcd = new GeneratorTool();
             gcd.setBasePath(this.codePath); //SystemConfig.SOURCE_DIR
             gcd.setModule(this.module);
             gcd.setLabel(this.module);

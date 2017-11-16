@@ -27,7 +27,7 @@ import org.apache.mina.core.session.IoSession;
  * because it can be a root of performance degradation in a multi-thread
  * environment.  Please use this decorator only when you need to synchronize
  * on a per-encoder basis instead of on a per-session basis, which is not
- * common.
+ * zk.
  *
  * @author <a href="http://mina.apache.org">Apache MINA Project</a>
  */

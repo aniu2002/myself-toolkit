@@ -99,7 +99,7 @@ public class DefaultReadFuture extends DefaultIoFuture implements ReadFuture {
 
     public void setRead(Object message) {
         if (message == null) {
-            throw new NullPointerException("message");
+            throw new NullPointerException("services");
         }
         setValue(message);
     }

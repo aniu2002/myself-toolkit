@@ -119,7 +119,7 @@ public class RequestResponseFilter extends WriteRequestFilter {
                 .getAttribute(RESPONSE_INSPECTOR);
         Object requestId = responseInspector.getRequestId(message);
         if (requestId == null) {
-            // Not a response message.  Ignore.
+            // Not a response services.  Ignore.
             nextFilter.messageReceived(session, message);
             return;
         }
@@ -152,11 +152,11 @@ public class RequestResponseFilter extends WriteRequestFilter {
         }
 
         if (request == null) {
-            // A response message without request. Swallow the event because
+            // A response services without request. Swallow the event because
             // the response might have arrived too late.
             if (LOGGER.isWarnEnabled()) {
                 LOGGER.warn("Unknown request ID '" + requestId
-                        + "' for the response message. Timed out already?: "
+                        + "' for the response services. Timed out already?: "
                         + message);
             }
         } else {

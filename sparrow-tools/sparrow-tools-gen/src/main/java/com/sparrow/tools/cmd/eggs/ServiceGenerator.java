@@ -426,9 +426,9 @@ public class ServiceGenerator {
                 metas.put(md.getTable().toLowerCase(), md);
             }
         }
+
         List<STable> tables = dm.getTables();
-        if (tables == null || tables.isEmpty())
-            return;
+
         // 每个table的信息
         String basePath = this.basePath;
         String suffix = this.packageName;
@@ -471,7 +471,6 @@ public class ServiceGenerator {
         List<Map<String, Object>> list = new ArrayList<Map<String, Object>>();
         List<String> srvs = new ArrayList<String>();
         String servicePackName = null;
-
         for (int i = 0; i < tables.size(); i++) {
             STable stable = tables.get(i);
             String tb = stable.getName();
@@ -746,8 +745,8 @@ public class ServiceGenerator {
 
     void generateService(String basePackage, String subPackage,
                          String pojoName, Map<String, Object> c) {
-        // this.mergeName(basePackage + ".service", subPackage);
-        String servicePack = basePackage + ".service";
+        String servicePack = this.mergeName(basePackage + ".service",
+                subPackage);
         String serviceImplPack = servicePack + ".impl";
         String service = pojoName + "Service";
         String daoPack = (String) c.get("packageName");
@@ -776,8 +775,9 @@ public class ServiceGenerator {
 
     void generateController(String basePackage, String subPackage,
                             String pojoName, Map<String, Object> c) {
-        //  this.mergeName(basePackage + ".command",  subPackage)
-        String controllerPackage = basePackage + ".command";
+        // controllerPackage
+        String controllerPackage = this.mergeName(basePackage + ".command",
+                subPackage);
         String pojoClazzName = (String) c.get("pojoClassName");
         String pojo4LowerCase = (String) c.get("table");
         pojo4LowerCase = pojo4LowerCase.toLowerCase();

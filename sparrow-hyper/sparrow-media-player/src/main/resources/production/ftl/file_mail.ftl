@@ -1,8 +1,8 @@
 <html>
 <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
-    <meta name="description" content=""/>
-    <meta name="keywords" content=""/>
+    <meta title="description" content=""/>
+    <meta title="keywords" content=""/>
     <title>抓取工程管理系统</title>
 <#if showWeb??>
     <link rel="stylesheet" href="/app/bootstrap/css/bootstrap.css" type="text/css"/>
@@ -37,7 +37,7 @@
                         <#assign appInfo = data.app>
                         <#assign location = data.location>
                         <#if appInfo??>
-                            <td align="center"> ${appInfo.name}(${appInfo.version})</td>
+                            <td align="center"> ${appInfo.title}(${appInfo.version})</td>
                             <td align="center">
                                 <#if appInfo.desc??>${appInfo.desc}</#if>
                                 <br/>

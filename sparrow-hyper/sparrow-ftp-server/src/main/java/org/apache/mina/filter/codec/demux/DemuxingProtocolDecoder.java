@@ -58,10 +58,10 @@ import org.apache.mina.filter.codec.ProtocolDecoderOutput;
  * <ul>
  * <li>{@link MessageDecoderResult#NOT_OK} - protocol violation; {@link ProtocolDecoderException}
  *                                           is raised automatically.</li>
- * <li>{@link MessageDecoderResult#NEED_DATA} - needs more data to read the whole message;
+ * <li>{@link MessageDecoderResult#NEED_DATA} - needs more data to read the whole services;
  *                                              {@link MessageDecoder#decode(IoSession, IoBuffer, ProtocolDecoderOutput)}
  *                                              will be invoked again when more data is received.</li>
- * <li>{@link MessageDecoderResult#OK} - successfully decoded a message; the candidate list will
+ * <li>{@link MessageDecoderResult#OK} - successfully decoded a services; the candidate list will
  *                                       be reset and the selection process will start over.</li>
  * </ul>
  *
@@ -161,7 +161,7 @@ public class DemuxingProtocolDecoder extends CumulativeProtocolDecoder {
                 String dump = in.getHexDump();
                 in.position(in.limit()); // Skip data
                 ProtocolDecoderException e = new ProtocolDecoderException(
-                        "No appropriate message decoder: " + dump);
+                        "No appropriate services decoder: " + dump);
                 e.setHexdump(dump);
                 throw e;
             }

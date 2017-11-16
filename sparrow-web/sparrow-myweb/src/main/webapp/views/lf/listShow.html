@@ -24,40 +24,40 @@
         <!--
         var columns=[
                 'x',
-          {name:'id',label:'ID',width:'30',render:'_idx',hidden:true,noe:true},
-          {name:'name',label:'昵称',editor:'text',vtype:'required',search:true,max:32},
-          {name:'qq',label:'QQ',editor:'text',vtype:'required',search:true,max:32},
-          {name:'sex',label:'性别',editor:'text',vtype:'required',hidden:true,max:1},
-          {name:'age',label:'年龄',render:'number',editor:'text',vtype:'required',hidden:true,max:11},
-          {name:'bra',label:'罩B',editor:'text',vtype:'required',hidden:true,max:1},
-          {name:'phone',label:'手机',editor:'text',vtype:'required',max:32},
-          {name:'province',label:'省',editor:'text',vtype:'required',hidden:true,max:32},
-          {name:'city',label:'市',editor:'text',vtype:'required',hidden:true,max:32},
-          {name:'district',label:'区域',editor: 'select', src:'dist-f', search: true,vtype:'required',max:32},
-          {name:'refereeName',label:'上报人',editor:'text',vtype:'required',max:32},
-          {name:'refereeQq',label:'上报qq',editor:'text',vtype:'required',hidden:true,max:32},
-          {name:'priceP',label:'价格P',render:'number',editor:'text',vtype:'required',max:11},
-          {name:'pricePp',label:'价格PP',render:'number',editor:'text',vtype:'required',max:11},
-          {name:'priceDesc',label:'价格描述',editor:'text',vtype:'required',hidden:true,max:64},
-          {name:'simpleDesc',label:'描述',editor:'text',vtype:'required',hidden:true,max:128},
-          {name:'special',label:'特长',editor:'text',vtype:'required',max:64},
-          {name:'checked',label:'体验',max:11,render:function(v){
+          {title:'id',label:'ID',width:'30',render:'_idx',hidden:true,noe:true},
+          {title:'title',label:'昵称',editor:'text',vtype:'required',search:true,max:32},
+          {title:'qq',label:'QQ',editor:'text',vtype:'required',search:true,max:32},
+          {title:'sex',label:'性别',editor:'text',vtype:'required',hidden:true,max:1},
+          {title:'age',label:'年龄',render:'number',editor:'text',vtype:'required',hidden:true,max:11},
+          {title:'bra',label:'罩B',editor:'text',vtype:'required',hidden:true,max:1},
+          {title:'phone',label:'手机',editor:'text',vtype:'required',max:32},
+          {title:'province',label:'省',editor:'text',vtype:'required',hidden:true,max:32},
+          {title:'city',label:'市',editor:'text',vtype:'required',hidden:true,max:32},
+          {title:'district',label:'区域',editor: 'select', src:'dist-f', search: true,vtype:'required',max:32},
+          {title:'refereeName',label:'上报人',editor:'text',vtype:'required',max:32},
+          {title:'refereeQq',label:'上报qq',editor:'text',vtype:'required',hidden:true,max:32},
+          {title:'priceP',label:'价格P',render:'number',editor:'text',vtype:'required',max:11},
+          {title:'pricePp',label:'价格PP',render:'number',editor:'text',vtype:'required',max:11},
+          {title:'priceDesc',label:'价格描述',editor:'text',vtype:'required',hidden:true,max:64},
+          {title:'simpleDesc',label:'描述',editor:'text',vtype:'required',hidden:true,max:128},
+          {title:'special',label:'特长',editor:'text',vtype:'required',max:64},
+          {title:'checked',label:'体验',max:11,render:function(v){
               if(v==1)
                  return '<div style="background-color:#ff564d;text-align: center;">√</div>';
               else
                  return '&nbsp;';
           }},
-          {name:'leval',label:'级别',editor:'select',src:'leval',vtype:'required',search:true,max:11,render:'$',wrap:function(t,v){
+          {title:'leval',label:'级别',editor:'select',src:'leval',vtype:'required',search:true,max:11,render:'$',wrap:function(t,v){
               if(v==0)
                  return '<div style="background-color:#bbbbbb;text-align: center;"><font color="red" >'+t+'</font></div>';
               else
                  return t;
           }},
-          {name:'comment',label:'评价',editor:'text',vtype:'required',hidden:true,max:256},
-          {name:'images',label:'图片',render:'img',editor:'text',vtype:'required',hidden:true,max:512},
-          {name:'mark',label:'标记',render:'number',editor:'text',vtype:'required',hidden:true,max:11},
-          {name:'createDate',label:'创建时间', render:'time',vtype:'required',hidden:true,width:'120px',max:19},
-          {name:'updateDate',label:'更新时间', render:'time',vtype:'required',hidden:true,max:19}
+          {title:'comment',label:'评价',editor:'text',vtype:'required',hidden:true,max:256},
+          {title:'images',label:'图片',render:'img',editor:'text',vtype:'required',hidden:true,max:512},
+          {title:'mark',label:'标记',render:'number',editor:'text',vtype:'required',hidden:true,max:11},
+          {title:'createDate',label:'创建时间', render:'time',vtype:'required',hidden:true,width:'120px',max:19},
+          {title:'updateDate',label:'更新时间', render:'time',vtype:'required',hidden:true,max:19}
 	    ];
         var _url='/cmd/lf/lf_members';
         var _baseUrl='http://127.0.0.1:9081/app';
@@ -105,19 +105,19 @@
             	canOp:true,
                 opBar: [
                     {
-                        name: '刷新',
+                        title: '刷新',
                         func: function (grid) {
                             grid.reload();
                         }
                     },
                     {
-                        name: 'Excel模板',
+                        title: 'Excel模板',
                         func: function (grid) {
                             window.open('/excel/lf-imp.xls');
                         }
                     },
                     {
-                        name: '导出数据',
+                        title: '导出数据',
                         func: function (grid) {
                             showExportDlg();
                         }
@@ -143,7 +143,7 @@
         <tr>
             <td width="80">导出模板:</td>
             <td align="left">
-                <select id="template" name="template">
+                <select id="template" title="template">
 
                 </select>
             </td>
@@ -151,7 +151,7 @@
         <tr>
             <td width="80">导出类型:</td>
             <td align="left">
-                <select id="type" name="type">
+                <select id="type" title="type">
                     <option value="xls">Excel</option>
                     <option value="csv">Csv</option>
                     <option value="txt">Txt</option>
@@ -161,7 +161,7 @@
         <tr>
             <td width="80">导出方式:</td>
             <td align="left">
-                <select id="syn" name="syn">
+                <select id="syn" title="syn">
                     <option value="false">异步导出</option>
                     <option value="true">同步导出</option>
                 </select>

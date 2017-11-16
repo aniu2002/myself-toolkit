@@ -115,7 +115,7 @@ public class RMD extends AbstractCommand {
                     FtpReply.REPLY_250_REQUESTED_FILE_ACTION_OKAY, "RMD",
                     fileName));
 
-            // write log message
+            // write log services
             String userName = session.getUser().getName();
             LOG.info("Directory remove : " + userName + " - " + fileName);
 

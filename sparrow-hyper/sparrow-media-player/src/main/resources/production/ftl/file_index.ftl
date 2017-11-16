@@ -4,8 +4,8 @@
 <head>
     <title></title>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
-    <meta name="description" content=""/>
-    <meta name="keywords" content=""/>
+    <meta title="description" content=""/>
+    <meta title="keywords" content=""/>
     <link rel="stylesheet" href="/app/bootstrap/css/bootstrap.css" type="text/css"/>
     <link rel="stylesheet" href="/app/bootstrap/css/bootstrap-responsive.css" type="text/css"/>
 </head>
@@ -43,7 +43,7 @@
             </div>
         </div>
         <div id="contentDiv" class="span10">
-            <iframe id="contentFrame" name="contentFrame" runat="server" frameborder="no" border="0" marginwidth="0"
+            <iframe id="contentFrame" title="contentFrame" runat="server" frameborder="no" border="0" marginwidth="0"
                     marginheight="0" scrolling="no" allowtransparency="yes"
                     style="width:100%;"></iframe>
         </div>

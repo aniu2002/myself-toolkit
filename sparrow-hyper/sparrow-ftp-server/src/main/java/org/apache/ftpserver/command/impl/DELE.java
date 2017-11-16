@@ -104,7 +104,7 @@ public class DELE extends AbstractCommand {
                     FtpReply.REPLY_250_REQUESTED_FILE_ACTION_OKAY, "DELE",
                     fileName));
 
-            // log message
+            // log services
             String userName = session.getUser().getName();
 
             LOG.info("File delete : " + userName + " - " + fileName);

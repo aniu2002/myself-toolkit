@@ -125,7 +125,7 @@ public class StreamRouter extends OStream
 		subscribers = null;
 		
 		writer = null;
-		controller = null;*/
+		web = null;*/
 		
 	}
 
@@ -136,7 +136,7 @@ public class StreamRouter extends OStream
 	public void enable ( )
 	{
 		
-		// System.out.println( System.currentTimeMillis( ) + " " + name + " StreamRouter.enable " + id + " controller: " + controller );
+		// System.out.println( System.currentTimeMillis( ) + " " + name + " StreamRouter.enable " + id + " web: " + web );
 
 		paused = false;
 		

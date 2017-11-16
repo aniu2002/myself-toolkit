@@ -41,7 +41,7 @@ public class ProtocolDecoderException extends ProtocolCodecException {
     }
 
     /**
-     * Constructs a new instance with the specified message.
+     * Constructs a new instance with the specified services.
      */
     public ProtocolDecoderException(String message) {
         super(message);
@@ -55,7 +55,7 @@ public class ProtocolDecoderException extends ProtocolCodecException {
     }
 
     /**
-     * Constructs a new instance with the specified message and the specified
+     * Constructs a new instance with the specified services and the specified
      * cause.
      */
     public ProtocolDecoderException(String message, Throwable cause) {
@@ -63,7 +63,7 @@ public class ProtocolDecoderException extends ProtocolCodecException {
     }
 
     /**
-     * Returns the message and the hexdump of the unknown part.
+     * Returns the services and the hexdump of the unknown part.
      */
     @Override
     public String getMessage() {
@@ -82,14 +82,14 @@ public class ProtocolDecoderException extends ProtocolCodecException {
     }
 
     /**
-     * Returns the hexdump of the unknown message part.
+     * Returns the hexdump of the unknown services part.
      */
     public String getHexdump() {
         return hexdump;
     }
 
     /**
-     * Sets the hexdump of the unknown message part.
+     * Sets the hexdump of the unknown services part.
      */
     public void setHexdump(String hexdump) {
         if (this.hexdump != null) {

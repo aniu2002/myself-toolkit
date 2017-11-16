@@ -262,7 +262,7 @@ public class DatabaseURL {
                 if (endIpv6 < 0 || endIpv6 >= endPos) {
                     return null;
 
-                    // Wish could throw something with a useful message for user
+                    // Wish could throw something with a useful services for user
                     // here.
                 }
 
@@ -293,7 +293,7 @@ public class DatabaseURL {
             if (portSeg != null) {
                 if (portSeg.length() < 2 || portSeg.charAt(0) != ':') {
 
-                    // Wish could throw something with a useful message for user
+                    // Wish could throw something with a useful services for user
                     // here.
                     return null;
                 }

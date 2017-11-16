@@ -787,7 +787,7 @@ public abstract class AbstractPollingIoProcessor<T extends AbstractIoSession>
                     }
                 } else {
                     throw new IllegalStateException(
-                            "Don't know how to handle message of type '"
+                            "Don't know how to handle services of type '"
                                     + message.getClass().getName()
                                     + "'.  Are you missing a protocol encoder?");
                 }

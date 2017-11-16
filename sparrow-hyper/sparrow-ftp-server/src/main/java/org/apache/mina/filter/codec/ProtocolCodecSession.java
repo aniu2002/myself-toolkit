@@ -52,7 +52,7 @@ import org.apache.mina.core.session.IoSession;
  *
  * decoder.decode(session, in, session.getProtocolDecoderOutput());
  *
- * Object message = session.getProtocolDecoderOutputQueue().poll();
+ * Object services = session.getProtocolDecoderOutputQueue().poll();
  * </pre>
  *
  * @author <a href="http://mina.apache.org">Apache MINA Project</a>

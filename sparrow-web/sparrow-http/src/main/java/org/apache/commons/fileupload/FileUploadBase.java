@@ -1115,7 +1115,7 @@ public abstract class FileUploadBase {
 
         /**
          * Constructs a <code>InvalidContentTypeException</code> with no
-         * detail message.
+         * detail services.
          */
         public InvalidContentTypeException() {
             // Nothing to do.
@@ -1123,9 +1123,9 @@ public abstract class FileUploadBase {
 
         /**
          * Constructs an <code>InvalidContentTypeException</code> with
-         * the specified detail message.
+         * the specified detail services.
          *
-         * @param message The detail message.
+         * @param message The detail services.
          */
         public InvalidContentTypeException(String message) {
             super(message);
@@ -1153,7 +1153,7 @@ public abstract class FileUploadBase {
         /**
          * Creates a new instance with the given cause.
          *
-         * @param pMsg       The detail message.
+         * @param pMsg       The detail services.
          * @param pException The exceptions cause.
          */
         public IOFileUploadException(String pMsg, IOException pException) {
@@ -1197,7 +1197,7 @@ public abstract class FileUploadBase {
         /**
          * Creates a new instance.
          *
-         * @param message   The detail message.
+         * @param message   The detail services.
          * @param actual    The actual number of bytes in the request.
          * @param permitted The requests size limit, in bytes.
          */
@@ -1248,7 +1248,7 @@ public abstract class FileUploadBase {
 
         /**
          * Constructs a <code>UnknownSizeException</code> with no
-         * detail message.
+         * detail services.
          */
         public UnknownSizeException() {
             super();
@@ -1256,9 +1256,9 @@ public abstract class FileUploadBase {
 
         /**
          * Constructs an <code>UnknownSizeException</code> with
-         * the specified detail message.
+         * the specified detail services.
          *
-         * @param message The detail message.
+         * @param message The detail services.
          */
         public UnknownSizeException(String message) {
             super(message);
@@ -1287,7 +1287,7 @@ public abstract class FileUploadBase {
         }
 
         /**
-         * @param message The exceptions detail message.
+         * @param message The exceptions detail services.
          * @deprecated 1.2 Replaced by
          *             {@link #SizeLimitExceededException(String, long, long)}
          */
@@ -1298,9 +1298,9 @@ public abstract class FileUploadBase {
 
         /**
          * Constructs a <code>SizeExceededException</code> with
-         * the specified detail message, and actual and permitted sizes.
+         * the specified detail services, and actual and permitted sizes.
          *
-         * @param message   The detail message.
+         * @param message   The detail services.
          * @param actual    The actual request size.
          * @param permitted The maximum permitted request size.
          */
@@ -1334,9 +1334,9 @@ public abstract class FileUploadBase {
 
         /**
          * Constructs a <code>SizeExceededException</code> with
-         * the specified detail message, and actual and permitted sizes.
+         * the specified detail services, and actual and permitted sizes.
          *
-         * @param message   The detail message.
+         * @param message   The detail services.
          * @param actual    The actual request size.
          * @param permitted The maximum permitted request size.
          */

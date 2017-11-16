@@ -27,9 +27,9 @@ final class ParseException extends Exception {
     private static final long serialVersionUID = 5355281266579392077L;
 
     /**
-     * Constructs a new exception with the specified detail message.
+     * Constructs a new exception with the specified detail services.
      *
-     * @param message the detail message.
+     * @param message the detail services.
      */
     public ParseException(String message) {
         super(message);

@@ -9,7 +9,7 @@ public class CrawlerData {
     private String content;
     private transient CrawlerDom dom;
     private String pageType;
-    private int status;
+    private String contentType;
 
     public CrawlerData() {
     }
@@ -18,12 +18,12 @@ public class CrawlerData {
         this.dom = dom;
     }
 
-    public int getStatus() {
-        return status;
+    public String getContentType() {
+        return contentType;
     }
 
-    public void setStatus(int status) {
-        this.status = status;
+    public void setContentType(String contentType) {
+        this.contentType = contentType;
     }
 
     public String getPageType() {

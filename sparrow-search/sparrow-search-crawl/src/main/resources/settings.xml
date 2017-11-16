@@ -25,7 +25,7 @@
      	<mirror>
             <id>nexus</id>
             <mirrorOf>*</mirrorOf>
-            <name>Nexus</name>
+            <title>Nexus</title>
             <url>http://192.168.3.110:8081/nexus/content/groups/public/</url>
         </mirror>
     </mirrors>
@@ -35,7 +35,7 @@
             <repositories>
                 <repository>
                     <id>nexus-local</id>
-                    <name>nexus-local</name>
+                    <title>nexus-local</title>
                     <snapshots>
                         <enabled>true</enabled>
                     </snapshots>
@@ -46,7 +46,7 @@
                 </repository>
                 <repository>
                     <id>nexus-deploy</id>
-                    <name>nexus-deploy</name>
+                    <title>nexus-deploy</title>
                     <snapshots>
                         <enabled>true</enabled>
                     </snapshots>
@@ -59,7 +59,7 @@
             <pluginRepositories>
                 <pluginRepository>
                     <id>nexus-local</id>
-                    <name>nexus-local</name>
+                    <title>nexus-local</title>
                     <snapshots>
                         <enabled>true</enabled>
                     </snapshots>
@@ -87,7 +87,7 @@
                                 </repository>-->
                 <repository>
                     <id>hortonworks</id>
-                    <name>hortonworks</name>
+                    <title>hortonworks</title>
                     <snapshots>
                         <enabled>true</enabled>
                     </snapshots>
@@ -98,7 +98,7 @@
                 </repository>
                 <repository>
                     <id>morbayjetty</id>
-                    <name>morbayjetty</name>
+                    <title>morbayjetty</title>
                     <snapshots>
                         <enabled>true</enabled>
                     </snapshots>
@@ -115,7 +115,7 @@
                  </pluginRepository>-->
                 <pluginRepository>
                     <id>repo-maven1</id>
-                    <name>maven repo1</name>
+                    <title>maven repo1</title>
                     <url>http://repo1.maven.org/maven1/</url>
                     <releases>
                         <enabled>true</enabled>
@@ -126,7 +126,7 @@
                 </pluginRepository>
                 <pluginRepository>
                     <id>repo-maven2</id>
-                    <name>maven repo2</name>
+                    <title>maven repo2</title>
                     <url>http://repo1.maven.org/maven2/</url>
                     <releases>
                         <enabled>true</enabled>
@@ -137,7 +137,7 @@
                 </pluginRepository>
                 <pluginRepository>
                     <id>nexus</id>
-                    <name>local private nexus</name>
+                    <title>local private nexus</title>
                     <url>http://maven.oschina.net/content/groups/public/</url>
                     <releases>
                         <enabled>true</enabled>

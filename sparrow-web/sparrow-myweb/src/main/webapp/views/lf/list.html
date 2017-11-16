@@ -30,52 +30,52 @@
         <!--
         var columns = [
             'x',
-            {name: 'id', label: 'ID', width: '30', hidden: false, noe: true},
-            {name: 'name', label: '昵称', editor: 'text', vtype: 'required', search: true, max: 32},
-            {name: 'qq', label: 'QQ', editor: 'text', vtype: 'required', max: 32},
-            {name: 'sex', label: '性别', editor: 'text', vtype: 'required', hidden: true, max: 1},
-            {name: 'age', label: '年龄', render: 'number', editor: 'text', vtype: 'required', hidden: true, max: 11},
-            {name: 'bra', label: '罩B', editor: 'text', vtype: 'required', hidden: true, max: 1},
-            {name: 'phone', label: '手机', editor: 'text', vtype: 'required', max: 32},
-            {name: 'province', label: '省', editor: 'text', vtype: 'required', hidden: true, max: 32},
-            {name: 'city', label: '市', editor: 'text', vtype: 'required', hidden: true, max: 32},
-            {name: 'district', label: '区域', editor: 'select', src:'dist-f', search: true,vtype: 'required', max: 32},
-            {name: 'refereeName', label: '上报人', editor: 'text', vtype: 'required', hidden: true, max: 32},
-            {name: 'refereeQq', label: '上报qq', search: true, editor: 'text', vtype: 'required', max: 32, render: function (v, d) {
+            {title: 'id', label: 'ID', width: '30', hidden: false, noe: true},
+            {title: 'title', label: '昵称', editor: 'text', vtype: 'required', search: true, max: 32},
+            {title: 'qq', label: 'QQ', editor: 'text', vtype: 'required', max: 32},
+            {title: 'sex', label: '性别', editor: 'text', vtype: 'required', hidden: true, max: 1},
+            {title: 'age', label: '年龄', render: 'number', editor: 'text', vtype: 'required', hidden: true, max: 11},
+            {title: 'bra', label: '罩B', editor: 'text', vtype: 'required', hidden: true, max: 1},
+            {title: 'phone', label: '手机', editor: 'text', vtype: 'required', max: 32},
+            {title: 'province', label: '省', editor: 'text', vtype: 'required', hidden: true, max: 32},
+            {title: 'city', label: '市', editor: 'text', vtype: 'required', hidden: true, max: 32},
+            {title: 'district', label: '区域', editor: 'select', src:'dist-f', search: true,vtype: 'required', max: 32},
+            {title: 'refereeName', label: '上报人', editor: 'text', vtype: 'required', hidden: true, max: 32},
+            {title: 'refereeQq', label: '上报qq', search: true, editor: 'text', vtype: 'required', max: 32, render: function (v, d) {
                 return d.refereeName;
             }},
-            {name: 'priceP', label: '价格P', render: 'number', editor: 'text', vtype: 'required', max: 11},
-            {name: 'pricePp', label: '价格PP', render: 'number', editor: 'text', vtype: 'required', max: 11},
-            {name: 'priceDesc', label: '价格描述', editor: 'text', vtype: 'required', hidden: true, max: 64},
-            //{name:'simpleDesc',label:'',editor:'text',vtype:'required',skipHide:true,search:true,hidden:true,max:128},
-            {name: 'special', label: '特长', editor: 'text', vtype: 'required', max: 64},
-            {name: 'checked', label: '体验', max: 11, render: function (v) {
+            {title: 'priceP', label: '价格P', render: 'number', editor: 'text', vtype: 'required', max: 11},
+            {title: 'pricePp', label: '价格PP', render: 'number', editor: 'text', vtype: 'required', max: 11},
+            {title: 'priceDesc', label: '价格描述', editor: 'text', vtype: 'required', hidden: true, max: 64},
+            //{title:'simpleDesc',label:'',editor:'text',vtype:'required',skipHide:true,search:true,hidden:true,max:128},
+            {title: 'special', label: '特长', editor: 'text', vtype: 'required', max: 64},
+            {title: 'checked', label: '体验', max: 11, render: function (v) {
                 if (v == 1)
                     return '<div style="background-color:#ff564d;text-align: center;">√</div>';
                 else
                     return '&nbsp;';
             }},
-            {name: 'leval', label: '级别', editor: 'select', src: 'leval', defVal: '', vtype: 'required', search: true, max: 11, render: '$', wrap: function (t, v) {
+            {title: 'leval', label: '级别', editor: 'select', src: 'leval', defVal: '', vtype: 'required', search: true, max: 11, render: '$', wrap: function (t, v) {
                 if (v == 0)
                     return '<div style="background-color:#bbbbbb;text-align: center;"><font color="red" >' + t + '</font></div>';
                 else
                     return t;
             }},
-            {name: 'comment', label: '评价', editor: 'text', vtype: 'required', hidden: true, max: 256},
-            {name: 'images', label: '图片', render: 'img', editor: 'text', vtype: 'required', hidden: true, max: 512},
-            {name: 'mark', label: '标记', render: 'number', editor: 'text', vtype: 'required', hidden: true, max: 11},
-            {name: 'op1', label: '图片', width: '35', align: 'left', render: function (v, data) {
+            {title: 'comment', label: '评价', editor: 'text', vtype: 'required', hidden: true, max: 256},
+            {title: 'images', label: '图片', render: 'img', editor: 'text', vtype: 'required', hidden: true, max: 512},
+            {title: 'mark', label: '标记', render: 'number', editor: 'text', vtype: 'required', hidden: true, max: 11},
+            {title: 'op1', label: '图片', width: '35', align: 'left', render: function (v, data) {
                 v = data.id;
                 var s = '<a href="#" onclick="openTransDlg(' + v + ',0)">上传</a>&nbsp;';
                 return s;
             }, noe: true},
-            {name: 'op', label: '操作', width: '90', align: 'left', render: function (v, data) {
+            {title: 'op', label: '操作', width: '90', align: 'left', render: function (v, data) {
                 v = data.id;
                 var s = '<a href="#" onclick="copyMem(' + v + ')">复制</a>&nbsp;<a href="/cmd/lf/lf_members?_t=et&id=' + v + '">编辑</a>';
                 return s;
             }, noe: true},
-            {name: 'createDate', label: '创建时间', render: 'time', vtype: 'required', hidden: true, width: '120px', max: 19},
-            {name: 'updateDate', label: '更新时间', render: 'time', vtype: 'required', hidden: true, max: 19}
+            {title: 'createDate', label: '创建时间', render: 'time', vtype: 'required', hidden: true, width: '120px', max: 19},
+            {title: 'updateDate', label: '更新时间', render: 'time', vtype: 'required', hidden: true, max: 19}
         ];
         var _url = '/cmd/lf/lf_members';
         var _baseUrl = 'http://127.0.0.1:9081/app';
@@ -160,13 +160,13 @@
                 },
                 opBar: [
                     {
-                        name: '刷新',
+                        title: '刷新',
                         func: function (grid) {
                             grid.reload();
                         }
                     } ,
                     {
-                        name: '图片导入',
+                        title: '图片导入',
                         func: function (grid) {
                             showImportDlg('importDiv', function (pop) {
                                 var data = _Form.getParas($('#importForm'));
@@ -179,19 +179,19 @@
                         }
                     },
                     {
-                        name: '数据导入',
+                        title: '数据导入',
                         func: function (grid) {
                             openTransDlg(1, 1);
                         }
                     },
                     {
-                        name: 'Excel模板',
+                        title: 'Excel模板',
                         func: function (grid) {
                             window.open('/excel/lf-imp.xls');
                         }
                     },
                     {
-                        name: '导出数据',
+                        title: '导出数据',
                         func: function (grid) {
                             showExportDlg();
                             //alert( _CRUD_.getSelectedVal(grid).length )
@@ -221,18 +221,18 @@
 </div>
 <div id="importDiv" style="display:none;margin-top:30px;width:510px;">
     <form id="importForm" method="POST" class="breadcrumb form-search" action="/cmd/lf/lf_members">
-        <input type="hidden" name="name" value="MM-XXX"/> <input type="hidden" name="qq" value="0000"/> <input
-            type="hidden" name="sex" value="F"/>
-        <input type="hidden" name="age" value="23"/> <input type="hidden" name="bra" value="A"/>
-        <input type="hidden" name="phone" value="0"/>
-        <input type="hidden" name="district" value="四川-成都-西门"/> <input type="hidden" name="refereeName" value="太子"/>
-        <input type="hidden" name="refereeQq" value="1657384963"/>
-        <input type="hidden" name="special" value="服务控"/> <input type="hidden" name="priceP" value="0"/> <input
-            type="hidden" name="pricePp" value="0"/>
-        <input type="hidden" name="leval" value="1"/> <input type="hidden" name="checked" value="0"/> <input
-            type="hidden" name="priceDesc" value="暂无"/>
-        <input type="hidden" name="simpleDesc" value="骚，值得一试"/> <input type="hidden" name="comment" value="骚，值得一试"/>
-        <textarea name="images" style="width: 400px; height: 50px;"></textarea>
+        <input type="hidden" title="title" value="MM-XXX"/> <input type="hidden" title="qq" value="0000"/> <input
+            type="hidden" title="sex" value="F"/>
+        <input type="hidden" title="age" value="23"/> <input type="hidden" title="bra" value="A"/>
+        <input type="hidden" title="phone" value="0"/>
+        <input type="hidden" title="district" value="四川-成都-西门"/> <input type="hidden" title="refereeName" value="太子"/>
+        <input type="hidden" title="refereeQq" value="1657384963"/>
+        <input type="hidden" title="special" value="服务控"/> <input type="hidden" title="priceP" value="0"/> <input
+            type="hidden" title="pricePp" value="0"/>
+        <input type="hidden" title="leval" value="1"/> <input type="hidden" title="checked" value="0"/> <input
+            type="hidden" title="priceDesc" value="暂无"/>
+        <input type="hidden" title="simpleDesc" value="骚，值得一试"/> <input type="hidden" title="comment" value="骚，值得一试"/>
+        <textarea title="images" style="width: 400px; height: 50px;"></textarea>
     </form>
 </div>
 <div id="exportDiv" style="display:none;margin-top:10px;width:510px;">
@@ -240,7 +240,7 @@
         <tr>
             <td width="80">导出模板:</td>
             <td align="left">
-                <select id="template" name="template">
+                <select id="template" title="template">
 
                 </select>
             </td>
@@ -248,7 +248,7 @@
         <tr>
             <td width="80">导出类型:</td>
             <td align="left">
-                <select id="type" name="type">
+                <select id="type" title="type">
                     <option value="xls">Excel</option>
                     <option value="csv">Csv</option>
                     <option value="txt">Txt</option>
@@ -258,7 +258,7 @@
         <tr>
             <td width="80">导出方式:</td>
             <td align="left">
-                <select id="syn" name="syn">
+                <select id="syn" title="syn">
                     <option value="false">异步导出</option>
                     <option value="true">同步导出</option>
                 </select>

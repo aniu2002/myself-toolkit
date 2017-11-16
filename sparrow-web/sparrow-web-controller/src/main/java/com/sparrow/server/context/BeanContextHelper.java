@@ -19,7 +19,7 @@ import com.sparrow.orm.session.SessionFactory;
 import com.sparrow.core.resource.clazz.ClassSearch;
 import com.sparrow.server.web.annotation.WebController;
 import com.sparrow.server.web.controller.ControllerAnnotationHelper;
-import com.sparrow.service.annotation.Repository;
+import com.sparrow.service.annotation.BeanEntity;
 import com.sparrow.service.annotation.Component;
 import com.sparrow.service.annotation.Service;
 import com.sparrow.service.config.AnnotationConfig;
@@ -77,7 +77,7 @@ public class BeanContextHelper {
                     if (reload)
                         bundleContext.removeTableDefine(claz);
                     sessionFactory.addTableCfg(claz);
-                } else if (claz.isAnnotationPresent(Repository.class)) {
+                } else if (claz.isAnnotationPresent(BeanEntity.class)) {
                     sbcfg = AnnotationHelper.getSampleConfig(claz);
                     if (reload)
                         bundleContext.removeBean(sbcfg.getId());

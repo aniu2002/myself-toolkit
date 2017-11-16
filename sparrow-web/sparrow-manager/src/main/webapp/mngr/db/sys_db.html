@@ -21,14 +21,14 @@
         <!--
         var columns=[
           'x',
-          {name:'id',label:'序号',width:'30',render:'_idx',hidden:true,noe:true},
-          {name:'name',label:'名称',width:'100'},
-          {name:'type',label:'类型',editor:'select',vtype:'required',src:"sqlType",search:true,max:32},
-          {name:'user',label:'User',editor:'text',vtype:'required',search:true,max:32},
-          {name:'driver',label:'驱动',editor:'pwd',vtype:'required',max:32},
-          {name:'url',label:'链接地址',editor:'text',vtype:'required',max:32},
-          //{name:'userEmail',label:'用户邮箱',editor:'text',vtype:'required',max:32},
-          {name:'op',label:'操作',width:'90',align:'left',render:function(v,data){
+          {title:'id',label:'序号',width:'30',render:'_idx',hidden:true,noe:true},
+          {title:'title',label:'名称',width:'100'},
+          {title:'type',label:'类型',editor:'select',vtype:'required',src:"sqlType",search:true,max:32},
+          {title:'user',label:'User',editor:'text',vtype:'required',search:true,max:32},
+          {title:'driver',label:'驱动',editor:'pwd',vtype:'required',max:32},
+          {title:'url',label:'链接地址',editor:'text',vtype:'required',max:32},
+          //{title:'userEmail',label:'用户邮箱',editor:'text',vtype:'required',max:32},
+          {title:'op',label:'操作',width:'90',align:'left',render:function(v,data){
         	  v=data.id;
         	  var s='<a href="/cmd/sys/db?_t=edit&id='+v+'">编辑</a>&nbsp;<a href="/cmd/sys/db?_t=detail&id='+v+'">详情</a>&nbsp;<a href="#" onclick="delRow('+v+')">删除</a>';
         	  return s;
@@ -59,7 +59,7 @@
             	searchEl:'#searchForm',
             	rowDblClick:rowDblClick,
             	opBar:[_CRUD_.opBar[0],_CRUD_.opBar[1], {
-                        name:'清空数据源缓存',
+                        title:'清空数据源缓存',
                         func:function(grid){
                             Common.post('/cmd/source',{_t:'clean'},function(e){
                                 alert(e.msg);

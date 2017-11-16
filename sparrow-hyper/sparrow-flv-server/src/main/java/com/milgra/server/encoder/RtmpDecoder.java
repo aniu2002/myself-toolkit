@@ -196,7 +196,7 @@ public class RtmpDecoder extends OProcess {
 
     public void getChunks() {
 
-        // System.out.println( System.currentTimeMillis() + " " + controller.client.id + " RtmpDecoder.getChunks " + buffer );
+        // System.out.println( System.currentTimeMillis() + " " + web.client.id + " RtmpDecoder.getChunks " + buffer );
 
         buffer.flip();
 

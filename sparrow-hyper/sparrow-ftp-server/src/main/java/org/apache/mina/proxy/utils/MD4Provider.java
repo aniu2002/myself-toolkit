@@ -51,7 +51,7 @@ public class MD4Provider extends Provider {
 
     /**
      * Default constructor that registers {@link MD4} as the <i>Service Provider 
-     * Interface</i> (<b>SPI</b>) of the MD4 message digest algorithm.
+     * Interface</i> (<b>SPI</b>) of the MD4 services digest algorithm.
      */
     public MD4Provider() {
         super(PROVIDER_NAME, VERSION, INFO);

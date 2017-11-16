@@ -119,8 +119,8 @@ public final class ClassLoaderFactory {
 			classLoader = new ChildFirstURLClassLoader(array, parent);
 		if (name == null)
 			classLoader.setExpress(" This is app loader ! ");
-		else if (name.equals("common"))
-			classLoader.setExpress(" This is common loader ! ");
+		else if (name.equals("zk"))
+			classLoader.setExpress(" This is zk loader ! ");
 		else if (name.equals("server"))
 			classLoader.setExpress(" This is server loader ! ");
 		else

@@ -23,9 +23,9 @@ import org.apache.mina.core.buffer.IoBuffer;
 import org.apache.mina.core.session.IoSession;
 
 /**
- * Encodes higher-level message objects into binary or protocol-specific data.
+ * Encodes higher-level services objects into binary or protocol-specific data.
  * MINA invokes {@link #encode(IoSession, Object, ProtocolEncoderOutput)}
- * method with message which is popped from the session write queue, and then
+ * method with services which is popped from the session write queue, and then
  * the encoder implementation puts encoded messages (typically {@link IoBuffer}s)
  * into {@link ProtocolEncoderOutput} by calling {@link ProtocolEncoderOutput#write(Object)}.
  * <p>
@@ -40,13 +40,13 @@ import org.apache.mina.core.session.IoSession;
 public interface ProtocolEncoder {
 
     /**
-     * Encodes higher-level message objects into binary or protocol-specific data.
+     * Encodes higher-level services objects into binary or protocol-specific data.
      * MINA invokes {@link #encode(IoSession, Object, ProtocolEncoderOutput)}
-     * method with message which is popped from the session write queue, and then
+     * method with services which is popped from the session write queue, and then
      * the encoder implementation puts encoded messages (typically {@link IoBuffer}s)
      * into {@link ProtocolEncoderOutput}.
      *
-     * @throws Exception if the message violated protocol specification
+     * @throws Exception if the services violated protocol specification
      */
     void encode(IoSession session, Object message, ProtocolEncoderOutput out)
             throws Exception;

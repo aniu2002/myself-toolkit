@@ -1,8 +1,5 @@
 package com.sparrow.collect.crawler.httpclient;
 
-import com.sparrow.collect.crawler.httpclient.proxy.ProxyInfo;
-import com.sparrow.collect.crawler.httpclient.proxy.ProxyKit;
-import org.apache.http.HttpHost;
 import org.apache.http.auth.AuthScope;
 import org.apache.http.auth.UsernamePasswordCredentials;
 import org.apache.http.client.HttpClient;
@@ -26,20 +23,25 @@ public class CrawlHttp {
     private static org.slf4j.Logger logger = org.slf4j.LoggerFactory
             .getLogger(CrawlHttp.class);
     public static final Map<String, String> headers;
+    public static final String UTF8 = "UTF-8";
+    public static final String POST = "POST";
+    public static final String GET = "GET";
+    public static final String PUT = "PUT";
+    public static final String DELETE = "DELETE";
+    public static final String FORM_ENCODING = "application/x-www-form-urlencoded";
+    public static final String JSON_ENCODING = "application/json";
     HttpClient client;
     boolean hasSetProxy = false;
 
     static {
         headers = new HashMap<String, String>();
-        headers.put("Accept",
-                "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8");
+        // headers.put("Accept", "text/html,application/xhtml+xml,application/xml,application/json;q=0.9,*/*;q=0.8");
+        headers.put("Accept", "application/json;q=0.9,*/*;q=0.8");
         headers.put("Accept-Language", "zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3");
-        headers.put("Accept-Encoding", "gzip, deflate");
         // headers.put("X-Requested-With", "XMLHttpRequest");
-        headers.put("Upgrade-Insecure-Requests", "1");
-        headers.put("Host", "www.alegev.com");
-        headers.put("User-Agent",
-                "Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0");
+        headers.put("User-Agent", "Mozilla/5.0 (Windows NT 6.3; WOW64; rv:36.0) Gecko/20100101 Firefox/36.0");
+        headers.put("Cache-Control", "no-cache");
+        headers.put("Content-Type", "application/json");
         // headers.put("Host", "www.tuicool.com");
         // headers.put("Referer", "http://www.tuicool.com/");
     }
@@ -108,12 +110,12 @@ public class CrawlHttp {
             _client = HttpTool.getHttpClient(false);
         this.setProxyHost(_client, request);
         if (logger.isInfoEnabled())
-            logger.info("$$$$ {} {}  - (charset:{},paras:{})", new Object[]{
+            logger.info("$$$$ {} {}  - (charset:{},body:{})", new Object[]{
                     request.method, request.url, request.charset, request.body});
         HttpRequestBase method = HttpTool.genHttpMethod(request);
         HttpResp resp = HttpTool.doInvokeMethod(_client, method, request.charset);
         if (logger.isInfoEnabled())
-            logger.info("Status: {} ", resp.status);
+            logger.info("Response status: {} ", resp.status);
         return resp;
     }
 
@@ -122,18 +124,10 @@ public class CrawlHttp {
     }
 
     public ByteArrayOutputStream downImage(String uri) throws IOException {
-        return this.downImage(uri, false);
-    }
-
-    public ByteArrayOutputStream downImage(String uri, boolean useProxy) throws IOException {
         HttpClient _client = this.client;
         if (_client == null)
             _client = HttpTool.getDefaultClient(false);
         HttpReq req = new HttpReq(uri);
-        if (useProxy) {
-            ProxyKit.setProxyHost(req);
-            this.setProxyHost(_client, req);
-        }
         try {
             URI tUri = URI.create(uri);
             req.addHeader("Referer", tUri.getHost());
@@ -173,8 +167,7 @@ public class CrawlHttp {
             _client.getConnectionManager().shutdown();
         }
         if (logger.isInfoEnabled())
-            logger.info("Download stream success:{} , url = {} , dest = {}",
-                    new Object[]{fg, req.url, file.getPath()});
+            logger.info("Success:{}", fg);
         return fg;
     }
 }

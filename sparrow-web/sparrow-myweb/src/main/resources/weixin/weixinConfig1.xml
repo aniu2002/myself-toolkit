@@ -111,13 +111,13 @@
         <entry key="subscribe" msg="#index"/>
         <!-- menu click -->
         <entry key="click" msg="#default">
-            <rule name="1" msg="#tks"/>
-            <rule name="2" msg="#songs"/>
-            <rule name="3" msg="#binding"/>
-            <rule name="7" msg="#updateInfo"/>
+            <rule title="1" msg="#tks"/>
+            <rule title="2" msg="#songs"/>
+            <rule title="3" msg="#binding"/>
+            <rule title="7" msg="#updateInfo"/>
         </entry>
         <entry key="view" msg="#default">
-            <rule name="1" msg="#!"/>
+            <rule title="1" msg="#!"/>
         </entry>
         <entry key="location" msg="#!"/>
         <entry key="unsubscribe" msg="#!"/>
@@ -133,16 +133,16 @@
         <entry key="event" ref-tag="delegate"/>
         <entry key="text" msg="#index">
             <!-- msg="#typeReplay" -->
-            <rule name="?" msg="#index"/>
-            <rule name="1" msg="#brands"/>
-            <rule name="2" msg="#simJoke"/>
-            <rule name="3" msg="#sexyMsg"/>
-            <rule name="4" msg="#news"/>
-            <rule name="+" msg="#joke"/>
-            <rule name="-" msg="#blogNews"/>
-            <rule name="*" msg="#linkx"/>
-            <rule name="tl" msg="#tuLing"/>
-            <rule name="weather" msg="#weather"/>
+            <rule title="?" msg="#index"/>
+            <rule title="1" msg="#brands"/>
+            <rule title="2" msg="#simJoke"/>
+            <rule title="3" msg="#sexyMsg"/>
+            <rule title="4" msg="#news"/>
+            <rule title="+" msg="#joke"/>
+            <rule title="-" msg="#blogNews"/>
+            <rule title="*" msg="#linkx"/>
+            <rule title="tl" msg="#tuLing"/>
+            <rule title="weather" msg="#weather"/>
         </entry>
     </dispatch>
 </config>

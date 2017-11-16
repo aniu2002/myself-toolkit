@@ -83,11 +83,11 @@ public class XmdPojoGenerateTask {
 
 	public static void main(String args[]) {
 		XmdPojoGenerateTask task = new XmdPojoGenerateTask();
-		task.setBasePath("D:\\workspace\\_code\\sparrow-egg\\sparrow-web\\sparrow-myweb\\src\\main\\java");
-		task.setPackageName("com.sparrow.app.information");
+		task.setBasePath("E:\\workspace\\copu-backend\\cornucopia-bps-pojo\\src\\main\\java");
+		task.setPackageName("com.dili.dd.cornucopia.bps.domain");
 		task.setTableFilter("*");
 		task.setJdbcConfig("classpath:conf/config4mysql.properties");
-		task.setClearBefore(false);
+		task.setClearBefore(true);
 		task.execute();
 	}
 }

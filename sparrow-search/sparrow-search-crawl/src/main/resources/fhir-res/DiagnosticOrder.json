@@ -1,0 +1,2217 @@
+{
+  "resourceType" : "Bundle",
+  "id" : "9a6b4860-7c2e-4d93-a90d-bc7085604140",
+  "meta" : {
+    "lastUpdated" : "2017-05-11T17:57:19.443+08:00"
+  },
+  "type" : "searchset",
+  "total" : 23081,
+  "link" : [ {
+    "relation" : "self",
+    "url" : "http://10.10.15.38:8083/resources/DiagnosticOrder?_count=50"
+  }, {
+    "relation" : "next",
+    "url" : "http://10.10.15.38:8083/resources?_getpages=e0399927-c49b-4adf-88d4-a3813ff914e3&_getpagesoffset=50&_count=50&_bundletype=searchset"
+  } ],
+  "entry" : [ {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticOrder/19957",
+    "resource" : {
+      "resourceType" : "DiagnosticOrder",
+      "id" : "19957",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-22T14:29:48.709+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/order-date",
+        "valueDateTime" : "2015-01-02T01:02:03"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inspection-order-id",
+        "value" : "1"
+      } ],
+      "status" : "proposed",
+      "priority" : "routine",
+      "item" : [ {
+        "code" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/inspection-type",
+            "code" : "1"
+          } ]
+        },
+        "bodySite" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/part-code",
+            "code" : "2"
+          } ]
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticOrder/115774",
+    "resource" : {
+      "resourceType" : "DiagnosticOrder",
+      "id" : "115774",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-27T11:24:47.806+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/order-date",
+        "valueDateTime" : "2015-01-02T01:02:03"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inspection-order-id",
+        "value" : "1"
+      } ],
+      "status" : "proposed",
+      "priority" : "routine",
+      "item" : [ {
+        "code" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/inspection-type",
+            "code" : "1"
+          } ]
+        },
+        "bodySite" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/part-code",
+            "code" : "2"
+          } ]
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticOrder/115778",
+    "resource" : {
+      "resourceType" : "DiagnosticOrder",
+      "id" : "115778",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-27T11:26:07.236+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/order-date",
+        "valueDateTime" : "2016-06-27T00:00:00"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inspection-order-id",
+        "value" : "JC1606270016"
+      } ],
+      "status" : "proposed"
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticOrder/115784",
+    "resource" : {
+      "resourceType" : "DiagnosticOrder",
+      "id" : "115784",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-27T11:28:59.352+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/order-date",
+        "valueDateTime" : "2016-06-27T00:00:00"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inspection-order-id",
+        "value" : "JC1606270016"
+      } ],
+      "status" : "proposed"
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticOrder/115823",
+    "resource" : {
+      "resourceType" : "DiagnosticOrder",
+      "id" : "115823",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-27T11:51:37.473+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/dp-id",
+        "valueReference" : {
+          "reference" : "Organization/583"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/order-date",
+        "valueDateTime" : "2016-06-27T00:00:00"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inspection-order-id",
+        "value" : "JC1606270016"
+      } ],
+      "status" : "proposed"
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticOrder/120774",
+    "resource" : {
+      "resourceType" : "DiagnosticOrder",
+      "id" : "120774",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-27T14:07:26.460+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/dp-id",
+        "valueReference" : {
+          "reference" : "Organization/621"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/589"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/order-date",
+        "valueDateTime" : "2016-03-28T00:00:00"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inspection-order-id",
+        "value" : "JC1603280019"
+      } ],
+      "status" : "requested",
+      "subject" : {
+        "reference" : "Patient/10850",
+        "display" : "张少清"
+      },
+      "orderer" : {
+        "reference" : "Practitioner/368"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticOrder/120782",
+    "resource" : {
+      "resourceType" : "DiagnosticOrder",
+      "id" : "120782",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-27T14:19:39.546+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/dp-id",
+        "valueReference" : {
+          "reference" : "Organization/621"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/589"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/order-date",
+        "valueDateTime" : "2016-03-28T00:00:00"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inspection-order-id",
+        "value" : "JC1603280019"
+      } ],
+      "status" : "requested",
+      "subject" : {
+        "reference" : "Patient/10850",
+        "display" : "张少清"
+      },
+      "encounter" : {
+        "reference" : "Encounter/120773"
+      },
+      "orderer" : {
+        "reference" : "Practitioner/368"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticOrder/120794",
+    "resource" : {
+      "resourceType" : "DiagnosticOrder",
+      "id" : "120794",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-27T14:20:36.470+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/order-date",
+        "valueDateTime" : "2016-03-29T09:15:31"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/581"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/dp-id",
+        "valueReference" : {
+          "reference" : "Organization/622"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/examination-order-id",
+        "value" : "JY1603290075"
+      } ],
+      "status" : "requested",
+      "subject" : {
+        "reference" : "Patient/11026",
+        "display" : "杨营"
+      },
+      "encounter" : {
+        "reference" : "Encounter/43433"
+      },
+      "orderer" : {
+        "reference" : "Practitioner/330"
+      },
+      "item" : [ {
+        "code" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/examination-type",
+            "code" : "血妊娠测定（HCG）"
+          } ]
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticOrder/120797",
+    "resource" : {
+      "resourceType" : "DiagnosticOrder",
+      "id" : "120797",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-27T14:20:49.918+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/order-date",
+        "valueDateTime" : "2016-03-29T09:15:31"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/581"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/dp-id",
+        "valueReference" : {
+          "reference" : "Organization/622"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/examination-order-id",
+        "value" : "JY1603290075"
+      } ],
+      "status" : "requested",
+      "subject" : {
+        "reference" : "Patient/11026",
+        "display" : "杨营"
+      },
+      "encounter" : {
+        "reference" : "Encounter/43433"
+      },
+      "orderer" : {
+        "reference" : "Practitioner/330"
+      },
+      "item" : [ {
+        "code" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/examination-type",
+            "code" : "血妊娠测定（HCG）"
+          } ]
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticOrder/122422",
+    "resource" : {
+      "resourceType" : "DiagnosticOrder",
+      "id" : "122422",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-27T14:38:20.523+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/dp-id",
+        "valueReference" : {
+          "reference" : "Organization/621"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/584"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/order-date",
+        "valueDateTime" : "2016-03-29T00:00:00"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inspection-order-id",
+        "value" : "JC1603290017"
+      } ],
+      "status" : "requested",
+      "subject" : {
+        "reference" : "Patient/10976",
+        "display" : "刘广栋"
+      },
+      "encounter" : {
+        "reference" : "Encounter/43323"
+      },
+      "orderer" : {
+        "reference" : "Practitioner/356"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticOrder/122429",
+    "resource" : {
+      "resourceType" : "DiagnosticOrder",
+      "id" : "122429",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-27T14:38:23.436+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/dp-id",
+        "valueReference" : {
+          "reference" : "Organization/623"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/581"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/order-date",
+        "valueDateTime" : "2016-03-29T00:00:00"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inspection-order-id",
+        "value" : "JC1603290051"
+      } ],
+      "status" : "requested",
+      "subject" : {
+        "reference" : "Patient/10985",
+        "display" : "张其"
+      },
+      "encounter" : {
+        "reference" : "Encounter/43341"
+      },
+      "orderer" : {
+        "reference" : "Practitioner/330"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticOrder/124297",
+    "resource" : {
+      "resourceType" : "DiagnosticOrder",
+      "id" : "124297",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-27T14:57:31.372+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/dp-id",
+        "valueReference" : {
+          "reference" : "Organization/623"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/581"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/order-date",
+        "valueDateTime" : "2016-03-29T00:00:00"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inspection-order-id",
+        "value" : "JC1603290064"
+      } ],
+      "status" : "requested",
+      "subject" : {
+        "reference" : "Patient/11099",
+        "display" : "付胜男"
+      },
+      "encounter" : {
+        "reference" : "Encounter/44988"
+      },
+      "orderer" : {
+        "reference" : "Practitioner/330"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticOrder/124302",
+    "resource" : {
+      "resourceType" : "DiagnosticOrder",
+      "id" : "124302",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-27T14:57:34.078+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/dp-id",
+        "valueReference" : {
+          "reference" : "Organization/623"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/581"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/order-date",
+        "valueDateTime" : "2016-03-29T00:00:00"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inspection-order-id",
+        "value" : "JC1603290065"
+      } ],
+      "status" : "requested",
+      "subject" : {
+        "reference" : "Patient/11147",
+        "display" : "寇春月"
+      },
+      "encounter" : {
+        "reference" : "Encounter/45094"
+      },
+      "orderer" : {
+        "reference" : "Practitioner/330"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticOrder/126059",
+    "resource" : {
+      "resourceType" : "DiagnosticOrder",
+      "id" : "126059",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-27T15:09:42.092+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/order-date",
+        "valueDateTime" : "2016-04-06T08:49:14"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/581"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/dp-id",
+        "valueReference" : {
+          "reference" : "Organization/622"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/examination-order-id",
+        "value" : "JY1604060092"
+      } ],
+      "status" : "requested",
+      "subject" : {
+        "reference" : "Patient/125",
+        "display" : "刘立鑫"
+      },
+      "encounter" : {
+        "reference" : "Encounter/56636"
+      },
+      "orderer" : {
+        "reference" : "Practitioner/331"
+      },
+      "item" : [ {
+        "code" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/examination-type",
+            "code" : "糖耐量试验（慢）"
+          } ]
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticOrder/126065",
+    "resource" : {
+      "resourceType" : "DiagnosticOrder",
+      "id" : "126065",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-27T15:09:44.287+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/order-date",
+        "valueDateTime" : "2016-04-06T08:49:40"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/576"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/dp-id",
+        "valueReference" : {
+          "reference" : "Organization/622"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/examination-order-id",
+        "value" : "JY1604060093"
+      } ],
+      "status" : "requested",
+      "subject" : {
+        "reference" : "Patient/15526",
+        "display" : "顾胜武"
+      },
+      "encounter" : {
+        "reference" : "Encounter/56535"
+      },
+      "orderer" : {
+        "reference" : "Practitioner/287"
+      },
+      "item" : [ {
+        "code" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/examination-type",
+            "code" : "肝功能"
+          } ]
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticOrder/132012",
+    "resource" : {
+      "resourceType" : "DiagnosticOrder",
+      "id" : "132012",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-27T15:55:42.614+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/dp-id",
+        "valueReference" : {
+          "reference" : "Organization/623"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/597"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/order-date",
+        "valueDateTime" : "2016-06-27T00:00:00"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inspection-order-id",
+        "value" : "JC1606270250"
+      } ],
+      "status" : "proposed",
+      "subject" : {
+        "reference" : "Patient/115429",
+        "display" : "杨国强"
+      },
+      "encounter" : {
+        "reference" : "Encounter/70407"
+      },
+      "orderer" : {
+        "reference" : "Practitioner/297"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticOrder/132015",
+    "resource" : {
+      "resourceType" : "DiagnosticOrder",
+      "id" : "132015",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-27T15:55:53.496+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/dp-id",
+        "valueReference" : {
+          "reference" : "Organization/623"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/597"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/order-date",
+        "valueDateTime" : "2016-06-27T00:00:00"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inspection-order-id",
+        "value" : "JC1606270250"
+      } ],
+      "status" : "proposed",
+      "subject" : {
+        "reference" : "Patient/115429",
+        "display" : "杨国强"
+      },
+      "encounter" : {
+        "reference" : "Encounter/70407"
+      },
+      "orderer" : {
+        "reference" : "Practitioner/297"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticOrder/132179",
+    "resource" : {
+      "resourceType" : "DiagnosticOrder",
+      "id" : "132179",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-27T15:56:49.018+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/dp-id",
+        "valueReference" : {
+          "reference" : "Organization/621"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/597"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/order-date",
+        "valueDateTime" : "2016-06-27T00:00:00"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inspection-order-id",
+        "value" : "JC1606270253"
+      } ],
+      "status" : "proposed",
+      "subject" : {
+        "reference" : "Patient/115429",
+        "display" : "杨国强"
+      },
+      "encounter" : {
+        "reference" : "Encounter/70407"
+      },
+      "orderer" : {
+        "reference" : "Practitioner/297"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticOrder/135906",
+    "resource" : {
+      "resourceType" : "DiagnosticOrder",
+      "id" : "135906",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-27T16:29:31.741+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/order-date",
+        "valueDateTime" : "2016-06-27T16:27:24"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/583"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/dp-id",
+        "valueReference" : {
+          "reference" : "Organization/622"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/examination-order-id",
+        "value" : "JY1606270479"
+      } ],
+      "status" : "requested",
+      "subject" : {
+        "reference" : "Patient/94751",
+        "display" : "杨玉"
+      },
+      "encounter" : {
+        "reference" : "Encounter/112076"
+      },
+      "orderer" : {
+        "reference" : "Practitioner/339"
+      },
+      "item" : [ {
+        "code" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/examination-type",
+            "code" : "粪便常规"
+          } ]
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticOrder/135907",
+    "resource" : {
+      "resourceType" : "DiagnosticOrder",
+      "id" : "135907",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-27T16:29:32.129+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/order-date",
+        "valueDateTime" : "2016-06-27T16:27:24"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/583"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/dp-id",
+        "valueReference" : {
+          "reference" : "Organization/622"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/examination-order-id",
+        "value" : "JY1606270479"
+      } ],
+      "status" : "requested",
+      "subject" : {
+        "reference" : "Patient/94751",
+        "display" : "杨玉"
+      },
+      "encounter" : {
+        "reference" : "Encounter/112076"
+      },
+      "orderer" : {
+        "reference" : "Practitioner/339"
+      },
+      "item" : [ {
+        "code" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/examination-type",
+            "code" : "便潜血"
+          } ]
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticOrder/135908",
+    "resource" : {
+      "resourceType" : "DiagnosticOrder",
+      "id" : "135908",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-27T16:29:32.368+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/order-date",
+        "valueDateTime" : "2016-06-27T16:27:24"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/583"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/dp-id",
+        "valueReference" : {
+          "reference" : "Organization/622"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/examination-order-id",
+        "value" : "JY1606270479"
+      } ],
+      "status" : "requested",
+      "subject" : {
+        "reference" : "Patient/94751",
+        "display" : "杨玉"
+      },
+      "encounter" : {
+        "reference" : "Encounter/112076"
+      },
+      "orderer" : {
+        "reference" : "Practitioner/339"
+      },
+      "item" : [ {
+        "code" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/examination-type",
+            "code" : "粪便常规"
+          } ]
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticOrder/135931",
+    "resource" : {
+      "resourceType" : "DiagnosticOrder",
+      "id" : "135931",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-27T16:34:32.474+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/dp-id",
+        "valueReference" : {
+          "reference" : "Organization/621"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/580"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/order-date",
+        "valueDateTime" : "2016-06-27T00:00:00"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inspection-order-id",
+        "value" : "JC1606270257"
+      } ],
+      "status" : "requested",
+      "subject" : {
+        "reference" : "Patient/135229",
+        "display" : "郑桂贤"
+      },
+      "encounter" : {
+        "reference" : "Encounter/135235"
+      },
+      "orderer" : {
+        "reference" : "Practitioner/230"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticOrder/137085",
+    "resource" : {
+      "resourceType" : "DiagnosticOrder",
+      "id" : "137085",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-27T16:43:52.963+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/dp-id",
+        "valueReference" : {
+          "reference" : "Organization/621"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/580"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/order-date",
+        "valueDateTime" : "2016-06-27T00:00:00"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inspection-order-id",
+        "value" : "JC1606270259"
+      } ],
+      "status" : "requested",
+      "subject" : {
+        "reference" : "Patient/115827",
+        "display" : "郭玉会"
+      },
+      "encounter" : {
+        "reference" : "Encounter/136635"
+      },
+      "orderer" : {
+        "reference" : "Practitioner/324"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticOrder/138007",
+    "resource" : {
+      "resourceType" : "DiagnosticOrder",
+      "id" : "138007",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-27T16:50:16.817+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/order-date",
+        "valueDateTime" : "2016-06-27T16:48:18"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/589"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/dp-id",
+        "valueReference" : {
+          "reference" : "Organization/622"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/examination-order-id",
+        "value" : "JY1606270485"
+      } ],
+      "status" : "requested",
+      "subject" : {
+        "reference" : "Patient/124744",
+        "display" : "王丰元"
+      },
+      "encounter" : {
+        "reference" : "Encounter/124752"
+      },
+      "orderer" : {
+        "reference" : "Practitioner/367"
+      },
+      "item" : [ {
+        "code" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/examination-type",
+            "code" : "乙肝五项"
+          } ]
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticOrder/138008",
+    "resource" : {
+      "resourceType" : "DiagnosticOrder",
+      "id" : "138008",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-27T16:50:17.054+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/order-date",
+        "valueDateTime" : "2016-06-27T16:48:18"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/589"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/dp-id",
+        "valueReference" : {
+          "reference" : "Organization/622"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/examination-order-id",
+        "value" : "JY1606270485"
+      } ],
+      "status" : "requested",
+      "subject" : {
+        "reference" : "Patient/124744",
+        "display" : "王丰元"
+      },
+      "encounter" : {
+        "reference" : "Encounter/124752"
+      },
+      "orderer" : {
+        "reference" : "Practitioner/367"
+      },
+      "item" : [ {
+        "code" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/examination-type",
+            "code" : "乙肝五项"
+          } ]
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticOrder/138009",
+    "resource" : {
+      "resourceType" : "DiagnosticOrder",
+      "id" : "138009",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-27T16:50:17.299+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/order-date",
+        "valueDateTime" : "2016-06-27T16:48:18"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/589"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/dp-id",
+        "valueReference" : {
+          "reference" : "Organization/622"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/examination-order-id",
+        "value" : "JY1606270485"
+      } ],
+      "status" : "requested",
+      "subject" : {
+        "reference" : "Patient/124744",
+        "display" : "王丰元"
+      },
+      "encounter" : {
+        "reference" : "Encounter/124752"
+      },
+      "orderer" : {
+        "reference" : "Practitioner/367"
+      },
+      "item" : [ {
+        "code" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/examination-type",
+            "code" : "传染病五项（乙肝五项、甲、丙肝抗体、梅毒、艾滋）"
+          } ]
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticOrder/138642",
+    "resource" : {
+      "resourceType" : "DiagnosticOrder",
+      "id" : "138642",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-27T16:55:15.151+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/order-date",
+        "valueDateTime" : "2016-06-27T16:53:29"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/586"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/dp-id",
+        "valueReference" : {
+          "reference" : "Organization/622"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/examination-order-id",
+        "value" : "JY1606270490"
+      } ],
+      "status" : "requested",
+      "subject" : {
+        "reference" : "Patient/26142",
+        "display" : "刘俊轩"
+      },
+      "encounter" : {
+        "reference" : "Encounter/138625"
+      },
+      "orderer" : {
+        "reference" : "Practitioner/361"
+      },
+      "item" : [ {
+        "code" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/examination-type",
+            "code" : "血常规三分类（血十六项）"
+          } ]
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticOrder/141756",
+    "resource" : {
+      "resourceType" : "DiagnosticOrder",
+      "id" : "141756",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-27T17:24:55.189+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/order-date",
+        "valueDateTime" : "2016-06-27T17:22:30"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/589"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/dp-id",
+        "valueReference" : {
+          "reference" : "Organization/622"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/examination-order-id",
+        "value" : "JY1606270506"
+      } ],
+      "status" : "requested",
+      "subject" : {
+        "reference" : "Patient/141376",
+        "display" : "张国玲"
+      },
+      "encounter" : {
+        "reference" : "Encounter/141394"
+      },
+      "orderer" : {
+        "reference" : "Practitioner/367"
+      },
+      "item" : [ {
+        "code" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/examination-type",
+            "code" : "尿十项"
+          } ]
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticOrder/141757",
+    "resource" : {
+      "resourceType" : "DiagnosticOrder",
+      "id" : "141757",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-27T17:24:55.495+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/order-date",
+        "valueDateTime" : "2016-06-27T17:22:30"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/589"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/dp-id",
+        "valueReference" : {
+          "reference" : "Organization/622"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/examination-order-id",
+        "value" : "JY1606270507"
+      } ],
+      "status" : "requested",
+      "subject" : {
+        "reference" : "Patient/141376",
+        "display" : "张国玲"
+      },
+      "encounter" : {
+        "reference" : "Encounter/141394"
+      },
+      "orderer" : {
+        "reference" : "Practitioner/367"
+      },
+      "item" : [ {
+        "code" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/examination-type",
+            "code" : "血常规五分类（血二十五项）"
+          } ]
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticOrder/141798",
+    "resource" : {
+      "resourceType" : "DiagnosticOrder",
+      "id" : "141798",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-27T17:25:11.496+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/dp-id",
+        "valueReference" : {
+          "reference" : "Organization/623"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/589"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/order-date",
+        "valueDateTime" : "2016-06-27T00:00:00"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inspection-order-id",
+        "value" : "JC1606270262"
+      } ],
+      "status" : "requested",
+      "subject" : {
+        "reference" : "Patient/141376",
+        "display" : "张国玲"
+      },
+      "encounter" : {
+        "reference" : "Encounter/141394"
+      },
+      "orderer" : {
+        "reference" : "Practitioner/367"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticOrder/141801",
+    "resource" : {
+      "resourceType" : "DiagnosticOrder",
+      "id" : "141801",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-27T17:25:13.062+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/dp-id",
+        "valueReference" : {
+          "reference" : "Organization/623"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/589"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/order-date",
+        "valueDateTime" : "2016-06-27T00:00:00"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inspection-order-id",
+        "value" : "JC1606270262"
+      } ],
+      "status" : "requested",
+      "subject" : {
+        "reference" : "Patient/141376",
+        "display" : "张国玲"
+      },
+      "encounter" : {
+        "reference" : "Encounter/141394"
+      },
+      "orderer" : {
+        "reference" : "Practitioner/367"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticOrder/141802",
+    "resource" : {
+      "resourceType" : "DiagnosticOrder",
+      "id" : "141802",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-27T17:25:13.325+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/dp-id",
+        "valueReference" : {
+          "reference" : "Organization/623"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/589"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/order-date",
+        "valueDateTime" : "2016-06-27T00:00:00"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inspection-order-id",
+        "value" : "JC1606270262"
+      } ],
+      "status" : "requested",
+      "subject" : {
+        "reference" : "Patient/141376",
+        "display" : "张国玲"
+      },
+      "encounter" : {
+        "reference" : "Encounter/141394"
+      },
+      "orderer" : {
+        "reference" : "Practitioner/367"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticOrder/141803",
+    "resource" : {
+      "resourceType" : "DiagnosticOrder",
+      "id" : "141803",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-27T17:25:13.561+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/dp-id",
+        "valueReference" : {
+          "reference" : "Organization/623"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/589"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/order-date",
+        "valueDateTime" : "2016-06-27T00:00:00"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inspection-order-id",
+        "value" : "JC1606270262"
+      } ],
+      "status" : "requested",
+      "subject" : {
+        "reference" : "Patient/141376",
+        "display" : "张国玲"
+      },
+      "encounter" : {
+        "reference" : "Encounter/141394"
+      },
+      "orderer" : {
+        "reference" : "Practitioner/367"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticOrder/141804",
+    "resource" : {
+      "resourceType" : "DiagnosticOrder",
+      "id" : "141804",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-27T17:25:13.802+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/dp-id",
+        "valueReference" : {
+          "reference" : "Organization/623"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/589"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/order-date",
+        "valueDateTime" : "2016-06-27T00:00:00"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inspection-order-id",
+        "value" : "JC1606270262"
+      } ],
+      "status" : "requested",
+      "subject" : {
+        "reference" : "Patient/141376",
+        "display" : "张国玲"
+      },
+      "encounter" : {
+        "reference" : "Encounter/141394"
+      },
+      "orderer" : {
+        "reference" : "Practitioner/367"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticOrder/141805",
+    "resource" : {
+      "resourceType" : "DiagnosticOrder",
+      "id" : "141805",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-27T17:25:14.054+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/dp-id",
+        "valueReference" : {
+          "reference" : "Organization/623"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/589"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/order-date",
+        "valueDateTime" : "2016-06-27T00:00:00"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inspection-order-id",
+        "value" : "JC1606270262"
+      } ],
+      "status" : "requested",
+      "subject" : {
+        "reference" : "Patient/141376",
+        "display" : "张国玲"
+      },
+      "encounter" : {
+        "reference" : "Encounter/141394"
+      },
+      "orderer" : {
+        "reference" : "Practitioner/367"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticOrder/143248",
+    "resource" : {
+      "resourceType" : "DiagnosticOrder",
+      "id" : "143248",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-27T17:35:24.318+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/dp-id",
+        "valueReference" : {
+          "reference" : "Organization/621"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/580"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/order-date",
+        "valueDateTime" : "2016-06-27T00:00:00"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inspection-order-id",
+        "value" : "JC1606270263"
+      } ],
+      "status" : "requested",
+      "subject" : {
+        "reference" : "Patient/36143",
+        "display" : "郭晟旭"
+      },
+      "encounter" : {
+        "reference" : "Encounter/139523"
+      },
+      "orderer" : {
+        "reference" : "Practitioner/230"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticOrder/145493",
+    "resource" : {
+      "resourceType" : "DiagnosticOrder",
+      "id" : "145493",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-27T17:51:32.768+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/order-date",
+        "valueDateTime" : "2016-06-27T17:49:25"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/583"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/dp-id",
+        "valueReference" : {
+          "reference" : "Organization/622"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/examination-order-id",
+        "value" : "JY1606270509"
+      } ],
+      "status" : "requested",
+      "subject" : {
+        "reference" : "Patient/144677",
+        "display" : "冯玉莹"
+      },
+      "encounter" : {
+        "reference" : "Encounter/144693"
+      },
+      "orderer" : {
+        "reference" : "Practitioner/340"
+      },
+      "item" : [ {
+        "code" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/examination-type",
+            "code" : "血常规五分类（血二十五项）"
+          } ]
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticOrder/145764",
+    "resource" : {
+      "resourceType" : "DiagnosticOrder",
+      "id" : "145764",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-27T17:55:20.281+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/order-date",
+        "valueDateTime" : "2016-06-27T17:53:13"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/583"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/dp-id",
+        "valueReference" : {
+          "reference" : "Organization/622"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/examination-order-id",
+        "value" : "JY1606270510"
+      } ],
+      "status" : "requested",
+      "subject" : {
+        "reference" : "Patient/144776",
+        "display" : "杨林"
+      },
+      "encounter" : {
+        "reference" : "Encounter/144786"
+      },
+      "orderer" : {
+        "reference" : "Practitioner/340"
+      },
+      "item" : [ {
+        "code" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/examination-type",
+            "code" : "血常规五分类（血二十五项）"
+          } ]
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticOrder/147034",
+    "resource" : {
+      "resourceType" : "DiagnosticOrder",
+      "id" : "147034",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-27T18:03:52.138+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/dp-id",
+        "valueReference" : {
+          "reference" : "Organization/621"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/589"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/order-date",
+        "valueDateTime" : "2016-06-27T00:00:00"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inspection-order-id",
+        "value" : "JC1606270264"
+      } ],
+      "status" : "requested",
+      "subject" : {
+        "reference" : "Patient/146944",
+        "display" : "于井宽"
+      },
+      "encounter" : {
+        "reference" : "Encounter/146958"
+      },
+      "orderer" : {
+        "reference" : "Practitioner/368"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticOrder/149476",
+    "resource" : {
+      "resourceType" : "DiagnosticOrder",
+      "id" : "149476",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-27T18:40:07.417+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/dp-id",
+        "valueReference" : {
+          "reference" : "Organization/621"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/589"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/order-date",
+        "valueDateTime" : "2016-06-27T00:00:00"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inspection-order-id",
+        "value" : "JC1606270265"
+      } ],
+      "status" : "requested",
+      "subject" : {
+        "reference" : "Patient/15707",
+        "display" : "王辰"
+      },
+      "encounter" : {
+        "reference" : "Encounter/149470"
+      },
+      "orderer" : {
+        "reference" : "Practitioner/368"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticOrder/149486",
+    "resource" : {
+      "resourceType" : "DiagnosticOrder",
+      "id" : "149486",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-27T18:45:00.507+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/dp-id",
+        "valueReference" : {
+          "reference" : "Organization/621"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/589"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/order-date",
+        "valueDateTime" : "2016-06-27T00:00:00"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inspection-order-id",
+        "value" : "JC1606270266"
+      } ],
+      "status" : "requested",
+      "subject" : {
+        "reference" : "Patient/149477",
+        "display" : "胡建"
+      },
+      "encounter" : {
+        "reference" : "Encounter/149479"
+      },
+      "orderer" : {
+        "reference" : "Practitioner/368"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticOrder/149487",
+    "resource" : {
+      "resourceType" : "DiagnosticOrder",
+      "id" : "149487",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-27T18:45:18.929+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/order-date",
+        "valueDateTime" : "2016-06-27T18:42:54"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/589"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/dp-id",
+        "valueReference" : {
+          "reference" : "Organization/622"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/examination-order-id",
+        "value" : "JY1606270513"
+      } ],
+      "status" : "requested",
+      "subject" : {
+        "reference" : "Patient/149477",
+        "display" : "胡建"
+      },
+      "encounter" : {
+        "reference" : "Encounter/149479"
+      },
+      "orderer" : {
+        "reference" : "Practitioner/368"
+      },
+      "item" : [ {
+        "code" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/examination-type",
+            "code" : "尿十项"
+          } ]
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticOrder/149490",
+    "resource" : {
+      "resourceType" : "DiagnosticOrder",
+      "id" : "149490",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-27T18:46:33.414+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/dp-id",
+        "valueReference" : {
+          "reference" : "Organization/621"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/589"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/order-date",
+        "valueDateTime" : "2016-06-27T00:00:00"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inspection-order-id",
+        "value" : "JC1606270267"
+      } ],
+      "status" : "requested",
+      "subject" : {
+        "reference" : "Patient/149481",
+        "display" : "尹青龙"
+      },
+      "encounter" : {
+        "reference" : "Encounter/149483"
+      },
+      "orderer" : {
+        "reference" : "Practitioner/368"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticOrder/149297",
+    "resource" : {
+      "resourceType" : "DiagnosticOrder",
+      "id" : "149297",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-27T18:19:16.603+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/order-date",
+        "valueDateTime" : "2016-06-27T18:16:51"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/589"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/dp-id",
+        "valueReference" : {
+          "reference" : "Organization/622"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/examination-order-id",
+        "value" : "JY1606270511"
+      } ],
+      "status" : "requested",
+      "subject" : {
+        "reference" : "Patient/34929",
+        "display" : "张龙"
+      },
+      "encounter" : {
+        "reference" : "Encounter/148219"
+      },
+      "orderer" : {
+        "reference" : "Practitioner/368"
+      },
+      "item" : [ {
+        "code" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/examination-type",
+            "code" : "血常规三分类（血十六项）"
+          } ]
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticOrder/149298",
+    "resource" : {
+      "resourceType" : "DiagnosticOrder",
+      "id" : "149298",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-27T18:19:16.902+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/order-date",
+        "valueDateTime" : "2016-06-27T18:16:51"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/589"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/dp-id",
+        "valueReference" : {
+          "reference" : "Organization/622"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/examination-order-id",
+        "value" : "JY1606270511"
+      } ],
+      "status" : "requested",
+      "subject" : {
+        "reference" : "Patient/34929",
+        "display" : "张龙"
+      },
+      "encounter" : {
+        "reference" : "Encounter/148219"
+      },
+      "orderer" : {
+        "reference" : "Practitioner/368"
+      },
+      "item" : [ {
+        "code" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/examination-type",
+            "code" : "快速血糖"
+          } ]
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticOrder/149299",
+    "resource" : {
+      "resourceType" : "DiagnosticOrder",
+      "id" : "149299",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-27T18:19:17.145+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/order-date",
+        "valueDateTime" : "2016-06-27T18:16:51"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/589"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/dp-id",
+        "valueReference" : {
+          "reference" : "Organization/622"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/examination-order-id",
+        "value" : "JY1606270511"
+      } ],
+      "status" : "requested",
+      "subject" : {
+        "reference" : "Patient/34929",
+        "display" : "张龙"
+      },
+      "encounter" : {
+        "reference" : "Encounter/148219"
+      },
+      "orderer" : {
+        "reference" : "Practitioner/368"
+      },
+      "item" : [ {
+        "code" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/examination-type",
+            "code" : "血常规三分类（血十六项）"
+          } ]
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticOrder/149413",
+    "resource" : {
+      "resourceType" : "DiagnosticOrder",
+      "id" : "149413",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-27T18:20:04.043+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/order-date",
+        "valueDateTime" : "2016-06-27T18:17:39"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/589"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/dp-id",
+        "valueReference" : {
+          "reference" : "Organization/622"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/examination-order-id",
+        "value" : "JY1606270512"
+      } ],
+      "status" : "requested",
+      "subject" : {
+        "reference" : "Patient/34929",
+        "display" : "张龙"
+      },
+      "encounter" : {
+        "reference" : "Encounter/148219"
+      },
+      "orderer" : {
+        "reference" : "Practitioner/368"
+      },
+      "item" : [ {
+        "code" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/examination-type",
+            "code" : "血常规五分类（血二十五项）"
+          } ]
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticOrder/149501",
+    "resource" : {
+      "resourceType" : "DiagnosticOrder",
+      "id" : "149501",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-27T18:59:18.627+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/dp-id",
+        "valueReference" : {
+          "reference" : "Organization/621"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/589"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/order-date",
+        "valueDateTime" : "2016-06-27T00:00:00"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inspection-order-id",
+        "value" : "JC1606270268"
+      } ],
+      "status" : "requested",
+      "subject" : {
+        "reference" : "Patient/149495",
+        "display" : "张萌"
+      },
+      "encounter" : {
+        "reference" : "Encounter/149497"
+      },
+      "orderer" : {
+        "reference" : "Practitioner/368"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticOrder/149512",
+    "resource" : {
+      "resourceType" : "DiagnosticOrder",
+      "id" : "149512",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-27T19:11:15.103+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/order-date",
+        "valueDateTime" : "2016-06-27T19:09:08"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/583"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/dp-id",
+        "valueReference" : {
+          "reference" : "Organization/622"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/examination-order-id",
+        "value" : "JY1606270516"
+      } ],
+      "status" : "requested",
+      "subject" : {
+        "reference" : "Patient/23081",
+        "display" : "郑杨"
+      },
+      "encounter" : {
+        "reference" : "Encounter/149504"
+      },
+      "orderer" : {
+        "reference" : "Practitioner/340"
+      },
+      "item" : [ {
+        "code" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/examination-type",
+            "code" : "血常规五分类（血二十五项）"
+          } ]
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticOrder/149517",
+    "resource" : {
+      "resourceType" : "DiagnosticOrder",
+      "id" : "149517",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-27T19:13:10.001+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/dp-id",
+        "valueReference" : {
+          "reference" : "Organization/621"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/580"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/order-date",
+        "valueDateTime" : "2016-06-27T00:00:00"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inspection-order-id",
+        "value" : "JC1606270269"
+      } ],
+      "status" : "requested",
+      "subject" : {
+        "reference" : "Patient/149513",
+        "display" : "梁永荣"
+      },
+      "encounter" : {
+        "reference" : "Encounter/149515"
+      },
+      "orderer" : {
+        "reference" : "Practitioner/321"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  } ]
+}

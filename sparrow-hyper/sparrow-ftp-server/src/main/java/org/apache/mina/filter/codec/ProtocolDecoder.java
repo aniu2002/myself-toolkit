@@ -23,7 +23,7 @@ import org.apache.mina.core.buffer.IoBuffer;
 import org.apache.mina.core.session.IoSession;
 
 /**
- * Decodes binary or protocol-specific data into higher-level message objects.
+ * Decodes binary or protocol-specific data into higher-level services objects.
  * MINA invokes {@link #decode(IoSession, IoBuffer, ProtocolDecoderOutput)}
  * method with read data, and then the decoder implementation puts decoded
  * messages into {@link ProtocolDecoderOutput} by calling
@@ -39,7 +39,7 @@ import org.apache.mina.core.session.IoSession;
  */
 public interface ProtocolDecoder {
     /**
-     * Decodes binary or protocol-specific content into higher-level message objects.
+     * Decodes binary or protocol-specific content into higher-level services objects.
      * MINA invokes {@link #decode(IoSession, IoBuffer, ProtocolDecoderOutput)}
      * method with read data, and then the decoder implementation puts decoded
      * messages into {@link ProtocolDecoderOutput}.
@@ -51,7 +51,7 @@ public interface ProtocolDecoder {
 
     /**
      * Invoked when the specified <tt>session</tt> is closed.  This method is useful
-     * when you deal with the protocol which doesn't specify the length of a message
+     * when you deal with the protocol which doesn't specify the length of a services
      * such as HTTP response without <tt>content-length</tt> header. Implement this
      * method to process the remaining data that {@link #decode(IoSession, IoBuffer, ProtocolDecoderOutput)}
      * method didn't process completely.

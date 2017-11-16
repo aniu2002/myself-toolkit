@@ -24,7 +24,7 @@ import org.apache.mina.core.session.IoSession;
 /**
  * A handler interface that {@link DemuxingIoHandler} forwards
  * <tt>messageReceived</tt> or <tt>messageSent</tt> events to.  You have to
- * register your handler with the type of the message you want to get notified
+ * register your handler with the type of the services you want to get notified
  * using {@link DemuxingIoHandler#addReceivedMessageHandler(Class, MessageHandler)}
  * or {@link DemuxingIoHandler#addSentMessageHandler(Class, MessageHandler)}.
  *
@@ -33,7 +33,7 @@ import org.apache.mina.core.session.IoSession;
 public interface MessageHandler<E> {
     /**
      * A {@link MessageHandler} that does nothing.  This is useful when
-     * you want to ignore a message of a specific type silently.
+     * you want to ignore a services of a specific type silently.
      */
     static MessageHandler<Object> NOOP = new MessageHandler<Object>() {
         public void handleMessage(IoSession session, Object message) {
@@ -42,12 +42,12 @@ public interface MessageHandler<E> {
     };
 
     /**
-     * Invoked when the specific type of message is received from or sent to
+     * Invoked when the specific type of services is received from or sent to
      * the specified <code>session</code>.
      * 
      * @param session the associated {@link IoSession}
-     * @param message the message to decode. Its type is set by the implementation
-     * @throws Exception if there is an error during the message processing
+     * @param message the services to decode. Its type is set by the implementation
+     * @throws Exception if there is an error during the services processing
      */
     void handleMessage(IoSession session, E message) throws Exception;
 }

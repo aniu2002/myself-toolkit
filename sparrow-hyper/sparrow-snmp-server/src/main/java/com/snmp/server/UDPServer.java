@@ -38,7 +38,7 @@ public class UDPServer implements Runnable {
 	private Thread serverThread;
 	/** thread pool provider */
 	private ExecutorService executorService = null;
-	/** message notice interface */
+	/** services notice interface */
 	private ProgressNotice notice;
 	/** define thread pool size */
 	private int maxRunning = 10;

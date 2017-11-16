@@ -93,7 +93,7 @@ public class HsqlException extends RuntimeException {
     }
 
     /**
-     * @return message
+     * @return services
      */
     public String getMessage() {
         return message;

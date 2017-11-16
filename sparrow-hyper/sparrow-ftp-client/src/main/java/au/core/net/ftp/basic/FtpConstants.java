@@ -201,7 +201,7 @@ public interface FtpConstants {
 	/** File status */
 	public final static String RC213 = "213";
 
-	/** Help message */
+	/** Help services */
 	public final static String RC214 = "214";
 
 	/** System type */

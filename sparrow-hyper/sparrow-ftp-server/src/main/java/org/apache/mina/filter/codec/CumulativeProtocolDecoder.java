@@ -28,8 +28,8 @@ import org.apache.mina.core.session.IoSession;
  * A {@link ProtocolDecoder} that cumulates the content of received
  * buffers to a <em>cumulative buffer</em> to help users implement decoders.
  * <p>
- * If the received {@link IoBuffer} is only a part of a message.
- * decoders should cumulate received buffers to make a message complete or
+ * If the received {@link IoBuffer} is only a part of a services.
+ * decoders should cumulate received buffers to make a services complete or
  * to postpone decoding until more buffers arrive.
  * <p>
  * Here is an example decoder that decodes CRLF terminated lines into
@@ -208,7 +208,7 @@ public abstract class CumulativeProtocolDecoder extends ProtocolDecoderAdapter {
 
     /**
      * Implement this method to consume the specified cumulative buffer and
-     * decode its content into message(s).
+     * decode its content into services(s).
      *
      * @param in the cumulative buffer
      * @return <tt>true</tt> if and only if there's more to decode in the buffer

@@ -374,10 +374,10 @@ public abstract class AbstractIoSession implements IoSession {
      */
     public WriteFuture write(Object message, SocketAddress remoteAddress) {
         if (message == null) {
-            throw new NullPointerException("message");
+            throw new NullPointerException("services");
         }
 
-        // We can't send a message to a connected session if we don't have 
+        // We can't send a services to a connected session if we don't have
         // the remote address
         if (!getTransportMetadata().isConnectionless() &&
                 remoteAddress != null) {
@@ -386,7 +386,7 @@ public abstract class AbstractIoSession implements IoSession {
 
         
         // If the session has been closed or is closing, we can't either
-        // send a message to the remote side. We generate a future
+        // send a services to the remote side. We generate a future
         // containing an exception.
         if (isClosing() || !isConnected()) {
             WriteFuture future = new DefaultWriteFuture(this);
@@ -399,13 +399,13 @@ public abstract class AbstractIoSession implements IoSession {
         FileChannel openedFileChannel = null;
         
         // TODO: remove this code as soon as we use InputStream
-        // instead of Object for the message.
+        // instead of Object for the services.
         try {
             if (message instanceof IoBuffer
                     && !((IoBuffer) message).hasRemaining()) {
                 // Nothing to write : probably an error in the user code
                 throw new IllegalArgumentException(
-                "message is empty. Forgot to call flip()?");
+                "services is empty. Forgot to call flip()?");
             } else if (message instanceof FileChannel) {
                 FileChannel fileChannel = (FileChannel) message;
                 message = new DefaultFileRegion(fileChannel, 0, fileChannel.size());
@@ -419,7 +419,7 @@ public abstract class AbstractIoSession implements IoSession {
             return DefaultWriteFuture.newNotWrittenFuture(this, e);
         }
 
-        // Now, we can write the message. First, create a future
+        // Now, we can write the services. First, create a future
         WriteFuture writeFuture = new DefaultWriteFuture(this);
         WriteRequest writeRequest = new DefaultWriteRequest(message, writeFuture, remoteAddress);
         

@@ -33,7 +33,7 @@ public class HttpResponse {
 
     /**
      * Send a HTTP header to the client
-     * The first line is a status message from the server to the client.
+     * The first line is a status services from the server to the client.
      * The second line holds the mime type of the document. 
      */    
     public void sendHeader(String mimeType) {

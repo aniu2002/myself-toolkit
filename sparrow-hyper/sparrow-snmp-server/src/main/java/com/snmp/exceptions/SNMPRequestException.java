@@ -68,7 +68,7 @@ public class SNMPRequestException extends SNMPException
     
     
     /**
-    *    Create exception with errorIndex, errorStatus, and message string
+    *    Create exception with errorIndex, errorStatus, and services string
     */
     
     public SNMPRequestException(String message, int errorIndex, int errorStatus)

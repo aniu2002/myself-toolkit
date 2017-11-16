@@ -52,7 +52,6 @@ public class ControllerFacade extends AnnotationHelper implements
     private ControllerClassConfig controllers[];
     private ControllerClassConfig defaultController;
     private List<ActionBeanConfig> controllerBeanList = new ArrayList<ActionBeanConfig>();
-    private String contextConfigPath = "classpath*:beans/*.xml";
     private Resolver resolver = new BaseFileResolver();
     private Object synObject = new Object();
 
@@ -71,7 +70,7 @@ public class ControllerFacade extends AnnotationHelper implements
         this.excludes = StringUtils.tokenizeToStringArray(this.excludeReqs,
                 DELIMITERS);
         // this.annotationEvent(new AnnotationConfig(this.scanPath), bcfg);
-        context = new AppServiceContext(this.contextConfigPath, this);
+        context = new AppServiceContext("classpath*:beans/*.xml", this);
         //
         Application.app().setActionController(this);
         Application.app().setServiceContext(context);
@@ -161,7 +160,7 @@ public class ControllerFacade extends AnnotationHelper implements
 
     private void initializeController() {
         System.out
-                .println("********* Initialize controller begin *****************");
+                .println("********* Initialize web begin *****************");
         try {
             Iterator<ActionBeanConfig> iter = this.controllerBeanList
                     .iterator();
@@ -191,7 +190,7 @@ public class ControllerFacade extends AnnotationHelper implements
             e.printStackTrace();
         }
         System.out
-                .println("********* Initialize  controller end *****************");
+                .println("********* Initialize  web end *****************");
     }
 
     public void process(HttpRequest request, HttpResponse response)
@@ -386,7 +385,7 @@ public class ControllerFacade extends AnnotationHelper implements
         if (claz.isAnnotationPresent(WebController.class)) {
             com.sparrow.service.config.SimpleBeanConfig sbcfg = ControllerAnnotationHelper
                     .getWebSampleConfig(claz);
-            ActionBeanConfig simpleBeanConfig = new ActionBeanConfig();
+            ActionBeanConfig simpleBeanConfig=new ActionBeanConfig();
             try {
                 BeanUtils.copyProperties(simpleBeanConfig, sbcfg);
             } catch (IllegalAccessException e) {
@@ -403,7 +402,7 @@ public class ControllerFacade extends AnnotationHelper implements
     @Override
     public void removeController(String name) {
         Object obj = this.context.removeBean(name);
-        SysLogger.info("- Remove controller : " + obj);
+        SysLogger.info("- Remove web : " + obj);
         obj = null;
     }
 
@@ -469,10 +468,5 @@ public class ControllerFacade extends AnnotationHelper implements
         this.controllers = list.toArray(new ControllerClassConfig[list.size()]);
         for (ControllerClassConfig c : controllers)
             System.out.println(c);
-    }
-
-    @Override
-    public void setBeanConfig(String config) {
-        this.contextConfigPath = config;
     }
 }

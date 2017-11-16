@@ -1,7 +1,7 @@
 /**  
  * Project Name:http-server  
  * File Name:ActionControllerFactory.java  
- * Package Name:com.sparrow.core.http.controller  
+ * Package Name:com.sparrow.core.http.web
  * Date:2014-1-3下午1:19:38  
  * Copyright (c) 2014, Boco.com All Rights Reserved.  
  *  

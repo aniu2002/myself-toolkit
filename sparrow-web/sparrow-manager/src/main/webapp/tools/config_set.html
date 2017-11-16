@@ -1,8 +1,8 @@
 <html>
 <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
-    <meta name="description" content=""/>
-    <meta name="keywords" content=""/>
+    <meta title="description" content=""/>
+    <meta title="keywords" content=""/>
     <title>抓取工程管理系统</title>
     <link rel="stylesheet" href="../js/bootstrap/css/bootstrap.css" type="text/css"/>
     <link rel="stylesheet" href="../js/bootstrap/css/bootstrap-responsive.css" type="text/css"/>
@@ -24,8 +24,8 @@
             </table>
         </div>
         <div id="addLayer" style="display: none;">
-            Key:<input type="text" style="width:220px;height: 30px;" name="keyInput" id="keyInput" value=""/>&nbsp;&nbsp;
-            Value:<input type="text" style="width:350px;height: 30px;" name="valueInput" id="valueInput" value=""/>
+            Key:<input type="text" style="width:220px;height: 30px;" title="keyInput" id="keyInput" value=""/>&nbsp;&nbsp;
+            Value:<input type="text" style="width:350px;height: 30px;" title="valueInput" id="valueInput" value=""/>
             &nbsp;&nbsp;<input type='button' id='addKeyValue' value='确定'/>
         </div>
         <div>
@@ -51,7 +51,7 @@
             var el = $('#cfgTable');
             el.find('input').each(function() {
                 var nel = $(this);
-                var n = nel.attr('name');
+                var n = nel.attr('title');
                 var value = nel.val();
                 gData[n] = value;
             });
@@ -72,7 +72,7 @@
             var tel = $('#cfgTable');
             var key = $('#keyInput').val();
             var val = $('#valueInput').val();
-            tel.append('<tr><td>&nbsp;&nbsp;' + key + ':</td><td><input type="text" style="width: 620px;height: 25px;" name="' + key + '" value="' + val + '" /></td></tr>')
+            tel.append('<tr><td>&nbsp;&nbsp;' + key + ':</td><td><input type="text" style="width: 620px;height: 25px;" title="' + key + '" value="' + val + '" /></td></tr>')
         });
         ajaxRequest(urlPath+'/'+_cfg, 'GET', null, initCfgTable);
     });
@@ -88,9 +88,9 @@
         	var ky=d.k;
         	gData[ky]=d.v;
             if (ky.indexOf('pwd') != -1 || ky.indexOf('password') != -1)
-                el.append('<tr><td>&nbsp;&nbsp;' + ky + ':</td><td><input type="password" style="width: 620px;height: 30px;" name="' + ky + '" value="' + d.v + '" /></td></tr>')
+                el.append('<tr><td>&nbsp;&nbsp;' + ky + ':</td><td><input type="password" style="width: 620px;height: 30px;" title="' + ky + '" value="' + d.v + '" /></td></tr>')
             else
-                el.append('<tr><td>&nbsp;&nbsp;' + ky + ':</td><td><input type="text" style="width: 620px;height: 30px;" name="' + ky + '" value="' + d.v + '" /></td></tr>')
+                el.append('<tr><td>&nbsp;&nbsp;' + ky + ':</td><td><input type="text" style="width: 620px;height: 30px;" title="' + ky + '" value="' + d.v + '" /></td></tr>')
         }
     }
     function ajaxRequest(url, method, data, func,type,ctype) {

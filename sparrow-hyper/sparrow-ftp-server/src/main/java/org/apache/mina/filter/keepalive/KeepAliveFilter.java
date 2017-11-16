@@ -51,8 +51,8 @@ import org.apache.mina.core.write.WriteRequest;
  *
  * To use this filter, you have to provide an implementation of
  * {@link KeepAliveMessageFactory}, which determines a received or sent
- * message is a keep-alive message or not and creates a new keep-alive
- * message:
+ * services is a keep-alive services or not and creates a new keep-alive
+ * services:
  *
  * <table border="1">
  * <tr>
@@ -120,8 +120,8 @@ import org.apache.mina.core.write.WriteRequest;
  * <h2>Handling timeout</h2>
  *
  * {@link KeepAliveFilter} will notify its {@link KeepAliveRequestTimeoutHandler}
- * when {@link KeepAliveFilter} didn't receive the response message for a sent
- * keep-alive message.  The default handler is {@link KeepAliveRequestTimeoutHandler#CLOSE},
+ * when {@link KeepAliveFilter} didn't receive the response services for a sent
+ * keep-alive services.  The default handler is {@link KeepAliveRequestTimeoutHandler#CLOSE},
  * but you can use other presets such as {@link KeepAliveRequestTimeoutHandler#NOOP},
  * {@link KeepAliveRequestTimeoutHandler#LOG} or {@link KeepAliveRequestTimeoutHandler#EXCEPTION}.
  * You can even implement your own handler.

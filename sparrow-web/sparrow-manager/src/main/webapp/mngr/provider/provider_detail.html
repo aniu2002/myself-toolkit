@@ -20,15 +20,15 @@
 
     <script type="text/javascript">
         <!--
-        var _url='/cmd/sys/provider?_t=dp&app=${app}&name=${name}';
+        var _url='/cmd/sys/provider?_t=dp&app=${app}&title=${title}';
         var _dd;
 
         var columns=[
-            {name:'name',label:'名称'},
-            {name:'desc',label:'描述'},
-            {name:'source',label:'资源'},
-            {name:'type',label:'类型'},
-            {name:'script',label:'执行脚本',render:function(v){
+            {title:'title',label:'名称'},
+            {title:'desc',label:'描述'},
+            {title:'source',label:'资源'},
+            {title:'type',label:'类型'},
+            {title:'script',label:'执行脚本',render:function(v){
                  if(v)
                      return v.replace('\r','<br/>').replace('\n','<br/>');
                  else

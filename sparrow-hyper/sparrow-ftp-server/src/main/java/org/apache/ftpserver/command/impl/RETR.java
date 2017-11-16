@@ -201,7 +201,7 @@ public class RETR extends AbstractCommand {
                 IoUtils.close(is);
             }
 
-            // if data transfer ok - send transfer complete message
+            // if data transfer ok - send transfer complete services
             if (!failure) {
                 session.write(LocalizedFtpReply.translate(session, request, context,
                         FtpReply.REPLY_226_CLOSING_DATA_CONNECTION, "RETR",

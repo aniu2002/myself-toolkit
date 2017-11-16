@@ -16,7 +16,6 @@ import java.util.List;
  * Created by Administrator on 2016/12/2.
  */
 public class CrawlerConfig extends SelectorConfig {
-    public static final CrawlerConfig DEFAULT = new CrawlerConfig();
     /**
      * 线程池配置
      */
@@ -164,8 +163,6 @@ public class CrawlerConfig extends SelectorConfig {
     }
 
     public FormatConfig getFormat() {
-        if (this.format == null)
-            this.format = new FormatConfig();
         return format;
     }
 
@@ -207,7 +204,7 @@ public class CrawlerConfig extends SelectorConfig {
         return siteUrls;
     }
 
-    public void checkConfig() {
+    public void checkConfig(){
         if (this.page == null)
             this.page = new PageConfig();
         if (this.store == null)

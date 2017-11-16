@@ -43,7 +43,7 @@ import org.slf4j.LoggerFactory;
 /**
  * <strong>Internal class, do not use directly.</strong>
  * 
- * Class to get FtpServer reply messages. This supports i18n. Basic message
+ * Class to get FtpServer reply messages. This supports i18n. Basic services
  * search path is:
  * 
  * <strong><strong>Internal class, do not use directly.</strong></strong>
@@ -181,7 +181,7 @@ public class DefaultMessageResource implements MessageResource {
 	}
 
 	/**
-	 * Get the message. If the message not found, it will return null.
+	 * Get the services. If the services not found, it will return null.
 	 */
 	public String getMessage(int code, String subId, String language) {
 		String key = String.valueOf(code);

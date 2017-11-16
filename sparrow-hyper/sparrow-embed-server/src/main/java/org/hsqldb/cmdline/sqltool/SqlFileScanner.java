@@ -360,7 +360,7 @@ public class SqlFileScanner implements TokenSource {
         }
         assert rawLeadinPrompt != null:
             "Internal assertion failed.  "
-            + "Scanner's message Resource Bundle not initialized properly";
+            + "Scanner's services Resource Bundle not initialized properly";
         psStd.println(rawLeadinPrompt);
     }
 

@@ -22,15 +22,15 @@
         var _app='${app}';
         var columns=[
             'x',
-            {name:'name',label:'名称',width:'70'},
-            {name:'source',label:'资源',editor:'select',vtype:'required',src:"srcCfg-${app}",max:32},
-            {name:'type',label:'类型',editor:'select',vtype:'required',src:"providerTypes",max:32},
-            {name:'desc',label:'描述',width:'100'},
-            {name:'script',label:'脚本',editor:'text',vtype:'required',max:32},
-            {name:'op',label:'操作',width:'120',align:'left',render:function(v,data){
-                v=data.name;
+            {title:'title',label:'名称',width:'70'},
+            {title:'source',label:'资源',editor:'select',vtype:'required',src:"srcCfg-${app}",max:32},
+            {title:'type',label:'类型',editor:'select',vtype:'required',src:"providerTypes",max:32},
+            {title:'desc',label:'描述',width:'100'},
+            {title:'script',label:'脚本',editor:'text',vtype:'required',max:32},
+            {title:'op',label:'操作',width:'120',align:'left',render:function(v,data){
+                v=data.title;
                 var ds=data.source;
-                var s='<a href="/cmd/sys/provider?_t=edit&name='+v+'&app='+_app+'">编辑</a>&nbsp;<a href="/cmd/sys/provider?_t=detail&name='+v+'&app='+_app+'">详情</a>&nbsp;<a href="#" onclick="delRow(\''+v+'\')">删除</a>';
+                var s='<a href="/cmd/sys/provider?_t=edit&title='+v+'&app='+_app+'">编辑</a>&nbsp;<a href="/cmd/sys/provider?_t=detail&title='+v+'&app='+_app+'">详情</a>&nbsp;<a href="#" onclick="delRow(\''+v+'\')">删除</a>';
                 return s;
             },noe:true}
         ];
@@ -40,7 +40,7 @@
         var _UI;
 
         var rowDblClick=function(r){
-            self.location="/cmd/sys/provider?_t=edit&name="+r._id+"&app="+_app;
+            self.location="/cmd/sys/provider?_t=edit&title="+r._id+"&app="+_app;
         };
 
         var delRow = function(v){
@@ -56,11 +56,11 @@
             _UI = _CRUD_.renderTable({
                 url:_url,
                 cols:columns,
-                idFeild:'name',
+                idFeild:'title',
                 searchEl:'#searchForm',
                 rowDblClick:rowDblClick,
                 opBar:[_CRUD_.opBar[0],{
-                    name:'保存',
+                    title:'保存',
                     func:function(grid){
                         Common.post('/cmd/sys/provider',{_t:'sp',app:_app},function(d){
                             _CRUD_.openAlert(d.msg);

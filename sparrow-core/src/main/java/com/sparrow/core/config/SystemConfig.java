@@ -51,11 +51,8 @@ public class SystemConfig {
                     fileName));
             if (properties == null || properties.isEmpty()) {
                 properties = PropertiesFileUtil.mergePropertyFiles(new String[]{
-                        "classpath:system.properties",
                         "classpath:conf/system.properties",
-                        "classpath:eggs/scan.properties",
-                        "classpath:conf/default.properties",
-                        "classpath:conf/custom.properties"});
+                        "classpath:system.properties"});
             }
         }
         _sysProps = properties;
@@ -64,8 +61,8 @@ public class SystemConfig {
         SOURCE_DIR = _sysProps.getProperty("source.generate.path");
         TARGET_DIR = _sysProps.getProperty("target.generate.path");
         HOST_URL = _sysProps.getProperty("web.host");
-        APP_URL = _sysProps.getProperty("web.app.prefix", "/rest");
-        IMG_URL = _sysProps.getProperty("web.image.prefix", "/img");
+        APP_URL = _sysProps.getProperty("web.app.prefix");
+        IMG_URL = _sysProps.getProperty("web.image.prefix");
         INDEX_PATH = _sysProps.getProperty("index.path");
 
         LOGIN_PATH = _sysProps.getProperty("web.login.path", "/rest/login");

@@ -45,7 +45,7 @@ public class InvalidFileNameException extends RuntimeException {
      * Creates a new instance.
      *
      * @param pName The file name causing the exception.
-     * @param pMessage A human readable error message.
+     * @param pMessage A human readable error services.
      */
     public InvalidFileNameException(String pName, String pMessage) {
         super(pMessage);

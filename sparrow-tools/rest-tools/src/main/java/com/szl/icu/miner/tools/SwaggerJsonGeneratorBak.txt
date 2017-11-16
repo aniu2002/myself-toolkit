@@ -1,0 +1,509 @@
+package com.szl.icu.miner.tools;
+
+import com.szl.icu.miner.tools.data.ContentType;
+import com.szl.icu.miner.tools.data.Module;
+import com.szl.icu.miner.tools.data.Modules;
+import com.szl.icu.miner.tools.log.DefaultLog;
+import com.szl.icu.miner.tools.log.Log;
+import com.szl.icu.miner.tools.template.FreeMarkerUtils;
+import com.szl.icu.miner.tools.template.swagger.*;
+import com.szl.icu.miner.tools.utils.ClassUtils;
+import com.szl.icu.miner.tools.utils.FileIOUtil;
+import com.szl.icu.miner.tools.utils.JsonFormat;
+import com.szl.icu.miner.tools.utils.StringUtils;
+import org.markdown4j.Markdown4jProcessor;
+
+import java.io.File;
+import java.lang.reflect.Field;
+import java.lang.reflect.Modifier;
+import java.util.*;
+
+/**
+ * Created by yzc on 2016/9/28.
+ */
+public class SwaggerJsonGenerator extends AbstractGenerator {
+    final static ObjectDefinition DEFAULT_OBJ = new ObjectDefinition();
+    private Map<String, ObjectDefinition> objMap = new HashMap<String, ObjectDefinition>();
+    private String restConfig;
+    private String codePath;
+    private String modules[];
+    private Modules modulesConfig;
+    private boolean generateSwagger;
+    private boolean generateMarkDown;
+    private boolean generateHtmlDocs;
+
+    public boolean isGenerateSwagger() {
+        return generateSwagger;
+    }
+
+    public SwaggerJsonGenerator setGenerateSwagger(boolean generateSwagger) {
+        this.generateSwagger = generateSwagger;
+        return this;
+    }
+
+    public boolean isGenerateMarkDown() {
+        return generateMarkDown;
+    }
+
+    public SwaggerJsonGenerator setGenerateMarkDown(boolean generateMarkDown) {
+        this.generateMarkDown = generateMarkDown;
+        return this;
+    }
+
+    public boolean isGenerateHtmlDocs() {
+        return generateHtmlDocs;
+    }
+
+    public SwaggerJsonGenerator setGenerateHtmlDocs(boolean generateHtmlDocs) {
+        this.generateHtmlDocs = generateHtmlDocs;
+        return this;
+    }
+
+    public SwaggerJsonGenerator setLog(Log log) {
+        super.setLogger(log);
+        return this;
+    }
+
+    public String getCodePath() {
+        return codePath;
+    }
+
+    public SwaggerJsonGenerator setCodePath(String codePath) {
+        this.codePath = codePath;
+        return this;
+    }
+
+    public String[] getModules() {
+        return modules;
+    }
+
+    public SwaggerJsonGenerator setModules(String modules[]) {
+        this.modules = modules;
+        return this;
+    }
+
+    public String getRestConfig() {
+        return restConfig;
+    }
+
+    public SwaggerJsonGenerator setRestConfig(String restConfig) {
+        this.restConfig = restConfig;
+        return this;
+    }
+
+    public void generate(String generateRootDir, String[] modules) {
+        File baseFile = new File(generateRootDir);
+        if (!baseFile.exists())
+            baseFile.mkdirs();
+        Swagger swagger = generateController(modules);
+
+        if (this.isGenerateSwagger()) {
+            File file = new File(baseFile, "swagger.json");
+            String content = FreeMarkerUtils.getInstance().writeString("swagger-json", swagger);
+            FileIOUtil.writeFile(file, JsonFormat.clearBlankLine(content), FileIOUtil.DEFAULT_ENCODING);
+        }
+        String markDown;
+        try {
+            if (this.isGenerateHtmlDocs()) {
+                markDown = FreeMarkerUtils.getInstance().writeString("swagger-markdown-e", swagger);
+                String style = FileIOUtil.readString("classpath:markdown.css");
+                String html = new StringBuilder().append("<html><head><title>test</title>")
+                        .append("<meta charset=\"utf-8\">")
+                        .append("<style>").append(style).append("</style>")
+                        .append("</head><body 'class\"=\"markdown-preview\" data-use-github-style>")
+                        .append(new Markdown4jProcessor().addHtmlAttribute("style", "text-align:left", "td").process(markDown))
+                        .append("</body></html>").toString();
+                FileIOUtil.writeFile(new File(baseFile, "swagger.html"), html, FileIOUtil.DEFAULT_ENCODING);
+            }
+            if (this.isGenerateMarkDown()) {
+                markDown = FreeMarkerUtils.getInstance().writeString("swagger-markdown", swagger);
+                FileIOUtil.writeFile(new File(baseFile, "swagger.md"), markDown, FileIOUtil.DEFAULT_ENCODING);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    Swagger generateController(String[] modules) {
+        Swagger swagger = new Swagger();
+        for (String module : modules) {
+            if (this.modulesConfig != null && this.modulesConfig.contain(module)) {
+                Module m = this.modulesConfig.getModule(module);
+                if (m.getReqMaps() != null && !m.getReqMaps().isEmpty()) {
+                    generateRestReqMap(m, m.getReqMaps(), swagger);
+                    continue;
+                }
+            }
+        }
+        return swagger;
+    }
+
+    boolean isObject(String title) {
+        int idx = title.indexOf('.');
+        if (idx == -1) return false;
+        if (title.startsWith("java.lang"))
+            return false;
+        return true;
+    }
+
+    boolean isPrimitive(String str) {
+        str = (str != null ? str.toLowerCase() : null);
+        return "string".equals(str) || "int".equals(str)
+                || "integer".equals(str) || "long".equals(str)
+                || "double".equals(str) || "float".equals(str)
+                || "boolean".equals(str) || "bool".equals(str)
+                || "number".equals(str);
+    }
+
+    boolean isFormUrlEncoding(String str) {
+        char c = str.charAt(0);
+        return c == '~';
+    }
+
+    void fillPropType(String title, ObjectPropType propType) {
+        title = title.toLowerCase();
+        if ("integer".equals(title) || "int".equals(title)) {
+            propType.setType("integer");
+            propType.setFormat("int32");
+        } else if ("long".equals(title)) {
+            propType.setType("integer");
+            propType.setFormat("int64");
+        } else if ("double".equals(title) || "number".equals(title)) {
+            propType.setType("number");
+            propType.setFormat("double");
+        } else if ("float".equals(title)) {
+            propType.setType("number");
+            propType.setFormat("float");
+        } else if ("string".equals(title)) {
+            propType.setType("string");
+        } else if ("boolean".equals(title)) {
+            propType.setType("boolean");
+        } else if ("byte".equals(title)) {
+            propType.setType("string");
+            propType.setFormat("byte");
+        } else if ("binary".equals(title)) {
+            propType.setType("string");
+            propType.setFormat("binary");
+        } else if ("date".equals(title)) {
+            propType.setType("string");
+            propType.setFormat("date");
+        } else if ("dateTime".equals(title)) {
+            propType.setType("string");
+            propType.setFormat("date-time");
+        } else if ("password".equals(title)) {
+            propType.setType("string");
+            propType.setFormat("password");
+        } else {
+            System.out.println(" unkown type " + title);
+        }
+    }
+
+    ObjectPropDefinition extractProp(Field field) {
+        ObjectPropDefinition propDef = new ObjectPropDefinition();
+        String title = field.getType().getSimpleName();
+        boolean isObj = this.isObject(field.getType().getName());
+        propDef.setName(field.getName());
+        propDef.setComplex(isObj);
+        if (isObj)
+            propDef.setType(title);
+        else
+            this.fillPropType(title, propDef);
+        return propDef;
+    }
+
+    ObjectDefinition extractObject(Class<?> cls, Swagger swagger) {
+        String title = cls.getName();
+        ObjectDefinition objectDefine = DEFAULT_OBJ;
+        if (this.hasCopyClass(title))
+            return this.objMap.get(title);
+        try {
+            Field[] fields = cls.getDeclaredFields();
+            objectDefine = new ObjectDefinition();
+            objectDefine.setClazz(cls.getName());
+            objectDefine.setName(cls.getSimpleName());
+            objectDefine.setType("object");
+            for (Field field : fields) {
+                if ("this$0".equals(field.getName()))
+                    continue;
+                boolean skip = this.ignoreFieldType(field.getType().getName());
+                if (skip)
+                    continue;
+                ObjectPropDefinition propDef = this.extractProp(field);
+                if (propDef.isComplex())
+                    this.extractObject(field.getType(), swagger);
+                objectDefine.addProp(propDef);
+            }
+            swagger.addObjectDefine(objectDefine);
+            return objectDefine;
+        } finally {
+            this.objMap.put(title, objectDefine);
+            this.setClassCopied(title);
+        }
+    }
+
+    void parseReqParams(String val, List<ServiceParamDefinition> list, ObjectDefinition reqDef) {
+        String para = val;
+        int idx = val.indexOf('(');
+        if (idx == -1) {
+            this.fetchParam("#", list, reqDef);
+            return;
+        }
+        para = val.substring(idx + 1);
+        idx = para.indexOf(')');
+        if (idx != -1)
+            para = para.substring(0, idx);
+        String paras[] = StringUtils.split(para, ',');
+        for (String p : paras) {
+            fetchParam(p, list, reqDef);
+        }
+    }
+
+    void parseReqParams(String val, List<ServiceParamDefinition> list) {
+        String para = val;
+        String type = "string";
+        int idx = val.indexOf('(');
+        if (idx == -1) {
+            this.fetchParam("#", list, type);
+            return;
+        } else {
+            type = val.substring(0, idx);
+        }
+        para = val.substring(idx + 1);
+        idx = para.indexOf(')');
+        if (idx != -1)
+            para = para.substring(0, idx);
+        String paras[] = StringUtils.split(para, ',');
+        for (String p : paras) {
+            this.fetchParam(p, list, type);
+        }
+    }
+
+    String[] parseParam(String str) {
+        String var = "", type = "string";
+        int idx = str.indexOf('[');
+        if (idx == -1) {
+            if (str.length() > 1)
+                var = str.substring(1);
+        } else {
+            var = str.substring(1, idx);
+            String tpStr = str.substring(idx + 1);
+            idx = tpStr.indexOf(']');
+            if (idx == -1)
+                type = tpStr;
+            else
+                type = tpStr.substring(0, idx);
+        }
+        return new String[]{var, type};
+    }
+
+    ServiceParamDefinition createBodyParam(String paraName, String type, ObjectDefinition reqDef) {
+        ServiceParamDefinition paramDefine = new ServiceParamDefinition();
+        paramDefine.setRequired(true);
+        if (reqDef != null) {
+            paramDefine.setName("");
+            paramDefine.setDescription(reqDef.getName());
+            paramDefine.setRef(reqDef.getName());
+            paramDefine.setComplex(true);
+        } else {
+            paramDefine.setName(paraName);
+            paramDefine.setDescription(paraName);
+            this.fillPropType(type, paramDefine);
+            paramDefine.setRef(paramDefine.getType());
+        }
+        paramDefine.setType("body");
+        return paramDefine;
+    }
+
+    String[] splitQueryParam(String val) {
+        String para = val;
+        int idx = val.indexOf('(');
+        if (idx == -1)
+            return new String[]{val};
+        para = val.substring(idx + 1);
+        idx = para.indexOf(')');
+        if (idx != -1)
+            para = para.substring(0, idx);
+        return StringUtils.split(para, ',');
+    }
+
+    ServiceParamDefinition createQueryParam(String paraName, String type) {
+        boolean isObject = this.isObject(type);
+        ServiceParamDefinition paramDefine = new ServiceParamDefinition();
+        paramDefine.setName(paraName);
+        paramDefine.setRequired(true);
+        paramDefine.setComplex(isObject);
+        if (isObject) {
+            paramDefine.setRef(this.getClassSimpleName(type));
+            paramDefine.setDescription(paramDefine.getRef());
+        } else {
+            this.fillPropType(type, paramDefine);
+            paramDefine.setDescription(paraName);
+            paramDefine.setRef(paramDefine.getType());
+        }
+        paramDefine.setType("query");
+        return paramDefine;
+    }
+
+    void fetchParam(String str, List<ServiceParamDefinition> list, String type) {
+        ServiceParamDefinition paramDefine = null;
+        char c = str.charAt(0);
+        switch (c) {
+            case '#':
+                paramDefine = this.createBodyParam(str.substring(1), type, null);
+                break;
+            case '$':
+            case '!':
+                paramDefine = this.createQueryParam(str.substring(1), type);
+                break;
+            default:
+                paramDefine = null;
+        }
+        if (paramDefine != null)
+            list.add(paramDefine);
+    }
+
+    void fetchParam(String str, List<ServiceParamDefinition> list, ObjectDefinition reqDef) {
+        ServiceParamDefinition paramDefine = null;
+        char c = str.charAt(0);
+        String param[] = this.parseParam(str);
+        switch (c) {
+            case '#':
+                paramDefine = this.createBodyParam(param[0], param[1], reqDef);
+                break;
+            case '$':
+                paramDefine = this.createQueryParam(param[0], param[1]);
+                break;
+            case '~':
+                String params[] = this.splitQueryParam(str.substring(1));
+                for (String p : params)
+                    this.fetchParam(p, list, reqDef);
+                break;
+            case '!':
+            default:
+                paramDefine = null;
+        }
+        if (paramDefine != null)
+            list.add(paramDefine);
+    }
+
+    String cutClassDef(String val, int pos) {
+        String clz = val;
+        int idx = val.indexOf('(');
+        if (idx != -1)
+            clz = val.substring(pos, idx);
+        return clz;
+    }
+
+    String genClassName(String clz, Module module) {
+        int idx = clz.indexOf('.');
+        if (idx == -1)
+            return String.format("%s$%s", module.getMessage(), clz);
+        else
+            return clz;
+    }
+
+    void generateRestReqMap(Module md, Map<String, String> reqMap, Swagger swagger) {
+        if (reqMap == null || reqMap.isEmpty())
+            return;
+        String serviceName = this.firstCharUppercase(md.getName()) + " Service";
+        swagger.addServiceTag(new ServiceTag(serviceName));
+        String key, val, clazzConfig;
+        Iterator<Map.Entry<String, String>> ite = reqMap.entrySet().iterator();
+        Map.Entry<String, String> entry;
+        while (ite.hasNext()) {
+            entry = ite.next();
+            key = entry.getKey();
+            clazzConfig = val = entry.getValue();
+
+            ServiceDefinition srvDef = new ServiceDefinition();
+            srvDef.setMethod("post");
+            srvDef.setOperationId(key);
+            srvDef.setDescription(this.firstCharUppercase(key) + " Service Endpoint");
+            srvDef.setPath(String.format("/api/%s/%s", md.getName(), key));
+            srvDef.setTag(serviceName);
+            srvDef.setSummary(key);
+            boolean isFormReq = this.isFormUrlEncoding(val);
+            String clzDef = isFormReq ? this.cutClassDef(val, 1) : this.cutClassDef(val, 0);
+            if (isFormReq) {
+                srvDef.setConsume(ContentType.FORM);
+                clazzConfig = val.substring(1);
+            }
+            if (this.isPrimitive(clzDef)) {
+                srvDef.setParams(this.wrapServiceParams(clazzConfig, swagger));
+            } else {
+                Class<?> clazz = ClassUtils.loadClassNoException(this.genClassName(clzDef, md));
+                if (clazz != null && !Modifier.isAbstract(clazz.getModifiers())) {
+                    this.info(String.format("swagger extract class : %s for reqmap key = %s", clazz.getName(), key));
+                    srvDef.setParams(this.wrapServiceParams(clazz, clazzConfig, swagger));
+                }
+            }
+            clazzConfig = md.getRespMapValue(key);
+            if (StringUtils.isNotEmpty(clazzConfig)) {
+                if (this.isPrimitive(clazzConfig)) {
+                    srvDef.setResponse(this.wrapResponseDefinition(clazzConfig));
+                    srvDef.setProduce(ContentType.TEXT);
+                } else {
+                    Class<?> respClazz = ClassUtils.loadClassNoException(this.buildClassName(clazzConfig, md));
+                    if (respClazz != null && !Modifier.isAbstract(respClazz.getModifiers())) {
+                        srvDef.setResponse(this.wrapResponseDefinition(respClazz, swagger));
+                    }
+                }
+            }
+            swagger.addServiceDefine(srvDef);
+        }
+    }
+
+    List<ServiceParamDefinition> wrapServiceParams(Class<?> reqClazz, String value, Swagger swagger) {
+        ObjectDefinition reqDef = this.extractObject(reqClazz, swagger);
+        List<ServiceParamDefinition> list = new ArrayList<ServiceParamDefinition>();
+        this.parseReqParams(value, list, reqDef);
+        return list;
+    }
+
+    List<ServiceParamDefinition> wrapServiceParams(String value, Swagger swagger) {
+        List<ServiceParamDefinition> list = new ArrayList<ServiceParamDefinition>();
+        this.parseReqParams(value, list);
+        return list;
+    }
+
+    ServiceRespDefinition wrapResponseDefinition(String title) {
+        ServiceRespDefinition respDefinition = new ServiceRespDefinition();
+        respDefinition.setDescription(this.getClassSimpleName(title));
+        respDefinition.setComplex(false);
+        respDefinition.setStatus("200");
+        this.fillPropType(title, respDefinition);
+        respDefinition.setRef(respDefinition.getType());
+        return respDefinition;
+    }
+
+    ServiceRespDefinition wrapResponseDefinition(Class<?> respClazz, Swagger swagger) {
+        ObjectDefinition respDef = this.extractObject(respClazz, swagger);
+        ServiceRespDefinition respDefinition = new ServiceRespDefinition();
+        respDefinition.setDescription(respDef.getName());
+        respDefinition.setRef(respDef.getName());
+        respDefinition.setComplex(true);
+        respDefinition.setStatus("200");
+        return respDefinition;
+    }
+
+    public void generate() {
+        this.modulesConfig = Modules.parse(this.restConfig);
+        this.generate(this.codePath, this.modules);
+    }
+
+    public static void main(String args[]) {
+        try {
+            new SwaggerJsonGenerator()
+                    .setLog(new DefaultLog())
+                    .setRestConfig("RestService.conf")
+                    .setModules(new String[]{"data", "datamanager"})
+                    .setCodePath("D:/sources")
+                    .setGenerateMarkDown(true)
+                    .setGenerateHtmlDocs(true)
+                    .setGenerateSwagger(true)
+                    .generate();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}

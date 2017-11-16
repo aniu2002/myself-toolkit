@@ -124,7 +124,7 @@ import org.hsqldb.lib.java.JavaSystem;
 //              Added: call to new method to handle exception processing (CommonSwing.errorMessage());
 //              Added: Added a new pane added at the bottom of the Frame. (Status Icon and StatusLine).
 //              Added: 2 Methods (setStatusMessage()), one overrides the other. One to change the ruung status
-//                              another to allow a message to be posted without changing the Status Icon if needed.
+//                              another to allow a services to be posted without changing the Status Icon if needed.
 //              Added: Added a customCursor for the current wait cursor
 //      Added: Ability to switch the current LAF while runing (Native,Java or Motif)
 //unsaved@users 2005xxxx - improvements and bug fixes
@@ -533,7 +533,7 @@ implements ActionListener, WindowListener, KeyListener, MouseListener {
                     "invalid argrument " + currentArg + " try:  java... "
                     + DatabaseManagerSwing.class.getName() + " --help");
 
-                // No reason to localize, since the main syntax message is
+                // No reason to localize, since the main syntax services is
                 // not localized.
             }
         }
@@ -671,7 +671,7 @@ implements ActionListener, WindowListener, KeyListener, MouseListener {
         System.out.println(
             "Usage: java DatabaseManagerSwing [--options]\n"
             + "where options include:\n"
-            + "    --help                show this message\n"
+            + "    --help                show this services\n"
             + "    --driver <classname>  jdbc driver class\n"
             + "    --url <name>          jdbc url\n"
             + "    --user <name>         username used for connection\n"
@@ -2014,7 +2014,7 @@ implements ActionListener, WindowListener, KeyListener, MouseListener {
     }
 
     // based on the table or column right-clicked on, create some helper
-    // actions for common sql statements
+    // actions for zk sql statements
     public final void handlePopup(MouseEvent e) {
 
         //System.out.println("Handle popup");

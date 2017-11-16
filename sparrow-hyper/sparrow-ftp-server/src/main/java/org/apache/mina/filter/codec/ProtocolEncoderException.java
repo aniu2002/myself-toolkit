@@ -21,7 +21,7 @@ package org.apache.mina.filter.codec;
 
 /**
  * An exception that is thrown when {@link ProtocolEncoder}
- * cannot understand or failed to validate the specified message object.
+ * cannot understand or failed to validate the specified services object.
  *
  * @author <a href="http://mina.apache.org">Apache MINA Project</a>
  */
@@ -36,7 +36,7 @@ public class ProtocolEncoderException extends ProtocolCodecException {
     }
 
     /**
-     * Constructs a new instance with the specified message.
+     * Constructs a new instance with the specified services.
      */
     public ProtocolEncoderException(String message) {
         super(message);
@@ -50,7 +50,7 @@ public class ProtocolEncoderException extends ProtocolCodecException {
     }
 
     /**
-     * Constructs a new instance with the specified message and the specified
+     * Constructs a new instance with the specified services and the specified
      * cause.
      */
     public ProtocolEncoderException(String message, Throwable cause) {

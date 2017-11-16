@@ -6,22 +6,19 @@ import com.sparrow.collect.crawler.data.PageData;
 import com.sparrow.collect.crawler.data.SiteEntry;
 import com.sparrow.collect.crawler.dom.CrawlerDom;
 import com.sparrow.collect.crawler.dom.impl.JsoupCrawlerDomImpl;
-import com.sparrow.collect.crawler.exceptions.NoMorePageException;
 import com.sparrow.collect.crawler.listener.DefaultListener;
 import com.sparrow.collect.crawler.listener.Listener;
 import com.sparrow.collect.crawler.selector.DefaultPageSelector;
 import com.sparrow.collect.crawler.selector.IPageSelector;
 import com.sparrow.collect.utils.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.util.concurrent.ThreadPoolExecutor;
 
 public abstract class AbstractCrawler {
     static final Listener defaultListener = new DefaultListener();
     static final IPageSelector defaultSelector = new DefaultPageSelector();
-    static final Logger log = LoggerFactory.getLogger(AbstractCrawler.class);
+
     private boolean broken = false;
 
     protected abstract IPageSelector getSelector();
@@ -38,7 +35,7 @@ public abstract class AbstractCrawler {
     }
 
     protected void writeErrorLog(String status, String url, String reason) {
-        // System.out.println(String.format("crawl -  status : %s , url : %s , reason : %s", status, url, reason));
+       // System.out.println(String.format("crawl -  status : %s , url : %s , reason : %s", status, url, reason));
     }
 
     protected abstract CrawlerData doCrawlData(EntryData entry);
@@ -48,7 +45,7 @@ public abstract class AbstractCrawler {
         if (StringUtils.isEmpty(contentExpress))
             return data;
         if (data != null) {
-            CrawlerDom dom = this.createCrawlerDom(data);
+            CrawlerDom dom = this.createCrDom(data);
             //Document doc = Jsoup.parse(data.getHtml());
             data.setContent(dom.text(contentExpress));
             // data.setContent(doc.select(contentExpress).text());
@@ -72,7 +69,7 @@ public abstract class AbstractCrawler {
 
     protected abstract EntryData generatePageEntry(SiteEntry siteEntry, int num);
 
-    protected CrawlerDom createCrawlerDom(CrawlerData data) {
+    protected CrawlerDom createCrDom(CrawlerData data) {
         JsoupCrawlerDomImpl dom = new JsoupCrawlerDomImpl();
         dom.parse(data.getHtml());
         return dom;
@@ -116,15 +113,9 @@ public abstract class AbstractCrawler {
         return false;
     }
 
-    protected boolean needDetailCheck() {
-        return true;
-    }
-
     protected void pageExecute(SiteEntry siteEntry) {
-        if (this.needSiteCheck() && this.checkUrl(siteEntry.getUrl())) {
-            log.warn("Site entry is downloaded - {}", siteEntry.getUrl());
+        if (this.needSiteCheck() && this.checkUrl(siteEntry.getUrl()))
             return;
-        }
         CrawlerData crawlerData = null;
         int num = siteEntry.getPageStart();
         int max = siteEntry.getPageEnd();
@@ -136,7 +127,6 @@ public abstract class AbstractCrawler {
             if (pEntry == null)
                 break;
             if (this.needPageCheck() && this.checkUrl(pEntry.getUrl())) {
-                log.warn("Page entry is downloaded - {}", pEntry.getUrl());
                 num++;
                 continue;
             }
@@ -146,28 +136,22 @@ public abstract class AbstractCrawler {
             if (crawlerData != null) {
                 this.pageExecute(crawlerData, siteEntry, pEntry);
                 this.handlePageData(crawlerData, siteEntry, pEntry);
-                if (this.needPageCheck())
-                    this.cacheUrl(pEntry.getUrl());
+                this.cacheUrl(pEntry.getUrl());
             } else {
                 this.broken = true;
                 //不忽略掉非200状态的请求，下次就不请求
-                if (this.needPageCheck() && !this.ignoreErrorStatusData())
+                if (!this.ignoreErrorStatusData())
                     this.cacheUrl(pEntry.getUrl());
             }
             this.getListener().pageEnd(pEntry);
             num++;
         } while (this.goOn(crawlerData, num, max));
-        if (this.needSiteCheck())
-            this.cacheUrl(siteEntry.getUrl());
+        this.cacheUrl(siteEntry.getUrl());
         this.getListener().siteEnd(siteEntry);
     }
 
     public void exec(SiteEntry siteEntry) {
-        try {
-            this.pageExecute(siteEntry);
-        } catch (NoMorePageException e) {
-            log.error("No more page to crawl!");
-        }
+        this.pageExecute(siteEntry);
     }
 
     protected void pageExecute(CrawlerData crawlerData, SiteEntry siteEntry,
@@ -175,14 +159,9 @@ public abstract class AbstractCrawler {
         this.doPageExecute(crawlerData, siteEntry, pEntry);
     }
 
-    protected void onPageExecute(PageData pageData) {
-
-    }
-
     protected void doPageExecute(CrawlerData crawlerData, SiteEntry siteEntry, EntryData pEntry) {
-        crawlerData.setDom(this.createCrawlerDom(crawlerData));
+        crawlerData.setDom(this.createCrDom(crawlerData));
         PageData pageData = this.fetchPageEntries(siteEntry, crawlerData);
-        this.onPageExecute(pageData);
         //没有page可抓取，已经结束
         if (pageData == null || CollectionUtils.isEmpty(pageData.getEntries())) {
             return;
@@ -197,24 +176,17 @@ public abstract class AbstractCrawler {
     }
 
     protected void doHandleDetail(EntryData itemEntry, SiteEntry siteEntry, EntryData pageEntry) {
-        if (this.needDetailCheck() && this.checkUrl(itemEntry.getUrl())) {
-            //log.warn("Detail entry is downloaded - {}", itemEntry.getUrl());
+        if (this.checkUrl(itemEntry.getUrl()))
             return;
-        }
         this.getListener().detailEnter(itemEntry);
         CrawlerData crawlerData = this.doCrawlData(itemEntry, siteEntry.getContentExpress());
         this.getListener().detailEnd(crawlerData);
+
         if (crawlerData != null) {
             this.handleCrawlerData(crawlerData, siteEntry, pageEntry);
-            if (this.needDetailCheck())
-                this.cacheUrl(itemEntry.getUrl());
-        } else if (this.needDetailCheck() && !ignoreErrorStatusData()) {
             this.cacheUrl(itemEntry.getUrl());
-        }
-        if (crawlerData == null) {
-            this.writeErrorLog("-1", itemEntry.getUrl(), "--- unkown");
-        } else if (crawlerData.getStatus() != 200) {
-            this.writeErrorLog(String.valueOf(crawlerData.getStatus()), itemEntry.getUrl(), crawlerData.getPageType());
+        } else if (!ignoreErrorStatusData()) {
+            this.cacheUrl(itemEntry.getUrl());
         }
     }
 
@@ -230,7 +202,7 @@ public abstract class AbstractCrawler {
         IPageSelector curSelector = this.getSelector();
         if (curSelector == null)
             curSelector = defaultSelector;
-        pageData.setEntries(curSelector.selectPageEntries(crawlerData.getDom(), entry));
+        pageData.setEntries(curSelector.selectPageEntries(crawlerData.getDom(),entry));
         return pageData;
     }
 

@@ -12,12 +12,12 @@ import ${impt};
  *  ============================== <br/>
  * @author YZC
  */
-public class ${table.objName} implements Serializable {
+public class ${table.objName}Dto implements Serializable {
 	/** 序列化版本ID */
 	private static final long serialVersionUID = 1L;
 <#assign items = table.items>
 <#list items as data>
-	/** ${data.desc?if_exists}(${data.name}) 
+	/** ${data.desc?if_exists}(${data.title})
 	 *  ${data.fieldName} (${data.desc?if_exists})
 	 */
 	private ${data.sampleType} ${data.fieldName};

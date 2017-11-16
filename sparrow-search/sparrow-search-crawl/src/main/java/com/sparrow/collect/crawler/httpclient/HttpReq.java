@@ -77,7 +77,9 @@ public class HttpReq {
         if (StringUtils.isNotBlank(contentType)) {
             ContentType ct = ContentType.create(contentType, this.charset);
             this.body = new StringEntity(bodyStr, ct);
-            this.method = "POST";
+            if (StringUtils.equalsIgnoreCase(this.method, CrawlHttp.GET))
+                this.method = "POST";
+            this.contentType = contentType;
         }
     }
 
@@ -96,7 +98,7 @@ public class HttpReq {
     public void setParaStr(String paras) {
         if (StringUtils.isEmpty(paras))
             return;
-        if ("post".equalsIgnoreCase(this.method)) {
+        if ("post".equalsIgnoreCase(this.method) || "put".equalsIgnoreCase(this.method)) {
             this.setBody(paras);
         } else {
             String url = this.url;
@@ -120,12 +122,13 @@ public class HttpReq {
                     NameValuePair valPair = new BasicNameValuePair(entry.getKey(), entry.getValue());
                     valPairs.add(valPair);
                 }
-                UrlEncodedFormEntity uefEntity = null;
+                UrlEncodedFormEntity uefEntity;
                 try {
                     uefEntity = new UrlEncodedFormEntity(valPairs, this.charset);
                     uefEntity.setContentType(contentType);
                     this.body = uefEntity;
-                    this.method = "POST";
+                    if (StringUtils.equalsIgnoreCase(this.method, CrawlHttp.GET))
+                        this.method = "POST";
                 } catch (UnsupportedEncodingException e) {
                     e.printStackTrace();
                 }

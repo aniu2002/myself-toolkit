@@ -1,0 +1,1768 @@
+{
+  "resourceType" : "Bundle",
+  "id" : "c2b35113-4593-4cb5-be44-b12a6fadbd80",
+  "meta" : {
+    "lastUpdated" : "2017-05-11T17:57:50.468+08:00"
+  },
+  "type" : "searchset",
+  "total" : 19497,
+  "link" : [ {
+    "relation" : "self",
+    "url" : "http://10.10.15.38:8083/resources/Schedule?_count=50"
+  }, {
+    "relation" : "next",
+    "url" : "http://10.10.15.38:8083/resources?_getpages=92a84208-1c62-47f5-b15b-4196696c2a62&_getpagesoffset=50&_count=50&_bundletype=searchset"
+  } ],
+  "entry" : [ {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Schedule/940",
+    "resource" : {
+      "resourceType" : "Schedule",
+      "id" : "940",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-17T10:35:24.350+08:00"
+      },
+      "extension" : [ {
+        "fhir_comments" : [ " 排班日期 " ],
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/arr-date",
+        "valueDateTime" : "2015-12-15"
+      }, {
+        "fhir_comments" : [ " 时间段代码" ],
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/pre-time-code",
+        "valueCode" : "1"
+      }, {
+        "fhir_comments" : [ " 允许预约量" ],
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-reservation-num",
+        "valueInteger" : 100
+      }, {
+        "fhir_comments" : [ " 允许挂号量" ],
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-registration-num",
+        "valueInteger" : 100
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/guan/his/sinosoft/v1/identifier/schedule-id",
+        "_system" : {
+          "fhir_comments" : [ "原系统排班id号命名空间 " ]
+        },
+        "value" : "1",
+        "_value" : {
+          "fhir_comments" : [ " 原系统排班id号 " ]
+        }
+      } ],
+      "planningHorizon" : {
+        "fhir_comments" : [ " 排班时间段 " ],
+        "start" : "2015-12-15T09:00:00",
+        "end" : "2015-12-15T18:00:00"
+      },
+      "comment" : "备注"
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Schedule/942",
+    "resource" : {
+      "resourceType" : "Schedule",
+      "id" : "942",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-17T10:35:39.748+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/arr-date",
+        "valueDateTime" : "2016-05-09"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/pre-time-code",
+        "valueCode" : "1"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-reservation-num",
+        "valueInteger" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-registration-num",
+        "valueInteger" : 100
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/schedule-id",
+        "value" : "2016-05-09@0113@006"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Schedule/946",
+    "resource" : {
+      "resourceType" : "Schedule",
+      "id" : "946",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-17T10:59:34.059+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/arr-date",
+        "valueDateTime" : "2016-05-09"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/charge-type",
+        "valueReference" : {
+          "reference" : "Basic/700"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/pre-time-code",
+        "valueCode" : "1"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-reservation-num",
+        "valueInteger" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-registration-num",
+        "valueInteger" : 100
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/schedule-id",
+        "value" : "2016-05-09@0113@006"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Schedule/947",
+    "resource" : {
+      "resourceType" : "Schedule",
+      "id" : "947",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-17T10:59:48.788+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/arr-date",
+        "valueDateTime" : "2016-05-09"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/charge-type",
+        "valueReference" : {
+          "reference" : "Basic/700"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/pre-time-code",
+        "valueCode" : "1"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-reservation-num",
+        "valueInteger" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-registration-num",
+        "valueInteger" : 100
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/schedule-id",
+        "value" : "2016-05-09@0113@006"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Schedule/948",
+    "resource" : {
+      "resourceType" : "Schedule",
+      "id" : "948",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-17T10:59:49.611+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/arr-date",
+        "valueDateTime" : "2016-05-10"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/charge-type",
+        "valueReference" : {
+          "reference" : "Basic/700"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/pre-time-code",
+        "valueCode" : "1"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-reservation-num",
+        "valueInteger" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-registration-num",
+        "valueInteger" : 100
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/schedule-id",
+        "value" : "2016-05-10@0113@006"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Schedule/9607",
+    "resource" : {
+      "resourceType" : "Schedule",
+      "id" : "9607",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-21T16:24:18.465+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/arr-date",
+        "valueDateTime" : "2016-06-26"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/charge-type",
+        "valueReference" : {
+          "reference" : "Basic/716"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/pre-time-code",
+        "valueCode" : "4"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-reservation-num",
+        "valueInteger" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-registration-num",
+        "valueInteger" : 100
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/schedule-id",
+        "value" : "2016-06-26@0116@001"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Schedule/9730",
+    "resource" : {
+      "resourceType" : "Schedule",
+      "id" : "9730",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-21T17:01:41.460+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/arr-date",
+        "valueDateTime" : "2016-05-11"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/charge-type",
+        "valueReference" : {
+          "reference" : "Basic/9549"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/pre-time-code",
+        "valueCode" : "4"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-reservation-num",
+        "valueInteger" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-registration-num",
+        "valueInteger" : 100
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/schedule-id",
+        "value" : "2016-05-11@0113@006"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Schedule/9731",
+    "resource" : {
+      "resourceType" : "Schedule",
+      "id" : "9731",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-21T17:01:42.533+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/arr-date",
+        "valueDateTime" : "2016-05-12"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/charge-type",
+        "valueReference" : {
+          "reference" : "Basic/9549"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/pre-time-code",
+        "valueCode" : "4"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-reservation-num",
+        "valueInteger" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-registration-num",
+        "valueInteger" : 100
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/schedule-id",
+        "value" : "2016-05-12@0113@006"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Schedule/237917",
+    "resource" : {
+      "resourceType" : "Schedule",
+      "id" : "237917",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-07-26T17:47:32.865+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/arr-date",
+        "valueDateTime" : "2016-05-09"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/pre-time-code",
+        "valueCode" : "1"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-reservation-num",
+        "valueInteger" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-registration-num",
+        "valueInteger" : 100
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/schedule-id",
+        "value" : "test"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Schedule/241531",
+    "resource" : {
+      "resourceType" : "Schedule",
+      "id" : "241531",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-03T21:57:08.457+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/arr-date",
+        "valueDateTime" : "2016-03-11"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/charge-type",
+        "valueReference" : {
+          "reference" : "Basic/241198"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/pre-time-code",
+        "valueCode" : "4"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-reservation-num",
+        "valueInteger" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-registration-num",
+        "valueInteger" : 100
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/schedule-id",
+        "value" : "2016-03-11@0102@003"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Schedule/241533",
+    "resource" : {
+      "resourceType" : "Schedule",
+      "id" : "241533",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-03T21:57:09.165+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/arr-date",
+        "valueDateTime" : "2016-03-12"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/charge-type",
+        "valueReference" : {
+          "reference" : "Basic/241198"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/pre-time-code",
+        "valueCode" : "4"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-reservation-num",
+        "valueInteger" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-registration-num",
+        "valueInteger" : 100
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/schedule-id",
+        "value" : "2016-03-12@0102@003"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Schedule/241535",
+    "resource" : {
+      "resourceType" : "Schedule",
+      "id" : "241535",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-03T21:57:09.844+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/arr-date",
+        "valueDateTime" : "2016-03-13"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/charge-type",
+        "valueReference" : {
+          "reference" : "Basic/241198"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/pre-time-code",
+        "valueCode" : "4"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-reservation-num",
+        "valueInteger" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-registration-num",
+        "valueInteger" : 100
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/schedule-id",
+        "value" : "2016-03-13@0102@003"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Schedule/241537",
+    "resource" : {
+      "resourceType" : "Schedule",
+      "id" : "241537",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-03T21:57:10.506+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/arr-date",
+        "valueDateTime" : "2016-03-07"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/charge-type",
+        "valueReference" : {
+          "reference" : "Basic/241199"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/pre-time-code",
+        "valueCode" : "4"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-reservation-num",
+        "valueInteger" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-registration-num",
+        "valueInteger" : 100
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/schedule-id",
+        "value" : "2016-03-07@0102@004"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Schedule/241539",
+    "resource" : {
+      "resourceType" : "Schedule",
+      "id" : "241539",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-03T21:57:11.148+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/arr-date",
+        "valueDateTime" : "2016-03-08"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/charge-type",
+        "valueReference" : {
+          "reference" : "Basic/241199"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/pre-time-code",
+        "valueCode" : "4"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-reservation-num",
+        "valueInteger" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-registration-num",
+        "valueInteger" : 100
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/schedule-id",
+        "value" : "2016-03-08@0102@004"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Schedule/241541",
+    "resource" : {
+      "resourceType" : "Schedule",
+      "id" : "241541",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-03T21:57:11.779+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/arr-date",
+        "valueDateTime" : "2016-03-09"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/charge-type",
+        "valueReference" : {
+          "reference" : "Basic/241199"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/pre-time-code",
+        "valueCode" : "4"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-reservation-num",
+        "valueInteger" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-registration-num",
+        "valueInteger" : 100
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/schedule-id",
+        "value" : "2016-03-09@0102@004"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Schedule/241543",
+    "resource" : {
+      "resourceType" : "Schedule",
+      "id" : "241543",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-03T21:57:12.497+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/arr-date",
+        "valueDateTime" : "2016-03-10"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/charge-type",
+        "valueReference" : {
+          "reference" : "Basic/241199"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/pre-time-code",
+        "valueCode" : "4"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-reservation-num",
+        "valueInteger" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-registration-num",
+        "valueInteger" : 100
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/schedule-id",
+        "value" : "2016-03-10@0102@004"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Schedule/241545",
+    "resource" : {
+      "resourceType" : "Schedule",
+      "id" : "241545",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-03T21:57:13.182+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/arr-date",
+        "valueDateTime" : "2016-03-11"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/charge-type",
+        "valueReference" : {
+          "reference" : "Basic/241199"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/pre-time-code",
+        "valueCode" : "4"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-reservation-num",
+        "valueInteger" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-registration-num",
+        "valueInteger" : 100
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/schedule-id",
+        "value" : "2016-03-11@0102@004"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Schedule/241547",
+    "resource" : {
+      "resourceType" : "Schedule",
+      "id" : "241547",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-03T21:57:13.883+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/arr-date",
+        "valueDateTime" : "2016-03-12"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/charge-type",
+        "valueReference" : {
+          "reference" : "Basic/241199"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/pre-time-code",
+        "valueCode" : "4"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-reservation-num",
+        "valueInteger" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-registration-num",
+        "valueInteger" : 100
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/schedule-id",
+        "value" : "2016-03-12@0102@004"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Schedule/241549",
+    "resource" : {
+      "resourceType" : "Schedule",
+      "id" : "241549",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-03T21:57:14.579+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/arr-date",
+        "valueDateTime" : "2016-03-13"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/charge-type",
+        "valueReference" : {
+          "reference" : "Basic/241199"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/pre-time-code",
+        "valueCode" : "4"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-reservation-num",
+        "valueInteger" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-registration-num",
+        "valueInteger" : 100
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/schedule-id",
+        "value" : "2016-03-13@0102@004"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Schedule/241551",
+    "resource" : {
+      "resourceType" : "Schedule",
+      "id" : "241551",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-03T21:57:15.285+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/arr-date",
+        "valueDateTime" : "2016-03-07"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/charge-type",
+        "valueReference" : {
+          "reference" : "Basic/241200"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/pre-time-code",
+        "valueCode" : "4"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-reservation-num",
+        "valueInteger" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-registration-num",
+        "valueInteger" : 100
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/schedule-id",
+        "value" : "2016-03-07@0103@001"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Schedule/241553",
+    "resource" : {
+      "resourceType" : "Schedule",
+      "id" : "241553",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-03T21:57:15.954+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/arr-date",
+        "valueDateTime" : "2016-03-08"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/charge-type",
+        "valueReference" : {
+          "reference" : "Basic/241200"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/pre-time-code",
+        "valueCode" : "4"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-reservation-num",
+        "valueInteger" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-registration-num",
+        "valueInteger" : 100
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/schedule-id",
+        "value" : "2016-03-08@0103@001"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Schedule/241555",
+    "resource" : {
+      "resourceType" : "Schedule",
+      "id" : "241555",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-03T21:57:16.620+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/arr-date",
+        "valueDateTime" : "2016-03-09"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/charge-type",
+        "valueReference" : {
+          "reference" : "Basic/241200"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/pre-time-code",
+        "valueCode" : "4"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-reservation-num",
+        "valueInteger" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-registration-num",
+        "valueInteger" : 100
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/schedule-id",
+        "value" : "2016-03-09@0103@001"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Schedule/241557",
+    "resource" : {
+      "resourceType" : "Schedule",
+      "id" : "241557",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-03T21:57:17.323+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/arr-date",
+        "valueDateTime" : "2016-03-10"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/charge-type",
+        "valueReference" : {
+          "reference" : "Basic/241200"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/pre-time-code",
+        "valueCode" : "4"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-reservation-num",
+        "valueInteger" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-registration-num",
+        "valueInteger" : 100
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/schedule-id",
+        "value" : "2016-03-10@0103@001"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Schedule/241559",
+    "resource" : {
+      "resourceType" : "Schedule",
+      "id" : "241559",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-03T21:57:18.013+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/arr-date",
+        "valueDateTime" : "2016-03-11"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/charge-type",
+        "valueReference" : {
+          "reference" : "Basic/241200"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/pre-time-code",
+        "valueCode" : "4"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-reservation-num",
+        "valueInteger" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-registration-num",
+        "valueInteger" : 100
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/schedule-id",
+        "value" : "2016-03-11@0103@001"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Schedule/241561",
+    "resource" : {
+      "resourceType" : "Schedule",
+      "id" : "241561",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-03T21:57:19.589+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/arr-date",
+        "valueDateTime" : "2016-03-12"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/charge-type",
+        "valueReference" : {
+          "reference" : "Basic/241200"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/pre-time-code",
+        "valueCode" : "4"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-reservation-num",
+        "valueInteger" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-registration-num",
+        "valueInteger" : 100
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/schedule-id",
+        "value" : "2016-03-12@0103@001"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Schedule/241563",
+    "resource" : {
+      "resourceType" : "Schedule",
+      "id" : "241563",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-03T21:57:20.271+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/arr-date",
+        "valueDateTime" : "2016-03-13"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/charge-type",
+        "valueReference" : {
+          "reference" : "Basic/241200"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/pre-time-code",
+        "valueCode" : "4"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-reservation-num",
+        "valueInteger" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-registration-num",
+        "valueInteger" : 100
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/schedule-id",
+        "value" : "2016-03-13@0103@001"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Schedule/241256",
+    "resource" : {
+      "resourceType" : "Schedule",
+      "id" : "241256",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-03T20:46:52.875+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/arr-date",
+        "valueDateTime" : "2016-08-03"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/charge-type",
+        "valueReference" : {
+          "reference" : "Basic/241194"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/pre-time-code",
+        "valueCode" : "4"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-reservation-num",
+        "valueInteger" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-registration-num",
+        "valueInteger" : 100
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/schedule-id",
+        "value" : "2016-08-03@0101@001"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Schedule/241258",
+    "resource" : {
+      "resourceType" : "Schedule",
+      "id" : "241258",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-03T20:52:20.948+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/arr-date",
+        "valueDateTime" : "2016-08-03"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/charge-type",
+        "valueReference" : {
+          "reference" : "Basic/241194"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/pre-time-code",
+        "valueCode" : "4"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-reservation-num",
+        "valueInteger" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-registration-num",
+        "valueInteger" : 100
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/schedule-id",
+        "value" : "2016-08-03@0101@001"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Schedule/241260",
+    "resource" : {
+      "resourceType" : "Schedule",
+      "id" : "241260",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-03T20:57:00.218+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/arr-date",
+        "valueDateTime" : "2016-08-03"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/charge-type",
+        "valueReference" : {
+          "reference" : "Basic/241194"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/pre-time-code",
+        "valueCode" : "4"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-reservation-num",
+        "valueInteger" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-registration-num",
+        "valueInteger" : 100
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/schedule-id",
+        "value" : "2016-08-03@0101@001"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Schedule/241261",
+    "resource" : {
+      "resourceType" : "Schedule",
+      "id" : "241261",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-03T21:09:23.392+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/arr-date",
+        "valueDateTime" : "2016-08-03"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/charge-type",
+        "valueReference" : {
+          "reference" : "Basic/241194"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/pre-time-code",
+        "valueCode" : "4"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-reservation-num",
+        "valueInteger" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-registration-num",
+        "valueInteger" : 100
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/schedule-id",
+        "value" : "2016-08-03@0101@001"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Schedule/241263",
+    "resource" : {
+      "resourceType" : "Schedule",
+      "id" : "241263",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-03T21:50:23.367+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/arr-date",
+        "valueDateTime" : "2016-08-03"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/charge-type",
+        "valueReference" : {
+          "reference" : "Basic/241194"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/pre-time-code",
+        "valueCode" : "4"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-reservation-num",
+        "valueInteger" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-registration-num",
+        "valueInteger" : 100
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/schedule-id",
+        "value" : "2016-08-03@0101@001"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Schedule/241264",
+    "resource" : {
+      "resourceType" : "Schedule",
+      "id" : "241264",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-03T21:53:24.043+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/arr-date",
+        "valueDateTime" : "2016-08-03"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/charge-type",
+        "valueReference" : {
+          "reference" : "Basic/241194"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/pre-time-code",
+        "valueCode" : "4"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-reservation-num",
+        "valueInteger" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-registration-num",
+        "valueInteger" : 100
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/schedule-id",
+        "value" : "2016-08-03@0101@001"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Schedule/241265",
+    "resource" : {
+      "resourceType" : "Schedule",
+      "id" : "241265",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-03T21:55:36.326+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/arr-date",
+        "valueDateTime" : "2015-10-23"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/charge-type",
+        "valueReference" : {
+          "reference" : "Basic/241220"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/pre-time-code",
+        "valueCode" : "4"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-reservation-num",
+        "valueInteger" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-registration-num",
+        "valueInteger" : 100
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/schedule-id",
+        "value" : "2015-10-23@0109@004"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Schedule/241267",
+    "resource" : {
+      "resourceType" : "Schedule",
+      "id" : "241267",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-03T21:55:36.953+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/arr-date",
+        "valueDateTime" : "2015-10-24"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/charge-type",
+        "valueReference" : {
+          "reference" : "Basic/241220"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/pre-time-code",
+        "valueCode" : "4"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-reservation-num",
+        "valueInteger" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-registration-num",
+        "valueInteger" : 100
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/schedule-id",
+        "value" : "2015-10-24@0109@004"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Schedule/241269",
+    "resource" : {
+      "resourceType" : "Schedule",
+      "id" : "241269",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-03T21:55:37.636+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/arr-date",
+        "valueDateTime" : "2015-10-25"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/charge-type",
+        "valueReference" : {
+          "reference" : "Basic/241220"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/pre-time-code",
+        "valueCode" : "4"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-reservation-num",
+        "valueInteger" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-registration-num",
+        "valueInteger" : 100
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/schedule-id",
+        "value" : "2015-10-25@0109@004"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Schedule/241271",
+    "resource" : {
+      "resourceType" : "Schedule",
+      "id" : "241271",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-03T21:55:38.297+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/arr-date",
+        "valueDateTime" : "2015-10-19"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/charge-type",
+        "valueReference" : {
+          "reference" : "Basic/241221"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/pre-time-code",
+        "valueCode" : "4"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-reservation-num",
+        "valueInteger" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-registration-num",
+        "valueInteger" : 100
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/schedule-id",
+        "value" : "2015-10-19@0110@001"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Schedule/241273",
+    "resource" : {
+      "resourceType" : "Schedule",
+      "id" : "241273",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-03T21:55:38.940+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/arr-date",
+        "valueDateTime" : "2015-10-20"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/charge-type",
+        "valueReference" : {
+          "reference" : "Basic/241221"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/pre-time-code",
+        "valueCode" : "4"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-reservation-num",
+        "valueInteger" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-registration-num",
+        "valueInteger" : 100
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/schedule-id",
+        "value" : "2015-10-20@0110@001"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Schedule/241275",
+    "resource" : {
+      "resourceType" : "Schedule",
+      "id" : "241275",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-03T21:55:39.660+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/arr-date",
+        "valueDateTime" : "2015-10-21"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/charge-type",
+        "valueReference" : {
+          "reference" : "Basic/241221"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/pre-time-code",
+        "valueCode" : "4"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-reservation-num",
+        "valueInteger" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-registration-num",
+        "valueInteger" : 100
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/schedule-id",
+        "value" : "2015-10-21@0110@001"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Schedule/241277",
+    "resource" : {
+      "resourceType" : "Schedule",
+      "id" : "241277",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-03T21:55:40.345+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/arr-date",
+        "valueDateTime" : "2015-10-22"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/charge-type",
+        "valueReference" : {
+          "reference" : "Basic/241221"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/pre-time-code",
+        "valueCode" : "4"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-reservation-num",
+        "valueInteger" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-registration-num",
+        "valueInteger" : 100
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/schedule-id",
+        "value" : "2015-10-22@0110@001"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Schedule/241279",
+    "resource" : {
+      "resourceType" : "Schedule",
+      "id" : "241279",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-03T21:55:41.009+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/arr-date",
+        "valueDateTime" : "2015-10-23"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/charge-type",
+        "valueReference" : {
+          "reference" : "Basic/241221"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/pre-time-code",
+        "valueCode" : "4"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-reservation-num",
+        "valueInteger" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-registration-num",
+        "valueInteger" : 100
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/schedule-id",
+        "value" : "2015-10-23@0110@001"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Schedule/241281",
+    "resource" : {
+      "resourceType" : "Schedule",
+      "id" : "241281",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-03T21:55:41.703+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/arr-date",
+        "valueDateTime" : "2015-10-24"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/charge-type",
+        "valueReference" : {
+          "reference" : "Basic/241221"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/pre-time-code",
+        "valueCode" : "4"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-reservation-num",
+        "valueInteger" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-registration-num",
+        "valueInteger" : 100
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/schedule-id",
+        "value" : "2015-10-24@0110@001"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Schedule/241283",
+    "resource" : {
+      "resourceType" : "Schedule",
+      "id" : "241283",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-03T21:55:42.391+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/arr-date",
+        "valueDateTime" : "2015-10-25"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/charge-type",
+        "valueReference" : {
+          "reference" : "Basic/241221"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/pre-time-code",
+        "valueCode" : "4"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-reservation-num",
+        "valueInteger" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-registration-num",
+        "valueInteger" : 100
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/schedule-id",
+        "value" : "2015-10-25@0110@001"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Schedule/241285",
+    "resource" : {
+      "resourceType" : "Schedule",
+      "id" : "241285",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-03T21:55:43.103+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/arr-date",
+        "valueDateTime" : "2015-10-19"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/charge-type",
+        "valueReference" : {
+          "reference" : "Basic/241222"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/pre-time-code",
+        "valueCode" : "4"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-reservation-num",
+        "valueInteger" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-registration-num",
+        "valueInteger" : 100
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/schedule-id",
+        "value" : "2015-10-19@0110@003"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Schedule/241287",
+    "resource" : {
+      "resourceType" : "Schedule",
+      "id" : "241287",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-03T21:55:43.794+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/arr-date",
+        "valueDateTime" : "2015-10-20"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/charge-type",
+        "valueReference" : {
+          "reference" : "Basic/241222"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/pre-time-code",
+        "valueCode" : "4"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-reservation-num",
+        "valueInteger" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-registration-num",
+        "valueInteger" : 100
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/schedule-id",
+        "value" : "2015-10-20@0110@003"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Schedule/241289",
+    "resource" : {
+      "resourceType" : "Schedule",
+      "id" : "241289",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-03T21:55:44.616+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/arr-date",
+        "valueDateTime" : "2015-10-21"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/charge-type",
+        "valueReference" : {
+          "reference" : "Basic/241222"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/pre-time-code",
+        "valueCode" : "4"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-reservation-num",
+        "valueInteger" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-registration-num",
+        "valueInteger" : 100
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/schedule-id",
+        "value" : "2015-10-21@0110@003"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Schedule/241291",
+    "resource" : {
+      "resourceType" : "Schedule",
+      "id" : "241291",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-03T21:55:45.195+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/arr-date",
+        "valueDateTime" : "2015-10-22"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/charge-type",
+        "valueReference" : {
+          "reference" : "Basic/241222"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/pre-time-code",
+        "valueCode" : "4"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-reservation-num",
+        "valueInteger" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-registration-num",
+        "valueInteger" : 100
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/schedule-id",
+        "value" : "2015-10-22@0110@003"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Schedule/241293",
+    "resource" : {
+      "resourceType" : "Schedule",
+      "id" : "241293",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-03T21:55:46.637+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/arr-date",
+        "valueDateTime" : "2015-10-23"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/charge-type",
+        "valueReference" : {
+          "reference" : "Basic/241222"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/pre-time-code",
+        "valueCode" : "4"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-reservation-num",
+        "valueInteger" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-registration-num",
+        "valueInteger" : 100
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/schedule-id",
+        "value" : "2015-10-23@0110@003"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Schedule/241295",
+    "resource" : {
+      "resourceType" : "Schedule",
+      "id" : "241295",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-03T21:55:47.289+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/arr-date",
+        "valueDateTime" : "2015-10-24"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/charge-type",
+        "valueReference" : {
+          "reference" : "Basic/241222"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/pre-time-code",
+        "valueCode" : "4"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-reservation-num",
+        "valueInteger" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-registration-num",
+        "valueInteger" : 100
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/schedule-id",
+        "value" : "2015-10-24@0110@003"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Schedule/241297",
+    "resource" : {
+      "resourceType" : "Schedule",
+      "id" : "241297",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-03T21:55:48.000+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/arr-date",
+        "valueDateTime" : "2015-10-25"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/charge-type",
+        "valueReference" : {
+          "reference" : "Basic/241222"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/pre-time-code",
+        "valueCode" : "4"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-reservation-num",
+        "valueInteger" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-registration-num",
+        "valueInteger" : 100
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/schedule-id",
+        "value" : "2015-10-25@0110@003"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Schedule/241299",
+    "resource" : {
+      "resourceType" : "Schedule",
+      "id" : "241299",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-03T21:55:48.671+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/arr-date",
+        "valueDateTime" : "2015-10-19"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/charge-type",
+        "valueReference" : {
+          "reference" : "Basic/241223"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/pre-time-code",
+        "valueCode" : "4"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-reservation-num",
+        "valueInteger" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/allow-registration-num",
+        "valueInteger" : 100
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/schedule-id",
+        "value" : "2015-10-19@0110@004"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  } ]
+}

@@ -124,15 +124,15 @@ public class DefaultWriteRequest implements WriteRequest {
     /**
      * Creates a new instance.
      *
-     * @param message a message to write
+     * @param message a services to write
      * @param future a future that needs to be notified when an operation is finished
-     * @param destination the destination of the message.  This property will be
+     * @param destination the destination of the services.  This property will be
      *                    ignored unless the transport supports it.
      */
     public DefaultWriteRequest(Object message, WriteFuture future,
             SocketAddress destination) {
         if (message == null) {
-            throw new NullPointerException("message");
+            throw new NullPointerException("services");
         }
 
         if (future == null) {

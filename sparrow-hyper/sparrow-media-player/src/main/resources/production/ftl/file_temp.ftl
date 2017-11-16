@@ -1,8 +1,8 @@
 <html>
 <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
-    <meta name="description" content=""/>
-    <meta name="keywords" content=""/>
+    <meta title="description" content=""/>
+    <meta title="keywords" content=""/>
     <title>抓取工程管理系统</title>
     <link rel="stylesheet" href="/app/bootstrap/css/bootstrap.css" type="text/css"/>
     <link rel="stylesheet" href="/app/bootstrap/css/bootstrap-responsive.css" type="text/css"/>
@@ -19,7 +19,7 @@
                     <#assign location = data.location>
                     <#if appInfo??>
                         <div style="color: #003399;font-weight:bolder;margin-left: 6px;padding-top: 7px;">应用程序
-                            - ${appInfo.name}&nbsp;(${data.date})
+                            - ${appInfo.title}&nbsp;(${data.date})
                         </div>
                         <div style="margin-left: 12px;font-size:13;font-style:italic;">- 基本信息</div>
                         <div style="margin-left: 24px;font-size: 12;">

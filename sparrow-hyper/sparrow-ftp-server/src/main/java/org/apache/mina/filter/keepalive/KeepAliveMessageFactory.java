@@ -29,25 +29,25 @@ import org.apache.mina.core.session.IoSession;
 public interface KeepAliveMessageFactory {
     
     /**
-     * Returns <tt>true</tt> if and only if the specified message is a
-     * keep-alive request message.
+     * Returns <tt>true</tt> if and only if the specified services is a
+     * keep-alive request services.
      */
     boolean isRequest(IoSession session, Object message);
 
     /**
-     * Returns <tt>true</tt> if and only if the specified message is a 
-     * keep-alive response message;
+     * Returns <tt>true</tt> if and only if the specified services is a
+     * keep-alive response services;
      */
     boolean isResponse(IoSession session, Object message);
     
     /**
-     * Returns a (new) keep-alive request message.
+     * Returns a (new) keep-alive request services.
      * Returns <tt>null</tt> if no request is required.
      */
     Object getRequest(IoSession session);
     
     /**
-     * Returns a (new) response message for the specified keep-alive request.
+     * Returns a (new) response services for the specified keep-alive request.
      * Returns <tt>null</tt> if no response is required.
      */
     Object getResponse(IoSession session, Object request);

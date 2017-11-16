@@ -91,6 +91,8 @@ public class ServiceLoadUtil {
 			e.printStackTrace();
 		} catch (ServiceConfigurationError e) {
 			e.printStackTrace();
+		}finally {
+
 		}
 		return null;
 	}

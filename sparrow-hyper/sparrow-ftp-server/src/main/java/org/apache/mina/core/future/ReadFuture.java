@@ -31,10 +31,10 @@ import org.apache.mina.core.session.IoSession;
  * session.getConfig().setUseReadOperation(true);
  * 
  * ReadFuture future = session.read();
- * // Wait until a message is received.
+ * // Wait until a services is received.
  * future.await();
  * try {
- *     Object message = future.getMessage();
+ *     Object services = future.getMessage();
  * } catch (Exception e) {
  *     ...
  * }
@@ -45,7 +45,7 @@ import org.apache.mina.core.session.IoSession;
 public interface ReadFuture extends IoFuture {
     
     /**
-     * Returns the received message.  It returns <tt>null</tt> if this
+     * Returns the received services.  It returns <tt>null</tt> if this
      * future is not ready or the associated {@link IoSession} has been closed. 
      * 
      * @throws RuntimeException if read or any relevant operation has failed.
@@ -53,7 +53,7 @@ public interface ReadFuture extends IoFuture {
     Object getMessage();
     
     /**
-     * Returns <tt>true</tt> if a message was received successfully.
+     * Returns <tt>true</tt> if a services was received successfully.
      */
     boolean isRead();
     
@@ -71,7 +71,7 @@ public interface ReadFuture extends IoFuture {
     Throwable getException();
 
     /**
-     * Sets the message is written, and notifies all threads waiting for
+     * Sets the services is written, and notifies all threads waiting for
      * this future.  This method is invoked by MINA internally.  Please do
      * not call this method directly.
      */

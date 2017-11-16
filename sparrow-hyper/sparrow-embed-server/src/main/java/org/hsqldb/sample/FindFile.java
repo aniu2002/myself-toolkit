@@ -140,7 +140,7 @@ class FindFile {
             conn.close();
         } catch (Exception e) {
 
-            // Print out the error message
+            // Print out the error services
             System.out.println(e);
             e.printStackTrace();
         }

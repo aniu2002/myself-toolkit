@@ -1,0 +1,1908 @@
+{
+  "resourceType" : "Bundle",
+  "id" : "478d328d-541a-4d93-8d77-b3867af3e680",
+  "meta" : {
+    "lastUpdated" : "2017-05-11T17:57:30.619+08:00"
+  },
+  "type" : "searchset",
+  "total" : 9463,
+  "link" : [ {
+    "relation" : "self",
+    "url" : "http://10.10.15.38:8083/resources/Location?_count=50"
+  }, {
+    "relation" : "next",
+    "url" : "http://10.10.15.38:8083/resources?_getpages=975f92d6-f1d1-49b3-8026-894e65626e88&_getpagesoffset=50&_count=50&_bundletype=searchset"
+  } ],
+  "entry" : [ {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Location/568",
+    "resource" : {
+      "resourceType" : "Location",
+      "id" : "568",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-16T17:23:53.383+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/level_code",
+        "valueCode" : "zl00000751"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/bed-id",
+        "value" : "0301_01"
+      } ],
+      "status" : "suspended",
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/type-code",
+          "code" : "1"
+        } ]
+      },
+      "address" : {
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/ward-no",
+          "valueString" : "501"
+        } ]
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Location/569",
+    "resource" : {
+      "resourceType" : "Location",
+      "id" : "569",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-16T17:25:38.762+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/level_code",
+        "valueCode" : "zl00000751"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/bed-id",
+        "value" : "0301_01"
+      } ],
+      "status" : "suspended",
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/type-code",
+          "code" : "1"
+        } ]
+      },
+      "address" : {
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/ward-no",
+          "valueString" : "501"
+        } ]
+      },
+      "managingOrganization" : {
+        "reference" : "Organization/207"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Location/718",
+    "resource" : {
+      "resourceType" : "Location",
+      "id" : "718",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-16T17:58:53.689+08:00"
+      },
+      "extension" : [ {
+        "fhir_comments" : [ "床位等级代码 " ],
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/level-code",
+        "valueCode" : "1"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/guan/his/sinosoft/v1/identifier/bed-id",
+        "_system" : {
+          "fhir_comments" : [ "原系统床位ID号命名空间 " ]
+        },
+        "value" : "10010_023",
+        "_value" : {
+          "fhir_comments" : [ " 原系统床位ID号：原系统科室ID号+“_”+原系统床位号 " ]
+        }
+      } ],
+      "status" : "active",
+      "_status" : {
+        "fhir_comments" : [ "状态：启用 " ]
+      },
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/type-code",
+          "_system" : {
+            "fhir_comments" : [ "床位类型代码命名空间 " ]
+          },
+          "code" : "1",
+          "_code" : {
+            "fhir_comments" : [ "床位类型代码 " ]
+          }
+        } ]
+      },
+      "address" : {
+        "extension" : [ {
+          "fhir_comments" : [ "病房号 " ],
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/ward-no",
+          "valueString" : "110"
+        }, {
+          "fhir_comments" : [ "病区 " ],
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/ward-area",
+          "valueString" : "12"
+        } ]
+      },
+      "managingOrganization" : {
+        "fhir_comments" : [ "科室id " ],
+        "reference" : "Organization/611"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Location/726",
+    "resource" : {
+      "resourceType" : "Location",
+      "id" : "726",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-16T18:26:41.737+08:00"
+      },
+      "extension" : [ {
+        "fhir_comments" : [ "床位等级代码 " ],
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/level-code",
+        "valueCode" : "1"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/guan/his/sinosoft/v1/identifier/bed-id",
+        "_system" : {
+          "fhir_comments" : [ "原系统床位ID号命名空间 " ]
+        },
+        "value" : "10010_023",
+        "_value" : {
+          "fhir_comments" : [ " 原系统床位ID号：原系统科室ID号+“_”+原系统床位号 " ]
+        }
+      } ],
+      "status" : "active",
+      "_status" : {
+        "fhir_comments" : [ "状态：启用 " ]
+      },
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/type-code",
+          "_system" : {
+            "fhir_comments" : [ "床位类型代码命名空间 " ]
+          },
+          "code" : "1",
+          "_code" : {
+            "fhir_comments" : [ "床位类型代码 " ]
+          }
+        } ]
+      },
+      "address" : {
+        "extension" : [ {
+          "fhir_comments" : [ "病房号 " ],
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/ward-no",
+          "valueString" : "110"
+        }, {
+          "fhir_comments" : [ "病区 " ],
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/ward-area",
+          "valueString" : "12"
+        } ]
+      },
+      "managingOrganization" : {
+        "fhir_comments" : [ "科室id " ],
+        "reference" : "Organization/611"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Location/727",
+    "resource" : {
+      "resourceType" : "Location",
+      "id" : "727",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-16T18:33:14.031+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/level_code",
+        "valueCode" : "zl00000751"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/bed-id",
+        "value" : "0301_01"
+      } ],
+      "status" : "suspended",
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/type-code",
+          "code" : "1"
+        } ]
+      },
+      "address" : {
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/ward-no",
+          "valueString" : "501"
+        } ]
+      },
+      "managingOrganization" : {
+        "reference" : "Organization/611"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Location/9657",
+    "resource" : {
+      "resourceType" : "Location",
+      "id" : "9657",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-21T16:42:09.344+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/level_code",
+        "valueCode" : "3"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/bed-id",
+        "value" : "0301_02"
+      } ],
+      "status" : "active",
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/type-code",
+          "code" : "0"
+        } ]
+      },
+      "address" : {
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/ward-no",
+          "valueString" : "501"
+        } ]
+      },
+      "managingOrganization" : {
+        "reference" : "Organization/611"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Location/9658",
+    "resource" : {
+      "resourceType" : "Location",
+      "id" : "9658",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-21T16:42:10.256+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/level_code",
+        "valueCode" : "3"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/bed-id",
+        "value" : "0301_03"
+      } ],
+      "status" : "active",
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/type-code",
+          "code" : "0"
+        } ]
+      },
+      "address" : {
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/ward-no",
+          "valueString" : "501"
+        } ]
+      },
+      "managingOrganization" : {
+        "reference" : "Organization/611"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Location/9664",
+    "resource" : {
+      "resourceType" : "Location",
+      "id" : "9664",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-21T16:43:55.388+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/level_code",
+        "valueCode" : "3"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/bed-id",
+        "value" : "0301_04"
+      } ],
+      "status" : "active",
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/type-code",
+          "code" : "0"
+        } ]
+      },
+      "address" : {
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/ward-no",
+          "valueString" : "502"
+        } ]
+      },
+      "managingOrganization" : {
+        "reference" : "Organization/611"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Location/9665",
+    "resource" : {
+      "resourceType" : "Location",
+      "id" : "9665",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-21T16:43:56.330+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/level_code",
+        "valueCode" : "3"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/bed-id",
+        "value" : "0301_05"
+      } ],
+      "status" : "active",
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/type-code",
+          "code" : "0"
+        } ]
+      },
+      "address" : {
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/ward-no",
+          "valueString" : "502"
+        } ]
+      },
+      "managingOrganization" : {
+        "reference" : "Organization/611"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Location/9568",
+    "resource" : {
+      "resourceType" : "Location",
+      "id" : "9568",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-21T16:10:39.021+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/level_code",
+        "valueCode" : "9"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/bed-id",
+        "value" : "0304_10(母婴)"
+      } ],
+      "status" : "suspended",
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/type-code",
+          "code" : "0"
+        } ]
+      },
+      "address" : {
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/ward-no",
+          "valueString" : "304"
+        } ]
+      },
+      "managingOrganization" : {
+        "reference" : "Organization/613"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Location/9728",
+    "resource" : {
+      "resourceType" : "Location",
+      "id" : "9728",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-21T17:01:11.566+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/level_code",
+        "valueCode" : "3"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/bed-id",
+        "value" : "0301_06"
+      } ],
+      "status" : "active",
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/type-code",
+          "code" : "0"
+        } ]
+      },
+      "address" : {
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/ward-no",
+          "valueString" : "502"
+        } ]
+      },
+      "managingOrganization" : {
+        "reference" : "Organization/611"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Location/9729",
+    "resource" : {
+      "resourceType" : "Location",
+      "id" : "9729",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-21T17:01:12.608+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/level_code",
+        "valueCode" : "2"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/bed-id",
+        "value" : "0301_07"
+      } ],
+      "status" : "active",
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/type-code",
+          "code" : "0"
+        } ]
+      },
+      "address" : {
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/ward-no",
+          "valueString" : "503"
+        } ]
+      },
+      "managingOrganization" : {
+        "reference" : "Organization/611"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Location/149802",
+    "resource" : {
+      "resourceType" : "Location",
+      "id" : "149802",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-29T18:06:27.066+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/level_code",
+        "valueCode" : "zl00000751"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/bed-id",
+        "value" : "0301_01"
+      } ],
+      "status" : "suspended",
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/type-code",
+          "code" : "1"
+        } ]
+      },
+      "address" : {
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/ward-no",
+          "valueString" : "501"
+        } ]
+      },
+      "managingOrganization" : {
+        "reference" : "Organization/611"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Location/200655",
+    "resource" : {
+      "resourceType" : "Location",
+      "id" : "200655",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-07-13T19:12:05.699+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/level_code",
+        "valueCode" : "3"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/bed-id",
+        "value" : "0307_加10"
+      } ],
+      "status" : "active",
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/type-code",
+          "code" : "0"
+        } ]
+      },
+      "address" : {
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/ward-no",
+          "valueString" : "加床"
+        } ]
+      },
+      "managingOrganization" : {
+        "reference" : "Organization/616"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Location/200656",
+    "resource" : {
+      "resourceType" : "Location",
+      "id" : "200656",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-07-13T19:12:54.050+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/level_code",
+        "valueCode" : "3"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/bed-id",
+        "value" : "0307_加12"
+      } ],
+      "status" : "active",
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/type-code",
+          "code" : "0"
+        } ]
+      },
+      "address" : {
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/ward-no",
+          "valueString" : "加床"
+        } ]
+      },
+      "managingOrganization" : {
+        "reference" : "Organization/616"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Location/200660",
+    "resource" : {
+      "resourceType" : "Location",
+      "id" : "200660",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-07-13T19:15:13.943+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/level_code",
+        "valueCode" : "3"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/bed-id",
+        "value" : "0307_加19"
+      } ],
+      "status" : "active",
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/type-code",
+          "code" : "0"
+        } ]
+      },
+      "address" : {
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/ward-no",
+          "valueString" : "加床"
+        } ]
+      },
+      "managingOrganization" : {
+        "reference" : "Organization/616"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Location/221339",
+    "resource" : {
+      "resourceType" : "Location",
+      "id" : "221339",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-07-26T11:02:46.247+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/level_code",
+        "valueCode" : "zl00000751"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/bed-id",
+        "value" : "0301_01"
+      } ],
+      "status" : "suspended",
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/type-code",
+          "code" : "1"
+        } ]
+      },
+      "address" : {
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/ward-no",
+          "valueString" : "501"
+        } ]
+      },
+      "managingOrganization" : {
+        "reference" : "Organization/611"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Location/221340",
+    "resource" : {
+      "resourceType" : "Location",
+      "id" : "221340",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-07-26T11:18:24.902+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/level_code",
+        "valueCode" : "zl00000751"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/bed-id",
+        "value" : "0301_01"
+      } ],
+      "status" : "suspended",
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/type-code",
+          "code" : "1"
+        } ]
+      },
+      "address" : {
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/ward-no",
+          "valueString" : "501"
+        } ]
+      },
+      "managingOrganization" : {
+        "reference" : "Organization/611"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Location/222263",
+    "resource" : {
+      "resourceType" : "Location",
+      "id" : "222263",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-07-26T13:02:19.868+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/level_code",
+        "valueCode" : "zl00000751"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/bed-id",
+        "value" : "0301_01"
+      } ],
+      "status" : "suspended",
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/type-code",
+          "code" : "1"
+        } ]
+      },
+      "address" : {
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/ward-no",
+          "valueString" : "501"
+        } ]
+      },
+      "managingOrganization" : {
+        "reference" : "Organization/611"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Location/222264",
+    "resource" : {
+      "resourceType" : "Location",
+      "id" : "222264",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-07-26T13:03:17.338+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/level_code",
+        "valueCode" : "zl00000751"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/bed-id",
+        "value" : "0301_01"
+      } ],
+      "status" : "suspended",
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/type-code",
+          "code" : "1"
+        } ]
+      },
+      "address" : {
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/ward-no",
+          "valueString" : "501"
+        } ]
+      },
+      "managingOrganization" : {
+        "reference" : "Organization/611"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Location/222271",
+    "resource" : {
+      "resourceType" : "Location",
+      "id" : "222271",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-07-26T14:09:06.984+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/level_code",
+        "valueCode" : "zl00000751"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/bed-id",
+        "value" : "0301_01"
+      } ],
+      "status" : "suspended",
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/type-code",
+          "code" : "1"
+        } ]
+      },
+      "address" : {
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/ward-no",
+          "valueString" : "501"
+        } ]
+      },
+      "managingOrganization" : {
+        "reference" : "Organization/611"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Location/222272",
+    "resource" : {
+      "resourceType" : "Location",
+      "id" : "222272",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-07-26T14:09:07.059+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/level_code",
+        "valueCode" : "zl00000751"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/bed-id",
+        "value" : "0301_01"
+      } ],
+      "status" : "suspended",
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/type-code",
+          "code" : "1"
+        } ]
+      },
+      "address" : {
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/ward-no",
+          "valueString" : "501"
+        } ]
+      },
+      "managingOrganization" : {
+        "reference" : "Organization/611"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Location/222468",
+    "resource" : {
+      "resourceType" : "Location",
+      "id" : "222468",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-07-26T14:09:22.877+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/level_code",
+        "valueCode" : "zl00000751"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/bed-id",
+        "value" : "0301_01"
+      } ],
+      "status" : "suspended",
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/type-code",
+          "code" : "1"
+        } ]
+      },
+      "address" : {
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/ward-no",
+          "valueString" : "501"
+        } ]
+      },
+      "managingOrganization" : {
+        "reference" : "Organization/611"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Location/222482",
+    "resource" : {
+      "resourceType" : "Location",
+      "id" : "222482",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-07-26T14:09:23.863+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/level_code",
+        "valueCode" : "zl00000751"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/bed-id",
+        "value" : "0301_01"
+      } ],
+      "status" : "suspended",
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/type-code",
+          "code" : "1"
+        } ]
+      },
+      "address" : {
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/ward-no",
+          "valueString" : "501"
+        } ]
+      },
+      "managingOrganization" : {
+        "reference" : "Organization/611"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Location/222487",
+    "resource" : {
+      "resourceType" : "Location",
+      "id" : "222487",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-07-26T14:09:23.938+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/level_code",
+        "valueCode" : "zl00000751"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/bed-id",
+        "value" : "0301_01"
+      } ],
+      "status" : "suspended",
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/type-code",
+          "code" : "1"
+        } ]
+      },
+      "address" : {
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/ward-no",
+          "valueString" : "501"
+        } ]
+      },
+      "managingOrganization" : {
+        "reference" : "Organization/611"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Location/222573",
+    "resource" : {
+      "resourceType" : "Location",
+      "id" : "222573",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-07-26T14:09:27.073+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/level_code",
+        "valueCode" : "zl00000751"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/bed-id",
+        "value" : "0301_01"
+      } ],
+      "status" : "suspended",
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/type-code",
+          "code" : "1"
+        } ]
+      },
+      "address" : {
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/ward-no",
+          "valueString" : "501"
+        } ]
+      },
+      "managingOrganization" : {
+        "reference" : "Organization/611"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Location/222628",
+    "resource" : {
+      "resourceType" : "Location",
+      "id" : "222628",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-07-26T14:09:28.338+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/level_code",
+        "valueCode" : "zl00000751"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/bed-id",
+        "value" : "0301_01"
+      } ],
+      "status" : "suspended",
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/type-code",
+          "code" : "1"
+        } ]
+      },
+      "address" : {
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/ward-no",
+          "valueString" : "501"
+        } ]
+      },
+      "managingOrganization" : {
+        "reference" : "Organization/611"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Location/222269",
+    "resource" : {
+      "resourceType" : "Location",
+      "id" : "222269",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-07-26T14:09:06.964+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/level_code",
+        "valueCode" : "zl00000751"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/bed-id",
+        "value" : "0301_01"
+      } ],
+      "status" : "suspended",
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/type-code",
+          "code" : "1"
+        } ]
+      },
+      "address" : {
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/ward-no",
+          "valueString" : "501"
+        } ]
+      },
+      "managingOrganization" : {
+        "reference" : "Organization/611"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Location/222279",
+    "resource" : {
+      "resourceType" : "Location",
+      "id" : "222279",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-07-26T14:09:07.291+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/level_code",
+        "valueCode" : "zl00000751"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/bed-id",
+        "value" : "0301_01"
+      } ],
+      "status" : "suspended",
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/type-code",
+          "code" : "1"
+        } ]
+      },
+      "address" : {
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/ward-no",
+          "valueString" : "501"
+        } ]
+      },
+      "managingOrganization" : {
+        "reference" : "Organization/611"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Location/222337",
+    "resource" : {
+      "resourceType" : "Location",
+      "id" : "222337",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-07-26T14:09:08.764+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/level_code",
+        "valueCode" : "zl00000751"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/bed-id",
+        "value" : "0301_01"
+      } ],
+      "status" : "suspended",
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/type-code",
+          "code" : "1"
+        } ]
+      },
+      "address" : {
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/ward-no",
+          "valueString" : "501"
+        } ]
+      },
+      "managingOrganization" : {
+        "reference" : "Organization/611"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Location/222389",
+    "resource" : {
+      "resourceType" : "Location",
+      "id" : "222389",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-07-26T14:09:11.842+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/level_code",
+        "valueCode" : "zl00000751"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/bed-id",
+        "value" : "0301_01"
+      } ],
+      "status" : "suspended",
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/type-code",
+          "code" : "1"
+        } ]
+      },
+      "address" : {
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/ward-no",
+          "valueString" : "501"
+        } ]
+      },
+      "managingOrganization" : {
+        "reference" : "Organization/611"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Location/222497",
+    "resource" : {
+      "resourceType" : "Location",
+      "id" : "222497",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-07-26T14:09:24.132+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/level_code",
+        "valueCode" : "zl00000751"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/bed-id",
+        "value" : "0301_01"
+      } ],
+      "status" : "suspended",
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/type-code",
+          "code" : "1"
+        } ]
+      },
+      "address" : {
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/ward-no",
+          "valueString" : "501"
+        } ]
+      },
+      "managingOrganization" : {
+        "reference" : "Organization/611"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Location/222529",
+    "resource" : {
+      "resourceType" : "Location",
+      "id" : "222529",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-07-26T14:09:24.984+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/level_code",
+        "valueCode" : "zl00000751"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/bed-id",
+        "value" : "0301_01"
+      } ],
+      "status" : "suspended",
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/type-code",
+          "code" : "1"
+        } ]
+      },
+      "address" : {
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/ward-no",
+          "valueString" : "501"
+        } ]
+      },
+      "managingOrganization" : {
+        "reference" : "Organization/611"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Location/222579",
+    "resource" : {
+      "resourceType" : "Location",
+      "id" : "222579",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-07-26T14:09:27.281+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/level_code",
+        "valueCode" : "zl00000751"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/bed-id",
+        "value" : "0301_01"
+      } ],
+      "status" : "suspended",
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/type-code",
+          "code" : "1"
+        } ]
+      },
+      "address" : {
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/ward-no",
+          "valueString" : "501"
+        } ]
+      },
+      "managingOrganization" : {
+        "reference" : "Organization/611"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Location/222583",
+    "resource" : {
+      "resourceType" : "Location",
+      "id" : "222583",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-07-26T14:09:27.381+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/level_code",
+        "valueCode" : "zl00000751"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/bed-id",
+        "value" : "0301_01"
+      } ],
+      "status" : "suspended",
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/type-code",
+          "code" : "1"
+        } ]
+      },
+      "address" : {
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/ward-no",
+          "valueString" : "501"
+        } ]
+      },
+      "managingOrganization" : {
+        "reference" : "Organization/611"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Location/222594",
+    "resource" : {
+      "resourceType" : "Location",
+      "id" : "222594",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-07-26T14:09:27.562+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/level_code",
+        "valueCode" : "zl00000751"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/bed-id",
+        "value" : "0301_01"
+      } ],
+      "status" : "suspended",
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/type-code",
+          "code" : "1"
+        } ]
+      },
+      "address" : {
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/ward-no",
+          "valueString" : "501"
+        } ]
+      },
+      "managingOrganization" : {
+        "reference" : "Organization/611"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Location/222643",
+    "resource" : {
+      "resourceType" : "Location",
+      "id" : "222643",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-07-26T14:09:28.813+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/level_code",
+        "valueCode" : "zl00000751"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/bed-id",
+        "value" : "0301_01"
+      } ],
+      "status" : "suspended",
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/type-code",
+          "code" : "1"
+        } ]
+      },
+      "address" : {
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/ward-no",
+          "valueString" : "501"
+        } ]
+      },
+      "managingOrganization" : {
+        "reference" : "Organization/611"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Location/222688",
+    "resource" : {
+      "resourceType" : "Location",
+      "id" : "222688",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-07-26T14:09:29.928+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/level_code",
+        "valueCode" : "zl00000751"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/bed-id",
+        "value" : "0301_01"
+      } ],
+      "status" : "suspended",
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/type-code",
+          "code" : "1"
+        } ]
+      },
+      "address" : {
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/ward-no",
+          "valueString" : "501"
+        } ]
+      },
+      "managingOrganization" : {
+        "reference" : "Organization/611"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Location/222281",
+    "resource" : {
+      "resourceType" : "Location",
+      "id" : "222281",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-07-26T14:09:07.396+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/level_code",
+        "valueCode" : "zl00000751"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/bed-id",
+        "value" : "0301_01"
+      } ],
+      "status" : "suspended",
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/type-code",
+          "code" : "1"
+        } ]
+      },
+      "address" : {
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/ward-no",
+          "valueString" : "501"
+        } ]
+      },
+      "managingOrganization" : {
+        "reference" : "Organization/611"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Location/222284",
+    "resource" : {
+      "resourceType" : "Location",
+      "id" : "222284",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-07-26T14:09:07.630+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/level_code",
+        "valueCode" : "zl00000751"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/bed-id",
+        "value" : "0301_01"
+      } ],
+      "status" : "suspended",
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/type-code",
+          "code" : "1"
+        } ]
+      },
+      "address" : {
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/ward-no",
+          "valueString" : "501"
+        } ]
+      },
+      "managingOrganization" : {
+        "reference" : "Organization/611"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Location/222296",
+    "resource" : {
+      "resourceType" : "Location",
+      "id" : "222296",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-07-26T14:09:08.012+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/level_code",
+        "valueCode" : "zl00000751"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/bed-id",
+        "value" : "0301_01"
+      } ],
+      "status" : "suspended",
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/type-code",
+          "code" : "1"
+        } ]
+      },
+      "address" : {
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/ward-no",
+          "valueString" : "501"
+        } ]
+      },
+      "managingOrganization" : {
+        "reference" : "Organization/611"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Location/222325",
+    "resource" : {
+      "resourceType" : "Location",
+      "id" : "222325",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-07-26T14:09:08.588+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/level_code",
+        "valueCode" : "zl00000751"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/bed-id",
+        "value" : "0301_01"
+      } ],
+      "status" : "suspended",
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/type-code",
+          "code" : "1"
+        } ]
+      },
+      "address" : {
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/ward-no",
+          "valueString" : "501"
+        } ]
+      },
+      "managingOrganization" : {
+        "reference" : "Organization/611"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Location/222340",
+    "resource" : {
+      "resourceType" : "Location",
+      "id" : "222340",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-07-26T14:09:08.805+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/level_code",
+        "valueCode" : "zl00000751"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/bed-id",
+        "value" : "0301_01"
+      } ],
+      "status" : "suspended",
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/type-code",
+          "code" : "1"
+        } ]
+      },
+      "address" : {
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/ward-no",
+          "valueString" : "501"
+        } ]
+      },
+      "managingOrganization" : {
+        "reference" : "Organization/611"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Location/222380",
+    "resource" : {
+      "resourceType" : "Location",
+      "id" : "222380",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-07-26T14:09:11.652+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/level_code",
+        "valueCode" : "zl00000751"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/bed-id",
+        "value" : "0301_01"
+      } ],
+      "status" : "suspended",
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/type-code",
+          "code" : "1"
+        } ]
+      },
+      "address" : {
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/ward-no",
+          "valueString" : "501"
+        } ]
+      },
+      "managingOrganization" : {
+        "reference" : "Organization/611"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Location/222401",
+    "resource" : {
+      "resourceType" : "Location",
+      "id" : "222401",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-07-26T14:09:12.063+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/level_code",
+        "valueCode" : "zl00000751"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/bed-id",
+        "value" : "0301_01"
+      } ],
+      "status" : "suspended",
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/type-code",
+          "code" : "1"
+        } ]
+      },
+      "address" : {
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/ward-no",
+          "valueString" : "501"
+        } ]
+      },
+      "managingOrganization" : {
+        "reference" : "Organization/611"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Location/222417",
+    "resource" : {
+      "resourceType" : "Location",
+      "id" : "222417",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-07-26T14:09:13.732+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/level_code",
+        "valueCode" : "zl00000751"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/bed-id",
+        "value" : "0301_01"
+      } ],
+      "status" : "suspended",
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/type-code",
+          "code" : "1"
+        } ]
+      },
+      "address" : {
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/ward-no",
+          "valueString" : "501"
+        } ]
+      },
+      "managingOrganization" : {
+        "reference" : "Organization/611"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Location/222419",
+    "resource" : {
+      "resourceType" : "Location",
+      "id" : "222419",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-07-26T14:09:15.095+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/level_code",
+        "valueCode" : "zl00000751"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/bed-id",
+        "value" : "0301_01"
+      } ],
+      "status" : "suspended",
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/type-code",
+          "code" : "1"
+        } ]
+      },
+      "address" : {
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/ward-no",
+          "valueString" : "501"
+        } ]
+      },
+      "managingOrganization" : {
+        "reference" : "Organization/611"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Location/222425",
+    "resource" : {
+      "resourceType" : "Location",
+      "id" : "222425",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-07-26T14:09:21.649+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/level_code",
+        "valueCode" : "zl00000751"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/bed-id",
+        "value" : "0301_01"
+      } ],
+      "status" : "suspended",
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/type-code",
+          "code" : "1"
+        } ]
+      },
+      "address" : {
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/ward-no",
+          "valueString" : "501"
+        } ]
+      },
+      "managingOrganization" : {
+        "reference" : "Organization/611"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Location/222426",
+    "resource" : {
+      "resourceType" : "Location",
+      "id" : "222426",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-07-26T14:09:21.816+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/level_code",
+        "valueCode" : "zl00000751"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/bed-id",
+        "value" : "0301_01"
+      } ],
+      "status" : "suspended",
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/type-code",
+          "code" : "1"
+        } ]
+      },
+      "address" : {
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/ward-no",
+          "valueString" : "501"
+        } ]
+      },
+      "managingOrganization" : {
+        "reference" : "Organization/611"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Location/222427",
+    "resource" : {
+      "resourceType" : "Location",
+      "id" : "222427",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-07-26T14:09:22.062+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/level_code",
+        "valueCode" : "zl00000751"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/bed-id",
+        "value" : "0301_01"
+      } ],
+      "status" : "suspended",
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/type-code",
+          "code" : "1"
+        } ]
+      },
+      "address" : {
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/ward-no",
+          "valueString" : "501"
+        } ]
+      },
+      "managingOrganization" : {
+        "reference" : "Organization/611"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  } ]
+}

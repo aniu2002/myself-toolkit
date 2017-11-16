@@ -3,27 +3,17 @@ package com.sparrow.tools.pogen;
 import java.util.Enumeration;
 import java.util.Properties;
 
+import com.sparrow.core.config.SystemConfig;
 import com.sparrow.tools.pogen.check.ModuleMatcher;
 import com.sparrow.tools.utils.PropertiesFileUtil;
 
 public class PojoGenerateTask {
-	private static Log log=new DefaultLog();
 	private String jdbcConfig;
 	private String basePath;
 	private String packageName;
 	private String tableFilter;
 	private String environment;
 	private boolean clearBefore;
-	private ModuleMatcher matcher;
-	private boolean generateApi;
-
-	public ModuleMatcher getMatcher() {
-		return matcher;
-	}
-
-	public void setMatcher(ModuleMatcher matcher) {
-		this.matcher = matcher;
-	}
 
 	public String getEnvironment() {
 		return environment;
@@ -81,7 +71,7 @@ public class PojoGenerateTask {
 					.getPropertiesEl("classpath:conf/module.properties");
 			Log log = new DefaultLog();
 
-			ControllerPojoGenerator poGenerator = new ControllerPojoGenerator();
+			PojoGenerator poGenerator = new PojoGenerator();
 			poGenerator.setBasePath(this.basePath);
 			poGenerator.setProperty(properties);
 			poGenerator.setModuleSet(moduleSet);
@@ -116,27 +106,11 @@ public class PojoGenerateTask {
 
 	public static void main(String args[]) {
 		PojoGenerateTask task = new PojoGenerateTask();
-		task.setBasePath("D:\\workspace\\_code\\sparrow-egg\\sparrow-web\\sparrow-myweb\\src\\main\\java");
-		task.setPackageName("com.sparrow.app.information");
+		task.setBasePath(SystemConfig.SOURCE_DIR);
+		task.setPackageName("com.apps.manage");
 		task.setTableFilter("*");
 		task.setJdbcConfig("classpath:conf/config4mysql.properties");
-		Properties moduleSet = com.sparrow.core.utils.PropertiesFileUtil
-				.getPropertiesEl("classpath:conf/module.properties");
-		task.setClearBefore(false);
-		//task.setGenerateApi(true);
-		if (moduleSet != null && moduleSet.size() > 0) {
-			ModuleMatcher matcher = new ModuleMatcher();
-			Properties prop = moduleSet;
-			Enumeration<Object> enumeration = prop.keys();
-			while (enumeration.hasMoreElements()) {
-				String key = (String) enumeration.nextElement();
-				String value = prop.getProperty(key);
-				if (log != null)
-					log.info("add module matcher : " + key + " - " + value);
-				matcher.addModule(value, key);
-			}
-			task.setMatcher(matcher);
-		}
+		task.setClearBefore(true);
 		task.execute();
 
 		// new ClassCompiler(new File(SystemConfig.SOURCE_DIR), new File(

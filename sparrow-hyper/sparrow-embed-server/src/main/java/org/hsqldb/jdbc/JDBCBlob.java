@@ -459,7 +459,7 @@ public class JDBCBlob implements Blob {
 
         if (!m_createdByConnection) {
 
-            /** @todo - better error message */
+            /** @todo - better error services */
             throw Util.notSupported();
         }
 
@@ -574,7 +574,7 @@ public class JDBCBlob implements Blob {
 
         if (!m_createdByConnection) {
 
-            /** @todo - Better error message */
+            /** @todo - Better error services */
             throw Util.notSupported();
         }
 

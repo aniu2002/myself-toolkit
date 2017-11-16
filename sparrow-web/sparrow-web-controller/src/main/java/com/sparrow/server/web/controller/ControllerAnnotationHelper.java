@@ -4,7 +4,7 @@ import com.sparrow.core.resource.clazz.ClassSearch;
 import com.sparrow.core.utils.StringUtils;
 import com.sparrow.server.web.annotation.WebController;
 import com.sparrow.service.annotation.Autowired;
-import com.sparrow.service.annotation.Repository;
+import com.sparrow.service.annotation.BeanEntity;
 import com.sparrow.service.annotation.Transaction;
 import com.sparrow.service.config.*;
 import com.sparrow.service.context.AnnotationHelper;
@@ -24,7 +24,7 @@ public class ControllerAnnotationHelper {
 		for (Class<?> claz : clazs) {
 			System.out.println("-- Scan Bean : # " + claz.getName() + " # ");
 			SimpleBeanConfig sbcfg = null;
-			if (claz.isAnnotationPresent(Repository.class)) {
+			if (claz.isAnnotationPresent(BeanEntity.class)) {
 				sbcfg = getSampleConfig(claz);
 			} else if (claz.isAnnotationPresent(WebController.class)) {
 				sbcfg = getWebSampleConfig(claz);
@@ -43,7 +43,7 @@ public class ControllerAnnotationHelper {
 		for (Class<?> claz : clazs) {
 			System.out.println("-- Scan Bean : dd # " + claz.getName() + " # ");
 			SimpleBeanConfig sbcfg = null;
-			if (claz.isAnnotationPresent(Repository.class)) {
+			if (claz.isAnnotationPresent(BeanEntity.class)) {
 				sbcfg = getSampleConfig(claz);
 			} else if (claz.isAnnotationPresent(WebController.class)) {
 				sbcfg = getWebSampleConfig(claz);
@@ -73,7 +73,7 @@ public class ControllerAnnotationHelper {
 	}
 
 	public static SimpleBeanConfig getSampleConfig(Class<?> clazz) {
-		Repository beanAnno = clazz.getAnnotation(Repository.class);
+		BeanEntity beanAnno = clazz.getAnnotation(BeanEntity.class);
 		String beanName = beanAnno.value();
 		if (StringUtils.isEmpty(beanName)) {
 			beanName = clazz.getSimpleName();

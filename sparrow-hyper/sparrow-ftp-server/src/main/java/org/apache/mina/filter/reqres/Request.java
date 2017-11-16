@@ -65,7 +65,7 @@ public class Request {
             throw new NullPointerException("id");
         }
         if (message == null) {
-            throw new NullPointerException("message");
+            throw new NullPointerException("services");
         }
         if (timeout < 0) {
             throw new IllegalArgumentException("timeout: " + timeout
@@ -203,7 +203,7 @@ public class Request {
                 : String.valueOf(getTimeoutMillis());
 
         return "request: { id=" + getId() + ", timeout=" + timeout
-                + ", message=" + getMessage() + " }";
+                + ", services=" + getMessage() + " }";
     }
 
     Runnable getTimeoutTask() {

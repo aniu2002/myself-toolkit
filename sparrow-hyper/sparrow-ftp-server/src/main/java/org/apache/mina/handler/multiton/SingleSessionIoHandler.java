@@ -91,19 +91,19 @@ public interface SingleSessionIoHandler {
     void exceptionCaught(Throwable cause) throws Exception;
 
     /**
-     * Invoked when protocol message is received. Implement your protocol flow
+     * Invoked when protocol services is received. Implement your protocol flow
      * here.
      *
-     * @param message the received message
+     * @param message the received services
      * @see IoHandler#messageReceived(IoSession, Object)
      */
     void messageReceived(Object message) throws Exception;
 
     /**
-     * Invoked when protocol message that user requested by
+     * Invoked when protocol services that user requested by
      * {@link IoSession#write(Object)} is sent out actually.
      *
-     * @param message the sent message
+     * @param message the sent services
      * @see IoHandler#messageSent(IoSession, Object)
      */
     void messageSent(Object message) throws Exception;

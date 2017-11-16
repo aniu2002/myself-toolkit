@@ -38,18 +38,18 @@ mmseg4j 用 Chih-Hao Tsai 的 [MMSeg 算法](http://technology.chtsai.org/mmseg/
 在 solr的 schema.xml 中定义 field type如：
 
 ```xml
-<fieldType name="textComplex" class="solr.TextField" >
+<fieldType title="textComplex" class="solr.TextField" >
   <analyzer>
     <tokenizer class="com.chenlb.mmseg4j.solr.MMSegTokenizerFactory" mode="complex" dicPath="dic"/>
     <filter class="com.chenlb.mmseg4j.solr.CutLetterDigitFilterFactory" />
   </analyzer>
 </fieldType>
-<fieldType name="textMaxWord" class="solr.TextField" >
+<fieldType title="textMaxWord" class="solr.TextField" >
   <analyzer>
     <tokenizer class="com.chenlb.mmseg4j.solr.MMSegTokenizerFactory" mode="max-word" dicPath="dic"/>
   </analyzer>
 </fieldType>
-<fieldType name="textSimple" class="solr.TextField" >
+<fieldType title="textSimple" class="solr.TextField" >
   <analyzer>
     <tokenizer class="com.chenlb.mmseg4j.solr.MMSegTokenizerFactory" mode="simple" dicPath="n:/OpenSource/apache-solr-1.3.0/example/solr/my_dic"/>
   </analyzer>
@@ -95,9 +95,9 @@ java -cp .;mmseg4j-1.6.jar com.chenlb.mmseg4j.example.MaxWord '这里是字符�
 solrconfig.xml：
 
 ```xml
-<requestHandler name="/mmseg4j" class="com.chenlb.mmseg4j.solr.MMseg4jHandler" >
-	<lst name="defaults">
-		<str name="dicPath">dic</str>
+<requestHandler title="/mmseg4j" class="com.chenlb.mmseg4j.solr.MMseg4jHandler" >
+	<lst title="defaults">
+		<str title="dicPath">dic</str>
 	</lst>
 </requestHandler>
 ```

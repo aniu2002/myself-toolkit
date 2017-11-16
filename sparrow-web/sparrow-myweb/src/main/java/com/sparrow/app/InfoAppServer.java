@@ -23,12 +23,6 @@ public class InfoAppServer extends WebAppServer {
         this.configHandler("/excel", new FileDownloadHandler(SystemConfig.getProperty("import.template.dir")));
     }
 
-    @Override
-    protected void customConfig() {
-        super.customConfig();
-        this.configHandler("/giff", PathSetting.GIF_DIR);
-    }
-
     protected void initProps(boolean deployed) {
         super.initProps(deployed);
         System.setProperty("bean.cfg.path", "classpath:eggs/beans/*.xml");

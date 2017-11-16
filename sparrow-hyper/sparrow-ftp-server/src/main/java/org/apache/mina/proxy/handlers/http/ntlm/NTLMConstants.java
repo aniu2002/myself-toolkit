@@ -54,15 +54,15 @@ public interface NTLMConstants {
     // Indicates that OEM strings are supported for use in security buffer data
     public final static int FLAG_NEGOTIATE_OEM = 0x00000002;
 
-    // Requests that the server's authentication realm be included in the Type 2 message
+    // Requests that the server's authentication realm be included in the Type 2 services
     public final static int FLAG_REQUEST_SERVER_AUTH_REALM = 0x00000004;
 
     // Specifies that authenticated communication between the client 
-    // and server should carry a digital signature (message integrity)
+    // and server should carry a digital signature (services integrity)
     public final static int FLAG_NEGOTIATE_SIGN = 0x00000010;
 
     // Specifies that authenticated communication between the client 
-    // and server should be encrypted (message confidentiality)
+    // and server should be encrypted (services confidentiality)
     public final static int FLAG_NEGOTIATE_SEAL = 0x00000020;
 
     // Indicates that datagram authentication is being used
@@ -75,17 +75,17 @@ public interface NTLMConstants {
     // Indicates that NTLM authentication is being used
     public final static int FLAG_NEGOTIATE_NTLM = 0x00000200;
 
-    // Sent by the client in the Type 3 message to indicate that an anonymous context 
+    // Sent by the client in the Type 3 services to indicate that an anonymous context
     // has been established. This also affects the response fields
     public final static int FLAG_NEGOTIATE_ANONYMOUS = 0x00000800;
 
-    // Sent by the client in the Type 1 message to indicate that the name of the domain in which 
-    // the client workstation has membership is included in the message. This is used by the 
+    // Sent by the client in the Type 1 services to indicate that the name of the domain in which
+    // the client workstation has membership is included in the services. This is used by the
     // server to determine whether the client is eligible for local authentication
     public final static int FLAG_NEGOTIATE_DOMAIN_SUPPLIED = 0x00001000;
 
-    // Sent by the client in the Type 1 message to indicate that the client workstation's name 
-    // is included in the message. This is used by the server to determine whether the client 
+    // Sent by the client in the Type 1 services to indicate that the client workstation's name
+    // is included in the services. This is used by the server to determine whether the client
     // is eligible for local authentication
     public final static int FLAG_NEGOTIATE_WORKSTATION_SUPPLIED = 0x00002000;
 
@@ -98,15 +98,15 @@ public interface NTLMConstants {
     // be signed with a "dummy" signature
     public final static int FLAG_NEGOTIATE_ALWAYS_SIGN = 0x00008000;
 
-    // Sent by the server in the Type 2 message to indicate that the target authentication 
+    // Sent by the server in the Type 2 services to indicate that the target authentication
     // realm is a domain
     public final static int FLAG_TARGET_TYPE_DOMAIN = 0x00010000;
 
-    // Sent by the server in the Type 2 message to indicate that the target authentication 
+    // Sent by the server in the Type 2 services to indicate that the target authentication
     // realm is a server
     public final static int FLAG_TARGET_TYPE_SERVER = 0x00020000;
 
-    // Sent by the server in the Type 2 message to indicate that the target authentication 
+    // Sent by the server in the Type 2 services to indicate that the target authentication
     // realm is a share. Presumably, this is for share-level authentication. Usage is unclear
     public final static int FLAG_TARGET_TYPE_SHARE = 0x00040000;
 
@@ -116,8 +116,8 @@ public interface NTLMConstants {
     // have an effect on the response calculations
     public final static int FLAG_NEGOTIATE_NTLM2 = 0x00080000;
 
-    // Sent by the server in the Type 2 message to indicate that it is including a Target 
-    // Information block in the message. The Target Information block is used in the 
+    // Sent by the server in the Type 2 services to indicate that it is including a Target
+    // Information block in the services. The Target Information block is used in the
     // calculation of the NTLMv2 response
     public final static int FLAG_NEGOTIATE_TARGET_INFO = 0x00800000;
 
@@ -125,7 +125,7 @@ public interface NTLMConstants {
     public final static int FLAG_NEGOTIATE_128_BIT_ENCRYPTION = 0x20000000;
 
     // Indicates that the client will provide an encrypted master key in the "Session Key" 
-    // field of the Type 3 message
+    // field of the Type 3 services
     public final static int FLAG_NEGOTIATE_KEY_EXCHANGE = 0x40000000;
 
     // Indicates that 56-bit encryption is supported

@@ -159,7 +159,7 @@ class ServerConnection implements Runnable {
                 "MISSING Resource Bundle.  See source code");
 
             // This will be caught before prod release.
-            // Not necessary to localize message.
+            // Not necessary to localize services.
         }
 
         TEXTBANNER_PART1 = BundleHandler.getString(serverBundleHandle,
@@ -172,7 +172,7 @@ class ServerConnection implements Runnable {
                 "MISSING Resource Bundle msg definition.  See source code");
 
             // This will be caught before prod release.
-            // Not necessary to localize message.
+            // Not necessary to localize services.
         }
     }
 

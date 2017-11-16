@@ -24,28 +24,28 @@
         var _dd;
 
         var columns=[
-            {name:'id',label:'ID',width:'30'},
-            {name:'name',label:'名称',width:'100'},
-            {name:'desc',label:'描述'},
-            {name:'type',label:'类型',editor:'select',vtype:'required',src:"sqlType",search:true,max:32},
-            {name:'sourceName',label:'数据源',editor:'text',vtype:'required',max:32},
-            {name:'sourceId',label:'数据源Id',editor:'select',src:'dbs',vtype:'required',search:true,max:32},
-            {name:'appHome',label:'根路径',editor:'text',vtype:'required',max:32},
-            {name:'configPath',label:'配置路径',editor:'text',vtype:'required',max:32},
-            {name:'webRootPath',label:'web路径',editor:'text',vtype:'required',max:32},
-            {name:'opt',label:'配置',width:'80',align:'left',render:function(v,data){
-                v=data.name;
+            {title:'id',label:'ID',width:'30'},
+            {title:'title',label:'名称',width:'100'},
+            {title:'desc',label:'描述'},
+            {title:'type',label:'类型',editor:'select',vtype:'required',src:"sqlType",search:true,max:32},
+            {title:'sourceName',label:'数据源',editor:'text',vtype:'required',max:32},
+            {title:'sourceId',label:'数据源Id',editor:'select',src:'dbs',vtype:'required',search:true,max:32},
+            {title:'appHome',label:'根路径',editor:'text',vtype:'required',max:32},
+            {title:'configPath',label:'配置路径',editor:'text',vtype:'required',max:32},
+            {title:'webRootPath',label:'web路径',editor:'text',vtype:'required',max:32},
+            {title:'opt',label:'配置',width:'80',align:'left',render:function(v,data){
+                v=data.title;
                 var s='<a href="#" onclick="cfgSource(\''+v+'\')">资源</a>&nbsp;<a href="#" onclick="cfgProvider(\''+v+'\')">数据</a>';
                 return s;
             }},
-            {name:'processId',label:'进程id',editor:'text',vtype:'required',max:32,render:function(v){
+            {title:'processId',label:'进程id',editor:'text',vtype:'required',max:32,render:function(v){
                 if(v)
                     return v;
                 else
                     return "无";
             }},
-            {name:'webPort',label:'服务端口',editor:'text',vtype:'required num',max:32},
-            {name:'started',label:'启动与否',editor:'text',vtype:'required',max:32,render:function(v){
+            {title:'webPort',label:'服务端口',editor:'text',vtype:'required num',max:32},
+            {title:'started',label:'启动与否',editor:'text',vtype:'required',max:32,render:function(v){
                 var img='/app/icons/status/stop.png';
                 if(v==1)
                     img='/app/icons/status/run.png';

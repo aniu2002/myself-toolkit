@@ -32,17 +32,17 @@ public class AclBRelam extends BRealm {
         AclUser user = null;
 
         if ("admin".equals(token.getUsername())) {
-            if (StringUtils.equals(SystemConfig.getProperty("admin.pwd"), token.getPassword())) {
-                user = new AclUser();
-                user.setUserName("管理员");
-                user.setLoginName(token.getUsername());
-                user.setLoginPwd(token.getPassword());
-                SecurityUtils.getSubject().putAttribute("_user", user);
-            } else {
-                this.setError("输入密码错误！", token.getUsername());
-                throw new AuthenticationException("输入密码错误！");
-            }
-        } else {
+           if(  StringUtils.equals(SystemConfig.getProperty("admin.pwd"),token.getPassword())) {
+               user = new AclUser();
+               user.setUserName("管理员");
+               user.setLoginName(token.getUsername());
+               user.setLoginPwd(token.getPassword());
+               SecurityUtils.getSubject().putAttribute("_user", user);
+           }else{
+               this.setError("输入密码错误！", token.getUsername());
+               throw new AuthenticationException("输入密码错误！");
+           }
+        }else{
             this.setError("用户名不存在！", token.getUsername());
             throw new AuthenticationException("用户名不存在！");
         }

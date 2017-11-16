@@ -26,17 +26,17 @@ import org.apache.mina.core.future.WriteFuture;
 /**
  * Callback for {@link ProtocolEncoder} to generate encoded messages such as
  * {@link IoBuffer}s.  {@link ProtocolEncoder} must call {@link #write(Object)}
- * for each encoded message.
+ * for each encoded services.
  *
  * @author <a href="http://mina.apache.org">Apache MINA Project</a>
  */
 public interface ProtocolEncoderOutput {
     /**
-     * Callback for {@link ProtocolEncoder} to generate an encoded message such
+     * Callback for {@link ProtocolEncoder} to generate an encoded services such
      * as an {@link IoBuffer}. {@link ProtocolEncoder} must call
-     * {@link #write(Object)} for each encoded message.
+     * {@link #write(Object)} for each encoded services.
      *
-     * @param encodedMessage the encoded message, typically an {@link IoBuffer}
+     * @param encodedMessage the encoded services, typically an {@link IoBuffer}
      *                       or a {@link FileRegion}.
      */
     void write(Object encodedMessage);

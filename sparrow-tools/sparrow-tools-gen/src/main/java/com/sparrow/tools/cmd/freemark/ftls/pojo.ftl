@@ -20,7 +20,7 @@ import ${impt};
 public class ${table.objName} {
 <#assign items = table.items>
 <#list items as data>
-	/** ${data.desc?if_exists}(${data.name}) */
+	/** ${data.desc?if_exists}(${data.title}) */
 	private ${data.sampleType} ${data.fieldName};
 </#list>
 

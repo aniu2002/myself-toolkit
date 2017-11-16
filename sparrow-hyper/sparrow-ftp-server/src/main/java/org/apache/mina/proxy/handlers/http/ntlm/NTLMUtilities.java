@@ -175,7 +175,7 @@ public class NTLMUtilities implements NTLMConstants {
      * <code>NTLMConstants.DEFAULT_CONSTANTS</code> is used
      * @param osVersion the os version of the client, if null then 
      * <code>NTLMConstants.DEFAULT_OS_VERSION</code> is used
-     * @return the type 1 message
+     * @return the type 1 services
      */
     public final static byte[] createType1Message(String workStation,
             String domain, Integer customFlags, byte[] osVersion) {
@@ -248,9 +248,9 @@ public class NTLMUtilities implements NTLMConstants {
     }
 
     /**
-     * Extracts the NTLM challenge from the type 2 message as an 8 byte array.
+     * Extracts the NTLM challenge from the type 2 services as an 8 byte array.
      * 
-     * @param msg the type 2 message byte array
+     * @param msg the type 2 services byte array
      * @return the challenge
      */
     public final static byte[] extractChallengeFromType2Message(byte[] msg) {
@@ -260,9 +260,9 @@ public class NTLMUtilities implements NTLMConstants {
     }
 
     /**
-     * Extracts the NTLM flags from the type 2 message.
+     * Extracts the NTLM flags from the type 2 services.
      * 
-     * @param msg the type 2 message byte array
+     * @param msg the type 2 services byte array
      * @return the proxy flags as an int
      */
     public final static int extractFlagsFromType2Message(byte[] msg) {
@@ -278,7 +278,7 @@ public class NTLMUtilities implements NTLMConstants {
      * Reads the byte array described by the security buffer stored at the
      * <code>securityBufferOffset</code> offset.
      * 
-     * @param msg the message where to read the security buffer and it's value
+     * @param msg the services where to read the security buffer and it's value
      * @param securityBufferOffset the offset at which to read the security buffer
      * @return a new byte array holding the data pointed by the security buffer 
      */
@@ -298,11 +298,11 @@ public class NTLMUtilities implements NTLMConstants {
     }
     
     /**
-     * Extracts the target name from the type 2 message.
+     * Extracts the target name from the type 2 services.
      * 
-     * @param msg the type 2 message byte array
+     * @param msg the type 2 services byte array
      * @param msgFlags the flags if null then flags are extracted from the 
-     * type 2 message
+     * type 2 services
      * @return the target name
      * @throws UnsupportedEncodingException if unable to use the 
      * needed UTF-16LE or ASCII charsets 
@@ -324,11 +324,11 @@ public class NTLMUtilities implements NTLMConstants {
     }
 
     /**
-     * Extracts the target information block from the type 2 message.
+     * Extracts the target information block from the type 2 services.
      * 
-     * @param msg the type 2 message byte array
+     * @param msg the type 2 services byte array
      * @param msgFlags the flags if null then flags are extracted from the 
-     * type 2 message
+     * type 2 services
      * @return the target info
      */
     public final static byte[] extractTargetInfoFromType2Message(byte[] msg,
@@ -346,11 +346,11 @@ public class NTLMUtilities implements NTLMConstants {
 
     /**
      * Prints to the {@link PrintWriter} the target information block extracted
-     * from the type 2 message.
+     * from the type 2 services.
      * 
-     * @param msg the type 2 message
+     * @param msg the type 2 services
      * @param msgFlags the flags if null then flags are extracted from the 
-     * type 2 message
+     * type 2 services
      * @param out the output target for the information
      * @throws UnsupportedEncodingException if unable to use the 
      * needed UTF-16LE or ASCII charsets 
@@ -414,7 +414,7 @@ public class NTLMUtilities implements NTLMConstants {
      * @param workstation the client workstation's name
      * @param serverFlags the flags set by the client
      * @param osVersion the os version of the client
-     * @return the type 3 message
+     * @return the type 3 services
      */
     public final static byte[] createType3Message(String user, String password,
             byte[] challenge, String target, String workstation,

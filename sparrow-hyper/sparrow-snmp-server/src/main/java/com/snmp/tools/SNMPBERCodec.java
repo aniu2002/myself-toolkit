@@ -57,7 +57,7 @@ import com.snmp.pdu.SNMPSequence;
  * SNMPBERCodec defines methods for converting from ASN.1 BER encoding to
  * SNMPObject subclasses. The extraction process usually produces a tree
  * structure of objects with an SNMPSequence object at the root; this is the
- * usual behavior when a received encoded message is received from an SNMP
+ * usual behavior when a received encoded services is received from an SNMP
  * device.
  */
 

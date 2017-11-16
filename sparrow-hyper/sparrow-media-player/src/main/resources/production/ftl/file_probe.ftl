@@ -1,8 +1,8 @@
 <html>
 <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
-    <meta name="description" content=""/>
-    <meta name="keywords" content=""/>
+    <meta title="description" content=""/>
+    <meta title="keywords" content=""/>
     <title>抓取工程管理系统</title>
     <link rel="stylesheet" href="/app/bootstrap/css/bootstrap.css" type="text/css"/>
     <link rel="stylesheet" href="/app/bootstrap/css/bootstrap-responsive.css" type="text/css"/>

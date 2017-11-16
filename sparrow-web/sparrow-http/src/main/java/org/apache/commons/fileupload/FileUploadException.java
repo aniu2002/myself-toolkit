@@ -39,7 +39,7 @@ public class FileUploadException extends Exception {
     private final Throwable cause;
 
     /**
-     * Constructs a new <code>FileUploadException</code> without message.
+     * Constructs a new <code>FileUploadException</code> without services.
      */
     public FileUploadException() {
         this(null, null);
@@ -47,9 +47,9 @@ public class FileUploadException extends Exception {
 
     /**
      * Constructs a new <code>FileUploadException</code> with specified detail
-     * message.
+     * services.
      *
-     * @param msg the error message.
+     * @param msg the error services.
      */
     public FileUploadException(final String msg) {
         this(msg, null);
@@ -57,9 +57,9 @@ public class FileUploadException extends Exception {
 
     /**
      * Creates a new <code>FileUploadException</code> with the given
-     * detail message and cause.
+     * detail services and cause.
      *
-     * @param msg The exceptions detail message.
+     * @param msg The exceptions detail services.
      * @param cause The exceptions cause.
      */
     public FileUploadException(String msg, Throwable cause) {

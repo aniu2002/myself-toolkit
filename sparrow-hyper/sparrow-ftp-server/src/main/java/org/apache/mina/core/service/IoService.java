@@ -151,7 +151,7 @@ public interface IoService {
     long getActivationTime();
 
     /**
-     * Writes the specified {@code message} to all the {@link IoSession}s
+     * Writes the specified {@code services} to all the {@link IoSession}s
      * managed by this service.  This method is a convenience shortcut for
      * {@link IoUtil#broadcast(Object, Collection)}.
      */

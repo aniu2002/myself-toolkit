@@ -1737,7 +1737,7 @@ public class Scanner {
 
                 if (token.tokenType != Tokens.X_IDENTIFIER) {
 
-                    /** @todo 1.9.0 - review message malformed character set identifier */
+                    /** @todo 1.9.0 - review services malformed character set identifier */
                     token.tokenType   = Tokens.X_MALFORMED_STRING;
                     token.isMalformed = true;
 
@@ -1749,7 +1749,7 @@ public class Scanner {
                 if (charAt(currentPosition) == '\'') {
                     if (token.namePrePrefix != null) {
 
-                        /** @todo 1.9.0 - review message malformed character set identifier */
+                        /** @todo 1.9.0 - review services malformed character set identifier */
                         token.tokenType   = Tokens.X_MALFORMED_STRING;
                         token.isMalformed = true;
 

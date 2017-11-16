@@ -232,7 +232,7 @@ public class Servlet extends javax.servlet.http.HttpServlet {
                 out.println("Queries processed: " + iQueries + "<p>");
             } else {
                 out.println("<h2>The database is not running!</h2>");
-                out.println("The error message is:<p>");
+                out.println("The error services is:<p>");
                 out.println(errorStr);
             }
 

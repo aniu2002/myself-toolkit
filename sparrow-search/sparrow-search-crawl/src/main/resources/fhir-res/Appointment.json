@@ -1,0 +1,257 @@
+{
+  "resourceType": "Bundle",
+  "id": "066ee34f-3ca2-4838-9fc0-b85e9e2db676",
+  "meta": {
+    "lastUpdated": "2017-05-11T17:56:59.064+08:00"
+  },
+  "type": "searchset",
+  "total": 326937,
+  "link": [
+    {
+      "relation": "self",
+      "url": "http://10.10.15.38:8083/resources/Appointment?_count=50"
+    },
+    {
+      "relation": "next",
+      "url": "http://10.10.15.38:8083/resources?_getpages=12120fea-0e1e-44af-b56d-c85f77d049e8&_getpagesoffset=50&_count=50&_bundletype=searchset"
+    }
+  ],
+  "entry": [
+    {
+      "fullUrl": "http://10.10.15.38:8083/resources/Appointment/954",
+      "resource": {
+        "resourceType": "Appointment",
+        "id": "954",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2016-06-17T11:09:36.159+08:00"
+        },
+        "extension": [
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/extension/cli-register-paymays",
+            "extension": [
+              {
+                "url": "http://www.nestvision.com/platform/app/data/v1/extension/cli-register-paymay",
+                "extension": [
+                  {
+                    "url": "urn:oid:2.16.156.10011.2.3.1.198",
+                    "valueCode": "3"
+                  },
+                  {
+                    "url": "http://www.nestvision.com/platform/app/data/v1/number/pay-amount",
+                    "valueDecimal": 1.8
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/number/dt-fee",
+            "valueDecimal": 1
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/number/rb-fee",
+            "valueDecimal": 0.5
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/reg-source-code",
+            "valueCode": "2"
+          },
+          {
+            "url": "urn:oid:2.16.156.10011.2.3.1.248",
+            "valueCode": "3"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/clinic-code",
+            "valueCode": "01"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/reg-type-code",
+            "valueCode": "2"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/register-time",
+            "valueDateTime": "2016-03-28"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/reg-no",
+            "valueString": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/number/re-fee",
+            "valueDecimal": 0.8
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/reg-serial-no",
+            "valueString": "GG1603280001"
+          }
+        ],
+        "identifier": [
+          {
+            "system": "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/register-id",
+            "value": "GG1603280001"
+          }
+        ],
+        "status": "booked",
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/v3/ParticipationType",
+                    "code": "SBJ",
+                    "display": "患者"
+                  }
+                ]
+              }
+            ],
+            "actor": {
+              "reference": "Patient/61",
+              "display": "张振环"
+            },
+            "status": "accepted"
+          },
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/v3/ParticipationType",
+                    "code": "ADM",
+                    "display": "挂号医生"
+                  }
+                ]
+              }
+            ],
+            "actor": {
+              "reference": "Practitioner/265"
+            },
+            "status": "accepted"
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://10.10.15.38:8083/resources/Appointment/968",
+      "resource": {
+        "resourceType": "Appointment",
+        "id": "968",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2016-06-17T11:51:39.928+08:00"
+        },
+        "extension": [
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/extension/cli-register-paymays",
+            "extension": [
+              {
+                "url": "http://www.nestvision.com/platform/app/data/v1/extension/cli-register-paymay",
+                "extension": [
+                  {
+                    "url": "urn:oid:2.16.156.10011.2.3.1.198",
+                    "valueCode": "3"
+                  },
+                  {
+                    "url": "http://www.nestvision.com/platform/app/data/v1/number/pay-amount",
+                    "valueDecimal": 1.8
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/number/dt-fee",
+            "valueDecimal": 1
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/number/rb-fee",
+            "valueDecimal": 0.5
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/reg-source-code",
+            "valueCode": "2"
+          },
+          {
+            "url": "urn:oid:2.16.156.10011.2.3.1.248",
+            "valueCode": "3"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/clinic-code",
+            "valueCode": "16"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/reg-type-code",
+            "valueCode": "2"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/register-time",
+            "valueDateTime": "2016-03-29"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/reg-no",
+            "valueString": "20"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/number/re-fee",
+            "valueDecimal": 0.8
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/reg-serial-no",
+            "valueString": "GG1603290163"
+          }
+        ],
+        "identifier": [
+          {
+            "system": "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/register-id",
+            "value": "GG1603290163"
+          }
+        ],
+        "status": "booked",
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/v3/ParticipationType",
+                    "code": "SBJ",
+                    "display": "患者"
+                  }
+                ]
+              }
+            ],
+            "actor": {
+              "reference": "Patient/967",
+              "display": "杨晓丹"
+            },
+            "status": "accepted"
+          },
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/v3/ParticipationType",
+                    "code": "ADM",
+                    "display": "挂号医生"
+                  }
+                ]
+              }
+            ],
+            "actor": {
+              "reference": "Practitioner/271"
+            },
+            "status": "accepted"
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    }
+  ]
+}

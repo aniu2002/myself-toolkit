@@ -43,7 +43,7 @@ public class LoopMessageHandler implements HttpHandler {
 		String subject = httpExchange.getRequestURI().getPath();
 		if (subject.lastIndexOf('/') != -1)
 			subject = subject.substring(subject.lastIndexOf('/') + 1);
-		// this.controller.subscribe(evt, new UserAgent(httpExchange));
+		// this.web.subscribe(evt, new UserAgent(httpExchange));
 		Map<String, String> map = PushletHelper.queryToMap(httpExchange
                 .getRequestURI().getRawQuery());
 		if (StringUtils.equalsIgnoreCase(POST, httpExchange.getRequestMethod())) {

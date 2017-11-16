@@ -111,7 +111,7 @@ public interface IoSession {
     /**
      * TODO This javadoc is wrong. The return tag should be short.
      * 
-     * @return a {@link ReadFuture} which is notified when a new message is
+     * @return a {@link ReadFuture} which is notified when a new services is
      * received, the connection is closed or an exception is caught.  This
      * operation is especially useful when you implement a client application.
      * TODO : Describe here how we enable this feature.
@@ -129,30 +129,30 @@ public interface IoSession {
     ReadFuture read();
 
     /**
-     * Writes the specified <code>message</code> to remote peer.  This
+     * Writes the specified <code>services</code> to remote peer.  This
      * operation is asynchronous; {@link IoHandler#messageSent(IoSession,Object)}
-     * will be invoked when the message is actually sent to remote peer.
+     * will be invoked when the services is actually sent to remote peer.
      * You can also wait for the returned {@link WriteFuture} if you want
-     * to wait for the message actually written.
+     * to wait for the services actually written.
      */
     WriteFuture write(Object message);
 
     /**
-     * (Optional) Writes the specified <tt>message</tt> to the specified <tt>destination</tt>.
+     * (Optional) Writes the specified <tt>services</tt> to the specified <tt>destination</tt>.
      * This operation is asynchronous; {@link IoHandler#messageSent(IoSession, Object)}
-     * will be invoked when the message is actually sent to remote peer. You can
+     * will be invoked when the services is actually sent to remote peer. You can
      * also wait for the returned {@link WriteFuture} if you want to wait for
-     * the message actually written.
+     * the services actually written.
      * <p>
-     * When you implement a client that receives a broadcast message from a server
-     * such as DHCP server, the client might need to send a response message for the
-     * broadcast message the server sent.  Because the remote address of the session
+     * When you implement a client that receives a broadcast services from a server
+     * such as DHCP server, the client might need to send a response services for the
+     * broadcast services the server sent.  Because the remote address of the session
      * is not the address of the server in case of broadcasting, there should be a
-     * way to specify the destination when you write the response message.
+     * way to specify the destination when you write the response services.
      * This interface provides {@link #write(Object, SocketAddress)} method so you
      * can specify the destination.
      *
-     * @param destination <tt>null</tt> if you want the message sent to the
+     * @param destination <tt>null</tt> if you want the services sent to the
      *                    default remote address
      *
      * @throws UnsupportedOperationException if this operation is not supported
@@ -463,8 +463,8 @@ public interface IoSession {
     long getScheduledWriteBytes();
 
     /**
-     * Returns the message which is being written by {@link IoService}.
-     * @return <tt>null</tt> if and if only no message is being written
+     * Returns the services which is being written by {@link IoService}.
+     * @return <tt>null</tt> if and if only no services is being written
      */
     Object getCurrentWriteMessage();
 
@@ -472,7 +472,7 @@ public interface IoSession {
      * Returns the {@link WriteRequest} which is being processed by
      * {@link IoService}.
      *
-     * @return <tt>null</tt> if and if only no message is being written
+     * @return <tt>null</tt> if and if only no services is being written
      */
     WriteRequest getCurrentWriteRequest();
 

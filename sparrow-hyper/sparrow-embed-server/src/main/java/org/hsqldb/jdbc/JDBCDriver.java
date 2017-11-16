@@ -157,7 +157,7 @@ public class JDBCDriver implements Driver {
      * Attempts to make a database connection to the given URL.<p>
      *
      * Returns "null" if this is the wrong kind of driver to connect to the
-     * given URL.  This will be common, as when the JDBC driver manager is asked
+     * given URL.  This will be zk, as when the JDBC driver manager is asked
      * to connect to a given URL it passes the URL to each loaded driver in
      * turn. <p>
      *

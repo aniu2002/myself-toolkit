@@ -27,7 +27,7 @@ var module = 'test';
 var tabEditor = new TEditor();
 var columns = [
     {
-        field: "name",
+        field: "title",
         align: "left",
         fixed: true,
         icon: '../js/tools/images/ico_6.gif',
@@ -129,14 +129,14 @@ function editorForPlugin(cellEditor, editRef, editType) {
         return;
     if (data.items)
         data = data.items;
-    var j = 1, code, name
+    var j = 1, code, title
 
     for (var i = 0; i < data.length; i++) {
         var da = data[i];
         code = da.type;
         if (code == 'all' || (javaType == code)) {
-            name = da.name;
-            cellEditor.options[j++] = new Option(name, da.id);
+            title = da.title;
+            cellEditor.options[j++] = new Option(title, da.id);
         }
     }
 }
@@ -154,12 +154,12 @@ function edtorCreateJava(cellEditor, editRef, editType) {
         return;
     if (data.items)
         data = data.items;
-    var j = 1, code, name
+    var j = 1, code, title
     for (var i = 0; i < data.length; i++) {
         if (javaType != data[i].type)
             continue;
-        code = name = data[i].name;
-        cellEditor.options[j] = new Option(name, code);
+        code = title = data[i].title;
+        cellEditor.options[j] = new Option(title, code);
         j++;
     }
 }
@@ -170,7 +170,7 @@ function pluginRender(val, obj, column) {
             for (var i = 0; i < s.length; i++) {
                 var im = s[i];
                 if (val === im.id)
-                    return im.name;
+                    return im.title;
             }
     }
     return val;
@@ -196,7 +196,7 @@ function getHeaders(result) {
             editType: et,
             width: 100,
             //hidden : true,
-            header: rt.name
+            header: rt.title
         };
         if (rt.fd)
             cl.field = rt.fd;
@@ -257,7 +257,7 @@ function generateTables(hds) {
         columnSetting[curTable] = s;
     };
     tabEditor.columnDef = {
-        id: "name",
+        id: "title",
         columns: hds || columns
     };
     tabEditor.render("test");
@@ -266,10 +266,10 @@ function generateTables(hds) {
         var y = document.getElementById("database");
         y.options.length = 0;
         y.options[0] = new Option("请选择", "0");
-        var j = 1, code, name
+        var j = 1, code, title
         for (var i = 0; i < data.length; i++) {
-            code = name = data[i];
-            y.options[j] = new Option(name, code);
+            code = title = data[i];
+            y.options[j] = new Option(title, code);
             j++;
         }
     });
@@ -381,7 +381,7 @@ function redirectToBrowse() {
     </tr>
     <tr>
         <td align="left">数据表选择：
-            <select name="database" id="database" onchange="initGrid(this.value);"></select>
+            <select title="database" id="database" onchange="initGrid(this.value);"></select>
             <input type="button" value="保存设置" onclick="saveConfig();"/>&nbsp;
             <input type="button" value="清除设置" onclick="clearConfig();"/>&nbsp;
             <input type="button" value="生成模块" onclick="generateModule();"/>

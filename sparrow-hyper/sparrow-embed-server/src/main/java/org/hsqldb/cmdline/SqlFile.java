@@ -948,7 +948,7 @@ public class SqlFile {
                             // All of these stdprint*'s are to work around a
                             // very complicated issue where the Scanner
                             // has already displayed the next prompt before
-                            // we can display our status message.
+                            // we can display our status services.
                         }
                         if (receivedType == Token.RAWEXEC_TYPE) {
                             historize();
@@ -1154,7 +1154,7 @@ public class SqlFile {
     /**
      * Utility nested Exception class for internal use only.
      *
-     * Do not instantiate with null message.
+     * Do not instantiate with null services.
      */
     private static class BadSpecial extends AppendableException {
         static final long serialVersionUID = 7162440064026570590L;
@@ -1162,12 +1162,12 @@ public class SqlFile {
         BadSpecial(String s) {
             super(s);
             assert s != null:
-                "Must construct BadSpecials with non-null message";
+                "Must construct BadSpecials with non-null services";
         }
         BadSpecial(String s, Throwable t) {
             super(s, t);
             assert s != null:
-                "Must construct BadSpecials with non-null message";
+                "Must construct BadSpecials with non-null services";
         }
     }
 
@@ -2059,7 +2059,7 @@ public class SqlFile {
                  * is no UNIX shell involved.
                  * Doesn't make sense to incur overhead of a shell without
                  * stdin capability.
-                 * Could pipe System.in to the forked process, but that's
+                 * Could services System.in to the forked process, but that's
                  * probably not worth the effort due to Java's terrible
                  * and inescapable System.in buffering.  I.e., the forked
                  * program or shell wouldn't get stdin until user hits Enter.
@@ -2433,11 +2433,11 @@ public class SqlFile {
                 origVals[i] = shared.userVars.get(vars[i]);
             TokenList dupNesteds = token.nestedBlock.dup();
             if (dupNesteds.size() < 2)
-                // TODO: Define message
+                // TODO: Define services
                 throw new BadSpecial("Empty forrows loop");
             Token queryToken = dupNesteds.remove(0);
             if (queryToken.type != Token.SQL_TYPE)
-                // TODO: Define message
+                // TODO: Define services
                 throw new BadSpecial("*forrows command not followed "
                         + "immediately by an SQL statement");
             setBuf(queryToken);
@@ -2445,7 +2445,7 @@ public class SqlFile {
             Statement statement = processSQL();
             ResultSet rs = null;
             if (statement == null)
-                // TODO: Define message
+                // TODO: Define services
                 throw new BadSpecial("Failed to prepare SQL for loop");
             int colCount = 0;
             try {
@@ -2453,7 +2453,7 @@ public class SqlFile {
                 ResultSetMetaData rsmd = rs.getMetaData();
                 colCount = rsmd.getColumnCount();
                 if (vars != null && vars.length > colCount)
-                    // TODO: Define message
+                    // TODO: Define services
                     throw new BadSpecial("*forrows command specifies "
                             + vars.length
                             + " variables, but query pulled only "
@@ -4892,7 +4892,7 @@ public class SqlFile {
      * </P>
      *
      * @see <A href="http://java.sun.com/docs/books/tutorial/jdbc/basics/retrieving.html"> http://java.sun.com/docs/books/tutorial/jdbc/basics/retrieving.html</A>
-     *      The table on this page lists the most common SqlTypes, all of which
+     *      The table on this page lists the most zk SqlTypes, all of which
      *      must implement toString()
      * @see java.sql.Types
      */
@@ -5261,7 +5261,7 @@ public class SqlFile {
         }
 
 
-// TODO:  Undefine message.  I eliminated this constraint
+// TODO:  Undefine services.  I eliminated this constraint
 //throw new SqlToolError(SqltoolRB.read_toobig.getString(), re);
 
         int retval;
@@ -5425,7 +5425,7 @@ public class SqlFile {
                 // If so, it's probably a SqlTool problem, not a user or
                 // data problem.
                 // Should be researched and either return a user-friendly
-                // message or a RuntimeExceptin.
+                // services or a RuntimeExceptin.
 
             for (int i = 0; i < autonulls.length; i++) {
                 autonulls[i] = true;

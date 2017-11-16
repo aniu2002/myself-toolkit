@@ -48,7 +48,7 @@ public class SSConnection implements IModule
 {
 	
 	// url - address of tested server
-	// client - controller client
+	// client - web client
 	// testedClient - 
 	// application - mother application
 	

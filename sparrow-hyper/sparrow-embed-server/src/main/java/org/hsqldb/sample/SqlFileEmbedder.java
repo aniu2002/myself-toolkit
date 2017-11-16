@@ -72,7 +72,7 @@ public class SqlFileEmbedder {
     /**
      * Run<PRE>
      *     java SqlFileEmbedder</PRE>
-     * to see Syntax message.
+     * to see Syntax services.
      */
     public static void main(String[] sa) throws Exception {
         if (sa.length < 3) {

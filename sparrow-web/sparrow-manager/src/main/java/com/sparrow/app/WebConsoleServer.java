@@ -33,6 +33,7 @@ import java.io.File;
 public class WebConsoleServer {
     private SparrowHttpServer httpServer;
     private CommandController controller;
+    private BeanContext beanContext;
     private String host = "127.0.0.1";
     private int port = 9081;
 
@@ -85,7 +86,7 @@ public class WebConsoleServer {
             }
         });
         this.configBaseCommand(this.controller);
-        //this.configurationCommand(this.controller);
+        //this.configurationCommand(this.web);
         String rootPath = SystemConfig.getProperty("web.root.path", "/");
         SysLogger.info("Webapp root path : {}", rootPath);
         this.httpServer.addFileHandler("/app", rootPath);
@@ -128,7 +129,7 @@ public class WebConsoleServer {
             SystemConfig.setProperty("config.store.dir", f.getPath());
         } else {
             System.setProperty("use.system.props", "true");
-            System.setProperty("web.root.path", "D:\\workspace\\_code\\sparrow-egg\\sparrow-web\\sparrow-manager\\src\\main\\webapp");
+            System.setProperty("web.root.path", "D:\\workspace\\dili\\sparrow-egg\\sparrow-manager\\src\\main\\webapp");
             // System.setProperty("web.root.path", System.getProperty("user.dir") + "\\sparrow-egg\\src\\main\\webapp");
             // System.out.println( System.getProperty("user.dir") );
             // System.setProperty("source.generate.path", System.getProperty("user.dir") );

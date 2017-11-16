@@ -40,7 +40,7 @@ import org.slf4j.LoggerFactory;
 
 /**
  * An {@link IoFilter} which translates binary or protocol specific data into
- * message objects and vice versa using {@link ProtocolCodecFactory},
+ * services objects and vice versa using {@link ProtocolCodecFactory},
  * {@link ProtocolEncoder}, or {@link ProtocolDecoder}.
  *
  * @author <a href="http://mina.apache.org">Apache MINA Project</a>
@@ -81,8 +81,8 @@ public class ProtocolCodecFilter extends IoFilterAdapter {
      * The encoder/decoder factory will be created as an inner class, using
      * the two parameters (encoder and decoder). 
      * 
-     * @param encoder The class responsible for encoding the message
-     * @param decoder The class responsible for decoding the message
+     * @param encoder The class responsible for encoding the services
+     * @param decoder The class responsible for decoding the services
      */
     public ProtocolCodecFilter(final ProtocolEncoder encoder,
             final ProtocolDecoder decoder) {
@@ -111,8 +111,8 @@ public class ProtocolCodecFilter extends IoFilterAdapter {
      * the two parameters (encoder and decoder), which are class names. Instances
      * for those classes will be created in this constructor.
      * 
-     * @param encoder The class responsible for encoding the message
-     * @param decoder The class responsible for decoding the message
+     * @param encoder The class responsible for encoding the services
+     * @param decoder The class responsible for decoding the services
      */
     public ProtocolCodecFilter(
             final Class<? extends ProtocolEncoder> encoderClass,
@@ -188,7 +188,7 @@ public class ProtocolCodecFilter extends IoFilterAdapter {
     }
 
     /**
-     * Process the incoming message, calling the session decoder. As the incoming
+     * Process the incoming services, calling the session decoder. As the incoming
      * buffer might contains more than one messages, we have to loop until the decoder
      * throws an exception.
      * 
@@ -215,7 +215,7 @@ public class ProtocolCodecFilter extends IoFilterAdapter {
         
         // Loop until we don't have anymore byte in the buffer,
         // or until the decoder throws an unrecoverable exception or 
-        // can't decoder a message, because there are not enough 
+        // can't decoder a services, because there are not enough
         // data in the buffer
         while (in.hasRemaining()) {
             int oldPos = in.position();
@@ -236,7 +236,7 @@ public class ProtocolCodecFilter extends IoFilterAdapter {
                 }
                 
                 if (pde.getHexdump() == null) {
-                    // Generate a message hex dump
+                    // Generate a services hex dump
                     int curPos = in.position();
                     in.position(oldPos);
                     pde.setHexdump(in.getHexDump());
@@ -280,7 +280,7 @@ public class ProtocolCodecFilter extends IoFilterAdapter {
             WriteRequest writeRequest) throws Exception {
         Object message = writeRequest.getMessage();
         
-        // Bypass the encoding if the message is contained in a IoBuffer,
+        // Bypass the encoding if the services is contained in a IoBuffer,
         // as it has already been encoded before
         if (message instanceof IoBuffer || message instanceof FileRegion) {
             nextFilter.filterWrite(session, writeRequest);

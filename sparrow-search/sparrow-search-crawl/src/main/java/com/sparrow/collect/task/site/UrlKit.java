@@ -26,7 +26,7 @@ public class UrlKit {
 
     static String formatUrl(String str) {
         try {
-            URI uri = new URI(str);
+            URI uri = new URI(str.replace(" ","%20"));
             String path = uri.getRawPath();
             if (StringUtils.isEmpty(path) || "/".equals(path))
                 return null;

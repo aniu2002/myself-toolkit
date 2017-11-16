@@ -23,7 +23,7 @@ import org.apache.mina.core.session.IoSession;
 
 /**
  * Provides {@link ProtocolEncoder} and {@link ProtocolDecoder} which translates
- * binary or protocol specific data into message object and vice versa.
+ * binary or protocol specific data into services object and vice versa.
  * <p>
  * Please refer to
  * <a href="../../../../../xref-examples/org/apache/mina/examples/reverser/ReverseProtocolProvider.html"><code>ReverserProtocolProvider</code></a>
@@ -34,13 +34,13 @@ import org.apache.mina.core.session.IoSession;
 public interface ProtocolCodecFactory {
     /**
      * Returns a new (or reusable) instance of {@link ProtocolEncoder} which
-     * encodes message objects into binary or protocol-specific data.
+     * encodes services objects into binary or protocol-specific data.
      */
     ProtocolEncoder getEncoder(IoSession session) throws Exception;
 
     /**
      * Returns a new (or reusable) instance of {@link ProtocolDecoder} which
-     * decodes binary or protocol-specific data into message objects.
+     * decodes binary or protocol-specific data into services objects.
      */
     ProtocolDecoder getDecoder(IoSession session) throws Exception;
 }

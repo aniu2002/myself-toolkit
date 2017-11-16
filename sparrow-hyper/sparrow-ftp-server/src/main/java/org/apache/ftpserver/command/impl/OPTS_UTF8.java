@@ -50,7 +50,7 @@ public class OPTS_UTF8 extends AbstractCommand {
         // reset state
         session.resetState();
 
-        // send default message
+        // send default services
         session.write(LocalizedFtpReply.translate(session, request, context,
                 FtpReply.REPLY_200_COMMAND_OKAY, "OPTS.UTF8", null));
     }

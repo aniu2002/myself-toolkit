@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans>
-    <bean name="sessionFactory" clazz="com.sparrow.orm.session.simple.ConfigureSessionFactory" init="initialize">
-        <property name="configFile" value="classpath:conf/config4mysql.properties"/>
-        <!--<property name="mappingSource" value="conf/table-conf.xml" />-->
-        <property name="mapXml" value="classpath:eggs/sqlmap/*.xml"/>
+    <bean title="sessionFactory" clazz="com.sparrow.orm.session.simple.ConfigureSessionFactory" init="initialize">
+        <property title="configFile" value="classpath:conf/config4mysql.properties"/>
+        <!--<property title="mappingSource" value="conf/table-conf.xml" />-->
+        <property title="mapXml" value="classpath:eggs/sqlmap/*.xml"/>
     </bean>
 
-    <bean name="operateTemplate" clazz="com.sparrow.orm.template.simple.NormalOperateTemplate">
-        <property name="sessionFactory" ref="sessionFactory"/>
+    <bean title="operateTemplate" clazz="com.sparrow.orm.template.simple.NormalOperateTemplate">
+        <property title="sessionFactory" ref="sessionFactory"/>
     </bean>
 
-    <bean name="baseDao" clazz="com.sparrow.orm.dao.simple.NormalDao">
-        <property name="operateTemplate" ref="operateTemplate"/>
-        <property name="sessionFactory" ref="sessionFactory"/>
+    <bean title="baseDao" clazz="com.sparrow.orm.dao.simple.NormalDao">
+        <property title="operateTemplate" ref="operateTemplate"/>
+        <property title="sessionFactory" ref="sessionFactory"/>
     </bean>
 </beans>

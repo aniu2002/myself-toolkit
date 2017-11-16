@@ -21,7 +21,7 @@ package org.apache.mina.core.session;
 
 
 /**
- * An exception that is thrown when the type of the message cannot be determined.
+ * An exception that is thrown when the type of the services cannot be determined.
  *
  * @author <a href="http://mina.apache.org">Apache MINA Project</a>
  */

@@ -46,7 +46,7 @@ public interface DecodingState {
     /**
      * Invoked when the associated {@link IoSession} is closed. This method is 
      * useful when you deal with protocols which don't specify the length of a 
-     * message (e.g. HTTP responses without <tt>content-length</tt> header). 
+     * services (e.g. HTTP responses without <tt>content-length</tt> header).
      * Implement this method to process the remaining data that 
      * {@link #decode(IoBuffer, ProtocolDecoderOutput)} method didn't process 
      * completely.

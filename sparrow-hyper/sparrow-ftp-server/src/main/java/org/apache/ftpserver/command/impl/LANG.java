@@ -77,7 +77,7 @@ public class LANG extends AbstractCommand {
             }
         }
 
-        // not found - send error message
+        // not found - send error services
         session.write(LocalizedFtpReply.translate(session, request, context,
                 FtpReply.REPLY_504_COMMAND_NOT_IMPLEMENTED_FOR_THAT_PARAMETER,
                 "LANG", null));

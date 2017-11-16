@@ -45,7 +45,7 @@ import com.milgra.server.log.Logger;
 
 public class StreamController extends OProcess {
 
-	// closed - controller is closed
+	// closed - web is closed
 
 	public boolean closed;
 
@@ -104,9 +104,9 @@ public class StreamController extends OProcess {
 	 * StreamController constructor
 	 * 
 	 * @param clientX
-	 *            client controller
+	 *            client web
 	 * @param socketX
-	 *            socket controller
+	 *            socket web
 	 */
 
 	public StreamController(ClientController clientX, SocketController socketX) {

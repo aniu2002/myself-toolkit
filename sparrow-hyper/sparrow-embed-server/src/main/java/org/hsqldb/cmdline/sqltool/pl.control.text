@@ -39,8 +39,8 @@ multiple lines;                for each output row from the query.
 Several of the PL control commands specify one or more PL variable names,
 logical expressions, or mathematical expressions.  You must write the PL
 variables as follows for these situations:
-    BARE_NAME      To just specify a variable name, like where 'VARNAME' is
-                   written above, just write the bare variable name.
+    BARE_NAME      To just specify a variable title, like where 'VARNAME' is
+                   written above, just write the bare variable title.
                    Variable references inside of ((math expressions)) are also
                    written as bare names.
     *STARRED_NAME  In logical expressions, you should prefix variable names

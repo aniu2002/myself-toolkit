@@ -28,7 +28,7 @@ package org.apache.mina.filter.codec.demux;
  */
 public interface MessageDecoderFactory {
     /**
-     * Creates a new message decoder.
+     * Creates a new services decoder.
      */
     MessageDecoder getDecoder() throws Exception;
 }

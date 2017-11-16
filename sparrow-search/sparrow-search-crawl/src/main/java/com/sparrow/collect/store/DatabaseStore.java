@@ -2,8 +2,8 @@ package com.sparrow.collect.store;
 
 import com.sparrow.collect.orm.jdbc.DataSourceConnectionFactory;
 import com.sparrow.collect.orm.mapping.MapConfig;
-import com.sparrow.collect.orm.session.DataSourceAbstractSession;
-import com.sparrow.collect.orm.session.DefaultAbstractSession;
+import com.sparrow.collect.orm.session.DataSourceSession;
+import com.sparrow.collect.orm.session.DefaultSession;
 import com.sparrow.collect.store.check.BdbDataCheck;
 import com.sparrow.collect.store.check.DataTagCheck;
 import com.sparrow.collect.store.check.DefaultDataCheck;
@@ -16,13 +16,13 @@ import java.util.Map;
  * Created by Administrator on 2016/12/5.
  */
 public class DatabaseStore implements DataStore {
-    protected DefaultAbstractSession session;
+    protected DefaultSession session;
     protected TagCheck tagCheck;
     protected boolean needCheck = true;
     protected boolean needUpdate = true;
 
     public DatabaseStore(Map<String, String> storeSet) {
-        this.session = new DataSourceAbstractSession(
+        this.session = new DataSourceSession(
                 new DataSourceConnectionFactory(storeSet),
                 new MapConfig("classpath:map/mapConfig.xml"));
         this.needCheck = "true".equalsIgnoreCase(storeSet.get("need.checkData"));

@@ -115,8 +115,8 @@ public class Error {
     }
 
     /**
-     * Compose error message by inserting the strings in the add parameters
-     * in placeholders within the error message. The message string contains
+     * Compose error services by inserting the strings in the add parameters
+     * in placeholders within the error services. The services string contains
      * $$ markers for each context variable. Context variables are supplied in
      * the add parameters.
      *
@@ -184,12 +184,12 @@ public class Error {
     }
 
     /**
-     * Compose error message by inserting the strings in the add variables
-     * in placeholders within the error message. The message string contains
+     * Compose error services by inserting the strings in the add variables
+     * in placeholders within the error services. The services string contains
      * $$ markers for each context variable. Context variables are supplied in
      * the add parameter. (by Loic Lefevre)
      *
-     * @param message  message string
+     * @param message  services string
      * @param add      optional parameters
      *
      * @return an <code>HsqlException</code>
@@ -212,7 +212,7 @@ public class Error {
             }
 
             sb.append(message.substring(lastIndex, escIndex));
-            sb.append(add[i] == null ? "null exception message"
+            sb.append(add[i] == null ? "null exception services"
                                      : add[i].toString());
 
             lastIndex = escIndex + MESSAGE_TAG.length();
@@ -226,12 +226,12 @@ public class Error {
     }
 
     /**
-     * Returns the error message given the error code.<br/>
+     * Returns the error services given the error code.<br/>
      * This method is be used when throwing exception other
      * than <code>HsqlException</code>.
      *
-     * @param errorCode    the error code associated to the error message
-     * @return  the error message associated with the error code
+     * @param errorCode    the error code associated to the error services
+     * @return  the error services associated with the error code
      */
     public static String getMessage(final int errorCode) {
         return getResourceString(errorCode);
@@ -241,21 +241,21 @@ public class Error {
      * Returns the error SQL STATE sting given the error code.<br/>
      * This method is be used when throwing exception based on other exceptions.
      *
-     * @param errorCode    the error code associated to the error message
-     * @return  the error message associated with the error code
+     * @param errorCode    the error code associated to the error services
+     * @return  the error services associated with the error code
      */
     public static String getStateString(final int errorCode) {
         return getMessage(errorCode, 0, null).substring(0, SQL_STATE_DIGITS);
     }
 
     /**
-     * Returns the error message given the error code.<br/> This method is used
+     * Returns the error services given the error code.<br/> This method is used
      * when throwing exception other than <code>HsqlException</code>.
      *
-     * @param code the code for the error message
-     * @param subCode the code for the addon message
+     * @param code the code for the error services
+     * @param subCode the code for the addon services
      * @param add value(s) to use to replace the placeholer(s)
-     * @return the error message associated with the error code
+     * @return the error services associated with the error code
      */
     public static String getMessage(final int code, int subCode,
                                     final Object[] add) {
@@ -289,7 +289,7 @@ public class Error {
      * Used to print messages to System.out
      *
      *
-     * @param message message to print
+     * @param message services to print
      */
     public static void printSystemOut(String message) {
 

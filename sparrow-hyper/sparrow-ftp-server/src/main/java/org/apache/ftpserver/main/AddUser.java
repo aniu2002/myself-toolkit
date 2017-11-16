@@ -168,7 +168,7 @@ public class AddUser extends CommandLine {
     }
     
     /**
-     * Print the usage message.
+     * Print the usage services.
      */
     protected void usage() {
         System.err.println("Usage: java " + AddUser.class.getName() + " [OPTION] [CONFIGFILE]");
@@ -180,7 +180,7 @@ public class AddUser extends CommandLine {
         System.err
                 .println("                             also used if no command line argument is given ");
 
-        System.err.println("  -?, --help                 print this message");
+        System.err.println("  -?, --help                 print this services");
     }
 
 }

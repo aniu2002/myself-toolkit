@@ -477,7 +477,7 @@ public class HsqlProperties {
     }
 
     /**
-     * Perfoms any range checking for property and return an error message
+     * Perfoms any range checking for property and return an error services
      */
     public static String validateProperty(String key, String value,
                                           Object[] meta) {

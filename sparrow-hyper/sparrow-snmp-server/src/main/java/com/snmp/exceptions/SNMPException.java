@@ -47,7 +47,7 @@ public class SNMPException extends Exception
     
     
     /**
-    *    Create exception with message string.
+    *    Create exception with services string.
     */
     
     public SNMPException(String s)

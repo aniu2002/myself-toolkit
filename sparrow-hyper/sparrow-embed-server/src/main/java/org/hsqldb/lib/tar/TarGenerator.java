@@ -541,7 +541,7 @@ public class TarGenerator {
                     outPipe.write(tarStream.writeBuffer, 0, i);
                 }
 
-                outPipe.flush();    // Do any good on a pipe?
+                outPipe.flush();    // Do any good on a services?
                 dataSize = inputStream.available();
 
                 if (TarFileOutputStream.debug) {

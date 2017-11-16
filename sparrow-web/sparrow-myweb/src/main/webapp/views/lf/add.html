@@ -20,25 +20,25 @@
 
     <script type="text/javascript">
         var columns=[
-          {name:'id',label:'ID',width:'30',render:'_idx',hidden:true,noe:true},
-          {name:'name',label:'昵称',editor:'text',vtype:'required',max:32},
-          {name:'qq',label:'QQ',editor:'text',vtype:'num',max:32},
-          {name:'sex',label:'性别',editor:'select',src:'sex',vtype:'required',max:1},
-          {name:'age',label:'年龄',render:'number',editor:'text',vtype:'num',search:true,max:11},
-          {name:'bra',label:'罩B',editor:'select',src:'bra',vtype:'required',max:1},
-          {name:'phone',label:'手机',editor:'text',max:32},
-          {name:'district',label:'区域',editor:'text',vtype:'required',max:32},
-          {name:'refereeName',label:'上报人',editor:'text',vtype:'required',max:32},
-          {name:'refereeQq',label:'上报qq',editor:'text',vtype:'num',hidden:true,max:32},
-          {name:'special',label:'特长',editor:'text',vtype:'required',max:64},
-          {name:'priceP',label:'价格P',render:'number',editor:'text',vtype:'num',max:11},
-          {name:'pricePp',label:'价格PP',render:'number',editor:'text',vtype:'num',max:11},
-          {name:'leval',label:'级别',render:'number',editor:'select',src:'leval',vtype:'required',max:11},
-          {name:'checked',label:'体验否',render:'number',editor:'checkbox',vtype:'required',search:true,hidden:true,max:11},
-          {name:'priceDesc',label:'价格描述',editor:'textarea', max:64},
-          {name:'simpleDesc',label:'简单描述',editor:'textarea', max:128},
-          {name:'comment',label:'评价',editor:'textarea', max:256,vtype:'max',colspan:2,width:'550px',height:'100px'},
-          {name:'images',label:'图片',editor:'text',vtype:'max',max:512,colspan:2,width:'550px'}
+          {title:'id',label:'ID',width:'30',render:'_idx',hidden:true,noe:true},
+          {title:'title',label:'昵称',editor:'text',vtype:'required',max:32},
+          {title:'qq',label:'QQ',editor:'text',vtype:'num',max:32},
+          {title:'sex',label:'性别',editor:'select',src:'sex',vtype:'required',max:1},
+          {title:'age',label:'年龄',render:'number',editor:'text',vtype:'num',search:true,max:11},
+          {title:'bra',label:'罩B',editor:'select',src:'bra',vtype:'required',max:1},
+          {title:'phone',label:'手机',editor:'text',max:32},
+          {title:'district',label:'区域',editor:'text',vtype:'required',max:32},
+          {title:'refereeName',label:'上报人',editor:'text',vtype:'required',max:32},
+          {title:'refereeQq',label:'上报qq',editor:'text',vtype:'num',hidden:true,max:32},
+          {title:'special',label:'特长',editor:'text',vtype:'required',max:64},
+          {title:'priceP',label:'价格P',render:'number',editor:'text',vtype:'num',max:11},
+          {title:'pricePp',label:'价格PP',render:'number',editor:'text',vtype:'num',max:11},
+          {title:'leval',label:'级别',render:'number',editor:'select',src:'leval',vtype:'required',max:11},
+          {title:'checked',label:'体验否',render:'number',editor:'checkbox',vtype:'required',search:true,hidden:true,max:11},
+          {title:'priceDesc',label:'价格描述',editor:'textarea', max:64},
+          {title:'simpleDesc',label:'简单描述',editor:'textarea', max:128},
+          {title:'comment',label:'评价',editor:'textarea', max:256,vtype:'max',colspan:2,width:'550px',height:'100px'},
+          {title:'images',label:'图片',editor:'text',vtype:'max',max:512,colspan:2,width:'550px'}
 	    ];
         var _url='/cmd/lf/lf_members';
         var _baseUrl='http://127.0.0.1:9081/app';

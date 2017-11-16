@@ -50,7 +50,7 @@ public class SSData implements IModule
 {
 	
 	// url - url of remote server
-	// client - controller client
+	// client - web client
 	// testedClient - 
 	// application - mother applicaiton
 	

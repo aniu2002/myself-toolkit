@@ -37,7 +37,7 @@ public class ProtocolCodecException extends Exception {
     }
 
     /**
-     * Constructs a new instance with the specified message.
+     * Constructs a new instance with the specified services.
      */
     public ProtocolCodecException(String message) {
         super(message);
@@ -51,7 +51,7 @@ public class ProtocolCodecException extends Exception {
     }
 
     /**
-     * Constructs a new instance with the specified message and the specified
+     * Constructs a new instance with the specified services and the specified
      * cause.
      */
     public ProtocolCodecException(String message, Throwable cause) {

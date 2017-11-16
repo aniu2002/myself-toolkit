@@ -59,7 +59,7 @@ import org.hsqldb.types.Type;
 /**
  * Restores the state of a Database instance from an SQL log file. <p>
  *
- * If there is an error, processing stops at that line and the message is
+ * If there is an error, processing stops at that line and the services is
  * logged to the application log. If memory runs out, an exception is thrown.
  *
  * @author Fred Toussi (fredt@users dot sourceforge.net)

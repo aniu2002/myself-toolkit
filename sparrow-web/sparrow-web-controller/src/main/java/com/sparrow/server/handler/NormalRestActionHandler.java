@@ -8,7 +8,6 @@
 
 package com.sparrow.server.handler;
 
-import com.sparrow.core.config.SystemConfig;
 import com.sparrow.http.base.HttpRequest;
 import com.sparrow.http.base.HttpResponse;
 import com.sparrow.http.handler.DefaultHandler;
@@ -46,8 +45,7 @@ public class NormalRestActionHandler extends DefaultHandler {
 	@Override
 	protected void doInitialize() {
 		if (this.controller == null)
-			this.controller = ActionControllerFactory.configureActionController(
-					SystemConfig.getProperty("bean.config","classpath:eggs/config.xml"));
+			this.controller = ActionControllerFactory.getActionController();
 		this.controller.initialize();
 	}
 

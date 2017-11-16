@@ -2604,7 +2604,7 @@ extends org.hsqldb.dbinfo.DatabaseInformationMain {
                                                             : "NO";
                 row[data_type]        = type.getFullNameString();
 
-                // common type block
+                // zk type block
                 if (type.isCharacterType()) {
                     row[character_maximum_length] =
                         ValuePool.getLong(type.precision);
@@ -3357,7 +3357,7 @@ extends org.hsqldb.dbinfo.DatabaseInformationMain {
             row[domain_name]    = type.getName().name;
             row[data_type]      = type.getFullNameString();
 
-            // common type block
+            // zk type block
             if (type.isCharacterType()) {
                 row[character_maximum_length] =
                     ValuePool.getLong(type.precision);
@@ -3417,7 +3417,7 @@ extends org.hsqldb.dbinfo.DatabaseInformationMain {
             row[dtd_identifier]     = type.getDefinition();
             row[declared_data_type] = row[data_type];
 
-            // end common block
+            // end zk block
             Expression defaultExpression =
                 type.userTypeModifier.getDefaultClause();
 
@@ -4310,7 +4310,7 @@ extends org.hsqldb.dbinfo.DatabaseInformationMain {
                     row[as_locator] = "NO";
                     row[data_type]  = type.getFullNameString();
 
-                    // common type block
+                    // zk type block
                     if (type.isCharacterType()) {
                         row[character_maximum_length] =
                             ValuePool.getLong(type.precision);
@@ -4375,7 +4375,7 @@ extends org.hsqldb.dbinfo.DatabaseInformationMain {
 
                     row[dtd_identifier] = type.getDefinition();
 
-                    // end common block
+                    // end zk block
                     t.insertSys(session, store, row);
                 }
             }
@@ -5884,7 +5884,7 @@ extends org.hsqldb.dbinfo.DatabaseInformationMain {
 
             if (type != null) {
 
-                // common type block
+                // zk type block
                 if (type.isCharacterType()) {
                     row[character_maximum_length] =
                         ValuePool.getLong(type.precision);
@@ -5948,7 +5948,7 @@ extends org.hsqldb.dbinfo.DatabaseInformationMain {
                 row[dtd_identifier]     = type.getDefinition();
                 row[declared_data_type] = row[data_type];
 
-                // end common block
+                // end zk block
             }
 
             row[type_udt_catalog] = null;
@@ -7848,7 +7848,7 @@ extends org.hsqldb.dbinfo.DatabaseInformationMain {
             row[is_final]                   = "YES";
             row[ordering_form]              = "FULL";
 
-            // common type block
+            // zk type block
             if (type.isCharacterType()) {
                 row[character_maximum_length] =
                     ValuePool.getLong(type.precision);
@@ -7903,7 +7903,7 @@ extends org.hsqldb.dbinfo.DatabaseInformationMain {
                 row[data_type] = "ARRAY";
             }
 
-            // end common block
+            // end zk block
             row[source_dtd_identifier] = type.getDefinition();
             row[declared_data_type]    = row[data_type];
 

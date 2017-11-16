@@ -613,7 +613,7 @@ var Common = {
         if (typeof (el) == 'string')
             el = $(el);
         el.find('img').each(function (i, ele) {
-            Common.lazyInit($(this));
+            Common.lazyInit(el, $(ele));
         });
     },
     lazyInit: function (imgEl) {

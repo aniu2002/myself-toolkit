@@ -1,7 +1,7 @@
 package com.sparrow.collect.crawler;
 
-import com.sparrow.collect.crawler.check.UrlCheck;
-import com.sparrow.collect.crawler.check.DuplicateUrlCheck;
+import com.sparrow.collect.cache.bloom.UrlCheck;
+import com.sparrow.collect.cache.bloom.DuplicateUrlCheck;
 import com.sparrow.collect.crawler.conf.CrawlerConfig;
 import com.sparrow.collect.crawler.conf.pool.PoolConfig;
 import com.sparrow.collect.crawler.conf.pool.PoolFactory;
@@ -229,7 +229,7 @@ public class ConfiguredCrawler extends AbstractCrawler {
         if (StringUtils.isEmpty(contentExpress))
             return data;
         if (data != null) {
-            CrawlerDom dom = this.createCrawlerDom(data);
+            CrawlerDom dom = this.createCrDom(data);
             //Document doc = Jsoup.parse(data.getHtml());
             data.setContent(dom.text(contentExpress));
             // data.setContent(doc.select(contentExpress).text());
@@ -350,7 +350,7 @@ public class ConfiguredCrawler extends AbstractCrawler {
         return sb.toString();
     }
 
-    protected CrawlerDom createCrawlerDom(CrawlerData data) {
+    protected CrawlerDom createCrDom(CrawlerData data) {
         JsoupCrawlerDomImpl dom = new JsoupCrawlerDomImpl();
         dom.parse(data.getHtml());
         return dom;

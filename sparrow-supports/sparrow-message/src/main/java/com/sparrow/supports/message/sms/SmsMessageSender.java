@@ -82,7 +82,7 @@ public class SmsMessageSender extends MessageSender {
 		HttpReq request = new HttpReq(url, "POST", "utf-8", headers);
 		String msg = message + "，详细情况参考web管理端";
 		String param = "cdkey=" + cdKey + "&password=" + password + "&phone="
-				+ phone + "&message=" + msg;
+				+ phone + "&services=" + msg;
 		request.setParaStr(param);
 
 		HttpResp resp = http.execute(request);

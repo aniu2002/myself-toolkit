@@ -1,5 +1,8 @@
 package com.sparrow.collect.store.check;
 
+import com.sparrow.collect.orm.session.DefaultSession;
+import com.sparrow.collect.utils.PropertyUtils;
+
 /**
  * Project Name: sparrow-egg
  * Package Name: com.sparrow.collect.store.check

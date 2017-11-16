@@ -69,12 +69,12 @@ public interface IoHandler {
     void exceptionCaught(IoSession session, Throwable cause) throws Exception;
 
     /**
-     * Invoked when a message is received.
+     * Invoked when a services is received.
      */
     void messageReceived(IoSession session, Object message) throws Exception;
 
     /**
-     * Invoked when a message written by {@link IoSession#write(Object)} is
+     * Invoked when a services written by {@link IoSession#write(Object)} is
      * sent out.
      */
     void messageSent(IoSession session, Object message) throws Exception;

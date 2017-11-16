@@ -94,10 +94,10 @@ public class WebCmdServer {
     void configBaseCommand(CommandController controller) {
         this.regCommand("error", controller, new ErrorCommand());
         this.regCommand("source", controller, new SourceCommand());
-       // this.regCommand("provider", controller, new ProviderCommand(this.beanContext));
+       // this.regCommand("provider", web, new ProviderCommand(this.beanContext));
         this.regCommand("sys/user", controller, new UserCommand());
-        //this.regCommand("sys/db", controller, new DataSourceCommand());
-        //this.regCommand("sys/app", controller, new AppCommand());
+        //this.regCommand("sys/db", web, new DataSourceCommand());
+        //this.regCommand("sys/app", web, new AppCommand());
     }
 
     void regCommand(String key, CommandController controller, Command command) {

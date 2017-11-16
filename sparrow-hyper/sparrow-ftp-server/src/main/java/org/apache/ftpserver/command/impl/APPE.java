@@ -196,7 +196,7 @@ public class APPE extends AbstractCommand {
                 IoUtils.close(os);
             }
 
-            // if data transfer ok - send transfer complete message
+            // if data transfer ok - send transfer complete services
             if (!failure) {
                 session.write(LocalizedFtpReply.translate(session, request, context,
                         FtpReply.REPLY_226_CLOSING_DATA_CONNECTION, "APPE",

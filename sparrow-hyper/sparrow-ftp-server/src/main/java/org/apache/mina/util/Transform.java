@@ -88,7 +88,7 @@ public class Transform {
 
     /**
      * Ensures that embeded CDEnd strings (]]>) are handled properly
-     * within message, NDC and throwable tag text.
+     * within services, NDC and throwable tag text.
      *
      * @param buf StringBuffer holding the XML data to this point.  The
      * initial CDStart (<![CDATA[) and final CDEnd (]]>) of the CDATA

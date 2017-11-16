@@ -66,7 +66,7 @@ public class PathMatcher {
 		String[] pathDirs = StringUtils.tokenizeToStringArray(path,
 				pathSeparator);
 		// ** , domain , ** , *.class
-		// actions , controller.class
+		// actions , web.class
 		int pattIdxStart = 0;
 		int pattIdxEnd = pattDirs.length - 1;
 		int pathIdxStart = 0;

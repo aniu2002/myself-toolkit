@@ -25,7 +25,7 @@ import java.util.List;
 import org.apache.ftpserver.message.impl.DefaultMessageResource;
 
 /**
- * Factory for creating message resource implementation
+ * Factory for creating services resource implementation
  *
  * @author <a href="http://mina.apache.org">Apache MINA Project</a>
  */
@@ -61,16 +61,16 @@ public class MessageResourceFactory {
     }
 
     /**
-     * The directory where custom message bundles can be located
-     * @return The {@link File} denoting the directory with message bundles
+     * The directory where custom services bundles can be located
+     * @return The {@link File} denoting the directory with services bundles
      */
     public File getCustomMessageDirectory() {
         return customMessageDirectory;
     }
 
     /**
-     * Set the directory where custom message bundles can be located
-     * @param customMessageDirectory The {@link File} denoting the directory with message bundles
+     * Set the directory where custom services bundles can be located
+     * @param customMessageDirectory The {@link File} denoting the directory with services bundles
      */
     public void setCustomMessageDirectory(File customMessageDirectory) {
         this.customMessageDirectory = customMessageDirectory;

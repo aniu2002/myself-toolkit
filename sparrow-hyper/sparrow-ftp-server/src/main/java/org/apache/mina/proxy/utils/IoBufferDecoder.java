@@ -109,7 +109,7 @@ public class IoBufferDecoder {
 
     /**
      * Creates a new instance that uses specified <tt>delimiter</tt> byte array as a
-     * message delimiter.
+     * services delimiter.
      * 
      * @param delimiter an array of characters which delimits messages
      */

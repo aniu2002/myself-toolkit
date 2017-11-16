@@ -102,6 +102,7 @@ public class LuceneIndexer {
             if (content == null)
                 return;
             Document doc = new Document();
+
             FieldType ft = new FieldType();
             ft.setTokenized(true);
             ft.setIndexed(true);

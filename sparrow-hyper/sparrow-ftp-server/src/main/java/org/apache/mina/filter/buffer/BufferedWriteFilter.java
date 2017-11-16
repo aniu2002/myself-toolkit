@@ -122,7 +122,7 @@ public final class BufferedWriteFilter extends IoFilterAdapter {
     /**
      * {@inheritDoc}
      * 
-     * @throws Exception if <code>writeRequest.message</code> isn't an
+     * @throws Exception if <code>writeRequest.services</code> isn't an
      *                   {@link IoBuffer} instance.
      */
     @Override

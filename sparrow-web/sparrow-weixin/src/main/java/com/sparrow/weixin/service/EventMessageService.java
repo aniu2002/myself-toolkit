@@ -107,7 +107,7 @@ public class EventMessageService extends MessageService {
             log.debug("- UnSubscribed user : {}", message.getFromUserName());
         UserUtil.removeUserHolder(message.getFromUserName());
         return null;
-        //return this.createResponseText(message, DEFAULT_REPLY);
+        //return this.createResponseText(services, DEFAULT_REPLY);
     }
 
     Evt4LocationMessage getLocEvtMessage(Element root) {
@@ -125,7 +125,7 @@ public class EventMessageService extends MessageService {
         this.wrapMessage(root, message);
         message.setEvent(root.elementTextTrim("Event"));
         message.setEventKey(root.elementTextTrim("EventKey"));
-        // message.setRule(message.getEventKey());
+        // services.setRule(services.getEventKey());
         return message;
     }
 
@@ -134,7 +134,7 @@ public class EventMessageService extends MessageService {
         this.wrapMessage(root, message);
         message.setEvent(root.elementTextTrim("Event"));
         message.setEventKey("1");
-        // message.setRule("1");
+        // services.setRule("1");
         return message;
     }
 }

@@ -35,7 +35,7 @@ public interface ProtocolDecoderOutput {
      * {@link ProtocolDecoder} must call {@link #write(Object)} for each
      * decoded messages.
      *
-     * @param message the decoded message
+     * @param message the decoded services
      */
     void write(Object message);
 

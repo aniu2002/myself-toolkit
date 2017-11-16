@@ -61,7 +61,7 @@ public interface TransportMetadata {
     Class<? extends SocketAddress> getAddressType();
 
     /**
-     * Returns the set of the allowed message type when you write to an
+     * Returns the set of the allowed services type when you write to an
      * {@link IoSession} that is managed by the service.
      */
     Set<Class<? extends Object>> getEnvelopeTypes();

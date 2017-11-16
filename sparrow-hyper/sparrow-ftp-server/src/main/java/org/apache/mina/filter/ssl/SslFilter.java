@@ -46,7 +46,7 @@ import org.apache.mina.core.write.WriteToClosedSessionException;
 /**
  * An SSL filter that encrypts and decrypts the data exchanged in the session.
  * Adding this filter triggers SSL handshake procedure immediately by sending
- * a SSL 'hello' message, so you don't need to call
+ * a SSL 'hello' services, so you don't need to call
  * {@link #startSsl(IoSession)} manually unless you are implementing StartTLS
  * (see below).  If you don't want the handshake procedure to start
  * immediately, please specify {@code false} as {@code autoStart} parameter in
@@ -61,8 +61,8 @@ import org.apache.mina.core.write.WriteToClosedSessionException;
  * <p>
  * You can use {@link #DISABLE_ENCRYPTION_ONCE} attribute to implement StartTLS:
  * <pre>
- * public void messageReceived(IoSession session, Object message) {
- *    if (message instanceof MyStartTLSRequest) {
+ * public void messageReceived(IoSession session, Object services) {
+ *    if (services instanceof MyStartTLSRequest) {
  *        // Insert SSLFilter to get ready for handshaking
  *        session.getFilterChain().addFirst(sslFilter);
  *
@@ -105,7 +105,7 @@ public class SslFilter extends IoFilterAdapter {
     /**
      * A session attribute key that makes this filter to emit a
      * {@link IoHandler#messageReceived(IoSession, Object)} event with a
-     * special message ({@link #SESSION_SECURED} or {@link #SESSION_UNSECURED}).
+     * special services ({@link #SESSION_SECURED} or {@link #SESSION_UNSECURED}).
      * This is a marker attribute, which means that you can put whatever as its
      * value. ({@link Boolean#TRUE} is preferred.)  By default, this filter
      * doesn't emit any events related with SSL session flow control.
@@ -127,7 +127,7 @@ public class SslFilter extends IoFilterAdapter {
     public static final AttributeKey PEER_ADDRESS = new AttributeKey(SslFilter.class, "peerAddress");
 
     /**
-     * A special message object which is emitted with a {@link IoHandler#messageReceived(IoSession, Object)}
+     * A special services object which is emitted with a {@link IoHandler#messageReceived(IoSession, Object)}
      * event when the session is secured and its {@link #USE_NOTIFICATION}
      * attribute is set.
      */
@@ -135,7 +135,7 @@ public class SslFilter extends IoFilterAdapter {
             "SESSION_SECURED");
 
     /**
-     * A special message object which is emitted with a {@link IoHandler#messageReceived(IoSession, Object)}
+     * A special services object which is emitted with a {@link IoHandler#messageReceived(IoSession, Object)}
      * event when the session is not secure anymore and its {@link #USE_NOTIFICATION}
      * attribute is set.
      */
@@ -226,7 +226,7 @@ public class SslFilter extends IoFilterAdapter {
     /**
      * Returns <tt>true</tt> if and only if the specified <tt>session</tt> is
      * encrypted/decrypted over SSL/TLS currently.  This method will start
-     * to retun <tt>false</tt> after TLS <tt>close_notify</tt> message
+     * to retun <tt>false</tt> after TLS <tt>close_notify</tt> services
      * is sent and any messages written after then is not goinf to get encrypted.
      */
     public boolean isSslStarted(IoSession session) {
@@ -242,7 +242,7 @@ public class SslFilter extends IoFilterAdapter {
     }
 
     /**
-     * Stops the SSL session by sending TLS <tt>close_notify</tt> message to
+     * Stops the SSL session by sending TLS <tt>close_notify</tt> services to
      * initiate TLS closure.
      *
      * @param session the {@link IoSession} to initiate TLS closure
@@ -669,7 +669,7 @@ public class SslFilter extends IoFilterAdapter {
     }
 
     /**
-     * A message that is sent from {@link SslFilter} when the connection became
+     * A services that is sent from {@link SslFilter} when the connection became
      * secure or is not secure anymore.
      *
      * @author <a href="http://mina.apache.org">Apache MINA Project</a>

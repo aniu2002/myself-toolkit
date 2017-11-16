@@ -48,7 +48,7 @@ class RecoverableOdbcFailure extends Exception {
     }
     /**
      * This constructor purposefully means that both server-side and
-     * client-side message will be set to the specified message.
+     * client-side services will be set to the specified services.
      */
     public RecoverableOdbcFailure(String m) {
         super(m);
@@ -56,7 +56,7 @@ class RecoverableOdbcFailure extends Exception {
     }
     /**
      * This constructor purposefully means that both server-side and
-     * client-side message will be set to the specified message.
+     * client-side services will be set to the specified services.
      * <P><B>
      * Note:  The parameters DO NOT SPECIFY server-side and client-side
      * messages.  Use the 3-parameter constructor for that.

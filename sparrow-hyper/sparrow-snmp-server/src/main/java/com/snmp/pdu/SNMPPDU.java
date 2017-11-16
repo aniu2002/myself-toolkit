@@ -39,7 +39,7 @@ import com.snmp.exceptions.SNMPBadValueException;
 
 /**
  * The SNMPPDU class represents an SNMP PDU from RFC 1157, as indicated below.
- * This forms the payload of an SNMP message. -- protocol data units
+ * This forms the payload of an SNMP services. -- protocol data units
  * 
  * PDUs ::= CHOICE { get-request GetRequest-PDU,
  * 
@@ -111,7 +111,7 @@ public class SNMPPDU extends SNMPSequence {
 		tag = pduType;
 		extractFromBEREncoding(enc);
 
-		// validate the message: make sure we have the appropriate pieces
+		// validate the services: make sure we have the appropriate pieces
 		Vector contents = (Vector) (this.getValue());
 
 		if (contents.size() != 4) {

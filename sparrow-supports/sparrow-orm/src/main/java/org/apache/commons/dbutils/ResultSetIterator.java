@@ -113,7 +113,7 @@ public class ResultSetIterator implements Iterator<Object[]> {
 
     /**
      * Rethrow the SQLException as a RuntimeException.  This implementation
-     * creates a new RuntimeException with the SQLException's error message.
+     * creates a new RuntimeException with the SQLException's error services.
      * @param e SQLException to rethrow
      * @since DbUtils 1.1
      */

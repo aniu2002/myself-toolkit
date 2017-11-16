@@ -505,7 +505,7 @@ public class JdbcUtil {
         } else if (Clob.class.equals(requiredType)) {
             value = rs.getClob(index);
         } else {
-            // Some unknown type desired -> rely on getData.
+            // Some unknown type desired -> rely on getObject.
             value = getResultSetValue(rs, index);
         }
 

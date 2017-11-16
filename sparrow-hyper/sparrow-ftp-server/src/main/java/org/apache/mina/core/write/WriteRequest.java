@@ -43,7 +43,7 @@ public interface WriteRequest {
     WriteFuture getFuture();
     
     /**
-     * Returns a message object to be written.
+     * Returns a services object to be written.
      */
     Object getMessage();
 

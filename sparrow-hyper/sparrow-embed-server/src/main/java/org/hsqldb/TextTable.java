@@ -277,7 +277,7 @@ public class TextTable extends org.hsqldb.Table {
 
     /**
      * Used by INSERT, DELETE, UPDATE operations. This class will return
-     * a more appropriate message when there is no data source.
+     * a more appropriate services when there is no data source.
      */
     void checkDataReadOnly() {
 

@@ -39,7 +39,7 @@ import org.hsqldb.resources.BundleHandler;
 // method rorganised to use new HsqlServerProperties class
 // unsaved@users 20021113 - patch 1.7.2 - SSL support
 // boucherb@users 20030510 - patch 1.7.2 - SSL support moved to factory interface
-// boucherb@users 20030510 - patch 1.7.2 - moved all common code to Server
+// boucherb@users 20030510 - patch 1.7.2 - moved all zk code to Server
 // boucherb@users 20030510 - patch 1.7.2 - general lint removal
 
 /**
@@ -74,7 +74,7 @@ import org.hsqldb.resources.BundleHandler;
  * +-----------------+-------------+----------+------------------------------+
  * |    OPTION       |    TYPE     | DEFAULT  |         DESCRIPTION          |
  * +-----------------+-------------+----------+------------------------------|
- * | --help          |             |          | prints this message          |
+ * | --help          |             |          | prints this services          |
  * | --address       | name|number | any      | server inet address          |
  * | --port          | number      | 80       | port at which server listens |
  * | --database.i    | [type]spec  | 0=test   | path of database i           |

@@ -103,7 +103,7 @@ public class MKD extends AbstractCommand {
             session.write(LocalizedFtpReply.translate(session, request, context,
                     FtpReply.REPLY_257_PATHNAME_CREATED, "MKD", fileName));
 
-            // write log message
+            // write log services
             String userName = session.getUser().getName();
             LOG.info("Directory create : " + userName + " - " + fileName);
 

@@ -4,13 +4,10 @@ import org.apache.commons.lang3.StringUtils;
 
 import java.io.*;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public class FileIOUtil {
     public static final String DEFAULT_ENCODING = "UTF-8";
-    public static final String LINE_SEPARATOR = System.getProperty(
-            "line.separator", "\r\n");
 
     public static InputStream getFileInputStream(String filename) {
         if (StringUtils.isEmpty(filename))
@@ -36,6 +33,14 @@ public class FileIOUtil {
 
     }
 
+    public static String readFile(String fileName) {
+        return readFile(fileName, DEFAULT_ENCODING);
+    }
+
+    public static String readFile(File file) {
+        return readFile(file, DEFAULT_ENCODING);
+    }
+
     public static String readFile(String fileName, String encoding) {
         return readFile(new File(fileName), encoding);
     }
@@ -53,32 +58,24 @@ public class FileIOUtil {
     }
 
     public static List<String> readLines(String fileName) {
-        BufferedReader fr = null;
+        List<String> lines = new ArrayList<String>();
+        BufferedReader br = null;
         try {
-            fr = getBufferedReader(getFileInputStream(fileName), DEFAULT_ENCODING);
-            if (fr == null) {
-                return Collections.emptyList();
-            }
-            List<String> buf = new ArrayList<String>();
-            String line;
-            while ((line = fr.readLine()) != null) {
-                if (StringUtils.isEmpty(line))
-                    continue;
-                buf.add(line);
-            }
-            return buf;
+            br = getBufferedReader(getFileInputStream(fileName), DEFAULT_ENCODING);
+            while (br.ready())
+                lines.add(br.readLine());
         } catch (IOException e) {
-            e.printStackTrace();
+            throw new RuntimeException(e.getMessage());
         } finally {
             try {
-                if (fr != null) {
-                    fr.close();
+                if (br != null) {
+                    br.close();
                 }
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
-        return Collections.emptyList();
+        return lines;
     }
 
     public static String readString(String fileName) {
@@ -151,6 +148,11 @@ public class FileIOUtil {
 
     public static void writeFile(String fileName, String content, String encode) {
         writeFile(new File(fileName), content, encode);
+    }
+
+
+    public static void writeFile(File file, String content) {
+        writeFile(file, content, DEFAULT_ENCODING);
     }
 
     public static void writeFile(File file, String content, String encode) {

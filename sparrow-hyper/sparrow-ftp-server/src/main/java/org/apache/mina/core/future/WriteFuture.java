@@ -27,11 +27,11 @@ package org.apache.mina.core.future;
  * <pre>
  * IoSession session = ...;
  * WriteFuture future = session.write(...);
- * // Wait until the message is completely written out to the O/S buffer.
+ * // Wait until the services is completely written out to the O/S buffer.
  * future.join();
  * if( future.isWritten() )
  * {
- *     // The message has been written successfully.
+ *     // The services has been written successfully.
  * }
  * else
  * {
@@ -56,7 +56,7 @@ public interface WriteFuture extends IoFuture {
     Throwable getException();
 
     /**
-     * Sets the message is written, and notifies all threads waiting for
+     * Sets the services is written, and notifies all threads waiting for
      * this future.  This method is invoked by MINA internally.  Please do
      * not call this method directly.
      */

@@ -108,10 +108,10 @@ public class LoggingFilter extends IoFilterAdapter {
     
     /**
      * Log if the logger and the current event log level are compatible. We log
-     * a message and an exception.
+     * a services and an exception.
      * 
      * @param eventLevel the event log level as requested by the user
-     * @param message the message to log
+     * @param message the services to log
      * @param cause the exception cause to log
      */
     private void log(LogLevel eventLevel, String message, Throwable cause) {
@@ -127,11 +127,11 @@ public class LoggingFilter extends IoFilterAdapter {
 
     /**
      * Log if the logger and the current event log level are compatible. We log
-     * a formated message and its parameters. 
+     * a formated services and its parameters.
      * 
      * @param eventLevel the event log level as requested by the user
-     * @param message the formated message to log
-     * @param param the parameter injected into the message
+     * @param message the formated services to log
+     * @param param the parameter injected into the services
      */
     private void log(LogLevel eventLevel, String message, Object param) {
         switch (eventLevel) {
@@ -146,10 +146,10 @@ public class LoggingFilter extends IoFilterAdapter {
 
     /**
      * Log if the logger and the current event log level are compatible. We log
-     * a simple message. 
+     * a simple services.
      * 
      * @param eventLevel the event log level as requested by the user
-     * @param message the message to log
+     * @param message the services to log
      */
     private void log(LogLevel eventLevel, String message) {
         switch (eventLevel) {

@@ -454,7 +454,7 @@ public class ArrayUtil {
      *
      * @param arra int[]; first column indexes
      * @param arrb int[]; second column indexes
-     * @return int[] common indexes or <code>null</code> if there is no overlap.
+     * @return int[] zk indexes or <code>null</code> if there is no overlap.
      */
     public static int[] commonElements(int[] arra, int[] arrb) {
 
@@ -909,7 +909,7 @@ public class ArrayUtil {
     }
 
     /**
-     * Byte arrays source and dest each begin at an offset in the common space.
+     * Byte arrays source and dest each begin at an offset in the zk space.
      * If there is an overlap between dest and the first length elements of
      * the source, the overlapping elements are copied to dest. Returns count
      * of copied bytes.

@@ -46,7 +46,7 @@ import org.apache.mina.core.session.IoSession;
  * }
  *
  * public class MyHandlderCommand implements IoHandlerCommand {
- *   public void execute( NextCommand next, IoSession session, Object message ) throws Exception {
+ *   public void execute( NextCommand next, IoSession session, Object services ) throws Exception {
  *     MyContext ctx = session.getAttribute( "mycontext" );
  *     ...
  *   }
@@ -68,7 +68,7 @@ public interface IoHandlerCommand {
      *             provides a way to forward the request to the next {@link IoHandlerCommand}.
      * @param session the {@link IoSession} which is associated with
      *                this request
-     * @param message the message object of this request
+     * @param message the services object of this request
      *
      * @exception Exception general purpose exception return
      *                      to indicate abnormal termination

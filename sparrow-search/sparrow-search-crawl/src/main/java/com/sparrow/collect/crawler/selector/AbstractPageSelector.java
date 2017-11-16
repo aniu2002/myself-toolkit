@@ -1,16 +1,13 @@
 package com.sparrow.collect.crawler.selector;
 
-import com.sparrow.collect.crawler.data.EntryData;
-import com.sparrow.collect.crawler.dom.CrawlerDom;
-import com.sparrow.collect.crawler.dom.CrawlerNode;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import java.util.ArrayList;
 import java.util.List;
 
+import com.sparrow.collect.crawler.data.EntryData;
+import com.sparrow.collect.crawler.dom.CrawlerDom;
+import com.sparrow.collect.crawler.dom.CrawlerNode;
+
 public abstract class AbstractPageSelector implements IPageSelector {
-    static final Logger logger = LoggerFactory.getLogger(AbstractPageSelector.class);
     protected String pageItemSelectExpress;
     protected String urlSelectExpress;
     protected String nameSelectExpress;
@@ -47,10 +44,8 @@ public abstract class AbstractPageSelector implements IPageSelector {
         for (CrawlerNode node : nodes) {
             String url = node.attr(this.getUrlSelectExpress());
             String title = node.text();
-            if (this.ignore(url, title)) {
-                logger.warn("Ignore url : {}", url);
+            if (this.ignore(url, title))
                 continue;
-            }
             EntryData entryData = new EntryData();
             entryData.setTitle(title);
             entryData.setUrl(url);

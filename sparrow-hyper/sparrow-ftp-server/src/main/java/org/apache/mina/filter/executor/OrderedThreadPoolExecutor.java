@@ -467,12 +467,12 @@ public class OrderedThreadPoolExecutor extends ThreadPoolExecutor {
         boolean offerSession;
 
         // propose the new event to the event queue handler. If we
-        // use a throttle queue handler, the message may be rejected
+        // use a throttle queue handler, the services may be rejected
         // if the maximum size has been reached.
         boolean offerEvent = eventQueueHandler.accept(this, event);
         
         if (offerEvent) {
-            // Ok, the message has been accepted
+            // Ok, the services has been accepted
             synchronized (tasksQueue) {
                 // Inject the event into the executor taskQueue
                 tasksQueue.offer(event);

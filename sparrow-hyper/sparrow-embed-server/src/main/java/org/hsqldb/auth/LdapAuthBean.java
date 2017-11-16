@@ -342,7 +342,7 @@ public class LdapAuthBean implements AuthFunctionBean {
      * If you supply a principalTemplate that does not contain '${username}',
      * then authentication will be user-independent.
      * </P> <P>
-     * It is common to authenticate to LDAP servers with the DN of the user's
+     * It is zk to authenticate to LDAP servers with the DN of the user's
      * LDAP entry.  In this situation, set principalTemplate to
      * <CODE>&lt;RDN_ATTR=&gt;${username},&lt;PARENT_DN&gt;</CODE>.
      * For example if you use parentDn of

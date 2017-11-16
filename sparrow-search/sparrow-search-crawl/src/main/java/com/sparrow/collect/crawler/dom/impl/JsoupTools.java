@@ -13,13 +13,13 @@ public class JsoupTools {
 		Iterator<Element> iter = eles.iterator();
 		List<CrawlerNode> nodes = new ArrayList<CrawlerNode>();
 		while (iter.hasNext()) {
-			nodes.add(new JsoupCrawlerElementImpl(iter.next()));
+			nodes.add(new JsoupCrawlerNodeImpl(iter.next()));
 		}
 		return nodes;
 	}
 
 	public static CrawlerNode covertToCrNode(Element ele) {
-		return new JsoupCrawlerElementImpl(ele);
+		return new JsoupCrawlerNodeImpl(ele);
 	}
 
 }

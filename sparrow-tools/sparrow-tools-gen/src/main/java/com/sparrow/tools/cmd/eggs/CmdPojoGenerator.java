@@ -151,14 +151,10 @@ public class CmdPojoGenerator {
         }
         this.testIfNull(this.property, "jdbc配置文件-" + this.jdbcConfig);
         this.generator = new AliasGenerator(this.property, this.log);
-        if (this.property != null) {
-            String tmp = this.property.getProperty("map.table.filter");
-            if (StringUtils.isNotEmpty(tmp))
-                this.tableFilter = tmp;
-            tmp = this.property.getProperty("exclude.filter");
-            if (StringUtils.isNotEmpty(tmp))
-                this.excludeFilter = tmp;
-        }
+        if (this.tableFilter == null && this.property != null)
+            this.tableFilter = this.property.getProperty("map.table.filter");
+        if (this.excludeFilter == null && this.property != null)
+            this.excludeFilter = this.property.getProperty("exclude.filter");
         String regex = createRegexString(this.tableFilter);
         this.log.info(" -- Table filter : " + regex);
         this.pattern = StringUtils.isEmpty(regex) ? null : Pattern

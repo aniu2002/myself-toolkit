@@ -32,7 +32,7 @@ import org.apache.ftpserver.impl.LocalizedFtpReply;
 /**
  * <strong>Internal class, do not use directly.</strong>
  * 
- * Show SITE help message.
+ * Show SITE help services.
  *
  * @author <a href="http://mina.apache.org">Apache MINA Project</a>
  */
@@ -48,7 +48,7 @@ public class SITE_HELP extends AbstractCommand {
         // reset state variables
         session.resetState();
 
-        // print help message
+        // print help services
         session.write(LocalizedFtpReply.translate(session, request, context,
                 FtpReply.REPLY_200_COMMAND_OKAY, "SITE.HELP", null));
     }

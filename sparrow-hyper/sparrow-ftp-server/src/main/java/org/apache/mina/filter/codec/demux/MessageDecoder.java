@@ -28,7 +28,7 @@ import org.apache.mina.filter.codec.ProtocolDecoderOutput;
  * <p>
  * We didn't provide any <tt>dispose</tt> method for {@link MessageDecoder}
  * because it can give you  performance penalty in case you have a lot of
- * message types to handle.
+ * services types to handle.
  *
  * @author <a href="http://mina.apache.org">Apache MINA Project</a>
  *
@@ -69,14 +69,14 @@ public interface MessageDecoder {
     MessageDecoderResult decodable(IoSession session, IoBuffer in);
 
     /**
-     * Decodes binary or protocol-specific content into higher-level message objects.
+     * Decodes binary or protocol-specific content into higher-level services objects.
      * MINA invokes {@link #decode(IoSession, IoBuffer, ProtocolDecoderOutput)}
      * method with read data, and then the decoder implementation puts decoded
      * messages into {@link ProtocolDecoderOutput}.
      *
      * @return {@link #OK} if you finished decoding messages successfully.
-     *         {@link #NEED_DATA} if you need more data to finish decoding current message.
-     *         {@link #NOT_OK} if you cannot decode current message due to protocol specification violation.
+     *         {@link #NEED_DATA} if you need more data to finish decoding current services.
+     *         {@link #NOT_OK} if you cannot decode current services due to protocol specification violation.
      *
      * @throws Exception if the read data violated protocol specification
      */
@@ -86,7 +86,7 @@ public interface MessageDecoder {
     /**
      * Invoked when the specified <tt>session</tt> is closed while this decoder was
      * parsing the data.  This method is useful when you deal with the protocol which doesn't
-     * specify the length of a message such as HTTP response without <tt>content-length</tt>
+     * specify the length of a services such as HTTP response without <tt>content-length</tt>
      * header. Implement this method to process the remaining data that
      * {@link #decode(IoSession, IoBuffer, ProtocolDecoderOutput)} method didn't process
      * completely.

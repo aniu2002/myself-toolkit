@@ -1,8 +1,8 @@
 package ${daoImplPackage};
 
 import java.util.List;
-import com.sparrow.service.annotation.Repository;
-import com.sparrow.orm.page.PageResult;
+import com.sparrow.core.service.annotation.BeanEntity;
+import com.sparrow.core.orm.page.PageResult;
 
 <#if (pojoIdType??)>import ${pojoIdType};</#if>
 import ${packageName}.${pojoDaoName};
@@ -17,7 +17,7 @@ import ${pojoClass};
  * @version ${version?if_exists} 
  * date: ${dateTime?if_exists}
  */
-@Repository(lazy = true, value = "${simplePojoDaoName}")
+@BeanEntity(lazy = true, value = "${simplePojoDaoName}")
 public class ${pojoDaoName}Impl extends ${parentDao} implements ${pojoDaoName} {
 
 	/**

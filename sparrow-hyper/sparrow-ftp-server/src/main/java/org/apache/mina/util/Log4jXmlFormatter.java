@@ -113,11 +113,11 @@ public class Log4jXmlFormatter extends Formatter {
         buf.append(String.valueOf(record.getThreadID()));
         buf.append("\">\r\n");
 
-        buf.append("<log4j:message><![CDATA[");
-        // Append the rendered message. Also make sure to escape any
+        buf.append("<log4j:services><![CDATA[");
+        // Append the rendered services. Also make sure to escape any
         // existing CDATA sections.
         Transform.appendEscapingCDATA(buf, record.getMessage());
-        buf.append("]]></log4j:message>\r\n");
+        buf.append("]]></log4j:services>\r\n");
 
         if (record.getThrown() != null) {
             String[] s = Transform.getThrowableStrRep(record.getThrown());

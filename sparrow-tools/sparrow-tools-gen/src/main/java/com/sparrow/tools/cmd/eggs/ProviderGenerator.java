@@ -247,7 +247,6 @@ public class ProviderGenerator {
         Map<String, Object> cc = new HashMap<String, Object>();
         cc.put("data", list);
         cc.put("pName", modulePak);
-        //cc.put("sources", sourceConfigs);
         cc.put("cName", "MetaInfo");
         File moduleFile = this.getConfigPath(basePath);
         XmdFreeMarker.getInstance().writeFile("provider", cc, moduleFile);

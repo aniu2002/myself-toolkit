@@ -10,7 +10,7 @@ import java.util.concurrent.TimeUnit;
 
 public class SiteCrawlerEx extends SiteCrawler {
 
-    private BlockingQueue<EntryData> queue = new LinkedBlockingQueue<EntryData>();
+    private BlockingQueue<EntryData> queue = new LinkedBlockingQueue<EntryData>(2000);
     private volatile boolean stopped = false;
 
     public SiteCrawlerEx(File rootDir) {
@@ -26,6 +26,15 @@ public class SiteCrawlerEx extends SiteCrawler {
         super.exec(siteEntry);
     }
 
+    public void execXl(final SiteEntry siteEntry) {
+        //this.addCrawlSeed(siteEntry);
+        super.exec(siteEntry);
+    }
+
+    protected void executeCrawl() {
+
+    }
+
     protected void executeCrawl(SiteEntry entry) {
         do {
             EntryData entryData = this.getCrawlSeed();
@@ -37,6 +46,7 @@ public class SiteCrawlerEx extends SiteCrawler {
     }
 
     public void addCrawlSeed(EntryData entry) {
+        logger.info(" --- Add crawl seed : {}", entry.getUrl());
         boolean flag = this.queue.offer(entry);
         if (!flag) {
             System.out.println(entry);
@@ -56,7 +66,7 @@ public class SiteCrawlerEx extends SiteCrawler {
     }
 
     public void crawlNextSeed(EntryData entryData) {
-        if (this.skipCrawlUrl(entryData.getUrl()))
+        if (this.ignoreEntry(entryData))
             return;
         this.addCrawlSeed(entryData);
     }

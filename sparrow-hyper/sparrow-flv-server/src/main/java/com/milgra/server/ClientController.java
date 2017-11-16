@@ -29,7 +29,7 @@ package com.milgra.server;
  * @author Milan Toth
  * @version 20080315
  * 
- * Tasks of Clientcontroller - Client initialization - Invoke and RTMP message
+ * Tasks of Clientcontroller - Client initialization - Invoke and RTMP services
  * flow control
  * 
  */
@@ -65,8 +65,8 @@ public class ClientController extends OProcess {
 	public Client client;
 	public IApplication application;
 
-	// closed - controller is closed
-	// accepted - controller is accepted
+	// closed - web is closed
+	// accepted - web is accepted
 
 	public boolean closed;
 	public boolean accepted;
@@ -92,8 +92,8 @@ public class ClientController extends OProcess {
 	public double bandIn = 0;
 	public double bandOut = 0;
 
-	// readStepClient - how much bytes to receive before next read message
-	// readStepServer - how much bytes to send before next read message from
+	// readStepClient - how much bytes to receive before next read services
+	// readStepServer - how much bytes to send before next read services from
 	// client
 
 	public int readStepClient;
@@ -102,7 +102,7 @@ public class ClientController extends OProcess {
 	// lastRead - last read bytes
 	// lastBand - last bandwidth
 	// lastPing - last ping send
-	// lastUpdate - last update message
+	// lastUpdate - last update services
 	// lastPingRead - last ping received
 
 	public long lastRead;
@@ -122,7 +122,7 @@ public class ClientController extends OProcess {
 	public EventListener invokeListener;
 	public EventListener statusListener;
 
-	// controller
+	// web
 
 	public SocketController socketController;
 	public StreamController streamController;
@@ -162,8 +162,8 @@ public class ClientController extends OProcess {
 		// id - generate unique identifier for client
 		// mode - default mode is passive
 		// counter - update time counter
-		// closed - controller not closed by default
-		// accepted - controller is not accepted yet
+		// closed - web not closed by default
+		// accepted - web is not accepted yet
 
 		id = globalId++;
 		mode = "passive";
@@ -215,7 +215,7 @@ public class ClientController extends OProcess {
 	}
 
 	/**
-	 * Connects controller to an opened socket passed by ServerSocketConnector
+	 * Connects web to an opened socket passed by ServerSocketConnector
 	 * 
 	 * @param socketX
 	 */
@@ -234,7 +234,7 @@ public class ClientController extends OProcess {
 	}
 
 	/**
-	 * Connects controller to a remote server with a simple argument
+	 * Connects web to a remote server with a simple argument
 	 * 
 	 * @param urlX
 	 *            remote server's url
@@ -252,7 +252,7 @@ public class ClientController extends OProcess {
 	}
 
 	/**
-	 * Connects controller to a remote server with wrapperlist argument
+	 * Connects web to a remote server with wrapperlist argument
 	 * 
 	 * @param urlX
 	 *            remote server's url
@@ -276,8 +276,8 @@ public class ClientController extends OProcess {
 			String appid = url.split("/")[1];
 
 			// invokeChannel - new inckeChannel
-			// info - invoke info message
-			// message - invoke rtmp packet
+			// info - invoke info services
+			// services - invoke rtmp packet
 
 			double invokeChannel = incomingInvokes.size();
 			WrapperMap info = new WrapperMap(Library.CONNECTKEYS,
@@ -290,14 +290,14 @@ public class ClientController extends OProcess {
 			info.put("app", appid);
 			info.put("tcUrl", urlX);
 
-			// message creation, no null needed after invokechannel at connect
+			// services creation, no null needed after invokechannel at connect
 
 			arguments.add(new Wrapper("connect"));
 			arguments.add(new Wrapper(invokeChannel));
 			arguments.add(new Wrapper(info));
 			arguments.addAll(argumentsX);
 
-			// rtmp message
+			// rtmp services
 
 			message.bodyType = 0x14;
 			message.rtmpChannel = 0x03;
@@ -337,7 +337,7 @@ public class ClientController extends OProcess {
 		if (statusListener != null)
 			statusListener.onEvent(new StatusEvent(info, client));
 
-		// close controller
+		// close web
 
 		close();
 
@@ -442,7 +442,7 @@ public class ClientController extends OProcess {
 				exception.printStackTrace();
 			}
 		}
-		// update rtmp message every one second
+		// update rtmp services every one second
 		if (++counter > stepRound) {
 			update();
 			counter = 0;
@@ -605,7 +605,7 @@ public class ClientController extends OProcess {
 	}
 
 	/**
-	 * Sends a ping message
+	 * Sends a ping services
 	 * 
 	 * @param typeX
 	 *            type of ping
@@ -653,7 +653,7 @@ public class ClientController extends OProcess {
 
 		switch (type) {
 		// stream buffer length, sending it to router, and sending buffer clear
-		// ping message
+		// ping services
 		// part1 is the flv channel this case
 		case 3:
 			streamController.setBufferLength(part1, part2);
@@ -1058,7 +1058,7 @@ public class ClientController extends OProcess {
 	}
 
 	/**
-	 * Status message from client
+	 * Status services from client
 	 * 
 	 * @param argumentsX
 	 *            arguments info
@@ -1117,19 +1117,19 @@ public class ClientController extends OProcess {
 		char[] chars = new char[(int) size];
 		value = new String(chars);
 
-		// create message
+		// create services
 
 		WrapperMap message = new WrapperMap();
 		message.put("read", read);
 		message.put("send", System.currentTimeMillis());
 		message.put("value", value);
 
-		// System.out.println( "read: " + (long)message.getDouble( "read" ) );
-		// System.out.println( "send: " + (long)message.getDouble( "send" ) );
-		// System.out.println( "value: " + message.getString( "value" ).length(
+		// System.out.println( "read: " + (long)services.getDouble( "read" ) );
+		// System.out.println( "send: " + (long)services.getDouble( "send" ) );
+		// System.out.println( "value: " + services.getString( "value" ).length(
 		// ) );
 
-		// send back message with values
+		// send back services with values
 
 		invoke("_result", channel, 0, new WrapperList(new Wrapper(message)));
 

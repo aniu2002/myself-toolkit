@@ -488,7 +488,7 @@ public class JDBCClob implements Clob {
 
         if (!m_createdByConnection) {
 
-            /** @todo - better error message */
+            /** @todo - better error services */
             throw Util.notSupported();
         }
 
@@ -614,7 +614,7 @@ public class JDBCClob implements Clob {
 
         if (!m_createdByConnection) {
 
-            /** @todo - Better error message */
+            /** @todo - Better error services */
             throw Util.notSupported();
         }
         checkClosed();
@@ -714,7 +714,7 @@ public class JDBCClob implements Clob {
 
         if (!m_createdByConnection) {
 
-            /** @todo - better error message */
+            /** @todo - better error services */
             throw Util.notSupported();
         }
         checkClosed();

@@ -1,0 +1,285 @@
+{
+  "dynamic": true,
+  "properties": {
+    "asserter": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "reference": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "_a": {
+          "type": "string",
+          "index": "not_analyzed"
+        }
+      }
+    },
+    "body-site": {
+      "properties": {
+        "system": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "value": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "_a": {
+          "type": "string",
+          "index": "not_analyzed"
+        }
+      }
+    },
+    "category": {
+      "properties": {
+        "system": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "value": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "_a": {
+          "type": "string",
+          "index": "not_analyzed"
+        }
+      }
+    },
+    "clinicalstatus": {
+      "properties": {
+        "system": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "value": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "_a": {
+          "type": "string",
+          "index": "not_analyzed"
+        }
+      }
+    },
+    "code": {
+      "properties": {
+        "system": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "value": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "_a": {
+          "type": "string",
+          "index": "not_analyzed"
+        }
+      }
+    },
+    "date-recorded": {
+      "type": "object",
+      "properties": {
+        "low": {
+          "type": "long",
+          "index": "not_analyzed"
+        },
+        "high": {
+          "type": "long",
+          "index": "not_analyzed"
+        }
+      }
+    },
+    "encounter": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "reference": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "_a": {
+          "type": "string",
+          "index": "not_analyzed"
+        }
+      }
+    },
+    "evidence": {
+      "properties": {
+        "system": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "value": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "_a": {
+          "type": "string",
+          "index": "not_analyzed"
+        }
+      }
+    },
+    "extension": {
+      "properties": {
+        "system": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "value": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "_a": {
+          "type": "string",
+          "index": "not_analyzed"
+        }
+      }
+    },
+    "identifier": {
+      "properties": {
+        "system": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "value": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "_a": {
+          "type": "string",
+          "index": "not_analyzed"
+        }
+      }
+    },
+    "onset": {
+      "type": "object",
+      "properties": {
+        "low": {
+          "type": "long",
+          "index": "not_analyzed"
+        },
+        "high": {
+          "type": "long",
+          "index": "not_analyzed"
+        }
+      }
+    },
+    "onset-info": {
+      "type": "object",
+      "properties": {
+        "exact": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "normalized": {
+          "type": "string",
+          "index": "not_analyzed"
+        }
+      }
+    },
+    "patient": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "reference": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "_a": {
+          "type": "string",
+          "index": "not_analyzed"
+        }
+      }
+    },
+    "severity": {
+      "properties": {
+        "system": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "value": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "_a": {
+          "type": "string",
+          "index": "not_analyzed"
+        }
+      }
+    },
+    "stage": {
+      "properties": {
+        "system": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "value": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "_a": {
+          "type": "string",
+          "index": "not_analyzed"
+        }
+      }
+    },
+    "tags": {
+      "properties": {
+        "system": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "value": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "_a": {
+          "type": "string",
+          "index": "not_analyzed"
+        }
+      }
+    },
+    "_security": {
+      "properties": {
+        "system": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "value": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "_a": {
+          "type": "string",
+          "index": "not_analyzed"
+        }
+      }
+    },
+    "profile": {
+      "type": "string",
+      "index": "not_analyzed"
+    },
+    "txt": {
+      "type": "text",
+      "store": "no",
+      "analyzer": "standard",
+      "index": "analyzed"
+    },
+    "updated": {
+      "type": "long",
+      "index": "not_analyzed"
+    }
+  }
+}

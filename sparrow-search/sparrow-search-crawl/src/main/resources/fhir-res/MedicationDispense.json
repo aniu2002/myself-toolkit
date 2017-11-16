@@ -1,0 +1,3173 @@
+{
+  "resourceType" : "Bundle",
+  "id" : "cd361e11-524a-43c5-a6b9-e113f4ee051d",
+  "meta" : {
+    "lastUpdated" : "2017-05-11T17:57:33.076+08:00"
+  },
+  "type" : "searchset",
+  "total" : 3499,
+  "link" : [ {
+    "relation" : "self",
+    "url" : "http://10.10.15.38:8083/resources/MedicationDispense?_count=50"
+  }, {
+    "relation" : "next",
+    "url" : "http://10.10.15.38:8083/resources?_getpages=cc88b86f-e76a-427e-9ac6-82cd05200901&_getpagesoffset=50&_count=50&_bundletype=searchset"
+  } ],
+  "entry" : [ {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationDispense/2936535",
+    "resource" : {
+      "resourceType" : "MedicationDispense",
+      "id" : "2936535",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2017-04-25T10:49:47.319+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-agency",
+        "valueBoolean" : false
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-change",
+        "valueBoolean" : false
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/allocate-psid",
+        "valueReference" : {
+          "reference" : "Practitioner/238258"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/drug-psid",
+        "valueReference" : {
+          "reference" : "Practitioner/238258"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 43.2
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "3ml:300U"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "14"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 43.2
+      } ],
+      "identifier" : {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/medication-dispense-id",
+        "value" : "CF1704250204_1"
+      },
+      "medicationReference" : {
+        "reference" : "Medication/900702"
+      },
+      "patient" : {
+        "reference" : "Patient/957835"
+      },
+      "dispenser" : {
+        "reference" : "Practitioner/238258"
+      },
+      "quantity" : {
+        "value" : 4,
+        "unit" : "支"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 1,
+            "durationUnit" : "d"
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "401"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 0,
+          "unit" : "u"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationDispense/120755",
+    "resource" : {
+      "resourceType" : "MedicationDispense",
+      "id" : "120755",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-27T13:44:48.891+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/ch-id",
+        "valueReference" : {
+          "reference" : "Claim/120752"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-change",
+        "valueBoolean" : true
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 68.04
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "0.25g*48粒"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 34.02
+      } ],
+      "identifier" : {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/medication-dispense-id",
+        "value" : "CF1603280192_1"
+      },
+      "medicationReference" : {
+        "reference" : "Medication/120754"
+      },
+      "patient" : {
+        "reference" : "Patient/35202"
+      },
+      "quantity" : {
+        "value" : 2,
+        "unit" : "盒"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 1
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "1"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 4,
+          "unit" : "粒"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationDispense/210281",
+    "resource" : {
+      "resourceType" : "MedicationDispense",
+      "id" : "210281",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-07-19T01:13:45.411+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/ch-id",
+        "valueReference" : {
+          "reference" : "Claim/210280"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-change",
+        "valueBoolean" : true
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 22.5
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "0.1g*6袋"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 22.5
+      } ],
+      "identifier" : {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/medication-dispense-id",
+        "value" : "CF1607180536_1"
+      },
+      "medicationReference" : {
+        "reference" : "Medication/172417"
+      },
+      "patient" : {
+        "reference" : "Patient/35202"
+      },
+      "quantity" : {
+        "value" : 1,
+        "unit" : "盒"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 1
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "1"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 0.1,
+          "unit" : "g"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationDispense/210282",
+    "resource" : {
+      "resourceType" : "MedicationDispense",
+      "id" : "210282",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-07-19T01:13:50.528+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/ch-id",
+        "valueReference" : {
+          "reference" : "Claim/210280"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-change",
+        "valueBoolean" : true
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 24.3
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "100ml"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 24.3
+      } ],
+      "identifier" : {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/medication-dispense-id",
+        "value" : "CF1607180536_1"
+      },
+      "medicationReference" : {
+        "reference" : "Medication/171229"
+      },
+      "patient" : {
+        "reference" : "Patient/35202"
+      },
+      "quantity" : {
+        "value" : 1,
+        "unit" : "瓶"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 3
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "1"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 5,
+          "unit" : "ml"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationDispense/210283",
+    "resource" : {
+      "resourceType" : "MedicationDispense",
+      "id" : "210283",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-07-19T01:13:55.597+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/ch-id",
+        "valueReference" : {
+          "reference" : "Claim/210280"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-change",
+        "valueBoolean" : true
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 22.12
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "1.6g*16袋"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 22.12
+      } ],
+      "identifier" : {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/medication-dispense-id",
+        "value" : "CF1607180536_1"
+      },
+      "medicationReference" : {
+        "reference" : "Medication/171752"
+      },
+      "patient" : {
+        "reference" : "Patient/35202"
+      },
+      "quantity" : {
+        "value" : 1,
+        "unit" : "盒"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 3
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "1"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 1.6,
+          "unit" : "袋"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationDispense/210284",
+    "resource" : {
+      "resourceType" : "MedicationDispense",
+      "id" : "210284",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-07-19T01:14:00.560+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/ch-id",
+        "valueReference" : {
+          "reference" : "Claim/210280"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-change",
+        "valueBoolean" : true
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 48
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "2ml：1mg"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 16
+      } ],
+      "identifier" : {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/medication-dispense-id",
+        "value" : "CF1607180536_1"
+      },
+      "medicationReference" : {
+        "reference" : "Medication/171980"
+      },
+      "patient" : {
+        "reference" : "Patient/35202"
+      },
+      "quantity" : {
+        "value" : 3,
+        "unit" : "支"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 1
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "5"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 1,
+          "unit" : "ml"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationDispense/210285",
+    "resource" : {
+      "resourceType" : "MedicationDispense",
+      "id" : "210285",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-07-19T01:14:05.420+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/ch-id",
+        "valueReference" : {
+          "reference" : "Claim/210280"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-change",
+        "valueBoolean" : true
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 16.43
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "2.5ml"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 5.478
+      } ],
+      "identifier" : {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/medication-dispense-id",
+        "value" : "CF1607180536_1"
+      },
+      "medicationReference" : {
+        "reference" : "Medication/172358"
+      },
+      "patient" : {
+        "reference" : "Patient/35202"
+      },
+      "quantity" : {
+        "value" : 3,
+        "unit" : "支"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 1
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "5"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 2.5,
+          "unit" : "ml"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationDispense/219744",
+    "resource" : {
+      "resourceType" : "MedicationDispense",
+      "id" : "219744",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-07-24T16:18:01.706+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/ch-id",
+        "valueReference" : {
+          "reference" : "Claim/219728"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-change",
+        "valueBoolean" : true
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 12
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "0.2g*6片"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 6
+      } ],
+      "identifier" : {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/medication-dispense-id",
+        "value" : "CF1607240336_1"
+      },
+      "medicationReference" : {
+        "reference" : "Medication/172062"
+      },
+      "patient" : {
+        "reference" : "Patient/40802"
+      },
+      "quantity" : {
+        "value" : 2,
+        "unit" : "盒"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 1
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "1"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 0.2,
+          "unit" : "g"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationDispense/219745",
+    "resource" : {
+      "resourceType" : "MedicationDispense",
+      "id" : "219745",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-07-24T16:18:01.970+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/ch-id",
+        "valueReference" : {
+          "reference" : "Claim/219728"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-change",
+        "valueBoolean" : true
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 76.06
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "0.5g*36粒"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 38.03
+      } ],
+      "identifier" : {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/medication-dispense-id",
+        "value" : "CF1607240336_1"
+      },
+      "medicationReference" : {
+        "reference" : "Medication/171810"
+      },
+      "patient" : {
+        "reference" : "Patient/40802"
+      },
+      "quantity" : {
+        "value" : 2,
+        "unit" : "盒"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 1
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "1"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 4,
+          "unit" : "粒"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationDispense/851465",
+    "resource" : {
+      "resourceType" : "MedicationDispense",
+      "id" : "851465",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-09-02T09:13:35.451+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-agency",
+        "valueBoolean" : false
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-change",
+        "valueBoolean" : false
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 47.25
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "35ml"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "003"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 47.25
+      } ],
+      "identifier" : {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/medication-dispense-id",
+        "value" : "CF1609020101_0"
+      },
+      "medicationReference" : {
+        "reference" : "Medication/692556"
+      },
+      "patient" : {
+        "reference" : "Patient/851330"
+      },
+      "quantity" : {
+        "value" : 1,
+        "unit" : "瓶"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 1
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "699"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 35,
+          "unit" : "ml"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationDispense/851530",
+    "resource" : {
+      "resourceType" : "MedicationDispense",
+      "id" : "851530",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-09-02T09:14:59.913+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-agency",
+        "valueBoolean" : false
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-change",
+        "valueBoolean" : false
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 542.5
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "50mg*24片"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "003"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 54.25
+      } ],
+      "identifier" : {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/medication-dispense-id",
+        "value" : "CF1609020113_0"
+      },
+      "medicationReference" : {
+        "reference" : "Medication/691609"
+      },
+      "patient" : {
+        "reference" : "Patient/851440"
+      },
+      "quantity" : {
+        "value" : 10,
+        "unit" : "盒"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 1
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "1"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 50,
+          "unit" : "mg"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationDispense/851565",
+    "resource" : {
+      "resourceType" : "MedicationDispense",
+      "id" : "851565",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-09-02T09:16:16.111+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-agency",
+        "valueBoolean" : false
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-change",
+        "valueBoolean" : false
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 82.6
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "30mg*10片"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "009"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 8.26
+      } ],
+      "identifier" : {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/medication-dispense-id",
+        "value" : "CF1609020117_0"
+      },
+      "medicationReference" : {
+        "reference" : "Medication/691447"
+      },
+      "patient" : {
+        "reference" : "Patient/851422"
+      },
+      "quantity" : {
+        "value" : 10,
+        "unit" : "片"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 1
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "1"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 30,
+          "unit" : "mg"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationDispense/844210",
+    "resource" : {
+      "resourceType" : "MedicationDispense",
+      "id" : "844210",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-09-01T13:03:09.810+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-agency",
+        "valueBoolean" : false
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-change",
+        "valueBoolean" : false
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 21.39
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "50mg*12袋"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "002"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 21.39
+      } ],
+      "identifier" : {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/medication-dispense-id",
+        "value" : "CF1609010282_0"
+      },
+      "medicationReference" : {
+        "reference" : "Medication/691423"
+      },
+      "patient" : {
+        "reference" : "Patient/844183"
+      },
+      "quantity" : {
+        "value" : 1,
+        "unit" : "盒"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 1
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "1"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 15,
+          "unit" : "mg"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationDispense/844211",
+    "resource" : {
+      "resourceType" : "MedicationDispense",
+      "id" : "844211",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-09-01T13:03:10.139+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-agency",
+        "valueBoolean" : false
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-change",
+        "valueBoolean" : false
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 33.98
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "500mg*15袋"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "002"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 33.98
+      } ],
+      "identifier" : {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/medication-dispense-id",
+        "value" : "CF1609010282_1"
+      },
+      "medicationReference" : {
+        "reference" : "Medication/691559"
+      },
+      "patient" : {
+        "reference" : "Patient/844183"
+      },
+      "quantity" : {
+        "value" : 1,
+        "unit" : "盒"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 1
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "1"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 1,
+          "unit" : "袋"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationDispense/843982",
+    "resource" : {
+      "resourceType" : "MedicationDispense",
+      "id" : "843982",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-09-01T11:53:32.111+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-agency",
+        "valueBoolean" : false
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-change",
+        "valueBoolean" : false
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 32.06
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "5g*15袋"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "003"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 32.06
+      } ],
+      "identifier" : {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/medication-dispense-id",
+        "value" : "CF1609010275_0"
+      },
+      "medicationReference" : {
+        "reference" : "Medication/692595"
+      },
+      "patient" : {
+        "reference" : "Patient/843785"
+      },
+      "quantity" : {
+        "value" : 1,
+        "unit" : "盒"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 1
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "1"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 5,
+          "unit" : "g"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationDispense/844010",
+    "resource" : {
+      "resourceType" : "MedicationDispense",
+      "id" : "844010",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-09-01T12:02:22.056+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-agency",
+        "valueBoolean" : false
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-change",
+        "valueBoolean" : false
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 0.32
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "0.2g*100片"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "001"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 0.0315
+      } ],
+      "identifier" : {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/medication-dispense-id",
+        "value" : "CF1609010277_0"
+      },
+      "medicationReference" : {
+        "reference" : "Medication/691394"
+      },
+      "patient" : {
+        "reference" : "Patient/843978"
+      },
+      "quantity" : {
+        "value" : 10,
+        "unit" : "片"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 1
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "605"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 0.4,
+          "unit" : "g"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationDispense/844011",
+    "resource" : {
+      "resourceType" : "MedicationDispense",
+      "id" : "844011",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-09-01T12:02:22.371+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-agency",
+        "valueBoolean" : false
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-change",
+        "valueBoolean" : false
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 25
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "2.7g*6粒"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "001"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 25
+      } ],
+      "identifier" : {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/medication-dispense-id",
+        "value" : "CF1609010277_1"
+      },
+      "medicationReference" : {
+        "reference" : "Medication/692029"
+      },
+      "patient" : {
+        "reference" : "Patient/843978"
+      },
+      "quantity" : {
+        "value" : 1,
+        "unit" : "盒"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 6
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "605"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 1,
+          "unit" : "粒"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationDispense/843989",
+    "resource" : {
+      "resourceType" : "MedicationDispense",
+      "id" : "843989",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-09-01T11:53:35.705+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-agency",
+        "valueBoolean" : false
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-change",
+        "valueBoolean" : false
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 0.63
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "0.2g*100片"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "001"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 0.0315
+      } ],
+      "identifier" : {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/medication-dispense-id",
+        "value" : "CF1609010276_0"
+      },
+      "medicationReference" : {
+        "reference" : "Medication/691394"
+      },
+      "patient" : {
+        "reference" : "Patient/843978"
+      },
+      "quantity" : {
+        "value" : 20,
+        "unit" : "片"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 10
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "605"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 0.4,
+          "unit" : "g"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationDispense/843990",
+    "resource" : {
+      "resourceType" : "MedicationDispense",
+      "id" : "843990",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-09-01T11:53:35.999+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-agency",
+        "valueBoolean" : false
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-change",
+        "valueBoolean" : false
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 150
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "2.7g*6粒"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "001"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 25
+      } ],
+      "identifier" : {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/medication-dispense-id",
+        "value" : "CF1609010276_1"
+      },
+      "medicationReference" : {
+        "reference" : "Medication/692029"
+      },
+      "patient" : {
+        "reference" : "Patient/843978"
+      },
+      "quantity" : {
+        "value" : 6,
+        "unit" : "盒"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 6
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "605"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 1,
+          "unit" : "粒"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationDispense/843981",
+    "resource" : {
+      "resourceType" : "MedicationDispense",
+      "id" : "843981",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-09-01T11:53:31.591+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-agency",
+        "valueBoolean" : false
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-change",
+        "valueBoolean" : false
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 32.06
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "5g*15袋"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "003"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 32.06
+      } ],
+      "identifier" : {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/medication-dispense-id",
+        "value" : "CF1609010275_0"
+      },
+      "medicationReference" : {
+        "reference" : "Medication/692595"
+      },
+      "patient" : {
+        "reference" : "Patient/843785"
+      },
+      "quantity" : {
+        "value" : 1,
+        "unit" : "盒"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 1
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "1"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 5,
+          "unit" : "g"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationDispense/845834",
+    "resource" : {
+      "resourceType" : "MedicationDispense",
+      "id" : "845834",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-09-01T15:24:56.851+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-agency",
+        "valueBoolean" : false
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-change",
+        "valueBoolean" : false
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 56.52
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "3ml:300u"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "011"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 56.52
+      } ],
+      "identifier" : {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/medication-dispense-id",
+        "value" : "CF1609010373_0"
+      },
+      "medicationReference" : {
+        "reference" : "Medication/691599"
+      },
+      "patient" : {
+        "reference" : "Patient/845780"
+      },
+      "quantity" : {
+        "value" : 1,
+        "unit" : "支"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 1
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "401"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 5,
+          "unit" : "u"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationDispense/845924",
+    "resource" : {
+      "resourceType" : "MedicationDispense",
+      "id" : "845924",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-09-01T15:28:11.104+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-agency",
+        "valueBoolean" : false
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-change",
+        "valueBoolean" : false
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 21.49
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "次"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "002"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 0.2047
+      } ],
+      "identifier" : {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/medication-dispense-id",
+        "value" : "CF1609010379_1"
+      },
+      "medicationReference" : {
+        "reference" : "Medication/691235"
+      },
+      "patient" : {
+        "reference" : "Patient/845129"
+      },
+      "quantity" : {
+        "value" : 105,
+        "unit" : "g"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 7
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "9"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 15,
+          "unit" : "g"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationDispense/845925",
+    "resource" : {
+      "resourceType" : "MedicationDispense",
+      "id" : "845925",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-09-01T15:28:11.381+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-agency",
+        "valueBoolean" : false
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-change",
+        "valueBoolean" : false
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 13.52
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "次"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "002"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 0.0966
+      } ],
+      "identifier" : {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/medication-dispense-id",
+        "value" : "CF1609010379_2"
+      },
+      "medicationReference" : {
+        "reference" : "Medication/691010"
+      },
+      "patient" : {
+        "reference" : "Patient/845129"
+      },
+      "quantity" : {
+        "value" : 140,
+        "unit" : "g"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 7
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "9"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 20,
+          "unit" : "g"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationDispense/845926",
+    "resource" : {
+      "resourceType" : "MedicationDispense",
+      "id" : "845926",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-09-01T15:28:11.684+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-agency",
+        "valueBoolean" : false
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-change",
+        "valueBoolean" : false
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 6.12
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "次"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "002"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 0.1093
+      } ],
+      "identifier" : {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/medication-dispense-id",
+        "value" : "CF1609010379_3"
+      },
+      "medicationReference" : {
+        "reference" : "Medication/691193"
+      },
+      "patient" : {
+        "reference" : "Patient/845129"
+      },
+      "quantity" : {
+        "value" : 56,
+        "unit" : "g"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 7
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "9"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 8,
+          "unit" : "g"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationDispense/845927",
+    "resource" : {
+      "resourceType" : "MedicationDispense",
+      "id" : "845927",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-09-01T15:28:11.960+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-agency",
+        "valueBoolean" : false
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-change",
+        "valueBoolean" : false
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 4.19
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "次"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "002"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 0.0598
+      } ],
+      "identifier" : {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/medication-dispense-id",
+        "value" : "CF1609010379_4"
+      },
+      "medicationReference" : {
+        "reference" : "Medication/691277"
+      },
+      "patient" : {
+        "reference" : "Patient/845129"
+      },
+      "quantity" : {
+        "value" : 70,
+        "unit" : "g"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 7
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "9"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 10,
+          "unit" : "g"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationDispense/845928",
+    "resource" : {
+      "resourceType" : "MedicationDispense",
+      "id" : "845928",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-09-01T15:28:12.244+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-agency",
+        "valueBoolean" : false
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-change",
+        "valueBoolean" : false
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 13.65
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "次"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "002"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 0.13
+      } ],
+      "identifier" : {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/medication-dispense-id",
+        "value" : "CF1609010379_5"
+      },
+      "medicationReference" : {
+        "reference" : "Medication/691953"
+      },
+      "patient" : {
+        "reference" : "Patient/845129"
+      },
+      "quantity" : {
+        "value" : 105,
+        "unit" : "g"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 7
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "9"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 15,
+          "unit" : "g"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationDispense/845929",
+    "resource" : {
+      "resourceType" : "MedicationDispense",
+      "id" : "845929",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-09-01T15:28:12.520+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-agency",
+        "valueBoolean" : false
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-change",
+        "valueBoolean" : false
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 15.34
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "次"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "002"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 0.1461
+      } ],
+      "identifier" : {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/medication-dispense-id",
+        "value" : "CF1609010379_6"
+      },
+      "medicationReference" : {
+        "reference" : "Medication/691194"
+      },
+      "patient" : {
+        "reference" : "Patient/845129"
+      },
+      "quantity" : {
+        "value" : 105,
+        "unit" : "g"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 7
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "9"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 15,
+          "unit" : "g"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationDispense/845930",
+    "resource" : {
+      "resourceType" : "MedicationDispense",
+      "id" : "845930",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-09-01T15:28:12.830+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-agency",
+        "valueBoolean" : false
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-change",
+        "valueBoolean" : false
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 23.18
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "次"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "002"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 0.1656
+      } ],
+      "identifier" : {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/medication-dispense-id",
+        "value" : "CF1609010379_7"
+      },
+      "medicationReference" : {
+        "reference" : "Medication/692816"
+      },
+      "patient" : {
+        "reference" : "Patient/845129"
+      },
+      "quantity" : {
+        "value" : 140,
+        "unit" : "g"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 7
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "9"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 20,
+          "unit" : "g"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationDispense/845931",
+    "resource" : {
+      "resourceType" : "MedicationDispense",
+      "id" : "845931",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-09-01T15:28:13.115+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-agency",
+        "valueBoolean" : false
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-change",
+        "valueBoolean" : false
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 12.56
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "次"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "002"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 0.1794
+      } ],
+      "identifier" : {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/medication-dispense-id",
+        "value" : "CF1609010379_8"
+      },
+      "medicationReference" : {
+        "reference" : "Medication/691243"
+      },
+      "patient" : {
+        "reference" : "Patient/845129"
+      },
+      "quantity" : {
+        "value" : 70,
+        "unit" : "g"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 7
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "9"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 10,
+          "unit" : "g"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationDispense/845932",
+    "resource" : {
+      "resourceType" : "MedicationDispense",
+      "id" : "845932",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-09-01T15:28:13.404+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-agency",
+        "valueBoolean" : false
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-change",
+        "valueBoolean" : false
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 6.38
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "次"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "002"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 0.1139
+      } ],
+      "identifier" : {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/medication-dispense-id",
+        "value" : "CF1609010379_9"
+      },
+      "medicationReference" : {
+        "reference" : "Medication/691016"
+      },
+      "patient" : {
+        "reference" : "Patient/845129"
+      },
+      "quantity" : {
+        "value" : 56,
+        "unit" : "g"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 7
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "9"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 8,
+          "unit" : "g"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationDispense/845933",
+    "resource" : {
+      "resourceType" : "MedicationDispense",
+      "id" : "845933",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-09-01T15:28:13.705+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-agency",
+        "valueBoolean" : false
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-change",
+        "valueBoolean" : false
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 11.11
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "次"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "002"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 0.1587
+      } ],
+      "identifier" : {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/medication-dispense-id",
+        "value" : "CF1609010379_10"
+      },
+      "medicationReference" : {
+        "reference" : "Medication/691022"
+      },
+      "patient" : {
+        "reference" : "Patient/845129"
+      },
+      "quantity" : {
+        "value" : 70,
+        "unit" : "g"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 7
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "9"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 10,
+          "unit" : "g"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationDispense/845934",
+    "resource" : {
+      "resourceType" : "MedicationDispense",
+      "id" : "845934",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-09-01T15:28:13.988+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-agency",
+        "valueBoolean" : false
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-change",
+        "valueBoolean" : false
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 2.22
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "次"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "002"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 0.0633
+      } ],
+      "identifier" : {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/medication-dispense-id",
+        "value" : "CF1609010379_11"
+      },
+      "medicationReference" : {
+        "reference" : "Medication/691221"
+      },
+      "patient" : {
+        "reference" : "Patient/845129"
+      },
+      "quantity" : {
+        "value" : 35,
+        "unit" : "g"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 7
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "9"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 5,
+          "unit" : "g"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationDispense/845935",
+    "resource" : {
+      "resourceType" : "MedicationDispense",
+      "id" : "845935",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-09-01T15:28:14.287+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-agency",
+        "valueBoolean" : false
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-change",
+        "valueBoolean" : false
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 25.48
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "次"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "002"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 0.728
+      } ],
+      "identifier" : {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/medication-dispense-id",
+        "value" : "CF1609010379_12"
+      },
+      "medicationReference" : {
+        "reference" : "Medication/691129"
+      },
+      "patient" : {
+        "reference" : "Patient/845129"
+      },
+      "quantity" : {
+        "value" : 35,
+        "unit" : "g"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 7
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "9"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 5,
+          "unit" : "g"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationDispense/844090",
+    "resource" : {
+      "resourceType" : "MedicationDispense",
+      "id" : "844090",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-09-01T12:39:27.079+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-agency",
+        "valueBoolean" : false
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-change",
+        "valueBoolean" : false
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 0.23
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "0.1g*100片"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "036"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 0.0225
+      } ],
+      "identifier" : {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/medication-dispense-id",
+        "value" : "CF1609010279_0"
+      },
+      "medicationReference" : {
+        "reference" : "Medication/692981"
+      },
+      "patient" : {
+        "reference" : "Patient/844049"
+      },
+      "quantity" : {
+        "value" : 10,
+        "unit" : "片"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 1
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "1"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 0.2,
+          "unit" : "g"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationDispense/844091",
+    "resource" : {
+      "resourceType" : "MedicationDispense",
+      "id" : "844091",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-09-01T12:39:27.355+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-agency",
+        "valueBoolean" : false
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-change",
+        "valueBoolean" : false
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 19.3
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "0.1g*10片"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "002"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 19.3
+      } ],
+      "identifier" : {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/medication-dispense-id",
+        "value" : "CF1609010279_1"
+      },
+      "medicationReference" : {
+        "reference" : "Medication/692937"
+      },
+      "patient" : {
+        "reference" : "Patient/844049"
+      },
+      "quantity" : {
+        "value" : 1,
+        "unit" : "盒"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 1
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "1"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 0.1,
+          "unit" : "g"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationDispense/844092",
+    "resource" : {
+      "resourceType" : "MedicationDispense",
+      "id" : "844092",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-09-01T12:39:27.819+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-agency",
+        "valueBoolean" : false
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-change",
+        "valueBoolean" : false
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 69.22
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "4g*6袋"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "003"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 34.61
+      } ],
+      "identifier" : {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/medication-dispense-id",
+        "value" : "CF1609010279_3"
+      },
+      "medicationReference" : {
+        "reference" : "Medication/692055"
+      },
+      "patient" : {
+        "reference" : "Patient/844049"
+      },
+      "quantity" : {
+        "value" : 2,
+        "unit" : "盒"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 1
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "1"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 1,
+          "unit" : "袋"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationDispense/844592",
+    "resource" : {
+      "resourceType" : "MedicationDispense",
+      "id" : "844592",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-09-01T14:39:09.882+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-agency",
+        "valueBoolean" : false
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-change",
+        "valueBoolean" : false
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 28.01
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "次"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "002"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 0.4002
+      } ],
+      "identifier" : {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/medication-dispense-id",
+        "value" : "CF1609010290_1"
+      },
+      "medicationReference" : {
+        "reference" : "Medication/692529"
+      },
+      "patient" : {
+        "reference" : "Patient/844334"
+      },
+      "quantity" : {
+        "value" : 70,
+        "unit" : "g"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 7
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "9"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 10,
+          "unit" : "g"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationDispense/844594",
+    "resource" : {
+      "resourceType" : "MedicationDispense",
+      "id" : "844594",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-09-01T14:39:10.561+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-agency",
+        "valueBoolean" : false
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-change",
+        "valueBoolean" : false
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 8.54
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "次"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "002"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 0.061
+      } ],
+      "identifier" : {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/medication-dispense-id",
+        "value" : "CF1609010290_3"
+      },
+      "medicationReference" : {
+        "reference" : "Medication/691133"
+      },
+      "patient" : {
+        "reference" : "Patient/844334"
+      },
+      "quantity" : {
+        "value" : 140,
+        "unit" : "g"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 7
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "9"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 20,
+          "unit" : "g"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationDispense/844115",
+    "resource" : {
+      "resourceType" : "MedicationDispense",
+      "id" : "844115",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-09-01T12:42:04.129+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-agency",
+        "valueBoolean" : false
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-change",
+        "valueBoolean" : false
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 1
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "0.2g*50片"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "002"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 0.1
+      } ],
+      "identifier" : {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/medication-dispense-id",
+        "value" : "CF1609010280_0"
+      },
+      "medicationReference" : {
+        "reference" : "Medication/691993"
+      },
+      "patient" : {
+        "reference" : "Patient/844082"
+      },
+      "quantity" : {
+        "value" : 10,
+        "unit" : "片"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 1
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "1"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 0.2,
+          "unit" : "g"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationDispense/844116",
+    "resource" : {
+      "resourceType" : "MedicationDispense",
+      "id" : "844116",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-09-01T12:42:04.408+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-agency",
+        "valueBoolean" : false
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-change",
+        "valueBoolean" : false
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 21.39
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "50mg*12袋"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "002"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 21.39
+      } ],
+      "identifier" : {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/medication-dispense-id",
+        "value" : "CF1609010280_1"
+      },
+      "medicationReference" : {
+        "reference" : "Medication/691423"
+      },
+      "patient" : {
+        "reference" : "Patient/844082"
+      },
+      "quantity" : {
+        "value" : 1,
+        "unit" : "盒"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 1
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "1"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 50,
+          "unit" : "mg"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationDispense/844458",
+    "resource" : {
+      "resourceType" : "MedicationDispense",
+      "id" : "844458",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-09-01T14:30:38.474+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-agency",
+        "valueBoolean" : false
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-change",
+        "valueBoolean" : false
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 21.12
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "6g*12袋"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "002"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 0.88
+      } ],
+      "identifier" : {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/medication-dispense-id",
+        "value" : "CF1609010284_0"
+      },
+      "medicationReference" : {
+        "reference" : "Medication/691906"
+      },
+      "patient" : {
+        "reference" : "Patient/844020"
+      },
+      "quantity" : {
+        "value" : 24,
+        "unit" : "袋"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 1
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "1"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 1,
+          "unit" : "袋"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationDispense/844459",
+    "resource" : {
+      "resourceType" : "MedicationDispense",
+      "id" : "844459",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-09-01T14:30:38.755+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-agency",
+        "valueBoolean" : false
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-change",
+        "valueBoolean" : false
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 21.78
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "6g*12袋"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "002"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 0.9075
+      } ],
+      "identifier" : {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/medication-dispense-id",
+        "value" : "CF1609010284_1"
+      },
+      "medicationReference" : {
+        "reference" : "Medication/691942"
+      },
+      "patient" : {
+        "reference" : "Patient/844020"
+      },
+      "quantity" : {
+        "value" : 24,
+        "unit" : "袋"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 1
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "1"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 1,
+          "unit" : "袋"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationDispense/844471",
+    "resource" : {
+      "resourceType" : "MedicationDispense",
+      "id" : "844471",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-09-01T14:31:16.788+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-agency",
+        "valueBoolean" : false
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-change",
+        "valueBoolean" : false
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 22.88
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "0.3%*8ml"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "002"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 22.88
+      } ],
+      "identifier" : {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/medication-dispense-id",
+        "value" : "CF1609010286_1"
+      },
+      "medicationReference" : {
+        "reference" : "Medication/693017"
+      },
+      "patient" : {
+        "reference" : "Patient/841780"
+      },
+      "quantity" : {
+        "value" : 1,
+        "unit" : "支"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 3
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "609"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 1,
+          "unit" : "滴"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationDispense/844472",
+    "resource" : {
+      "resourceType" : "MedicationDispense",
+      "id" : "844472",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-09-01T14:31:17.079+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-agency",
+        "valueBoolean" : false
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-change",
+        "valueBoolean" : false
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 0.9
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "0.5%*2g"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "002"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 0.9
+      } ],
+      "identifier" : {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/medication-dispense-id",
+        "value" : "CF1609010286_2"
+      },
+      "medicationReference" : {
+        "reference" : "Medication/691683"
+      },
+      "patient" : {
+        "reference" : "Patient/841780"
+      },
+      "quantity" : {
+        "value" : 1,
+        "unit" : "支"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 3
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "6"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 0.1,
+          "unit" : "g"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationDispense/844473",
+    "resource" : {
+      "resourceType" : "MedicationDispense",
+      "id" : "844473",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-09-01T14:31:17.371+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-agency",
+        "valueBoolean" : false
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-change",
+        "valueBoolean" : false
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 30.5
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "0.1%5ml/400"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "002"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 30.5
+      } ],
+      "identifier" : {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/medication-dispense-id",
+        "value" : "CF1609010286_0"
+      },
+      "medicationReference" : {
+        "reference" : "Medication/692919"
+      },
+      "patient" : {
+        "reference" : "Patient/841780"
+      },
+      "quantity" : {
+        "value" : 1,
+        "unit" : "支"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 3
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "609"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 0.1,
+          "unit" : "ml"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationDispense/844593",
+    "resource" : {
+      "resourceType" : "MedicationDispense",
+      "id" : "844593",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-09-01T14:39:10.237+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-agency",
+        "valueBoolean" : false
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-change",
+        "valueBoolean" : false
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 23.92
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "次"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "002"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 0.1139
+      } ],
+      "identifier" : {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/medication-dispense-id",
+        "value" : "CF1609010290_2"
+      },
+      "medicationReference" : {
+        "reference" : "Medication/691016"
+      },
+      "patient" : {
+        "reference" : "Patient/844334"
+      },
+      "quantity" : {
+        "value" : 210,
+        "unit" : "g"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 7
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "9"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 30,
+          "unit" : "g"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationDispense/844595",
+    "resource" : {
+      "resourceType" : "MedicationDispense",
+      "id" : "844595",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-09-01T14:39:10.864+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-agency",
+        "valueBoolean" : false
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-change",
+        "valueBoolean" : false
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 19.57
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "次"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "002"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 0.0932
+      } ],
+      "identifier" : {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/medication-dispense-id",
+        "value" : "CF1609010290_4"
+      },
+      "medicationReference" : {
+        "reference" : "Medication/692973"
+      },
+      "patient" : {
+        "reference" : "Patient/844334"
+      },
+      "quantity" : {
+        "value" : 210,
+        "unit" : "g"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 7
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "9"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 30,
+          "unit" : "g"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationDispense/844596",
+    "resource" : {
+      "resourceType" : "MedicationDispense",
+      "id" : "844596",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-09-01T14:39:11.193+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-agency",
+        "valueBoolean" : false
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-change",
+        "valueBoolean" : false
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 14.09
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "次"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "002"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 0.2013
+      } ],
+      "identifier" : {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/medication-dispense-id",
+        "value" : "CF1609010290_5"
+      },
+      "medicationReference" : {
+        "reference" : "Medication/691196"
+      },
+      "patient" : {
+        "reference" : "Patient/844334"
+      },
+      "quantity" : {
+        "value" : 70,
+        "unit" : "g"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 7
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "9"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 10,
+          "unit" : "g"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationDispense/844597",
+    "resource" : {
+      "resourceType" : "MedicationDispense",
+      "id" : "844597",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-09-01T14:39:11.529+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-agency",
+        "valueBoolean" : false
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-change",
+        "valueBoolean" : false
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 4.91
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "次"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "002"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 0.0702
+      } ],
+      "identifier" : {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/medication-dispense-id",
+        "value" : "CF1609010290_6"
+      },
+      "medicationReference" : {
+        "reference" : "Medication/691040"
+      },
+      "patient" : {
+        "reference" : "Patient/844334"
+      },
+      "quantity" : {
+        "value" : 70,
+        "unit" : "g"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 7
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "9"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 10,
+          "unit" : "g"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationDispense/844598",
+    "resource" : {
+      "resourceType" : "MedicationDispense",
+      "id" : "844598",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-09-01T14:39:11.858+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-agency",
+        "valueBoolean" : false
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-change",
+        "valueBoolean" : false
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 19.48
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "次"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "002"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 0.2783
+      } ],
+      "identifier" : {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/medication-dispense-id",
+        "value" : "CF1609010290_7"
+      },
+      "medicationReference" : {
+        "reference" : "Medication/691049"
+      },
+      "patient" : {
+        "reference" : "Patient/844334"
+      },
+      "quantity" : {
+        "value" : 70,
+        "unit" : "g"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 7
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "9"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 10,
+          "unit" : "g"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  } ]
+}

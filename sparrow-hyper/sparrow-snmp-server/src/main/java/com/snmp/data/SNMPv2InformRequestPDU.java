@@ -40,7 +40,7 @@ import com.snmp.tools.SNMPBERCodec;
 
 /**
 *    The SNMPv2InformRequestPDU class represents an SNMPv2 Trap PDU from RFC 1448, as indicated below. This
-*    forms the payload of an SNMPv2 Inform Request message.
+*    forms the payload of an SNMPv2 Inform Request services.
 
 -- protocol data units
 
@@ -206,7 +206,7 @@ public class SNMPv2InformRequestPDU extends SNMPPDU
     {
         super(enc, SNMPBERCodec.SNMPv2INFORMREQUEST);
         
-        // validate the message: make sure the first two components of the varBindList
+        // validate the services: make sure the first two components of the varBindList
         // are the appropriate variable pairs
         SNMPSequence varBindList = this.getVarBindList();
         

@@ -1,8 +1,8 @@
 package ${servicePackName};
 
-import com.sparrow.orm.dao.simple.NormalDao;
-import com.sparrow.orm.session.simple.ConfigureSessionFactory;
-import com.sparrow.orm.template.simple.NormalOperateTemplate;
+import com.sparrow.core.orm.dao.simple.NormalDao;
+import com.sparrow.core.orm.session.SessionFactory;
+import com.sparrow.core.orm.template.simple.NormalOperateTemplate;
 
 <#if services??>
 <#list services as serv>
@@ -20,15 +20,13 @@ public class ServiceManager {
 </#list>
 </#if>
 	private ServiceManager() {
-        ConfigureSessionFactory sessionFactory = new ConfigureSessionFactory();
-        sessionFactory.setConfigFile("classpath:conf/jdbc.properties");
-        sessionFactory.setMapXml("classpath:eggs/mapConfig.xml");
-        NormalOperateTemplate operateTemplate = new NormalOperateTemplate();
+        SessionFactory sessionFactory=SessionFactory.configureFactory("classpath:conf/jdbc.properties");
+        NormalOperateTemplate operateTemplate=  new NormalOperateTemplate();
         operateTemplate.setSessionFactory(sessionFactory);
 
         this.baseDao = new NormalDao();
         this.baseDao.setOperateTemplate(operateTemplate);
-        this.baseDao.setSessionFactory(sessionFactory);
+        this.baseDao.setMapXml("classpath:conf/pojo.xml");
 
 <#if  servClasses??>
     <#list servClasses as servClass>

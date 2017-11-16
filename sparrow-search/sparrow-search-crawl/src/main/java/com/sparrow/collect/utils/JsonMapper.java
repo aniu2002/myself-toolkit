@@ -1,5 +1,6 @@
 package com.sparrow.collect.utils;
 
+import org.codehaus.jackson.JsonNode;
 import org.codehaus.jackson.map.DeserializationConfig;
 import org.codehaus.jackson.map.ObjectMapper;
 import org.codehaus.jackson.type.TypeReference;
@@ -17,6 +18,24 @@ public abstract class JsonMapper {
         mapper.configure(
                 DeserializationConfig.Feature.FAIL_ON_UNKNOWN_PROPERTIES, false);
         mapper.disable(DeserializationConfig.Feature.FAIL_ON_UNKNOWN_PROPERTIES);
+    }
+
+    public final static JsonNode jsonNode(String json) {
+        try {
+            return mapper.readTree(json);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public final static String node2String(JsonNode json) {
+        try {
+            return mapper.writerWithDefaultPrettyPrinter().writeValueAsString(json);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
     public final static <T> T bean(String json, Class<T> clz) {
@@ -41,7 +60,7 @@ public abstract class JsonMapper {
     }
 
     public final static String string(Object object) throws IOException {
-        return mapper.writeValueAsString(object);
+        return mapper.writerWithDefaultPrettyPrinter().writeValueAsString(object);
     }
 
     public final static byte[] bytes(Object object) throws IOException {

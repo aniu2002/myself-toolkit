@@ -37,7 +37,7 @@ public class Response {
         }
 
         if (message == null) {
-            throw new NullPointerException("message");
+            throw new NullPointerException("services");
         }
 
         if (type == null) {
@@ -91,6 +91,6 @@ public class Response {
     @Override
     public String toString() {
         return "response: { requestId=" + getRequest().getId() + ", type="
-                + getType() + ", message=" + getMessage() + " }";
+                + getType() + ", services=" + getMessage() + " }";
     }
 }

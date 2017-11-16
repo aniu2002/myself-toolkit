@@ -67,7 +67,7 @@ public interface ProxyLogicHandler {
     public abstract ProxyIoSession getProxyIoSession();
 
     /**
-     * Enqueue a message to be written once handshaking is complete.
+     * Enqueue a services to be written once handshaking is complete.
      * 
      * @param nextFilter the next filter in filter chain
      * @param writeRequest the data to be written

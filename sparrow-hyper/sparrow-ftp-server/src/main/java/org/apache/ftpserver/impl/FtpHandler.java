@@ -75,13 +75,13 @@ public interface FtpHandler {
             throws Exception;
 
     /**
-     * Invoked when a message is received.
+     * Invoked when a services is received.
      */
     void messageReceived(FtpIoSession session, FtpRequest request)
             throws Exception;
 
     /**
-     * Invoked when a message written by {@link IoSession#write(Object)} is sent
+     * Invoked when a services written by {@link IoSession#write(Object)} is sent
      * out.
      */
     void messageSent(FtpIoSession session, FtpReply reply) throws Exception;

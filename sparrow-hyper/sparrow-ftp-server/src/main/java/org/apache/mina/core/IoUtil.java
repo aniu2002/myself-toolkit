@@ -41,8 +41,8 @@ public class IoUtil {
     private static final IoSession[] EMPTY_SESSIONS = new IoSession[0];
 
     /**
-     * Writes the specified {@code message} to the specified {@code sessions}.
-     * If the specified {@code message} is an {@link IoBuffer}, the buffer is
+     * Writes the specified {@code services} to the specified {@code sessions}.
+     * If the specified {@code services} is an {@link IoBuffer}, the buffer is
      * automatically duplicated using {@link IoBuffer#duplicate()}.
      */
     public static List<WriteFuture> broadcast(Object message, Collection<IoSession> sessions) {
@@ -52,8 +52,8 @@ public class IoUtil {
     }
 
     /**
-     * Writes the specified {@code message} to the specified {@code sessions}.
-     * If the specified {@code message} is an {@link IoBuffer}, the buffer is
+     * Writes the specified {@code services} to the specified {@code sessions}.
+     * If the specified {@code services} is an {@link IoBuffer}, the buffer is
      * automatically duplicated using {@link IoBuffer#duplicate()}.
      */
     public static List<WriteFuture> broadcast(Object message, Iterable<IoSession> sessions) {
@@ -63,8 +63,8 @@ public class IoUtil {
     }
     
     /**
-     * Writes the specified {@code message} to the specified {@code sessions}.
-     * If the specified {@code message} is an {@link IoBuffer}, the buffer is
+     * Writes the specified {@code services} to the specified {@code sessions}.
+     * If the specified {@code services} is an {@link IoBuffer}, the buffer is
      * automatically duplicated using {@link IoBuffer#duplicate()}.
      */
     public static List<WriteFuture> broadcast(Object message, Iterator<IoSession> sessions) {
@@ -74,8 +74,8 @@ public class IoUtil {
     }
     
     /**
-     * Writes the specified {@code message} to the specified {@code sessions}.
-     * If the specified {@code message} is an {@link IoBuffer}, the buffer is
+     * Writes the specified {@code services} to the specified {@code sessions}.
+     * If the specified {@code services} is an {@link IoBuffer}, the buffer is
      * automatically duplicated using {@link IoBuffer#duplicate()}.
      */
     public static List<WriteFuture> broadcast(Object message, IoSession... sessions) {

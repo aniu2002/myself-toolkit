@@ -172,7 +172,7 @@ public abstract class AbstractProxyLogicHandler implements ProxyLogicHandler {
     }
 
     /**
-     * Enqueue a message to be written once handshaking is complete.
+     * Enqueue a services to be written once handshaking is complete.
      */
     public synchronized void enqueueWriteRequest(final NextFilter nextFilter,
             final WriteRequest writeRequest) {
@@ -186,7 +186,7 @@ public abstract class AbstractProxyLogicHandler implements ProxyLogicHandler {
     /**
      * Closes the session.
      * 
-     * @param message the error message
+     * @param message the error services
      * @param t the exception which caused the session closing
      */
     protected void closeSession(final String message, final Throwable t) {
@@ -203,7 +203,7 @@ public abstract class AbstractProxyLogicHandler implements ProxyLogicHandler {
     /**
      * Closes the session.
      * 
-     * @param message the error message
+     * @param message the error services
      */
     protected void closeSession(final String message) {
         closeSession(message, null);

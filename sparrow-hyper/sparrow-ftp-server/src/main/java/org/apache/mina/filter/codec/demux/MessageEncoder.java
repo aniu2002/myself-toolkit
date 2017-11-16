@@ -28,7 +28,7 @@ import org.apache.mina.filter.codec.ProtocolEncoderOutput;
  * <p>
  * We didn't provide any <tt>dispose</tt> method for {@link MessageEncoder}
  * because it can give you  performance penalty in case you have a lot of
- * message types to handle.
+ * services types to handle.
  * 
  * @author <a href="http://mina.apache.org">Apache MINA Project</a>
  *
@@ -37,13 +37,13 @@ import org.apache.mina.filter.codec.ProtocolEncoderOutput;
  */
 public interface MessageEncoder<T> {
     /**
-     * Encodes higher-level message objects into binary or protocol-specific data.
+     * Encodes higher-level services objects into binary or protocol-specific data.
      * MINA invokes {@link #encode(IoSession, Object, ProtocolEncoderOutput)}
-     * method with message which is popped from the session write queue, and then
+     * method with services which is popped from the session write queue, and then
      * the encoder implementation puts encoded {@link IoBuffer}s into
      * {@link ProtocolEncoderOutput}.
      *
-     * @throws Exception if the message violated protocol specification
+     * @throws Exception if the services violated protocol specification
      */
     void encode(IoSession session, T message, ProtocolEncoderOutput out)
             throws Exception;

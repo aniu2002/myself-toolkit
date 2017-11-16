@@ -51,12 +51,12 @@
 		</select>
 		<insert>
 			INSERT INTO
-			businessSys(businessID,name,url,description,isHangUp,level)
-			VALUES(:businessID,:name,:url,:description,:isHangUp,:level)
+			businessSys(businessID,title,url,description,isHangUp,level)
+			VALUES(:businessID,:title,:url,:description,:isHangUp,:level)
 		</insert>
 		<update>
 			UPDATE businessSys SET
-			businessID=:businessID,name=:name,url=:url,description=:description,isHangUp=:isHangUp,level=:level
+			businessID=:businessID,title=:title,url=:url,description=:description,isHangUp=:isHangUp,level=:level
 			WHERE autoID=:autoID
 		</update>
 		<delete>
@@ -73,12 +73,12 @@
 			SELECT * FROM chartExample WHERE autoID=?
 		</select>
 		<insert>
-			INSERT INTO chartExample(id,name,exampleURL)
-			VALUES(:id,:name,:exampleURL)
+			INSERT INTO chartExample(id,title,exampleURL)
+			VALUES(:id,:title,:exampleURL)
 		</insert>
 		<update>
 			UPDATE chartExample SET
-			id=:id,name=:name,exampleURL=:exampleURL WHERE autoID=:autoID
+			id=:id,title=:title,exampleURL=:exampleURL WHERE autoID=:autoID
 		</update>
 		<delete>
 			DELETE FROM chartExample WHERE autoID=?
@@ -94,11 +94,11 @@
 			SELECT * FROM chartTypeDictionary WHERE id=?
 		</select>
 		<insert>
-			INSERT INTO chartTypeDictionary(name,example)
-			VALUES(:name,:example)
+			INSERT INTO chartTypeDictionary(title,example)
+			VALUES(:title,:example)
 		</insert>
 		<update>
-			UPDATE chartTypeDictionary SET name=:name,example=:example
+			UPDATE chartTypeDictionary SET title=:title,example=:example
 			WHERE id=:id
 		</update>
 		<delete>
@@ -359,10 +359,10 @@
 			SELECT * FROM reportTypeDictionary WHERE id=?
 		</select>
 		<insert>
-			INSERT INTO reportTypeDictionary(name) VALUES(:name)
+			INSERT INTO reportTypeDictionary(title) VALUES(:title)
 		</insert>
 		<update>
-			UPDATE reportTypeDictionary SET name=:name WHERE id=:id
+			UPDATE reportTypeDictionary SET title=:title WHERE id=:id
 		</update>
 		<delete>
 			DELETE FROM reportTypeDictionary WHERE id=?

@@ -137,11 +137,8 @@ var _Render = {
         else
             return v;
     },
-    link:function(v){
-       return '<a href="'+v+'" target="_blank">链接</a>';
-    },
     img: function (v) {
-        var img = $('<img src="/app/img/defaultx.png" style="width:170px;height:80px;"/>');
+        var img = $('<img src="/app/images/defaultx.png" style="width:170px;height:80px;"/>');
         if (v) {
             img.attr('ori', v);
             Common.lazyInit(img);
@@ -314,7 +311,7 @@ var _Editor = {
         return el;
     },
     'img': function (name, cfg) {
-        var img = $('<img src="/app/img/defaultx.png" style="width:370px;height:180px;"/>');
+        var img = $('<img src="/app/images/defaultx.png" style="width:370px;height:180px;"/>');
         if (cfg.imgEl)
             img.attr('id', cfg.imgEl);
         return {

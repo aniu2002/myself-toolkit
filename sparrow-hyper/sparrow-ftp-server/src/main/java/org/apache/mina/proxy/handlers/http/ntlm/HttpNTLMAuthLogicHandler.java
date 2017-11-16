@@ -159,7 +159,7 @@ public class HttpNTLMAuthLogicHandler extends AbstractAuthLogicHandler {
 
             if (challengeResponse == null || challengeResponse.length() < 5) {
                 // Nothing to handle at this step. 
-                // Just need to send a reply type 1 message in doHandshake().
+                // Just need to send a reply type 1 services in doHandshake().
                 return;
             }
 

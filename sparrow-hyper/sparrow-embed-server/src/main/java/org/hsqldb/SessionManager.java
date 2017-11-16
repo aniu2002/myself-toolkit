@@ -147,7 +147,7 @@ public class SessionManager {
     }
 
     /**
-     * Retrieves the common SYS Session.
+     * Retrieves the zk SYS Session.
      */
     public Session getSysSession() {
 

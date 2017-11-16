@@ -88,7 +88,7 @@ import org.hsqldb.types.Types;
  * considered very carefully. Hopefully, the design decisions made in light of
  * these considerations have yeilded precisely the subset of full
  * ResultSetMetaData support that is most commonly needed and that is most
- * important, while also providing, under the most common use-cases, the
+ * important, while also providing, under the most zk use-cases, the
  * fastest access with the least overhead and the best comprimise between
  * speed, accuracy, jar-footprint and retention of JDBC resources. <p>
  *

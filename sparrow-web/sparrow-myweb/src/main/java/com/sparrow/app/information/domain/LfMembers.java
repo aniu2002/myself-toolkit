@@ -7,7 +7,7 @@ import java.sql.Timestamp;
  *  ============================== <br/>
  *	选择: SELECT * FROM lf_members WHERE id=? <br/>
  *	统计: SELECT COUNT(1) FROM lf_members <br/>
- *	插入: INSERT INTO lf_members(id,name,qq,sex,age,bra,phone,province,city,district,referee_name,referee_qq,price_p,price_pp,price_desc,simple_desc,special,checked,leval,comment,images,create_date,update_date,mark) VALUES(:id,:name,:qq,:sex,:age,:bra,:phone,:province,:city,:district,:refereeName,:refereeQq,:priceP,:pricePp,:priceDesc,:simpleDesc,:special,:checked,:leval,:comment,:images,:createDate,:updateDate,:mark) <br/>
+ *	插入: INSERT INTO lf_members(name,qq,sex,age,bra,phone,province,city,district,referee_name,referee_qq,price_p,price_pp,price_desc,simple_desc,special,checked,leval,comment,images,create_date,update_date,mark) VALUES(:name,:qq,:sex,:age,:bra,:phone,:province,:city,:district,:refereeName,:refereeQq,:priceP,:pricePp,:priceDesc,:simpleDesc,:special,:checked,:leval,:comment,:images,:createDate,:updateDate,:mark) <br/>
  *	更新: UPDATE lf_members SET name=:name,qq=:qq,sex=:sex,age=:age,bra=:bra,phone=:phone,province=:province,city=:city,district=:district,referee_name=:refereeName,referee_qq=:refereeQq,price_p=:priceP,price_pp=:pricePp,price_desc=:priceDesc,simple_desc=:simpleDesc,special=:special,checked=:checked,leval=:leval,comment=:comment,images=:images,create_date=:createDate,update_date=:updateDate,mark=:mark WHERE id=:id <br/>
  *	删除: DELETE FROM lf_members WHERE id=? <br/>
  *  ============================== <br/>

@@ -1,65 +1,42 @@
 package com.sparrow.collect.crawler.dom.impl;
 
 import com.sparrow.collect.crawler.dom.CrawlerNode;
-import org.jsoup.nodes.Node;
-import org.jsoup.nodes.TextNode;
+import org.apache.commons.lang3.StringUtils;
+import org.jsoup.nodes.Element;
 
-import java.util.Collections;
 import java.util.List;
 
 public class JsoupCrawlerNodeImpl implements CrawlerNode {
-    final Node node;
+    final Element element;
 
-    JsoupCrawlerNodeImpl(Node node) {
-        this.node = node;
+    JsoupCrawlerNodeImpl(Element element) {
+        this.element = element;
     }
 
     public String attr(String attributeKey) {
-        return this.node.attr(attributeKey);
+        return this.element.attr(attributeKey);
     }
 
     public CrawlerNode selectNode(String path) {
-        return null;
+        return JsoupTools.covertToCrNode(this.element.select(path).first());
     }
 
     public List<CrawlerNode> selectNodes(String path) {
-        return Collections.emptyList();
+        return JsoupTools.covertToCrNodes(this.element.select(path));
     }
 
     public String text() {
-        if (this.node instanceof TextNode) {
-            TextNode element = (TextNode) node;
-            return element.getWholeText();
-        }
-        return null;
+        return this.element.text();
+    }
+
+    @Override
+    public String html() {
+        return this.element.html();
     }
 
     @Override
     public void attr(String key, String val) {
-    }
-
-    @Override
-    public int childSize() {
-        return 0;
-    }
-
-    @Override
-    public CrawlerNode childNode(int idx) {
-        return null;
-    }
-
-    @Override
-    public String nodeName() {
-        return this.node.nodeName();
-    }
-
-    @Override
-    public CrawlerNode parent() {
-        return null;
-    }
-
-    @Override
-    public CrawlerNode next() {
-        return null;
+        if (StringUtils.isNotEmpty(val))
+            this.element.attr(key, val);
     }
 }

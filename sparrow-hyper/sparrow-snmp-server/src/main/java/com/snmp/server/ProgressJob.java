@@ -36,7 +36,7 @@ public class ProgressJob implements Runnable {
 	public static final String OID_EMB_JOBID = "1.3.6.1.4.1.83.3.1.1.2.1";
 	public static final String OID_EMB_PERCENTAGE = "1.3.6.1.4.1.83.3.1.1.2.2";
 	private UDPServer server;
-	/** message notice interface */
+	/** services notice interface */
 	private ProgressNotice notice;
 	private byte[] udpData;
 
@@ -73,7 +73,7 @@ public class ProgressJob implements Runnable {
 
 			} else {
 				throw new SNMPBadValueException(
-						"PDU received that's not a v1 or v2 trap or inform request; message payload of type "
+						"PDU received that's not a v1 or v2 trap or inform request; services payload of type "
 								+ receivedPDU.getClass().toString());
 			}
 

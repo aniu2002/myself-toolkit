@@ -54,7 +54,7 @@ import org.hsqldb.types.Type;
  * particular grantee.<p>
  * It supplies the methods used to grant, revoke, test
  * and check a grantee's access rights to other database objects.
- * It also holds a reference to the common PUBLIC User Object,
+ * It also holds a reference to the zk PUBLIC User Object,
  * which represent the special user refered to in
  * GRANT ... TO PUBLIC statements.<p>
  * The check(), isAccessible() and getGrantedClassNames() methods check the

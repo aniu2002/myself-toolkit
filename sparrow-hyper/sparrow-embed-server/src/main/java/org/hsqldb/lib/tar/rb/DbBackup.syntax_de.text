@@ -13,7 +13,7 @@ ODER
     (entpackt die enthaltenen Dateien in die angegebene DB/das angegebene Verzeichnis).
 
 Bitte beachten: 
-#N.b. the db/base/path includes file base name, like in JDBC URLs, whereas
+#N.b. the db/base/path includes file base title, like in JDBC URLs, whereas
 #db/dir is a proper 'directory'.
 Der DB-Wurzel-Pfad beinhaltet auch das Wurzelverzeichnis der Datei,
 wie bei JDBC-URLs, wo das DB/Verz. eine normales Verzeichnis ist.

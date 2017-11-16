@@ -35,7 +35,7 @@ import com.sparrow.tools.pogen.check.ModuleMatcher;
 import com.sparrow.tools.utils.PropertiesFileUtil;
 
 @WebController(value = "/task")
-public class  TaskController implements BeanInitialize {
+public class TaskController implements BeanInitialize {
     @Autowired("hitTemplate")
     private HitTemplate hitTemplate;
     private boolean first = true;
@@ -44,9 +44,9 @@ public class  TaskController implements BeanInitialize {
     @ReqMapping(value = "/generate", method = ReqMapping.GET)
     @ResponseBody
     public String generateSource(String keywords) {
-        // System.setProperty(ControllerPojoGenerator.GENERATE_INTERFACE_KEY, "true");
-        // System.setProperty(ControllerPojoGenerator.GENERATE_MODULE_NAME, "system");
-        // System.setProperty(ControllerPojoGenerator.GENERATE_MODULE_LABEL, "BT种子资源");
+        // System.setProperty(PojoGenerator.GENERATE_INTERFACE_KEY, "true");
+        // System.setProperty(PojoGenerator.GENERATE_MODULE_NAME, "system");
+        // System.setProperty(PojoGenerator.GENERATE_MODULE_LABEL, "BT种子资源");
         ConnectionHolder.holdConnection(this.hitTemplate.getSessionFactory().getConnection());
         PojoGenerateTask task = new PojoGenerateTask();
         task.setBasePath(SystemConfig.SOURCE_DIR);
@@ -98,7 +98,7 @@ public class  TaskController implements BeanInitialize {
 
     @Override
     public void initialize() {
-        SysLogger.info(" --- Task controller initialized ...");
+        SysLogger.info(" --- Task web initialized ...");
     }
 }
 

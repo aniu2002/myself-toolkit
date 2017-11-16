@@ -62,7 +62,7 @@ import org.hsqldb.lib.StringConverter;
  * loaders.  This is because static fields--the conventional<a href="#note1">
  * <sup>*</sup></a> means for supporting in-process global discovery--become
  * distinct and inaccessible across Java class loader context boundaries when
- * the contexts do not share a common parent class loader or do not implement
+ * the contexts do not share a zk parent class loader or do not implement
  * normal parent class loader delegation semantics. <p>
  *
  * <a name="note1"><sup>*</sup></a>

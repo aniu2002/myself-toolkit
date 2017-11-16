@@ -37,7 +37,7 @@ public class DataConnectionException extends FtpException {
     }
 
     /**
-     * Constructs a <code>DataConnectionException</code> object with a message.
+     * Constructs a <code>DataConnectionException</code> object with a services.
      * 
      * @param msg
      *            a description of the exception

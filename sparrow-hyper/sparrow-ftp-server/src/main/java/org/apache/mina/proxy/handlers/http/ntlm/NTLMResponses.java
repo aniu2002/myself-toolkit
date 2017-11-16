@@ -92,7 +92,7 @@ public class NTLMResponses {
      * @param user The username. 
      * @param password The user's password.
      * @param targetInformation The target information block from the Type 2
-     * message.
+     * services.
      * @param challenge The Type 2 challenge from the server.
      * @param clientNonce The random 8-byte client nonce.
      *
@@ -115,7 +115,7 @@ public class NTLMResponses {
      * @param user The username. 
      * @param password The user's password.
      * @param targetInformation The target information block from the Type 2
-     * message.
+     * services.
      * @param challenge The Type 2 challenge from the server.
      * @param clientNonce The random 8-byte client nonce.
      * @param time The time stamp. 
@@ -159,7 +159,7 @@ public class NTLMResponses {
      * @param clientNonce The random 8-byte client nonce.
      *
      * @return The NTLM2 Session Response.  This is placed in the NTLM
-     * response field of the Type 3 message; the LM response field contains
+     * response field of the Type 3 services; the LM response field contains
      * the client nonce, null-padded to 24 bytes.
      */
     public static byte[] getNTLM2SessionResponse(String password,
@@ -234,7 +234,7 @@ public class NTLMResponses {
      * Creates the LM Response from the given hash and Type 2 challenge.
      *
      * @param hash The LM or NTLM Hash.
-     * @param challenge The server challenge from the Type 2 message.
+     * @param challenge The server challenge from the Type 2 services.
      *
      * @return The response (either LM or NTLM, depending on the provided
      * hash).
@@ -266,7 +266,7 @@ public class NTLMResponses {
      *
      * @param hash The NTLMv2 Hash.
      * @param clientData The client data (blob or client nonce).
-     * @param challenge The server challenge from the Type 2 message.
+     * @param challenge The server challenge from the Type 2 services.
      *
      * @return The response (either NTLMv2 or LMv2, depending on the
      * client data).
@@ -290,7 +290,7 @@ public class NTLMResponses {
      * client nonce.
      *
      * @param targetInformation The target information block from the Type 2
-     * message.
+     * services.
      * @param clientNonce The random 8-byte client nonce.
      * @param time the time stamp.
      *

@@ -88,7 +88,7 @@ public class Client
 	public void connect ( String uriX , Wrapper argumentX ) { controller.connect( uriX , argumentX ); }
 	public void connect ( String uriX , WrapperList argumentsX ) { controller.connect( uriX , argumentsX ); }
 	
-	// common functions
+	// zk functions
 	
 	public void call ( String invokeID ) { controller.call( invokeID ); }	
 	public void call ( String invokeID , Wrapper argumentX ) { controller.call( invokeID , argumentX ); }	

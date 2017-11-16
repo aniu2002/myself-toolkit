@@ -22,7 +22,7 @@ package org.apache.mina.transport.vmpipe;
 import java.net.SocketAddress;
 
 /**
- * A {@link SocketAddress} which represents in-VM pipe port number.
+ * A {@link SocketAddress} which represents in-VM services port number.
  *
  * @author <a href="http://mina.apache.org">Apache MINA Project</a>
  */

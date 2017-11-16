@@ -372,7 +372,7 @@ public class NormalDao {
         if (page < 1)
             page = 1;
         start = (page - 1) * limit;
-        sqlBuilder.appends(" order by id asc limit ", start, ",", limit);
+        sqlBuilder.appends(" order by id desc limit ", start, ",", limit);
         return this.operateTemplate.query(new ExecuteCallback<PageResult>() {
             @Override
             public PageResult execute(Session session) {

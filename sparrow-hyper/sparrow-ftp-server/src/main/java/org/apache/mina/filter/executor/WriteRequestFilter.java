@@ -38,7 +38,7 @@ import org.apache.mina.core.write.WriteRequest;
  * consequently providing the accurate tracking of the write request queue
  * status to the {@link IoEventQueueHandler}.
  * <p>
- * Most common usage of this filter could be detecting an {@link IoSession}
+ * Most zk usage of this filter could be detecting an {@link IoSession}
  * which writes too fast which will cause {@link OutOfMemoryError} soon:
  * <pre>
  *     session.getFilterChain().addLast(
