@@ -9,10 +9,12 @@ import com.sparrow.collect.utils.HighLightTool;
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.index.CorruptIndexException;
 import org.apache.lucene.index.Term;
+import org.apache.lucene.queryparser.classic.MultiFieldQueryParser;
 import org.apache.lucene.queryparser.classic.ParseException;
 import org.apache.lucene.queryparser.classic.QueryParser;
 import org.apache.lucene.search.BooleanClause;
 import org.apache.lucene.search.BooleanQuery;
+import org.apache.lucene.search.Query;
 import org.apache.lucene.search.TermQuery;
 import org.apache.lucene.search.highlight.InvalidTokenOffsetsException;
 import org.apache.lucene.util.Version;
@@ -28,13 +30,12 @@ public class NewLuceneService extends LuceneService {
     public Map doSearch(String fields[], String text, int startPos, int endPos) {
         final Analyzer analyzer = this.getAnalyzer();
         try {
-            // String[] keywords = { text, text, "1" };
-            // String[] nfields = { "name", "content", "hasImg" };
-            // BooleanClause.Occur[] flags = { BooleanClause.Occur.SHOULD,
-            // BooleanClause.Occur.MUST, BooleanClause.Occur.MUST };
-            // final Query query = MultiFieldQueryParser.parse(keywords,
-            // nfields,
-            // flags, analyzer);
+           /* String[] keywords = {text, text, "1"};
+            String[] nfields = {"name", "content", "hasImg"};
+            BooleanClause.Occur[] flags = {BooleanClause.Occur.SHOULD,
+                    BooleanClause.Occur.MUST, BooleanClause.Occur.MUST};
+            final Query query = MultiFieldQueryParser.parse(Version.LUCENE_46, keywords,
+                    nfields,flags, analyzer);*/
 
             final BooleanQuery query = new BooleanQuery();
             BooleanQuery q1 = new BooleanQuery();
