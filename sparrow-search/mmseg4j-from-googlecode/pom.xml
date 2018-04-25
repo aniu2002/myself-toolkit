@@ -108,7 +108,7 @@
 	  <lucene.version>3.1.0</lucene.version>
   	<solr.version>3.1.0</solr.version>
   </properties>
-	<modules>
+	<packages>
 		<module>mmseg4j-core</module>
 		<module>mmseg4j-analysis</module>
 		<module>mmseg4j-solr</module>
@@ -116,5 +116,5 @@
 		<module>mmseg4j-all</module>
 		<module>mmseg4j-all-with-dic</module>
 		<module>mmseg4j-dic</module>
-	</modules>
+	</packages>
 </project>

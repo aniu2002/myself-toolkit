@@ -24,7 +24,8 @@ public class TaskMain {
     public static void main(String[] args) {
         // start("crawler");
         long time = System.currentTimeMillis();
-        start("gif");
+        //start("gif");
+        start("btmeet");
         time = System.currentTimeMillis() - time;
         System.out.println(String.format("cost : %s s", time / 1000));
     }
