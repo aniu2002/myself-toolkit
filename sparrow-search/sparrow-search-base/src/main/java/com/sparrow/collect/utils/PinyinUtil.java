@@ -1,4 +1,4 @@
-package com.dili.dd.searcher.basesearch.common.util;
+package com.sparrow.collect.utils;
 
 import java.util.*;
 
@@ -288,7 +288,7 @@ public class PinyinUtil {
 	 */
 	@SuppressWarnings("unchecked")
 	public static String[] getFuzzyPinyins(String word) {
-		if (word.length() > 5 || !StringUtil.isAllChineseCharacter(word)) {
+		if (word.length() > 5 || !StringKit.isAllChineseCharacter(word)) {
 			return new String[] {getFuzzyPinyin(word)};
 		}
 		String[] ss = CommonSpliter.getChineseEnglishSeparatedString(word);

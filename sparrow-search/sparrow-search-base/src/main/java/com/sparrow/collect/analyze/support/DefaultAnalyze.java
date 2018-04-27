@@ -1,4 +1,4 @@
-package com.dili.dd.searcher.basesearch.common.analyze.support;
+package com.sparrow.collect.analyze.support;
 
 public class DefaultAnalyze extends SmartIKAnalyze{
 

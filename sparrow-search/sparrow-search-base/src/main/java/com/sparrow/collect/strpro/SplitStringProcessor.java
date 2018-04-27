@@ -1,9 +1,9 @@
-package com.dili.dd.searcher.basesearch.common.stringprocessor;
+package com.sparrow.collect.strpro;
 
-import com.dili.dd.searcher.basesearch.common.util.ISpliter;
-import com.dili.dd.searcher.basesearch.common.util.StringUtil;
-import com.dili.dd.searcher.basesearch.common.util.WordSpliter;
 
+import com.sparrow.collect.utils.ISpliter;
+import com.sparrow.collect.utils.StringKit;
+import com.sparrow.collect.utils.WordSpliter;
 
 public class SplitStringProcessor implements IStringProcessor {
 
@@ -19,10 +19,10 @@ public class SplitStringProcessor implements IStringProcessor {
 	@Override
 	public String process(String string) {
 		if (spliter == null) {
-			return StringUtil.getStringFromStringsWithUnique(WordSpliter
+			return StringKit.getStringFromStringsWithUnique(WordSpliter
 					.getInstance().split(string));
 		}
-		return StringUtil.getStringFromStringsWithUnique(spliter.split(string));
+		return StringKit.getStringFromStringsWithUnique(spliter.split(string));
 	}
 
 	public void setSpliter(ISpliter spliter) {

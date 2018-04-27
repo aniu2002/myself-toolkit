@@ -1,12 +1,12 @@
-package com.dili.dd.searcher.basesearch.common.stringprocessor;
+package com.sparrow.collect.strpro;
 
-import com.dili.dd.searcher.basesearch.common.util.StringUtil;
 
+import com.sparrow.collect.utils.StringKit;
 
 public class MeanfulSameStringProcessor implements IStringProcessor {
 
 	@Override
 	public String process(String string) {
-		return StringUtil.removeSpecialChars(string);
+		return StringKit.removeSpecialChars(string);
 	}
 }

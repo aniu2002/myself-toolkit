@@ -1,4 +1,4 @@
-package com.dili.dd.searcher.basesearch.common.cjf.impl;
+package com.sparrow.collect.cjf.impl;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -6,11 +6,11 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Date;
 
-import com.dili.dd.searcher.basesearch.common.cjf.ChineseJF;
-import com.dili.dd.searcher.basesearch.common.cjf.config.LoadConfig;
-import com.dili.dd.searcher.basesearch.common.cjf.entity.Char;
-import com.dili.dd.searcher.basesearch.common.cjf.utils.CharFilter;
-import com.dili.dd.searcher.basesearch.common.cjf.utils.IOUtil;
+import com.sparrow.collect.cjf.ChineseJF;
+import com.sparrow.collect.cjf.config.LoadConfig;
+import com.sparrow.collect.cjf.entity.Char;
+import com.sparrow.collect.cjf.utils.CharFilter;
+import com.sparrow.collect.cjf.utils.IOUtil;
 
 public class ChineseJFImpl implements ChineseJF {
 

@@ -1,6 +1,6 @@
-package com.dili.dd.searcher.basesearch.common.cjf.utils;
+package com.sparrow.collect.cjf.utils;
 
-import com.dili.dd.searcher.basesearch.common.cjf.entity.Char;
+import com.sparrow.collect.cjf.entity.Char;
 
 public class CharFilter {
 

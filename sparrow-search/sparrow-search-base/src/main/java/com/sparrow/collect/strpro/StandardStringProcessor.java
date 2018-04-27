@@ -1,6 +1,6 @@
-package com.dili.dd.searcher.basesearch.common.stringprocessor;
+package com.sparrow.collect.strpro;
 
-import com.dili.dd.searcher.basesearch.common.util.StringUtil;
+import com.sparrow.collect.utils.StringKit;
 
 public class StandardStringProcessor implements IStringProcessor {
 	private IStringProcessor processor;
@@ -11,11 +11,11 @@ public class StandardStringProcessor implements IStringProcessor {
 
 	@Override
 	public String process(String string) {
-		if (!StringUtil.isNullOrEmpty(string)) {
+		if (!StringKit.isNullOrEmpty(string)) {
 			if (processor == null) {
-				return StringUtil.getStandardString(string);
+				return StringKit.getStandardString(string);
 			} else {
-				return StringUtil.getStandardString(processor.process(string));
+				return StringKit.getStandardString(processor.process(string));
 			}
 		}
 		return "";

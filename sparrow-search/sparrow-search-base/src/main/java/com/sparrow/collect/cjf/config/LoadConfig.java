@@ -1,4 +1,4 @@
-package com.dili.dd.searcher.basesearch.common.cjf.config;
+package com.sparrow.collect.cjf.config;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -6,7 +6,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 
-import com.dili.dd.searcher.basesearch.common.cjf.entity.Char;
+import com.sparrow.collect.cjf.entity.Char;
 
 public class LoadConfig {
 

@@ -1,4 +1,4 @@
-package com.dili.dd.searcher.basesearch.common.stringprocessor;
+package com.sparrow.collect.strpro;
 
 public class SameStringProcessor implements IStringProcessor{
 

@@ -1,4 +1,4 @@
-package com.dili.dd.searcher.basesearch.common.cjf.utils;
+package com.sparrow.collect.cjf.utils;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;

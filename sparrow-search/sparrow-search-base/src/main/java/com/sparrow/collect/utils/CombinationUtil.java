@@ -1,4 +1,4 @@
-package com.dili.dd.searcher.basesearch.common.util;
+package com.sparrow.collect.utils;
 
 import java.util.*;
 

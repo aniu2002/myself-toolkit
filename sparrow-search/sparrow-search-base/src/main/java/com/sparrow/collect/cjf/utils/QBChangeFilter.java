@@ -1,4 +1,4 @@
-package com.dili.dd.searcher.basesearch.common.cjf.utils;
+package com.sparrow.collect.cjf.utils;
 
 public class QBChangeFilter {
 

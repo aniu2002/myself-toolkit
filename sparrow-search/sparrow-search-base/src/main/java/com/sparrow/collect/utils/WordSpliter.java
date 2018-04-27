@@ -1,4 +1,4 @@
-package com.dili.dd.searcher.basesearch.common.util;
+package com.sparrow.collect.utils;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -29,7 +29,7 @@ public class WordSpliter implements ISpliter {
 					stream, "GBK"));
 			while (bfReader.ready()) {
 				String line = bfReader.readLine();
-				if (!StringUtil.isNullOrEmpty(line) && line.contains(",")) {
+				if (!StringKit.isNullOrEmpty(line) && line.contains(",")) {
 					String[] names = line.split(",");
 					if (!names[0].trim().equals("")) {
 						if (dic.containsKey(names[0])) {
@@ -46,7 +46,7 @@ public class WordSpliter implements ISpliter {
 	}
 
 	public synchronized static WordSpliter getInstance(String fileName) {
-		if (StringUtil.isNullOrEmpty(fileName)) {
+		if (StringKit.isNullOrEmpty(fileName)) {
 			fileName = PATH;
 		}
 		if (!spliterTable.containsKey(fileName)) {
@@ -88,7 +88,7 @@ public class WordSpliter implements ISpliter {
 		Hashtable<Position, String> posTable = new Hashtable<Position, String>();
 		List<Position> posList = new ArrayList<Position>();
 		for (String key : matchTables.keySet()) {
-			int[] ids = StringUtil.getAllIndex(string, key);
+			int[] ids = StringKit.getAllIndex(string, key);
 			for (int i = 0; i < ids.length; i++) {
 				Position pos = new Position(ids[i] + 1, ids[i] + key.length());
 				posTable.put(pos, key);
@@ -175,7 +175,7 @@ public class WordSpliter implements ISpliter {
 			for (int i = 0; i < newList.size(); i++) {
 				String value = string.substring(newList.get(i).getStart(),
 						newList.get(i).getEnd());
-				if (!StringUtil.isNullOrEmpty(value)) {
+				if (!StringKit.isNullOrEmpty(value)) {
 					result.add(value);
 				}
 				if (i != newList.size() - 1) {
@@ -201,7 +201,7 @@ public class WordSpliter implements ISpliter {
 	// private String[] spitNotWord(String s,
 	// Hashtable<String, Integer> matchTables) {
 	// List<String> result = new ArrayList<String>();
-	// if (!matchTables.containsKey(s) && StringUtil.isAllChineseCharacter(s)) {
+	// if (!matchTables.containsKey(s) && StringKit.isAllChineseCharacter(s)) {
 	// for (char c : s.toCharArray()) {
 	// result.add(String.valueOf(c));
 	// }

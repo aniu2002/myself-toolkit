@@ -1,6 +1,6 @@
-package com.dili.dd.searcher.basesearch.common.cjf;
+package com.sparrow.collect.cjf;
 
-import com.dili.dd.searcher.basesearch.common.cjf.impl.ChineseJFImpl;
+import com.sparrow.collect.cjf.impl.ChineseJFImpl;
 
 public class CJFBeanFactory {
 

@@ -1,20 +1,19 @@
-package com.dili.dd.searcher.basesearch.common.stringprocessor;
+package com.sparrow.collect.strpro;
 
-import com.dili.dd.searcher.basesearch.common.util.PinyinUtil;
-import com.dili.dd.searcher.basesearch.common.util.StringUtil;
-
+import com.sparrow.collect.utils.PinyinUtil;
+import com.sparrow.collect.utils.StringKit;
 
 public class PinyinHeadersStringProcessor implements IStringProcessor {
 
 	@Override
 	public String process(String string) {
-		if (StringUtil.isCharOrNumberString(string)) {
+		if (StringKit.isCharOrNumberString(string)) {
 			return "";
 		}
 
 		String[] pinyins = PinyinUtil.getPinyinHeaders(string);
 
-		return StringUtil.getStringFromStringsWithUnique(pinyins);
+		return StringKit.getStringFromStringsWithUnique(pinyins);
 	}
 
 }

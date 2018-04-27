@@ -1,7 +1,7 @@
-package com.dili.dd.searcher.basesearch.common.analyze.support;
+package com.sparrow.collect.analyze.support;
 
-import com.dili.dd.searcher.basesearch.common.analyze.IAnalyze;
-import com.dili.dd.searcher.basesearch.common.util.StringUtil;
+import com.sparrow.collect.analyze.IAnalyze;
+import com.sparrow.collect.utils.StringKit;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -25,11 +25,11 @@ public class IKAnalyze implements IAnalyze {
     @Override
     public List<String> split(String s) {
 
-        if (StringUtils.isBlank(s)){
+        if (StringUtils.isBlank(s)) {
             return null;
         }
 
-        s = StringUtil.removeSpecialCharsNotSpaceByType(s);
+        s = StringKit.removeSpecialCharsNotSpaceByType(s);
         List<String> ret = new LinkedList<>();
         TokenStream tokenStream = null;
         try {

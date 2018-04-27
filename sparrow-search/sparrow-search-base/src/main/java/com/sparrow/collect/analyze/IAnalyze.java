@@ -1,4 +1,4 @@
-package com.dili.dd.searcher.basesearch.common.analyze;
+package com.sparrow.collect.analyze;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.dili.dd.searcher.basesearch.common.cjf;
+package com.sparrow.collect.cjf;
 
 public abstract interface ChineseJF
 {

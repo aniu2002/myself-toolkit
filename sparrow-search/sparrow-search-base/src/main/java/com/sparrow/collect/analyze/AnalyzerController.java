@@ -1,9 +1,8 @@
-package com.dili.dd.searcher.basesearch.common.analyze;
+package com.sparrow.collect.analyze;
 
-import com.dili.dd.searcher.basesearch.common.config.ConfigIniter;
-import com.dili.dd.searcher.basesearch.common.config.Contants;
-import com.dili.dd.searcher.basesearch.common.exception.ConfigUpdateException;
-import com.dili.dd.searcher.basesearch.common.util.StringUtil;
+import com.sparrow.collect.config.ConfigIniter;
+import com.sparrow.collect.config.Contants;
+import com.sparrow.collect.exception.ConfigUpdateException;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.apache.hadoop.conf.Configuration;
@@ -87,7 +86,7 @@ public class AnalyzerController extends ConfigIniter {
             String[] ifields = config.getStrings(new StringBuilder().append("searcher.basesearch.").append(seach).append(".ifield.list").toString());
             for (String ifield : ifields) {
                 String ifieldAnalyName = config.get(new StringBuilder().append("searcher.basesearch.").append(seach).append(".ifield.").append(ifield).append(".analy.name").toString());
-                if (!StringUtil.isNullOrEmpty(ifieldAnalyName)) {
+                if (!com.sparrow.collect.util.StringKit.isNullOrEmpty(ifieldAnalyName)) {
                     //modify by yb: 包装为需要对数据进行格式化过滤
                     Analyzer analyzer = new FormatAnalyzerWapper(analyzeMap.get(ifieldAnalyName));
                     anaMap.put(ifield, analyzer);

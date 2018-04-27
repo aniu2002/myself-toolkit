@@ -1,7 +1,7 @@
-package com.dili.dd.searcher.basesearch.common.util;
+package com.sparrow.collect.utils;
 
 public interface ISpliter {
-    
-	public String[] split(String sentenc);
-	
+
+    String[] split(String sentenc);
+
 }

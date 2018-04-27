@@ -1,14 +1,14 @@
-package com.dili.dd.searcher.basesearch.common.util;
+package com.sparrow.collect.utils;
+
+import com.sparrow.collect.cjf.CJFBeanFactory;
+import com.sparrow.collect.cjf.ChineseJF;
 
 import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.regex.PatternSyntaxException;
 
-import com.dili.dd.searcher.basesearch.common.cjf.CJFBeanFactory;
-import com.dili.dd.searcher.basesearch.common.cjf.ChineseJF;
-
-public class StringUtil {
+public class StringKit {
 
     public static final String UNIQUE_STRING = " ";
 
@@ -383,7 +383,6 @@ public class StringUtil {
     /**
      * 去除字符串中的空格意外的特殊字符
      *
-     * @param str 原始字符串
      * @return 去除特殊字符后的字符串
      *//*
     public static String removeSpecialCharsNotSpace2(String str) {

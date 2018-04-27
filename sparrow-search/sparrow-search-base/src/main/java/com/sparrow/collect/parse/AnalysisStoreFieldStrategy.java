@@ -1,7 +1,7 @@
-package com.dili.dd.searcher.basesearch.common.field.parse;
+package com.sparrow.collect.parse;
 
 
-import org.apache.hadoop.conf.Configuration;
+
 import org.apache.lucene.document.TextField;
 import org.apache.lucene.document.Field.Store;
 import org.apache.lucene.index.IndexableField;
@@ -19,7 +19,7 @@ import org.apache.lucene.index.IndexableField;
 public class AnalysisStoreFieldStrategy implements FieldParseStrategy {
 
     @Override
-    public IndexableField parse(String searchID, Configuration config, String fieldName, String fieldValue) {
+    public IndexableField parse(String searchID, String fieldName, String fieldValue) {
         IndexableField blank = new TextField(fieldName, fieldValue, Store.YES);
         return blank;
     }

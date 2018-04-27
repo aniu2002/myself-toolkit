@@ -1,4 +1,4 @@
-package com.dili.dd.searcher.basesearch.common.cjf.entity;
+package com.sparrow.collect.cjf.entity;
 
 import java.io.Serializable;
 

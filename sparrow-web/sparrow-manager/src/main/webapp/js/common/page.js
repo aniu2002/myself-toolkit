@@ -188,8 +188,7 @@ LPage.prototype = {
                 if (this.opBar && this.opBar.length) {
                     var el = $('<div style="margin-top:0px;padding-top:0px;"></div>');
                     var obarEl = $('<div></div>');
-                    el.append(this.createTableRow(this.topPageBar.pagerEl,
-                        obarEl));
+                    el.append(this.createTableRow(this.topPageBar.pagerEl, obarEl));
                     obarEl.append('&nbsp;');
                     for (var i = 0; i < this.opBar.length; i++) {
                         obarEl.append('&nbsp;');
