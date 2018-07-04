@@ -1,0 +1,2048 @@
+{
+  "settings" : {
+    "number_of_shards" : 5,
+    "number_of_replicas" : 1
+  },
+  "mappings" : {
+    "Appointment" : {
+      "dynamic" : true,
+      "properties" : {
+	    "id" : {
+          "type" : "long",
+          "index" : "not_analyzed"
+        },
+        "time" : {
+          "type" : "long",
+          "index" : "not_analyzed"
+        },
+        "date" : {
+          "type" : "object",
+          "properties" : {
+            "low" : {
+              "type" : "long",
+              "index" : "not_analyzed"
+            },
+            "high" : {
+              "type" : "long",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "status" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "updated" : {
+          "type" : "long",
+          "index" : "not_analyzed"
+        },
+        "refs" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "tags" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "txt" : {
+          "type" : "text",
+          "store" : "no",
+          "analyzer" : "standard",
+          "index" : "analyzed"
+        }
+      }
+    },
+    "Condition" : {
+      "dynamic" : true,
+      "properties" : {
+	    "id" : {
+          "type" : "long",
+          "index" : "not_analyzed"
+        },
+        "time" : {
+          "type" : "long",
+          "index" : "not_analyzed"
+        },
+        "category" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "category_str" : {
+          "type" : "object",
+          "properties" : {
+            "exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "normalized" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "code" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "code_str" : {
+          "type" : "object",
+          "properties" : {
+            "exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "normalized" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "date-recorded" : {
+          "type" : "object",
+          "properties" : {
+            "low" : {
+              "type" : "long",
+              "index" : "not_analyzed"
+            },
+            "high" : {
+              "type" : "long",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "identifier" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "updated" : {
+          "type" : "long",
+          "index" : "not_analyzed"
+        },
+        "refs" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "tags" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "txt" : {
+          "type" : "text",
+          "store" : "no",
+          "analyzer" : "standard",
+          "index" : "analyzed"
+        }
+      }
+    },
+    "Basic" : {
+      "dynamic" : true,
+      "properties" : {
+	    "id" : {
+          "type" : "long",
+          "index" : "not_analyzed"
+        },
+        "time" : {
+          "type" : "long",
+          "index" : "not_analyzed"
+        },
+        "code" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "code_str" : {
+          "type" : "object",
+          "properties" : {
+            "exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "normalized" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "identifier" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "updated" : {
+          "type" : "long",
+          "index" : "not_analyzed"
+        },
+        "refs" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "tags" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "txt" : {
+          "type" : "text",
+          "store" : "no",
+          "analyzer" : "standard",
+          "index" : "analyzed"
+        }
+      }
+    },
+    "ReferralRequest" : {
+      "dynamic" : true,
+      "properties" : {
+     	"id" : {
+          "type" : "long",
+          "index" : "not_analyzed"
+        },
+        "time" : {
+          "type" : "long",
+          "index" : "not_analyzed"
+        },
+        "status" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "updated" : {
+          "type" : "long",
+          "index" : "not_analyzed"
+        },
+        "refs" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "tags" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "txt" : {
+          "type" : "text",
+          "store" : "no",
+          "analyzer" : "standard",
+          "index" : "analyzed"
+        }
+      }
+    },
+    "Organization" : {
+      "dynamic" : true,
+      "properties" : {
+	    "id" : {
+          "type" : "long",
+          "index" : "not_analyzed"
+        },
+        "time" : {
+          "type" : "long",
+          "index" : "not_analyzed"
+        },
+        "identifier" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "name" : {
+          "type" : "object",
+          "properties" : {
+            "exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "normalized" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "phonetic" : {
+          "type" : "object",
+          "properties" : {
+            "exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "normalized" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "type" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "updated" : {
+          "type" : "long",
+          "index" : "not_analyzed"
+        },
+        "refs" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "tags" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "txt" : {
+          "type" : "text",
+          "store" : "no",
+          "analyzer" : "standard",
+          "index" : "analyzed"
+        }
+      }
+    },
+    "Bundle" : {
+      "dynamic" : true,
+      "properties" : {
+	    "id" : {
+          "type" : "long",
+          "index" : "not_analyzed"
+        },
+        "time" : {
+          "type" : "long",
+          "index" : "not_analyzed"
+        },
+        "Encounter.identifier" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+		"Patient.identifier" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+		"Composition.identifier" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "composition" : {
+          "properties" : {
+            "path" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "reference" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "refs" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "identifier" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "type" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "updated" : {
+          "type" : "long",
+          "index" : "not_analyzed"
+        },
+        "tags" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "txt" : {
+          "type" : "text",
+          "store" : "no",
+          "analyzer" : "standard",
+          "index" : "analyzed"
+        }
+      }
+    },
+    "DiagnosticOrder" : {
+      "dynamic" : true,
+      "properties" : {
+	    "id" : {
+          "type" : "long",
+          "index" : "not_analyzed"
+        },
+        "time" : {
+          "type" : "long",
+          "index" : "not_analyzed"
+        },
+        "bodysite" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "code" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "code_str" : {
+          "type" : "object",
+          "properties" : {
+            "exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "normalized" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "identifier" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "status" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "updated" : {
+          "type" : "long",
+          "index" : "not_analyzed"
+        },
+        "refs" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "tags" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "txt" : {
+          "type" : "text",
+          "store" : "no",
+          "analyzer" : "standard",
+          "index" : "analyzed"
+        }
+      }
+    },
+    "DiagnosticReport" : {
+      "dynamic" : true,
+      "properties" : {
+	    "id" : {
+          "type" : "long",
+          "index" : "not_analyzed"
+        },
+        "time" : {
+          "type" : "long",
+          "index" : "not_analyzed"
+        },
+        "code" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "date" : {
+          "type" : "object",
+          "properties" : {
+            "low" : {
+              "type" : "long",
+              "index" : "not_analyzed"
+            },
+            "high" : {
+              "type" : "long",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "identifier" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "issued" : {
+          "type" : "object",
+          "properties" : {
+            "low" : {
+              "type" : "long",
+              "index" : "not_analyzed"
+            },
+            "high" : {
+              "type" : "long",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "status" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "updated" : {
+          "type" : "long",
+          "index" : "not_analyzed"
+        },
+        "refs" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "tags" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "txt" : {
+          "type" : "text",
+          "store" : "no",
+          "analyzer" : "standard",
+          "index" : "analyzed"
+        }
+      }
+    },
+    "Patient" : {
+      "dynamic" : true,
+      "properties" : {
+	    "id" : {
+          "type" : "long",
+          "index" : "not_analyzed"
+        },
+        "time" : {
+          "type" : "long",
+          "index" : "not_analyzed"
+        },
+        "address" : {
+          "type" : "object",
+          "properties" : {
+            "exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "normalized" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "birthdate" : {
+          "type" : "object",
+          "properties" : {
+            "low" : {
+              "type" : "long",
+              "index" : "not_analyzed"
+            },
+            "high" : {
+              "type" : "long",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "deceased" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "gender" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "name" : {
+          "type" : "object",
+          "properties" : {
+            "exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "normalized" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "phone" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "phonetic" : {
+          "type" : "object",
+          "properties" : {
+            "exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "normalized" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "telecom" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "updated" : {
+          "type" : "long",
+          "index" : "not_analyzed"
+        },
+        "refs" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "tags" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "txt" : {
+          "type" : "text",
+          "store" : "no",
+          "analyzer" : "standard",
+          "index" : "analyzed"
+        }
+      }
+    },
+    "ProcedureRequest" : {
+      "dynamic" : true,
+      "properties" : {
+	    "id" : {
+          "type" : "long",
+          "index" : "not_analyzed"
+        },
+        "time" : {
+          "type" : "long",
+          "index" : "not_analyzed"
+        },
+        "identifier" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "updated" : {
+          "type" : "long",
+          "index" : "not_analyzed"
+        },
+        "refs" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "tags" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "txt" : {
+          "type" : "text",
+          "store" : "no",
+          "analyzer" : "standard",
+          "index" : "analyzed"
+        }
+      }
+    },
+    "Practitioner" : {
+      "dynamic" : true,
+      "properties" : {
+	    "id" : {
+          "type" : "long",
+          "index" : "not_analyzed"
+        },
+        "time" : {
+          "type" : "long",
+          "index" : "not_analyzed"
+        },
+        "gender" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "name" : {
+          "type" : "object",
+          "properties" : {
+            "exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "normalized" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "phonetic" : {
+          "type" : "object",
+          "properties" : {
+            "exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "normalized" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "role" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "specialty" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "updated" : {
+          "type" : "long",
+          "index" : "not_analyzed"
+        },
+        "refs" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "tags" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "txt" : {
+          "type" : "text",
+          "store" : "no",
+          "analyzer" : "standard",
+          "index" : "analyzed"
+        }
+      }
+    },
+    "AllergyIntolerance" : {
+      "dynamic" : true,
+      "properties" : {
+	    "id" : {
+          "type" : "long",
+          "index" : "not_analyzed"
+        },
+        "time" : {
+          "type" : "long",
+          "index" : "not_analyzed"
+        },
+        "identifier" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "manifestation" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "manifestation_str" : {
+          "type" : "object",
+          "properties" : {
+            "exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "normalized" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "severity" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "status" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "substance_str" : {
+          "type" : "object",
+          "properties" : {
+            "exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "normalized" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "updated" : {
+          "type" : "long",
+          "index" : "not_analyzed"
+        },
+        "refs" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "tags" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "txt" : {
+          "type" : "text",
+          "store" : "no",
+          "analyzer" : "standard",
+          "index" : "analyzed"
+        }
+      }
+    },
+    "Schedule" : {
+      "dynamic" : true,
+      "properties" : {
+	    "id" : {
+          "type" : "long",
+          "index" : "not_analyzed"
+        },
+        "time" : {
+          "type" : "long",
+          "index" : "not_analyzed"
+        },
+        "date" : {
+          "type" : "object",
+          "properties" : {
+            "low" : {
+              "type" : "long",
+              "index" : "not_analyzed"
+            },
+            "high" : {
+              "type" : "long",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "identifier" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "updated" : {
+          "type" : "long",
+          "index" : "not_analyzed"
+        },
+        "refs" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "tags" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "txt" : {
+          "type" : "text",
+          "store" : "no",
+          "analyzer" : "standard",
+          "index" : "analyzed"
+        }
+      }
+    },
+    "Medication" : {
+      "dynamic" : true,
+      "properties" : {
+	    "id" : {
+          "type" : "long",
+          "index" : "not_analyzed"
+        },
+        "time" : {
+          "type" : "long",
+          "index" : "not_analyzed"
+        },
+        "container" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "container_str" : {
+          "type" : "object",
+          "properties" : {
+            "exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "normalized" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "form" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "form_str" : {
+          "type" : "object",
+          "properties" : {
+            "exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "normalized" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "updated" : {
+          "type" : "long",
+          "index" : "not_analyzed"
+        },
+        "refs" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "tags" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "txt" : {
+          "type" : "text",
+          "store" : "no",
+          "analyzer" : "standard",
+          "index" : "analyzed"
+        }
+      }
+    },
+    "Encounter" : {
+      "dynamic" : true,
+      "properties" : {
+	    "id" : {
+          "type" : "long",
+          "index" : "not_analyzed"
+        },
+        "time" : {
+          "type" : "long",
+          "index" : "not_analyzed"
+        },
+        "date" : {
+          "type" : "object",
+          "properties" : {
+            "low" : {
+              "type" : "long",
+              "index" : "not_analyzed"
+            },
+            "high" : {
+              "type" : "long",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "identifier" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "length" : {
+          "type" : "double",
+          "index" : "not_analyzed"
+        },
+        "participant-type" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "participant-type_str" : {
+          "type" : "object",
+          "properties" : {
+            "exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "normalized" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "status" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "updated" : {
+          "type" : "long",
+          "index" : "not_analyzed"
+        },
+		"patient" : {
+          "properties" : {
+            "path" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "reference" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "refs" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "tags" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "txt" : {
+          "type" : "text",
+          "store" : "no",
+          "analyzer" : "standard",
+          "index" : "analyzed"
+        }
+      }
+    },
+    "Procedure" : {
+      "dynamic" : true,
+      "properties" : {
+	    "id" : {
+          "type" : "long",
+          "index" : "not_analyzed"
+        },
+        "time" : {
+          "type" : "long",
+          "index" : "not_analyzed"
+        },
+        "category" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "category_str" : {
+          "type" : "object",
+          "properties" : {
+            "exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "normalized" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "code" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "code_str" : {
+          "type" : "object",
+          "properties" : {
+            "exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "normalized" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "extension" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "identifier" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "updated" : {
+          "type" : "long",
+          "index" : "not_analyzed"
+        },
+        "refs" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "tags" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "txt" : {
+          "type" : "text",
+          "store" : "no",
+          "analyzer" : "standard",
+          "index" : "analyzed"
+        }
+      }
+    },
+    "Slot" : {
+      "dynamic" : true,
+      "properties" : {
+	    "id" : {
+          "type" : "long",
+          "index" : "not_analyzed"
+        },
+        "time" : {
+          "type" : "long",
+          "index" : "not_analyzed"
+        },
+        "identifier" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "start" : {
+          "type" : "object",
+          "properties" : {
+            "low" : {
+              "type" : "long",
+              "index" : "not_analyzed"
+            },
+            "high" : {
+              "type" : "long",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "status" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "updated" : {
+          "type" : "long",
+          "index" : "not_analyzed"
+        },
+        "refs" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "tags" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "txt" : {
+          "type" : "text",
+          "store" : "no",
+          "analyzer" : "standard",
+          "index" : "analyzed"
+        }
+      }
+    },
+    "MedicationOrder" : {
+      "dynamic" : true,
+      "properties" : {
+	    "id" : {
+          "type" : "long",
+          "index" : "not_analyzed"
+        },
+        "time" : {
+          "type" : "long",
+          "index" : "not_analyzed"
+        },
+        "datewritten" : {
+          "type" : "object",
+          "properties" : {
+            "low" : {
+              "type" : "long",
+              "index" : "not_analyzed"
+            },
+            "high" : {
+              "type" : "long",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "identifier" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "status" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "updated" : {
+          "type" : "long",
+          "index" : "not_analyzed"
+        },
+        "refs" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "tags" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "txt" : {
+          "type" : "text",
+          "store" : "no",
+          "analyzer" : "standard",
+          "index" : "analyzed"
+        }
+      }
+    },
+    "Subscription" : {
+      "dynamic" : true,
+      "properties" : {
+	    "id" : {
+          "type" : "long",
+          "index" : "not_analyzed"
+        },
+        "time" : {
+          "type" : "long",
+          "index" : "not_analyzed"
+        },
+        "criteria" : {
+          "type" : "object",
+          "properties" : {
+            "exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "normalized" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "status" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "type" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "updated" : {
+          "type" : "long",
+          "index" : "not_analyzed"
+        },
+        "refs" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "tags" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "txt" : {
+          "type" : "text",
+          "store" : "no",
+          "analyzer" : "standard",
+          "index" : "analyzed"
+        }
+      }
+    },
+    "Claim" : {
+      "dynamic" : true,
+      "properties" : {
+	    "id" : {
+          "type" : "long",
+          "index" : "not_analyzed"
+        },
+        "time" : {
+          "type" : "long",
+          "index" : "not_analyzed"
+        },
+        "created" : {
+          "type" : "object",
+          "properties" : {
+            "low" : {
+              "type" : "long",
+              "index" : "not_analyzed"
+            },
+            "high" : {
+              "type" : "long",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "identifier" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "updated" : {
+          "type" : "long",
+          "index" : "not_analyzed"
+        },
+        "refs" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "tags" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "txt" : {
+          "type" : "text",
+          "store" : "no",
+          "analyzer" : "standard",
+          "index" : "analyzed"
+        }
+      }
+    },
+    "Location" : {
+      "dynamic" : true,
+      "properties" : {
+	    "id" : {
+          "type" : "long",
+          "index" : "not_analyzed"
+        },
+        "time" : {
+          "type" : "long",
+          "index" : "not_analyzed"
+        },
+        "extension" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "identifier" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "status" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "type" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "updated" : {
+          "type" : "long",
+          "index" : "not_analyzed"
+        },
+        "refs" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "tags" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "txt" : {
+          "type" : "text",
+          "store" : "no",
+          "analyzer" : "standard",
+          "index" : "analyzed"
+        }
+      }
+    }
+  }
+}

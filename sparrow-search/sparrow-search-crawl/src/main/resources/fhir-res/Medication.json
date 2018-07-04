@@ -1,0 +1,4464 @@
+{
+  "resourceType": "Bundle",
+  "id": "8888ed65-17b2-4ced-bbfd-8cc517bac8ae",
+  "meta": {
+    "lastUpdated": "2017-05-11T17:57:32.124+08:00"
+  },
+  "type": "searchset",
+  "total": 21419,
+  "link": [
+    {
+      "relation": "self",
+      "url": "http://10.10.15.38:8083/resources/Medication?_count=50"
+    },
+    {
+      "relation": "next",
+      "url": "http://10.10.15.38:8083/resources?_getpages=4ae26ee9-4eb8-48ee-92b1-2238ad204672&_getpagesoffset=50&_count=50&_bundletype=searchset"
+    }
+  ],
+  "entry": [
+    {
+      "fullUrl": "http://10.10.15.38:8083/resources/Medication/52",
+      "resource": {
+        "resourceType": "Medication",
+        "id": "52",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2016-06-16T08:47:50.940+08:00"
+        },
+        "extension": [
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/alias-name",
+            "valueCode": "无商品名"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/spec",
+            "valueCode": "30mg*12片"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/route-unit",
+            "valueCode": "盒"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/least-unit",
+            "valueCode": "片"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/number/proportion",
+            "valueDecimal": 12
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-basic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-poison",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/antibiotic-type",
+            "valueCode": "0"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/code/medication",
+              "code": "11046701",
+              "display": "艾地苯醌片"
+            }
+          ]
+        },
+        "manufacturer": {
+          "display": "0313"
+        },
+        "product": {
+          "form": {
+            "coding": [
+              {
+                "system": "urn:oid:2.16.156.10011.2.3.1.211",
+                "code": "1",
+                "display": "滴剂"
+              }
+            ]
+          },
+          "batch": [
+            {
+              "lotNumber": "国药准字H10970363"
+            }
+          ]
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://10.10.15.38:8083/resources/Medication/202",
+      "resource": {
+        "resourceType": "Medication",
+        "id": "202",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2016-06-16T14:24:56.638+08:00"
+        },
+        "extension": [
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/alias-name",
+            "valueCode": "无商品名"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/spec",
+            "valueCode": "30mg*12片"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/route-unit",
+            "valueCode": "盒"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/least-unit",
+            "valueCode": "片"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/number/proportion",
+            "valueDecimal": 12
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-basic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-poison",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/antibiotic-type",
+            "valueCode": "0"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/code/medication",
+              "code": "11046701",
+              "display": "艾地苯醌片"
+            }
+          ]
+        },
+        "manufacturer": {
+          "display": "0313"
+        },
+        "product": {
+          "form": {
+            "coding": [
+              {
+                "system": "urn:oid:2.16.156.10011.2.3.1.211",
+                "code": "1",
+                "display": "滴剂"
+              }
+            ]
+          },
+          "batch": [
+            {
+              "lotNumber": "国药准字H10970363"
+            }
+          ]
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://10.10.15.38:8083/resources/Medication/203",
+      "resource": {
+        "resourceType": "Medication",
+        "id": "203",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2016-06-16T15:32:31.785+08:00"
+        },
+        "extension": [
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/alias-name",
+            "valueCode": "无商品名"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/spec",
+            "valueCode": "g"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/route-unit",
+            "valueCode": "g"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/least-unit",
+            "valueCode": "g"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/number/proportion",
+            "valueDecimal": 1
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-basic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-poison",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/antibiotic-type",
+            "valueCode": "0"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/code/medication",
+              "code": "33034001",
+              "display": "[颗粒]紫珠"
+            }
+          ]
+        },
+        "manufacturer": {
+          "display": "0001"
+        },
+        "product": {
+          "form": {
+            "coding": [
+              {
+                "system": "urn:oid:2.16.156.10011.2.3.1.211",
+                "code": "3"
+              }
+            ]
+          }
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://10.10.15.38:8083/resources/Medication/204",
+      "resource": {
+        "resourceType": "Medication",
+        "id": "204",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2016-06-16T16:29:18.549+08:00"
+        },
+        "extension": [
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/alias-name",
+            "valueCode": "无商品名"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/spec",
+            "valueCode": "30mg*12片"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/route-unit",
+            "valueCode": "盒"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/least-unit",
+            "valueCode": "片"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/number/proportion",
+            "valueDecimal": 12
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-basic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-poison",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/antibiotic-type",
+            "valueCode": "0"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/code/medication",
+              "code": "11046701",
+              "display": "艾地苯醌片"
+            }
+          ]
+        },
+        "manufacturer": {
+          "display": "0313"
+        },
+        "product": {
+          "form": {
+            "coding": [
+              {
+                "system": "urn:oid:2.16.156.10011.2.3.1.211",
+                "code": "1",
+                "display": "滴剂"
+              }
+            ]
+          },
+          "batch": [
+            {
+              "lotNumber": "国药准字H10970363"
+            }
+          ]
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://10.10.15.38:8083/resources/Medication/205",
+      "resource": {
+        "resourceType": "Medication",
+        "id": "205",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2016-06-16T16:30:27.975+08:00"
+        },
+        "extension": [
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/alias-name",
+            "valueCode": "无商品名"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/spec",
+            "valueCode": "g"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/route-unit",
+            "valueCode": "g"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/least-unit",
+            "valueCode": "g"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/number/proportion",
+            "valueDecimal": 1
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-basic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-poison",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/antibiotic-type",
+            "valueCode": "0"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/code/medication",
+              "code": "33008601",
+              "display": "[颗粒]大青叶"
+            }
+          ]
+        },
+        "manufacturer": {
+          "display": "0001"
+        },
+        "product": {
+          "form": {
+            "coding": [
+              {
+                "system": "urn:oid:2.16.156.10011.2.3.1.211",
+                "code": "3"
+              }
+            ]
+          }
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://10.10.15.38:8083/resources/Medication/719",
+      "resource": {
+        "resourceType": "Medication",
+        "id": "719",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2016-06-16T18:00:28.901+08:00"
+        },
+        "extension": [
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/alias-name",
+            "valueCode": "无商品名"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/spec",
+            "valueCode": "50ml:30mg"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/route-unit",
+            "valueCode": "瓶"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/least-unit",
+            "valueCode": "瓶"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/number/proportion",
+            "valueDecimal": 1
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-basic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-poison",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/antibiotic-type",
+            "valueCode": "0"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/code/medication",
+              "code": "11051501",
+              "display": "氨溴索葡萄糖注射液"
+            }
+          ]
+        },
+        "manufacturer": {
+          "display": "0512"
+        },
+        "product": {
+          "form": {
+            "coding": [
+              {
+                "system": "urn:oid:2.16.156.10011.2.3.1.211",
+                "code": "1"
+              }
+            ]
+          },
+          "batch": [
+            {
+              "lotNumber": "国药准字H20051580"
+            }
+          ]
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://10.10.15.38:8083/resources/Medication/720",
+      "resource": {
+        "resourceType": "Medication",
+        "id": "720",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2016-06-16T18:00:39.149+08:00"
+        },
+        "extension": [
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/alias-name",
+            "valueCode": "无商品名"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/spec",
+            "valueCode": "50ml:30mg"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/route-unit",
+            "valueCode": "瓶"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/least-unit",
+            "valueCode": "瓶"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/number/proportion",
+            "valueDecimal": 1
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-basic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-poison",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/antibiotic-type",
+            "valueCode": "0"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/code/medication",
+              "code": "11051501",
+              "display": "氨溴索葡萄糖注射液"
+            }
+          ]
+        },
+        "manufacturer": {
+          "display": "0512"
+        },
+        "product": {
+          "form": {
+            "coding": [
+              {
+                "system": "urn:oid:2.16.156.10011.2.3.1.211",
+                "code": "1"
+              }
+            ]
+          },
+          "batch": [
+            {
+              "lotNumber": "国药准字H20051580"
+            }
+          ]
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://10.10.15.38:8083/resources/Medication/825",
+      "resource": {
+        "resourceType": "Medication",
+        "id": "825",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2016-06-17T09:06:47.669+08:00"
+        },
+        "extension": [
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/alias-name",
+            "valueCode": "无商品名"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/spec",
+            "valueCode": "2.5mg*20片"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/route-unit",
+            "valueCode": "盒"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/least-unit",
+            "valueCode": "盒"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/number/proportion",
+            "valueDecimal": 1
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-basic",
+            "valueBoolean": true
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-poison",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/antibiotic-type",
+            "valueCode": "0"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/code/medication",
+              "code": "11104801",
+              "display": "硫酸特布他林片"
+            }
+          ]
+        },
+        "manufacturer": {
+          "display": "0106"
+        },
+        "product": {
+          "form": {
+            "coding": [
+              {
+                "system": "urn:oid:2.16.156.10011.2.3.1.211",
+                "code": "1"
+              }
+            ]
+          },
+          "batch": [
+            {
+              "lotNumber": "国药准字H32022694"
+            }
+          ]
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://10.10.15.38:8083/resources/Medication/836",
+      "resource": {
+        "resourceType": "Medication",
+        "id": "836",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2016-06-17T09:18:53.001+08:00"
+        },
+        "extension": [
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/alias-name",
+            "valueCode": "无商品名"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/spec",
+            "valueCode": "20mg*10片"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/route-unit",
+            "valueCode": "盒"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/least-unit",
+            "valueCode": "盒"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/number/proportion",
+            "valueDecimal": 1
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-basic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-poison",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/antibiotic-type",
+            "valueCode": "0"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/code/medication",
+              "code": "11012502",
+              "display": "氢溴酸西酞普兰片"
+            }
+          ]
+        },
+        "manufacturer": {
+          "display": "0466"
+        },
+        "product": {
+          "form": {
+            "coding": [
+              {
+                "system": "urn:oid:2.16.156.10011.2.3.1.211",
+                "code": "1"
+              }
+            ]
+          }
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://10.10.15.38:8083/resources/Medication/2183",
+      "resource": {
+        "resourceType": "Medication",
+        "id": "2183",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2016-06-17T15:28:14.380+08:00"
+        },
+        "extension": [
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/alias-name",
+            "valueCode": "无商品名"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/spec",
+            "valueCode": "0.25g*20粒"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/route-unit",
+            "valueCode": "盒"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/least-unit",
+            "valueCode": "粒"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/number/proportion",
+            "valueDecimal": 20
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-basic",
+            "valueBoolean": true
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-poison",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/antibiotic-type",
+            "valueCode": "3"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/code/medication",
+              "code": "11002101",
+              "display": "红霉素肠溶胶囊"
+            }
+          ]
+        },
+        "manufacturer": {
+          "display": "0018"
+        },
+        "product": {
+          "form": {
+            "coding": [
+              {
+                "system": "urn:oid:2.16.156.10011.2.3.1.211",
+                "code": "1"
+              }
+            ]
+          },
+          "batch": [
+            {
+              "lotNumber": "国药准字H20065180"
+            }
+          ]
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://10.10.15.38:8083/resources/Medication/2528",
+      "resource": {
+        "resourceType": "Medication",
+        "id": "2528",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2016-06-17T15:32:58.292+08:00"
+        },
+        "extension": [
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/alias-name",
+            "valueCode": "无商品名"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/spec",
+            "valueCode": "0.25g*20粒"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/route-unit",
+            "valueCode": "盒"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/least-unit",
+            "valueCode": "盒"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/number/proportion",
+            "valueDecimal": 1
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-basic",
+            "valueBoolean": true
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-poison",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/antibiotic-type",
+            "valueCode": "3"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/code/medication",
+              "code": "11002101",
+              "display": "红霉素肠溶胶囊"
+            }
+          ]
+        },
+        "manufacturer": {
+          "display": "0018"
+        },
+        "product": {
+          "form": {
+            "coding": [
+              {
+                "system": "urn:oid:2.16.156.10011.2.3.1.211",
+                "code": "1"
+              }
+            ]
+          },
+          "batch": [
+            {
+              "lotNumber": "国药准字H20065180"
+            }
+          ]
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://10.10.15.38:8083/resources/Medication/2811",
+      "resource": {
+        "resourceType": "Medication",
+        "id": "2811",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2016-06-18T01:48:04.042+08:00"
+        },
+        "extension": [
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/alias-name",
+            "valueCode": "无商品名"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/spec",
+            "valueCode": "0.2mg*3片"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/route-unit",
+            "valueCode": "盒"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/least-unit",
+            "valueCode": "片"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/number/proportion",
+            "valueDecimal": 3
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-basic",
+            "valueBoolean": true
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-poison",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/antibiotic-type",
+            "valueCode": "0"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/code/medication",
+              "code": "11094601",
+              "display": "米索前列醇片"
+            }
+          ]
+        },
+        "manufacturer": {
+          "display": "5066"
+        },
+        "product": {
+          "form": {
+            "coding": [
+              {
+                "system": "urn:oid:2.16.156.10011.2.3.1.211",
+                "code": "1"
+              }
+            ]
+          }
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://10.10.15.38:8083/resources/Medication/2812",
+      "resource": {
+        "resourceType": "Medication",
+        "id": "2812",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2016-06-18T01:50:39.218+08:00"
+        },
+        "extension": [
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/alias-name",
+            "valueCode": "无商品名"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/spec",
+            "valueCode": "0.2mg*3片"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/route-unit",
+            "valueCode": "盒"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/least-unit",
+            "valueCode": "片"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/number/proportion",
+            "valueDecimal": 3
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-basic",
+            "valueBoolean": true
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-poison",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/antibiotic-type",
+            "valueCode": "0"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/code/medication",
+              "code": "11094601",
+              "display": "米索前列醇片"
+            }
+          ]
+        },
+        "manufacturer": {
+          "display": "5066"
+        },
+        "product": {
+          "form": {
+            "coding": [
+              {
+                "system": "urn:oid:2.16.156.10011.2.3.1.211",
+                "code": "1"
+              }
+            ]
+          }
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://10.10.15.38:8083/resources/Medication/2818",
+      "resource": {
+        "resourceType": "Medication",
+        "id": "2818",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2016-06-18T07:00:42.798+08:00"
+        },
+        "extension": [
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/alias-name",
+            "valueCode": "无商品名"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/spec",
+            "valueCode": "5g*15袋"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/route-unit",
+            "valueCode": "盒"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/least-unit",
+            "valueCode": "盒"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/number/proportion",
+            "valueDecimal": 1
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-basic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-poison",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/antibiotic-type",
+            "valueCode": "0"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/code/medication",
+              "code": "11096001",
+              "display": "小儿柴桂退热颗粒"
+            }
+          ]
+        },
+        "manufacturer": {
+          "display": "5024"
+        },
+        "product": {
+          "form": {
+            "coding": [
+              {
+                "system": "urn:oid:2.16.156.10011.2.3.1.211",
+                "code": "1"
+              }
+            ]
+          },
+          "batch": [
+            {
+              "lotNumber": "国药准字Z20050716"
+            }
+          ]
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://10.10.15.38:8083/resources/Medication/2819",
+      "resource": {
+        "resourceType": "Medication",
+        "id": "2819",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2016-06-18T07:03:49.100+08:00"
+        },
+        "extension": [
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/alias-name",
+            "valueCode": "无商品名"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/spec",
+            "valueCode": "5g*15袋"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/route-unit",
+            "valueCode": "盒"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/least-unit",
+            "valueCode": "袋"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/number/proportion",
+            "valueDecimal": 15
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-basic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-poison",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/antibiotic-type",
+            "valueCode": "0"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/code/medication",
+              "code": "11096001",
+              "display": "小儿柴桂退热颗粒"
+            }
+          ]
+        },
+        "manufacturer": {
+          "display": "5024"
+        },
+        "product": {
+          "form": {
+            "coding": [
+              {
+                "system": "urn:oid:2.16.156.10011.2.3.1.211",
+                "code": "1"
+              }
+            ]
+          },
+          "batch": [
+            {
+              "lotNumber": "国药准字Z20050716"
+            }
+          ]
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://10.10.15.38:8083/resources/Medication/2820",
+      "resource": {
+        "resourceType": "Medication",
+        "id": "2820",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2016-06-18T07:05:22.649+08:00"
+        },
+        "extension": [
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/alias-name",
+            "valueCode": "无商品名"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/spec",
+            "valueCode": "5g*15袋"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/route-unit",
+            "valueCode": "盒"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/least-unit",
+            "valueCode": "盒"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/number/proportion",
+            "valueDecimal": 1
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-basic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-poison",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/antibiotic-type",
+            "valueCode": "0"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/code/medication",
+              "code": "11096001",
+              "display": "小儿柴桂退热颗粒"
+            }
+          ]
+        },
+        "manufacturer": {
+          "display": "5024"
+        },
+        "product": {
+          "form": {
+            "coding": [
+              {
+                "system": "urn:oid:2.16.156.10011.2.3.1.211",
+                "code": "1"
+              }
+            ]
+          },
+          "batch": [
+            {
+              "lotNumber": "国药准字Z20050716"
+            }
+          ]
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://10.10.15.38:8083/resources/Medication/3008",
+      "resource": {
+        "resourceType": "Medication",
+        "id": "3008",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2016-06-18T08:21:43.349+08:00"
+        },
+        "extension": [
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/alias-name",
+            "valueCode": "无商品名"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/spec",
+            "valueCode": "4g*10袋"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/route-unit",
+            "valueCode": "盒"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/least-unit",
+            "valueCode": "盒"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/number/proportion",
+            "valueDecimal": 1
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-basic",
+            "valueBoolean": true
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-poison",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/antibiotic-type",
+            "valueCode": "0"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/code/medication",
+              "code": "22011301",
+              "display": "银黄颗粒"
+            }
+          ]
+        },
+        "manufacturer": {
+          "display": "5077"
+        },
+        "product": {
+          "form": {
+            "coding": [
+              {
+                "system": "urn:oid:2.16.156.10011.2.3.1.211",
+                "code": "2"
+              }
+            ]
+          },
+          "batch": [
+            {
+              "lotNumber": "国药准字Z20053156"
+            }
+          ]
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://10.10.15.38:8083/resources/Medication/4964",
+      "resource": {
+        "resourceType": "Medication",
+        "id": "4964",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2016-06-19T08:35:39.833+08:00"
+        },
+        "extension": [
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/alias-name",
+            "valueCode": "无商品名"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/spec",
+            "valueCode": "25mg*20T"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/route-unit",
+            "valueCode": "盒"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/least-unit",
+            "valueCode": "盒"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/number/proportion",
+            "valueDecimal": 1
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-basic",
+            "valueBoolean": true
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-poison",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/antibiotic-type",
+            "valueCode": "0"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/code/medication",
+              "code": "11104501",
+              "display": "阿法骨化醇软胶囊"
+            }
+          ]
+        },
+        "manufacturer": {
+          "display": "0069"
+        },
+        "product": {
+          "form": {
+            "coding": [
+              {
+                "system": "urn:oid:2.16.156.10011.2.3.1.211",
+                "code": "1"
+              }
+            ]
+          },
+          "batch": [
+            {
+              "lotNumber": "国药准字H20067903"
+            }
+          ]
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://10.10.15.38:8083/resources/Medication/7274",
+      "resource": {
+        "resourceType": "Medication",
+        "id": "7274",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2016-06-20T10:20:23.017+08:00"
+        },
+        "extension": [
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/alias-name",
+            "valueCode": "无商品名"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/spec",
+            "valueCode": "20ml"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/route-unit",
+            "valueCode": "支"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/least-unit",
+            "valueCode": "支"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/number/proportion",
+            "valueDecimal": 1
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-basic",
+            "valueBoolean": true
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-poison",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/antibiotic-type",
+            "valueCode": "0"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/code/medication",
+              "code": "11023801",
+              "display": "开塞露"
+            }
+          ]
+        },
+        "manufacturer": {
+          "display": "5027"
+        },
+        "product": {
+          "form": {
+            "coding": [
+              {
+                "system": "urn:oid:2.16.156.10011.2.3.1.211",
+                "code": "1"
+              }
+            ]
+          },
+          "batch": [
+            {
+              "lotNumber": "国药准字H20103545"
+            }
+          ]
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://10.10.15.38:8083/resources/Medication/7753",
+      "resource": {
+        "resourceType": "Medication",
+        "id": "7753",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2016-06-20T15:19:55.722+08:00"
+        },
+        "extension": [
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/alias-name",
+            "valueCode": "无商品名"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/spec",
+            "valueCode": "100ml;25mg;0.9g"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/route-unit",
+            "valueCode": "瓶"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/least-unit",
+            "valueCode": "瓶"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/number/proportion",
+            "valueDecimal": 1
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-basic",
+            "valueBoolean": true
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-poison",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/antibiotic-type",
+            "valueCode": "0"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/code/medication",
+              "code": "11104901",
+              "display": "丁苯肽氯化钠注射液"
+            }
+          ]
+        },
+        "manufacturer": {
+          "display": "5074"
+        },
+        "product": {
+          "form": {
+            "coding": [
+              {
+                "system": "urn:oid:2.16.156.10011.2.3.1.211",
+                "code": "1"
+              }
+            ]
+          },
+          "batch": [
+            {
+              "lotNumber": "国药准字H20100041"
+            }
+          ]
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://10.10.15.38:8083/resources/Medication/7897",
+      "resource": {
+        "resourceType": "Medication",
+        "id": "7897",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2016-06-20T16:17:52.938+08:00"
+        },
+        "extension": [
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/alias-name",
+            "valueCode": "无商品名"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/spec",
+            "valueCode": "g"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/route-unit",
+            "valueCode": "g"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/least-unit",
+            "valueCode": "g"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/number/proportion",
+            "valueDecimal": 1
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-basic",
+            "valueBoolean": true
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-poison",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/antibiotic-type",
+            "valueCode": "0"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/code/medication",
+              "code": "33068801",
+              "display": "枣仁"
+            }
+          ]
+        },
+        "manufacturer": {
+          "display": "0473"
+        },
+        "product": {
+          "form": {
+            "coding": [
+              {
+                "system": "urn:oid:2.16.156.10011.2.3.1.211",
+                "code": "3"
+              }
+            ]
+          }
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://10.10.15.38:8083/resources/Medication/7983",
+      "resource": {
+        "resourceType": "Medication",
+        "id": "7983",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2016-06-20T16:50:04.264+08:00"
+        },
+        "extension": [
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/alias-name",
+            "valueCode": "无商品名"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/spec",
+            "valueCode": "g"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/route-unit",
+            "valueCode": "g"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/least-unit",
+            "valueCode": "g"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/number/proportion",
+            "valueDecimal": 1
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-basic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-poison",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/antibiotic-type",
+            "valueCode": "0"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/code/medication",
+              "code": "33068901",
+              "display": "生槟榔"
+            }
+          ]
+        },
+        "manufacturer": {
+          "display": "0473"
+        },
+        "product": {
+          "form": {
+            "coding": [
+              {
+                "system": "urn:oid:2.16.156.10011.2.3.1.211",
+                "code": "3"
+              }
+            ]
+          }
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://10.10.15.38:8083/resources/Medication/8903",
+      "resource": {
+        "resourceType": "Medication",
+        "id": "8903",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2016-06-21T09:31:05.674+08:00"
+        },
+        "extension": [
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/alias-name",
+            "valueCode": "无商品名"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/spec",
+            "valueCode": "1ml:10mg"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/route-unit",
+            "valueCode": "支"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/least-unit",
+            "valueCode": "支"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/number/proportion",
+            "valueDecimal": 1
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-basic",
+            "valueBoolean": true
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-poison",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/antibiotic-type",
+            "valueCode": "0"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/code/medication",
+              "code": "11031601",
+              "display": "黄体酮注射液"
+            }
+          ]
+        },
+        "manufacturer": {
+          "display": "0217"
+        },
+        "product": {
+          "form": {
+            "coding": [
+              {
+                "system": "urn:oid:2.16.156.10011.2.3.1.211",
+                "code": "1"
+              }
+            ]
+          },
+          "batch": [
+            {
+              "lotNumber": "国药准字H33020828"
+            }
+          ]
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://10.10.15.38:8083/resources/Medication/8908",
+      "resource": {
+        "resourceType": "Medication",
+        "id": "8908",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2016-06-21T09:31:49.213+08:00"
+        },
+        "extension": [
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/alias-name",
+            "valueCode": "无商品名"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/spec",
+            "valueCode": "20mg：1ml"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/route-unit",
+            "valueCode": "支"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/least-unit",
+            "valueCode": "支"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/number/proportion",
+            "valueDecimal": 1
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-basic",
+            "valueBoolean": true
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-poison",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/antibiotic-type",
+            "valueCode": "0"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/code/medication",
+              "code": "11031602",
+              "display": "黄体酮注射液"
+            }
+          ]
+        },
+        "manufacturer": {
+          "display": "0200"
+        },
+        "product": {
+          "form": {
+            "coding": [
+              {
+                "system": "urn:oid:2.16.156.10011.2.3.1.211",
+                "code": "1"
+              }
+            ]
+          },
+          "batch": [
+            {
+              "lotNumber": "国药准字H33020829"
+            }
+          ]
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://10.10.15.38:8083/resources/Medication/8917",
+      "resource": {
+        "resourceType": "Medication",
+        "id": "8917",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2016-06-21T09:33:39.830+08:00"
+        },
+        "extension": [
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/alias-name",
+            "valueCode": "无商品名"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/spec",
+            "valueCode": "1ml:10mg"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/route-unit",
+            "valueCode": "支"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/least-unit",
+            "valueCode": "支"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/number/proportion",
+            "valueDecimal": 1
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-basic",
+            "valueBoolean": true
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-poison",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/antibiotic-type",
+            "valueCode": "0"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/code/medication",
+              "code": "11031601",
+              "display": "黄体酮注射液"
+            }
+          ]
+        },
+        "manufacturer": {
+          "display": "0200"
+        },
+        "product": {
+          "form": {
+            "coding": [
+              {
+                "system": "urn:oid:2.16.156.10011.2.3.1.211",
+                "code": "1"
+              }
+            ]
+          },
+          "batch": [
+            {
+              "lotNumber": "国药准字H33020828"
+            }
+          ]
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://10.10.15.38:8083/resources/Medication/9004",
+      "resource": {
+        "resourceType": "Medication",
+        "id": "9004",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2016-06-21T10:06:01.871+08:00"
+        },
+        "extension": [
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/alias-name",
+            "valueCode": "无商品名"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/spec",
+            "valueCode": "g"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/route-unit",
+            "valueCode": "g"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/least-unit",
+            "valueCode": "g"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/number/proportion",
+            "valueDecimal": 1
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-basic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-poison",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/antibiotic-type",
+            "valueCode": "0"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/code/medication",
+              "code": "33067301",
+              "display": "伸筋草"
+            }
+          ]
+        },
+        "manufacturer": {
+          "display": "0473"
+        },
+        "product": {
+          "form": {
+            "coding": [
+              {
+                "system": "urn:oid:2.16.156.10011.2.3.1.211",
+                "code": "3"
+              }
+            ]
+          }
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://10.10.15.38:8083/resources/Medication/9050",
+      "resource": {
+        "resourceType": "Medication",
+        "id": "9050",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2016-06-21T10:17:06.230+08:00"
+        },
+        "extension": [
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/alias-name",
+            "valueCode": "无商品名"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/spec",
+            "valueCode": "g"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/route-unit",
+            "valueCode": "g"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/least-unit",
+            "valueCode": "g"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/number/proportion",
+            "valueDecimal": 1
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-basic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-poison",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/antibiotic-type",
+            "valueCode": "0"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/code/medication",
+              "code": "33039502",
+              "display": "伸筋草"
+            }
+          ]
+        },
+        "manufacturer": {
+          "display": "0473"
+        },
+        "product": {
+          "form": {
+            "coding": [
+              {
+                "system": "urn:oid:2.16.156.10011.2.3.1.211",
+                "code": "3"
+              }
+            ]
+          }
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://10.10.15.38:8083/resources/Medication/9086",
+      "resource": {
+        "resourceType": "Medication",
+        "id": "9086",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2016-06-21T10:27:42.918+08:00"
+        },
+        "extension": [
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/alias-name",
+            "valueCode": "无商品名"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/spec",
+            "valueCode": "g"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/route-unit",
+            "valueCode": "g"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/least-unit",
+            "valueCode": "g"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/number/proportion",
+            "valueDecimal": 1
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-basic",
+            "valueBoolean": true
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-poison",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/antibiotic-type",
+            "valueCode": "0"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/code/medication",
+              "code": "33041402",
+              "display": "生山楂"
+            }
+          ]
+        },
+        "manufacturer": {
+          "display": "0473"
+        },
+        "product": {
+          "form": {
+            "coding": [
+              {
+                "system": "urn:oid:2.16.156.10011.2.3.1.211",
+                "code": "3"
+              }
+            ]
+          }
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://10.10.15.38:8083/resources/Medication/9088",
+      "resource": {
+        "resourceType": "Medication",
+        "id": "9088",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2016-06-21T10:29:08.892+08:00"
+        },
+        "extension": [
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/alias-name",
+            "valueCode": "无商品名"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/spec",
+            "valueCode": "g"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/route-unit",
+            "valueCode": "g"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/least-unit",
+            "valueCode": "g"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/number/proportion",
+            "valueDecimal": 1
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-basic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-poison",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/antibiotic-type",
+            "valueCode": "0"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/code/medication",
+              "code": "33041403",
+              "display": "生山楂"
+            }
+          ]
+        },
+        "manufacturer": {
+          "display": "0473"
+        },
+        "product": {
+          "form": {
+            "coding": [
+              {
+                "system": "urn:oid:2.16.156.10011.2.3.1.211",
+                "code": "3"
+              }
+            ]
+          }
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://10.10.15.38:8083/resources/Medication/9092",
+      "resource": {
+        "resourceType": "Medication",
+        "id": "9092",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2016-06-21T10:31:49.282+08:00"
+        },
+        "extension": [
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/alias-name",
+            "valueCode": "无商品名"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/spec",
+            "valueCode": "250ml:12.5g/瓶"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/route-unit",
+            "valueCode": "瓶"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/least-unit",
+            "valueCode": "瓶"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/number/proportion",
+            "valueDecimal": 1
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-basic",
+            "valueBoolean": true
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-poison",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/antibiotic-type",
+            "valueCode": "0"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/code/medication",
+              "code": "11051801",
+              "display": "复方氨基酸注射液（18AA）"
+            }
+          ]
+        },
+        "manufacturer": {
+          "display": "0025"
+        },
+        "product": {
+          "form": {
+            "coding": [
+              {
+                "system": "urn:oid:2.16.156.10011.2.3.1.211",
+                "code": "1"
+              }
+            ]
+          }
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://10.10.15.38:8083/resources/Medication/9093",
+      "resource": {
+        "resourceType": "Medication",
+        "id": "9093",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2016-06-21T10:33:01.237+08:00"
+        },
+        "extension": [
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/alias-name",
+            "valueCode": "无商品名"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/spec",
+            "valueCode": "1ml:10u"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/route-unit",
+            "valueCode": "支"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/least-unit",
+            "valueCode": "支"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/number/proportion",
+            "valueDecimal": 1
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-basic",
+            "valueBoolean": true
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-poison",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/antibiotic-type",
+            "valueCode": "0"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/code/medication",
+              "code": "11043301",
+              "display": "缩宫素注射液"
+            }
+          ]
+        },
+        "manufacturer": {
+          "display": "0288"
+        },
+        "product": {
+          "form": {
+            "coding": [
+              {
+                "system": "urn:oid:2.16.156.10011.2.3.1.211",
+                "code": "1"
+              }
+            ]
+          },
+          "batch": [
+            {
+              "lotNumber": "国药准字H34020474"
+            }
+          ]
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://10.10.15.38:8083/resources/Medication/9099",
+      "resource": {
+        "resourceType": "Medication",
+        "id": "9099",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2016-06-21T10:34:23.272+08:00"
+        },
+        "extension": [
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/alias-name",
+            "valueCode": "无商品名"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/spec",
+            "valueCode": "1ml:10u"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/route-unit",
+            "valueCode": "支"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/least-unit",
+            "valueCode": "支"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/number/proportion",
+            "valueDecimal": 1
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-basic",
+            "valueBoolean": true
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-poison",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/antibiotic-type",
+            "valueCode": "0"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/code/medication",
+              "code": "11043301",
+              "display": "缩宫素注射液"
+            }
+          ]
+        },
+        "manufacturer": {
+          "display": "0288"
+        },
+        "product": {
+          "form": {
+            "coding": [
+              {
+                "system": "urn:oid:2.16.156.10011.2.3.1.211",
+                "code": "1"
+              }
+            ]
+          },
+          "batch": [
+            {
+              "lotNumber": "国药准字H34020474"
+            }
+          ]
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://10.10.15.38:8083/resources/Medication/9101",
+      "resource": {
+        "resourceType": "Medication",
+        "id": "9101",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2016-06-21T10:34:40.998+08:00"
+        },
+        "extension": [
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/alias-name",
+            "valueCode": "无商品名"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/spec",
+            "valueCode": "1ml:10u"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/route-unit",
+            "valueCode": "支"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/least-unit",
+            "valueCode": "支"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/number/proportion",
+            "valueDecimal": 1
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-basic",
+            "valueBoolean": true
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-poison",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/antibiotic-type",
+            "valueCode": "0"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/code/medication",
+              "code": "11043301",
+              "display": "缩宫素注射液"
+            }
+          ]
+        },
+        "manufacturer": {
+          "display": "0288"
+        },
+        "product": {
+          "form": {
+            "coding": [
+              {
+                "system": "urn:oid:2.16.156.10011.2.3.1.211",
+                "code": "1"
+              }
+            ]
+          },
+          "batch": [
+            {
+              "lotNumber": "国药准字H34020474"
+            }
+          ]
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://10.10.15.38:8083/resources/Medication/9122",
+      "resource": {
+        "resourceType": "Medication",
+        "id": "9122",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2016-06-21T10:52:16.943+08:00"
+        },
+        "extension": [
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/alias-name",
+            "valueCode": "无商品名"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/spec",
+            "valueCode": "0.25g*20粒"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/route-unit",
+            "valueCode": "盒"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/least-unit",
+            "valueCode": "粒"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/number/proportion",
+            "valueDecimal": 20
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-basic",
+            "valueBoolean": true
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-poison",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/antibiotic-type",
+            "valueCode": "3"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/code/medication",
+              "code": "11002101",
+              "display": "红霉素肠溶胶囊"
+            }
+          ]
+        },
+        "manufacturer": {
+          "display": "0018"
+        },
+        "product": {
+          "form": {
+            "coding": [
+              {
+                "system": "urn:oid:2.16.156.10011.2.3.1.211",
+                "code": "1"
+              }
+            ]
+          },
+          "batch": [
+            {
+              "lotNumber": "国药准字H20065180"
+            }
+          ]
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://10.10.15.38:8083/resources/Medication/9123",
+      "resource": {
+        "resourceType": "Medication",
+        "id": "9123",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2016-06-21T10:52:55.919+08:00"
+        },
+        "extension": [
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/alias-name",
+            "valueCode": "无商品名"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/spec",
+            "valueCode": "0.25g*20粒"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/route-unit",
+            "valueCode": "盒"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/least-unit",
+            "valueCode": "粒"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/number/proportion",
+            "valueDecimal": 1
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-basic",
+            "valueBoolean": true
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-poison",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/antibiotic-type",
+            "valueCode": "3"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/code/medication",
+              "code": "11002101",
+              "display": "红霉素肠溶胶囊"
+            }
+          ]
+        },
+        "manufacturer": {
+          "display": "0018"
+        },
+        "product": {
+          "form": {
+            "coding": [
+              {
+                "system": "urn:oid:2.16.156.10011.2.3.1.211",
+                "code": "1"
+              }
+            ]
+          },
+          "batch": [
+            {
+              "lotNumber": "国药准字H20065180"
+            }
+          ]
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://10.10.15.38:8083/resources/Medication/9124",
+      "resource": {
+        "resourceType": "Medication",
+        "id": "9124",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2016-06-21T10:53:01.996+08:00"
+        },
+        "extension": [
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/alias-name",
+            "valueCode": "无商品名"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/spec",
+            "valueCode": "0.25g*20粒"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/route-unit",
+            "valueCode": "盒"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/least-unit",
+            "valueCode": "盒"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/number/proportion",
+            "valueDecimal": 1
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-basic",
+            "valueBoolean": true
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-poison",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/antibiotic-type",
+            "valueCode": "3"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/code/medication",
+              "code": "11002101",
+              "display": "红霉素肠溶胶囊"
+            }
+          ]
+        },
+        "manufacturer": {
+          "display": "0018"
+        },
+        "product": {
+          "form": {
+            "coding": [
+              {
+                "system": "urn:oid:2.16.156.10011.2.3.1.211",
+                "code": "1"
+              }
+            ]
+          },
+          "batch": [
+            {
+              "lotNumber": "国药准字H20065180"
+            }
+          ]
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://10.10.15.38:8083/resources/Medication/9614",
+      "resource": {
+        "resourceType": "Medication",
+        "id": "9614",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2016-06-21T16:25:28.537+08:00"
+        },
+        "extension": [
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/alias-name",
+            "valueCode": "无商品名"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/spec",
+            "valueCode": "1ml;30mg"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/route-unit",
+            "valueCode": "支"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/least-unit",
+            "valueCode": "支"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/number/proportion",
+            "valueDecimal": 1
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-basic",
+            "valueBoolean": true
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-poison",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/antibiotic-type",
+            "valueCode": "0"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/code/medication",
+              "code": "11085902",
+              "display": "盐酸罂粟碱注射液"
+            }
+          ]
+        },
+        "manufacturer": {
+          "display": "5080"
+        },
+        "product": {
+          "form": {
+            "coding": [
+              {
+                "system": "urn:oid:2.16.156.10011.2.3.1.211",
+                "code": "1"
+              }
+            ]
+          },
+          "batch": [
+            {
+              "lotNumber": "国药准字H21022246"
+            }
+          ]
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://10.10.15.38:8083/resources/Medication/9633",
+      "resource": {
+        "resourceType": "Medication",
+        "id": "9633",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2016-06-21T16:31:43.796+08:00"
+        },
+        "extension": [
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/alias-name",
+            "valueCode": "无商品名"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/spec",
+            "valueCode": "1mg"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/route-unit",
+            "valueCode": "支"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/least-unit",
+            "valueCode": "支"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/number/proportion",
+            "valueDecimal": 1
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-basic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-poison",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/antibiotic-type",
+            "valueCode": "0"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/code/medication",
+              "code": "11105201",
+              "display": "盐酸异丙肾上腺素注射液"
+            }
+          ]
+        },
+        "manufacturer": {
+          "display": "0050"
+        },
+        "product": {
+          "form": {
+            "coding": [
+              {
+                "system": "urn:oid:2.16.156.10011.2.3.1.211",
+                "code": "1"
+              }
+            ]
+          }
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://10.10.15.38:8083/resources/Medication/9639",
+      "resource": {
+        "resourceType": "Medication",
+        "id": "9639",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2016-06-21T16:33:24.464+08:00"
+        },
+        "extension": [
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/alias-name",
+            "valueCode": "无商品名"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/spec",
+            "valueCode": "6u"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/route-unit",
+            "valueCode": "支"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/least-unit",
+            "valueCode": "支"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/number/proportion",
+            "valueDecimal": 1
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-basic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-poison",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/antibiotic-type",
+            "valueCode": "0"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/code/medication",
+              "code": "11043402",
+              "display": "垂体后叶注射液"
+            }
+          ]
+        },
+        "manufacturer": {
+          "display": "0324"
+        },
+        "product": {
+          "form": {
+            "coding": [
+              {
+                "system": "urn:oid:2.16.156.10011.2.3.1.211",
+                "code": "1"
+              }
+            ]
+          }
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://10.10.15.38:8083/resources/Medication/9332",
+      "resource": {
+        "resourceType": "Medication",
+        "id": "9332",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2016-06-21T14:49:54.376+08:00"
+        },
+        "extension": [
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/alias-name",
+            "valueCode": "无商品名"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/spec",
+            "valueCode": "0.4g*30"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/route-unit",
+            "valueCode": "盒"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/least-unit",
+            "valueCode": "盒"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/number/proportion",
+            "valueDecimal": 1
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-basic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-poison",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/antibiotic-type",
+            "valueCode": "0"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/code/medication",
+              "code": "22024101",
+              "display": "脑安胶囊"
+            }
+          ]
+        },
+        "manufacturer": {
+          "display": "5078"
+        },
+        "product": {
+          "form": {
+            "coding": [
+              {
+                "system": "urn:oid:2.16.156.10011.2.3.1.211",
+                "code": "2"
+              }
+            ]
+          }
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://10.10.15.38:8083/resources/Medication/9356",
+      "resource": {
+        "resourceType": "Medication",
+        "id": "9356",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2016-06-21T14:53:34.476+08:00"
+        },
+        "extension": [
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/alias-name",
+            "valueCode": "无商品名"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/spec",
+            "valueCode": "10ml*10"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/route-unit",
+            "valueCode": "盒"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/least-unit",
+            "valueCode": "盒"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/number/proportion",
+            "valueDecimal": 1
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-basic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-poison",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/antibiotic-type",
+            "valueCode": "0"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/code/medication",
+              "code": "22024201",
+              "display": "黄栀花口服液"
+            }
+          ]
+        },
+        "manufacturer": {
+          "display": "25079"
+        },
+        "product": {
+          "form": {
+            "coding": [
+              {
+                "system": "urn:oid:2.16.156.10011.2.3.1.211",
+                "code": "2"
+              }
+            ]
+          }
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://10.10.15.38:8083/resources/Medication/9368",
+      "resource": {
+        "resourceType": "Medication",
+        "id": "9368",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2016-06-21T14:58:55.091+08:00"
+        },
+        "extension": [
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/alias-name",
+            "valueCode": "无商品名"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/spec",
+            "valueCode": "5g*10"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/route-unit",
+            "valueCode": "盒"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/least-unit",
+            "valueCode": "盒"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/number/proportion",
+            "valueDecimal": 1
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-basic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-poison",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/antibiotic-type",
+            "valueCode": "0"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/code/medication",
+              "code": "22024301",
+              "display": "板蓝根颗粒"
+            }
+          ]
+        },
+        "manufacturer": {
+          "display": "0389"
+        },
+        "product": {
+          "form": {
+            "coding": [
+              {
+                "system": "urn:oid:2.16.156.10011.2.3.1.211",
+                "code": "2"
+              }
+            ]
+          }
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://10.10.15.38:8083/resources/Medication/9523",
+      "resource": {
+        "resourceType": "Medication",
+        "id": "9523",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2016-06-21T15:45:05.235+08:00"
+        },
+        "extension": [
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/alias-name",
+            "valueCode": "无商品名"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/spec",
+            "valueCode": "0.1g"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/route-unit",
+            "valueCode": "支"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/least-unit",
+            "valueCode": "支"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/number/proportion",
+            "valueDecimal": 1
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-basic",
+            "valueBoolean": true
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-poison",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/antibiotic-type",
+            "valueCode": "0"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/code/medication",
+              "code": "11105101",
+              "display": "单磷酸阿糖腺苷"
+            }
+          ]
+        },
+        "manufacturer": {
+          "display": "5079"
+        },
+        "product": {
+          "form": {
+            "coding": [
+              {
+                "system": "urn:oid:2.16.156.10011.2.3.1.211",
+                "code": "1"
+              }
+            ]
+          },
+          "batch": [
+            {
+              "lotNumber": "国药准字H20057494"
+            }
+          ]
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://10.10.15.38:8083/resources/Medication/9536",
+      "resource": {
+        "resourceType": "Medication",
+        "id": "9536",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2016-06-21T15:50:03.910+08:00"
+        },
+        "extension": [
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/alias-name",
+            "valueCode": "无商品名"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/spec",
+            "valueCode": "g"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/route-unit",
+            "valueCode": "g"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/least-unit",
+            "valueCode": "g"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/number/proportion",
+            "valueDecimal": 1
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-basic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-poison",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/antibiotic-type",
+            "valueCode": "0"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/code/medication",
+              "code": "33033301",
+              "display": "[颗粒]盐荔枝核"
+            }
+          ]
+        },
+        "manufacturer": {
+          "display": "0001"
+        },
+        "product": {
+          "form": {
+            "coding": [
+              {
+                "system": "urn:oid:2.16.156.10011.2.3.1.211",
+                "code": "3"
+              }
+            ]
+          }
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://10.10.15.38:8083/resources/Medication/9608",
+      "resource": {
+        "resourceType": "Medication",
+        "id": "9608",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2016-06-21T16:24:45.859+08:00"
+        },
+        "extension": [
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/alias-name",
+            "valueCode": "无商品名"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/spec",
+            "valueCode": "1ml:5mg"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/route-unit",
+            "valueCode": "支"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/least-unit",
+            "valueCode": "支"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/number/proportion",
+            "valueDecimal": 1
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-basic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-poison",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/antibiotic-type",
+            "valueCode": "0"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/code/medication",
+              "code": "11022601",
+              "display": "消旋山莨菪碱注射液"
+            }
+          ]
+        },
+        "manufacturer": {
+          "display": "0158"
+        },
+        "product": {
+          "form": {
+            "coding": [
+              {
+                "system": "urn:oid:2.16.156.10011.2.3.1.211",
+                "code": "1"
+              }
+            ]
+          },
+          "batch": [
+            {
+              "lotNumber": "国药准字H41023771"
+            }
+          ]
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://10.10.15.38:8083/resources/Medication/9610",
+      "resource": {
+        "resourceType": "Medication",
+        "id": "9610",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2016-06-21T16:24:48.703+08:00"
+        },
+        "extension": [
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/alias-name",
+            "valueCode": "无商品名"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/spec",
+            "valueCode": "0ml;30mg"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/route-unit",
+            "valueCode": "支"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/least-unit",
+            "valueCode": "支"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/number/proportion",
+            "valueDecimal": 1
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-basic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-poison",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/antibiotic-type",
+            "valueCode": "0"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/code/medication",
+              "code": "11085902",
+              "display": "盐酸罂粟碱注射液"
+            }
+          ]
+        },
+        "manufacturer": {
+          "display": "5080"
+        },
+        "product": {
+          "form": {
+            "coding": [
+              {
+                "system": "urn:oid:2.16.156.10011.2.3.1.211",
+                "code": "1"
+              }
+            ]
+          },
+          "batch": [
+            {
+              "lotNumber": "国药准字H21022246"
+            }
+          ]
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://10.10.15.38:8083/resources/Medication/9689",
+      "resource": {
+        "resourceType": "Medication",
+        "id": "9689",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2016-06-21T16:49:03.954+08:00"
+        },
+        "extension": [
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/alias-name",
+            "valueCode": "无商品名"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/spec",
+            "valueCode": "g"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/route-unit",
+            "valueCode": "g"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/least-unit",
+            "valueCode": "g"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/number/proportion",
+            "valueDecimal": 1
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-basic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-poison",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/antibiotic-type",
+            "valueCode": "0"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/code/medication",
+              "code": "33023001",
+              "display": "[颗粒]三七"
+            }
+          ]
+        },
+        "manufacturer": {
+          "display": "0001"
+        },
+        "product": {
+          "form": {
+            "coding": [
+              {
+                "system": "urn:oid:2.16.156.10011.2.3.1.211",
+                "code": "3"
+              }
+            ]
+          }
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://10.10.15.38:8083/resources/Medication/9691",
+      "resource": {
+        "resourceType": "Medication",
+        "id": "9691",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2016-06-21T16:49:21.595+08:00"
+        },
+        "extension": [
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/alias-name",
+            "valueCode": "无商品名"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/spec",
+            "valueCode": "g"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/route-unit",
+            "valueCode": "g"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/least-unit",
+            "valueCode": "g"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/number/proportion",
+            "valueDecimal": 1
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-basic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-poison",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/antibiotic-type",
+            "valueCode": "0"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/code/medication",
+              "code": "33023001",
+              "display": "[颗粒]三七"
+            }
+          ]
+        },
+        "manufacturer": {
+          "display": "0001"
+        },
+        "product": {
+          "form": {
+            "coding": [
+              {
+                "system": "urn:oid:2.16.156.10011.2.3.1.211",
+                "code": "3"
+              }
+            ]
+          }
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://10.10.15.38:8083/resources/Medication/9714",
+      "resource": {
+        "resourceType": "Medication",
+        "id": "9714",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2016-06-21T16:58:58.713+08:00"
+        },
+        "extension": [
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/alias-name",
+            "valueCode": "无商品名"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/spec",
+            "valueCode": "g"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/route-unit",
+            "valueCode": "g"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/least-unit",
+            "valueCode": "g"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/number/proportion",
+            "valueDecimal": 1
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-basic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-poison",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/antibiotic-type",
+            "valueCode": "0"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/code/medication",
+              "code": "33033501",
+              "display": "[颗粒]茜草炭"
+            }
+          ]
+        },
+        "manufacturer": {
+          "display": "0001"
+        },
+        "product": {
+          "form": {
+            "coding": [
+              {
+                "system": "urn:oid:2.16.156.10011.2.3.1.211",
+                "code": "3"
+              }
+            ]
+          }
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://10.10.15.38:8083/resources/Medication/9716",
+      "resource": {
+        "resourceType": "Medication",
+        "id": "9716",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2016-06-21T16:59:39.192+08:00"
+        },
+        "extension": [
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/alias-name",
+            "valueCode": "无商品名"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/spec",
+            "valueCode": "g"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/route-unit",
+            "valueCode": "g"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/least-unit",
+            "valueCode": "g"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/number/proportion",
+            "valueDecimal": 1
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/cli-unit-check",
+            "valueCode": "1"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-basic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-poison",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-psychotropic",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/antibiotic-type",
+            "valueCode": "0"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/code/medication",
+              "code": "33033601",
+              "display": "[颗粒]蛇蜕"
+            }
+          ]
+        },
+        "manufacturer": {
+          "display": "0001"
+        },
+        "product": {
+          "form": {
+            "coding": [
+              {
+                "system": "urn:oid:2.16.156.10011.2.3.1.211",
+                "code": "3"
+              }
+            ]
+          }
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    }
+  ]
+}

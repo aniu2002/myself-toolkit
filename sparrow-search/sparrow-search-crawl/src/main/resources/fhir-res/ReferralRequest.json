@@ -1,0 +1,2607 @@
+{
+  "resourceType" : "Bundle",
+  "id" : "80764287-3bb8-48ad-815d-616f64d737f7",
+  "meta" : {
+    "lastUpdated" : "2017-05-11T17:57:48.883+08:00"
+  },
+  "type" : "searchset",
+  "total" : 1069,
+  "link" : [ {
+    "relation" : "self",
+    "url" : "http://10.10.15.38:8083/resources/ReferralRequest?_count=50"
+  }, {
+    "relation" : "next",
+    "url" : "http://10.10.15.38:8083/resources?_getpages=6e8b7c42-44c1-4b6f-878b-5c9717ae21f4&_getpagesoffset=50&_count=50&_bundletype=searchset"
+  } ],
+  "entry" : [ {
+    "fullUrl" : "http://10.10.15.38:8083/resources/ReferralRequest/7987",
+    "resource" : {
+      "resourceType" : "ReferralRequest",
+      "id" : "7987",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-20T16:51:54.360+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inpatient-transfer-id",
+        "value" : "1_2"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/ReferralRequest/8005",
+    "resource" : {
+      "resourceType" : "ReferralRequest",
+      "id" : "8005",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-20T17:00:52.184+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inpatient-transfer-id",
+        "value" : "1_2"
+      } ],
+      "status" : "completed"
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/ReferralRequest/115844",
+    "resource" : {
+      "resourceType" : "ReferralRequest",
+      "id" : "115844",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-27T12:08:11.783+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inpatient-transfer-id",
+        "value" : "1_2"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/ReferralRequest/794847",
+    "resource" : {
+      "resourceType" : "ReferralRequest",
+      "id" : "794847",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-29T14:31:58.897+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/in-date",
+        "valueDateTime" : "2016-04-22T12:14:52"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/in-bedno",
+        "valueReference" : {
+          "reference" : "Location/241040"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/out-date",
+        "valueDateTime" : "2016-04-22T12:14:52"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/out-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240147"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/out-bedno",
+        "valueReference" : {
+          "reference" : "Location/241073"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inpatient-transfer-id",
+        "value" : "2016000261_2"
+      } ],
+      "status" : "completed",
+      "patient" : {
+        "reference" : "Patient/445212"
+      },
+      "context" : {
+        "reference" : "Encounter/698699"
+      },
+      "requester" : {
+        "reference" : "Practitioner/239814"
+      },
+      "recipient" : [ {
+        "reference" : "Organization/240146"
+      }, {
+        "reference" : "Practitioner/239814"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/ReferralRequest/795006",
+    "resource" : {
+      "resourceType" : "ReferralRequest",
+      "id" : "795006",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-29T14:37:43.077+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/in-date",
+        "valueDateTime" : "2016-04-19T15:39:15"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/in-bedno",
+        "valueReference" : {
+          "reference" : "Location/240939"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/out-date",
+        "valueDateTime" : "2016-04-19T15:39:15"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/out-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240146"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/out-bedno",
+        "valueReference" : {
+          "reference" : "Location/241040"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inpatient-transfer-id",
+        "value" : "2016000551_3"
+      } ],
+      "status" : "completed",
+      "patient" : {
+        "reference" : "Patient/445342"
+      },
+      "context" : {
+        "reference" : "Encounter/698727"
+      },
+      "requester" : {
+        "reference" : "Practitioner/239793"
+      },
+      "recipient" : [ {
+        "reference" : "Organization/240141"
+      }, {
+        "reference" : "Practitioner/239793"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/ReferralRequest/794862",
+    "resource" : {
+      "resourceType" : "ReferralRequest",
+      "id" : "794862",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-29T14:32:52.077+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/in-date",
+        "valueDateTime" : "2016-04-22T12:14:52"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/in-bedno",
+        "valueReference" : {
+          "reference" : "Location/241040"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/out-date",
+        "valueDateTime" : "2016-04-22T12:14:52"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/out-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240147"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/out-bedno",
+        "valueReference" : {
+          "reference" : "Location/241073"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inpatient-transfer-id",
+        "value" : "2016000261_2"
+      } ],
+      "status" : "completed",
+      "patient" : {
+        "reference" : "Patient/445212"
+      },
+      "context" : {
+        "reference" : "Encounter/698699"
+      },
+      "requester" : {
+        "reference" : "Practitioner/239814"
+      },
+      "recipient" : [ {
+        "reference" : "Organization/240146"
+      }, {
+        "reference" : "Practitioner/239814"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/ReferralRequest/794863",
+    "resource" : {
+      "resourceType" : "ReferralRequest",
+      "id" : "794863",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-29T14:32:52.901+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/in-date",
+        "valueDateTime" : "2016-04-22T14:59:51"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/in-bedno",
+        "valueReference" : {
+          "reference" : "Location/240813"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/out-date",
+        "valueDateTime" : "2016-04-22T14:59:51"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/out-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240146"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/out-bedno",
+        "valueReference" : {
+          "reference" : "Location/241039"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inpatient-transfer-id",
+        "value" : "2016001981_2"
+      } ],
+      "status" : "completed",
+      "patient" : {
+        "reference" : "Patient/445960"
+      },
+      "context" : {
+        "reference" : "Encounter/300046"
+      },
+      "requester" : {
+        "reference" : "Practitioner/239793"
+      },
+      "recipient" : [ {
+        "reference" : "Organization/240138"
+      }, {
+        "reference" : "Practitioner/239793"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/ReferralRequest/794864",
+    "resource" : {
+      "resourceType" : "ReferralRequest",
+      "id" : "794864",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-29T14:32:53.587+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/in-date",
+        "valueDateTime" : "2016-04-22T17:08:18"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/in-bedno",
+        "valueReference" : {
+          "reference" : "Location/240832"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/out-date",
+        "valueDateTime" : "2016-04-22T17:08:18"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/out-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240147"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/out-bedno",
+        "valueReference" : {
+          "reference" : "Location/241074"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inpatient-transfer-id",
+        "value" : "2016001881_2"
+      } ],
+      "status" : "completed",
+      "patient" : {
+        "reference" : "Patient/450155"
+      },
+      "context" : {
+        "reference" : "Encounter/300037"
+      },
+      "requester" : {
+        "reference" : "Practitioner/239734"
+      },
+      "recipient" : [ {
+        "reference" : "Organization/240138"
+      }, {
+        "reference" : "Practitioner/239734"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/ReferralRequest/794866",
+    "resource" : {
+      "resourceType" : "ReferralRequest",
+      "id" : "794866",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-29T14:32:54.963+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/in-date",
+        "valueDateTime" : "2016-04-24T09:31:07"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/in-bedno",
+        "valueReference" : {
+          "reference" : "Location/240816"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/out-date",
+        "valueDateTime" : "2016-04-24T09:31:07"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/out-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240145"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/out-bedno",
+        "valueReference" : {
+          "reference" : "Location/241004"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inpatient-transfer-id",
+        "value" : "2016002421_2"
+      } ],
+      "status" : "completed",
+      "patient" : {
+        "reference" : "Patient/450167"
+      },
+      "context" : {
+        "reference" : "Encounter/698912"
+      },
+      "requester" : {
+        "reference" : "Practitioner/239776"
+      },
+      "recipient" : [ {
+        "reference" : "Organization/240138"
+      }, {
+        "reference" : "Practitioner/239776"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/ReferralRequest/794867",
+    "resource" : {
+      "resourceType" : "ReferralRequest",
+      "id" : "794867",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-29T14:32:55.463+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/in-date",
+        "valueDateTime" : "2016-04-25T15:13:30"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/in-bedno",
+        "valueReference" : {
+          "reference" : "Location/240803"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/out-date",
+        "valueDateTime" : "2016-04-25T15:13:30"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/out-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240147"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/out-bedno",
+        "valueReference" : {
+          "reference" : "Location/241061"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inpatient-transfer-id",
+        "value" : "2016001851_2"
+      } ],
+      "status" : "completed",
+      "patient" : {
+        "reference" : "Patient/445913"
+      },
+      "context" : {
+        "reference" : "Encounter/698857"
+      },
+      "requester" : {
+        "reference" : "Practitioner/239814"
+      },
+      "recipient" : [ {
+        "reference" : "Organization/240138"
+      }, {
+        "reference" : "Practitioner/239814"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/ReferralRequest/794868",
+    "resource" : {
+      "resourceType" : "ReferralRequest",
+      "id" : "794868",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-29T14:32:55.934+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/in-date",
+        "valueDateTime" : "2016-04-25T17:04:02"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/in-bedno",
+        "valueReference" : {
+          "reference" : "Location/289915"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/out-date",
+        "valueDateTime" : "2016-04-25T17:04:02"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/out-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240147"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/out-bedno",
+        "valueReference" : {
+          "reference" : "Location/241074"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inpatient-transfer-id",
+        "value" : "2016002191_2"
+      } ],
+      "status" : "completed",
+      "patient" : {
+        "reference" : "Patient/446057"
+      },
+      "context" : {
+        "reference" : "Encounter/698887"
+      },
+      "requester" : {
+        "reference" : "Practitioner/239814"
+      },
+      "recipient" : [ {
+        "reference" : "Organization/240146"
+      }, {
+        "reference" : "Practitioner/239814"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/ReferralRequest/794869",
+    "resource" : {
+      "resourceType" : "ReferralRequest",
+      "id" : "794869",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-29T14:32:56.494+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/in-date",
+        "valueDateTime" : "2016-04-22T15:44:56"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/in-bedno",
+        "valueReference" : {
+          "reference" : "Location/241073"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/out-date",
+        "valueDateTime" : "2016-04-22T15:44:56"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/out-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240146"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/out-bedno",
+        "valueReference" : {
+          "reference" : "Location/241040"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inpatient-transfer-id",
+        "value" : "2016000261_3"
+      } ],
+      "status" : "completed",
+      "patient" : {
+        "reference" : "Patient/445212"
+      },
+      "context" : {
+        "reference" : "Encounter/698699"
+      },
+      "requester" : {
+        "reference" : "Practitioner/239793"
+      },
+      "recipient" : [ {
+        "reference" : "Organization/240147"
+      }, {
+        "reference" : "Practitioner/239793"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/ReferralRequest/794870",
+    "resource" : {
+      "resourceType" : "ReferralRequest",
+      "id" : "794870",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-29T14:32:57.193+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/in-date",
+        "valueDateTime" : "2016-04-23T08:48:05"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/in-bedno",
+        "valueReference" : {
+          "reference" : "Location/241051"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/out-date",
+        "valueDateTime" : "2016-04-23T08:48:05"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/out-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240145"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/out-bedno",
+        "valueReference" : {
+          "reference" : "Location/241016"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inpatient-transfer-id",
+        "value" : "2016002181_2"
+      } ],
+      "status" : "completed",
+      "patient" : {
+        "reference" : "Patient/450162"
+      },
+      "context" : {
+        "reference" : "Encounter/698886"
+      },
+      "requester" : {
+        "reference" : "Practitioner/239777"
+      },
+      "recipient" : [ {
+        "reference" : "Organization/240147"
+      }, {
+        "reference" : "Practitioner/239777"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/ReferralRequest/794871",
+    "resource" : {
+      "resourceType" : "ReferralRequest",
+      "id" : "794871",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-29T14:32:57.904+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/in-date",
+        "valueDateTime" : "2016-04-24T13:32:47"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/in-bedno",
+        "valueReference" : {
+          "reference" : "Location/241041"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/out-date",
+        "valueDateTime" : "2016-04-24T13:32:47"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/out-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240141"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/out-bedno",
+        "valueReference" : {
+          "reference" : "Location/240933"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inpatient-transfer-id",
+        "value" : "2016000841_2"
+      } ],
+      "status" : "completed",
+      "patient" : {
+        "reference" : "Patient/445460"
+      },
+      "context" : {
+        "reference" : "Encounter/698758"
+      },
+      "requester" : {
+        "reference" : "Practitioner/239760"
+      },
+      "recipient" : [ {
+        "reference" : "Organization/240146"
+      }, {
+        "reference" : "Practitioner/239760"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/ReferralRequest/794874",
+    "resource" : {
+      "resourceType" : "ReferralRequest",
+      "id" : "794874",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-29T14:32:59.770+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/in-date",
+        "valueDateTime" : "2016-04-24T17:23:27"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/in-bedno",
+        "valueReference" : {
+          "reference" : "Location/241038"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/out-date",
+        "valueDateTime" : "2016-04-24T17:23:27"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/out-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240138"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/out-bedno",
+        "valueReference" : {
+          "reference" : "Location/240824"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inpatient-transfer-id",
+        "value" : "2016002631_2"
+      } ],
+      "status" : "completed",
+      "patient" : {
+        "reference" : "Patient/286691"
+      },
+      "context" : {
+        "reference" : "Encounter/698932"
+      },
+      "requester" : {
+        "reference" : "Practitioner/239810"
+      },
+      "recipient" : [ {
+        "reference" : "Organization/240146"
+      }, {
+        "reference" : "Practitioner/239810"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/ReferralRequest/794875",
+    "resource" : {
+      "resourceType" : "ReferralRequest",
+      "id" : "794875",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-29T14:33:00.219+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/in-date",
+        "valueDateTime" : "2016-04-25T16:18:39"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/in-bedno",
+        "valueReference" : {
+          "reference" : "Location/241013"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/out-date",
+        "valueDateTime" : "2016-04-25T16:18:39"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/out-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240146"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/out-bedno",
+        "valueReference" : {
+          "reference" : "Location/241040"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inpatient-transfer-id",
+        "value" : "2016002451_2"
+      } ],
+      "status" : "completed",
+      "patient" : {
+        "reference" : "Patient/446214"
+      },
+      "context" : {
+        "reference" : "Encounter/698915"
+      },
+      "requester" : {
+        "reference" : "Practitioner/239785"
+      },
+      "recipient" : [ {
+        "reference" : "Organization/240145"
+      }, {
+        "reference" : "Practitioner/239785"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/ReferralRequest/794876",
+    "resource" : {
+      "resourceType" : "ReferralRequest",
+      "id" : "794876",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-29T14:33:00.689+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/in-date",
+        "valueDateTime" : "2016-04-19T13:31:13"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/in-bedno",
+        "valueReference" : {
+          "reference" : "Location/241040"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/out-date",
+        "valueDateTime" : "2016-04-19T13:31:13"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/out-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240141"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/out-bedno",
+        "valueReference" : {
+          "reference" : "Location/240939"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inpatient-transfer-id",
+        "value" : "2016000551_2"
+      } ],
+      "status" : "completed",
+      "patient" : {
+        "reference" : "Patient/445342"
+      },
+      "context" : {
+        "reference" : "Encounter/698727"
+      },
+      "requester" : {
+        "reference" : "Practitioner/239760"
+      },
+      "recipient" : [ {
+        "reference" : "Organization/240146"
+      }, {
+        "reference" : "Practitioner/239760"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/ReferralRequest/794877",
+    "resource" : {
+      "resourceType" : "ReferralRequest",
+      "id" : "794877",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-29T14:33:01.179+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/in-date",
+        "valueDateTime" : "2016-04-26T10:30:57"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/in-bedno",
+        "valueReference" : {
+          "reference" : "Location/241067"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/out-date",
+        "valueDateTime" : "2016-04-26T10:30:57"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/out-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240145"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/out-bedno",
+        "valueReference" : {
+          "reference" : "Location/241019"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inpatient-transfer-id",
+        "value" : "2016001311_2"
+      } ],
+      "status" : "completed",
+      "patient" : {
+        "reference" : "Patient/445674"
+      },
+      "context" : {
+        "reference" : "Encounter/698805"
+      },
+      "requester" : {
+        "reference" : "Practitioner/239776"
+      },
+      "recipient" : [ {
+        "reference" : "Organization/240147"
+      }, {
+        "reference" : "Practitioner/239776"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/ReferralRequest/794878",
+    "resource" : {
+      "resourceType" : "ReferralRequest",
+      "id" : "794878",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-29T14:33:01.700+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/in-date",
+        "valueDateTime" : "2016-04-27T08:16:19"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/in-bedno",
+        "valueReference" : {
+          "reference" : "Location/240939"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/out-date",
+        "valueDateTime" : "2016-04-27T08:16:19"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/out-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240146"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/out-bedno",
+        "valueReference" : {
+          "reference" : "Location/241038"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inpatient-transfer-id",
+        "value" : "2016001721_3"
+      } ],
+      "status" : "completed",
+      "patient" : {
+        "reference" : "Patient/445857"
+      },
+      "context" : {
+        "reference" : "Encounter/698844"
+      },
+      "requester" : {
+        "reference" : "Practitioner/239785"
+      },
+      "recipient" : [ {
+        "reference" : "Organization/240141"
+      }, {
+        "reference" : "Practitioner/239785"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/ReferralRequest/794879",
+    "resource" : {
+      "resourceType" : "ReferralRequest",
+      "id" : "794879",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-29T14:33:02.460+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/in-date",
+        "valueDateTime" : "2016-04-27T08:14:17"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/in-bedno",
+        "valueReference" : {
+          "reference" : "Location/241063"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/out-date",
+        "valueDateTime" : "2016-04-27T08:14:17"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/out-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240146"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/out-bedno",
+        "valueReference" : {
+          "reference" : "Location/241039"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inpatient-transfer-id",
+        "value" : "2016002641_3"
+      } ],
+      "status" : "completed",
+      "patient" : {
+        "reference" : "Patient/448084"
+      },
+      "context" : {
+        "reference" : "Encounter/698933"
+      },
+      "requester" : {
+        "reference" : "Practitioner/239785"
+      },
+      "recipient" : [ {
+        "reference" : "Organization/240147"
+      }, {
+        "reference" : "Practitioner/239785"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/ReferralRequest/794881",
+    "resource" : {
+      "resourceType" : "ReferralRequest",
+      "id" : "794881",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-29T14:33:03.917+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/in-date",
+        "valueDateTime" : "2016-04-19T15:39:15"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/in-bedno",
+        "valueReference" : {
+          "reference" : "Location/240939"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/out-date",
+        "valueDateTime" : "2016-04-19T15:39:15"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/out-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240146"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/out-bedno",
+        "valueReference" : {
+          "reference" : "Location/241040"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inpatient-transfer-id",
+        "value" : "2016000551_3"
+      } ],
+      "status" : "completed",
+      "patient" : {
+        "reference" : "Patient/445342"
+      },
+      "context" : {
+        "reference" : "Encounter/698727"
+      },
+      "requester" : {
+        "reference" : "Practitioner/239793"
+      },
+      "recipient" : [ {
+        "reference" : "Organization/240141"
+      }, {
+        "reference" : "Practitioner/239793"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/ReferralRequest/794882",
+    "resource" : {
+      "resourceType" : "ReferralRequest",
+      "id" : "794882",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-29T14:33:04.323+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/in-date",
+        "valueDateTime" : "2016-04-25T15:12:20"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/in-bedno",
+        "valueReference" : {
+          "reference" : "Location/240828"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/out-date",
+        "valueDateTime" : "2016-04-25T15:12:20"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/out-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240146"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/out-bedno",
+        "valueReference" : {
+          "reference" : "Location/241038"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inpatient-transfer-id",
+        "value" : "2016002631_3"
+      } ],
+      "status" : "completed",
+      "patient" : {
+        "reference" : "Patient/286691"
+      },
+      "context" : {
+        "reference" : "Encounter/698932"
+      },
+      "requester" : {
+        "reference" : "Practitioner/239785"
+      },
+      "recipient" : [ {
+        "reference" : "Organization/240138"
+      }, {
+        "reference" : "Practitioner/239785"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/ReferralRequest/794883",
+    "resource" : {
+      "resourceType" : "ReferralRequest",
+      "id" : "794883",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-29T14:33:04.732+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/in-date",
+        "valueDateTime" : "2016-04-26T13:58:42"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/in-bedno",
+        "valueReference" : {
+          "reference" : "Location/241038"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/out-date",
+        "valueDateTime" : "2016-04-26T13:58:42"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/out-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240141"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/out-bedno",
+        "valueReference" : {
+          "reference" : "Location/240939"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inpatient-transfer-id",
+        "value" : "2016001721_2"
+      } ],
+      "status" : "completed",
+      "patient" : {
+        "reference" : "Patient/445857"
+      },
+      "context" : {
+        "reference" : "Encounter/698844"
+      },
+      "requester" : {
+        "reference" : "Practitioner/239760"
+      },
+      "recipient" : [ {
+        "reference" : "Organization/240146"
+      }, {
+        "reference" : "Practitioner/239760"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/ReferralRequest/794884",
+    "resource" : {
+      "resourceType" : "ReferralRequest",
+      "id" : "794884",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-29T14:33:05.202+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/in-date",
+        "valueDateTime" : "2016-04-26T16:19:51"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/in-bedno",
+        "valueReference" : {
+          "reference" : "Location/241051"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/out-date",
+        "valueDateTime" : "2016-04-26T16:19:51"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/out-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240146"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/out-bedno",
+        "valueReference" : {
+          "reference" : "Location/241039"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inpatient-transfer-id",
+        "value" : "2016002181_4"
+      } ],
+      "status" : "completed",
+      "patient" : {
+        "reference" : "Patient/450162"
+      },
+      "context" : {
+        "reference" : "Encounter/698886"
+      },
+      "requester" : {
+        "reference" : "Practitioner/239793"
+      },
+      "recipient" : [ {
+        "reference" : "Organization/240147"
+      }, {
+        "reference" : "Practitioner/239793"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/ReferralRequest/794885",
+    "resource" : {
+      "resourceType" : "ReferralRequest",
+      "id" : "794885",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-29T14:33:05.986+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/in-date",
+        "valueDateTime" : "2016-04-15T16:28:23"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/in-bedno",
+        "valueReference" : {
+          "reference" : "Location/240839"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/out-date",
+        "valueDateTime" : "2016-04-15T16:28:23"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/out-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240146"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/out-bedno",
+        "valueReference" : {
+          "reference" : "Location/289915"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inpatient-transfer-id",
+        "value" : "2016000081_2"
+      } ],
+      "status" : "completed",
+      "patient" : {
+        "reference" : "Patient/445124"
+      },
+      "context" : {
+        "reference" : "Encounter/698645"
+      },
+      "requester" : {
+        "reference" : "Practitioner/239793"
+      },
+      "recipient" : [ {
+        "reference" : "Organization/240139"
+      }, {
+        "reference" : "Practitioner/239793"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/ReferralRequest/794886",
+    "resource" : {
+      "resourceType" : "ReferralRequest",
+      "id" : "794886",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-29T14:33:06.548+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/in-date",
+        "valueDateTime" : "2016-04-25T08:11:34"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/in-bedno",
+        "valueReference" : {
+          "reference" : "Location/240933"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/out-date",
+        "valueDateTime" : "2016-04-25T08:11:34"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/out-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240146"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/out-bedno",
+        "valueReference" : {
+          "reference" : "Location/241041"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inpatient-transfer-id",
+        "value" : "2016000841_3"
+      } ],
+      "status" : "completed",
+      "patient" : {
+        "reference" : "Patient/445460"
+      },
+      "context" : {
+        "reference" : "Encounter/698758"
+      },
+      "requester" : {
+        "reference" : "Practitioner/239796"
+      },
+      "recipient" : [ {
+        "reference" : "Organization/240141"
+      }, {
+        "reference" : "Practitioner/239796"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/ReferralRequest/794887",
+    "resource" : {
+      "resourceType" : "ReferralRequest",
+      "id" : "794887",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-29T14:33:07.196+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/in-date",
+        "valueDateTime" : "2016-04-25T10:06:45"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/in-bedno",
+        "valueReference" : {
+          "reference" : "Location/241041"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/out-date",
+        "valueDateTime" : "2016-04-25T10:06:45"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/out-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240145"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/out-bedno",
+        "valueReference" : {
+          "reference" : "Location/241011"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inpatient-transfer-id",
+        "value" : "2016002621_2"
+      } ],
+      "status" : "completed",
+      "patient" : {
+        "reference" : "Patient/474397"
+      },
+      "context" : {
+        "reference" : "Encounter/698931"
+      },
+      "requester" : {
+        "reference" : "Practitioner/239776"
+      },
+      "recipient" : [ {
+        "reference" : "Organization/240146"
+      }, {
+        "reference" : "Practitioner/239776"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/ReferralRequest/794888",
+    "resource" : {
+      "resourceType" : "ReferralRequest",
+      "id" : "794888",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-29T14:33:07.828+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/in-date",
+        "valueDateTime" : "2016-04-26T09:05:36"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/in-bedno",
+        "valueReference" : {
+          "reference" : "Location/241074"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/out-date",
+        "valueDateTime" : "2016-04-26T09:05:36"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/out-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240146"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/out-bedno",
+        "valueReference" : {
+          "reference" : "Location/241038"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inpatient-transfer-id",
+        "value" : "2016002191_3"
+      } ],
+      "status" : "completed",
+      "patient" : {
+        "reference" : "Patient/446057"
+      },
+      "context" : {
+        "reference" : "Encounter/698887"
+      },
+      "requester" : {
+        "reference" : "Practitioner/239798"
+      },
+      "recipient" : [ {
+        "reference" : "Organization/240147"
+      }, {
+        "reference" : "Practitioner/239798"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/ReferralRequest/794889",
+    "resource" : {
+      "resourceType" : "ReferralRequest",
+      "id" : "794889",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-29T14:33:08.452+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/in-date",
+        "valueDateTime" : "2016-04-26T12:13:48"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/in-bedno",
+        "valueReference" : {
+          "reference" : "Location/241039"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/out-date",
+        "valueDateTime" : "2016-04-26T12:13:48"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/out-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240147"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/out-bedno",
+        "valueReference" : {
+          "reference" : "Location/241051"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inpatient-transfer-id",
+        "value" : "2016002181_3"
+      } ],
+      "status" : "completed",
+      "patient" : {
+        "reference" : "Patient/450162"
+      },
+      "context" : {
+        "reference" : "Encounter/698886"
+      },
+      "requester" : {
+        "reference" : "Practitioner/239715"
+      },
+      "recipient" : [ {
+        "reference" : "Organization/240146"
+      }, {
+        "reference" : "Practitioner/239715"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/ReferralRequest/794890",
+    "resource" : {
+      "resourceType" : "ReferralRequest",
+      "id" : "794890",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-29T14:33:09.046+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/in-date",
+        "valueDateTime" : "2016-04-26T19:22:50"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/in-bedno",
+        "valueReference" : {
+          "reference" : "Location/241039"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/out-date",
+        "valueDateTime" : "2016-04-26T19:22:50"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/out-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240147"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/out-bedno",
+        "valueReference" : {
+          "reference" : "Location/241063"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inpatient-transfer-id",
+        "value" : "2016002641_2"
+      } ],
+      "status" : "completed",
+      "patient" : {
+        "reference" : "Patient/448084"
+      },
+      "context" : {
+        "reference" : "Encounter/698933"
+      },
+      "requester" : {
+        "reference" : "Practitioner/239715"
+      },
+      "recipient" : [ {
+        "reference" : "Organization/240146"
+      }, {
+        "reference" : "Practitioner/239715"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/ReferralRequest/794891",
+    "resource" : {
+      "resourceType" : "ReferralRequest",
+      "id" : "794891",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-29T14:33:09.673+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/in-date",
+        "valueDateTime" : "2016-04-27T10:34:41"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/in-bedno",
+        "valueReference" : {
+          "reference" : "Location/240941"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/out-date",
+        "valueDateTime" : "2016-04-27T10:34:41"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/out-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240138"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/out-bedno",
+        "valueReference" : {
+          "reference" : "Location/240834"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inpatient-transfer-id",
+        "value" : "2016003101_2"
+      } ],
+      "status" : "completed",
+      "patient" : {
+        "reference" : "Patient/448460"
+      },
+      "context" : {
+        "reference" : "Encounter/698976"
+      },
+      "requester" : {
+        "reference" : "Practitioner/239723"
+      },
+      "recipient" : [ {
+        "reference" : "Organization/240141"
+      }, {
+        "reference" : "Practitioner/239723"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/ReferralRequest/794892",
+    "resource" : {
+      "resourceType" : "ReferralRequest",
+      "id" : "794892",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-29T14:33:10.277+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/in-date",
+        "valueDateTime" : "2016-05-01T09:21:54"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/in-bedno",
+        "valueReference" : {
+          "reference" : "Location/240921"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/out-date",
+        "valueDateTime" : "2016-05-01T09:21:54"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/out-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240146"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/out-bedno",
+        "valueReference" : {
+          "reference" : "Location/241039"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inpatient-transfer-id",
+        "value" : "2016003731_3"
+      } ],
+      "status" : "completed",
+      "patient" : {
+        "reference" : "Patient/286797"
+      },
+      "context" : {
+        "reference" : "Encounter/699037"
+      },
+      "requester" : {
+        "reference" : "Practitioner/239798"
+      },
+      "recipient" : [ {
+        "reference" : "Organization/240141"
+      }, {
+        "reference" : "Practitioner/239798"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/ReferralRequest/794893",
+    "resource" : {
+      "resourceType" : "ReferralRequest",
+      "id" : "794893",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-29T14:33:10.924+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/in-date",
+        "valueDateTime" : "2016-05-01T09:39:17"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/in-bedno",
+        "valueReference" : {
+          "reference" : "Location/240906"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/out-date",
+        "valueDateTime" : "2016-05-01T09:39:17"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/out-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240146"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/out-bedno",
+        "valueReference" : {
+          "reference" : "Location/241038"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inpatient-transfer-id",
+        "value" : "2016002011_3"
+      } ],
+      "status" : "completed",
+      "patient" : {
+        "reference" : "Patient/445975"
+      },
+      "context" : {
+        "reference" : "Encounter/698870"
+      },
+      "requester" : {
+        "reference" : "Practitioner/239798"
+      },
+      "recipient" : [ {
+        "reference" : "Organization/240140"
+      }, {
+        "reference" : "Practitioner/239798"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/ReferralRequest/794894",
+    "resource" : {
+      "resourceType" : "ReferralRequest",
+      "id" : "794894",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-29T14:33:11.505+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/in-date",
+        "valueDateTime" : "2016-05-07T16:54:54"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/in-bedno",
+        "valueReference" : {
+          "reference" : "Location/240939"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/out-date",
+        "valueDateTime" : "2016-05-07T16:54:54"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/out-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240146"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/out-bedno",
+        "valueReference" : {
+          "reference" : "Location/289915"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inpatient-transfer-id",
+        "value" : "2016004851_3"
+      } ],
+      "status" : "completed",
+      "patient" : {
+        "reference" : "Patient/447057"
+      },
+      "context" : {
+        "reference" : "Encounter/699153"
+      },
+      "requester" : {
+        "reference" : "Practitioner/239793"
+      },
+      "recipient" : [ {
+        "reference" : "Organization/240141"
+      }, {
+        "reference" : "Practitioner/239793"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/ReferralRequest/794895",
+    "resource" : {
+      "resourceType" : "ReferralRequest",
+      "id" : "794895",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-29T14:33:12.146+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/in-date",
+        "valueDateTime" : "2016-04-29T11:31:18"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/in-bedno",
+        "valueReference" : {
+          "reference" : "Location/240857"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/out-date",
+        "valueDateTime" : "2016-04-29T11:31:18"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/out-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240141"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/out-bedno",
+        "valueReference" : {
+          "reference" : "Location/240947"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inpatient-transfer-id",
+        "value" : "2016004031_2"
+      } ],
+      "status" : "completed",
+      "patient" : {
+        "reference" : "Patient/448693"
+      },
+      "context" : {
+        "reference" : "Encounter/699069"
+      },
+      "requester" : {
+        "reference" : "Practitioner/239760"
+      },
+      "recipient" : [ {
+        "reference" : "Organization/240139"
+      }, {
+        "reference" : "Practitioner/239760"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/ReferralRequest/794898",
+    "resource" : {
+      "resourceType" : "ReferralRequest",
+      "id" : "794898",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-29T14:33:14.119+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/in-date",
+        "valueDateTime" : "2016-04-29T15:18:20"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/in-bedno",
+        "valueReference" : {
+          "reference" : "Location/240807"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/out-date",
+        "valueDateTime" : "2016-04-29T15:18:20"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/out-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240146"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/out-bedno",
+        "valueReference" : {
+          "reference" : "Location/241039"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inpatient-transfer-id",
+        "value" : "2016003851_2"
+      } ],
+      "status" : "completed",
+      "patient" : {
+        "reference" : "Patient/450196"
+      },
+      "context" : {
+        "reference" : "Encounter/699049"
+      },
+      "requester" : {
+        "reference" : "Practitioner/239793"
+      },
+      "recipient" : [ {
+        "reference" : "Organization/240138"
+      }, {
+        "reference" : "Practitioner/239793"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/ReferralRequest/794901",
+    "resource" : {
+      "resourceType" : "ReferralRequest",
+      "id" : "794901",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-29T14:33:15.619+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/in-date",
+        "valueDateTime" : "2016-04-29T18:16:06"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/in-bedno",
+        "valueReference" : {
+          "reference" : "Location/240843"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/out-date",
+        "valueDateTime" : "2016-04-29T18:16:06"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/out-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240146"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/out-bedno",
+        "valueReference" : {
+          "reference" : "Location/241040"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inpatient-transfer-id",
+        "value" : "2016003931_2"
+      } ],
+      "status" : "completed",
+      "patient" : {
+        "reference" : "Patient/450199"
+      },
+      "context" : {
+        "reference" : "Encounter/699057"
+      },
+      "requester" : {
+        "reference" : "Practitioner/239799"
+      },
+      "recipient" : [ {
+        "reference" : "Organization/240139"
+      }, {
+        "reference" : "Practitioner/239799"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/ReferralRequest/794902",
+    "resource" : {
+      "resourceType" : "ReferralRequest",
+      "id" : "794902",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-29T14:33:16.032+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/in-date",
+        "valueDateTime" : "2016-04-30T12:15:53"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/in-bedno",
+        "valueReference" : {
+          "reference" : "Location/241038"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/out-date",
+        "valueDateTime" : "2016-04-30T12:15:53"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/out-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240140"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/out-bedno",
+        "valueReference" : {
+          "reference" : "Location/240874"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inpatient-transfer-id",
+        "value" : "2016002011_2"
+      } ],
+      "status" : "completed",
+      "patient" : {
+        "reference" : "Patient/445975"
+      },
+      "context" : {
+        "reference" : "Encounter/698870"
+      },
+      "requester" : {
+        "reference" : "Practitioner/239750"
+      },
+      "recipient" : [ {
+        "reference" : "Organization/240146"
+      }, {
+        "reference" : "Practitioner/239750"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/ReferralRequest/794903",
+    "resource" : {
+      "resourceType" : "ReferralRequest",
+      "id" : "794903",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-29T14:33:16.463+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/in-date",
+        "valueDateTime" : "2016-05-02T13:55:42"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/in-bedno",
+        "valueReference" : {
+          "reference" : "Location/241038"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/out-date",
+        "valueDateTime" : "2016-05-02T13:55:42"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/out-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240147"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/out-bedno",
+        "valueReference" : {
+          "reference" : "Location/241070"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inpatient-transfer-id",
+        "value" : "2016003821_2"
+      } ],
+      "status" : "completed",
+      "patient" : {
+        "reference" : "Patient/448620"
+      },
+      "context" : {
+        "reference" : "Encounter/699046"
+      },
+      "requester" : {
+        "reference" : "Practitioner/239761"
+      },
+      "recipient" : [ {
+        "reference" : "Organization/240146"
+      }, {
+        "reference" : "Practitioner/239761"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/ReferralRequest/794904",
+    "resource" : {
+      "resourceType" : "ReferralRequest",
+      "id" : "794904",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-29T14:33:16.984+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/in-date",
+        "valueDateTime" : "2016-05-04T16:53:58"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/in-bedno",
+        "valueReference" : {
+          "reference" : "Location/241038"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/out-date",
+        "valueDateTime" : "2016-05-04T16:53:58"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/out-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240141"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/out-bedno",
+        "valueReference" : {
+          "reference" : "Location/240944"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inpatient-transfer-id",
+        "value" : "2016003771_2"
+      } ],
+      "status" : "completed",
+      "patient" : {
+        "reference" : "Patient/448607"
+      },
+      "context" : {
+        "reference" : "Encounter/699041"
+      },
+      "requester" : {
+        "reference" : "Practitioner/239724"
+      },
+      "recipient" : [ {
+        "reference" : "Organization/240146"
+      }, {
+        "reference" : "Practitioner/239724"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/ReferralRequest/794905",
+    "resource" : {
+      "resourceType" : "ReferralRequest",
+      "id" : "794905",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-29T14:33:17.433+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/in-date",
+        "valueDateTime" : "2016-05-09T06:35:30"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/in-bedno",
+        "valueReference" : {
+          "reference" : "Location/241038"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/out-date",
+        "valueDateTime" : "2016-05-09T06:35:30"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/out-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240145"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/out-bedno",
+        "valueReference" : {
+          "reference" : "Location/241016"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inpatient-transfer-id",
+        "value" : "2016006321_2"
+      } ],
+      "status" : "completed",
+      "patient" : {
+        "reference" : "Patient/445079"
+      },
+      "context" : {
+        "reference" : "Encounter/699304"
+      },
+      "requester" : {
+        "reference" : "Practitioner/239780"
+      },
+      "recipient" : [ {
+        "reference" : "Organization/240146"
+      }, {
+        "reference" : "Practitioner/239780"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/ReferralRequest/794906",
+    "resource" : {
+      "resourceType" : "ReferralRequest",
+      "id" : "794906",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-29T14:33:17.838+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/in-date",
+        "valueDateTime" : "2016-04-30T10:34:12"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/in-bedno",
+        "valueReference" : {
+          "reference" : "Location/240812"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/out-date",
+        "valueDateTime" : "2016-04-30T10:34:12"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/out-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240145"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/out-bedno",
+        "valueReference" : {
+          "reference" : "Location/241009"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inpatient-transfer-id",
+        "value" : "2016004221_2"
+      } ],
+      "status" : "completed",
+      "patient" : {
+        "reference" : "Patient/448802"
+      },
+      "context" : {
+        "reference" : "Encounter/699090"
+      },
+      "requester" : {
+        "reference" : "Practitioner/239776"
+      },
+      "recipient" : [ {
+        "reference" : "Organization/240138"
+      }, {
+        "reference" : "Practitioner/239776"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/ReferralRequest/794907",
+    "resource" : {
+      "resourceType" : "ReferralRequest",
+      "id" : "794907",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-29T14:33:18.385+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/in-date",
+        "valueDateTime" : "2016-05-07T11:14:08"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/in-bedno",
+        "valueReference" : {
+          "reference" : "Location/289915"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/out-date",
+        "valueDateTime" : "2016-05-07T11:14:08"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/out-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240141"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/out-bedno",
+        "valueReference" : {
+          "reference" : "Location/240939"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inpatient-transfer-id",
+        "value" : "2016004851_2"
+      } ],
+      "status" : "completed",
+      "patient" : {
+        "reference" : "Patient/447057"
+      },
+      "context" : {
+        "reference" : "Encounter/699153"
+      },
+      "requester" : {
+        "reference" : "Practitioner/239760"
+      },
+      "recipient" : [ {
+        "reference" : "Organization/240146"
+      }, {
+        "reference" : "Practitioner/239760"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/ReferralRequest/794908",
+    "resource" : {
+      "resourceType" : "ReferralRequest",
+      "id" : "794908",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-29T14:33:19.013+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/in-date",
+        "valueDateTime" : "2016-05-10T08:31:26"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/in-bedno",
+        "valueReference" : {
+          "reference" : "Location/240937"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/out-date",
+        "valueDateTime" : "2016-05-10T08:31:26"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/out-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240146"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/out-bedno",
+        "valueReference" : {
+          "reference" : "Location/241038"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inpatient-transfer-id",
+        "value" : "2016006321_3"
+      } ],
+      "status" : "completed",
+      "patient" : {
+        "reference" : "Patient/445079"
+      },
+      "context" : {
+        "reference" : "Encounter/699304"
+      },
+      "requester" : {
+        "reference" : "Practitioner/239722"
+      },
+      "recipient" : [ {
+        "reference" : "Organization/240141"
+      }, {
+        "reference" : "Practitioner/239722"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/ReferralRequest/794909",
+    "resource" : {
+      "resourceType" : "ReferralRequest",
+      "id" : "794909",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-29T14:33:19.634+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/in-date",
+        "valueDateTime" : "2016-05-10T11:17:59"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/in-bedno",
+        "valueReference" : {
+          "reference" : "Location/241038"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/out-date",
+        "valueDateTime" : "2016-05-10T11:17:59"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/out-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240141"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/out-bedno",
+        "valueReference" : {
+          "reference" : "Location/240958"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inpatient-transfer-id",
+        "value" : "2016005641_2"
+      } ],
+      "status" : "completed",
+      "patient" : {
+        "reference" : "Patient/286985"
+      },
+      "context" : {
+        "reference" : "Encounter/699235"
+      },
+      "requester" : {
+        "reference" : "Practitioner/239724"
+      },
+      "recipient" : [ {
+        "reference" : "Organization/240146"
+      }, {
+        "reference" : "Practitioner/239724"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/ReferralRequest/794910",
+    "resource" : {
+      "resourceType" : "ReferralRequest",
+      "id" : "794910",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-29T14:33:20.282+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/in-date",
+        "valueDateTime" : "2016-05-06T09:21:57"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/in-bedno",
+        "valueReference" : {
+          "reference" : "Location/289915"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/out-date",
+        "valueDateTime" : "2016-05-06T09:21:57"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/out-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240139"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/out-bedno",
+        "valueReference" : {
+          "reference" : "Location/240867"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inpatient-transfer-id",
+        "value" : "2016000081_3"
+      } ],
+      "status" : "completed",
+      "patient" : {
+        "reference" : "Patient/445124"
+      },
+      "context" : {
+        "reference" : "Encounter/698645"
+      },
+      "requester" : {
+        "reference" : "Practitioner/239740"
+      },
+      "recipient" : [ {
+        "reference" : "Organization/240146"
+      }, {
+        "reference" : "Practitioner/239740"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/ReferralRequest/794911",
+    "resource" : {
+      "resourceType" : "ReferralRequest",
+      "id" : "794911",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-29T14:33:20.902+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/in-date",
+        "valueDateTime" : "2016-05-06T09:24:56"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/in-bedno",
+        "valueReference" : {
+          "reference" : "Location/240871"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/out-date",
+        "valueDateTime" : "2016-05-06T09:24:56"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/out-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240146"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/out-bedno",
+        "valueReference" : {
+          "reference" : "Location/289915"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inpatient-transfer-id",
+        "value" : "2016000081_4"
+      } ],
+      "status" : "completed",
+      "patient" : {
+        "reference" : "Patient/445124"
+      },
+      "context" : {
+        "reference" : "Encounter/698645"
+      },
+      "requester" : {
+        "reference" : "Practitioner/239785"
+      },
+      "recipient" : [ {
+        "reference" : "Organization/240139"
+      }, {
+        "reference" : "Practitioner/239785"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/ReferralRequest/794914",
+    "resource" : {
+      "resourceType" : "ReferralRequest",
+      "id" : "794914",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-29T14:33:22.329+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/in-date",
+        "valueDateTime" : "2016-05-07T17:14:20"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/in-bedno",
+        "valueReference" : {
+          "reference" : "Location/289915"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/out-date",
+        "valueDateTime" : "2016-05-07T17:14:20"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/out-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240141"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/out-bedno",
+        "valueReference" : {
+          "reference" : "Location/240922"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inpatient-transfer-id",
+        "value" : "2016005931_2"
+      } ],
+      "status" : "completed",
+      "patient" : {
+        "reference" : "Patient/450237"
+      },
+      "context" : {
+        "reference" : "Encounter/699265"
+      },
+      "requester" : {
+        "reference" : "Practitioner/239801"
+      },
+      "recipient" : [ {
+        "reference" : "Organization/240146"
+      }, {
+        "reference" : "Practitioner/239801"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/ReferralRequest/794917",
+    "resource" : {
+      "resourceType" : "ReferralRequest",
+      "id" : "794917",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-29T14:33:23.825+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/in-date",
+        "valueDateTime" : "2016-05-10T14:37:34"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/in-bedno",
+        "valueReference" : {
+          "reference" : "Location/240946"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/out-date",
+        "valueDateTime" : "2016-05-10T14:37:34"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/out-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240146"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/out-bedno",
+        "valueReference" : {
+          "reference" : "Location/241038"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inpatient-transfer-id",
+        "value" : "2016005641_3"
+      } ],
+      "status" : "completed",
+      "patient" : {
+        "reference" : "Patient/286985"
+      },
+      "context" : {
+        "reference" : "Encounter/699235"
+      },
+      "requester" : {
+        "reference" : "Practitioner/239796"
+      },
+      "recipient" : [ {
+        "reference" : "Organization/240141"
+      }, {
+        "reference" : "Practitioner/239796"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/ReferralRequest/794918",
+    "resource" : {
+      "resourceType" : "ReferralRequest",
+      "id" : "794918",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-29T14:33:24.242+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/in-date",
+        "valueDateTime" : "2016-04-27T16:23:11"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/in-bedno",
+        "valueReference" : {
+          "reference" : "Location/240809"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/datetime/out-date",
+        "valueDateTime" : "2016-04-27T16:23:11"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/out-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240146"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifer/out-bedno",
+        "valueReference" : {
+          "reference" : "Location/241036"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inpatient-transfer-id",
+        "value" : "2016003361_2"
+      } ],
+      "status" : "completed",
+      "patient" : {
+        "reference" : "Patient/450188"
+      },
+      "context" : {
+        "reference" : "Encounter/699002"
+      },
+      "requester" : {
+        "reference" : "Practitioner/239793"
+      },
+      "recipient" : [ {
+        "reference" : "Organization/240138"
+      }, {
+        "reference" : "Practitioner/239793"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  } ]
+}

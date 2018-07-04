@@ -1,0 +1,1041 @@
+{
+  "resourceType" : "Bundle",
+  "id" : "aebe00a2-5f84-4f3d-8da4-a4a8c79e84d8",
+  "meta" : {
+    "lastUpdated" : "2017-05-11T17:57:51.776+08:00"
+  },
+  "type" : "searchset",
+  "total" : 19485,
+  "link" : [ {
+    "relation" : "self",
+    "url" : "http://10.10.15.38:8083/resources/Slot?_count=50"
+  }, {
+    "relation" : "next",
+    "url" : "http://10.10.15.38:8083/resources?_getpages=924a048e-bcfa-41a3-bbca-f15c54f71eec&_getpagesoffset=50&_count=50&_bundletype=searchset"
+  } ],
+  "entry" : [ {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Slot/237918",
+    "resource" : {
+      "resourceType" : "Slot",
+      "id" : "237918",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-07-27T09:52:43.369+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/number-source-id",
+        "_system" : {
+          "fhir_comments" : [ "原系统号源ID号命名空间 " ]
+        },
+        "value" : "test",
+        "_value" : {
+          "fhir_comments" : [ " 原系统号源ID号 " ]
+        }
+      } ],
+      "schedule" : {
+        "fhir_comments" : [ " 排班信息id " ],
+        "reference" : "Schedule/237917"
+      },
+      "status" : "busy",
+      "_status" : {
+        "fhir_comments" : [ " 状态标记:忙碌的 " ]
+      },
+      "start" : "2015-01-02T10:11:12",
+      "_start" : {
+        "fhir_comments" : [ " 开始时间 " ]
+      },
+      "end" : "2015-01-02T16:11:12",
+      "_end" : {
+        "fhir_comments" : [ " 結束时间 " ]
+      },
+      "overbooked" : true,
+      "_overbooked" : {
+        "fhir_comments" : [ " 是否可以被预约 " ]
+      },
+      "comment" : "备注"
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Slot/241532",
+    "resource" : {
+      "resourceType" : "Slot",
+      "id" : "241532",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-03T21:57:08.795+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/number-source-id",
+        "value" : "2016-03-11_05"
+      } ],
+      "schedule" : {
+        "reference" : "Schedule/241531"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Slot/241534",
+    "resource" : {
+      "resourceType" : "Slot",
+      "id" : "241534",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-03T21:57:09.468+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/number-source-id",
+        "value" : "2016-03-12_05"
+      } ],
+      "schedule" : {
+        "reference" : "Schedule/241533"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Slot/241536",
+    "resource" : {
+      "resourceType" : "Slot",
+      "id" : "241536",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-03T21:57:10.183+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/number-source-id",
+        "value" : "2016-03-13_05"
+      } ],
+      "schedule" : {
+        "reference" : "Schedule/241535"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Slot/241538",
+    "resource" : {
+      "resourceType" : "Slot",
+      "id" : "241538",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-03T21:57:10.817+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/number-source-id",
+        "value" : "2016-03-07_06"
+      } ],
+      "schedule" : {
+        "reference" : "Schedule/241537"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Slot/241540",
+    "resource" : {
+      "resourceType" : "Slot",
+      "id" : "241540",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-03T21:57:11.461+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/number-source-id",
+        "value" : "2016-03-08_06"
+      } ],
+      "schedule" : {
+        "reference" : "Schedule/241539"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Slot/241542",
+    "resource" : {
+      "resourceType" : "Slot",
+      "id" : "241542",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-03T21:57:12.091+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/number-source-id",
+        "value" : "2016-03-09_06"
+      } ],
+      "schedule" : {
+        "reference" : "Schedule/241541"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Slot/241544",
+    "resource" : {
+      "resourceType" : "Slot",
+      "id" : "241544",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-03T21:57:12.819+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/number-source-id",
+        "value" : "2016-03-10_06"
+      } ],
+      "schedule" : {
+        "reference" : "Schedule/241543"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Slot/241546",
+    "resource" : {
+      "resourceType" : "Slot",
+      "id" : "241546",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-03T21:57:13.494+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/number-source-id",
+        "value" : "2016-03-11_06"
+      } ],
+      "schedule" : {
+        "reference" : "Schedule/241545"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Slot/241548",
+    "resource" : {
+      "resourceType" : "Slot",
+      "id" : "241548",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-03T21:57:14.211+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/number-source-id",
+        "value" : "2016-03-12_06"
+      } ],
+      "schedule" : {
+        "reference" : "Schedule/241547"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Slot/241550",
+    "resource" : {
+      "resourceType" : "Slot",
+      "id" : "241550",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-03T21:57:14.913+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/number-source-id",
+        "value" : "2016-03-13_06"
+      } ],
+      "schedule" : {
+        "reference" : "Schedule/241549"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Slot/241552",
+    "resource" : {
+      "resourceType" : "Slot",
+      "id" : "241552",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-03T21:57:15.593+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/number-source-id",
+        "value" : "2016-03-07_07"
+      } ],
+      "schedule" : {
+        "reference" : "Schedule/241551"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Slot/241554",
+    "resource" : {
+      "resourceType" : "Slot",
+      "id" : "241554",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-03T21:57:16.283+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/number-source-id",
+        "value" : "2016-03-08_07"
+      } ],
+      "schedule" : {
+        "reference" : "Schedule/241553"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Slot/241556",
+    "resource" : {
+      "resourceType" : "Slot",
+      "id" : "241556",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-03T21:57:16.930+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/number-source-id",
+        "value" : "2016-03-09_07"
+      } ],
+      "schedule" : {
+        "reference" : "Schedule/241555"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Slot/241558",
+    "resource" : {
+      "resourceType" : "Slot",
+      "id" : "241558",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-03T21:57:17.636+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/number-source-id",
+        "value" : "2016-03-10_07"
+      } ],
+      "schedule" : {
+        "reference" : "Schedule/241557"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Slot/241560",
+    "resource" : {
+      "resourceType" : "Slot",
+      "id" : "241560",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-03T21:57:18.323+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/number-source-id",
+        "value" : "2016-03-11_07"
+      } ],
+      "schedule" : {
+        "reference" : "Schedule/241559"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Slot/241562",
+    "resource" : {
+      "resourceType" : "Slot",
+      "id" : "241562",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-03T21:57:19.900+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/number-source-id",
+        "value" : "2016-03-12_07"
+      } ],
+      "schedule" : {
+        "reference" : "Schedule/241561"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Slot/241257",
+    "resource" : {
+      "resourceType" : "Slot",
+      "id" : "241257",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-03T20:46:53.252+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/number-source-id",
+        "value" : "2016-08-03_01"
+      } ],
+      "schedule" : {
+        "reference" : "Schedule/241256"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Slot/241259",
+    "resource" : {
+      "resourceType" : "Slot",
+      "id" : "241259",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-03T20:52:21.287+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/number-source-id",
+        "value" : "2016-08-03_01"
+      } ],
+      "schedule" : {
+        "reference" : "Schedule/241258"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Slot/241266",
+    "resource" : {
+      "resourceType" : "Slot",
+      "id" : "241266",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-03T21:55:36.679+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/number-source-id",
+        "value" : "2015-10-23_27"
+      } ],
+      "schedule" : {
+        "reference" : "Schedule/241265"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Slot/241268",
+    "resource" : {
+      "resourceType" : "Slot",
+      "id" : "241268",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-03T21:55:37.297+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/number-source-id",
+        "value" : "2015-10-24_27"
+      } ],
+      "schedule" : {
+        "reference" : "Schedule/241267"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Slot/241270",
+    "resource" : {
+      "resourceType" : "Slot",
+      "id" : "241270",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-03T21:55:37.967+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/number-source-id",
+        "value" : "2015-10-25_27"
+      } ],
+      "schedule" : {
+        "reference" : "Schedule/241269"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Slot/241272",
+    "resource" : {
+      "resourceType" : "Slot",
+      "id" : "241272",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-03T21:55:38.626+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/number-source-id",
+        "value" : "2015-10-19_28"
+      } ],
+      "schedule" : {
+        "reference" : "Schedule/241271"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Slot/241274",
+    "resource" : {
+      "resourceType" : "Slot",
+      "id" : "241274",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-03T21:55:39.268+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/number-source-id",
+        "value" : "2015-10-20_28"
+      } ],
+      "schedule" : {
+        "reference" : "Schedule/241273"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Slot/241276",
+    "resource" : {
+      "resourceType" : "Slot",
+      "id" : "241276",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-03T21:55:39.990+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/number-source-id",
+        "value" : "2015-10-21_28"
+      } ],
+      "schedule" : {
+        "reference" : "Schedule/241275"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Slot/241278",
+    "resource" : {
+      "resourceType" : "Slot",
+      "id" : "241278",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-03T21:55:40.676+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/number-source-id",
+        "value" : "2015-10-22_28"
+      } ],
+      "schedule" : {
+        "reference" : "Schedule/241277"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Slot/241280",
+    "resource" : {
+      "resourceType" : "Slot",
+      "id" : "241280",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-03T21:55:41.373+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/number-source-id",
+        "value" : "2015-10-23_28"
+      } ],
+      "schedule" : {
+        "reference" : "Schedule/241279"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Slot/241282",
+    "resource" : {
+      "resourceType" : "Slot",
+      "id" : "241282",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-03T21:55:42.037+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/number-source-id",
+        "value" : "2015-10-24_28"
+      } ],
+      "schedule" : {
+        "reference" : "Schedule/241281"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Slot/241284",
+    "resource" : {
+      "resourceType" : "Slot",
+      "id" : "241284",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-03T21:55:42.746+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/number-source-id",
+        "value" : "2015-10-25_28"
+      } ],
+      "schedule" : {
+        "reference" : "Schedule/241283"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Slot/241286",
+    "resource" : {
+      "resourceType" : "Slot",
+      "id" : "241286",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-03T21:55:43.444+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/number-source-id",
+        "value" : "2015-10-19_29"
+      } ],
+      "schedule" : {
+        "reference" : "Schedule/241285"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Slot/241288",
+    "resource" : {
+      "resourceType" : "Slot",
+      "id" : "241288",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-03T21:55:44.108+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/number-source-id",
+        "value" : "2015-10-20_29"
+      } ],
+      "schedule" : {
+        "reference" : "Schedule/241287"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Slot/241290",
+    "resource" : {
+      "resourceType" : "Slot",
+      "id" : "241290",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-03T21:55:44.955+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/number-source-id",
+        "value" : "2015-10-21_29"
+      } ],
+      "schedule" : {
+        "reference" : "Schedule/241289"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Slot/241292",
+    "resource" : {
+      "resourceType" : "Slot",
+      "id" : "241292",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-03T21:55:45.520+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/number-source-id",
+        "value" : "2015-10-22_29"
+      } ],
+      "schedule" : {
+        "reference" : "Schedule/241291"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Slot/241294",
+    "resource" : {
+      "resourceType" : "Slot",
+      "id" : "241294",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-03T21:55:46.958+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/number-source-id",
+        "value" : "2015-10-23_29"
+      } ],
+      "schedule" : {
+        "reference" : "Schedule/241293"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Slot/241296",
+    "resource" : {
+      "resourceType" : "Slot",
+      "id" : "241296",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-03T21:55:47.614+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/number-source-id",
+        "value" : "2015-10-24_29"
+      } ],
+      "schedule" : {
+        "reference" : "Schedule/241295"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Slot/241298",
+    "resource" : {
+      "resourceType" : "Slot",
+      "id" : "241298",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-03T21:55:48.370+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/number-source-id",
+        "value" : "2015-10-25_29"
+      } ],
+      "schedule" : {
+        "reference" : "Schedule/241297"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Slot/241300",
+    "resource" : {
+      "resourceType" : "Slot",
+      "id" : "241300",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-03T21:55:49.002+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/number-source-id",
+        "value" : "2015-10-19_30"
+      } ],
+      "schedule" : {
+        "reference" : "Schedule/241299"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Slot/241302",
+    "resource" : {
+      "resourceType" : "Slot",
+      "id" : "241302",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-03T21:55:49.785+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/number-source-id",
+        "value" : "2015-10-20_30"
+      } ],
+      "schedule" : {
+        "reference" : "Schedule/241301"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Slot/241304",
+    "resource" : {
+      "resourceType" : "Slot",
+      "id" : "241304",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-03T21:55:50.480+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/number-source-id",
+        "value" : "2015-10-21_30"
+      } ],
+      "schedule" : {
+        "reference" : "Schedule/241303"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Slot/241306",
+    "resource" : {
+      "resourceType" : "Slot",
+      "id" : "241306",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-03T21:55:52.004+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/number-source-id",
+        "value" : "2015-10-22_30"
+      } ],
+      "schedule" : {
+        "reference" : "Schedule/241305"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Slot/241308",
+    "resource" : {
+      "resourceType" : "Slot",
+      "id" : "241308",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-03T21:55:52.691+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/number-source-id",
+        "value" : "2015-10-23_30"
+      } ],
+      "schedule" : {
+        "reference" : "Schedule/241307"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Slot/241310",
+    "resource" : {
+      "resourceType" : "Slot",
+      "id" : "241310",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-03T21:55:53.373+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/number-source-id",
+        "value" : "2015-10-24_30"
+      } ],
+      "schedule" : {
+        "reference" : "Schedule/241309"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Slot/241312",
+    "resource" : {
+      "resourceType" : "Slot",
+      "id" : "241312",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-03T21:55:54.043+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/number-source-id",
+        "value" : "2015-10-25_30"
+      } ],
+      "schedule" : {
+        "reference" : "Schedule/241311"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Slot/241314",
+    "resource" : {
+      "resourceType" : "Slot",
+      "id" : "241314",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-03T21:55:54.718+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/number-source-id",
+        "value" : "2015-10-19_31"
+      } ],
+      "schedule" : {
+        "reference" : "Schedule/241313"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Slot/241316",
+    "resource" : {
+      "resourceType" : "Slot",
+      "id" : "241316",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-03T21:55:55.432+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/number-source-id",
+        "value" : "2015-10-20_31"
+      } ],
+      "schedule" : {
+        "reference" : "Schedule/241315"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Slot/241318",
+    "resource" : {
+      "resourceType" : "Slot",
+      "id" : "241318",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-03T21:55:56.044+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/number-source-id",
+        "value" : "2015-10-21_31"
+      } ],
+      "schedule" : {
+        "reference" : "Schedule/241317"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Slot/241320",
+    "resource" : {
+      "resourceType" : "Slot",
+      "id" : "241320",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-03T21:55:56.794+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/number-source-id",
+        "value" : "2015-10-22_31"
+      } ],
+      "schedule" : {
+        "reference" : "Schedule/241319"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Slot/241322",
+    "resource" : {
+      "resourceType" : "Slot",
+      "id" : "241322",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-03T21:55:57.411+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/number-source-id",
+        "value" : "2015-10-23_31"
+      } ],
+      "schedule" : {
+        "reference" : "Schedule/241321"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Slot/241324",
+    "resource" : {
+      "resourceType" : "Slot",
+      "id" : "241324",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-03T21:55:58.107+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/number-source-id",
+        "value" : "2015-10-24_31"
+      } ],
+      "schedule" : {
+        "reference" : "Schedule/241323"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Slot/241326",
+    "resource" : {
+      "resourceType" : "Slot",
+      "id" : "241326",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-03T21:55:58.752+08:00"
+      },
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/number-source-id",
+        "value" : "2015-10-25_31"
+      } ],
+      "schedule" : {
+        "reference" : "Schedule/241325"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  } ]
+}

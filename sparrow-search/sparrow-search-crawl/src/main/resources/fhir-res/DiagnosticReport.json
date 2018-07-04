@@ -1,0 +1,3827 @@
+{
+  "resourceType" : "Bundle",
+  "id" : "77cad806-d023-4db6-a7fe-3c8380d98cc0",
+  "meta" : {
+    "lastUpdated" : "2017-05-11T17:57:20.188+08:00"
+  },
+  "type" : "searchset",
+  "total" : 2401,
+  "link" : [ {
+    "relation" : "self",
+    "url" : "http://10.10.15.38:8083/resources/DiagnosticReport?_count=50"
+  }, {
+    "relation" : "next",
+    "url" : "http://10.10.15.38:8083/resources?_getpages=f73a9364-da43-435e-8d3a-ed3d1a807753&_getpagesoffset=50&_count=50&_bundletype=searchset"
+  } ],
+  "entry" : [ {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticReport/20792",
+    "resource" : {
+      "resourceType" : "DiagnosticReport",
+      "id" : "20792",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-22T14:43:34.108+08:00"
+      },
+      "contained" : [ {
+        "resourceType" : "Observation",
+        "id" : "r1",
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/equipment",
+          "valueString" : "6"
+        }, {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/findings",
+          "valueString" : "6"
+        } ],
+        "issued" : "2015-06-01T21:01:02",
+        "method" : {
+          "coding" : [ {
+            "display" : "5"
+          } ]
+        }
+      } ],
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/audit-date",
+        "valueDateTime" : "2015-06-01T21:01:04"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inspection-result-id",
+        "value" : "1"
+      } ],
+      "issued" : "2015-06-01T21:01:03",
+      "result" : [ {
+        "reference" : "#r1"
+      } ],
+      "conclusion" : "8"
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticReport/21243",
+    "resource" : {
+      "resourceType" : "DiagnosticReport",
+      "id" : "21243",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-22T14:50:35.157+08:00"
+      },
+      "contained" : [ {
+        "resourceType" : "Observation",
+        "id" : "r1",
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/equipment",
+          "valueString" : "6"
+        } ],
+        "issued" : "2015-06-01T21:01:02",
+        "method" : {
+          "coding" : [ {
+            "display" : "这是我的修改项目"
+          } ]
+        }
+      } ],
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/audit-date",
+        "valueDateTime" : "2015-06-01T21:01:04"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inspection-result-id",
+        "value" : "1"
+      } ],
+      "issued" : "2015-06-01T21:01:03",
+      "result" : [ {
+        "reference" : "#r1"
+      } ],
+      "conclusion" : "8"
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticReport/22897",
+    "resource" : {
+      "resourceType" : "DiagnosticReport",
+      "id" : "22897",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-22T15:19:12.329+08:00"
+      },
+      "contained" : [ {
+        "resourceType" : "Observation",
+        "id" : "r1",
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/equipment",
+          "valueString" : "6"
+        }, {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/findings",
+          "valueString" : "6"
+        } ],
+        "method" : {
+          "coding" : [ {
+            "display" : "5"
+          } ]
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inspection-result-id",
+        "value" : "1"
+      } ],
+      "result" : [ {
+        "reference" : "#r1"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticReport/22988",
+    "resource" : {
+      "resourceType" : "DiagnosticReport",
+      "id" : "22988",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-22T15:20:17.832+08:00"
+      },
+      "contained" : [ {
+        "resourceType" : "Observation",
+        "id" : "r1",
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/equipment",
+          "valueString" : "6"
+        }, {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/findings",
+          "valueString" : "第一项准备删除它"
+        } ],
+        "issued" : "2015-06-01T21:01:02",
+        "method" : {
+          "coding" : [ {
+            "display" : "这是第一项"
+          } ]
+        }
+      }, {
+        "resourceType" : "Observation",
+        "id" : "r2",
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/equipment",
+          "valueString" : "6"
+        }, {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/findings",
+          "valueString" : "第二项准备修改它"
+        } ],
+        "issued" : "2015-06-01T21:01:02",
+        "method" : {
+          "coding" : [ {
+            "display" : "这是第二项"
+          } ]
+        }
+      } ],
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/audit-date",
+        "valueDateTime" : "2015-06-01T21:01:04"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inspection-result-id",
+        "value" : "1"
+      } ],
+      "issued" : "2015-06-01T21:01:03",
+      "result" : [ {
+        "reference" : "#r1"
+      }, {
+        "reference" : "#r2"
+      } ],
+      "conclusion" : "8"
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticReport/23035",
+    "resource" : {
+      "resourceType" : "DiagnosticReport",
+      "id" : "23035",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-22T15:20:53.582+08:00"
+      },
+      "contained" : [ {
+        "resourceType" : "Observation",
+        "id" : "r1",
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/equipment",
+          "valueString" : "6"
+        } ],
+        "issued" : "2015-06-01T21:01:02",
+        "method" : {
+          "coding" : [ {
+            "display" : "这是第一项"
+          } ]
+        }
+      }, {
+        "resourceType" : "Observation",
+        "id" : "r2",
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/equipment",
+          "valueString" : "6"
+        }, {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/findings",
+          "valueString" : "第二项我已经修改了"
+        } ],
+        "issued" : "2015-06-01T21:01:02",
+        "method" : {
+          "coding" : [ {
+            "display" : "这是第二项"
+          } ]
+        }
+      } ],
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/audit-date",
+        "valueDateTime" : "2015-06-01T21:01:04"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inspection-result-id",
+        "value" : "1"
+      } ],
+      "issued" : "2015-06-01T21:01:03",
+      "result" : [ {
+        "reference" : "#r1"
+      }, {
+        "reference" : "#r2"
+      } ],
+      "conclusion" : "8"
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticReport/23133",
+    "resource" : {
+      "resourceType" : "DiagnosticReport",
+      "id" : "23133",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-22T15:22:02.209+08:00"
+      },
+      "contained" : [ {
+        "resourceType" : "Observation",
+        "id" : "r1",
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/equipment",
+          "valueString" : "6"
+        }, {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/findings",
+          "valueString" : "第一项准备删除它"
+        } ],
+        "issued" : "2015-06-01T21:01:02",
+        "method" : {
+          "coding" : [ {
+            "display" : "这是第一项"
+          } ]
+        }
+      }, {
+        "resourceType" : "Observation",
+        "id" : "r2",
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/equipment",
+          "valueString" : "6"
+        }, {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/findings",
+          "valueString" : "第二项准备修改它"
+        } ],
+        "issued" : "2015-06-01T21:01:02",
+        "method" : {
+          "coding" : [ {
+            "display" : "这是第二项"
+          } ]
+        }
+      } ],
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/audit-date",
+        "valueDateTime" : "2015-06-01T21:01:04"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inspection-result-id",
+        "value" : "999"
+      } ],
+      "issued" : "2015-06-01T21:01:03",
+      "result" : [ {
+        "reference" : "#r1"
+      }, {
+        "reference" : "#r2"
+      } ],
+      "conclusion" : "8"
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticReport/23150",
+    "resource" : {
+      "resourceType" : "DiagnosticReport",
+      "id" : "23150",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-22T15:22:13.980+08:00"
+      },
+      "contained" : [ {
+        "resourceType" : "Observation",
+        "id" : "r1",
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/equipment",
+          "valueString" : "6"
+        } ],
+        "issued" : "2015-06-01T21:01:02",
+        "method" : {
+          "coding" : [ {
+            "display" : "这是第一项"
+          } ]
+        }
+      }, {
+        "resourceType" : "Observation",
+        "id" : "r2",
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/equipment",
+          "valueString" : "6"
+        }, {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/findings",
+          "valueString" : "第二项我已经修改了"
+        } ],
+        "issued" : "2015-06-01T21:01:02",
+        "method" : {
+          "coding" : [ {
+            "display" : "这是第二项"
+          } ]
+        }
+      } ],
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/audit-date",
+        "valueDateTime" : "2015-06-01T21:01:04"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inspection-result-id",
+        "value" : "999"
+      } ],
+      "issued" : "2015-06-01T21:01:03",
+      "result" : [ {
+        "reference" : "#r1"
+      }, {
+        "reference" : "#r2"
+      } ],
+      "conclusion" : "8"
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticReport/24348",
+    "resource" : {
+      "resourceType" : "DiagnosticReport",
+      "id" : "24348",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-22T15:39:22.537+08:00"
+      },
+      "contained" : [ {
+        "resourceType" : "Observation",
+        "id" : "r1",
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/equipment",
+          "valueString" : "6"
+        }, {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/findings",
+          "valueString" : "11111111111"
+        } ],
+        "issued" : "2015-06-01T21:01:02",
+        "method" : {
+          "coding" : [ {
+            "display" : "111"
+          } ]
+        }
+      }, {
+        "resourceType" : "Observation",
+        "id" : "r2",
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/equipment",
+          "valueString" : "6"
+        }, {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/findings",
+          "valueString" : "222222222222"
+        } ],
+        "issued" : "2015-06-01T21:01:02",
+        "method" : {
+          "coding" : [ {
+            "display" : "222"
+          } ]
+        }
+      }, {
+        "resourceType" : "Observation",
+        "id" : "r3",
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/equipment",
+          "valueString" : "6"
+        }, {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/findings",
+          "valueString" : "33333"
+        } ],
+        "issued" : "2015-06-01T21:01:02",
+        "method" : {
+          "coding" : [ {
+            "display" : "33"
+          } ]
+        }
+      } ],
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/audit-date",
+        "valueDateTime" : "2015-06-01T21:01:04"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inspection-result-id",
+        "value" : "3"
+      } ],
+      "issued" : "2015-06-01T21:01:03",
+      "result" : [ {
+        "reference" : "#r1"
+      }, {
+        "reference" : "#r2"
+      }, {
+        "reference" : "#r3"
+      } ],
+      "conclusion" : "8"
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticReport/847908",
+    "resource" : {
+      "resourceType" : "DiagnosticReport",
+      "id" : "847908",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-09-01T16:52:56.780+08:00"
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\"/><table class=\"hapiPropertyTable\"><tbody><tr><td>Issued</td><td>09 四月 2016 09:28:00</td></tr><tr><td>Conclusion</td><td>右膝关节退行性变</td></tr></tbody></table><table class=\"hapiTableOfValues\"><thead><tr><td>Name</td><td>Value</td><td>Interpretation</td><td>Reference Range</td><td>Status</td></tr></thead><tbody><tr class=\"hapiTableOfValuesRowEven\"><td/><td/><td/><td/><td/></tr></tbody></table></div>"
+      },
+      "contained" : [ {
+        "resourceType" : "Observation",
+        "id" : "r1",
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/equipment",
+          "valueString" : "JC1604090051"
+        }, {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/findings",
+          "valueString" : "JC1604090051"
+        } ],
+        "issued" : "2016-04-09T08:55:57",
+        "performer" : [ {
+          "reference" : "Practitioner/239821"
+        } ],
+        "method" : {
+          "coding" : [ {
+            "display" : "DR"
+          } ]
+        }
+      } ],
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/audit-id",
+        "valueReference" : {
+          "reference" : "Practitioner/239871"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/audit-date",
+        "valueDateTime" : "2016-04-09T09:28:00"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inspection-result-id",
+        "value" : "JC1604090051"
+      } ],
+      "subject" : {
+        "reference" : "Patient/453836"
+      },
+      "encounter" : {
+        "reference" : "Encounter/502504"
+      },
+      "issued" : "2016-04-09T09:28:00",
+      "performer" : [ {
+        "reference" : "Practitioner/239871"
+      } ],
+      "result" : [ {
+        "reference" : "#r1"
+      } ],
+      "conclusion" : "右膝关节退行性变"
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticReport/848373",
+    "resource" : {
+      "resourceType" : "DiagnosticReport",
+      "id" : "848373",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-09-01T17:49:48.185+08:00"
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\"/><table class=\"hapiPropertyTable\"><tbody><tr><td>Issued</td><td>09 四月 2016 09:28:00</td></tr><tr><td>Conclusion</td><td>右膝关节退行性变</td></tr></tbody></table><table class=\"hapiTableOfValues\"><thead><tr><td>Name</td><td>Value</td><td>Interpretation</td><td>Reference Range</td><td>Status</td></tr></thead><tbody><tr class=\"hapiTableOfValuesRowEven\"><td/><td/><td/><td/><td/></tr></tbody></table></div>"
+      },
+      "contained" : [ {
+        "resourceType" : "Observation",
+        "id" : "r1",
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/equipment",
+          "valueString" : "JC1604090051"
+        }, {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/findings",
+          "valueString" : "JC1604090051"
+        } ],
+        "identifier" : [ {
+          "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inspection-observation-id",
+          "value" : "JC1604090051"
+        } ],
+        "issued" : "2016-04-09T08:55:57",
+        "performer" : [ {
+          "reference" : "Practitioner/239821"
+        } ],
+        "method" : {
+          "coding" : [ {
+            "display" : "DR"
+          } ]
+        }
+      } ],
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/audit-id",
+        "valueReference" : {
+          "reference" : "Practitioner/239871"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/audit-date",
+        "valueDateTime" : "2016-04-09T09:28:00"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inspection-result-id",
+        "value" : "JC1604090051"
+      } ],
+      "subject" : {
+        "reference" : "Patient/453836"
+      },
+      "encounter" : {
+        "reference" : "Encounter/502504"
+      },
+      "issued" : "2016-04-09T09:28:00",
+      "performer" : [ {
+        "reference" : "Practitioner/239871"
+      } ],
+      "request" : [ {
+        "reference" : "DiagnosticOrder/844845"
+      } ],
+      "result" : [ {
+        "reference" : "#r1"
+      } ],
+      "conclusion" : "右膝关节退行性变"
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticReport/848308",
+    "resource" : {
+      "resourceType" : "DiagnosticReport",
+      "id" : "848308",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-09-01T17:29:32.255+08:00"
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\"/><table class=\"hapiPropertyTable\"><tbody><tr><td>Issued</td><td>09 四月 2016 09:28:00</td></tr><tr><td>Conclusion</td><td>右膝关节退行性变</td></tr></tbody></table><table class=\"hapiTableOfValues\"><thead><tr><td>Name</td><td>Value</td><td>Interpretation</td><td>Reference Range</td><td>Status</td></tr></thead><tbody><tr class=\"hapiTableOfValuesRowEven\"><td/><td/><td/><td/><td/></tr></tbody></table></div>"
+      },
+      "contained" : [ {
+        "resourceType" : "Observation",
+        "id" : "r1",
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/equipment",
+          "valueString" : "JC1604090051"
+        }, {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/findings",
+          "valueString" : "JC1604090051"
+        } ],
+        "identifier" : [ {
+          "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inspection-observation-id",
+          "value" : "JC1604090051"
+        } ],
+        "issued" : "2016-04-09T08:55:57",
+        "performer" : [ {
+          "reference" : "Practitioner/239821"
+        } ],
+        "method" : {
+          "coding" : [ {
+            "display" : "DR"
+          } ]
+        }
+      } ],
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/audit-id",
+        "valueReference" : {
+          "reference" : "Practitioner/239871"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/audit-date",
+        "valueDateTime" : "2016-04-09T09:28:00"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inspection-result-id",
+        "value" : "JC1604090051"
+      } ],
+      "subject" : {
+        "reference" : "Patient/453836"
+      },
+      "encounter" : {
+        "reference" : "Encounter/502504"
+      },
+      "issued" : "2016-04-09T09:28:00",
+      "performer" : [ {
+        "reference" : "Practitioner/239871"
+      } ],
+      "result" : [ {
+        "reference" : "#r1"
+      } ],
+      "conclusion" : "右膝关节退行性变"
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticReport/848446",
+    "resource" : {
+      "resourceType" : "DiagnosticReport",
+      "id" : "848446",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-09-01T18:12:50.420+08:00"
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\"/><table class=\"hapiPropertyTable\"><tbody><tr><td>Issued</td><td>17 八月 2016 08:36:27</td></tr><tr><td>Conclusion</td><td>心肺未见明显异常。</td></tr></tbody></table><table class=\"hapiTableOfValues\"><thead><tr><td>Name</td><td>Value</td><td>Interpretation</td><td>Reference Range</td><td>Status</td></tr></thead><tbody><tr class=\"hapiTableOfValuesRowEven\"><td/><td/><td/><td/><td/></tr></tbody></table></div>"
+      },
+      "contained" : [ {
+        "resourceType" : "Observation",
+        "id" : "r1",
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/equipment",
+          "valueString" : "JC1608160267"
+        }, {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/findings",
+          "valueString" : "JC1608160267"
+        } ],
+        "identifier" : [ {
+          "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inspection-observation-id",
+          "value" : "JC1608160267"
+        } ],
+        "issued" : "2016-08-17T08:30:50",
+        "performer" : [ {
+          "reference" : "Practitioner/239821"
+        } ],
+        "method" : {
+          "coding" : [ {
+            "display" : "DR"
+          } ]
+        }
+      } ],
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/audit-date",
+        "valueDateTime" : "2016-08-17T08:36:27"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inspection-result-id",
+        "value" : "JC1608160267"
+      } ],
+      "subject" : {
+        "reference" : "Patient/419967"
+      },
+      "encounter" : {
+        "reference" : "Encounter/701409"
+      },
+      "issued" : "2016-08-17T08:36:27",
+      "request" : [ {
+        "reference" : "DiagnosticOrder/848404"
+      } ],
+      "result" : [ {
+        "reference" : "#r1"
+      } ],
+      "conclusion" : "心肺未见明显异常。"
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticReport/848540",
+    "resource" : {
+      "resourceType" : "DiagnosticReport",
+      "id" : "848540",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-09-01T18:48:08.673+08:00"
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\"/><table class=\"hapiPropertyTable\"><tbody><tr><td>Issued</td><td>09 四月 2016 09:28:00</td></tr><tr><td>Conclusion</td><td>右膝关节退行性变</td></tr></tbody></table><table class=\"hapiTableOfValues\"><thead><tr><td>Name</td><td>Value</td><td>Interpretation</td><td>Reference Range</td><td>Status</td></tr></thead><tbody><tr class=\"hapiTableOfValuesRowEven\"><td/><td/><td/><td/><td/></tr></tbody></table></div>"
+      },
+      "contained" : [ {
+        "resourceType" : "Observation",
+        "id" : "r1",
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/equipment",
+          "valueString" : "CR"
+        }, {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/findings",
+          "valueString" : "CR"
+        } ],
+        "identifier" : [ {
+          "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inspection-observation-id",
+          "value" : "JC1604090051"
+        } ],
+        "issued" : "2016-04-09T08:55:57",
+        "performer" : [ {
+          "reference" : "Practitioner/239821"
+        } ],
+        "method" : {
+          "coding" : [ {
+            "display" : "DR"
+          } ]
+        }
+      } ],
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/audit-id",
+        "valueReference" : {
+          "reference" : "Practitioner/239871"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/audit-date",
+        "valueDateTime" : "2016-04-09T09:28:00"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inspection-result-id",
+        "value" : "JC1604090051"
+      } ],
+      "subject" : {
+        "reference" : "Patient/453836"
+      },
+      "encounter" : {
+        "reference" : "Encounter/502504"
+      },
+      "issued" : "2016-04-09T09:28:00",
+      "performer" : [ {
+        "reference" : "Practitioner/239871"
+      } ],
+      "request" : [ {
+        "reference" : "DiagnosticOrder/844845"
+      } ],
+      "result" : [ {
+        "reference" : "#r1"
+      } ],
+      "conclusion" : "右膝关节退行性变"
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticReport/849145",
+    "resource" : {
+      "resourceType" : "DiagnosticReport",
+      "id" : "849145",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-09-01T22:00:49.141+08:00"
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\"/><table class=\"hapiPropertyTable\"><tbody><tr><td>Issued</td><td>17 八月 2016 08:36:27</td></tr><tr><td>Conclusion</td><td>心肺未见明显异常。</td></tr></tbody></table><table class=\"hapiTableOfValues\"><thead><tr><td>Name</td><td>Value</td><td>Interpretation</td><td>Reference Range</td><td>Status</td></tr></thead><tbody><tr class=\"hapiTableOfValuesRowEven\"><td/><td/><td/><td/><td/></tr></tbody></table></div>"
+      },
+      "contained" : [ {
+        "resourceType" : "Observation",
+        "id" : "r1",
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/equipment",
+          "valueString" : "CR"
+        }, {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/report-description",
+          "valueString" : "胸廓对称，气管居中，肺野尚清晰，肺门不大，心影大小形态无明显异常，膈面光滑，双侧肋膈角锐利。"
+        }, {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/report-impression",
+          "valueString" : "心肺未见明显异常。"
+        } ],
+        "identifier" : [ {
+          "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inspection-observation-id",
+          "value" : "JC1608160267"
+        } ],
+        "issued" : "2016-08-17T08:30:50",
+        "performer" : [ {
+          "reference" : "Practitioner/239821"
+        } ],
+        "method" : {
+          "coding" : [ {
+            "display" : "DR"
+          } ]
+        }
+      } ],
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/audit-date",
+        "valueDateTime" : "2016-08-17T08:36:27"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inspection-result-id",
+        "value" : "JC1608160267"
+      } ],
+      "subject" : {
+        "reference" : "Patient/419967"
+      },
+      "encounter" : {
+        "reference" : "Encounter/701409"
+      },
+      "issued" : "2016-08-17T08:36:27",
+      "request" : [ {
+        "reference" : "DiagnosticOrder/848404"
+      } ],
+      "result" : [ {
+        "reference" : "#r1"
+      } ],
+      "conclusion" : "心肺未见明显异常。"
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticReport/849232",
+    "resource" : {
+      "resourceType" : "DiagnosticReport",
+      "id" : "849232",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-09-01T22:44:50.288+08:00"
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\"/><table class=\"hapiPropertyTable\"><tbody><tr><td>Issued</td><td>09 四月 2016 09:28:00</td></tr><tr><td>Conclusion</td><td>右膝关节退行性变</td></tr></tbody></table><table class=\"hapiTableOfValues\"><thead><tr><td>Name</td><td>Value</td><td>Interpretation</td><td>Reference Range</td><td>Status</td></tr></thead><tbody><tr class=\"hapiTableOfValuesRowEven\"><td/><td/><td/><td/><td/></tr></tbody></table></div>"
+      },
+      "contained" : [ {
+        "resourceType" : "Observation",
+        "id" : "r1",
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/equipment",
+          "valueString" : "CR"
+        }, {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/report-description",
+          "valueString" : "右膝关节各骨结构完整，皮质连续，未见中断,骨缘可见骨质增生，关节间隙未见明显狭窄。"
+        }, {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/report-impression",
+          "valueString" : "右膝关节退行性变"
+        } ],
+        "identifier" : [ {
+          "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inspection-observation-id",
+          "value" : "JC1604090051"
+        } ],
+        "issued" : "2016-04-09T08:55:57",
+        "performer" : [ {
+          "reference" : "Practitioner/239821"
+        } ],
+        "method" : {
+          "coding" : [ {
+            "display" : "DR"
+          } ]
+        }
+      } ],
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/audit-id",
+        "valueReference" : {
+          "reference" : "Practitioner/239871"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/audit-date",
+        "valueDateTime" : "2016-04-09T09:28:00"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/inspection-result-id",
+        "value" : "JC1604090051"
+      } ],
+      "subject" : {
+        "reference" : "Patient/453836"
+      },
+      "encounter" : {
+        "reference" : "Encounter/502504"
+      },
+      "issued" : "2016-04-09T09:28:00",
+      "performer" : [ {
+        "reference" : "Practitioner/239871"
+      } ],
+      "request" : [ {
+        "reference" : "DiagnosticOrder/844845"
+      } ],
+      "result" : [ {
+        "reference" : "#r1"
+      } ],
+      "conclusion" : "右膝关节退行性变"
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticReport/856044",
+    "resource" : {
+      "resourceType" : "DiagnosticReport",
+      "id" : "856044",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-09-02T19:24:31.726+08:00"
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\"/><table class=\"hapiPropertyTable\"><tbody><tr><td>Issued</td><td>01 九月 2016 15:29:52</td></tr></tbody></table><table class=\"hapiTableOfValues\"><thead><tr><td>Name</td><td>Value</td><td>Interpretation</td><td>Reference Range</td><td>Status</td></tr></thead><tbody><tr class=\"hapiTableOfValuesRowEven\"><td> 红细胞压积 </td><td>39.2 %</td><td/><td> - </td><td/></tr></tbody></table></div>"
+      },
+      "contained" : [ {
+        "resourceType" : "Observation",
+        "id" : "r1",
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/report-english",
+          "valueString" : "HCT"
+        } ],
+        "identifier" : [ {
+          "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/examination-observation-id",
+          "value" : "JY1609010312_22"
+        } ],
+        "code" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/report-id",
+            "code" : "395",
+            "display" : "红细胞压积"
+          } ]
+        },
+        "valueQuantity" : {
+          "value" : 39.2,
+          "unit" : "%"
+        },
+        "referenceRange" : [ {
+          "text" : "35-50"
+        } ]
+      } ],
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/report-no",
+        "valueString" : "JY1609010312"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/abnormal",
+        "valueCode" : "3"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/report-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240154"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/audit-date",
+        "valueDateTime" : "2016-09-01T15:33:45"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/audit-id",
+        "valueReference" : {
+          "reference" : "Practitioner/239855"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/examination-result-id",
+        "value" : "JY1609010312"
+      } ],
+      "subject" : {
+        "reference" : "Patient/844693"
+      },
+      "encounter" : {
+        "reference" : "Encounter/845645"
+      },
+      "issued" : "2016-09-01T15:29:52",
+      "performer" : [ {
+        "reference" : "Practitioner/239855"
+      } ],
+      "request" : [ {
+        "reference" : "DiagnosticOrder/845684"
+      } ],
+      "result" : [ {
+        "reference" : "#r1"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticReport/856048",
+    "resource" : {
+      "resourceType" : "DiagnosticReport",
+      "id" : "856048",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-09-02T19:24:34.026+08:00"
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\"/><table class=\"hapiPropertyTable\"><tbody><tr><td>Issued</td><td>01 九月 2016 15:29:52</td></tr></tbody></table><table class=\"hapiTableOfValues\"><thead><tr><td>Name</td><td>Value</td><td>Interpretation</td><td>Reference Range</td><td>Status</td></tr></thead><tbody><tr class=\"hapiTableOfValuesRowEven\"><td> 红细胞 </td><td>4.45 10^12/L</td><td/><td> - </td><td/></tr></tbody></table></div>"
+      },
+      "contained" : [ {
+        "resourceType" : "Observation",
+        "id" : "r1",
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/report-english",
+          "valueString" : "RBC"
+        } ],
+        "identifier" : [ {
+          "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/examination-observation-id",
+          "value" : "JY1609010312_24"
+        } ],
+        "code" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/report-id",
+            "code" : "181",
+            "display" : "红细胞"
+          } ]
+        },
+        "valueQuantity" : {
+          "value" : 4.45,
+          "unit" : "10^12/L"
+        },
+        "referenceRange" : [ {
+          "text" : "3.8-5.8"
+        } ]
+      } ],
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/report-no",
+        "valueString" : "JY1609010312"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/abnormal",
+        "valueCode" : "3"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/report-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240154"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/audit-date",
+        "valueDateTime" : "2016-09-01T15:33:45"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/audit-id",
+        "valueReference" : {
+          "reference" : "Practitioner/239855"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/examination-result-id",
+        "value" : "JY1609010312"
+      } ],
+      "subject" : {
+        "reference" : "Patient/844693"
+      },
+      "encounter" : {
+        "reference" : "Encounter/845645"
+      },
+      "issued" : "2016-09-01T15:29:52",
+      "performer" : [ {
+        "reference" : "Practitioner/239855"
+      } ],
+      "request" : [ {
+        "reference" : "DiagnosticOrder/845684"
+      } ],
+      "result" : [ {
+        "reference" : "#r1"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticReport/856054",
+    "resource" : {
+      "resourceType" : "DiagnosticReport",
+      "id" : "856054",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-09-02T19:24:37.471+08:00"
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\"/><table class=\"hapiPropertyTable\"><tbody><tr><td>Issued</td><td>01 九月 2016 15:23:35</td></tr></tbody></table><table class=\"hapiTableOfValues\"><thead><tr><td>Name</td><td>Value</td><td>Interpretation</td><td>Reference Range</td><td>Status</td></tr></thead><tbody><tr class=\"hapiTableOfValuesRowEven\"><td> 血小板压积 </td><td>0.092 %</td><td/><td> - </td><td/></tr></tbody></table></div>"
+      },
+      "contained" : [ {
+        "resourceType" : "Observation",
+        "id" : "r1",
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/report-english",
+          "valueString" : "PCT"
+        } ],
+        "identifier" : [ {
+          "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/examination-observation-id",
+          "value" : "JY1609010301_1"
+        } ],
+        "code" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/report-id",
+            "code" : "403",
+            "display" : "血小板压积"
+          } ]
+        },
+        "valueQuantity" : {
+          "value" : 0.092,
+          "unit" : "%"
+        },
+        "referenceRange" : [ {
+          "text" : "0.17-0.39"
+        } ]
+      } ],
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/report-no",
+        "valueString" : "JY1609010301"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/abnormal",
+        "valueCode" : "1"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/report-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240154"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/audit-date",
+        "valueDateTime" : "2016-09-01T15:25:45"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/audit-id",
+        "valueReference" : {
+          "reference" : "Practitioner/239855"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/examination-result-id",
+        "value" : "JY1609010301"
+      } ],
+      "subject" : {
+        "reference" : "Patient/844679"
+      },
+      "encounter" : {
+        "reference" : "Encounter/845357"
+      },
+      "issued" : "2016-09-01T15:23:35",
+      "performer" : [ {
+        "reference" : "Practitioner/239855"
+      } ],
+      "request" : [ {
+        "reference" : "DiagnosticOrder/845369"
+      } ],
+      "result" : [ {
+        "reference" : "#r1"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticReport/856064",
+    "resource" : {
+      "resourceType" : "DiagnosticReport",
+      "id" : "856064",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-09-02T19:24:43.483+08:00"
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\"/><table class=\"hapiPropertyTable\"><tbody><tr><td>Issued</td><td>01 九月 2016 15:23:35</td></tr></tbody></table><table class=\"hapiTableOfValues\"><thead><tr><td>Name</td><td>Value</td><td>Interpretation</td><td>Reference Range</td><td>Status</td></tr></thead><tbody><tr class=\"hapiTableOfValuesRowEven\"><td> 血小板压积 </td><td>0.092 %</td><td/><td> - </td><td/></tr></tbody></table></div>"
+      },
+      "contained" : [ {
+        "resourceType" : "Observation",
+        "id" : "r1",
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/report-english",
+          "valueString" : "PCT"
+        } ],
+        "identifier" : [ {
+          "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/examination-observation-id",
+          "value" : "JY1609010301_1"
+        } ],
+        "code" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/report-id",
+            "code" : "403",
+            "display" : "血小板压积"
+          } ]
+        },
+        "valueQuantity" : {
+          "value" : 0.092,
+          "unit" : "%"
+        },
+        "referenceRange" : [ {
+          "text" : "0.17-0.39"
+        } ]
+      } ],
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/report-no",
+        "valueString" : "JY1609010301"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/abnormal",
+        "valueCode" : "1"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/report-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240154"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/audit-date",
+        "valueDateTime" : "2016-09-01T15:25:45"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/audit-id",
+        "valueReference" : {
+          "reference" : "Practitioner/239855"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/examination-result-id",
+        "value" : "JY1609010301"
+      } ],
+      "subject" : {
+        "reference" : "Patient/844679"
+      },
+      "encounter" : {
+        "reference" : "Encounter/845357"
+      },
+      "issued" : "2016-09-01T15:23:35",
+      "performer" : [ {
+        "reference" : "Practitioner/239855"
+      } ],
+      "request" : [ {
+        "reference" : "DiagnosticOrder/845369"
+      } ],
+      "result" : [ {
+        "reference" : "#r1"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticReport/856068",
+    "resource" : {
+      "resourceType" : "DiagnosticReport",
+      "id" : "856068",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-09-02T19:24:45.712+08:00"
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\"/><table class=\"hapiPropertyTable\"><tbody><tr><td>Issued</td><td>01 九月 2016 15:23:35</td></tr></tbody></table><table class=\"hapiTableOfValues\"><thead><tr><td>Name</td><td>Value</td><td>Interpretation</td><td>Reference Range</td><td>Status</td></tr></thead><tbody><tr class=\"hapiTableOfValuesRowEven\"><td> 血小板压积 </td><td>0.092 %</td><td/><td> - </td><td/></tr></tbody></table></div>"
+      },
+      "contained" : [ {
+        "resourceType" : "Observation",
+        "id" : "r1",
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/report-english",
+          "valueString" : "PCT"
+        } ],
+        "identifier" : [ {
+          "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/examination-observation-id",
+          "value" : "JY1609010301_1"
+        } ],
+        "code" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/report-id",
+            "code" : "403",
+            "display" : "血小板压积"
+          } ]
+        },
+        "valueQuantity" : {
+          "value" : 0.092,
+          "unit" : "%"
+        },
+        "referenceRange" : [ {
+          "text" : "0.17-0.39"
+        } ]
+      } ],
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/report-no",
+        "valueString" : "JY1609010301"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/abnormal",
+        "valueCode" : "1"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/report-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240154"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/audit-date",
+        "valueDateTime" : "2016-09-01T15:25:45"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/audit-id",
+        "valueReference" : {
+          "reference" : "Practitioner/239855"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/examination-result-id",
+        "value" : "JY1609010301"
+      } ],
+      "subject" : {
+        "reference" : "Patient/844679"
+      },
+      "encounter" : {
+        "reference" : "Encounter/845357"
+      },
+      "issued" : "2016-09-01T15:23:35",
+      "performer" : [ {
+        "reference" : "Practitioner/239855"
+      } ],
+      "request" : [ {
+        "reference" : "DiagnosticOrder/845369"
+      } ],
+      "result" : [ {
+        "reference" : "#r1"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticReport/856086",
+    "resource" : {
+      "resourceType" : "DiagnosticReport",
+      "id" : "856086",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-09-02T19:24:55.699+08:00"
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\"/><table class=\"hapiPropertyTable\"><tbody><tr><td>Issued</td><td>01 九月 2016 15:23:35</td></tr></tbody></table><table class=\"hapiTableOfValues\"><thead><tr><td>Name</td><td>Value</td><td>Interpretation</td><td>Reference Range</td><td>Status</td></tr></thead><tbody><tr class=\"hapiTableOfValuesRowEven\"><td> 血小板压积 </td><td>0.092 %</td><td/><td> - </td><td/></tr></tbody></table></div>"
+      },
+      "contained" : [ {
+        "resourceType" : "Observation",
+        "id" : "r1",
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/report-english",
+          "valueString" : "PCT"
+        } ],
+        "identifier" : [ {
+          "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/examination-observation-id",
+          "value" : "JY1609010301_1"
+        } ],
+        "code" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/report-id",
+            "code" : "403",
+            "display" : "血小板压积"
+          } ]
+        },
+        "valueQuantity" : {
+          "value" : 0.092,
+          "unit" : "%"
+        },
+        "referenceRange" : [ {
+          "text" : "0.17-0.39"
+        } ]
+      } ],
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/report-no",
+        "valueString" : "JY1609010301"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/abnormal",
+        "valueCode" : "1"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/report-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240154"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/audit-date",
+        "valueDateTime" : "2016-09-01T15:25:45"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/audit-id",
+        "valueReference" : {
+          "reference" : "Practitioner/239855"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/examination-result-id",
+        "value" : "JY1609010301"
+      } ],
+      "subject" : {
+        "reference" : "Patient/844679"
+      },
+      "encounter" : {
+        "reference" : "Encounter/845357"
+      },
+      "issued" : "2016-09-01T15:23:35",
+      "performer" : [ {
+        "reference" : "Practitioner/239855"
+      } ],
+      "request" : [ {
+        "reference" : "DiagnosticOrder/845369"
+      } ],
+      "result" : [ {
+        "reference" : "#r1"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticReport/856094",
+    "resource" : {
+      "resourceType" : "DiagnosticReport",
+      "id" : "856094",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-09-02T19:25:00.095+08:00"
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\"/><table class=\"hapiPropertyTable\"><tbody><tr><td>Issued</td><td>01 九月 2016 15:23:35</td></tr></tbody></table><table class=\"hapiTableOfValues\"><thead><tr><td>Name</td><td>Value</td><td>Interpretation</td><td>Reference Range</td><td>Status</td></tr></thead><tbody><tr class=\"hapiTableOfValuesRowEven\"><td> 血小板压积 </td><td>0.092 %</td><td/><td> - </td><td/></tr></tbody></table></div>"
+      },
+      "contained" : [ {
+        "resourceType" : "Observation",
+        "id" : "r1",
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/report-english",
+          "valueString" : "PCT"
+        } ],
+        "identifier" : [ {
+          "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/examination-observation-id",
+          "value" : "JY1609010301_1"
+        } ],
+        "code" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/report-id",
+            "code" : "403",
+            "display" : "血小板压积"
+          } ]
+        },
+        "valueQuantity" : {
+          "value" : 0.092,
+          "unit" : "%"
+        },
+        "referenceRange" : [ {
+          "text" : "0.17-0.39"
+        } ]
+      } ],
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/report-no",
+        "valueString" : "JY1609010301"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/abnormal",
+        "valueCode" : "1"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/report-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240154"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/audit-date",
+        "valueDateTime" : "2016-09-01T15:25:45"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/audit-id",
+        "valueReference" : {
+          "reference" : "Practitioner/239855"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/examination-result-id",
+        "value" : "JY1609010301"
+      } ],
+      "subject" : {
+        "reference" : "Patient/844679"
+      },
+      "encounter" : {
+        "reference" : "Encounter/845357"
+      },
+      "issued" : "2016-09-01T15:23:35",
+      "performer" : [ {
+        "reference" : "Practitioner/239855"
+      } ],
+      "request" : [ {
+        "reference" : "DiagnosticOrder/845369"
+      } ],
+      "result" : [ {
+        "reference" : "#r1"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticReport/856046",
+    "resource" : {
+      "resourceType" : "DiagnosticReport",
+      "id" : "856046",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-09-02T19:24:32.879+08:00"
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\"/><table class=\"hapiPropertyTable\"><tbody><tr><td>Issued</td><td>01 九月 2016 15:29:52</td></tr></tbody></table><table class=\"hapiTableOfValues\"><thead><tr><td>Name</td><td>Value</td><td>Interpretation</td><td>Reference Range</td><td>Status</td></tr></thead><tbody><tr class=\"hapiTableOfValuesRowEven\"><td> 血红蛋白 </td><td>122 g/L</td><td/><td> - </td><td/></tr></tbody></table></div>"
+      },
+      "contained" : [ {
+        "resourceType" : "Observation",
+        "id" : "r1",
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/report-english",
+          "valueString" : "HGB"
+        } ],
+        "identifier" : [ {
+          "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/examination-observation-id",
+          "value" : "JY1609010312_23"
+        } ],
+        "code" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/report-id",
+            "code" : "393",
+            "display" : "血红蛋白"
+          } ]
+        },
+        "valueQuantity" : {
+          "value" : 122,
+          "unit" : "g/L"
+        },
+        "referenceRange" : [ {
+          "text" : "110-150"
+        } ]
+      } ],
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/report-no",
+        "valueString" : "JY1609010312"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/abnormal",
+        "valueCode" : "3"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/report-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240154"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/audit-date",
+        "valueDateTime" : "2016-09-01T15:33:45"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/audit-id",
+        "valueReference" : {
+          "reference" : "Practitioner/239855"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/examination-result-id",
+        "value" : "JY1609010312"
+      } ],
+      "subject" : {
+        "reference" : "Patient/844693"
+      },
+      "encounter" : {
+        "reference" : "Encounter/845645"
+      },
+      "issued" : "2016-09-01T15:29:52",
+      "performer" : [ {
+        "reference" : "Practitioner/239855"
+      } ],
+      "request" : [ {
+        "reference" : "DiagnosticOrder/845684"
+      } ],
+      "result" : [ {
+        "reference" : "#r1"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticReport/855629",
+    "resource" : {
+      "resourceType" : "DiagnosticReport",
+      "id" : "855629",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-09-02T17:15:37.544+08:00"
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\"/><table class=\"hapiPropertyTable\"><tbody><tr><td>Issued</td><td>01 九月 2016 15:36:44</td></tr></tbody></table><table class=\"hapiTableOfValues\"><thead><tr><td>Name</td><td>Value</td><td>Interpretation</td><td>Reference Range</td><td>Status</td></tr></thead><tbody><tr class=\"hapiTableOfValuesRowEven\"><td> 血小板压积 </td><td>0.152 %</td><td/><td> - </td><td/></tr></tbody></table></div>"
+      },
+      "contained" : [ {
+        "resourceType" : "Observation",
+        "id" : "r1",
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/report-english",
+          "valueString" : "PCT"
+        } ],
+        "identifier" : [ {
+          "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/examination-observation-id",
+          "value" : "JY1609010314_1"
+        } ],
+        "code" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/report-id",
+            "code" : "403",
+            "display" : "血小板压积"
+          } ]
+        },
+        "valueQuantity" : {
+          "value" : 0.152,
+          "unit" : "%"
+        },
+        "referenceRange" : [ {
+          "text" : "0.17-0.39"
+        } ]
+      } ],
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/report-no",
+        "valueString" : "JY1609010314"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/abnormal",
+        "valueCode" : "1"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/report-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240154"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/audit-date",
+        "valueDateTime" : "2016-09-01T15:43:00"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/audit-id",
+        "valueReference" : {
+          "reference" : "Practitioner/239855"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/examination-result-id",
+        "value" : "JY1609010314"
+      } ],
+      "subject" : {
+        "reference" : "Patient/805737"
+      },
+      "encounter" : {
+        "reference" : "Encounter/855527"
+      },
+      "issued" : "2016-09-01T15:36:44",
+      "performer" : [ {
+        "reference" : "Practitioner/239855"
+      } ],
+      "request" : [ {
+        "reference" : "DiagnosticOrder/855594"
+      } ],
+      "result" : [ {
+        "reference" : "#r1"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticReport/855910",
+    "resource" : {
+      "resourceType" : "DiagnosticReport",
+      "id" : "855910",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-09-02T18:54:19.816+08:00"
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\"/><table class=\"hapiPropertyTable\"><tbody><tr><td>Issued</td><td>01 九月 2016 15:36:44</td></tr></tbody></table><table class=\"hapiTableOfValues\"><thead><tr><td>Name</td><td>Value</td><td>Interpretation</td><td>Reference Range</td><td>Status</td></tr></thead><tbody><tr class=\"hapiTableOfValuesRowEven\"><td> 血小板压积 </td><td>0.152 %</td><td/><td> - </td><td/></tr></tbody></table></div>"
+      },
+      "contained" : [ {
+        "resourceType" : "Observation",
+        "id" : "r1",
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/report-english",
+          "valueString" : "PCT"
+        } ],
+        "identifier" : [ {
+          "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/examination-observation-id",
+          "value" : "JY1609010314_1"
+        } ],
+        "code" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/report-id",
+            "code" : "403",
+            "display" : "血小板压积"
+          } ]
+        },
+        "valueQuantity" : {
+          "value" : 0.152,
+          "unit" : "%"
+        },
+        "referenceRange" : [ {
+          "text" : "0.17-0.39"
+        } ]
+      } ],
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/report-no",
+        "valueString" : "JY1609010314"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/abnormal",
+        "valueCode" : "1"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/report-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240154"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/audit-date",
+        "valueDateTime" : "2016-09-01T15:43:00"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/examination-result-id",
+        "value" : "JY1609010314"
+      } ],
+      "subject" : {
+        "reference" : "Patient/805737"
+      },
+      "encounter" : {
+        "reference" : "Encounter/855527"
+      },
+      "issued" : "2016-09-01T15:36:44",
+      "request" : [ {
+        "reference" : "DiagnosticOrder/855594"
+      } ],
+      "result" : [ {
+        "reference" : "#r1"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticReport/856004",
+    "resource" : {
+      "resourceType" : "DiagnosticReport",
+      "id" : "856004",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-09-02T19:24:09.585+08:00"
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\"/><table class=\"hapiPropertyTable\"><tbody><tr><td>Issued</td><td>01 九月 2016 15:29:52</td></tr></tbody></table><table class=\"hapiTableOfValues\"><thead><tr><td>Name</td><td>Value</td><td>Interpretation</td><td>Reference Range</td><td>Status</td></tr></thead><tbody><tr class=\"hapiTableOfValuesRowEven\"><td> 血小板压积 </td><td>0.240 %</td><td/><td> - </td><td/></tr></tbody></table></div>"
+      },
+      "contained" : [ {
+        "resourceType" : "Observation",
+        "id" : "r1",
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/report-english",
+          "valueString" : "PCT"
+        } ],
+        "identifier" : [ {
+          "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/examination-observation-id",
+          "value" : "JY1609010312_2"
+        } ],
+        "code" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/report-id",
+            "code" : "403",
+            "display" : "血小板压积"
+          } ]
+        },
+        "valueQuantity" : {
+          "value" : 0.24,
+          "unit" : "%"
+        },
+        "referenceRange" : [ {
+          "text" : "0.17-0.39"
+        } ]
+      } ],
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/report-no",
+        "valueString" : "JY1609010312"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/abnormal",
+        "valueCode" : "3"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/report-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240154"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/audit-date",
+        "valueDateTime" : "2016-09-01T15:33:45"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/audit-id",
+        "valueReference" : {
+          "reference" : "Practitioner/239855"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/examination-result-id",
+        "value" : "JY1609010312"
+      } ],
+      "subject" : {
+        "reference" : "Patient/844693"
+      },
+      "encounter" : {
+        "reference" : "Encounter/845645"
+      },
+      "issued" : "2016-09-01T15:29:52",
+      "performer" : [ {
+        "reference" : "Practitioner/239855"
+      } ],
+      "request" : [ {
+        "reference" : "DiagnosticOrder/845684"
+      } ],
+      "result" : [ {
+        "reference" : "#r1"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticReport/856012",
+    "resource" : {
+      "resourceType" : "DiagnosticReport",
+      "id" : "856012",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-09-02T19:24:13.947+08:00"
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\"/><table class=\"hapiPropertyTable\"><tbody><tr><td>Issued</td><td>01 九月 2016 15:29:52</td></tr></tbody></table><table class=\"hapiTableOfValues\"><thead><tr><td>Name</td><td>Value</td><td>Interpretation</td><td>Reference Range</td><td>Status</td></tr></thead><tbody><tr class=\"hapiTableOfValuesRowEven\"><td> 红细胞分布宽度SD </td><td>37.80 fL</td><td/><td> - </td><td/></tr></tbody></table></div>"
+      },
+      "contained" : [ {
+        "resourceType" : "Observation",
+        "id" : "r1",
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/report-english",
+          "valueString" : "R-SD"
+        } ],
+        "identifier" : [ {
+          "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/examination-observation-id",
+          "value" : "JY1609010312_6"
+        } ],
+        "code" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/report-id",
+            "code" : "400",
+            "display" : "红细胞分布宽度SD"
+          } ]
+        },
+        "valueQuantity" : {
+          "value" : 37.8,
+          "unit" : "fL"
+        },
+        "referenceRange" : [ {
+          "text" : "37.1-49.2"
+        } ]
+      } ],
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/report-no",
+        "valueString" : "JY1609010312"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/abnormal",
+        "valueCode" : "3"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/report-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240154"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/audit-date",
+        "valueDateTime" : "2016-09-01T15:33:45"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/audit-id",
+        "valueReference" : {
+          "reference" : "Practitioner/239855"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/examination-result-id",
+        "value" : "JY1609010312"
+      } ],
+      "subject" : {
+        "reference" : "Patient/844693"
+      },
+      "encounter" : {
+        "reference" : "Encounter/845645"
+      },
+      "issued" : "2016-09-01T15:29:52",
+      "performer" : [ {
+        "reference" : "Practitioner/239855"
+      } ],
+      "request" : [ {
+        "reference" : "DiagnosticOrder/845684"
+      } ],
+      "result" : [ {
+        "reference" : "#r1"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticReport/856026",
+    "resource" : {
+      "resourceType" : "DiagnosticReport",
+      "id" : "856026",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-09-02T19:24:21.681+08:00"
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\"/><table class=\"hapiPropertyTable\"><tbody><tr><td>Issued</td><td>01 九月 2016 15:29:52</td></tr></tbody></table><table class=\"hapiTableOfValues\"><thead><tr><td>Name</td><td>Value</td><td>Interpretation</td><td>Reference Range</td><td>Status</td></tr></thead><tbody><tr class=\"hapiTableOfValuesRowEven\"><td> 嗜碱性粒细胞比率 </td><td>0.2 %</td><td/><td> - </td><td/></tr></tbody></table></div>"
+      },
+      "contained" : [ {
+        "resourceType" : "Observation",
+        "id" : "r1",
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/report-english",
+          "valueString" : "BASO%"
+        } ],
+        "identifier" : [ {
+          "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/examination-observation-id",
+          "value" : "JY1609010312_13"
+        } ],
+        "code" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/report-id",
+            "code" : "386",
+            "display" : "嗜碱性粒细胞比率"
+          } ]
+        },
+        "valueQuantity" : {
+          "value" : 0.2,
+          "unit" : "%"
+        },
+        "referenceRange" : [ {
+          "text" : "0.0-1.0"
+        } ]
+      } ],
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/report-no",
+        "valueString" : "JY1609010312"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/abnormal",
+        "valueCode" : "3"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/report-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240154"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/audit-date",
+        "valueDateTime" : "2016-09-01T15:33:45"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/audit-id",
+        "valueReference" : {
+          "reference" : "Practitioner/239855"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/examination-result-id",
+        "value" : "JY1609010312"
+      } ],
+      "subject" : {
+        "reference" : "Patient/844693"
+      },
+      "encounter" : {
+        "reference" : "Encounter/845645"
+      },
+      "issued" : "2016-09-01T15:29:52",
+      "performer" : [ {
+        "reference" : "Practitioner/239855"
+      } ],
+      "request" : [ {
+        "reference" : "DiagnosticOrder/845684"
+      } ],
+      "result" : [ {
+        "reference" : "#r1"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticReport/856034",
+    "resource" : {
+      "resourceType" : "DiagnosticReport",
+      "id" : "856034",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-09-02T19:24:26.195+08:00"
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\"/><table class=\"hapiPropertyTable\"><tbody><tr><td>Issued</td><td>01 九月 2016 15:29:52</td></tr></tbody></table><table class=\"hapiTableOfValues\"><thead><tr><td>Name</td><td>Value</td><td>Interpretation</td><td>Reference Range</td><td>Status</td></tr></thead><tbody><tr class=\"hapiTableOfValuesRowEven\"><td> 淋巴细胞比率 </td><td>13.020 %</td><td/><td> - </td><td/></tr></tbody></table></div>"
+      },
+      "contained" : [ {
+        "resourceType" : "Observation",
+        "id" : "r1",
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/report-english",
+          "valueString" : "LYMPH%"
+        } ],
+        "identifier" : [ {
+          "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/examination-observation-id",
+          "value" : "JY1609010312_17"
+        } ],
+        "code" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/report-id",
+            "code" : "382",
+            "display" : "淋巴细胞比率"
+          } ]
+        },
+        "valueQuantity" : {
+          "value" : 13.02,
+          "unit" : "%"
+        },
+        "referenceRange" : [ {
+          "text" : "20-50"
+        } ]
+      } ],
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/report-no",
+        "valueString" : "JY1609010312"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/abnormal",
+        "valueCode" : "1"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/report-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240154"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/audit-date",
+        "valueDateTime" : "2016-09-01T15:33:45"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/audit-id",
+        "valueReference" : {
+          "reference" : "Practitioner/239855"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/examination-result-id",
+        "value" : "JY1609010312"
+      } ],
+      "subject" : {
+        "reference" : "Patient/844693"
+      },
+      "encounter" : {
+        "reference" : "Encounter/845645"
+      },
+      "issued" : "2016-09-01T15:29:52",
+      "performer" : [ {
+        "reference" : "Practitioner/239855"
+      } ],
+      "request" : [ {
+        "reference" : "DiagnosticOrder/845684"
+      } ],
+      "result" : [ {
+        "reference" : "#r1"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticReport/856036",
+    "resource" : {
+      "resourceType" : "DiagnosticReport",
+      "id" : "856036",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-09-02T19:24:27.269+08:00"
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\"/><table class=\"hapiPropertyTable\"><tbody><tr><td>Issued</td><td>01 九月 2016 15:29:52</td></tr></tbody></table><table class=\"hapiTableOfValues\"><thead><tr><td>Name</td><td>Value</td><td>Interpretation</td><td>Reference Range</td><td>Status</td></tr></thead><tbody><tr class=\"hapiTableOfValuesRowEven\"><td> 血小板 </td><td>198 10^9/L</td><td/><td> - </td><td/></tr></tbody></table></div>"
+      },
+      "contained" : [ {
+        "resourceType" : "Observation",
+        "id" : "r1",
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/report-english",
+          "valueString" : "PLT"
+        } ],
+        "identifier" : [ {
+          "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/examination-observation-id",
+          "value" : "JY1609010312_18"
+        } ],
+        "code" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/report-id",
+            "code" : "401",
+            "display" : "血小板"
+          } ]
+        },
+        "valueQuantity" : {
+          "value" : 198,
+          "unit" : "10^9/L"
+        },
+        "referenceRange" : [ {
+          "text" : "100-300"
+        } ]
+      } ],
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/report-no",
+        "valueString" : "JY1609010312"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/abnormal",
+        "valueCode" : "3"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/report-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240154"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/audit-date",
+        "valueDateTime" : "2016-09-01T15:33:45"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/audit-id",
+        "valueReference" : {
+          "reference" : "Practitioner/239855"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/examination-result-id",
+        "value" : "JY1609010312"
+      } ],
+      "subject" : {
+        "reference" : "Patient/844693"
+      },
+      "encounter" : {
+        "reference" : "Encounter/845645"
+      },
+      "issued" : "2016-09-01T15:29:52",
+      "performer" : [ {
+        "reference" : "Practitioner/239855"
+      } ],
+      "request" : [ {
+        "reference" : "DiagnosticOrder/845684"
+      } ],
+      "result" : [ {
+        "reference" : "#r1"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticReport/856038",
+    "resource" : {
+      "resourceType" : "DiagnosticReport",
+      "id" : "856038",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-09-02T19:24:28.374+08:00"
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\"/><table class=\"hapiPropertyTable\"><tbody><tr><td>Issued</td><td>01 九月 2016 15:29:52</td></tr></tbody></table><table class=\"hapiTableOfValues\"><thead><tr><td>Name</td><td>Value</td><td>Interpretation</td><td>Reference Range</td><td>Status</td></tr></thead><tbody><tr class=\"hapiTableOfValuesRowEven\"><td> 平均血红蛋白浓度 </td><td>311 g/L</td><td/><td> - </td><td/></tr></tbody></table></div>"
+      },
+      "contained" : [ {
+        "resourceType" : "Observation",
+        "id" : "r1",
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/report-english",
+          "valueString" : "MCHC"
+        } ],
+        "identifier" : [ {
+          "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/examination-observation-id",
+          "value" : "JY1609010312_19"
+        } ],
+        "code" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/report-id",
+            "code" : "398",
+            "display" : "平均血红蛋白浓度"
+          } ]
+        },
+        "valueQuantity" : {
+          "value" : 311,
+          "unit" : "g/L"
+        },
+        "referenceRange" : [ {
+          "text" : "300-354"
+        } ]
+      } ],
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/report-no",
+        "valueString" : "JY1609010312"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/abnormal",
+        "valueCode" : "3"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/report-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240154"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/audit-date",
+        "valueDateTime" : "2016-09-01T15:33:45"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/audit-id",
+        "valueReference" : {
+          "reference" : "Practitioner/239855"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/examination-result-id",
+        "value" : "JY1609010312"
+      } ],
+      "subject" : {
+        "reference" : "Patient/844693"
+      },
+      "encounter" : {
+        "reference" : "Encounter/845645"
+      },
+      "issued" : "2016-09-01T15:29:52",
+      "performer" : [ {
+        "reference" : "Practitioner/239855"
+      } ],
+      "request" : [ {
+        "reference" : "DiagnosticOrder/845684"
+      } ],
+      "result" : [ {
+        "reference" : "#r1"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticReport/856254",
+    "resource" : {
+      "resourceType" : "DiagnosticReport",
+      "id" : "856254",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-09-02T19:38:51.581+08:00"
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\"/><table class=\"hapiPropertyTable\"><tbody><tr><td>Issued</td><td>01 九月 2016 15:36:44</td></tr></tbody></table><table class=\"hapiTableOfValues\"><thead><tr><td>Name</td><td>Value</td><td>Interpretation</td><td>Reference Range</td><td>Status</td></tr></thead><tbody><tr class=\"hapiTableOfValuesRowEven\"><td> 红细胞 </td><td>2.11 10^12/L</td><td/><td> - </td><td/></tr></tbody></table></div>"
+      },
+      "contained" : [ {
+        "resourceType" : "Observation",
+        "id" : "r1",
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/report-english",
+          "valueString" : "RBC"
+        } ],
+        "identifier" : [ {
+          "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/examination-observation-id",
+          "value" : "JY1609010314_23"
+        } ],
+        "code" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/report-id",
+            "code" : "181",
+            "display" : "红细胞"
+          } ]
+        },
+        "valueQuantity" : {
+          "value" : 2.11,
+          "unit" : "10^12/L"
+        },
+        "referenceRange" : [ {
+          "text" : "3.8-5.8"
+        } ]
+      } ],
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/report-no",
+        "valueString" : "JY1609010314"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/abnormal",
+        "valueCode" : "1"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/report-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240154"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/audit-date",
+        "valueDateTime" : "2016-09-01T15:43:00"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/audit-id",
+        "valueReference" : {
+          "reference" : "Practitioner/239855"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/examination-result-id",
+        "value" : "JY1609010314"
+      } ],
+      "subject" : {
+        "reference" : "Patient/805737"
+      },
+      "encounter" : {
+        "reference" : "Encounter/855527"
+      },
+      "issued" : "2016-09-01T15:36:44",
+      "performer" : [ {
+        "reference" : "Practitioner/239855"
+      } ],
+      "request" : [ {
+        "reference" : "DiagnosticOrder/855594"
+      } ],
+      "result" : [ {
+        "reference" : "#r1"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticReport/856265",
+    "resource" : {
+      "resourceType" : "DiagnosticReport",
+      "id" : "856265",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-09-02T19:38:57.908+08:00"
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\"/><table class=\"hapiPropertyTable\"><tbody><tr><td>Issued</td><td>01 九月 2016 15:36:44</td></tr></tbody></table><table class=\"hapiTableOfValues\"><thead><tr><td>Name</td><td>Value</td><td>Interpretation</td><td>Reference Range</td><td>Status</td></tr></thead><tbody><tr class=\"hapiTableOfValuesRowEven\"><td> 血小板压积 </td><td>0.152 %</td><td/><td> - </td><td/></tr></tbody></table></div>"
+      },
+      "contained" : [ {
+        "resourceType" : "Observation",
+        "id" : "r1",
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/report-english",
+          "valueString" : "PCT"
+        } ],
+        "identifier" : [ {
+          "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/examination-observation-id",
+          "value" : "JY1609010314_1"
+        } ],
+        "code" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/report-id",
+            "code" : "403",
+            "display" : "血小板压积"
+          } ]
+        },
+        "valueQuantity" : {
+          "value" : 0.152,
+          "unit" : "%"
+        },
+        "referenceRange" : [ {
+          "text" : "0.17-0.39"
+        } ]
+      } ],
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/report-no",
+        "valueString" : "JY1609010314"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/abnormal",
+        "valueCode" : "1"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/report-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240154"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/audit-date",
+        "valueDateTime" : "2016-09-01T15:43:00"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/audit-id",
+        "valueReference" : {
+          "reference" : "Practitioner/239855"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/examination-result-id",
+        "value" : "JY1609010314"
+      } ],
+      "subject" : {
+        "reference" : "Patient/805737"
+      },
+      "encounter" : {
+        "reference" : "Encounter/855527"
+      },
+      "issued" : "2016-09-01T15:36:44",
+      "performer" : [ {
+        "reference" : "Practitioner/239855"
+      } ],
+      "request" : [ {
+        "reference" : "DiagnosticOrder/855594"
+      } ],
+      "result" : [ {
+        "reference" : "#r1"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticReport/856289",
+    "resource" : {
+      "resourceType" : "DiagnosticReport",
+      "id" : "856289",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-09-02T19:39:12.252+08:00"
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\"/><table class=\"hapiPropertyTable\"><tbody><tr><td>Issued</td><td>01 九月 2016 15:36:44</td></tr></tbody></table><table class=\"hapiTableOfValues\"><thead><tr><td>Name</td><td>Value</td><td>Interpretation</td><td>Reference Range</td><td>Status</td></tr></thead><tbody><tr class=\"hapiTableOfValuesRowEven\"><td> 血小板压积 </td><td>0.152 %</td><td/><td> - </td><td/></tr></tbody></table></div>"
+      },
+      "contained" : [ {
+        "resourceType" : "Observation",
+        "id" : "r1",
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/report-english",
+          "valueString" : "PCT"
+        } ],
+        "identifier" : [ {
+          "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/examination-observation-id",
+          "value" : "JY1609010314_1"
+        } ],
+        "code" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/report-id",
+            "code" : "403",
+            "display" : "血小板压积"
+          } ]
+        },
+        "valueQuantity" : {
+          "value" : 0.152,
+          "unit" : "%"
+        },
+        "referenceRange" : [ {
+          "text" : "0.17-0.39"
+        } ]
+      } ],
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/report-no",
+        "valueString" : "JY1609010314"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/abnormal",
+        "valueCode" : "1"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/report-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240154"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/audit-date",
+        "valueDateTime" : "2016-09-01T15:43:00"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/audit-id",
+        "valueReference" : {
+          "reference" : "Practitioner/239855"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/examination-result-id",
+        "value" : "JY1609010314"
+      } ],
+      "subject" : {
+        "reference" : "Patient/805737"
+      },
+      "encounter" : {
+        "reference" : "Encounter/855527"
+      },
+      "issued" : "2016-09-01T15:36:44",
+      "performer" : [ {
+        "reference" : "Practitioner/239855"
+      } ],
+      "request" : [ {
+        "reference" : "DiagnosticOrder/855594"
+      } ],
+      "result" : [ {
+        "reference" : "#r1"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticReport/856291",
+    "resource" : {
+      "resourceType" : "DiagnosticReport",
+      "id" : "856291",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-09-02T19:39:13.413+08:00"
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\"/><table class=\"hapiPropertyTable\"><tbody><tr><td>Issued</td><td>01 九月 2016 15:36:44</td></tr></tbody></table><table class=\"hapiTableOfValues\"><thead><tr><td>Name</td><td>Value</td><td>Interpretation</td><td>Reference Range</td><td>Status</td></tr></thead><tbody><tr class=\"hapiTableOfValuesRowEven\"><td> 血小板压积 </td><td>0.152 %</td><td/><td> - </td><td/></tr></tbody></table></div>"
+      },
+      "contained" : [ {
+        "resourceType" : "Observation",
+        "id" : "r1",
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/report-english",
+          "valueString" : "PCT"
+        } ],
+        "identifier" : [ {
+          "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/examination-observation-id",
+          "value" : "JY1609010314_1"
+        } ],
+        "code" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/report-id",
+            "code" : "403",
+            "display" : "血小板压积"
+          } ]
+        },
+        "valueQuantity" : {
+          "value" : 0.152,
+          "unit" : "%"
+        },
+        "referenceRange" : [ {
+          "text" : "0.17-0.39"
+        } ]
+      } ],
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/report-no",
+        "valueString" : "JY1609010314"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/abnormal",
+        "valueCode" : "1"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/report-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240154"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/audit-date",
+        "valueDateTime" : "2016-09-01T15:43:00"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/audit-id",
+        "valueReference" : {
+          "reference" : "Practitioner/239855"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/examination-result-id",
+        "value" : "JY1609010314"
+      } ],
+      "subject" : {
+        "reference" : "Patient/805737"
+      },
+      "encounter" : {
+        "reference" : "Encounter/855527"
+      },
+      "issued" : "2016-09-01T15:36:44",
+      "performer" : [ {
+        "reference" : "Practitioner/239855"
+      } ],
+      "request" : [ {
+        "reference" : "DiagnosticOrder/855594"
+      } ],
+      "result" : [ {
+        "reference" : "#r1"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticReport/856319",
+    "resource" : {
+      "resourceType" : "DiagnosticReport",
+      "id" : "856319",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-09-02T19:39:29.642+08:00"
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\"/><table class=\"hapiPropertyTable\"><tbody><tr><td>Issued</td><td>01 九月 2016 15:23:35</td></tr></tbody></table><table class=\"hapiTableOfValues\"><thead><tr><td>Name</td><td>Value</td><td>Interpretation</td><td>Reference Range</td><td>Status</td></tr></thead><tbody><tr class=\"hapiTableOfValuesRowEven\"><td> 嗜碱性粒细胞数 </td><td>0.03 10^9/L</td><td/><td> - </td><td/></tr></tbody></table></div>"
+      },
+      "contained" : [ {
+        "resourceType" : "Observation",
+        "id" : "r1",
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/report-english",
+          "valueString" : "BASO#"
+        } ],
+        "identifier" : [ {
+          "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/examination-observation-id",
+          "value" : "JY1609010301_7"
+        } ],
+        "code" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/report-id",
+            "code" : "392",
+            "display" : "嗜碱性粒细胞数"
+          } ]
+        },
+        "valueQuantity" : {
+          "value" : 0.03,
+          "unit" : "10^9/L"
+        },
+        "referenceRange" : [ {
+          "text" : "0.00-0.06"
+        } ]
+      } ],
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/report-no",
+        "valueString" : "JY1609010301"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/abnormal",
+        "valueCode" : "3"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/report-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240154"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/audit-date",
+        "valueDateTime" : "2016-09-01T15:25:45"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/audit-id",
+        "valueReference" : {
+          "reference" : "Practitioner/239855"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/examination-result-id",
+        "value" : "JY1609010301"
+      } ],
+      "subject" : {
+        "reference" : "Patient/844679"
+      },
+      "encounter" : {
+        "reference" : "Encounter/845357"
+      },
+      "issued" : "2016-09-01T15:23:35",
+      "performer" : [ {
+        "reference" : "Practitioner/239855"
+      } ],
+      "request" : [ {
+        "reference" : "DiagnosticOrder/845369"
+      } ],
+      "result" : [ {
+        "reference" : "#r1"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticReport/856328",
+    "resource" : {
+      "resourceType" : "DiagnosticReport",
+      "id" : "856328",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-09-02T19:39:34.531+08:00"
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\"/><table class=\"hapiPropertyTable\"><tbody><tr><td>Issued</td><td>01 九月 2016 15:23:35</td></tr></tbody></table><table class=\"hapiTableOfValues\"><thead><tr><td>Name</td><td>Value</td><td>Interpretation</td><td>Reference Range</td><td>Status</td></tr></thead><tbody><tr class=\"hapiTableOfValuesRowEven\"><td> 淋巴细胞数 </td><td>1.34 10^9/L</td><td/><td> - </td><td/></tr></tbody></table></div>"
+      },
+      "contained" : [ {
+        "resourceType" : "Observation",
+        "id" : "r1",
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/report-english",
+          "valueString" : "LYMPH#"
+        } ],
+        "identifier" : [ {
+          "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/examination-observation-id",
+          "value" : "JY1609010301_11"
+        } ],
+        "code" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/report-id",
+            "code" : "388",
+            "display" : "淋巴细胞数"
+          } ]
+        },
+        "valueQuantity" : {
+          "value" : 1.34,
+          "unit" : "10^9/L"
+        },
+        "referenceRange" : [ {
+          "text" : "0.5-7.0"
+        } ]
+      } ],
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/report-no",
+        "valueString" : "JY1609010301"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/abnormal",
+        "valueCode" : "3"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/report-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240154"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/audit-date",
+        "valueDateTime" : "2016-09-01T15:25:45"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/audit-id",
+        "valueReference" : {
+          "reference" : "Practitioner/239855"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/examination-result-id",
+        "value" : "JY1609010301"
+      } ],
+      "subject" : {
+        "reference" : "Patient/844679"
+      },
+      "encounter" : {
+        "reference" : "Encounter/845357"
+      },
+      "issued" : "2016-09-01T15:23:35",
+      "performer" : [ {
+        "reference" : "Practitioner/239855"
+      } ],
+      "request" : [ {
+        "reference" : "DiagnosticOrder/845369"
+      } ],
+      "result" : [ {
+        "reference" : "#r1"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticReport/856334",
+    "resource" : {
+      "resourceType" : "DiagnosticReport",
+      "id" : "856334",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-09-02T19:39:38.081+08:00"
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\"/><table class=\"hapiPropertyTable\"><tbody><tr><td>Issued</td><td>01 九月 2016 15:23:35</td></tr></tbody></table><table class=\"hapiTableOfValues\"><thead><tr><td>Name</td><td>Value</td><td>Interpretation</td><td>Reference Range</td><td>Status</td></tr></thead><tbody><tr class=\"hapiTableOfValuesRowEven\"><td> 中性粒细胞比率 </td><td>67.340 %</td><td/><td> - </td><td/></tr></tbody></table></div>"
+      },
+      "contained" : [ {
+        "resourceType" : "Observation",
+        "id" : "r1",
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/report-english",
+          "valueString" : "NEUT%"
+        } ],
+        "identifier" : [ {
+          "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/examination-observation-id",
+          "value" : "JY1609010301_14"
+        } ],
+        "code" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/report-id",
+            "code" : "381",
+            "display" : "中性粒细胞比率"
+          } ]
+        },
+        "valueQuantity" : {
+          "value" : 67.34,
+          "unit" : "%"
+        },
+        "referenceRange" : [ {
+          "text" : "40-75"
+        } ]
+      } ],
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/report-no",
+        "valueString" : "JY1609010301"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/abnormal",
+        "valueCode" : "3"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/report-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240154"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/audit-date",
+        "valueDateTime" : "2016-09-01T15:25:45"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/audit-id",
+        "valueReference" : {
+          "reference" : "Practitioner/239855"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/examination-result-id",
+        "value" : "JY1609010301"
+      } ],
+      "subject" : {
+        "reference" : "Patient/844679"
+      },
+      "encounter" : {
+        "reference" : "Encounter/845357"
+      },
+      "issued" : "2016-09-01T15:23:35",
+      "performer" : [ {
+        "reference" : "Practitioner/239855"
+      } ],
+      "request" : [ {
+        "reference" : "DiagnosticOrder/845369"
+      } ],
+      "result" : [ {
+        "reference" : "#r1"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticReport/856344",
+    "resource" : {
+      "resourceType" : "DiagnosticReport",
+      "id" : "856344",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-09-02T19:39:43.915+08:00"
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\"/><table class=\"hapiPropertyTable\"><tbody><tr><td>Issued</td><td>01 九月 2016 15:23:35</td></tr></tbody></table><table class=\"hapiTableOfValues\"><thead><tr><td>Name</td><td>Value</td><td>Interpretation</td><td>Reference Range</td><td>Status</td></tr></thead><tbody><tr class=\"hapiTableOfValuesRowEven\"><td> 平均血红蛋白量 </td><td>30.5 pg</td><td/><td> - </td><td/></tr></tbody></table></div>"
+      },
+      "contained" : [ {
+        "resourceType" : "Observation",
+        "id" : "r1",
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/report-english",
+          "valueString" : "MCH"
+        } ],
+        "identifier" : [ {
+          "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/examination-observation-id",
+          "value" : "JY1609010301_19"
+        } ],
+        "code" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/report-id",
+            "code" : "397",
+            "display" : "平均血红蛋白量"
+          } ]
+        },
+        "valueQuantity" : {
+          "value" : 30.5,
+          "unit" : "pg"
+        },
+        "referenceRange" : [ {
+          "text" : "27-34"
+        } ]
+      } ],
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/report-no",
+        "valueString" : "JY1609010301"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/abnormal",
+        "valueCode" : "3"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/report-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240154"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/audit-date",
+        "valueDateTime" : "2016-09-01T15:25:45"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/audit-id",
+        "valueReference" : {
+          "reference" : "Practitioner/239855"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/examination-result-id",
+        "value" : "JY1609010301"
+      } ],
+      "subject" : {
+        "reference" : "Patient/844679"
+      },
+      "encounter" : {
+        "reference" : "Encounter/845357"
+      },
+      "issued" : "2016-09-01T15:23:35",
+      "performer" : [ {
+        "reference" : "Practitioner/239855"
+      } ],
+      "request" : [ {
+        "reference" : "DiagnosticOrder/845369"
+      } ],
+      "result" : [ {
+        "reference" : "#r1"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticReport/856348",
+    "resource" : {
+      "resourceType" : "DiagnosticReport",
+      "id" : "856348",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-09-02T19:39:46.324+08:00"
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\"/><table class=\"hapiPropertyTable\"><tbody><tr><td>Issued</td><td>01 九月 2016 15:23:35</td></tr></tbody></table><table class=\"hapiTableOfValues\"><thead><tr><td>Name</td><td>Value</td><td>Interpretation</td><td>Reference Range</td><td>Status</td></tr></thead><tbody><tr class=\"hapiTableOfValuesRowEven\"><td> 红细胞压积 </td><td>29.9 %</td><td/><td> - </td><td/></tr></tbody></table></div>"
+      },
+      "contained" : [ {
+        "resourceType" : "Observation",
+        "id" : "r1",
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/report-english",
+          "valueString" : "HCT"
+        } ],
+        "identifier" : [ {
+          "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/examination-observation-id",
+          "value" : "JY1609010301_21"
+        } ],
+        "code" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/report-id",
+            "code" : "395",
+            "display" : "红细胞压积"
+          } ]
+        },
+        "valueQuantity" : {
+          "value" : 29.9,
+          "unit" : "%"
+        },
+        "referenceRange" : [ {
+          "text" : "35-50"
+        } ]
+      } ],
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/report-no",
+        "valueString" : "JY1609010301"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/abnormal",
+        "valueCode" : "1"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/report-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240154"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/audit-date",
+        "valueDateTime" : "2016-09-01T15:25:45"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/audit-id",
+        "valueReference" : {
+          "reference" : "Practitioner/239855"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/examination-result-id",
+        "value" : "JY1609010301"
+      } ],
+      "subject" : {
+        "reference" : "Patient/844679"
+      },
+      "encounter" : {
+        "reference" : "Encounter/845357"
+      },
+      "issued" : "2016-09-01T15:23:35",
+      "performer" : [ {
+        "reference" : "Practitioner/239855"
+      } ],
+      "request" : [ {
+        "reference" : "DiagnosticOrder/845369"
+      } ],
+      "result" : [ {
+        "reference" : "#r1"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticReport/856366",
+    "resource" : {
+      "resourceType" : "DiagnosticReport",
+      "id" : "856366",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-09-02T19:39:56.903+08:00"
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\"/><table class=\"hapiPropertyTable\"><tbody><tr><td>Issued</td><td>01 九月 2016 15:23:35</td></tr></tbody></table><table class=\"hapiTableOfValues\"><thead><tr><td>Name</td><td>Value</td><td>Interpretation</td><td>Reference Range</td><td>Status</td></tr></thead><tbody><tr class=\"hapiTableOfValuesRowEven\"><td> 血小板压积 </td><td>0.092 %</td><td/><td> - </td><td/></tr></tbody></table></div>"
+      },
+      "contained" : [ {
+        "resourceType" : "Observation",
+        "id" : "r1",
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/report-english",
+          "valueString" : "PCT"
+        } ],
+        "identifier" : [ {
+          "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/examination-observation-id",
+          "value" : "JY1609010301_1"
+        } ],
+        "code" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/report-id",
+            "code" : "403",
+            "display" : "血小板压积"
+          } ]
+        },
+        "valueQuantity" : {
+          "value" : 0.092,
+          "unit" : "%"
+        },
+        "referenceRange" : [ {
+          "text" : "0.17-0.39"
+        } ]
+      } ],
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/report-no",
+        "valueString" : "JY1609010301"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/abnormal",
+        "valueCode" : "1"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/report-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240154"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/audit-date",
+        "valueDateTime" : "2016-09-01T15:25:45"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/audit-id",
+        "valueReference" : {
+          "reference" : "Practitioner/239855"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/examination-result-id",
+        "value" : "JY1609010301"
+      } ],
+      "subject" : {
+        "reference" : "Patient/844679"
+      },
+      "encounter" : {
+        "reference" : "Encounter/845357"
+      },
+      "issued" : "2016-09-01T15:23:35",
+      "performer" : [ {
+        "reference" : "Practitioner/239855"
+      } ],
+      "request" : [ {
+        "reference" : "DiagnosticOrder/845369"
+      } ],
+      "result" : [ {
+        "reference" : "#r1"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticReport/856380",
+    "resource" : {
+      "resourceType" : "DiagnosticReport",
+      "id" : "856380",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-09-02T19:40:05.630+08:00"
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\"/><table class=\"hapiPropertyTable\"><tbody><tr><td>Issued</td><td>01 九月 2016 15:23:35</td></tr></tbody></table><table class=\"hapiTableOfValues\"><thead><tr><td>Name</td><td>Value</td><td>Interpretation</td><td>Reference Range</td><td>Status</td></tr></thead><tbody><tr class=\"hapiTableOfValuesRowEven\"><td> 血小板压积 </td><td>0.092 %</td><td/><td> - </td><td/></tr></tbody></table></div>"
+      },
+      "contained" : [ {
+        "resourceType" : "Observation",
+        "id" : "r1",
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/report-english",
+          "valueString" : "PCT"
+        } ],
+        "identifier" : [ {
+          "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/examination-observation-id",
+          "value" : "JY1609010301_1"
+        } ],
+        "code" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/report-id",
+            "code" : "403",
+            "display" : "血小板压积"
+          } ]
+        },
+        "valueQuantity" : {
+          "value" : 0.092,
+          "unit" : "%"
+        },
+        "referenceRange" : [ {
+          "text" : "0.17-0.39"
+        } ]
+      } ],
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/report-no",
+        "valueString" : "JY1609010301"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/abnormal",
+        "valueCode" : "1"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/report-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240154"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/audit-date",
+        "valueDateTime" : "2016-09-01T15:25:45"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/audit-id",
+        "valueReference" : {
+          "reference" : "Practitioner/239855"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/examination-result-id",
+        "value" : "JY1609010301"
+      } ],
+      "subject" : {
+        "reference" : "Patient/844679"
+      },
+      "encounter" : {
+        "reference" : "Encounter/845357"
+      },
+      "issued" : "2016-09-01T15:23:35",
+      "performer" : [ {
+        "reference" : "Practitioner/239855"
+      } ],
+      "request" : [ {
+        "reference" : "DiagnosticOrder/845369"
+      } ],
+      "result" : [ {
+        "reference" : "#r1"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticReport/856388",
+    "resource" : {
+      "resourceType" : "DiagnosticReport",
+      "id" : "856388",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-09-02T19:40:10.367+08:00"
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\"/><table class=\"hapiPropertyTable\"><tbody><tr><td>Issued</td><td>01 九月 2016 15:23:35</td></tr></tbody></table><table class=\"hapiTableOfValues\"><thead><tr><td>Name</td><td>Value</td><td>Interpretation</td><td>Reference Range</td><td>Status</td></tr></thead><tbody><tr class=\"hapiTableOfValuesRowEven\"><td> 血小板压积 </td><td>0.092 %</td><td/><td> - </td><td/></tr></tbody></table></div>"
+      },
+      "contained" : [ {
+        "resourceType" : "Observation",
+        "id" : "r1",
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/report-english",
+          "valueString" : "PCT"
+        } ],
+        "identifier" : [ {
+          "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/examination-observation-id",
+          "value" : "JY1609010301_1"
+        } ],
+        "code" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/report-id",
+            "code" : "403",
+            "display" : "血小板压积"
+          } ]
+        },
+        "valueQuantity" : {
+          "value" : 0.092,
+          "unit" : "%"
+        },
+        "referenceRange" : [ {
+          "text" : "0.17-0.39"
+        } ]
+      } ],
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/report-no",
+        "valueString" : "JY1609010301"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/abnormal",
+        "valueCode" : "1"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/report-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240154"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/audit-date",
+        "valueDateTime" : "2016-09-01T15:25:45"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/audit-id",
+        "valueReference" : {
+          "reference" : "Practitioner/239855"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/examination-result-id",
+        "value" : "JY1609010301"
+      } ],
+      "subject" : {
+        "reference" : "Patient/844679"
+      },
+      "encounter" : {
+        "reference" : "Encounter/845357"
+      },
+      "issued" : "2016-09-01T15:23:35",
+      "performer" : [ {
+        "reference" : "Practitioner/239855"
+      } ],
+      "request" : [ {
+        "reference" : "DiagnosticOrder/845369"
+      } ],
+      "result" : [ {
+        "reference" : "#r1"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticReport/856392",
+    "resource" : {
+      "resourceType" : "DiagnosticReport",
+      "id" : "856392",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-09-02T19:40:12.726+08:00"
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\"/><table class=\"hapiPropertyTable\"><tbody><tr><td>Issued</td><td>01 九月 2016 15:23:35</td></tr></tbody></table><table class=\"hapiTableOfValues\"><thead><tr><td>Name</td><td>Value</td><td>Interpretation</td><td>Reference Range</td><td>Status</td></tr></thead><tbody><tr class=\"hapiTableOfValuesRowEven\"><td> 血小板压积 </td><td>0.092 %</td><td/><td> - </td><td/></tr></tbody></table></div>"
+      },
+      "contained" : [ {
+        "resourceType" : "Observation",
+        "id" : "r1",
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/report-english",
+          "valueString" : "PCT"
+        } ],
+        "identifier" : [ {
+          "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/examination-observation-id",
+          "value" : "JY1609010301_1"
+        } ],
+        "code" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/report-id",
+            "code" : "403",
+            "display" : "血小板压积"
+          } ]
+        },
+        "valueQuantity" : {
+          "value" : 0.092,
+          "unit" : "%"
+        },
+        "referenceRange" : [ {
+          "text" : "0.17-0.39"
+        } ]
+      } ],
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/report-no",
+        "valueString" : "JY1609010301"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/abnormal",
+        "valueCode" : "1"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/report-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240154"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/audit-date",
+        "valueDateTime" : "2016-09-01T15:25:45"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/audit-id",
+        "valueReference" : {
+          "reference" : "Practitioner/239855"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/examination-result-id",
+        "value" : "JY1609010301"
+      } ],
+      "subject" : {
+        "reference" : "Patient/844679"
+      },
+      "encounter" : {
+        "reference" : "Encounter/845357"
+      },
+      "issued" : "2016-09-01T15:23:35",
+      "performer" : [ {
+        "reference" : "Practitioner/239855"
+      } ],
+      "request" : [ {
+        "reference" : "DiagnosticOrder/845369"
+      } ],
+      "result" : [ {
+        "reference" : "#r1"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticReport/856008",
+    "resource" : {
+      "resourceType" : "DiagnosticReport",
+      "id" : "856008",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-09-02T19:24:11.769+08:00"
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\"/><table class=\"hapiPropertyTable\"><tbody><tr><td>Issued</td><td>01 九月 2016 15:29:52</td></tr></tbody></table><table class=\"hapiTableOfValues\"><thead><tr><td>Name</td><td>Value</td><td>Interpretation</td><td>Reference Range</td><td>Status</td></tr></thead><tbody><tr class=\"hapiTableOfValuesRowEven\"><td> 平均血小板体积 </td><td>12.20 fL</td><td/><td> - </td><td/></tr></tbody></table></div>"
+      },
+      "contained" : [ {
+        "resourceType" : "Observation",
+        "id" : "r1",
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/report-english",
+          "valueString" : "MPV"
+        } ],
+        "identifier" : [ {
+          "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/examination-observation-id",
+          "value" : "JY1609010312_4"
+        } ],
+        "code" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/report-id",
+            "code" : "402",
+            "display" : "平均血小板体积"
+          } ]
+        },
+        "valueQuantity" : {
+          "value" : 12.2,
+          "unit" : "fL"
+        },
+        "referenceRange" : [ {
+          "text" : "7.0-12.1"
+        } ]
+      } ],
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/report-no",
+        "valueString" : "JY1609010312"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/abnormal",
+        "valueCode" : "1"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/report-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240154"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/audit-date",
+        "valueDateTime" : "2016-09-01T15:33:45"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/audit-id",
+        "valueReference" : {
+          "reference" : "Practitioner/239855"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/examination-result-id",
+        "value" : "JY1609010312"
+      } ],
+      "subject" : {
+        "reference" : "Patient/844693"
+      },
+      "encounter" : {
+        "reference" : "Encounter/845645"
+      },
+      "issued" : "2016-09-01T15:29:52",
+      "performer" : [ {
+        "reference" : "Practitioner/239855"
+      } ],
+      "request" : [ {
+        "reference" : "DiagnosticOrder/845684"
+      } ],
+      "result" : [ {
+        "reference" : "#r1"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticReport/856018",
+    "resource" : {
+      "resourceType" : "DiagnosticReport",
+      "id" : "856018",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-09-02T19:24:17.307+08:00"
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\"/><table class=\"hapiPropertyTable\"><tbody><tr><td>Issued</td><td>01 九月 2016 15:29:52</td></tr></tbody></table><table class=\"hapiTableOfValues\"><thead><tr><td>Name</td><td>Value</td><td>Interpretation</td><td>Reference Range</td><td>Status</td></tr></thead><tbody><tr class=\"hapiTableOfValuesRowEven\"><td> 嗜酸性粒细胞数 </td><td>0.08 10^9/L</td><td/><td> - </td><td/></tr></tbody></table></div>"
+      },
+      "contained" : [ {
+        "resourceType" : "Observation",
+        "id" : "r1",
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/report-english",
+          "valueString" : "EO#"
+        } ],
+        "identifier" : [ {
+          "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/examination-observation-id",
+          "value" : "JY1609010312_9"
+        } ],
+        "code" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/report-id",
+            "code" : "446",
+            "display" : "嗜酸性粒细胞数"
+          } ]
+        },
+        "valueQuantity" : {
+          "value" : 0.08,
+          "unit" : "10^9/L"
+        },
+        "referenceRange" : [ {
+          "text" : "0.02-0.52"
+        } ]
+      } ],
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/report-no",
+        "valueString" : "JY1609010312"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/abnormal",
+        "valueCode" : "3"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/report-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240154"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/audit-date",
+        "valueDateTime" : "2016-09-01T15:33:45"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/audit-id",
+        "valueReference" : {
+          "reference" : "Practitioner/239855"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/examination-result-id",
+        "value" : "JY1609010312"
+      } ],
+      "subject" : {
+        "reference" : "Patient/844693"
+      },
+      "encounter" : {
+        "reference" : "Encounter/845645"
+      },
+      "issued" : "2016-09-01T15:29:52",
+      "performer" : [ {
+        "reference" : "Practitioner/239855"
+      } ],
+      "request" : [ {
+        "reference" : "DiagnosticOrder/845684"
+      } ],
+      "result" : [ {
+        "reference" : "#r1"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticReport/856040",
+    "resource" : {
+      "resourceType" : "DiagnosticReport",
+      "id" : "856040",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-09-02T19:24:29.475+08:00"
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\"/><table class=\"hapiPropertyTable\"><tbody><tr><td>Issued</td><td>01 九月 2016 15:29:52</td></tr></tbody></table><table class=\"hapiTableOfValues\"><thead><tr><td>Name</td><td>Value</td><td>Interpretation</td><td>Reference Range</td><td>Status</td></tr></thead><tbody><tr class=\"hapiTableOfValuesRowEven\"><td> 平均血红蛋白量 </td><td>27.4 pg</td><td/><td> - </td><td/></tr></tbody></table></div>"
+      },
+      "contained" : [ {
+        "resourceType" : "Observation",
+        "id" : "r1",
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/report-english",
+          "valueString" : "MCH"
+        } ],
+        "identifier" : [ {
+          "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/examination-observation-id",
+          "value" : "JY1609010312_20"
+        } ],
+        "code" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/report-id",
+            "code" : "397",
+            "display" : "平均血红蛋白量"
+          } ]
+        },
+        "valueQuantity" : {
+          "value" : 27.4,
+          "unit" : "pg"
+        },
+        "referenceRange" : [ {
+          "text" : "27-34"
+        } ]
+      } ],
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/report-no",
+        "valueString" : "JY1609010312"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/abnormal",
+        "valueCode" : "3"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/report-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240154"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/audit-date",
+        "valueDateTime" : "2016-09-01T15:33:45"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/audit-id",
+        "valueReference" : {
+          "reference" : "Practitioner/239855"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/examination-result-id",
+        "value" : "JY1609010312"
+      } ],
+      "subject" : {
+        "reference" : "Patient/844693"
+      },
+      "encounter" : {
+        "reference" : "Encounter/845645"
+      },
+      "issued" : "2016-09-01T15:29:52",
+      "performer" : [ {
+        "reference" : "Practitioner/239855"
+      } ],
+      "request" : [ {
+        "reference" : "DiagnosticOrder/845684"
+      } ],
+      "result" : [ {
+        "reference" : "#r1"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticReport/856050",
+    "resource" : {
+      "resourceType" : "DiagnosticReport",
+      "id" : "856050",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-09-02T19:24:35.333+08:00"
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\"/><table class=\"hapiPropertyTable\"><tbody><tr><td>Issued</td><td>01 九月 2016 15:23:35</td></tr></tbody></table><table class=\"hapiTableOfValues\"><thead><tr><td>Name</td><td>Value</td><td>Interpretation</td><td>Reference Range</td><td>Status</td></tr></thead><tbody><tr class=\"hapiTableOfValuesRowEven\"><td> 血小板压积 </td><td>0.092 %</td><td/><td> - </td><td/></tr></tbody></table></div>"
+      },
+      "contained" : [ {
+        "resourceType" : "Observation",
+        "id" : "r1",
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/report-english",
+          "valueString" : "PCT"
+        } ],
+        "identifier" : [ {
+          "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/examination-observation-id",
+          "value" : "JY1609010301_1"
+        } ],
+        "code" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/report-id",
+            "code" : "403",
+            "display" : "血小板压积"
+          } ]
+        },
+        "valueQuantity" : {
+          "value" : 0.092,
+          "unit" : "%"
+        },
+        "referenceRange" : [ {
+          "text" : "0.17-0.39"
+        } ]
+      } ],
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/report-no",
+        "valueString" : "JY1609010301"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/abnormal",
+        "valueCode" : "1"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/report-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240154"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/audit-date",
+        "valueDateTime" : "2016-09-01T15:25:45"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/audit-id",
+        "valueReference" : {
+          "reference" : "Practitioner/239855"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/examination-result-id",
+        "value" : "JY1609010301"
+      } ],
+      "subject" : {
+        "reference" : "Patient/844679"
+      },
+      "encounter" : {
+        "reference" : "Encounter/845357"
+      },
+      "issued" : "2016-09-01T15:23:35",
+      "performer" : [ {
+        "reference" : "Practitioner/239855"
+      } ],
+      "request" : [ {
+        "reference" : "DiagnosticOrder/845369"
+      } ],
+      "result" : [ {
+        "reference" : "#r1"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticReport/856058",
+    "resource" : {
+      "resourceType" : "DiagnosticReport",
+      "id" : "856058",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-09-02T19:24:39.634+08:00"
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\"/><table class=\"hapiPropertyTable\"><tbody><tr><td>Issued</td><td>01 九月 2016 15:23:35</td></tr></tbody></table><table class=\"hapiTableOfValues\"><thead><tr><td>Name</td><td>Value</td><td>Interpretation</td><td>Reference Range</td><td>Status</td></tr></thead><tbody><tr class=\"hapiTableOfValuesRowEven\"><td> 血小板压积 </td><td>0.092 %</td><td/><td> - </td><td/></tr></tbody></table></div>"
+      },
+      "contained" : [ {
+        "resourceType" : "Observation",
+        "id" : "r1",
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/report-english",
+          "valueString" : "PCT"
+        } ],
+        "identifier" : [ {
+          "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/examination-observation-id",
+          "value" : "JY1609010301_1"
+        } ],
+        "code" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/report-id",
+            "code" : "403",
+            "display" : "血小板压积"
+          } ]
+        },
+        "valueQuantity" : {
+          "value" : 0.092,
+          "unit" : "%"
+        },
+        "referenceRange" : [ {
+          "text" : "0.17-0.39"
+        } ]
+      } ],
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/report-no",
+        "valueString" : "JY1609010301"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/abnormal",
+        "valueCode" : "1"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/report-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240154"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/audit-date",
+        "valueDateTime" : "2016-09-01T15:25:45"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/audit-id",
+        "valueReference" : {
+          "reference" : "Practitioner/239855"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/examination-result-id",
+        "value" : "JY1609010301"
+      } ],
+      "subject" : {
+        "reference" : "Patient/844679"
+      },
+      "encounter" : {
+        "reference" : "Encounter/845357"
+      },
+      "issued" : "2016-09-01T15:23:35",
+      "performer" : [ {
+        "reference" : "Practitioner/239855"
+      } ],
+      "request" : [ {
+        "reference" : "DiagnosticOrder/845369"
+      } ],
+      "result" : [ {
+        "reference" : "#r1"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/DiagnosticReport/856070",
+    "resource" : {
+      "resourceType" : "DiagnosticReport",
+      "id" : "856070",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-09-02T19:24:46.818+08:00"
+      },
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\"/><table class=\"hapiPropertyTable\"><tbody><tr><td>Issued</td><td>01 九月 2016 15:23:35</td></tr></tbody></table><table class=\"hapiTableOfValues\"><thead><tr><td>Name</td><td>Value</td><td>Interpretation</td><td>Reference Range</td><td>Status</td></tr></thead><tbody><tr class=\"hapiTableOfValuesRowEven\"><td> 血小板压积 </td><td>0.092 %</td><td/><td> - </td><td/></tr></tbody></table></div>"
+      },
+      "contained" : [ {
+        "resourceType" : "Observation",
+        "id" : "r1",
+        "extension" : [ {
+          "url" : "http://www.nestvision.com/platform/app/data/v1/text/report-english",
+          "valueString" : "PCT"
+        } ],
+        "identifier" : [ {
+          "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/examination-observation-id",
+          "value" : "JY1609010301_1"
+        } ],
+        "code" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/report-id",
+            "code" : "403",
+            "display" : "血小板压积"
+          } ]
+        },
+        "valueQuantity" : {
+          "value" : 0.092,
+          "unit" : "%"
+        },
+        "referenceRange" : [ {
+          "text" : "0.17-0.39"
+        } ]
+      } ],
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/report-no",
+        "valueString" : "JY1609010301"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/abnormal",
+        "valueCode" : "1"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/report-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240154"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/date/audit-date",
+        "valueDateTime" : "2016-09-01T15:25:45"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/audit-id",
+        "valueReference" : {
+          "reference" : "Practitioner/239855"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/examination-result-id",
+        "value" : "JY1609010301"
+      } ],
+      "subject" : {
+        "reference" : "Patient/844679"
+      },
+      "encounter" : {
+        "reference" : "Encounter/845357"
+      },
+      "issued" : "2016-09-01T15:23:35",
+      "performer" : [ {
+        "reference" : "Practitioner/239855"
+      } ],
+      "request" : [ {
+        "reference" : "DiagnosticOrder/845369"
+      } ],
+      "result" : [ {
+        "reference" : "#r1"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  } ]
+}

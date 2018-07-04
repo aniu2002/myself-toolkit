@@ -1,0 +1,197 @@
+{
+  "resourceType": "Bundle",
+  "id": "aadad281-1c82-43b1-8a31-fa4e4c74b01c",
+  "meta": {
+    "lastUpdated": "2017-05-11T17:57:13.924+08:00"
+  },
+  "type": "searchset",
+  "total": 147433,
+  "link": [
+    {
+      "relation": "self",
+      "url": "http://10.10.15.38:8083/resources/Condition?_count=50"
+    },
+    {
+      "relation": "next",
+      "url": "http://10.10.15.38:8083/resources?_getpages=458c925d-4d62-4635-b522-dcc5a7a5c240&_getpagesoffset=50&_count=50&_bundletype=searchset"
+    }
+  ],
+  "entry": [
+    {
+      "fullUrl": "http://10.10.15.38:8083/resources/Condition/979",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "979",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2016-06-17T13:30:17.706+08:00"
+        },
+        "extension": [
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/reg-type-code",
+            "valueCode": "2"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-observe",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-rescue",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/chief",
+            "valueString": "无"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/illness",
+            "valueString": "   鼻炎，咽炎"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/history",
+            "valueString": "null"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/per-history",
+            "valueString": "null"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/mar-history",
+            "valueString": "null"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/child-history",
+            "valueString": "null"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/fam-history",
+            "valueString": "null"
+          }
+        ],
+        "identifier": [
+          {
+            "system": "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/condition-id",
+            "value": "GG1603290208_1"
+          }
+        ],
+        "patient": {
+          "reference": "Patient/978",
+          "display": "张家硕"
+        },
+        "asserter": {
+          "reference": "Practitioner/359"
+        },
+        "dateRecorded": "2016-03-29",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.156.10011.2.3.3.11",
+              "code": "000.000",
+              "display": "   鼻炎，咽炎"
+            }
+          ]
+        },
+        "category": {
+          "coding": [
+            {
+              "system": "http://www.nestvision.com/platform/app/data/v1/code/condition-types",
+              "code": "2",
+              "display": "门诊诊断"
+            }
+          ]
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://10.10.15.38:8083/resources/Condition/980",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "980",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2016-06-17T13:33:41.495+08:00"
+        },
+        "extension": [
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/code/reg-type-code",
+            "valueCode": "2"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-observe",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-rescue",
+            "valueBoolean": false
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/chief",
+            "valueString": "无"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/illness",
+            "valueString": "   鼻炎，咽炎"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/history",
+            "valueString": "null"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/per-history",
+            "valueString": "null"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/mar-history",
+            "valueString": "null"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/child-history",
+            "valueString": "null"
+          },
+          {
+            "url": "http://www.nestvision.com/platform/app/data/v1/text/fam-history",
+            "valueString": "null"
+          }
+        ],
+        "identifier": [
+          {
+            "system": "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/condition-id",
+            "value": "GG1603290208_1"
+          }
+        ],
+        "patient": {
+          "reference": "Patient/978",
+          "display": "张家硕"
+        },
+        "asserter": {
+          "reference": "Practitioner/359"
+        },
+        "dateRecorded": "2016-03-29",
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:2.16.156.10011.2.3.3.11",
+              "code": "000.000",
+              "display": "   鼻炎，咽炎"
+            }
+          ]
+        },
+        "category": {
+          "coding": [
+            {
+              "system": "http://www.nestvision.com/platform/app/data/v1/code/condition-types",
+              "code": "2",
+              "display": "门诊诊断"
+            }
+          ]
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    }
+  ]
+}

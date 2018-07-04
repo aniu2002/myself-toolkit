@@ -1,0 +1,5880 @@
+{
+  "settings" : {
+    "number_of_shards" : 5,
+    "number_of_replicas" : 0
+  },
+  "mappings" : {
+    "Appointment" : {
+      "dynamic" : true,
+      "properties" : {
+        "actor" : {
+          "type" : "object",
+          "properties" : {
+            "path" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "reference" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "appointment-type" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "date" : {
+          "type" : "object",
+          "properties" : {
+            "low" : {
+              "type" : "long",
+              "index" : "not_analyzed"
+            },
+            "high" : {
+              "type" : "long",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "extension" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "identifier" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "location" : {
+          "type" : "object",
+          "properties" : {
+            "path" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "reference" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "part-status" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "patient" : {
+          "type" : "object",
+          "properties" : {
+            "path" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "reference" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "practitioner" : {
+          "type" : "object",
+          "properties" : {
+            "path" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "reference" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "service-type" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "status" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "tags" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "_security" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "profile" : {
+          "type" : "string",
+          "index" : "not_analyzed"
+        },
+        "txt" : {
+          "type" : "text",
+          "store" : "no",
+          "analyzer" : "standard",
+          "index" : "analyzed"
+        },
+        "updated" : {
+          "type" : "long",
+          "index" : "not_analyzed"
+        }
+      }
+    },
+    "Condition" : {
+      "dynamic" : true,
+      "properties" : {
+        "asserter" : {
+          "type" : "object",
+          "properties" : {
+            "path" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "reference" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "body-site" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "category" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "clinicalstatus" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "code" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "date-recorded" : {
+          "type" : "object",
+          "properties" : {
+            "low" : {
+              "type" : "long",
+              "index" : "not_analyzed"
+            },
+            "high" : {
+              "type" : "long",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "encounter" : {
+          "type" : "object",
+          "properties" : {
+            "path" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "reference" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "evidence" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "extension" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "identifier" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "onset" : {
+          "type" : "object",
+          "properties" : {
+            "low" : {
+              "type" : "long",
+              "index" : "not_analyzed"
+            },
+            "high" : {
+              "type" : "long",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "onset-info" : {
+          "type" : "object",
+          "properties" : {
+            "exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "normalized" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "patient" : {
+          "type" : "object",
+          "properties" : {
+            "path" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "reference" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "severity" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "stage" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "tags" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "_security" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "profile" : {
+          "type" : "string",
+          "index" : "not_analyzed"
+        },
+        "txt" : {
+          "type" : "text",
+          "store" : "no",
+          "analyzer" : "standard",
+          "index" : "analyzed"
+        },
+        "updated" : {
+          "type" : "long",
+          "index" : "not_analyzed"
+        }
+      }
+    },
+    "Basic" : {
+      "dynamic" : true,
+      "properties" : {
+        "author" : {
+          "type" : "object",
+          "properties" : {
+            "path" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "reference" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "code" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "created" : {
+          "type" : "object",
+          "properties" : {
+            "low" : {
+              "type" : "long",
+              "index" : "not_analyzed"
+            },
+            "high" : {
+              "type" : "long",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "extension" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "identifier" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "patient" : {
+          "type" : "object",
+          "properties" : {
+            "path" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "reference" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "subject" : {
+          "type" : "object",
+          "properties" : {
+            "path" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "reference" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "tags" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "_security" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "profile" : {
+          "type" : "string",
+          "index" : "not_analyzed"
+        },
+        "txt" : {
+          "type" : "text",
+          "store" : "no",
+          "analyzer" : "standard",
+          "index" : "analyzed"
+        },
+        "updated" : {
+          "type" : "long",
+          "index" : "not_analyzed"
+        }
+      }
+    },
+    "ReferralRequest" : {
+      "dynamic" : true,
+      "properties" : {
+        "basedon" : {
+          "type" : "object",
+          "properties" : {
+            "path" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "reference" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "category" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "context" : {
+          "type" : "object",
+          "properties" : {
+            "path" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "reference" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "date" : {
+          "type" : "object",
+          "properties" : {
+            "low" : {
+              "type" : "long",
+              "index" : "not_analyzed"
+            },
+            "high" : {
+              "type" : "long",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "extension" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "parent" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "patient" : {
+          "type" : "object",
+          "properties" : {
+            "path" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "reference" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "priority" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "recipient" : {
+          "type" : "object",
+          "properties" : {
+            "path" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "reference" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "requester" : {
+          "type" : "object",
+          "properties" : {
+            "path" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "reference" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "specialty" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "status" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "type" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "tags" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "_security" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "profile" : {
+          "type" : "string",
+          "index" : "not_analyzed"
+        },
+        "txt" : {
+          "type" : "text",
+          "store" : "no",
+          "analyzer" : "standard",
+          "index" : "analyzed"
+        },
+        "updated" : {
+          "type" : "long",
+          "index" : "not_analyzed"
+        }
+      }
+    },
+    "Organization" : {
+      "dynamic" : true,
+      "properties" : {
+        "active" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "address" : {
+          "type" : "object",
+          "properties" : {
+            "exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "normalized" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "address-city" : {
+          "type" : "object",
+          "properties" : {
+            "exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "normalized" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "address-country" : {
+          "type" : "object",
+          "properties" : {
+            "exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "normalized" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "address-postalcode" : {
+          "type" : "object",
+          "properties" : {
+            "exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "normalized" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "address-state" : {
+          "type" : "object",
+          "properties" : {
+            "exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "normalized" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "address-use" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "extension" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "identifier" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "name" : {
+          "type" : "object",
+          "properties" : {
+            "exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "normalized" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "partof" : {
+          "type" : "object",
+          "properties" : {
+            "path" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "reference" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "phonetic" : {
+          "type" : "object",
+          "properties" : {
+            "exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "normalized" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "type" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "tags" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "_security" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "profile" : {
+          "type" : "string",
+          "index" : "not_analyzed"
+        },
+        "txt" : {
+          "type" : "text",
+          "store" : "no",
+          "analyzer" : "standard",
+          "index" : "analyzed"
+        },
+        "updated" : {
+          "type" : "long",
+          "index" : "not_analyzed"
+        }
+      }
+    },
+    "Bundle" : {
+      "dynamic" : true,
+	  "dynamic_templates": [
+         { "str": {
+                      "match":              "*", 
+                      "match_mapping_type": "string",
+                      "mapping": {
+                          "type":           "string",
+                          "analyzer":       "whitespace"
+                   }
+             }
+		}],
+      "properties" : {
+        "CompositionAg.identifier" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "Encounter.identifier" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "Patient.identifier" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "identifier" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "type" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "tags" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "_security" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "profile" : {
+          "type" : "string",
+          "index" : "not_analyzed"
+        },
+        "txt" : {
+          "type" : "text",
+          "store" : "no",
+          "analyzer" : "standard",
+          "index" : "analyzed"
+        },
+        "updated" : {
+          "type" : "long",
+          "index" : "not_analyzed"
+        }
+      }
+    },
+    "DiagnosticOrder" : {
+      "dynamic" : true,
+      "properties" : {
+        "actor" : {
+          "type" : "object",
+          "properties" : {
+            "path" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "reference" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "bodysite" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "code" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "encounter" : {
+          "type" : "object",
+          "properties" : {
+            "path" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "reference" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "event-date" : {
+          "type" : "object",
+          "properties" : {
+            "low" : {
+              "type" : "long",
+              "index" : "not_analyzed"
+            },
+            "high" : {
+              "type" : "long",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "event-status" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "extension" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "identifier" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "item-date" : {
+          "type" : "object",
+          "properties" : {
+            "low" : {
+              "type" : "long",
+              "index" : "not_analyzed"
+            },
+            "high" : {
+              "type" : "long",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "item-past-status" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "item-status" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "orderer" : {
+          "type" : "object",
+          "properties" : {
+            "path" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "reference" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "patient" : {
+          "type" : "object",
+          "properties" : {
+            "path" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "reference" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "status" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "subject" : {
+          "type" : "object",
+          "properties" : {
+            "path" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "reference" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "tags" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "_security" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "profile" : {
+          "type" : "string",
+          "index" : "not_analyzed"
+        },
+        "txt" : {
+          "type" : "text",
+          "store" : "no",
+          "analyzer" : "standard",
+          "index" : "analyzed"
+        },
+        "updated" : {
+          "type" : "long",
+          "index" : "not_analyzed"
+        }
+      }
+    },
+    "DiagnosticReport" : {
+	  "dynamic_templates": [
+         { "str": {
+                      "match":              "*", 
+                      "match_mapping_type": "string",
+                      "mapping": {
+                          "type":           "string",
+                          "analyzer":       "whitespace"
+                   }
+             }
+		}],
+      "dynamic" : true,
+      "properties" : {
+        "category" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "code" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "date" : {
+          "type" : "object",
+          "properties" : {
+            "low" : {
+              "type" : "long",
+              "index" : "not_analyzed"
+            },
+            "high" : {
+              "type" : "long",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "diagnosis" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "encounter" : {
+          "type" : "object",
+          "properties" : {
+            "path" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "reference" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "extension" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "identifier" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "image" : {
+          "type" : "object",
+          "properties" : {
+            "path" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "reference" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "issued" : {
+          "type" : "object",
+          "properties" : {
+            "low" : {
+              "type" : "long",
+              "index" : "not_analyzed"
+            },
+            "high" : {
+              "type" : "long",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "patient" : {
+          "type" : "object",
+          "properties" : {
+            "path" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "reference" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "performer" : {
+          "type" : "object",
+          "properties" : {
+            "path" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "reference" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "request" : {
+          "type" : "object",
+          "properties" : {
+            "path" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "reference" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "result" : {
+          "type" : "object",
+          "properties" : {
+            "path" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "reference" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "specimen" : {
+          "type" : "object",
+          "properties" : {
+            "path" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "reference" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "status" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "subject" : {
+          "type" : "object",
+          "properties" : {
+            "path" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "reference" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "tags" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "_security" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "profile" : {
+          "type" : "string",
+          "index" : "not_analyzed"
+        },
+        "txt" : {
+          "type" : "text",
+          "store" : "no",
+          "analyzer" : "standard",
+          "index" : "analyzed"
+        },
+        "updated" : {
+          "type" : "long",
+          "index" : "not_analyzed"
+        }
+      }
+    },
+    "Patient" : {
+      "dynamic" : true,
+      "properties" : {
+        "active" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "address" : {
+          "type" : "object",
+          "properties" : {
+            "exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "normalized" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "address-city" : {
+          "type" : "object",
+          "properties" : {
+            "exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "normalized" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "address-country" : {
+          "type" : "object",
+          "properties" : {
+            "exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "normalized" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "address-postalcode" : {
+          "type" : "object",
+          "properties" : {
+            "exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "normalized" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "address-state" : {
+          "type" : "object",
+          "properties" : {
+            "exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "normalized" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "address-use" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "animal-breed" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "animal-species" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "birthdate" : {
+          "type" : "object",
+          "properties" : {
+            "low" : {
+              "type" : "long",
+              "index" : "not_analyzed"
+            },
+            "high" : {
+              "type" : "long",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "careprovider" : {
+          "type" : "object",
+          "properties" : {
+            "path" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "reference" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "death-date" : {
+          "type" : "object",
+          "properties" : {
+            "low" : {
+              "type" : "long",
+              "index" : "not_analyzed"
+            },
+            "high" : {
+              "type" : "long",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "deceased" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "email" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "extension" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "family" : {
+          "type" : "object",
+          "properties" : {
+            "exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "normalized" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "gender" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "given" : {
+          "type" : "object",
+          "properties" : {
+            "exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "normalized" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "identifier" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "language" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "link" : {
+          "type" : "object",
+          "properties" : {
+            "path" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "reference" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "name" : {
+          "type" : "object",
+          "properties" : {
+            "exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "normalized" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "organization" : {
+          "type" : "object",
+          "properties" : {
+            "path" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "reference" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "phone" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "phonetic" : {
+          "type" : "object",
+          "properties" : {
+            "exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "normalized" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "telecom" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "tags" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "_security" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "profile" : {
+          "type" : "string",
+          "index" : "not_analyzed"
+        },
+        "txt" : {
+          "type" : "text",
+          "store" : "no",
+          "analyzer" : "standard",
+          "index" : "analyzed"
+        },
+        "updated" : {
+          "type" : "long",
+          "index" : "not_analyzed"
+        }
+      }
+    },
+    "ProcedureRequest" : {
+      "dynamic" : true,
+      "properties" : {
+        "encounter" : {
+          "type" : "object",
+          "properties" : {
+            "path" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "reference" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "extension" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "identifier" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "orderer" : {
+          "type" : "object",
+          "properties" : {
+            "path" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "reference" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "patient" : {
+          "type" : "object",
+          "properties" : {
+            "path" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "reference" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "performer" : {
+          "type" : "object",
+          "properties" : {
+            "path" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "reference" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "subject" : {
+          "type" : "object",
+          "properties" : {
+            "path" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "reference" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "tags" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "_security" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "profile" : {
+          "type" : "string",
+          "index" : "not_analyzed"
+        },
+        "txt" : {
+          "type" : "text",
+          "store" : "no",
+          "analyzer" : "standard",
+          "index" : "analyzed"
+        },
+        "updated" : {
+          "type" : "long",
+          "index" : "not_analyzed"
+        }
+      }
+    },
+    "Practitioner" : {
+      "dynamic" : true,
+      "properties" : {
+        "address" : {
+          "type" : "object",
+          "properties" : {
+            "exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "normalized" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "address-city" : {
+          "type" : "object",
+          "properties" : {
+            "exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "normalized" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "address-country" : {
+          "type" : "object",
+          "properties" : {
+            "exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "normalized" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "address-postalcode" : {
+          "type" : "object",
+          "properties" : {
+            "exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "normalized" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "address-state" : {
+          "type" : "object",
+          "properties" : {
+            "exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "normalized" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "address-use" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "communication" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "email" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "extension" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "family" : {
+          "type" : "object",
+          "properties" : {
+            "exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "normalized" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "gender" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "given" : {
+          "type" : "object",
+          "properties" : {
+            "exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "normalized" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "identifier" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "location" : {
+          "type" : "object",
+          "properties" : {
+            "path" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "reference" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "name" : {
+          "type" : "object",
+          "properties" : {
+            "exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "normalized" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "organization" : {
+          "type" : "object",
+          "properties" : {
+            "path" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "reference" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "phone" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "phonetic" : {
+          "type" : "object",
+          "properties" : {
+            "exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "normalized" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "role" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "specialty" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "telecom" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "tags" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "_security" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "profile" : {
+          "type" : "string",
+          "index" : "not_analyzed"
+        },
+        "txt" : {
+          "type" : "text",
+          "store" : "no",
+          "analyzer" : "standard",
+          "index" : "analyzed"
+        },
+        "updated" : {
+          "type" : "long",
+          "index" : "not_analyzed"
+        }
+      }
+    },
+    "AllergyIntolerance" : {
+      "dynamic" : true,
+      "properties" : {
+        "category" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "criticality" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "date" : {
+          "type" : "object",
+          "properties" : {
+            "low" : {
+              "type" : "long",
+              "index" : "not_analyzed"
+            },
+            "high" : {
+              "type" : "long",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "extension" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "identifier" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "last-date" : {
+          "type" : "object",
+          "properties" : {
+            "low" : {
+              "type" : "long",
+              "index" : "not_analyzed"
+            },
+            "high" : {
+              "type" : "long",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "manifestation" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "onset" : {
+          "type" : "object",
+          "properties" : {
+            "low" : {
+              "type" : "long",
+              "index" : "not_analyzed"
+            },
+            "high" : {
+              "type" : "long",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "patient" : {
+          "type" : "object",
+          "properties" : {
+            "path" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "reference" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "recorder" : {
+          "type" : "object",
+          "properties" : {
+            "path" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "reference" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "reporter" : {
+          "type" : "object",
+          "properties" : {
+            "path" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "reference" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "route" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "severity" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "status" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "substance" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "type" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "tags" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "_security" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "profile" : {
+          "type" : "string",
+          "index" : "not_analyzed"
+        },
+        "txt" : {
+          "type" : "text",
+          "store" : "no",
+          "analyzer" : "standard",
+          "index" : "analyzed"
+        },
+        "updated" : {
+          "type" : "long",
+          "index" : "not_analyzed"
+        }
+      }
+    },
+    "Schedule" : {
+      "dynamic" : true,
+      "properties" : {
+        "actor" : {
+          "type" : "object",
+          "properties" : {
+            "path" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "reference" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "date" : {
+          "type" : "object",
+          "properties" : {
+            "low" : {
+              "type" : "long",
+              "index" : "not_analyzed"
+            },
+            "high" : {
+              "type" : "long",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "extension" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "identifier" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "type" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "tags" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "_security" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "profile" : {
+          "type" : "string",
+          "index" : "not_analyzed"
+        },
+        "txt" : {
+          "type" : "text",
+          "store" : "no",
+          "analyzer" : "standard",
+          "index" : "analyzed"
+        },
+        "updated" : {
+          "type" : "long",
+          "index" : "not_analyzed"
+        }
+      }
+    },
+    "Medication" : {
+      "dynamic" : true,
+      "properties" : {
+        "code" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "container" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "extension" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "form" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "ingredient" : {
+          "type" : "object",
+          "properties" : {
+            "path" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "reference" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "ingredient-code" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "manufacturer" : {
+          "type" : "object",
+          "properties" : {
+            "path" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "reference" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "package-item" : {
+          "type" : "object",
+          "properties" : {
+            "path" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "reference" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "package-item-code" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "tags" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "_security" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "profile" : {
+          "type" : "string",
+          "index" : "not_analyzed"
+        },
+        "txt" : {
+          "type" : "text",
+          "store" : "no",
+          "analyzer" : "standard",
+          "index" : "analyzed"
+        },
+        "updated" : {
+          "type" : "long",
+          "index" : "not_analyzed"
+        }
+      }
+    },
+    "Encounter" : {
+      "dynamic" : true,
+      "properties" : {
+        "appointment" : {
+          "type" : "object",
+          "properties" : {
+            "path" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "reference" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "class" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "condition" : {
+          "type" : "object",
+          "properties" : {
+            "path" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "reference" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "date" : {
+          "type" : "object",
+          "properties" : {
+            "low" : {
+              "type" : "long",
+              "index" : "not_analyzed"
+            },
+            "high" : {
+              "type" : "long",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "episodeofcare" : {
+          "type" : "object",
+          "properties" : {
+            "path" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "reference" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "extension" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "identifier" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "incomingreferral" : {
+          "type" : "object",
+          "properties" : {
+            "path" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "reference" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "indication" : {
+          "type" : "object",
+          "properties" : {
+            "path" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "reference" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "length" : {
+          "type" : "double",
+          "index" : "not_analyzed"
+        },
+        "location" : {
+          "type" : "object",
+          "properties" : {
+            "path" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "reference" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "location-period" : {
+          "type" : "object",
+          "properties" : {
+            "low" : {
+              "type" : "long",
+              "index" : "not_analyzed"
+            },
+            "high" : {
+              "type" : "long",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "part-of" : {
+          "type" : "object",
+          "properties" : {
+            "path" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "reference" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "participant" : {
+          "type" : "object",
+          "properties" : {
+            "path" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "reference" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "participant-type" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "patient" : {
+          "type" : "object",
+          "properties" : {
+            "path" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "reference" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "practitioner" : {
+          "type" : "object",
+          "properties" : {
+            "path" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "reference" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "procedure" : {
+          "type" : "object",
+          "properties" : {
+            "path" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "reference" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "reason" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "special-arrangement" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "status" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "type" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "tags" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "_security" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "profile" : {
+          "type" : "string",
+          "index" : "not_analyzed"
+        },
+        "txt" : {
+          "type" : "text",
+          "store" : "no",
+          "analyzer" : "standard",
+          "index" : "analyzed"
+        },
+        "updated" : {
+          "type" : "long",
+          "index" : "not_analyzed"
+        }
+      }
+    },
+    "Procedure" : {
+      "dynamic" : true,
+      "properties" : {
+        "category" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "code" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "date" : {
+          "type" : "object",
+          "properties" : {
+            "low" : {
+              "type" : "long",
+              "index" : "not_analyzed"
+            },
+            "high" : {
+              "type" : "long",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "encounter" : {
+          "type" : "object",
+          "properties" : {
+            "path" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "reference" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "extension" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "identifier" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "location" : {
+          "type" : "object",
+          "properties" : {
+            "path" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "reference" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "patient" : {
+          "type" : "object",
+          "properties" : {
+            "path" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "reference" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "performer" : {
+          "type" : "object",
+          "properties" : {
+            "path" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "reference" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "subject" : {
+          "type" : "object",
+          "properties" : {
+            "path" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "reference" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "tags" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "_security" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "profile" : {
+          "type" : "string",
+          "index" : "not_analyzed"
+        },
+        "txt" : {
+          "type" : "text",
+          "store" : "no",
+          "analyzer" : "standard",
+          "index" : "analyzed"
+        },
+        "updated" : {
+          "type" : "long",
+          "index" : "not_analyzed"
+        }
+      }
+    },
+    "Slot" : {
+      "dynamic" : true,
+      "properties" : {
+        "extension" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "identifier" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "schedule" : {
+          "type" : "object",
+          "properties" : {
+            "path" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "reference" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "slot-type" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "start" : {
+          "type" : "object",
+          "properties" : {
+            "low" : {
+              "type" : "long",
+              "index" : "not_analyzed"
+            },
+            "high" : {
+              "type" : "long",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "status" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "tags" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "_security" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "profile" : {
+          "type" : "string",
+          "index" : "not_analyzed"
+        },
+        "txt" : {
+          "type" : "text",
+          "store" : "no",
+          "analyzer" : "standard",
+          "index" : "analyzed"
+        },
+        "updated" : {
+          "type" : "long",
+          "index" : "not_analyzed"
+        }
+      }
+    },
+    "MedicationOrder" : {
+      "dynamic" : true,
+      "properties" : {
+        "code" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "datewritten" : {
+          "type" : "object",
+          "properties" : {
+            "low" : {
+              "type" : "long",
+              "index" : "not_analyzed"
+            },
+            "high" : {
+              "type" : "long",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "encounter" : {
+          "type" : "object",
+          "properties" : {
+            "path" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "reference" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "extension" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "identifier" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "medication" : {
+          "type" : "object",
+          "properties" : {
+            "path" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "reference" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "patient" : {
+          "type" : "object",
+          "properties" : {
+            "path" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "reference" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "prescriber" : {
+          "type" : "object",
+          "properties" : {
+            "path" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "reference" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "status" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "tags" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "_security" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "profile" : {
+          "type" : "string",
+          "index" : "not_analyzed"
+        },
+        "txt" : {
+          "type" : "text",
+          "store" : "no",
+          "analyzer" : "standard",
+          "index" : "analyzed"
+        },
+        "updated" : {
+          "type" : "long",
+          "index" : "not_analyzed"
+        }
+      }
+    },
+    "Subscription" : {
+      "dynamic" : true,
+      "properties" : {
+        "contact" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "criteria" : {
+          "type" : "object",
+          "properties" : {
+            "exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "normalized" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "extension" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "payload" : {
+          "type" : "object",
+          "properties" : {
+            "exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "normalized" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "status" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "tag" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "type" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "url" : {
+          "type" : "string",
+          "index" : "not_analyzed"
+        },
+        "tags" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "_security" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "profile" : {
+          "type" : "string",
+          "index" : "not_analyzed"
+        },
+        "txt" : {
+          "type" : "text",
+          "store" : "no",
+          "analyzer" : "standard",
+          "index" : "analyzed"
+        },
+        "updated" : {
+          "type" : "long",
+          "index" : "not_analyzed"
+        }
+      }
+    },
+    "Claim" : {
+      "dynamic" : true,
+      "properties" : {
+        "created" : {
+          "type" : "object",
+          "properties" : {
+            "low" : {
+              "type" : "long",
+              "index" : "not_analyzed"
+            },
+            "high" : {
+              "type" : "long",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "extension" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "facilityidentifier" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "facilityreference" : {
+          "type" : "object",
+          "properties" : {
+            "path" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "reference" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "identifier" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "insureridentifier" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "insurerreference" : {
+          "type" : "object",
+          "properties" : {
+            "path" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "reference" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "organizationidentifier" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "organizationreference" : {
+          "type" : "object",
+          "properties" : {
+            "path" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "reference" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "patientidentifier" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "patientreference" : {
+          "type" : "object",
+          "properties" : {
+            "path" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "reference" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "priority" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "provideridentifier" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "providerreference" : {
+          "type" : "object",
+          "properties" : {
+            "path" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "reference" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "use" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "tags" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "_security" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "profile" : {
+          "type" : "string",
+          "index" : "not_analyzed"
+        },
+        "txt" : {
+          "type" : "text",
+          "store" : "no",
+          "analyzer" : "standard",
+          "index" : "analyzed"
+        },
+        "updated" : {
+          "type" : "long",
+          "index" : "not_analyzed"
+        }
+      }
+    },
+    "Location" : {
+      "dynamic" : true,
+      "properties" : {
+        "address" : {
+          "type" : "object",
+          "properties" : {
+            "exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "normalized" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "address-city" : {
+          "type" : "object",
+          "properties" : {
+            "exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "normalized" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "address-country" : {
+          "type" : "object",
+          "properties" : {
+            "exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "normalized" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "address-postalcode" : {
+          "type" : "object",
+          "properties" : {
+            "exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "normalized" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "address-state" : {
+          "type" : "object",
+          "properties" : {
+            "exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "normalized" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "address-use" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "extension" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+			"exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "identifier" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "name" : {
+          "type" : "object",
+          "properties" : {
+            "exact" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "normalized" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "near" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "near-distance" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "organization" : {
+          "type" : "object",
+          "properties" : {
+            "path" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "reference" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "partof" : {
+          "type" : "object",
+          "properties" : {
+            "path" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "reference" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "status" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "type" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "tags" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "_security" : {
+          "properties" : {
+            "system" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "value" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            },
+            "_a" : {
+              "type" : "string",
+              "index" : "not_analyzed"
+            }
+          }
+        },
+        "profile" : {
+          "type" : "string",
+          "index" : "not_analyzed"
+        },
+        "txt" : {
+          "type" : "text",
+          "store" : "no",
+          "analyzer" : "standard",
+          "index" : "analyzed"
+        },
+        "updated" : {
+          "type" : "long",
+          "index" : "not_analyzed"
+        }
+      }
+    }
+  }
+}
