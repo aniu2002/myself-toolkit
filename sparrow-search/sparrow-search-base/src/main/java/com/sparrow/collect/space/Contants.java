@@ -2,14 +2,10 @@ package com.sparrow.collect.space;
 
 /**
  * <B>Description</B> TODO <br />
- * <B>Copyright</B> Copyright (c) 2014 www.diligrp.com All rights reserved. <br />
- * 本软件源代码版权归地利集团,未经许可不得任意复制与传播.<br />
- * <B>Company</B> 地利集团
  * @createTime 2014年5月30日 下午4:18:27
- * @author tanghongjun
+ * @author
  */
 public class Contants {
-    
     
     public static final String getStringByArray(String... strs) {
         StringBuilder sBuilder = new StringBuilder();
