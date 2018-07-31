@@ -1,14 +1,10 @@
 package com.sparrow.core.utils;
 
+import com.sparrow.core.utils.file.FileUtils;
+
 import java.io.*;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-import java.util.Properties;
-
-import com.sparrow.core.utils.file.FileUtils;
+import java.util.*;
 
 /**
  * @author Yzc
@@ -116,7 +112,7 @@ public class PropertiesFileUtil {
             } catch (IOException e) {
                 e.printStackTrace();
             } finally {
-                if(input!=null ) try {
+                if (input != null) try {
                     input.close();
                 } catch (IOException e) {
                     e.printStackTrace();
@@ -161,32 +157,10 @@ public class PropertiesFileUtil {
      * @return
      * @author YZC
      */
-    static InputStream getPropertyFileInputStream(String filename) {
+    public static InputStream getPropertyFileInputStream(String filename) {
         if (StringUtils.isEmpty(filename))
             return null;
-        InputStream input = null;
-        try {
-            if (filename.startsWith("classpath:")) {
-                ClassLoader cl = PropertiesFileUtil.class.getClassLoader();
-                input = cl.getResourceAsStream(filename.substring(10));
-            } else if (PathResolver.isRelative(filename)) {
-                File file = new File(filename);
-                if (file.exists()) {
-                    input = new FileInputStream(filename);
-                } else {
-                    ClassLoader cl = PropertiesFileUtil.class.getClassLoader();
-                    input = cl.getResourceAsStream(filename);
-                }
-            } else {
-                File file = new File(filename);
-                if (file.exists()) {
-                    input = new FileInputStream(filename);
-                }
-            }
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
-        return input;
+        return FileUtils.getInputStream(filename);
     }
 
     /**
@@ -371,17 +345,17 @@ public class PropertiesFileUtil {
             Iterator<Map.Entry<String, String>> iterator = inMap.entrySet()
                     .iterator();
             Map.Entry<String, String> entry;
-            StringBuilder sb=new StringBuilder();
-            boolean first=true;
+            StringBuilder sb = new StringBuilder();
+            boolean first = true;
             while (iterator.hasNext()) {
                 entry = iterator.next();
-                if(first)
-                    first=false;
+                if (first)
+                    first = false;
                 else
-                   sb.append(FileUtils.LINE_SEPARATOR);
+                    sb.append(FileUtils.LINE_SEPARATOR);
                 sb.append(entry.getKey()).append('=').append(entry.getValue());
             }
-            FileUtils.writeFile(file,sb.toString(),FileUtils.DEFAULT_ENCODING);
+            FileUtils.writeFile(file, sb.toString(), FileUtils.DEFAULT_ENCODING);
         }
     }
 

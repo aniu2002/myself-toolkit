@@ -511,9 +511,8 @@ public class FileUtils {
                 input = cl.getResourceAsStream(filename);
             } else {
                 File file = new File(filename);
-                if (file.exists()) {
+                if (file.exists())
                     input = new FileInputStream(filename);
-                }
             }
             if (input == null && PathResolver.isRelative(filename)) {
                 ClassLoader cl = FileUtils.class.getClassLoader();
@@ -536,7 +535,7 @@ public class FileUtils {
         try {
             fr = new BufferedReader(new InputStreamReader(new FileInputStream(
                     file), encoding));
-            String line = null;
+            String line;
             while ((line = fr.readLine()) != null) {
                 buf.append(line);
             }
@@ -546,18 +545,16 @@ public class FileUtils {
             return null;
         } finally {
             try {
-                if (fr != null) {
+                if (fr != null)
                     fr.close();
-                }
             } catch (IOException e) {
                 e.printStackTrace();
                 return null;
             }
         }
         String backJson = buf.toString();
-        if (backJson.length() <= 0) {
+        if (backJson.length() <= 0)
             return null;
-        }
         return backJson;
     }
 

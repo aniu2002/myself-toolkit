@@ -169,6 +169,8 @@ public class LuceneService {
      * @author Yzc
      */
     public Map doSearch(String fields[], String text, int startPos, int endPos) {
+
+
         MultiFieldQueryParser parser = new MultiFieldQueryParser(Version.LUCENE_46, fields, analyzer);
         try {
             final Query query = parser.parse(text);

@@ -1,14 +1,17 @@
 package com.sparrow.core.config;
 
 import com.sparrow.core.loader.LoadFile;
+import com.sparrow.core.log.Logger;
+import com.sparrow.core.log.LoggerManager;
 import com.sparrow.core.utils.PropertiesFileUtil;
 import com.sparrow.core.utils.StringUtils;
+import com.sparrow.core.utils.file.FileUtils;
+import org.apache.commons.io.IOUtils;
+import org.yaml.snakeyaml.Yaml;
+import org.yaml.snakeyaml.reader.UnicodeReader;
 
-import java.io.File;
-import java.io.IOException;
-import java.io.UnsupportedEncodingException;
-import java.util.Properties;
-import java.util.StringTokenizer;
+import java.io.*;
+import java.util.*;
 
 import static java.io.File.separatorChar;
 
@@ -16,6 +19,7 @@ import static java.io.File.separatorChar;
  * 系统配置类
  */
 public class SystemConfig {
+    private static final Logger log = LoggerManager.getSysLog();
     public static final String fileName = System.getProperty("user.home")
             + "/_system.properties";
     public static final String LINE_SEPARATOR = System.getProperty(
@@ -43,12 +47,11 @@ public class SystemConfig {
 
     static {
         boolean useSystemProps = "true".equalsIgnoreCase(System.getProperty("use.system.props"));
-        Properties properties = null;
+        Properties properties;
         if (useSystemProps)
             properties = System.getProperties();
         else {
-            properties = useSystemProps ? System.getProperties() : PropertiesFileUtil.getProperties(new File(
-                    fileName));
+            properties = PropertiesFileUtil.getProperties(new File(fileName));
             if (properties == null || properties.isEmpty()) {
                 properties = PropertiesFileUtil.mergePropertyFiles(new String[]{
                         "classpath:system.properties",
@@ -56,6 +59,7 @@ public class SystemConfig {
                         "classpath:eggs/scan.properties",
                         "classpath:conf/default.properties",
                         "classpath:conf/custom.properties"});
+                processYml(properties, "classpath:system.yml", "classpath:application.yml", "classpath:config.yml");
             }
         }
         _sysProps = properties;
@@ -193,5 +197,119 @@ public class SystemConfig {
 
     public static void store() {
         PropertiesFileUtil.writeProperties(_sysProps, fileName);
+    }
+
+    public static Properties processYml(String... files) {
+        Properties properties = createStringAdaptingProperties();
+        processYml(properties, files);
+        return properties;
+    }
+
+    static Properties processYml(Properties properties, String... files) {
+        Yaml yaml = new Yaml(new StrictMapAppenderConstructor());
+        InputStream ins = null;
+        int count = 0;
+        for (String file : files) {
+            try {
+                log.debug("Loading from YAML: " + file);
+                ins = FileUtils.getInputStream(file);
+                Reader reader = new UnicodeReader(ins);
+                try {
+                    for (Object object : yaml.loadAll(reader)) {
+                        if (object != null) {
+                            processYml(asMap(object), properties);
+                            count++;
+                        }
+                    }
+                    log.debug("Loaded " + count + " document" + (count > 1 ? "s" : "") +
+                            " from YAML resource: " + file);
+                } finally {
+                    reader.close();
+                }
+            } catch (IOException ex) {
+                handleProcessError(file, ex);
+            } finally {
+                IOUtils.closeQuietly(ins);
+            }
+        }
+        return properties;
+    }
+
+    private static Map<String, Object> asMap(Object object) {
+        Map<String, Object> result = new LinkedHashMap();
+        if (!(object instanceof Map)) {
+            // A document can be a text literal
+            result.put("document", object);
+            return result;
+        }
+
+        Map<Object, Object> map = (Map<Object, Object>) object;
+        for (Map.Entry<Object, Object> entry : map.entrySet()) {
+            Object value = entry.getValue();
+            if (value instanceof Map) {
+                value = asMap(value);
+            }
+            Object key = entry.getKey();
+            if (key instanceof CharSequence) {
+                result.put(key.toString(), value);
+            } else {
+                // It has to be a map key in this case
+                result.put("[" + key.toString() + "]", value);
+            }
+        }
+        return result;
+    }
+
+    public static Properties createStringAdaptingProperties() {
+        return new Properties() {
+            @Override
+            public String getProperty(String key) {
+                Object value = get(key);
+                return (value != null ? value.toString() : null);
+            }
+        };
+    }
+
+    private static void buildFlattenedMap(Map<String, Object> result, Map<String, Object> source, String path) {
+        for (Map.Entry<String, Object> entry : source.entrySet()) {
+            String key = entry.getKey();
+            if (StringUtils.hasText(path)) {
+                if (key.startsWith("[")) {
+                    key = path + key;
+                } else {
+                    key = path + '.' + key;
+                }
+            }
+            Object value = entry.getValue();
+            if (value instanceof String) {
+                result.put(key, value);
+            } else if (value instanceof Map) {
+                Map<String, Object> map = (Map<String, Object>) value;
+                buildFlattenedMap(result, map, key);
+            } else if (value instanceof Collection) {
+                Collection<Object> collection = (Collection<Object>) value;
+                int count = 0;
+                for (Object object : collection) {
+                    buildFlattenedMap(result,
+                            Collections.singletonMap("[" + (count++) + "]", object), key);
+                }
+            } else {
+                result.put(key, (value != null ? value : ""));
+            }
+        }
+    }
+
+    protected static final Map<String, Object> getFlattenedMap(Map<String, Object> source) {
+        Map<String, Object> result = new LinkedHashMap<String, Object>();
+        buildFlattenedMap(result, source, null);
+        return result;
+    }
+
+    private static void processYml(Map<String, Object> map, Properties properties) {
+        properties.putAll(getFlattenedMap(map));
+    }
+
+    private static void handleProcessError(String resource, IOException ex) {
+        log.warn("Could not load map from " + resource + ": " + ex.getMessage());
     }
 }

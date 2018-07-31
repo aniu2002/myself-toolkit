@@ -87,6 +87,10 @@
             <groupId>com.belerweb</groupId>
             <artifactId>pinyin4j</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.sparrow</groupId>
+            <artifactId>sparrow-core</artifactId>
+        </dependency>
     </dependencies>
     <build>
         <plugins>
