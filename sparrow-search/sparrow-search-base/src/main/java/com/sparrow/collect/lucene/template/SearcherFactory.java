@@ -29,8 +29,8 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 public abstract class SearcherFactory {
-    private static Map<String, Analyzer> analyzeMap = new ConcurrentHashMap<String, Analyzer>();
-    private static Map<String, Analyzer> fieldAnalyzes = new ConcurrentHashMap<String, Analyzer>();
+    private static Map<String, Analyzer> analyzeMap = new ConcurrentHashMap();
+    private static Map<String, Analyzer> fieldAnalyzes = new ConcurrentHashMap();
 
     static {
         analyzeMap.put("whitespace", new WhitespaceAnalyzer(Version.LUCENE_46));
@@ -68,15 +68,15 @@ public abstract class SearcherFactory {
         return indexSearcher;
     }
 
-    public static Analyzer getPerFieldAnalyzer(List<String> fieldSet){
-        Map<String, Analyzer> anaMap = new HashMap<String, Analyzer>();
+    public static Analyzer getPerFieldAnalyzer(List<String> fieldSet) {
+        Map<String, Analyzer> anaMap = new HashMap();
         for (String f : fieldSet) {
-                //modify by yb: 包装为需要对数据进行格式化过滤
-            String anlName=System.getProperty("analyzer.d."+f);
-                Analyzer analyzer = new FormatAnalyzerWapper(analyzeMap.get(anlName));
-                anaMap.put(f, analyzer);
+            //modify by yb: 包装为需要对数据进行格式化过滤
+            String anlName = System.getProperty("analyzer.d." + f);
+            Analyzer analyzer = new FormatAnalyzerWapper(analyzeMap.get(anlName));
+            anaMap.put(f, analyzer);
         }
-        Analyzer  analyzer = new PerFieldAnalyzerWrapper(analyzeMap.get("default"), anaMap);
-        return analyzer ;
+        Analyzer analyzer = new PerFieldAnalyzerWrapper(analyzeMap.get("default"), anaMap);
+        return analyzer;
     }
 }

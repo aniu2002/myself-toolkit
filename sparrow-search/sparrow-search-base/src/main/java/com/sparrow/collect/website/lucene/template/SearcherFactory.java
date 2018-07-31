@@ -42,6 +42,7 @@ public abstract class SearcherFactory {
         analyzeMap.put("region", new ExactIKAnalyzer(RegionDic.getInstance(), false, true));
         analyzeMap.put("market", new ExactIKAnalyzer(MarketDic.getInstance(), false, true));
         analyzeMap.put("comma", new CommaAnalyzer(Version.LUCENE_46));
+        analyzeMap.put("default", new StandardAnalyzer(Version.LUCENE_46));
     }
 
     public static IndexSearcher createSearcher() throws IOException {
@@ -68,15 +69,15 @@ public abstract class SearcherFactory {
         return indexSearcher;
     }
 
-    public static Analyzer getPerFieldAnalyzer(List<String> fieldSet){
+    public static Analyzer getPerFieldAnalyzer(List<String> fieldSet) {
         Map<String, Analyzer> anaMap = new HashMap<String, Analyzer>();
         for (String f : fieldSet) {
-                //modify by yb: 包装为需要对数据进行格式化过滤
-            String anlName=System.getProperty("analyzer.d."+f);
-                Analyzer analyzer = new FormatAnalyzerWapper(analyzeMap.get(anlName));
-                anaMap.put(f, analyzer);
+            //modify by yb: 包装为需要对数据进行格式化过滤
+            String anlName = System.getProperty("analyzer.d." + f);
+            Analyzer analyzer = new FormatAnalyzerWapper(analyzeMap.get(anlName));
+            anaMap.put(f, analyzer);
         }
-        Analyzer  analyzer = new PerFieldAnalyzerWrapper(analyzeMap.get("default"), anaMap);
-        return analyzer ;
+        Analyzer analyzer = new PerFieldAnalyzerWrapper(analyzeMap.get("default"), anaMap);
+        return analyzer;
     }
 }
