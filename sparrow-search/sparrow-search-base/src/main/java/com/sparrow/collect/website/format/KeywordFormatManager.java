@@ -1,5 +1,7 @@
 package com.sparrow.collect.website.format;
 
+import com.sparrow.collect.website.SearchConfig;
+import com.sparrow.collect.website.query.SearchBean;
 import com.sparrow.core.config.SystemConfig;
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
@@ -75,12 +77,11 @@ public class KeywordFormatManager {
     }
 
     private Map<String, String> getFormatsClass() {
-        Properties properties= SystemConfig.processYml("classpath:config/search-base.yml");
         Map<String, String> formatsClass = new HashMap<String, String>();
-        String[] formatsName = ConfigManager.getConfig().get("searcher.basesearch.format.list").split(",");
+        String[] formatsName = SearchConfig.get("searcher.format.list").split(",");
         if (formatsName != null) {
             for (String formatName : formatsName) {
-                String formatClass = ConfigManager.getConfig().get(String.format("searcher.basesearch.format.%s.cla", formatName));
+                String formatClass = SearchConfig.get(String.format("searcher.format.%s.class", formatName));
                 formatsClass.put(formatName, formatClass);
             }
         }
@@ -88,36 +89,35 @@ public class KeywordFormatManager {
     }
 
     private Map<String, String[]> getSearchersFormatKeys() {
-
         Map<String, String[]> ret = new HashMap<>();
-        String[] searchIds = ConfigManager.getConfig().get("searcher.basesearch.format.searchId.list").split(",");
+        String[] searchIds = SearchConfig.get("searcher.format.searchId.list").split(",");
         if (null != searchIds) {
             for (String searchId : searchIds) {
-                String[] formatkeys = ConfigManager.getConfig().get(String.format("searcher.basesearch.format.%s.process.list", searchId)).split(",");
-                ret.put(searchId, formatkeys);
+                String[] formatKeys = SearchConfig.get(String.format("searcher.basesearch.format.%s.process.list", searchId)).split(",");
+                ret.put(searchId, formatKeys);
             }
         }
         return ret;
     }
 
     @SuppressWarnings({"unused", "rawtypes"})
-    public String keywordFormat(SearchBean searchBean, String searchId, String searchkeyWord) throws Exception {
-        if (StringUtils.isBlank(searchkeyWord)) {
-            return searchkeyWord;
+    public String keywordFormat(SearchBean searchBean, String searchId, String searchKeyWord) throws Exception {
+        if (StringUtils.isBlank(searchKeyWord)) {
+            return searchKeyWord;
         }
         List<KeywordFormat> fieldsFormats = searchersFieldsFormat.get(searchId);
         if (CollectionUtils.isNotEmpty(fieldsFormats)) {
             for (KeywordFormat fieldFormats : fieldsFormats) {
                 if (fieldFormats != null) {
-                    searchkeyWord = fieldFormats.format(searchkeyWord);
+                    searchKeyWord = fieldFormats.format(searchKeyWord);
                 }
             }
         }
         final int MAX_LENGTH = 15;
-        if (searchkeyWord.length() > MAX_LENGTH) {
-            searchkeyWord = searchkeyWord.substring(0, MAX_LENGTH);
+        if (searchKeyWord.length() > MAX_LENGTH) {
+            searchKeyWord = searchKeyWord.substring(0, MAX_LENGTH);
         }
-        searchBean.setSearchCondStr(searchkeyWord);
-        return searchkeyWord;
+        searchBean.setSearchCondStr(searchKeyWord);
+        return searchKeyWord;
     }
 }
