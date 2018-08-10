@@ -1,5 +1,6 @@
 package com.sparrow.collect.website.cache;
 
+import com.alibaba.fastjson.JSONArray;
 import com.sparrow.collect.website.BeansFactory;
 import com.sparrow.collect.website.redis.JedisTemplate;
 import org.apache.commons.logging.Log;

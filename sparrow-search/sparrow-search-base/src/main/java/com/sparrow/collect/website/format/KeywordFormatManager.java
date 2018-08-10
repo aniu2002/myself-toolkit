@@ -1,8 +1,7 @@
 package com.sparrow.collect.website.format;
 
-import com.sparrow.collect.website.SearchConfig;
-import com.sparrow.collect.website.query.SearchBean;
-import com.sparrow.core.config.SystemConfig;
+import com.sparrow.collect.website.Configs;
+import com.sparrow.collect.website.data.search.SearchBean;
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.logging.Log;
@@ -78,10 +77,10 @@ public class KeywordFormatManager {
 
     private Map<String, String> getFormatsClass() {
         Map<String, String> formatsClass = new HashMap<String, String>();
-        String[] formatsName = SearchConfig.get("searcher.format.list").split(",");
+        String[] formatsName = Configs.get("searcher.format.list").split(",");
         if (formatsName != null) {
             for (String formatName : formatsName) {
-                String formatClass = SearchConfig.get(String.format("searcher.format.%s.class", formatName));
+                String formatClass = Configs.get(String.format("searcher.format.%s.class", formatName));
                 formatsClass.put(formatName, formatClass);
             }
         }
@@ -90,10 +89,10 @@ public class KeywordFormatManager {
 
     private Map<String, String[]> getSearchersFormatKeys() {
         Map<String, String[]> ret = new HashMap<>();
-        String[] searchIds = SearchConfig.get("searcher.format.searchId.list").split(",");
+        String[] searchIds = Configs.get("searcher.format.searchId.list").split(",");
         if (null != searchIds) {
             for (String searchId : searchIds) {
-                String[] formatKeys = SearchConfig.get(String.format("searcher.basesearch.format.%s.process.list", searchId)).split(",");
+                String[] formatKeys = Configs.get(String.format("searcher.basesearch.format.%s.process.list", searchId)).split(",");
                 ret.put(searchId, formatKeys);
             }
         }

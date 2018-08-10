@@ -1,6 +1,6 @@
 package com.sparrow.collect.website.filter;
 
-import com.dili.dd.searcher.basesearch.search.beans.Ranger;
+import com.sparrow.collect.website.query.Ranger;
 
 import java.util.List;
 import java.util.Map;

@@ -1,9 +1,9 @@
 package com.sparrow.collect.website.cache;
 
-import com.dili.dd.searcher.basesearch.common.bean.MSBean;
-import com.dili.dd.searcher.basesearch.common.sort.ExternalDataSource;
-import com.dili.dd.searcher.basesearch.search.beans.BeansFactory;
-import com.dili.dd.searcher.common.redis.JedisTemplate;
+import com.sparrow.collect.space.MSBean;
+import com.sparrow.collect.website.BeansFactory;
+import com.sparrow.collect.website.redis.JedisTemplate;
+import com.sparrow.collect.website.score.ExternalDataSource;
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -113,7 +113,7 @@ public class StoreSalesCache implements ExternalDataSource<Long, Integer> {
         private int max = 0;
 
         public StoreSalesCacheSupport() {
-            jedisTemplate = BeansFactory.getInstance().getRecommendJedisTemplate();
+            jedisTemplate = BeansFactory.getInstance().getFilterJedisTemplate();
         }
 
 

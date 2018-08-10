@@ -1,8 +1,8 @@
 package com.sparrow.collect.website.cache;
 
 import com.alibaba.fastjson.JSONArray;
-import com.dili.dd.searcher.basesearch.search.beans.BeansFactory;
-import com.dili.dd.searcher.common.redis.JedisTemplate;
+import com.sparrow.collect.website.BeansFactory;
+import com.sparrow.collect.website.redis.JedisTemplate;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 

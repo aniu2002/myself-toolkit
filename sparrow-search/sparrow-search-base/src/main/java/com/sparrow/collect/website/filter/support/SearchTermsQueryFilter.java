@@ -1,7 +1,7 @@
 package com.sparrow.collect.website.filter.support;
 
-import com.dili.dd.searcher.basesearch.search.beans.Ranger;
-import com.dili.dd.searcher.basesearch.search.filter.SearchFilter;
+import com.sparrow.collect.website.filter.SearchFilter;
+import com.sparrow.collect.website.query.Ranger;
 import org.apache.lucene.index.Term;
 import org.apache.lucene.queries.TermsFilter;
 import org.apache.lucene.search.Filter;

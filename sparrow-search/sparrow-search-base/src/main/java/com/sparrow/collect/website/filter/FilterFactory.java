@@ -1,6 +1,6 @@
 package com.sparrow.collect.website.filter;
 
-import com.sparrow.collect.website.SearchConfig;
+import com.sparrow.collect.website.Configs;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.apache.lucene.search.Filter;
@@ -50,20 +50,20 @@ public class FilterFactory {
     private Map<String, String> parseAndGetFilterNameInfos() {
 
         Map<String, String> filterNameInfos = new HashMap<String, String>();
-        String[] searchIds = SearchConfig.get("searcher.filter.searchId.list").split(",");
+        String[] searchIds = Configs.get("searcher.filter.searchId.list").split(",");
         if (null != searchIds && searchIds.length > 0) {
 
             for (String searchId : searchIds) {
                 String keyStr = String.format("searcher.filter.%s.field.list", searchId);
-                String[] fields = SearchConfig.get(keyStr).split(",");
+                String[] fields = Configs.get(keyStr).split(",");
                 if (null != fields && fields.length > 0) {
                     for (String field : fields) {
                         String filterNameKeyStr = String.format("searcher.filter.%s.%s.filter", searchId, field);
-                        String filterName = SearchConfig.get(filterNameKeyStr);
+                        String filterName = Configs.get(filterNameKeyStr);
                         if (null == filterName) {
                             // use default
                             filterNameKeyStr = String.format("searcher.filter.%s.default.filter", searchId, field);
-                            filterName = SearchConfig.get(filterNameKeyStr);
+                            filterName = Configs.get(filterNameKeyStr);
                         }
                         filterNameInfos.put(searchId + field, filterName);
                     }

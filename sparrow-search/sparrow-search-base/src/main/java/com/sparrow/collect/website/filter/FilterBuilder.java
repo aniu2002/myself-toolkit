@@ -1,10 +1,7 @@
 package com.sparrow.collect.website.filter;
 
-import com.dili.dd.searcher.basesearch.search.beans.search.Translator;
-import com.dili.dd.searcher.datainterface.domain.search.filter.IntValueRangeFilter;
-import com.dili.dd.searcher.datainterface.domain.search.filter.LongValueRangeFilter;
-import com.dili.dd.searcher.datainterface.domain.search.filter.MultiValueFilter;
-import com.dili.dd.searcher.datainterface.domain.search.filter.SingleValueFilter;
+import com.sparrow.collect.website.data.search.Translator;
+import com.sparrow.collect.website.domain.search.filter.*;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.lucene.index.Term;
 import org.apache.lucene.queries.TermFilter;
@@ -19,37 +16,30 @@ import java.util.List;
  * Created by yangtao on 2015/4/17.
  */
 public class FilterBuilder {
-    private static FilterBuilder instance;
+    private static FilterBuilder instance = new FilterBuilder();
 
     public static FilterBuilder getInstance() {
-        if(instance == null) {
-            synchronized (FilterBuilder.class) {
-                if(instance == null) {
-                    instance = new FilterBuilder();
-                }
-            }
-        }
         return instance;
     }
 
-    public Filter build(String searchId, com.dili.dd.searcher.datainterface.domain.search.filter.SearchFilter filter) {
-        if(filter instanceof SingleValueFilter) {
-            return build(searchId, (SingleValueFilter)filter);
+    public Filter build(String searchId, FieldFilter filter) {
+        if (filter instanceof SingleValueFilter) {
+            return build(searchId, (SingleValueFilter) filter);
 
-        } else if(filter instanceof MultiValueFilter) {
-            return build(searchId, (MultiValueFilter)filter);
+        } else if (filter instanceof MultiValueFilter) {
+            return build(searchId, (MultiValueFilter) filter);
 
-        } else if(filter instanceof LongValueRangeFilter) {
-            return build(searchId, (LongValueRangeFilter)filter);
+        } else if (filter instanceof LongValueRangeFilter) {
+            return build(searchId, (LongValueRangeFilter) filter);
 
-        } else if(filter instanceof IntValueRangeFilter) {
-            return build(searchId, (IntValueRangeFilter)filter);
+        } else if (filter instanceof IntValueRangeFilter) {
+            return build(searchId, (IntValueRangeFilter) filter);
         }
         return null;
     }
 
     protected Filter build(String searchId, SingleValueFilter filter) {
-        if(filter.getField() == null || filter.getValue() == null) {
+        if (filter.getField() == null || filter.getValue() == null) {
             return null;
         }
         String field = translate(searchId, filter.getField());
@@ -59,12 +49,12 @@ public class FilterBuilder {
     }
 
     protected Filter build(String searchId, MultiValueFilter filter) {
-        if(filter.getField() == null || filter.getValues() == null) {
+        if (filter.getField() == null || filter.getValues() == null) {
             return null;
         }
         String field = translate(searchId, filter.getField());
         List<Term> termList = new ArrayList<>(filter.getValues().size());
-        for(String value : filter.getValues()) {
+        for (String value : filter.getValues()) {
             Term term = new Term(field, value);
             termList.add(term);
         }
@@ -73,7 +63,7 @@ public class FilterBuilder {
     }
 
     protected Filter build(String searchId, LongValueRangeFilter filter) {
-        if(filter.getField() == null || (filter.getMin() == null && filter.getMax() == null)) {
+        if (filter.getField() == null || (filter.getMin() == null && filter.getMax() == null)) {
             return null;
         }
         String field = translate(searchId, filter.getField());
@@ -87,7 +77,7 @@ public class FilterBuilder {
     }
 
     protected Filter build(String searchId, IntValueRangeFilter filter) {
-        if(filter.getField() == null || (filter.getMin() == null && filter.getMax() == null)) {
+        if (filter.getField() == null || (filter.getMin() == null && filter.getMax() == null)) {
             return null;
         }
         String field = translate(searchId, filter.getField());
@@ -102,7 +92,7 @@ public class FilterBuilder {
 
     public String translate(String searchId, String field) {
         String translated = Translator.getInstance().getFieldName(searchId, field);
-        if(StringUtils.isNotBlank(translated)) {
+        if (StringUtils.isNotBlank(translated)) {
             return translated;
         }
         return field;

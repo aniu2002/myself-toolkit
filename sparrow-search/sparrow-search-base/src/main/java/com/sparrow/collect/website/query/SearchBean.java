@@ -1,9 +1,8 @@
 package com.sparrow.collect.website.query;
 
-import com.dili.dd.searcher.basesearch.search.beans.Pagination;
-import com.dili.dd.searcher.basesearch.search.config.SearchConfiguration;
-import com.dili.dd.searcher.basesearch.search.filter.FilterBean;
-import com.dili.dd.searcher.basesearch.search.sort.SortBean;
+import com.sparrow.collect.website.SearchConfig;
+import com.sparrow.collect.website.data.search.sort.SortBean;
+import com.sparrow.collect.website.filter.FilterBean;
 
 import java.util.List;
 import java.util.Map;
@@ -21,17 +20,17 @@ public class SearchBean<T> {
     /**
      * filter
      */
-    protected  FilterBean  filterBean;
+    protected FilterBean filterBean;
 
     /**
      * 搜索业务id
      */
-    protected  String searchId;
+    protected String searchId;
 
     /**
-     *搜索条件字符串
+     * 搜索条件字符串
      */
-    protected  String  searchCondStr;
+    protected String searchCondStr;
 
     /**
      * 排序beans
@@ -62,7 +61,7 @@ public class SearchBean<T> {
     private Integer market;
 
     //属性项过滤
-    private Map<String,String> filterProperties;
+    private Map<String, String> filterProperties;
 
     private T paramsBean;
 
@@ -73,11 +72,11 @@ public class SearchBean<T> {
     private String selectedCategories;
 
     /**
-     *当前文本版本号
+     * 当前文本版本号
      */
-    private Integer confVersionNo=1;
-    
-    private SearchConfiguration searchConfiguration;
+    private Integer confVersionNo = 1;
+
+    private SearchConfig searchConfiguration;
 
     public String getUserId() {
         return userId;
@@ -95,11 +94,11 @@ public class SearchBean<T> {
         this.userSign = userSign;
     }
 
-    public SearchConfiguration getSearchConfiguration() {
+    public SearchConfig getSearchConfiguration() {
         return searchConfiguration;
     }
 
-    public void setSearchConfiguration(SearchConfiguration searchConfiguration) {
+    public void setSearchConfiguration(SearchConfig searchConfiguration) {
         this.searchConfiguration = searchConfiguration;
     }
 
@@ -110,7 +109,7 @@ public class SearchBean<T> {
     public void setConfVersionNo(Integer confVersionNo) {
         this.confVersionNo = confVersionNo;
     }
-    
+
     public String getSearchCondStr() {
         return searchCondStr;
     }
@@ -121,14 +120,14 @@ public class SearchBean<T> {
 
 
     public FilterBean getFilterBean() {
-		return filterBean;
-	}
+        return filterBean;
+    }
 
-	public void setFilterBean(FilterBean filterBean) {
-		this.filterBean = filterBean;
-	}
+    public void setFilterBean(FilterBean filterBean) {
+        this.filterBean = filterBean;
+    }
 
-	public Pagination getPagination() {
+    public Pagination getPagination() {
         return pagination;
     }
 
@@ -176,11 +175,11 @@ public class SearchBean<T> {
     public void setFilterProperties(Map<String, String> filterProperties) {
         this.filterProperties = filterProperties;
     }
-    
+
     public List<SortBean> getSortBeans() {
         return sortBeans;
     }
-    
+
     public void setSortBeans(List<SortBean> sortBeans) {
         this.sortBeans = sortBeans;
     }
