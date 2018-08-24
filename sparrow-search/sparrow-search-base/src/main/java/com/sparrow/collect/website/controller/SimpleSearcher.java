@@ -1,13 +1,26 @@
 package com.sparrow.collect.website.controller;
 
-import com.sparrow.collect.website.data.result.SearchResult;
-import com.sparrow.collect.website.data.search.SearchBean;
+import com.sparrow.collect.strategy.StrategyArgInfoBuilder;
+import com.sparrow.collect.strategy.StrategyManager;
+import com.sparrow.collect.strategy.definition.StrategyDefinition;
+import com.sparrow.collect.website.Constant;
+import com.sparrow.collect.data.result.Result;
+import com.sparrow.collect.data.result.SearchResult;
+import com.sparrow.collect.data.search.SearchBean;
+import com.sparrow.collect.data.search.sort.SortManager;
+import com.sparrow.collect.website.filter.FilterManager;
+import com.sparrow.collect.website.format.KeywordFormatManager;
+import com.sparrow.collect.website.query.Page;
+import com.sparrow.collect.website.query.PageAble;
+import com.sparrow.collect.search.NRTSearcher;
+import com.sparrow.collect.search.NRTSearcherController;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.search.*;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -37,8 +50,8 @@ public class SimpleSearcher implements Searcher {
 
             // 策略
             BooleanQuery query = new BooleanQuery();
-            List<StrategyBean> strategyBeans = StrategyArgInfoBuilder.getInstance().build(searchBean, null, conStr, searchBean.getSearchId());
-            StrategyManager.getInstance().strategy(searchBean, searchBean.getSearchId(), strategyBeans, query);
+            List<StrategyDefinition> strategyBeans = StrategyArgInfoBuilder.getInstance().build(null, conStr, searchBean.getSearchId());
+            StrategyManager.getInstance().strategy(strategyBeans, query);
             if (query.clauses().size() == 0) {
                 MatchAllDocsQuery queryAll = new MatchAllDocsQuery();
                 query.add(queryAll, BooleanClause.Occur.MUST);
@@ -62,8 +75,7 @@ public class SimpleSearcher implements Searcher {
             highlightFieldName.add("name");
             result = new Result(highlightFieldName, 1);
             searchResult.addResult("highlightFieldName", result);
-
-            ResultHandlerManager.getInstance().handled(searchResult, searchBean, searchBean.getSearchId()); // goodslist
+            //ResultHandlerManager.getInstance().handled(searchResult, searchBean, searchBean.getSearchId()); // goodslist
             long end = System.currentTimeMillis();
             long wasteTime = end - begin;
             searchResult.setWasteTime(wasteTime);
@@ -77,16 +89,15 @@ public class SimpleSearcher implements Searcher {
             throw new SearchException("搜索商品出错", e);
         } finally {
             NRTSearcherController.release(nrt);
-            SearchRecordLog.log(searchBean.getSearchId(), searchBean, searchResult);
         }
     }
 
     public SearchResult doSearch(IndexSearcher searcher, SearchBean searchBean, Query query, Filter filter, Sort sort) throws Exception {
-        Pagination pagination = searchBean.getPagination();
-        int start = (pagination.getPageNo() - 1) * pagination.getPageSize();
-        int end = start + pagination.getPageSize();
+        PageAble page = searchBean.getPage();
+        int start = (page.getPageNo() - 1) * page.getPageSize();
+        int end = start + page.getPageSize();
 //        int maxNum = MAX_DOC_NUMBER * pagination.getPageNo();
-        int maxNum = pagination.getPageSize() * pagination.getPageNo();
+        int maxNum = page.getPageSize() * page.getPageNo();
 
         //每次最小查询500个商品, 用于反推类目, 属性.
         maxNum = maxNum < QUERY_MIN_NUMBER ? QUERY_MIN_NUMBER : maxNum;
@@ -103,9 +114,9 @@ public class SimpleSearcher implements Searcher {
             }
         }
 
-        maxNum = maxNum > total  ?  total : maxNum;
+        maxNum = maxNum > total ? total : maxNum;
         int[] docs = new int[maxNum];
-        for (int i = 0; i<maxNum; i++){
+        for (int i = 0; i < maxNum; i++) {
             docs[i] = scoreDocs[i].doc;
         }
 
@@ -122,13 +133,12 @@ public class SimpleSearcher implements Searcher {
         Result docResult = new Result(docList, docList.size());
         searchResult.addResult("docids", docResult);
 
-        com.dili.dd.searcher.datainterface.domain.Pagination paginInf = new com.dili.dd.searcher.datainterface.domain.Pagination();
-        paginInf.setPageSize(pagination.getPageSize());
-        paginInf.setTotal(total);
-        paginInf.setPageNumber(pagination.getPageNo());
-        List<com.dili.dd.searcher.datainterface.domain.Pagination> paginInfos = new ArrayList<>();
-        paginInfos.add(paginInf);
-        result = new Result(paginInfos, 1);
+        Page p = new Page();
+        p.setPageSize(page.getPageSize());
+        p.setTotal(total);
+        p.setPageNo(page.getPageNo());
+
+        result = new Result(Arrays.asList(p), 1);
         searchResult.addResult("pag", result);
         return searchResult;
     }

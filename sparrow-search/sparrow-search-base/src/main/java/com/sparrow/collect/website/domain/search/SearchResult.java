@@ -1,6 +1,6 @@
 package com.sparrow.collect.website.domain.search;
 
-import com.sparrow.collect.website.query.Pagination;
+import com.sparrow.collect.website.query.PageAble;
 
 import java.util.List;
 
@@ -9,14 +9,14 @@ import java.util.List;
  */
 public class SearchResult<T> {
     private List<T> datas;
-    private Pagination pagination;
+    private PageAble page;
 
     public SearchResult() {
     }
 
-    public SearchResult(List<T> datas, Pagination pagination) {
+    public SearchResult(List<T> datas, PageAble page) {
         this.datas = datas;
-        this.pagination = pagination;
+        this.page = page;
     }
 
     public List<T> getDatas() {
@@ -27,11 +27,11 @@ public class SearchResult<T> {
         this.datas = datas;
     }
 
-    public Pagination getPagination() {
-        return pagination;
+    public PageAble getPage() {
+        return page;
     }
 
-    public void setPagination(Pagination pagination) {
-        this.pagination = pagination;
+    public void setPage(PageAble page) {
+        this.page = page;
     }
 }

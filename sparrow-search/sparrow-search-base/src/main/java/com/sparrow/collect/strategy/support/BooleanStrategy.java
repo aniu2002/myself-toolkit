@@ -1,7 +1,7 @@
 package com.sparrow.collect.strategy.support;
 
 import com.sparrow.collect.analyze.IAnalyze;
-import com.sparrow.collect.strategy.IStrategy;
+import com.sparrow.collect.strategy.PcStrategy;
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.lucene.search.BooleanClause;
@@ -13,7 +13,7 @@ import java.util.List;
 /**
  * Created by yangtao on 2015/12/23.
  */
-public abstract class BooleanStrategy implements IStrategy {
+public abstract class BooleanStrategy implements PcStrategy {
 
     @Override
     public Query create(String fieldName, String fieldValue, IAnalyze analyze) {

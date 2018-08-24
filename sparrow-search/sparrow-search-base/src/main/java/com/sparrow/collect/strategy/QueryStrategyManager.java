@@ -10,7 +10,7 @@ import java.util.Map;
  * query生成策略管理
  */
 public class QueryStrategyManager {
-    Map<String, IStrategy> strategies;
+    Map<String, PcStrategy> strategies;
 
     private static QueryStrategyManager instance = new QueryStrategyManager();
 
@@ -39,7 +39,7 @@ public class QueryStrategyManager {
         return instance;
     }
 
-    public IStrategy getStrategy(String key) {
+    public PcStrategy getStrategy(String key) {
         return strategies.get(key);
     }
 

@@ -1,11 +1,10 @@
 package com.sparrow.collect.space;
 
-import com.dili.dd.searcher.bsearch.common.index.*;
-import com.dili.dd.searcher.bsearch.common.search.NRTSearcher;
+import com.sparrow.collect.index.*;
 import com.sparrow.collect.website.SearchConfig;
+import com.sparrow.collect.search.NRTSearcher;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.apache.hadoop.conf.Configuration;
 import org.apache.lucene.document.Document;
 
 import java.io.IOException;
@@ -29,7 +28,7 @@ public class AdvanceIndexSpace {
 
     private SearchConfig config;
 
-    private MSBean<IndexSpacer> indexSpace;
+    private MSBean<IndexSpace> indexSpace;
 
     private LocalIndex localIndex;
 
@@ -72,7 +71,7 @@ public class AdvanceIndexSpace {
         indexRedoLog = new IndexRedoLog(searchId, config);
 
         indexRecover.recover(getMaster(), indexVersion);
-        indexSpace.getSlave().init(searchId, config);
+        indexSpace.getSlave().initDirectory( );
         getMaster().init(searchId, config);
     }
 
@@ -187,7 +186,7 @@ public class AdvanceIndexSpace {
         return indexBackup.backup(getSlaver(), indexVersion);
     }
 
-    public void aysnBackup(){
+    public void aysnBackup() {
         indexBackup.aysnBackup(getMaster(), indexVersion);
     }
 }

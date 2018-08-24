@@ -3,6 +3,7 @@ package com.sparrow.core.utils.file;
 import com.sparrow.core.log.SysLogger;
 import com.sparrow.core.utils.PathResolver;
 import com.sparrow.core.utils.StringUtils;
+import org.apache.commons.io.IOUtils;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -16,30 +17,56 @@ public class FileUtils {
     public static final String EQUAL = "=";
     public static final char EQUAL_CHAR = '=';
 
+    public static void deleteFile(String file) {
+        deleteFile(new File(file));
+    }
+
+    public static void deleteFile(String file, FilenameFilter filter) {
+        deleteFile(new File(file), filter);
+    }
+
+    public static void deleteFile(File file, FilenameFilter filter) {
+        if (file.isDirectory()) {
+            File files[] = file.listFiles(filter);
+            for (File f : files) {
+                f.delete();
+            }
+        }
+    }
+
+    public static void deleteFile(File file) {
+        if (!file.exists())
+            return;
+        if (file.isDirectory()) {
+            File[] files = file.listFiles();
+            for (File fi : files)
+                doDeleteFile(fi);
+        } else {
+            file.delete();
+        }
+    }
+
+    public static void doDeleteFile(File... files) {
+        for (File f : files) {
+            removeFile(f);
+        }
+    }
+
     /**
      * @param filePath
      */
     public static boolean removeFile(String filePath, boolean flag) {
-        try {
-            if (flag)
-                deleteFile(new File(filePath));
-            else {
-                File file = new File(filePath);
-                File subfiles[];
-
-                if (!file.isDirectory())
-                    return false;
-
-                subfiles = file.listFiles();
-                for (int i = 0; i < subfiles.length; i++) {
-                    deleteFile(subfiles[i]);
-                }
+        if (flag)
+            removeFile(new File(filePath));
+        else {
+            File file = new File(filePath);
+            if (!file.isDirectory())
+                return false;
+            File subFiles[] = file.listFiles();
+            for (int i = 0; i < subFiles.length; i++) {
+                removeFile(subFiles[i]);
             }
-        } catch (IOException e) {
-            e.printStackTrace();
-            return false;
         }
-
         return true;
     }
 
@@ -47,33 +74,19 @@ public class FileUtils {
      * @param file
      * @throws java.io.IOException
      */
-    private static void deleteFile(File file) throws IOException {
+    private static void removeFile(File file) throws RuntimeException {
         if (!file.exists())
-            throw new IOException("Not exist:" + file.getName());
+            throw new RuntimeException("Not exist:" + file.getName());
         if (file.delete() == true)
             return;
         if (file.isDirectory()) {
+            if (file.delete())
+                return;
             File subs[] = file.listFiles();
-
             for (int i = 0; i < subs.length; i++)
-                deleteFile(subs[i]);
+                removeFile(subs[i]);
         }
-
         file.delete();
-    }
-
-    public static InputStream getFileInputStream(File file) {
-        InputStream input = null;
-        try {
-            if (file != null && file.exists()) {
-                return new FileInputStream(file);
-            } else {
-                return null;
-            }
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
-        return input;
     }
 
     public static List<File> getSubFiles(String file) {
@@ -178,7 +191,7 @@ public class FileUtils {
         try {
             fr = new BufferedReader(new InputStreamReader(new FileInputStream(
                     file), encoding));
-            String line = null;
+            String line;
             while ((line = fr.readLine()) != null) {
                 buf.append(line);
             }
@@ -187,56 +200,7 @@ public class FileUtils {
             e.printStackTrace();
             return null;
         } finally {
-            try {
-                if (fr != null) {
-                    fr.close();
-                }
-            } catch (IOException e) {
-                e.printStackTrace();
-                return null;
-            }
-        }
-        String backJson = buf.toString();
-        if (backJson.length() <= 0) {
-            return null;
-        }
-        return backJson;
-    }
-
-    /**
-     * 根据文件名，读取文件
-     *
-     * @param fileName
-     * @return
-     * @throws java.io.IOException
-     */
-    public static String readStringFromFile(String fileName, String encoding) {
-        File file = new File(fileName);
-        if (!file.exists()) {
-            return null;
-        }
-        StringBuilder buf = new StringBuilder();
-        BufferedReader fr = null;
-        try {
-            fr = new BufferedReader(new InputStreamReader(new FileInputStream(
-                    file), encoding));
-            String line = null;
-            while ((line = fr.readLine()) != null) {
-                buf.append(line);
-            }
-            fr.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-            return null;
-        } finally {
-            try {
-                if (fr != null) {
-                    fr.close();
-                }
-            } catch (IOException e) {
-                e.printStackTrace();
-                return null;
-            }
+            IOUtils.closeQuietly(fr);
         }
         String backJson = buf.toString();
         if (backJson.length() <= 0) {
@@ -255,7 +219,7 @@ public class FileUtils {
         try {
             fr = new BufferedReader(new InputStreamReader(new FileInputStream(
                     file), encoding));
-            String line = null;
+            String line;
             while ((line = fr.readLine()) != null) {
                 buf.append(line).append(LINE_SEPARATOR);
             }
@@ -264,14 +228,7 @@ public class FileUtils {
             e.printStackTrace();
             return null;
         } finally {
-            try {
-                if (fr != null) {
-                    fr.close();
-                }
-            } catch (IOException e) {
-                e.printStackTrace();
-                return null;
-            }
+            IOUtils.closeQuietly(fr);
         }
         String backJson = buf.toString();
         if (backJson.length() <= 0) {
@@ -301,23 +258,19 @@ public class FileUtils {
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
-            try {
-                if (osw != null)
-                    osw.close();
-                if (fos != null)
-                    fos.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+            IOUtils.closeQuietly(fos);
+            IOUtils.closeQuietly(osw);
         }
     }
 
     public static void writeFile(File file, String content, String encode) {
+        FileOutputStream fos = null;
+        OutputStreamWriter osw = null;
         try {
             if (!file.getParentFile().exists())
                 file.getParentFile().mkdirs();
-            FileOutputStream fos = new FileOutputStream(file);
-            OutputStreamWriter osw = new OutputStreamWriter(fos, encode);
+            fos = new FileOutputStream(file);
+            osw = new OutputStreamWriter(fos, encode);
             osw.write(content);
             osw.close();
             fos.close();
@@ -327,20 +280,10 @@ public class FileUtils {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
+        } finally {
+            IOUtils.closeQuietly(fos);
+            IOUtils.closeQuietly(osw);
         }
-    }
-
-    public static Reader getReader(String fileName, String encode) {
-        try {
-            FileInputStream fis = new FileInputStream(fileName);
-            InputStreamReader isr = new InputStreamReader(fis, encode);
-            return isr;
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
-        }
-        return null;
     }
 
     public static BufferedReader getBufferedReader(String fileName,
@@ -389,7 +332,7 @@ public class FileUtils {
 
     public static BufferedWriter getBufferedWriter(String fileName,
                                                    String encode, boolean append) throws Exception {
-        return getBufferedtWriter(new File(fileName), encode, append);
+        return getBufferedWriter(new File(fileName), encode, append);
     }
 
     public static BufferedWriter getBufferedWriter(File file) throws Exception {
@@ -398,29 +341,17 @@ public class FileUtils {
 
     public static BufferedWriter getBufferedWriter(File file, String encode)
             throws Exception {
-        return getBufferedtWriter(file, encode, false);
+        return getBufferedWriter(file, encode, false);
     }
 
-    public static BufferedWriter getBufferedtWriter(File file, String encode,
-                                                    boolean append) throws Exception {
+    public static BufferedWriter getBufferedWriter(File file, String encode,
+                                                   boolean append) throws Exception {
         if (!file.getParentFile().exists())
             file.getParentFile().mkdirs();
         return new BufferedWriter(new OutputStreamWriter(new FileOutputStream(
                 file, append), encode));
     }
 
-    public static Writer getWriter(String fileName, String encode) {
-        try {
-            FileOutputStream fos = new FileOutputStream(fileName);
-            OutputStreamWriter osw = new OutputStreamWriter(fos, encode);
-            return osw;
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
 
     public static void clearFile(String fileName) {
         if (fileName.endsWith(":/"))
@@ -440,8 +371,9 @@ public class FileUtils {
         }
         if (file.isDirectory()) {
             File[] files = file.listFiles();
-            for (File fi : files)
+            for (File fi : files) {
                 clearFile(fi, filter);
+            }
         }
         file.delete();
     }
@@ -474,30 +406,6 @@ public class FileUtils {
         file.delete();
     }
 
-    public static void createDir(File... files) {
-        for (File f : files) {
-            if (!f.exists())
-                f.mkdirs();
-        }
-    }
-
-    public static void createOrClearDir(File... files) {
-        for (File f : files) {
-            if (!f.exists())
-                f.mkdirs();
-            else
-                clearFile(f);
-        }
-    }
-
-    public static void createDir(String... files) {
-        for (int i = 0; i < files.length; i++) {
-            File f = new File(files[i]);
-            if (!f.exists())
-                f.mkdirs();
-        }
-    }
-
     public static InputStream getInputStream(String filename) {
         if (StringUtils.isEmpty(filename))
             return null;
@@ -525,39 +433,86 @@ public class FileUtils {
 
     }
 
-    public static String readFileStringExt(String fileName, String encoding) {
-        File file = new File(fileName);
-        if (!file.exists()) {
-            return null;
-        }
-        StringBuilder buf = new StringBuilder();
-        BufferedReader fr = null;
-        try {
-            fr = new BufferedReader(new InputStreamReader(new FileInputStream(
-                    file), encoding));
-            String line;
-            while ((line = fr.readLine()) != null) {
-                buf.append(line);
-            }
-            fr.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-            return null;
-        } finally {
-            try {
-                if (fr != null)
-                    fr.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-                return null;
+    public static void copy(File src, File to) {
+        if (src == null || !src.exists())
+            return;
+        if (src.isFile()) {
+            if (to.exists() && to.isDirectory())
+                to = new File(to, src.getName());
+            doCopyData(src, to);
+        } else if (src.isDirectory()) {
+            File dir = new File(to, src.getName());
+            dir.mkdirs();
+            File files[] = src.listFiles();
+            for (int i = 0; i < files.length; i++) {
+                copy(files[i], dir);
             }
         }
-        String backJson = buf.toString();
-        if (backJson.length() <= 0)
-            return null;
-        return backJson;
     }
 
+    static void doCopyData(File file, File toFile) {
+        FileInputStream fis = null;
+        FileOutputStream fos = null;
+        try {
+            fis = new FileInputStream(file);
+            fos = new FileOutputStream(toFile);
+            IOUtils.copy(fis, fos);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            IOUtils.closeQuietly(fis);
+            IOUtils.closeQuietly(fos);
+        }
+    }
+
+    public static InputStream getFileInputStream(File file) {
+        InputStream stream = null;
+        try {
+            stream = new FileInputStream(file);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        return stream;
+    }
+
+    /**
+     * 获取文件内容字符串
+     *
+     * @param encoding
+     * @return String
+     * @author dong
+     */
+    public static String getFileContent(File file, String encoding) {
+        InputStream stream = getFileInputStream(file);
+        InputStreamReader reader = null;
+        BufferedReader bufferedReader = null;
+        StringBuilder sb = new StringBuilder();
+        if (stream != null) {
+            try {
+                if (!StringUtils.isEmpty(encoding))
+                    reader = new InputStreamReader(stream, encoding);
+                else
+                    reader = new InputStreamReader(stream);
+                bufferedReader = new BufferedReader(reader);
+                String str = bufferedReader.readLine();
+                while (str != null) {
+                    sb.append(str.trim());
+                    str = bufferedReader.readLine();
+                }
+            } catch (UnsupportedEncodingException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            } finally {
+                IOUtils.closeQuietly(stream);
+                IOUtils.closeQuietly(reader);
+                IOUtils.closeQuietly(bufferedReader);
+            }
+        }
+        return sb.toString();
+    }
 
     static class FileNameSelector implements FilenameFilter {
         private String fileType;

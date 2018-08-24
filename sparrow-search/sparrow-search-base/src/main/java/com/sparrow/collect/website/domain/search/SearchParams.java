@@ -1,8 +1,8 @@
 package com.sparrow.collect.website.domain.search;
 
-import com.sparrow.collect.website.data.search.Sorter;
-import com.sparrow.collect.website.data.search.UserFactor;
-import com.sparrow.collect.website.query.Pagination;
+import com.sparrow.collect.data.search.Sorter;
+import com.sparrow.collect.data.search.UserFactor;
+import com.sparrow.collect.website.query.PageAble;
 
 import java.util.Collection;
 
@@ -36,7 +36,7 @@ public class SearchParams {
     /**
      * 分页信息
      */
-    private Pagination pagination;
+    private PageAble page;
     /**
      * 排序字段
      */
@@ -74,12 +74,12 @@ public class SearchParams {
         this.termFilters = termFilters;
     }
 
-    public Pagination getPagination() {
-        return pagination;
+    public PageAble getPage() {
+        return page;
     }
 
-    public void setPagination(Pagination pagination) {
-        this.pagination = pagination;
+    public void setPage(PageAble page) {
+        this.page = page;
     }
 
     public Collection<Sorter> getSorters() {

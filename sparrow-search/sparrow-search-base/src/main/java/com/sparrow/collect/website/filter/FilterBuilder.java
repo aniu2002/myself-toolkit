@@ -1,6 +1,6 @@
 package com.sparrow.collect.website.filter;
 
-import com.sparrow.collect.website.data.search.Translator;
+import com.sparrow.collect.data.search.Translator;
 import com.sparrow.collect.website.domain.search.filter.*;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.lucene.index.Term;

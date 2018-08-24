@@ -8,7 +8,7 @@ import org.apache.lucene.search.BooleanClause;
  */
 public class StrategyBean {
     //query创建策略
-    private IStrategy strategy;
+    private PcStrategy strategy;
     //分词策略
     private IAnalyze analyze;
     //query boost
@@ -16,11 +16,11 @@ public class StrategyBean {
     //query logic
     private BooleanClause.Occur occur = BooleanClause.Occur.SHOULD;
 
-    public IStrategy getStrategy() {
+    public PcStrategy getStrategy() {
         return strategy;
     }
 
-    public void setStrategy(IStrategy strategy) {
+    public void setStrategy(PcStrategy strategy) {
         this.strategy = strategy;
     }
 

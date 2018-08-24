@@ -1,10 +1,9 @@
 package com.sparrow.collect.space;
 
-import com.dili.dd.searcher.basesearch.common.analyze.AnalyzerController;
+import com.sparrow.collect.analyze.AnalyzerController;
 import com.sparrow.collect.website.SearchConfig;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.apache.hadoop.conf.Configuration;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.index.*;
 import org.apache.lucene.search.ControlledRealTimeReopenThread;
@@ -103,7 +102,7 @@ public abstract class IndexSpace {
     public void update(Document... docs) throws IOException {
         for (Document doc : docs) {
             Term t = new Term(Contants.RECORD_INDEX_ONLY_KEY_NAME, doc.get(Contants.RECORD_INDEX_ONLY_KEY_NAME));
-             tkWriter.updateDocument(t, doc);
+            tkWriter.updateDocument(t, doc);
         }
         writeAfter();
     }
@@ -158,99 +157,4 @@ public abstract class IndexSpace {
     public String getIndexPath() {
         return indexPath;
     }
-
-    //==================================================================================================================
-//    public boolean recoverIndex() throws IOException, DLIndexSearchException {
-//        FullIndexBakup fiBakup = null;
-//        String bakDir = config.get("searcher.basesearch." + searchID + ".index.hdfs.bakdir");
-//        String syncBakup = null;
-//        try {
-//            fiBakup = new DefaultFullIndexBakup();
-//            fiBakup.initFileSystem("/", config);
-//            long onlineMaxVersion = getBakupIndexMaxVersion(fiBakup);
-//            if (onlineMaxVersion <= version.get() || onlineMaxVersion == 0) {
-//                return true;
-//            }
-//            log.info("recover index : " + searchID);
-//            // 从hdfs上读取最新的索引, 将master和slaver都设置为最新index
-//            syncBakup = bakDir.endsWith("/") ? bakDir + onlineMaxVersion : bakDir + '/' + onlineMaxVersion;
-//
-//            File masterDirectory = new File(indexPath);
-//            FileUtils.deleteDirectory(masterDirectory);
-//            masterDirectory.mkdirs();
-//            fiBakup.copyToLocalFile(false, syncBakup, indexPath, config);
-//
-//            setVersion(onlineMaxVersion);
-//            IndexCompelete.writeVersion(indexPath, searchID, version.get(), Contants.SWITH_OVER_UPDATE_ID_TAG);
-//            log.info("Copy HDFS bakIndex ToLocalFile : " + indexPath);
-//            return true;
-//        } catch (IOException e) {
-//            log.error(e);
-//            throw e;
-//        } finally {
-//            fiBakup.close();
-//        }
-//    }
-//
-//    public void bakupIndex() throws IOException {
-//        long versionID = version.get();
-//        FullIndexBakup fiBakup = null;
-//        String bakDir = config.get("searcher.basesearch." + searchID + ".index.hdfs.bakdir");
-//        String currentBakup = null;
-//        try {
-//            // 同步本地最新全量索引到hdfs服务
-//            currentBakup = bakDir.endsWith("/") ? bakDir + versionID : bakDir + '/' + versionID;
-//            fiBakup = new DefaultFullIndexBakup();
-//            fiBakup.initFileSystem("/", config);
-//            if (getBakupIndexMaxVersion(fiBakup) <= versionID) {
-//                fiBakup.delDir(currentBakup, config);
-//                fiBakup.copyFromLocalFile(false, true, indexPath, currentBakup, config);
-//            }
-//        } catch (IOException e) {
-//            log.error(e);
-//            if (!StringUtil.isNullOrEmpty(currentBakup)) {
-//                fiBakup.delDir(currentBakup, config);
-//            }
-//        } finally {
-//            fiBakup.close();
-//        }
-//    }
-//
-//    public long getBakupIndexMaxVersion(FullIndexBakup fiBakup)
-//            throws IOException {
-//        String bakDir = config.get("searcher.basesearch." + searchID + ".index.hdfs.bakdir");
-//        if (StringUtil.isNullOrEmpty(bakDir)) {
-//            return 0l;
-//        }
-//        List<Path> list = fiBakup.getFilesDir(bakDir, config);
-//        if (list.size() == 0) {
-//            return 0l;
-//        }
-//        long[] versions = new long[list.size()];
-//        for (int i = 0; i < list.size(); i++) {
-//            if (StringUtil.isCharOrNumberString(list.get(i).getName())) {
-//                versions[i] = (Long.parseLong(list.get(i).getName()));
-//            }
-//        }
-//        // 删除多余的数据
-//        delOldVersion(fiBakup, bakDir, versions);
-//        return NumberUtils.max(versions);
-//    }
-//
-//    protected void delOldVersion(FullIndexBakup fiBakup, String bakDir, long[] versions) {
-//        Arrays.sort(versions);
-//        int count = config.getInt("searcher.basesearch." + searchID + ".index.hdfs.bak.count", 5);
-//        int verCount = versions.length;
-//        if (verCount <= count) {
-//            return;
-//        }
-//        bakDir = bakDir.endsWith("/") ? bakDir : bakDir + '/';
-//        for (int i = 0; i < verCount - count; i++) {
-//            try {
-//                fiBakup.delDir(bakDir + versions[i], config);
-//            } catch (Exception e) {
-//                log.error(e);
-//            }
-//        }
-//    }
 }

@@ -1,7 +1,7 @@
 package com.sparrow.collect.website.filter;
 
-import com.dili.dd.searcher.basesearch.search.beans.Ranger;
-import com.dili.dd.searcher.basesearch.search.beans.search.SearchBean;
+import com.sparrow.collect.data.search.SearchBean;
+import com.sparrow.collect.website.query.Ranger;
 import org.apache.lucene.queries.ChainedFilter;
 import org.apache.lucene.search.Filter;
 
@@ -47,7 +47,7 @@ public class FilterManager {
         if (fieldsRangInfo != null) {
             ArrayList<Filter> filterArryList = new ArrayList<Filter>();
             for (String field : fieldsRangInfo.keySet()) {
-                List<Filter> filter = FilterFactory.getInstance().getFilter(field, searchBean);
+                List<Filter> filter = FilterFactory.getInstance().getFilter(field, filterBean);
                 if (filter != null) {
                     filterArryList.addAll(filter);
                 }

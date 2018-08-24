@@ -52,10 +52,17 @@ public class SearchConfig {
         return getFloatValue(str, defaultValue);
     }
 
-    public boolean getBool(String key) {
+    public boolean getBool(String key, boolean defaultVal) {
         String str = get(key);
+        if (StringUtils.isEmpty(key))
+            return defaultVal;
         return StringUtils.equalsIgnoreCase("true", str) || StringUtils.equalsIgnoreCase("1", str)
                 || StringUtils.equalsIgnoreCase("yes", str) || StringUtils.equalsIgnoreCase("ok", str);
+    }
+
+
+    public boolean getBool(String key) {
+        return getBool(key, false);
     }
 
     public <T> T getInstance(String key, Class<T> c) {

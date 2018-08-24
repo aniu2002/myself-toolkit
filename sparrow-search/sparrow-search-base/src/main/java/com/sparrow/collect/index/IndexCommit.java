@@ -1,12 +1,9 @@
 package com.sparrow.collect.index;
 
-import com.dili.dd.searcher.basesearch.common.config.Contants;
-import com.dili.dd.searcher.basesearch.common.spaceBak.IndexCompelete;
-import com.dili.dd.searcher.bsearch.common.monitor.DataMonitorService;
-import com.dili.dd.searcher.bsearch.common.space.IndexSpace;
+import com.sparrow.collect.space.IndexSpace;
+import com.sparrow.collect.website.SearchConfig;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.apache.hadoop.conf.Configuration;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.locks.ReentrantLock;
@@ -20,7 +17,7 @@ public class IndexCommit {
 
     private String searchId;
 
-    private Configuration config;
+    private SearchConfig config;
 
     private ExecutorService executor;
 
@@ -28,7 +25,7 @@ public class IndexCommit {
 
     private int commitNumber = 20;
 
-    public IndexCommit(String searchId, Configuration config, ExecutorService executor, ReentrantLock lock) {
+    public IndexCommit(String searchId, SearchConfig config, ExecutorService executor, ReentrantLock lock) {
         this.searchId = searchId;
         this.config = config;
         this.executor = executor;
@@ -66,13 +63,12 @@ public class IndexCommit {
             }
             //write version and master
             long diskVersion = snapshot.getRam() / commitNumber * commitNumber;
-            IndexCompelete.writeVersion(indexSpace.getIndexPath(), diskVersion, Contants.SWITH_OVER_UPDATE_ID_TAG);
+            //IndexCompelete.writeVersion(indexSpace.getIndexPath(), diskVersion, Contants.SWITH_OVER_UPDATE_ID_TAG);
             indexVersion.setDisk(diskVersion);
             long end = System.currentTimeMillis();
             log.info("commit index " + searchId + ":" + snapshot.getRam() + " end; waste = " + (end - start) + "ms");
         } catch (Exception e) {
             log.error("commit索引异常", e);
-            DataMonitorService.monitorError("42", this.getClass(), "commit_index", "commit索引异常");
         } finally {
             lock.unlock();
         }

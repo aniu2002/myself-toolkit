@@ -1,6 +1,6 @@
 package com.sparrow.collect.website.filter.support;
 
-import com.sparrow.collect.website.cache.filter.InactivityShopCache;
+import com.sparrow.collect.cache.filter.InactivityShopCache;
 import org.apache.lucene.index.AtomicReaderContext;
 import org.apache.lucene.search.DocIdSet;
 import org.apache.lucene.search.FieldCache;

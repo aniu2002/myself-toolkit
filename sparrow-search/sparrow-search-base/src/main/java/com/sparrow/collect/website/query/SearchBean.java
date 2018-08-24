@@ -1,7 +1,7 @@
 package com.sparrow.collect.website.query;
 
 import com.sparrow.collect.website.SearchConfig;
-import com.sparrow.collect.website.data.search.sort.SortBean;
+import com.sparrow.collect.data.search.sort.SortBean;
 import com.sparrow.collect.website.filter.FilterBean;
 
 import java.util.List;
@@ -15,7 +15,7 @@ public class SearchBean<T> {
     /**
      * 分页
      */
-    protected Pagination pagination;
+    protected PageAble page;
 
     /**
      * filter
@@ -127,12 +127,12 @@ public class SearchBean<T> {
         this.filterBean = filterBean;
     }
 
-    public Pagination getPagination() {
-        return pagination;
+    public PageAble getPage() {
+        return page;
     }
 
-    public void setPagination(Pagination pagination) {
-        this.pagination = pagination;
+    public void setPage(PageAble page) {
+        this.page = page;
     }
 
 

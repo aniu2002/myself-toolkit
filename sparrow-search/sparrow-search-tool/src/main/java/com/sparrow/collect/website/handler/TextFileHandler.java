@@ -2,8 +2,6 @@ package com.sparrow.collect.website.handler;
 
 import java.io.File;
 
-import com.sparrow.collect.website.utils.FileUtil;
-
 
 public class TextFileHandler extends FileHandler {
 

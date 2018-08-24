@@ -1,6 +1,6 @@
 package com.sparrow.collect.website.domain.search;
 
-import com.sparrow.collect.website.data.search.UserFactor;
+import com.sparrow.collect.data.search.UserFactor;
 
 import java.io.Serializable;
 

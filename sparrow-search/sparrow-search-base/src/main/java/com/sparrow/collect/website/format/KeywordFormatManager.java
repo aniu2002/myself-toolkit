@@ -1,7 +1,7 @@
 package com.sparrow.collect.website.format;
 
 import com.sparrow.collect.website.Configs;
-import com.sparrow.collect.website.data.search.SearchBean;
+import com.sparrow.collect.data.search.SearchBean;
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.logging.Log;

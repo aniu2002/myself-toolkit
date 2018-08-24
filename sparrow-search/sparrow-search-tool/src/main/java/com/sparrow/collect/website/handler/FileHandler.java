@@ -2,7 +2,6 @@ package com.sparrow.collect.website.handler;
 
 import com.sparrow.collect.website.lucene.creator.IFileCreator;
 import com.sparrow.collect.website.lucene.data.FileIndexItem;
-import com.sparrow.collect.website.utils.FileUtil;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.lucene.index.CorruptIndexException;
 import org.apache.lucene.index.IndexWriter;

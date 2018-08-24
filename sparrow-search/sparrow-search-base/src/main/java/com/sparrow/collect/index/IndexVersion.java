@@ -1,20 +1,12 @@
 package com.sparrow.collect.index;
 
-import com.dili.dd.searcher.basesearch.common.config.Contants;
-import com.dili.dd.searcher.basesearch.common.spaceBak.DefaultFullIndexBakup;
-import com.dili.dd.searcher.basesearch.common.spaceBak.FullIndexBakup;
-import com.dili.dd.searcher.basesearch.common.spaceBak.IndexCompelete;
-import com.dili.dd.searcher.basesearch.common.util.StringUtil;
-import com.dili.dd.searcher.basesearch.common.util.ZKContraller;
-import com.dili.dd.searcher.bsearch.common.space.IndexSpace;
-import com.dili.dd.searcher.common.zk.ZookeeperClient;
-import org.apache.commons.io.IOUtils;
-import org.apache.commons.lang3.math.NumberUtils;
+import com.sparrow.collect.backup.DefaultFullIndexBackup;
+import com.sparrow.collect.backup.FullIndexBackup;
+import com.sparrow.collect.backup.IndexComplete;
+import com.sparrow.collect.space.Contants;
+import com.sparrow.collect.website.SearchConfig;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.apache.hadoop.conf.Configuration;
-import org.apache.hadoop.fs.Path;
-import org.apache.zookeeper.KeeperException;
 
 import java.io.IOException;
 import java.util.concurrent.atomic.AtomicLong;
@@ -35,7 +27,7 @@ public class IndexVersion {
 
     protected String searchId;
 
-    protected Configuration config;
+    protected SearchConfig config;
 
     protected AtomicLong ram;
 
@@ -53,7 +45,7 @@ public class IndexVersion {
         this.ram = new AtomicLong();
     }
 
-    public IndexVersion(String searchId, Configuration config, String indexPath) {
+    public IndexVersion(String searchId, SearchConfig config, String indexPath) {
         this.searchId = searchId;
         this.config = config;
         this.indexPath = indexPath;
@@ -62,15 +54,15 @@ public class IndexVersion {
     }
 
     public void init() {
-        FullIndexBakup fiBakup = null;
+        FullIndexBackup fiBakup = null;
         try {
             lock.writeLock().lock();
-            fiBakup = new DefaultFullIndexBakup();
+            fiBakup = new DefaultFullIndexBackup();
             this.ram = new AtomicLong();
             this.onlineSyncZK();
-            this.disk = IndexCompelete.readVersion(indexPath, searchId, Contants.SWITH_OVER_UPDATE_ID_TAG);
+            this.disk = IndexComplete.readVersion(indexPath, searchId, Contants.SWITH_OVER_UPDATE_ID_TAG);
             this.diskSyncRam();
-            this.backup = IndexCompelete.readBakupIndexMaxVersion(searchId, config, fiBakup);
+            this.backup = IndexComplete.readBakupIndexMaxVersion(searchId, config, fiBakup);
         } finally {
             fiBakup.close();
             lock.writeLock().unlock();

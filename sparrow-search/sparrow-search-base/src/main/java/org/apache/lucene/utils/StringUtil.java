@@ -150,14 +150,13 @@ public class StringUtil {
                 result.append(ch);
             }
             //空白
-            else if (Character.isWhitespace(ch)){
+            else if (Character.isWhitespace(ch)) {
                 result.append(ch);
             }
             //保留负号
-            else if (ch == '-'){
+            else if (ch == '-') {
                 result.append(ch);
-            }
-            else{
+            } else {
                 result.append(" ");
             }
         }
@@ -208,4 +207,35 @@ public class StringUtil {
         }
     }
 
+    /**
+     * 判断是否为英文或者数字字符串
+     *
+     * @param string 字符串
+     * @return true则是，false则否
+     */
+    public static boolean isCharOrNumberString(String string) {
+        char[] cs = string.toCharArray();
+        for (char c : cs) {
+            if (!Character.isDigit(c) && !isEnglishCharacter(c)) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    /**
+     * 判断是否为英文字符
+     *
+     * @param ch 字符
+     * @return true为英文字符，false则不是
+     */
+    public static boolean isEnglishCharacter(char ch) {
+        String a = String.valueOf(ch).toLowerCase();
+        return a.charAt(0) >= 'a' && a.charAt(0) <= 'z';
+    }
+
+    public static boolean isEnglishOrNumberCharacter(char ch) {
+        return isEnglishCharacter(ch) || Character.isDigit(ch);
+    }
 }

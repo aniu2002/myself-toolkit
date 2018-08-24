@@ -46,20 +46,4 @@ public class ConfigCopyUtil {
 		if (!checkConfigExists(file))
 			copyConfig("config/log4j.properties", file, clazz);
 	}
-
-	public static void copyConfig(String fromfile, String destination) {
-		if (StringUtils.isNullOrEmpty(fromfile)
-				|| StringUtils.isNullOrEmpty(destination))
-			return;
-		InputStream ins = FileUtil.getInputStream(fromfile);
-		if (ins != null) {
-			File file = new File(destination);
-			try {
-				FileOutputStream fos = new FileOutputStream(file);
-				FileUtil.doCopy(ins, fos);
-			} catch (FileNotFoundException e) {
-				e.printStackTrace();
-			}
-		}
-	}
 }

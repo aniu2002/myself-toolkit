@@ -1,6 +1,9 @@
 package com.sparrow.collect.index;
 
+import com.sparrow.collect.backup.DefaultFullIndexBackup;
+import com.sparrow.collect.backup.FullIndexBackup;
 import com.sparrow.collect.space.IndexSpace;
+import com.sparrow.collect.utils.StringUtils;
 import com.sparrow.collect.website.SearchConfig;
 import org.apache.commons.lang3.math.NumberUtils;
 import org.apache.commons.logging.Log;
@@ -84,13 +87,13 @@ public class IndexBackup {
 
     public void bakupIndex(IndexSpace indexSpace, IndexVersion indexVersion, long versionID) throws IOException {
 //        long versionID = indexVersion.getRam();
-        FullIndexBakup fiBakup = null;
+        FullIndexBackup fiBakup = null;
         String bakDir = config.get("searcher.basesearch." + searchId + ".index.hdfs.bakdir");
         String currentBakup = null;
         try {
             // 同步本地最新全量索引到hdfs服务
             currentBakup = bakDir.endsWith("/") ? bakDir + versionID : bakDir + '/' + versionID;
-            fiBakup = new DefaultFullIndexBakup();
+            fiBakup = new DefaultFullIndexBackup();
             fiBakup.initFileSystem("/", config);
             if (getBakupIndexMaxVersionAndDelOld(fiBakup) <= versionID) {
                 fiBakup.delDir(currentBakup, config);
@@ -107,7 +110,7 @@ public class IndexBackup {
             }
         } catch (Exception e) {
             log.error(e);
-            if (!StringUtil.isNullOrEmpty(currentBakup)) {
+            if (!StringUtils.isNullOrEmpty(currentBakup)) {
                 fiBakup.delDir(currentBakup, config);
             }
         } finally {
@@ -115,10 +118,10 @@ public class IndexBackup {
         }
     }
 
-    public long getBakupIndexMaxVersionAndDelOld(FullIndexBakup fiBakup)
+    public long getBakupIndexMaxVersionAndDelOld(FullIndexBackup fiBakup)
             throws IOException {
         String bakDir = config.get("searcher.basesearch." + searchId + ".index.hdfs.bakdir");
-        if (StringUtil.isNullOrEmpty(bakDir)) {
+        if (StringUtils.isNullOrEmpty(bakDir)) {
             return 0l;
         }
         List<Path> list = fiBakup.getFilesDir(bakDir, config);
@@ -136,7 +139,7 @@ public class IndexBackup {
         return NumberUtils.max(versions);
     }
 
-    protected void delOldVersion(FullIndexBakup fiBakup, String bakDir, long[] versions) {
+    protected void delOldVersion(FullIndexBackup fiBakup, String bakDir, long[] versions) {
         Arrays.sort(versions);
         int count = config.getInt("searcher.basesearch." + searchId + ".index.hdfs.bak.count", 5);
         int verCount = versions.length;

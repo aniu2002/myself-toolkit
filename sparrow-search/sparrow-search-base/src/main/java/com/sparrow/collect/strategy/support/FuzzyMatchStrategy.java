@@ -1,7 +1,7 @@
 package com.sparrow.collect.strategy.support;
 
 import com.sparrow.collect.analyze.IAnalyze;
-import com.sparrow.collect.strategy.IStrategy;
+import com.sparrow.collect.strategy.PcStrategy;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.lucene.index.Term;
 import org.apache.lucene.search.FuzzyQuery;
@@ -10,7 +10,7 @@ import org.apache.lucene.search.Query;
 /**
  * Created by yangtao on 2015/12/22.
  */
-public class FuzzyMatchStrategy implements IStrategy {
+public class FuzzyMatchStrategy implements PcStrategy {
 
     @Override
     public Query create(String fieldName, String fieldValue, IAnalyze analyze) {

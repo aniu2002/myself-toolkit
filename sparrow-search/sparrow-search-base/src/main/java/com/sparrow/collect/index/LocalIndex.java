@@ -1,14 +1,13 @@
 package com.sparrow.collect.index;
 
-import com.dili.dd.searcher.basesearch.common.bean.MSBean;
-import com.dili.dd.searcher.basesearch.common.config.Contants;
-import com.dili.dd.searcher.basesearch.common.spaceBak.IndexCompelete;
+import com.sparrow.collect.backup.IndexComplete;
+import com.sparrow.collect.space.Contants;
+import com.sparrow.collect.space.MSBean;
+import com.sparrow.collect.website.SearchConfig;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.apache.hadoop.conf.Configuration;
 
 import java.io.File;
-import java.io.IOException;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 /**
@@ -20,13 +19,13 @@ public class LocalIndex {
 
     private String searchId;
 
-    private Configuration config;
+    private SearchConfig config;
 
     private MSBean<String> indexPath;
 
     private ReentrantReadWriteLock lock;
 
-    public LocalIndex(String searchId, Configuration config) {
+    public LocalIndex(String searchId, SearchConfig config) {
         this.searchId = searchId;
         this.config = config;
         this.lock = new ReentrantReadWriteLock();
@@ -93,7 +92,7 @@ public class LocalIndex {
      */
     private void chooseMaster(){
         try {
-            String lastIndexPath = IndexCompelete.readVersionIndexPath(this.indexPath.getMaster(), searchId, Contants.SWITH_OVER_UPDATE_ID_TAG);
+            String lastIndexPath = IndexComplete.readVersionIndexPath(this.indexPath.getMaster(), searchId, Contants.SWITH_OVER_UPDATE_ID_TAG);
             if (indexPath.getMaster().equals(lastIndexPath)){
 
             }else if (indexPath.getSlave().equals(lastIndexPath)){

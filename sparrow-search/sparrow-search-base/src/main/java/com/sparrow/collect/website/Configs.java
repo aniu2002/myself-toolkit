@@ -28,8 +28,20 @@ public class Configs {
         return P.getInt(key, defaultValue);
     }
 
+    public static float getFloat(String key) {
+        return P.getFloat(key);
+    }
+
+    public static float getFloat(String key, float defaultValue) {
+        return P.getFloat(key, defaultValue);
+    }
+
     public static boolean getBool(String key) {
         return P.getBool(key);
+    }
+
+    public static boolean getBool(String key, boolean defaultVal) {
+        return P.getBool(key, defaultVal);
     }
 
     public static boolean has(String key) {

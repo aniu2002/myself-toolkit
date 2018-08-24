@@ -1,6 +1,6 @@
 package com.sparrow.collect.website;
 
-import com.sparrow.collect.website.cache.StoreSalesCache;
+import com.sparrow.collect.cache.StoreSalesCache;
 import com.sparrow.collect.website.redis.JedisPoolFactory;
 import com.sparrow.collect.website.redis.JedisTemplate;
 import com.sparrow.core.log.Logger;
@@ -13,6 +13,7 @@ public class BeansFactory {
     private static final Logger log = LoggerManager.getSysLog();
     private static BeansFactory beansFactory = new BeansFactory();
     private JedisTemplate filterJedisTemplate;
+    private JedisTemplate userRefJedisTemplate;
     private StoreSalesCache storeSalesCache;
 
     private BeansFactory() {
@@ -32,6 +33,12 @@ public class BeansFactory {
         Integer threadCount = Configs.getInt("redis.recommend.thread.count");
         filterJedisTemplate = new JedisTemplate(JedisPoolFactory.createJedisPool(host, port, timeout, threadCount));
         log.info("initJedisTemplate end");
+
+        host = Configs.get("redis.score.userDef.host");
+        port = Configs.getInt("redis.score.userDef.port");
+        timeout = Configs.getInt("redis.score.userDef.timeout");
+        threadCount = Configs.getInt("redis.score.userDef.thread.count");
+        userRefJedisTemplate = new JedisTemplate(JedisPoolFactory.createJedisPool(host, port, timeout, threadCount));
     }
 
     public JedisTemplate getFilterJedisTemplate() {
@@ -47,5 +54,9 @@ public class BeansFactory {
 
     public StoreSalesCache getStoreSalesCache() {
         return storeSalesCache;
+    }
+
+    public JedisTemplate getUserRefJedisTemplate() {
+        return userRefJedisTemplate;
     }
 }

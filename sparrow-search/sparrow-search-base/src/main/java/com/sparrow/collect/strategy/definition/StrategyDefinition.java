@@ -10,13 +10,13 @@ import org.apache.lucene.search.BooleanClause;
 public class StrategyDefinition {
     private String searchId;
 
-    private String fieldname;
+    private String fieldName;
 
-    private Object fieldvalue;
+    private Object fieldValue;
 
     private float weight = 0;
 
-    private IAnalyze anlyze = null;
+    private IAnalyze analyze = null;
 
     private int slop = 0;
 
@@ -48,20 +48,20 @@ public class StrategyDefinition {
         this.searchId = searchId;
     }
 
-    public String getFieldname() {
-        return fieldname;
+    public String getFieldName() {
+        return fieldName;
     }
 
-    public void setFieldname(String fieldname) {
-        this.fieldname = fieldname;
+    public void setFieldName(String fieldName) {
+        this.fieldName = fieldName;
     }
 
-    public Object getFieldvalue() {
-        return fieldvalue;
+    public Object getFieldValue() {
+        return fieldValue;
     }
 
-    public void setFieldvalue(Object fieldvalue) {
-        this.fieldvalue = fieldvalue;
+    public void setFieldValue(Object fieldValue) {
+        this.fieldValue = fieldValue;
     }
 
     public float getWeight() {
@@ -72,12 +72,12 @@ public class StrategyDefinition {
         this.weight = weight;
     }
 
-    public IAnalyze getAnlyze() {
-        return anlyze;
+    public IAnalyze getAnalyze() {
+        return analyze;
     }
 
-    public void setAnlyze(IAnalyze anlyze) {
-        this.anlyze = anlyze;
+    public void setAnalyze(IAnalyze analyze) {
+        this.analyze = analyze;
     }
 
     public int getSlop() {

@@ -4,7 +4,6 @@ import com.sparrow.collect.analyze.IAnalyze;
 import com.sparrow.collect.express.KeywordContextExpression;
 import com.sparrow.collect.strategy.definition.StrategyDefinition;
 import com.sparrow.collect.website.Configs;
-import com.sparrow.collect.website.data.search.SearchBean;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -77,9 +76,9 @@ public class StrategyArgInfoBuilder {
             }
             // init searchStrategy
             Map<String, String> fieldsStrategyName = parseAndGetFieldsStrategy();
-            for (String indentity : fieldsStrategyName.keySet()) {
-                String strategyName = fieldsStrategyName.get(indentity);
-                searchStrategy.put(indentity, strategyObjects.get(strategyName));
+            for (String identifier : fieldsStrategyName.keySet()) {
+                String strategyName = fieldsStrategyName.get(identifier);
+                searchStrategy.put(identifier, strategyObjects.get(strategyName));
             }
             // init searchAnalyzer
             Map<String, String> fieldsAnalyzeName = parseAndGetFieldsAnalyze();
@@ -243,15 +242,14 @@ public class StrategyArgInfoBuilder {
     }
 
     private List<StrategyDefinition> handleStrategyOnInputSearchStr(String searchId, String conStr) {
-
         List<StrategyDefinition> ret = new LinkedList<>();
         String[] fieldsName = strategyFields.get(searchId);
         if (null != fieldsName) {
             if (!searchId.equals("类目搜索")) {
                 for (String fieldname : fieldsName) {
                     StrategyDefinition strategyBean = new StrategyDefinition();
-                    strategyBean.setFieldname(fieldname);
-                    strategyBean.setFieldvalue(conStr);
+                    strategyBean.setFieldName(fieldname);
+                    strategyBean.setFieldValue(conStr);
                     strategyBean.setSearchId(searchId);
                     String key = searchId + fieldname;
                     if (fieldsSlop.containsKey(key))
@@ -259,7 +257,7 @@ public class StrategyArgInfoBuilder {
                     if (fieldsWeight.containsKey(key))
                         strategyBean.setWeight(fieldsWeight.get(key));
                     strategyBean.setStrategy(searchStrategy.get(key));
-                    strategyBean.setAnlyze(searchAnalyzer.get(key));
+                    strategyBean.setAnalyze(searchAnalyzer.get(key));
                     strategyBean.setInnerOccur(innerOccurs.get(key));
                     strategyBean.setOuterOccur(outerOccurs.get(key));
                     ret.add(strategyBean);
@@ -279,7 +277,6 @@ public class StrategyArgInfoBuilder {
     }
 
     private List<StrategyDefinition> handleStrategyOnKeywordExp(String searchId, KeywordContextExpression keywordContextExpression) {
-
         // TODO
         return null;
     }
@@ -308,8 +305,7 @@ public class StrategyArgInfoBuilder {
      * @createTime 2014年6月20日 下午4:27:35
      * @author zhanglin
      */
-    public List<StrategyDefinition> build(SearchBean searchBean, KeywordContextExpression keywordContextExpression, String conStr, String searchId) throws Exception {
-
+    public List<StrategyDefinition> build(KeywordContextExpression keywordContextExpression, String conStr, String searchId) throws Exception {
         List<StrategyDefinition> strategyBeanList = new LinkedList();
         List<StrategyDefinition> strategyBeanListTmp = handleStrategyOnInputSearchStr(searchId, conStr);
         if (null != strategyBeanListTmp)
