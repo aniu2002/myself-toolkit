@@ -1,6 +1,6 @@
 package com.sparrow.collect.backup;
 
-import com.sparrow.collect.space.Contants;
+import com.sparrow.collect.Contants;
 import com.sparrow.collect.website.SearchConfig;
 import com.sparrow.collect.website.utils.StringUtils;
 import org.apache.commons.io.FileUtils;

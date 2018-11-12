@@ -1,7 +1,7 @@
 package com.sparrow.collect.index;
 
 import com.sparrow.collect.backup.IndexComplete;
-import com.sparrow.collect.space.Contants;
+import com.sparrow.collect.Contants;
 import com.sparrow.collect.space.MSBean;
 import com.sparrow.collect.website.SearchConfig;
 import org.apache.commons.logging.Log;

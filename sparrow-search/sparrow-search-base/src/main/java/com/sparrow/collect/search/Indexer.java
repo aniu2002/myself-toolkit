@@ -139,7 +139,7 @@ public abstract class Indexer implements Cloneable {
     }
 
     public void repair() throws IndexException {
-//        log.debug("repair : " + getSearchID());
+//        log.debug("repair : " + getName());
     }
 
 }

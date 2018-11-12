@@ -6,6 +6,10 @@ import java.io.IOException;
 
 public class FileToolHelper {
 
+    public static void copy(String src, String to) {
+        FileUtils.copy(new File(src), new File(to));
+    }
+
     public static void copy(File src, File to) {
         FileUtils.copy(src, to);
     }

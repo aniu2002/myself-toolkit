@@ -160,7 +160,7 @@ public class ControllerAnnotationHelper {
 			settercfg.setRef(name);
 		else
 			settercfg.setRef(autowd.value());
-		settercfg.setFieldset(true);
+		settercfg.setFieldSet(true);
 		return settercfg;
 	}
 }

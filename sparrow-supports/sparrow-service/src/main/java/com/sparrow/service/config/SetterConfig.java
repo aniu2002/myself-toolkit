@@ -5,10 +5,10 @@ public class SetterConfig {
 	private String ref;
 	private String value;
 	private Object refValue;
-	private boolean fieldset;
+	private boolean fieldSet;
 
-	public boolean isFieldset() {
-		return fieldset;
+	public boolean isFieldSet() {
+		return fieldSet;
 	}
 
 	public Object getRefValue() {
@@ -19,8 +19,8 @@ public class SetterConfig {
 		this.refValue = refValue;
 	}
 
-	public void setFieldset(boolean fieldset) {
-		this.fieldset = fieldset;
+	public void setFieldSet(boolean fieldSet) {
+		this.fieldSet = fieldSet;
 	}
 
 	public String getProperty() {

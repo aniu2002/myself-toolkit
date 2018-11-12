@@ -16,6 +16,10 @@ import java.util.Properties;
 public class SearchConfig {
     private final Properties properties;
 
+    public boolean isEmpty() {
+        return this.properties == null || this.properties.size() == 0;
+    }
+
     public SearchConfig(Properties properties) {
         this.properties = properties;
     }

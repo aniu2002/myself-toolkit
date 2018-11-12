@@ -1,6 +1,5 @@
 package com.sparrow.service.config;
 
-import com.sparrow.core.config.SystemConfig;
 import com.sparrow.core.utils.StringFormat;
 
 import java.util.ArrayList;

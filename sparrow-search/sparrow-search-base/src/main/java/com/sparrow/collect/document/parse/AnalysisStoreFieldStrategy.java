@@ -1,9 +1,8 @@
-package com.sparrow.collect.parse;
+package com.sparrow.collect.document.parse;
 
 
-
-import org.apache.lucene.document.TextField;
 import org.apache.lucene.document.Field.Store;
+import org.apache.lucene.document.TextField;
 import org.apache.lucene.index.IndexableField;
 
 
@@ -13,13 +12,14 @@ import org.apache.lucene.index.IndexableField;
  * 本软件源代码版权归地利集团,未经许可不得任意复制与传播.<br />
  * <B>Company</B> 地利集团
  * 按照空格分词
- * @createTime 2014年5月29日 下午7:49:24
+ *
  * @author tanghongjun
+ * @createTime 2014年5月29日 下午7:49:24
  */
 public class AnalysisStoreFieldStrategy implements FieldParseStrategy {
 
     @Override
-    public IndexableField parse(String searchID, String fieldName, String fieldValue) {
+    public IndexableField parse(String fieldName, String fieldValue) {
         IndexableField blank = new TextField(fieldName, fieldValue, Store.YES);
         return blank;
     }

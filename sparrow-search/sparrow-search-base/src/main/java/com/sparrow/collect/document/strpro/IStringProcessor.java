@@ -1,4 +1,4 @@
-package com.sparrow.collect.strpro;
+package com.sparrow.collect.document.strpro;
 
 public interface IStringProcessor {
     /**

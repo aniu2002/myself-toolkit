@@ -212,7 +212,7 @@ public class AppServiceContext implements ServiceContext {
 				}
 			}
 			// 类对象的属性设置，private的属性强制设置
-			if (scfg.isFieldset()) {
+			if (scfg.isFieldSet()) {
 				try {
 					BeanForceUtil.forceSetProperty(object, scfg.getProperty(),
 							val);

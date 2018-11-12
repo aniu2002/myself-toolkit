@@ -1,54 +1,67 @@
 package com.sparrow.collect.space;
 
+import com.sparrow.collect.Contants;
+import com.sparrow.collect.utils.PathResolver;
 import com.sparrow.collect.website.SearchConfig;
-import org.apache.commons.collections.CollectionUtils;
+import com.sparrow.core.config.SystemConfig;
+import com.sparrow.core.resource.PathMatchingResourceResolver;
+import com.sparrow.core.resource.source.Resource;
+import com.sparrow.core.utils.StringUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
 import java.io.IOException;
-import java.util.List;
+import java.io.InputStream;
 import java.util.Map;
+import java.util.Random;
 import java.util.concurrent.ConcurrentHashMap;
 
-public class IndexSpaceController  extends ConfigIniter{
+public class IndexSpaceController {
+    private static Log log = LogFactory.getLog(IndexSpaceController.class);
+    private static Map<String, IndexSpace> spacers = new ConcurrentHashMap<>();
 
-    private Map<String, AdvanceIndexSpace> spacers = new ConcurrentHashMap<>();
-    private Log log = LogFactory.getLog(IndexSpaceController.class);
-    private SearchConfig config = null;
-    private static final IndexSpaceController INDEX_SPACER_CONTROLLER = new IndexSpaceController();
-
-    private IndexSpaceController() {
-        if (INDEX_SPACER_CONTROLLER != null) {
-            try {
-                throw new Exception("duplicate instance create error!" + IndexSpaceController.class.getName());
-            } catch (Exception e) {
-                log.warn("duplicate instance create error!" + IndexSpaceController.class.getName());
-            }
+    static {
+        try {
+            load();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
-    public static IndexSpaceController getController() {
-        return INDEX_SPACER_CONTROLLER;
+    private IndexSpaceController() {
+
     }
 
-    public AdvanceIndexSpace getSpace(String searchID) {
-        return spacers.get(searchID);
+    public static IndexSpace getSpace(String name) {
+        return spacers.get(name);
     }
 
-    public void parserConf(SearchConfig config) throws IOException {
-        String[] searchIDS = this.getSearchIDs(config);
-        this.config = config;
+    static String getSearchIDs(SearchConfig config) {
+        String searchIDS = config.get(Contants.SEARCH_LIST_TAG);
+        return searchIDS;
+    }
+
+    static SearchConfig getConfig(InputStream stream) {
+        return new SearchConfig(SystemConfig.processYml(stream));
+    }
+
+    static void load() throws IOException {
+        Resource[] resources = new PathMatchingResourceResolver().getResources("searcher/*.yml");
         log.info("start init space:");
-        for (String searchID : searchIDS) {
-            String controller = config.get(("searcher.basesearch.") + searchID + (".space.controller.cla"));
-            if (this.getClass().getName().equals(controller)){
-                List<AdvanceIndexSpace> instances = config.getInstances("searcher.basesearch." + searchID + ".space.cla", AdvanceIndexSpace.class);
-                if (CollectionUtils.isNotEmpty(instances)) {
-                    AdvanceIndexSpace is = instances.get(0);
-                    is.init(searchID, config);
-                    spacers.put(searchID, is);
-                }
-            }
+        for (Resource resource : resources) {
+            SearchConfig cfg = getConfig(resource.getInputStream());
+            if (cfg.isEmpty())
+                continue;
+            String name = PathResolver.trimExtension(resource.getFilename());
+            String type = cfg.get("index.type", "disk");
+            String alias = cfg.get("index.alias", name);
+            String indexPath = cfg.get("index.path");
+            if (StringUtils.isEmpty(indexPath))
+                indexPath = String.format("%s/%s", System.getProperty("home.dir"), new Random(10).nextInt());
+            if (StringUtils.equals("ram", type))
+                spacers.put(name, new RamIndexSpace(name, indexPath, cfg, alias));
+            else
+                spacers.put(name, new DiskIndexSpace(name, indexPath, cfg, alias));
         }
     }
 }

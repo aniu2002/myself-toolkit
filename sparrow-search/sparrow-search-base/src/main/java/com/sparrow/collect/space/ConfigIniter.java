@@ -1,5 +1,6 @@
 package com.sparrow.collect.space;
 
+import com.sparrow.collect.Contants;
 import com.sparrow.collect.website.SearchConfig;
 
 import java.io.IOException;

@@ -387,13 +387,13 @@ class GenerateProcessJob extends ProcessJob implements Log {
     }
 
     void copyPage(String path, String cfgPath) {
-        FileToolHelper.copyFile(SystemConfig.WEB_ROOT + "/js", path);
-        FileToolHelper.copyFile(SystemConfig.WEB_ROOT + "/css", path);
-        FileToolHelper.copyFile(SystemConfig.WEB_ROOT + "/icons", path);
-        FileToolHelper.copyFile(SystemConfig.WEB_ROOT + "/img", path);
-        FileToolHelper.copyFile(SystemConfig.WEB_ROOT + "/index.html", path);
-        FileToolHelper.copyFile(SystemConfig.WEB_ROOT + "/loginCmd.html", path);
-        FileToolHelper.copyFile(SystemConfig.WEB_ROOT + "/main.html", path);
+        FileToolHelper.copy(SystemConfig.WEB_ROOT + "/js", path);
+        FileToolHelper.copy(SystemConfig.WEB_ROOT + "/css", path);
+        FileToolHelper.copy(SystemConfig.WEB_ROOT + "/icons", path);
+        FileToolHelper.copy(SystemConfig.WEB_ROOT + "/img", path);
+        FileToolHelper.copy(SystemConfig.WEB_ROOT + "/index.html", path);
+        FileToolHelper.copy(SystemConfig.WEB_ROOT + "/loginCmd.html", path);
+        FileToolHelper.copy(SystemConfig.WEB_ROOT + "/main.html", path);
 
         //  =========
         ProviderStore.moveProviderTo(this.appInfo.getName(), cfgPath);

@@ -1,4 +1,4 @@
-package com.sparrow.collect.parse;
+package com.sparrow.collect.document.parse;
 
 
 import org.apache.lucene.index.IndexableField;
@@ -11,6 +11,6 @@ import org.apache.lucene.index.IndexableField;
  */
 public interface FieldParseStrategy {
 
-    IndexableField parse(String searchID, String fieldName, String fieldValue);
+    IndexableField parse(String fieldName, String fieldValue);
 
 }

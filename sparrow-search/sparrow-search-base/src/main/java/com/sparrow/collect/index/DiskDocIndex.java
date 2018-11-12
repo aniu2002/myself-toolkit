@@ -1,6 +1,6 @@
 package com.sparrow.collect.index;
 
-import com.sparrow.collect.space.Contants;
+import com.sparrow.collect.Contants;
 import com.sparrow.collect.space.MSBean;
 import com.sparrow.collect.space.SwitchOverException;
 import com.sparrow.collect.utils.StringUtils;

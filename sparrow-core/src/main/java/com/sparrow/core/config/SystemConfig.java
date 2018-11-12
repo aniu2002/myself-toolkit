@@ -235,6 +235,28 @@ public class SystemConfig {
         return properties;
     }
 
+    public static Properties processYml(InputStream stream) {
+        return processYml(new Properties(), stream);
+    }
+
+    static Properties processYml(Properties properties, InputStream stream) {
+        Yaml yaml = new Yaml(new StrictMapAppenderConstructor());
+        InputStream ins = stream;
+        Reader reader = null;
+        try {
+            reader = new UnicodeReader(ins);
+            for (Object object : yaml.loadAll(reader)) {
+                if (object != null) {
+                    processYml(asMap(object), properties);
+                }
+            }
+        } finally {
+            IOUtils.closeQuietly(ins);
+            IOUtils.closeQuietly(reader);
+        }
+        return properties;
+    }
+
     private static Map<String, Object> asMap(Object object) {
         Map<String, Object> result = new LinkedHashMap();
         if (!(object instanceof Map)) {
@@ -310,6 +332,10 @@ public class SystemConfig {
     }
 
     private static void handleProcessError(String resource, IOException ex) {
+        log.warn("Could not load map from " + resource + ": " + ex.getMessage());
+    }
+
+    private static void handleProcessError(InputStream resource, IOException ex) {
         log.warn("Could not load map from " + resource + ": " + ex.getMessage());
     }
 }

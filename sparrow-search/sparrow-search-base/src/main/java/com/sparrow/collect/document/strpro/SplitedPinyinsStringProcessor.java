@@ -1,9 +1,9 @@
-package com.sparrow.collect.strpro;
+package com.sparrow.collect.document.strpro;
 
 import com.sparrow.collect.utils.PinyinUtil;
 import com.sparrow.collect.utils.StringKit;
 
-public class SplitedFuzzyPinyinStringProcessor implements IStringProcessor {
+public class SplitedPinyinsStringProcessor implements IStringProcessor {
 
 	@Override
 	public String process(String string) {
@@ -11,7 +11,7 @@ public class SplitedFuzzyPinyinStringProcessor implements IStringProcessor {
 			return "";
 		}
 
-		String[] pinyins = PinyinUtil.getFuzzyPinyins(string);
+		String[] pinyins = PinyinUtil.getPinyinStrings(string);
 		for (int i = 0; i < pinyins.length; i++) {
 			pinyins[i] = pinyins[i].replace(" ", StringKit.UNIQUE_STRING);
 			pinyins[i] = pinyins[i].replace("\t", StringKit.UNIQUE_STRING);
