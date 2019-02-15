@@ -1,6 +1,6 @@
 package com.sparrow.collect.analyze;
 
-import com.dili.dd.searcher.common.utils.PropertiesLoader;
+import com.sparrow.core.utils.PropertiesFileUtil;
 import org.ansj.lucene4.AnsjAnalysis;
 import org.ansj.lucene4.AnsjIndexAnalysis;
 import org.ansj.util.FilterModifWord;
@@ -14,6 +14,7 @@ import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.util.HashSet;
+import java.util.Properties;
 
 /**
  * Created by yaobo on 2014/10/30.
@@ -24,7 +25,7 @@ public class StopWordsHandler {
 
     public static String[] DEFAULT_STOP_WORDS = new String[]{" ", "\t"};
 
-    private PropertiesLoader propertiesLoader = new PropertiesLoader("library.properties");
+    private Properties properties = PropertiesFileUtil.getPropertiesEl("classpath:library.properties");
 
     public void handleStopWords(Analyzer analyzer){
         // 如果是ansj, 加载停用词
@@ -53,7 +54,7 @@ public class StopWordsHandler {
         }
         log.info("load default stopWords: " + DEFAULT_STOP_WORDS.length + "条");
         // load from library
-        String stopLibrary = propertiesLoader.getProperty("stopLibrary");
+        String stopLibrary = properties.getProperty("stopLibrary");
         addStopWords(ansj, stopLibrary);
     }
 
@@ -74,7 +75,7 @@ public class StopWordsHandler {
         }
         log.info("load default stopWords: " + DEFAULT_STOP_WORDS.length + "条");
         // load from library
-        String stopLibrary = propertiesLoader.getProperty("stopLibrary");
+        String stopLibrary = properties.getProperty("stopLibrary");
         addStopWords(ansj, stopLibrary);
     }
 

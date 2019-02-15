@@ -1,11 +1,11 @@
 package com.sparrow.collect.analyze;
 
-import com.sparrow.collect.config.ConfigIniter;
-import com.sparrow.collect.config.Contants;
-import com.sparrow.collect.exception.ConfigUpdateException;
+import com.sparrow.collect.Contants;
+import com.sparrow.collect.space.ConfigIniter;
+import com.sparrow.collect.utils.StringKit;
+import com.sparrow.collect.website.SearchConfig;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.apache.hadoop.conf.Configuration;
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.FormatAnalyzerWapper;
 import org.apache.lucene.analysis.core.WhitespaceAnalyzer;
@@ -53,10 +53,10 @@ public class AnalyzerController extends ConfigIniter {
     }
 
     @Override
-    public void parserConf(Configuration config) throws IOException {
-        String[] analyzers = config.getStrings(Contants.getStringByArray(new String[]{Contants.SEARCH_PREFIX, Contants.SEARCH_ANALYZER_LIST}));
+    public void parserConf(SearchConfig config) throws IOException {
+        String[] analyzers = config.get(Contants.getStringByArray(new String[]{Contants.SEARCH_PREFIX, Contants.SEARCH_ANALYZER_LIST})).split(";");
         if (null == analyzers) {
-            throw new ConfigUpdateException(new StringBuilder().append("analyzers: ").append(Contants.SEARCH_ANALYZER_LIST).append("not null....").toString());
+            throw new RuntimeException("analyzers: is null....");
         }
         Analyzer analyzer = null;
         log.info(Contants.getStringByArray(new String[]{Contants.SEARCH_PREFIX, Contants.SEARCH_ANALYZER_LIST}) + " values=" + Arrays.asList(analyzers));
@@ -77,16 +77,16 @@ public class AnalyzerController extends ConfigIniter {
         parserFieldAnalyzed(config);
     }
 
-    protected void parserFieldAnalyzed(Configuration config) {
+    protected void parserFieldAnalyzed(SearchConfig config) {
         String[] searchIDs = getSearchIDs(config);
         PerFieldAnalyzerWrapper pfaw = null;
         Map<String, Analyzer> anaMap;
         for (String seach : searchIDs) {
             anaMap = new HashMap<String, Analyzer>();
-            String[] ifields = config.getStrings(new StringBuilder().append("searcher.basesearch.").append(seach).append(".ifield.list").toString());
+            String[] ifields = config.get(String.format("searcher.basesearch.%s.ifield.list", seach)).split(",");
             for (String ifield : ifields) {
                 String ifieldAnalyName = config.get(new StringBuilder().append("searcher.basesearch.").append(seach).append(".ifield.").append(ifield).append(".analy.name").toString());
-                if (!com.sparrow.collect.util.StringKit.isNullOrEmpty(ifieldAnalyName)) {
+                if (!StringKit.isNullOrEmpty(ifieldAnalyName)) {
                     //modify by yb: 包装为需要对数据进行格式化过滤
                     Analyzer analyzer = new FormatAnalyzerWapper(analyzeMap.get(ifieldAnalyName));
                     anaMap.put(ifield, analyzer);
