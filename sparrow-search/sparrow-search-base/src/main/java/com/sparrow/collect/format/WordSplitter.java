@@ -1,4 +1,8 @@
-package com.sparrow.collect.utils;
+package com.sparrow.collect.format;
+
+import com.sparrow.collect.utils.CommonSpliter;
+import com.sparrow.collect.utils.Spliter;
+import com.sparrow.collect.utils.StringKit;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -6,20 +10,20 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.*;
 
-public class WordSpliter implements ISpliter {
-	private static Hashtable<String, WordSpliter> spliterTable = new Hashtable<String, WordSpliter>();
+public class WordSplitter implements Splitter {
+	private static Hashtable<String, WordSplitter> splitterTable = new Hashtable<String, WordSplitter>();
 	public Hashtable<String, Integer> dic = new Hashtable<String, Integer>();
 	private static final String PATH = "song.dic";
 
-	public WordSpliter() {
-		intialDic(PATH);
+	public WordSplitter() {
+		initializeDic(PATH);
 	}
 
-	private WordSpliter(String fileName) {
-		intialDic(fileName);
+	private WordSplitter(String fileName) {
+		initializeDic(fileName);
 	}
 
-	private void intialDic(String fileName) {
+	private void initializeDic(String fileName) {
 		try {
 			InputStream stream = this.getClass().getResourceAsStream(fileName);
 			if (stream == null) {
@@ -45,18 +49,18 @@ public class WordSpliter implements ISpliter {
 		}
 	}
 
-	public synchronized static WordSpliter getInstance(String fileName) {
+	public synchronized static WordSplitter getInstance(String fileName) {
 		if (StringKit.isNullOrEmpty(fileName)) {
 			fileName = PATH;
 		}
-		if (!spliterTable.containsKey(fileName)) {
-			spliterTable.put(fileName, new WordSpliter(fileName));
+		if (!splitterTable.containsKey(fileName)) {
+			splitterTable.put(fileName, new WordSplitter(fileName));
 		}
 
-		return spliterTable.get(fileName);
+		return splitterTable.get(fileName);
 	}
 
-	public synchronized static WordSpliter getInstance() {
+	public synchronized static WordSplitter getInstance() {
 		return getInstance(null);
 	}
 

@@ -1,5 +1,9 @@
 {
-  "setting": {
+
+  "analyzers":{
+    "pinyin":"com.sparrow.analyzer.pinyin.PinyinAnalyzer"
+  },
+  "fields": {
     "name": {
       "type": "string|keyword",
       "format": "processor4pinyinFormat(字符处理和不分割)全匹配,有字符串分割，那么默认制定whitespace analyzer",
@@ -13,7 +17,7 @@
     "text": {
       "type": "text",
       "analyzer": "standard",
-      "desc":"support query wild ,prefix ,pahares",
+      "desc":"support query wild char ,prefix ,pahares",
       "store": "no",
       "boost": 1
     }
