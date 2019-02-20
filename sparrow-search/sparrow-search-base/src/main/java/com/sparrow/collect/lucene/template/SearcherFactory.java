@@ -2,7 +2,7 @@ package com.sparrow.collect.lucene.template;
 
 import com.sparrow.collect.lucene.InstanceCache;
 import org.apache.lucene.analysis.Analyzer;
-import org.apache.lucene.analysis.FormatAnalyzerWapper;
+import org.apache.lucene.analysis.FormatAnalyzerWrapper;
 import org.apache.lucene.analysis.SynonymsAnalyzer;
 import org.apache.lucene.analysis.category.CategoryAnalyzer;
 import org.apache.lucene.analysis.core.WhitespaceAnalyzer;
@@ -73,7 +73,7 @@ public abstract class SearcherFactory {
         for (String f : fieldSet) {
                 //modify by yb: 包装为需要对数据进行格式化过滤
             String anlName=System.getProperty("analyzer.d."+f);
-                Analyzer analyzer = new FormatAnalyzerWapper(analyzeMap.get(anlName));
+                Analyzer analyzer = new FormatAnalyzerWrapper(analyzeMap.get(anlName));
                 anaMap.put(f, analyzer);
         }
         Analyzer  analyzer = new PerFieldAnalyzerWrapper(analyzeMap.get("default"), anaMap);

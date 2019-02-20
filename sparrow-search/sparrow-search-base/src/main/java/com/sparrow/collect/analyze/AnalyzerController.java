@@ -7,7 +7,7 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.lucene.analysis.Analyzer;
-import org.apache.lucene.analysis.FormatAnalyzerWapper;
+import org.apache.lucene.analysis.FormatAnalyzerWrapper;
 import org.apache.lucene.analysis.core.WhitespaceAnalyzer;
 import org.apache.lucene.analysis.miscellaneous.PerFieldAnalyzerWrapper;
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
@@ -88,7 +88,7 @@ public class AnalyzerController extends ConfigIniter {
                 String ifieldAnalyName = config.get(new StringBuilder().append("searcher.basesearch.").append(seach).append(".ifield.").append(ifield).append(".analy.name").toString());
                 if (!com.sparrow.collect.util.StringKit.isNullOrEmpty(ifieldAnalyName)) {
                     //modify by yb: 包装为需要对数据进行格式化过滤
-                    Analyzer analyzer = new FormatAnalyzerWapper(analyzeMap.get(ifieldAnalyName));
+                    Analyzer analyzer = new FormatAnalyzerWrapper(analyzeMap.get(ifieldAnalyName));
                     anaMap.put(ifield, analyzer);
                 }
             }

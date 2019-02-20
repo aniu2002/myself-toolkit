@@ -2,7 +2,7 @@ package com.sparrow.collect.website.lucene.template;
 
 import com.sparrow.collect.website.lucene.InstanceCache;
 import org.apache.lucene.analysis.Analyzer;
-import org.apache.lucene.analysis.FormatAnalyzerWapper;
+import org.apache.lucene.analysis.FormatAnalyzerWrapper;
 import org.apache.lucene.analysis.SynonymsAnalyzer;
 import org.apache.lucene.analysis.category.CategoryAnalyzer;
 import org.apache.lucene.analysis.core.WhitespaceAnalyzer;
@@ -30,7 +30,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 public abstract class SearcherFactory {
     private static Map<String, Analyzer> analyzeMap = new ConcurrentHashMap<String, Analyzer>();
-    private static Map<String, Analyzer> fieldAnalyzes = new ConcurrentHashMap<String, Analyzer>();
+//    private static Map<String, Analyzer> fieldAnalyzes = new ConcurrentHashMap<String, Analyzer>();
 
     static {
         analyzeMap.put("whitespace", new WhitespaceAnalyzer(Version.LUCENE_46));
@@ -42,6 +42,8 @@ public abstract class SearcherFactory {
         analyzeMap.put("region", new ExactIKAnalyzer(RegionDic.getInstance(), false, true));
         analyzeMap.put("market", new ExactIKAnalyzer(MarketDic.getInstance(), false, true));
         analyzeMap.put("comma", new CommaAnalyzer(Version.LUCENE_46));
+        /*PerFieldAnalyzerWrapper  pfaw = new PerFieldAnalyzerWrapper(analyzeMap.get("default"), anaMap);
+        fieldAnalyzes.put(seach, pfaw);*/
     }
 
     public static IndexSearcher createSearcher() throws IOException {
@@ -73,7 +75,7 @@ public abstract class SearcherFactory {
         for (String f : fieldSet) {
                 //modify by yb: 包装为需要对数据进行格式化过滤
             String anlName=System.getProperty("analyzer.d."+f);
-                Analyzer analyzer = new FormatAnalyzerWapper(analyzeMap.get(anlName));
+                Analyzer analyzer = new FormatAnalyzerWrapper(analyzeMap.get(anlName));
                 anaMap.put(f, analyzer);
         }
         Analyzer  analyzer = new PerFieldAnalyzerWrapper(analyzeMap.get("default"), anaMap);

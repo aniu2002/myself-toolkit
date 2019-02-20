@@ -12,12 +12,12 @@ import java.io.StringReader;
  * 格式化分词器, 只保留汉字,英文字母,数字.
  * Created by yaobo on 2014/7/23.
  */
-public class FormatAnalyzerWapper extends Analyzer {
-    private Log log = LogFactory.getLog(FormatAnalyzerWapper.class);
+public class FormatAnalyzerWrapper extends Analyzer {
+    private Log log = LogFactory.getLog(FormatAnalyzerWrapper.class);
 
     private Analyzer analyzer;
 
-    public FormatAnalyzerWapper(Analyzer analyzer) {
+    public FormatAnalyzerWrapper(Analyzer analyzer) {
         super();
         this.analyzer = analyzer;
     }
