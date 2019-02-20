@@ -1,0 +1,1650 @@
+{
+  "resourceType": "Bundle",
+  "id": "a87dcaf9-6b54-4cff-8530-1302019d666b",
+  "meta": {
+    "lastUpdated": "2017-04-09T10:28:40.813+08:00"
+  },
+  "type": "searchset",
+  "total": 11710,
+  "link": [
+    {
+      "relation": "self",
+      "url": "http://192.168.2.241:8083/resources/Bundle"
+    },
+    {
+      "relation": "next",
+      "url": "http://192.168.2.241:8083/resources?_getpages=f7102a33-a1e2-4761-a848-eab3dcc10873&_getpagesoffset=10&_count=10&_bundletype=searchset"
+    }
+  ],
+  "entry": [
+    {
+      "fullUrl": "http://192.168.2.241:8083/resources/Bundle/20542",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "20542",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2017-02-22T20:45:42.056+08:00"
+        },
+        "type": "document",
+        "entry": [
+          {
+            "resource": {
+              "resourceType": "Composition",
+              "id": "180f219f-97a8-486d-99d9-ed631fe4fc57",
+              "fhir_comments": [
+                "资源：出入量记录"
+              ],
+              "contained": [
+                {
+                  "resourceType": "Organization",
+                  "id": "e1o1",
+                  "extension": [
+                    {
+                      "fhir_comments": [
+                        "科室归类代码"
+                      ],
+                      "url": "urn:oid:2.16.156.10011.2.3.2.62",
+                      "valueCode": "7"
+                    }
+                  ],
+                  "identifier": [
+                    {
+                      "system": "http://www.nestvision.com/entity/hospital/guan/his/sinosoft/v1/identifier/department-id",
+                      "_system": {
+                        "fhir_comments": [
+                          "院内科室ID号命名空间"
+                        ]
+                      },
+                      "value": "1",
+                      "_value": {
+                        "fhir_comments": [
+                          "院内科室ID号"
+                        ]
+                      }
+                    }
+                  ],
+                  "name": "入院科室",
+                  "_name": {
+                    "fhir_comments": [
+                      "科室名称"
+                    ]
+                  }
+                },
+                {
+                  "resourceType": "Location",
+                  "id": "e1l1",
+                  "identifier": [
+                    {
+                      "system": "http://www.nestvision.com/entity/hospital/guan/his/sinosoft/v1/identifier/bed-id",
+                      "_system": {
+                        "fhir_comments": [
+                          "原系统床位ID号命名空间"
+                        ]
+                      },
+                      "value": "10010023",
+                      "_value": {
+                        "fhir_comments": [
+                          "原系统床位ID号"
+                        ]
+                      }
+                    }
+                  ],
+                  "address": {
+                    "extension": [
+                      {
+                        "fhir_comments": [
+                          "病房号"
+                        ],
+                        "url": "http://www.nestvision.com/platform/app/data/v1/text/ward-no",
+                        "valueString": "110"
+                      },
+                      {
+                        "fhir_comments": [
+                          "病区"
+                        ],
+                        "url": "http://www.nestvision.com/platform/app/data/v1/text/ward-area",
+                        "valueString": "12"
+                      },
+                      {
+                        "fhir_comments": [
+                          "床位号"
+                        ],
+                        "url": "http://www.nestvision.com/platform/app/data/v1/text/bed-num",
+                        "valueString": "12"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "resourceType": "MedicationOrder",
+                  "id": "dept-name"
+                },
+                {
+                  "resourceType": "Medication",
+                  "id": "me1med1",
+                  "extension": [
+                    {
+                      "fhir_comments": [
+                        "商品名"
+                      ],
+                      "url": "http://www.nestvision.com/platform/app/data/v1/text/alias-name",
+                      "valueString": "太极急支糖浆"
+                    },
+                    {
+                      "fhir_comments": [
+                        "规格"
+                      ],
+                      "url": "http://www.nestvision.com/platform/app/data/v1/text/spec",
+                      "valueString": "20只/盒"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://www.nestvision.com/entity/hospital/guan/his/sinosoft/v1/code/medication",
+                        "_system": {
+                          "fhir_comments": [
+                            "院内药物编码"
+                          ]
+                        },
+                        "code": "12345",
+                        "display": "太极急支糖浆"
+                      }
+                    ]
+                  },
+                  "product": {
+                    "form": {
+                      "fhir_comments": [
+                        "药物剂型"
+                      ],
+                      "coding": [
+                        {
+                          "system": "urn:oid:2.16.156.10011.2.3.1.211",
+                          "_system": {
+                            "fhir_comments": [
+                              "药物剂型命名空间"
+                            ]
+                          },
+                          "code": "029",
+                          "_code": {
+                            "fhir_comments": [
+                              "药物剂型"
+                            ]
+                          },
+                          "display": "滴剂",
+                          "_display": {
+                            "fhir_comments": [
+                              "药物剂型名字"
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "resourceType": "Patient",
+                  "id": "pat1",
+                  "extension": [
+                    {
+                      "fhir_comments": [
+                        "年龄"
+                      ],
+                      "url": "http://www.nestvision.com/platform/app/data/v1/number/age",
+                      "valueDecimal": 23
+                    }
+                  ],
+                  "identifier": [
+                    {
+                      "system": "http://www.nestvision.com/entity/hospital/guan/his/sinosoft/v1/identifier/patient-id",
+                      "_system": {
+                        "fhir_comments": [
+                          "院内患者ID命名空间"
+                        ]
+                      },
+                      "value": "1",
+                      "_value": {
+                        "fhir_comments": [
+                          "院内患者ID"
+                        ]
+                      }
+                    },
+                    {
+                      "system": "urn:oid:2.16.156.10011.1.3",
+                      "_system": {
+                        "fhir_comments": [
+                          "身份证号命名空间"
+                        ]
+                      },
+                      "value": "530801197603062217",
+                      "_value": {
+                        "fhir_comments": [
+                          "身份证号"
+                        ]
+                      }
+                    }
+                  ],
+                  "name": [
+                    {
+                      "text": "患者姓名",
+                      "_text": {
+                        "fhir_comments": [
+                          "姓名"
+                        ]
+                      }
+                    }
+                  ],
+                  "gender": "male",
+                  "_gender": {
+                    "fhir_comments": [
+                      "性别"
+                    ]
+                  },
+                  "birthDate": "2015-01-02",
+                  "_birthDate": {
+                    "fhir_comments": [
+                      "出生日期"
+                    ]
+                  }
+                },
+                {
+                  "resourceType": "Practitioner",
+                  "id": "pra1",
+                  "identifier": [
+                    {
+                      "system": "http://www.nestvision.com/entity/hospital/guan/his/sinosoft/v1/identifier/employee-id",
+                      "_system": {
+                        "fhir_comments": [
+                          "院内人员ID号命名空间"
+                        ]
+                      },
+                      "value": "1",
+                      "_value": {
+                        "fhir_comments": [
+                          "院内人员ID号"
+                        ]
+                      }
+                    }
+                  ],
+                  "name": [
+                    {
+                      "text": "我是指定创作者",
+                      "_text": {
+                        "fhir_comments": [
+                          "姓名"
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "resourceType": "Practitioner",
+                  "id": "pra2",
+                  "identifier": [
+                    {
+                      "system": "http://www.nestvision.com/entity/hospital/guan/his/sinosoft/v1/identifier/employee-id",
+                      "_system": {
+                        "fhir_comments": [
+                          "院内人员ID号命名空间"
+                        ]
+                      },
+                      "value": "1",
+                      "_value": {
+                        "fhir_comments": [
+                          "院内人员ID号"
+                        ]
+                      }
+                    }
+                  ],
+                  "name": [
+                    {
+                      "text": "我是责任护士",
+                      "_text": {
+                        "fhir_comments": [
+                          "姓名"
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "resourceType": "Organization",
+                  "id": "hos1",
+                  "identifier": [
+                    {
+                      "system": "http://www.nestvision.com/entity/hospital/guan/his/sinosoft/v1/identifier/hospital-id",
+                      "_system": {
+                        "fhir_comments": [
+                          "原系统机构ID号命名空间"
+                        ]
+                      },
+                      "value": "guan",
+                      "_value": {
+                        "fhir_comments": [
+                          "原系统机构ID号"
+                        ]
+                      }
+                    }
+                  ],
+                  "name": "我是文档管理机构",
+                  "_name": {
+                    "fhir_comments": [
+                      "医院名称"
+                    ]
+                  }
+                },
+                {
+                  "resourceType": "Encounter",
+                  "id": "e1",
+                  "extension": [
+                    {
+                      "fhir_comments": [
+                        "入院科室"
+                      ],
+                      "url": "http://www.nestvision.com/platform/app/data/v1/identifier/in-dpid",
+                      "valueReference": {
+                        "reference": "#e1o1"
+                      }
+                    },
+                    {
+                      "fhir_comments": [
+                        "中医\"四诊\"观察结果"
+                      ],
+                      "url": "http://www.nestvision.com/platform/app/data/v1/text/cn-four-result",
+                      "valueString": "中医四诊观察结果的详细描述，包括望、闻、问、切四诊内容"
+                    },
+                    {
+                      "fhir_comments": [
+                        "入院途径"
+                      ],
+                      "url": "http://www.nestvision.com/platform/app/data/v1/code/in-mode-code",
+                      "valueCode": "123"
+                    },
+                    {
+                      "fhir_comments": [
+                        "住院原因代码"
+                      ],
+                      "url": "http://www.nestvision.com/platform/app/data/v1/code/inhospital-reason-cd",
+                      "valueCode": "1"
+                    },
+                    {
+                      "fhir_comments": [
+                        "入病房方式"
+                      ],
+                      "url": "http://www.nestvision.com/platform/app/data/v1/text/inhospital-way",
+                      "valueString": "入病房方式描述"
+                    }
+                  ],
+                  "identifier": [
+                    {
+                      "system": "http://www.nestvision.com/entity/hospital/guan/his/sinosoft/v1/identifier/inpatient-registration-id",
+                      "value": "10010",
+                      "_value": {
+                        "fhir_comments": [
+                          "原系统住院流水id号"
+                        ]
+                      }
+                    }
+                  ],
+                  "status": "in-progress",
+                  "_status": {
+                    "fhir_comments": [
+                      "状态"
+                    ]
+                  },
+                  "class": "inpatient",
+                  "_class": {
+                    "fhir_comments": [
+                      "类型：住院"
+                    ]
+                  },
+                  "period": {
+                    "start": "2015-01-01T20:18:01",
+                    "_start": {
+                      "fhir_comments": [
+                        "入院时间"
+                      ]
+                    }
+                  },
+                  "hospitalization": {
+                    "preAdmissionIdentifier": {
+                      "system": "http://www.nestvision.com/platform/app/data/v1/text/inh-id",
+                      "_system": {
+                        "fhir_comments": [
+                          "住院号命名空间"
+                        ]
+                      },
+                      "value": "10010",
+                      "_value": {
+                        "fhir_comments": [
+                          "住院号"
+                        ]
+                      }
+                    }
+                  },
+                  "location": [
+                    {
+                      "fhir_comments": [
+                        "当前床号"
+                      ],
+                      "location": {
+                        "reference": "#e1l1"
+                      }
+                    }
+                  ],
+                  "serviceProvider": {
+                    "reference": "#dept-name"
+                  }
+                },
+                {
+                  "resourceType": "Condition",
+                  "id": "con1",
+                  "extension": [
+                    {
+                      "fhir_comments": [
+                        "中医症候代码CV9900357"
+                      ],
+                      "url": "http://www.nestvision.com/platform/app/data/v1/code/cn-sym-diag-code",
+                      "valueCode": "BEZ030"
+                    },
+                    {
+                      "fhir_comments": [
+                        "中医病名代码CV9900357"
+                      ],
+                      "url": "http://www.nestvision.com/platform/app/data/v1/code/cn-dis-diag-code",
+                      "valueCode": "BEZ030"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "urn:oid:2.16.156.10011.2.3.3.11",
+                        "_system": {
+                          "fhir_comments": [
+                            "诊断编码"
+                          ]
+                        },
+                        "code": "Q39.801",
+                        "_code": {
+                          "fhir_comments": [
+                            "诊断编码"
+                          ]
+                        },
+                        "display": "先天性短食管"
+                      }
+                    ]
+                  },
+                  "onsetDateTime": "2015-01-20",
+                  "_onsetDateTime": {
+                    "fhir_comments": [
+                      "诊断日期"
+                    ]
+                  }
+                },
+                {
+                  "resourceType": "MedicationOrder",
+                  "id": "me1",
+                  "extension": [
+                    {
+                      "fhir_comments": [
+                        "药物用法"
+                      ],
+                      "url": "http://www.nestvision.com/platform/app/data/v1/text/drugs-usage",
+                      "valueString": "药物（含中药）治疗疾病具体用法的描述"
+                    },
+                    {
+                      "fhir_comments": [
+                        "中药使用类别代码"
+                      ],
+                      "url": "http://www.nestvision.com/platform/app/data/v1/code/cn-medication-type-code",
+                      "valueCode": "12"
+                    },
+                    {
+                      "fhir_comments": [
+                        "药物使用总剂量"
+                      ],
+                      "url": "http://www.nestvision.com/platform/app/data/v1/number/drug-total-dose",
+                      "valueDecimal": 100
+                    },
+                    {
+                      "fhir_comments": [
+                        "药物使用总剂量单位"
+                      ],
+                      "url": "http://www.nestvision.com/platform/app/data/v1/text/drug-total-dose-util",
+                      "valueString": "毫升"
+                    },
+                    {
+                      "fhir_comments": [
+                        "频率代码"
+                      ],
+                      "url": "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+                      "valueCode": "001"
+                    }
+                  ],
+                  "medicationReference": {
+                    "fhir_comments": [
+                      "药品信息"
+                    ],
+                    "reference": "#me1med1"
+                  },
+                  "dosageInstruction": [
+                    {
+                      "text": "饭后半小时喝，2次/天",
+                      "_text": {
+                        "fhir_comments": [
+                          "用法用量指导"
+                        ]
+                      },
+                      "timing": {
+                        "repeat": {
+                          "boundsPeriod": {
+                            "start": "2015-03-01T12:12:01",
+                            "_start": {
+                              "fhir_comments": [
+                                "医嘱开始时间"
+                              ]
+                            }
+                          },
+                          "duration": 3,
+                          "_duration": {
+                            "fhir_comments": [
+                              "执行天数"
+                            ]
+                          },
+                          "durationUnit": "d"
+                        }
+                      },
+                      "route": {
+                        "coding": [
+                          {
+                            "system": "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+                            "_system": {
+                              "fhir_comments": [
+                                "用药途径代码命名空间"
+                              ]
+                            },
+                            "code": "1",
+                            "_code": {
+                              "fhir_comments": [
+                                "用药途径代码：口服"
+                              ]
+                            }
+                          }
+                        ]
+                      },
+                      "method": {
+                        "coding": [
+                          {
+                            "system": "http://www.nestvision.com/platform/app/data/v1/code/c-med-code",
+                            "_system": {
+                              "fhir_comments": [
+                                "特殊用法代码命名空间"
+                              ]
+                            },
+                            "code": "2",
+                            "_code": {
+                              "fhir_comments": [
+                                "特殊用法代码"
+                              ]
+                            }
+                          }
+                        ]
+                      },
+                      "doseQuantity": {
+                        "value": 2,
+                        "_value": {
+                          "fhir_comments": [
+                            "用药次剂量"
+                          ]
+                        },
+                        "unit": "瓶",
+                        "_unit": {
+                          "fhir_comments": [
+                            "用药次剂量单位"
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              ],
+              "extension": [
+                {
+                  "fhir_comments": [
+                    "病案号"
+                  ],
+                  "url": "http://www.nestvision.com/platform/app/data/v1/text/case-no",
+                  "valueString": "1"
+                },
+                {
+                  "fhir_comments": [
+                    "住院次数"
+                  ],
+                  "url": "http://www.nestvision.com/platform/app/data/v1/number/inpat-times",
+                  "valueInteger": 2
+                }
+              ],
+              "identifier": {
+                "fhir_comments": [
+                  "出入量记录id"
+                ],
+                "system": "http://www.nestvision.com/entity/hospital/guan/his/sinosoft/v1/identifier/intake-and-output-record-id",
+                "value": "13"
+              },
+              "date": "2013-02-01T12:30:02",
+              "_date": {
+                "fhir_comments": [
+                  "记录日期"
+                ]
+              },
+              "type": {
+                "fhir_comments": [
+                  "文档类型：出入量记录"
+                ],
+                "coding": [
+                  {
+                    "system": "2.16.156.10011.2.4",
+                    "code": "C0021"
+                  }
+                ],
+                "text": "出入量记录"
+              },
+              "title": "出入量记录",
+              "_title": {
+                "fhir_comments": [
+                  "文档标题：出入量记录"
+                ]
+              },
+              "status": "final",
+              "_status": {
+                "fhir_comments": [
+                  "状态：preliminary初步 final最终amended修订entered-in-error错误"
+                ]
+              },
+              "confidentiality": "N",
+              "_confidentiality": {
+                "fhir_comments": [
+                  "保密等级：U:不受限制的 L:低等级 M:中等 N:常规 R:保密的 V:十分机密的"
+                ]
+              },
+              "subject": {
+                "fhir_comments": [
+                  "居民信息"
+                ],
+                "reference": "#pat1"
+              },
+              "author": [
+                {
+                  "fhir_comments": [
+                    "指定创作者"
+                  ],
+                  "reference": "#pra1"
+                }
+              ],
+              "attester": [
+                {
+                  "fhir_comments": [
+                    "责任护士"
+                  ],
+                  "extension": [
+                    {
+                      "url": "http://www.nestvision.com/platform/app/data/v1/code/employee-role-cd",
+                      "valueCode": "05"
+                    }
+                  ],
+                  "mode": [
+                    "personal"
+                  ],
+                  "_mode": [
+                    {
+                      "fhir_comments": [
+                        "对于该文档的意义：个人"
+                      ]
+                    }
+                  ],
+                  "time": "2015-01-02T10:01:02",
+                  "_time": {
+                    "fhir_comments": [
+                      "签名日期"
+                    ]
+                  },
+                  "party": {
+                    "reference": "#pra2"
+                  }
+                }
+              ],
+              "custodian": {
+                "fhir_comments": [
+                  "文档管理机构信息"
+                ],
+                "reference": "#hos1"
+              },
+              "encounter": {
+                "fhir_comments": [
+                  "住院"
+                ],
+                "reference": "#e1"
+              },
+              "section": [
+                {
+                  "fhir_comments": [
+                    "诊断"
+                  ],
+                  "title": "诊断章节",
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://loinc.org",
+                        "code": "29548-5",
+                        "display": "Diagnosis"
+                      }
+                    ]
+                  },
+                  "entry": [
+                    {
+                      "reference": "#con1"
+                    }
+                  ]
+                },
+                {
+                  "fhir_comments": [
+                    "生命体征章节"
+                  ],
+                  "extension": [
+                    {
+                      "fhir_comments": [
+                        "体重(kg)"
+                      ],
+                      "url": "http://www.nestvision.com/platform/app/data/v1/number/weight",
+                      "valueDecimal": 36
+                    }
+                  ],
+                  "title": "生命体征章节",
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://loinc.org",
+                        "code": "8716-3",
+                        "display": "VITAL SIGNS"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "fhir_comments": [
+                    "护理记录章节"
+                  ],
+                  "extension": [
+                    {
+                      "fhir_comments": [
+                        "护理等级代码CV9900330"
+                      ],
+                      "url": "http://www.nestvision.com/platform/app/data/v1/code/nursing-type",
+                      "valueCode": "1"
+                    },
+                    {
+                      "fhir_comments": [
+                        "护理类型代码表CV9900331"
+                      ],
+                      "url": "http://www.nestvision.com/platform/app/data/v1/code/nursing-grade",
+                      "valueCode": "1"
+                    }
+                  ],
+                  "title": "护理记录章节",
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://loinc.org",
+                        "code": "99999-19",
+                        "display": "Nursing record"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "fhir_comments": [
+                    "护理观察章节"
+                  ],
+                  "extension": [
+                    {
+                      "fhir_comments": [
+                        "护理观察项目名称"
+                      ],
+                      "url": "http://www.nestvision.com/platform/app/data/v1/text/observation-project-name",
+                      "valueString": "护理观察项目名称"
+                    },
+                    {
+                      "fhir_comments": [
+                        "护理观察结果"
+                      ],
+                      "url": "http://www.nestvision.com/platform/app/data/v1/text/observation-results-description",
+                      "valueString": "护理观察结果描述"
+                    }
+                  ],
+                  "title": "护理观察章节",
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://loinc.org",
+                        "code": "99999-22",
+                        "display": "Nursing observation"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "fhir_comments": [
+                    "护理操作章节"
+                  ],
+                  "extension": [
+                    {
+                      "fhir_comments": [
+                        "护理操作名称"
+                      ],
+                      "url": "http://www.nestvision.com/platform/app/data/v1/text/nursing-name",
+                      "valueString": "进行护理操作的具体名称"
+                    },
+                    {
+                      "fhir_comments": [
+                        "护理操作项目类目名称"
+                      ],
+                      "url": "http://www.nestvision.com/platform/app/data/v1/text/nursing-item-name",
+                      "valueString": "护理操作项目类目名称描述"
+                    },
+                    {
+                      "fhir_comments": [
+                        "护理操作结果描述"
+                      ],
+                      "url": "http://www.nestvision.com/platform/app/data/v1/text/nursing-result-description",
+                      "valueString": "护理操作结果描述"
+                    }
+                  ],
+                  "title": "护理操作章节",
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://loinc.org",
+                        "code": "99999-23",
+                        "display": "Nursing operation"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "fhir_comments": [
+                    "用药章节"
+                  ],
+                  "title": "用药章节",
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://loinc.org",
+                        "code": "10160-0",
+                        "display": "HISTORY OFMEDICATION USE"
+                      }
+                    ]
+                  },
+                  "entry": [
+                    {
+                      "reference": "#me1"
+                    },
+                    {
+                      "reference": "#sub1"
+                    }
+                  ]
+                },
+                {
+                  "fhir_comments": [
+                    "护理标志章节"
+                  ],
+                  "extension": [
+                    {
+                      "fhir_comments": [
+                        "呕吐标志"
+                      ],
+                      "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-vomit",
+                      "valueBoolean": true
+                    },
+                    {
+                      "fhir_comments": [
+                        "排尿困难标志"
+                      ],
+                      "url": "http://www.nestvision.com/platform/app/data/v1/boolean/if-dysuria",
+                      "valueBoolean": true
+                    }
+                  ],
+                  "title": "护理标志章节",
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://loinc.org",
+                        "code": "99999-35",
+                        "display": "Nursing mark"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "http://192.168.2.241:8083/resources/Bundle/20551",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "20551",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2017-02-23T02:27:13.203+08:00"
+        },
+        "type": "document",
+        "entry": [
+          {
+            "resource": {
+              "resourceType": "Composition",
+              "id": "180f219f-97a8-486d-99d9-ed631fe4fc57",
+              "fhir_comments": [
+                "资源：高值耗材使用记录"
+              ],
+              "contained": [
+                {
+                  "resourceType": "Organization",
+                  "id": "e1o1",
+                  "extension": [
+                    {
+                      "fhir_comments": [
+                        "科室归类代码"
+                      ],
+                      "url": "urn:oid:2.16.156.10011.2.3.2.62",
+                      "valueCode": "7"
+                    }
+                  ],
+                  "identifier": [
+                    {
+                      "system": "http://www.nestvision.com/entity/hospital/guan/his/sinosoft/v1/identifier/department-id",
+                      "_system": {
+                        "fhir_comments": [
+                          "院内科室ID号命名空间"
+                        ]
+                      },
+                      "value": "1",
+                      "_value": {
+                        "fhir_comments": [
+                          "院内科室ID号"
+                        ]
+                      }
+                    }
+                  ],
+                  "name": "入院科室",
+                  "_name": {
+                    "fhir_comments": [
+                      "科室名称"
+                    ]
+                  }
+                },
+                {
+                  "resourceType": "Location",
+                  "id": "e1l1",
+                  "identifier": [
+                    {
+                      "system": "http://www.nestvision.com/entity/hospital/guan/his/sinosoft/v1/identifier/bed-id",
+                      "_system": {
+                        "fhir_comments": [
+                          "原系统床位ID号命名空间"
+                        ]
+                      },
+                      "value": "10010023",
+                      "_value": {
+                        "fhir_comments": [
+                          "原系统床位ID号"
+                        ]
+                      }
+                    }
+                  ],
+                  "address": {
+                    "extension": [
+                      {
+                        "fhir_comments": [
+                          "病房号"
+                        ],
+                        "url": "http://www.nestvision.com/platform/app/data/v1/text/ward-no",
+                        "valueString": "110"
+                      },
+                      {
+                        "fhir_comments": [
+                          "病区"
+                        ],
+                        "url": "http://www.nestvision.com/platform/app/data/v1/text/ward-area",
+                        "valueString": "12"
+                      },
+                      {
+                        "fhir_comments": [
+                          "床位号"
+                        ],
+                        "url": "http://www.nestvision.com/platform/app/data/v1/text/bed-num",
+                        "valueString": "12"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "resourceType": "Patient",
+                  "id": "pat1",
+                  "extension": [
+                    {
+                      "fhir_comments": [
+                        "年龄"
+                      ],
+                      "url": "http://www.nestvision.com/platform/app/data/v1/number/age",
+                      "valueDecimal": 23
+                    }
+                  ],
+                  "identifier": [
+                    {
+                      "system": "urn:oid:2.16.156.10011.1.3",
+                      "_system": {
+                        "fhir_comments": [
+                          "身份证号命名空间"
+                        ]
+                      },
+                      "value": "530801197603062217",
+                      "_value": {
+                        "fhir_comments": [
+                          "身份证号"
+                        ]
+                      }
+                    }
+                  ],
+                  "name": [
+                    {
+                      "text": "患者姓名",
+                      "_text": {
+                        "fhir_comments": [
+                          "姓名"
+                        ]
+                      }
+                    }
+                  ],
+                  "gender": "male",
+                  "_gender": {
+                    "fhir_comments": [
+                      "性别"
+                    ]
+                  },
+                  "birthDate": "2015-01-02",
+                  "_birthDate": {
+                    "fhir_comments": [
+                      "出生日期"
+                    ]
+                  }
+                },
+                {
+                  "resourceType": "Practitioner",
+                  "id": "pra1",
+                  "identifier": [
+                    {
+                      "system": "http://www.nestvision.com/entity/hospital/guan/his/sinosoft/v1/identifier/employee-id",
+                      "_system": {
+                        "fhir_comments": [
+                          "院内人员ID号命名空间"
+                        ]
+                      },
+                      "value": "1",
+                      "_value": {
+                        "fhir_comments": [
+                          "院内人员ID号"
+                        ]
+                      }
+                    }
+                  ],
+                  "name": [
+                    {
+                      "text": "我是指定创作者",
+                      "_text": {
+                        "fhir_comments": [
+                          "姓名"
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "resourceType": "Practitioner",
+                  "id": "pra2",
+                  "identifier": [
+                    {
+                      "system": "http://www.nestvision.com/entity/hospital/guan/his/sinosoft/v1/identifier/employee-id",
+                      "_system": {
+                        "fhir_comments": [
+                          "院内人员ID号命名空间"
+                        ]
+                      },
+                      "value": "1",
+                      "_value": {
+                        "fhir_comments": [
+                          "院内人员ID号"
+                        ]
+                      }
+                    }
+                  ],
+                  "name": [
+                    {
+                      "text": "我是责任护士",
+                      "_text": {
+                        "fhir_comments": [
+                          "姓名"
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "resourceType": "Organization",
+                  "id": "hos1",
+                  "identifier": [
+                    {
+                      "system": "http://www.nestvision.com/entity/hospital/guan/his/sinosoft/v1/identifier/hospital-id",
+                      "_system": {
+                        "fhir_comments": [
+                          "原系统机构ID号命名空间"
+                        ]
+                      },
+                      "value": "guan",
+                      "_value": {
+                        "fhir_comments": [
+                          "原系统机构ID号"
+                        ]
+                      }
+                    }
+                  ],
+                  "name": "我是文档管理机构",
+                  "_name": {
+                    "fhir_comments": [
+                      "医院名称"
+                    ]
+                  }
+                },
+                {
+                  "resourceType": "Encounter",
+                  "id": "e1",
+                  "extension": [
+                    {
+                      "fhir_comments": [
+                        "入院科室"
+                      ],
+                      "url": "http://www.nestvision.com/platform/app/data/v1/identifier/in-dpid",
+                      "valueReference": {
+                        "reference": "#e1o1"
+                      }
+                    },
+                    {
+                      "fhir_comments": [
+                        "中医\"四诊\"观察结果"
+                      ],
+                      "url": "http://www.nestvision.com/platform/app/data/v1/text/cn-four-result",
+                      "valueString": "中医四诊观察结果的详细描述，包括望、闻、问、切四诊内容"
+                    },
+                    {
+                      "fhir_comments": [
+                        "入院途径"
+                      ],
+                      "url": "http://www.nestvision.com/platform/app/data/v1/code/in-mode-code",
+                      "valueCode": "123"
+                    },
+                    {
+                      "fhir_comments": [
+                        "住院原因代码"
+                      ],
+                      "url": "http://www.nestvision.com/platform/app/data/v1/code/inhospital-reason-cd",
+                      "valueCode": "1"
+                    },
+                    {
+                      "fhir_comments": [
+                        "入病房方式"
+                      ],
+                      "url": "http://www.nestvision.com/platform/app/data/v1/text/inhospital-way",
+                      "valueString": "入病房方式描述"
+                    }
+                  ],
+                  "identifier": [
+                    {
+                      "system": "http://www.nestvision.com/entity/hospital/guan/his/sinosoft/v1/identifier/inpatient-registration-id",
+                      "value": "10010",
+                      "_value": {
+                        "fhir_comments": [
+                          "原系统住院流水id号"
+                        ]
+                      }
+                    }
+                  ],
+                  "status": "in-progress",
+                  "_status": {
+                    "fhir_comments": [
+                      "状态"
+                    ]
+                  },
+                  "class": "inpatient",
+                  "_class": {
+                    "fhir_comments": [
+                      "类型：住院"
+                    ]
+                  },
+                  "period": {
+                    "start": "2015-01-01T20:18:01",
+                    "_start": {
+                      "fhir_comments": [
+                        "入院时间"
+                      ]
+                    }
+                  },
+                  "hospitalization": {
+                    "preAdmissionIdentifier": {
+                      "system": "http://www.nestvision.com/platform/app/data/v1/text/inh-id",
+                      "_system": {
+                        "fhir_comments": [
+                          "住院号命名空间"
+                        ]
+                      },
+                      "value": "10010",
+                      "_value": {
+                        "fhir_comments": [
+                          "住院号"
+                        ]
+                      }
+                    }
+                  },
+                  "location": [
+                    {
+                      "fhir_comments": [
+                        "当前床号"
+                      ],
+                      "location": {
+                        "reference": "#e1l1"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "resourceType": "Condition",
+                  "id": "con1",
+                  "extension": [
+                    {
+                      "fhir_comments": [
+                        "中医症候代码CV9900357"
+                      ],
+                      "url": "http://www.nestvision.com/platform/app/data/v1/code/cn-sym-diag-code",
+                      "valueCode": "BEZ030"
+                    },
+                    {
+                      "fhir_comments": [
+                        "中医病名代码CV9900357"
+                      ],
+                      "url": "http://www.nestvision.com/platform/app/data/v1/code/cn-dis-diag-code",
+                      "valueCode": "BEZ030"
+                    }
+                  ],
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "urn:oid:2.16.156.10011.2.3.3.11",
+                        "_system": {
+                          "fhir_comments": [
+                            "诊断编码"
+                          ]
+                        },
+                        "code": "Q39.801",
+                        "_code": {
+                          "fhir_comments": [
+                            "诊断编码"
+                          ]
+                        },
+                        "display": "先天性短食管"
+                      }
+                    ]
+                  },
+                  "onsetDateTime": "2015-01-20",
+                  "_onsetDateTime": {
+                    "fhir_comments": [
+                      "诊断日期"
+                    ]
+                  }
+                },
+                {
+                  "resourceType": "MedicationOrder",
+                  "id": "me1",
+                  "extension": [
+                    {
+                      "fhir_comments": [
+                        "医嘱内容"
+                      ],
+                      "url": "http://www.nestvision.com/platform/app/data/v1/text/cn-prescribe",
+                      "valueString": "对中药处方医嘱内容的详细描述"
+                    },
+                    {
+                      "fhir_comments": [
+                        "中药煎煮法"
+                      ],
+                      "url": "http://www.nestvision.com/platform/app/data/v1/text/cn-prescribe-descr",
+                      "valueString": "中药饮片煎煮方法描述"
+                    },
+                    {
+                      "fhir_comments": [
+                        "中药服用方法代码"
+                      ],
+                      "url": "http://www.nestvision.com/platform/app/data/v1/code/cn-drug-way-cd",
+                      "valueCode": "01"
+                    }
+                  ],
+                  "dosageInstruction": [
+                    {
+                      "route": {
+                        "coding": [
+                          {
+                            "system": "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+                            "_system": {
+                              "fhir_comments": [
+                                "用药途径代码命名空间"
+                              ]
+                            },
+                            "code": "1",
+                            "_code": {
+                              "fhir_comments": [
+                                "用药途径代码：口服"
+                              ]
+                            }
+                          }
+                        ]
+                      },
+                      "method": {
+                        "coding": [
+                          {
+                            "system": "http://www.nestvision.com/platform/app/data/v1/code/c-med-code",
+                            "_system": {
+                              "fhir_comments": [
+                                "特殊用法代码命名空间"
+                              ]
+                            },
+                            "code": "2",
+                            "_code": {
+                              "fhir_comments": [
+                                "特殊用法代码"
+                              ]
+                            }
+                          }
+                        ]
+                      },
+                      "doseQuantity": {
+                        "value": 2,
+                        "_value": {
+                          "fhir_comments": [
+                            "用药次剂量"
+                          ]
+                        },
+                        "unit": "瓶",
+                        "_unit": {
+                          "fhir_comments": [
+                            "用药次剂量单位"
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "resourceType": "Substance",
+                  "id": "sub1",
+                  "extension": [
+                    {
+                      "fhir_comments": [
+                        "产品生产厂家"
+                      ],
+                      "url": "http://www.nestvision.com/platform/app/data/v1/text/factory-name",
+                      "valueString": "产品生产厂家"
+                    },
+                    {
+                      "fhir_comments": [
+                        "产品供应商"
+                      ],
+                      "url": "http://www.nestvision.com/platform/app/data/v1/text/provider-name",
+                      "valueString": "产品供应商"
+                    },
+                    {
+                      "fhir_comments": [
+                        "植入性耗材标志"
+                      ],
+                      "url": "http://www.nestvision.com/platform/app/data/v1/boolean/implantable-consumables-flg",
+                      "valueBoolean": true
+                    },
+                    {
+                      "fhir_comments": [
+                        "使用途径"
+                      ],
+                      "url": "http://www.nestvision.com/platform/app/data/v1/text/use-way",
+                      "valueString": "使用途径"
+                    }
+                  ],
+                  "identifier": [
+                    {
+                      "fhir_comments": [
+                        "原系统耗材id"
+                      ],
+                      "system": "http://www.nestvision.com/entity/hospital/guan/his/sinosoft/v1/identifier/substance-id",
+                      "value": "1"
+                    }
+                  ],
+                  "code": {
+                    "fhir_comments": [
+                      "材料名称"
+                    ],
+                    "coding": [
+                      {
+                        "system": "http://www.nestvision.com/platform/app/data/v1/code/substance-cd",
+                        "code": "1001001",
+                        "display": "备皮包"
+                      }
+                    ]
+                  },
+                  "instance": [
+                    {
+                      "expiry": "2015-02-01",
+                      "_expiry": {
+                        "fhir_comments": [
+                          "有效期"
+                        ]
+                      },
+                      "quantity": {
+                        "value": 1,
+                        "_value": {
+                          "fhir_comments": [
+                            "数量"
+                          ]
+                        },
+                        "unit": "个",
+                        "_unit": {
+                          "fhir_comments": [
+                            "单位"
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              ],
+              "extension": [
+                {
+                  "fhir_comments": [
+                    "病案号"
+                  ],
+                  "url": "http://www.nestvision.com/platform/app/data/v1/text/case-no",
+                  "valueString": "1"
+                },
+                {
+                  "fhir_comments": [
+                    "住院次数"
+                  ],
+                  "url": "http://www.nestvision.com/platform/app/data/v1/number/inpat-times",
+                  "valueInteger": 2
+                }
+              ],
+              "identifier": {
+                "fhir_comments": [
+                  "高值耗材使用记录id"
+                ],
+                "system": "http://www.nestvision.com/entity/hospital/guan/his/sinosoft/v1/identifier/expensive-medical-consumables-usage-records-id",
+                "value": "1"
+              },
+              "date": "2013-02-01T12:30:02",
+              "_date": {
+                "fhir_comments": [
+                  "记录日期"
+                ]
+              },
+              "type": {
+                "fhir_comments": [
+                  "文档类型：高值耗材使用记录"
+                ],
+                "coding": [
+                  {
+                    "system": "2.16.156.10011.2.4",
+                    "code": "C0022"
+                  }
+                ],
+                "text": "高值耗材使用记录"
+              },
+              "title": "高值耗材使用记录",
+              "_title": {
+                "fhir_comments": [
+                  "文档标题：高值耗材使用记录"
+                ]
+              },
+              "status": "final",
+              "_status": {
+                "fhir_comments": [
+                  "状态：preliminary初步 final最终amended修订entered-in-error错误"
+                ]
+              },
+              "confidentiality": "N",
+              "_confidentiality": {
+                "fhir_comments": [
+                  "保密等级：U:不受限制的 L:低等级 M:中等 N:常规 R:保密的 V:十分机密的"
+                ]
+              },
+              "subject": {
+                "fhir_comments": [
+                  "居民信息"
+                ],
+                "reference": "#pat1"
+              },
+              "author": [
+                {
+                  "fhir_comments": [
+                    "文档创建者"
+                  ],
+                  "reference": "#pra1"
+                }
+              ],
+              "attester": [
+                {
+                  "fhir_comments": [
+                    "责任护士"
+                  ],
+                  "extension": [
+                    {
+                      "url": "http://www.nestvision.com/platform/app/data/v1/code/employee-role-cd",
+                      "valueCode": "05"
+                    }
+                  ],
+                  "mode": [
+                    "personal"
+                  ],
+                  "_mode": [
+                    {
+                      "fhir_comments": [
+                        "对于该文档的意义：个人"
+                      ]
+                    }
+                  ],
+                  "time": "2015-01-02T10:01:02",
+                  "_time": {
+                    "fhir_comments": [
+                      "签名日期"
+                    ]
+                  },
+                  "party": {
+                    "reference": "#pra2"
+                  }
+                }
+              ],
+              "custodian": {
+                "fhir_comments": [
+                  "文档管理机构信息"
+                ],
+                "reference": "#hos1"
+              },
+              "encounter": {
+                "fhir_comments": [
+                  "住院"
+                ],
+                "reference": "#e1"
+              },
+              "section": [
+                {
+                  "fhir_comments": [
+                    "诊断章节"
+                  ],
+                  "title": "诊断章节",
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://loinc.org",
+                        "code": "29548-5",
+                        "display": "Diagnosis"
+                      }
+                    ]
+                  },
+                  "entry": [
+                    {
+                      "reference": "#con1"
+                    }
+                  ]
+                },
+                {
+                  "fhir_comments": [
+                    "高值耗材章节（同用药章节）"
+                  ],
+                  "title": "高值耗材章节（同用药章节）",
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://loinc.org",
+                        "code": "10160-0",
+                        "display": "HISTORY OFMEDICATION USE"
+                      }
+                    ]
+                  },
+                  "entry": [
+                    {
+                      "reference": "#me1"
+                    },
+                    {
+                      "reference": "#sub1"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    }
+  ]
+}

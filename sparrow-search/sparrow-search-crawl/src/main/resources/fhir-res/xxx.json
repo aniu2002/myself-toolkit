@@ -1,0 +1,21 @@
+{
+  "from" : 0,
+  "size" : 10,
+  "post_filter" : {
+    "bool" : {
+      "must_not" : [
+        {
+          "exists" : {
+            "field" : "name",
+            "boost" : 1.0
+          }
+        }
+      ],
+      "disable_coord" : false,
+      "adjust_pure_negative" : true,
+      "boost" : 1.0
+    }
+  },
+  "version" : true,
+  "_source" : false
+}

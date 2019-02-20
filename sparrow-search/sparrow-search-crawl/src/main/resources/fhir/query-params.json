@@ -1,0 +1,8 @@
+{
+  "defaultType": "Patient",
+  "id": "323768602207588352",
+  "date":"@{yyyy-MM-dd}",
+  "ver": "1",
+  "resBase": "http://127.0.0.1:8083/resources",
+  "base": "${resBase}/${defaultType}"
+}

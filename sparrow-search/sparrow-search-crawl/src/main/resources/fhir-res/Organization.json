@@ -1,0 +1,1822 @@
+{
+  "resourceType" : "Bundle",
+  "id" : "fed0a230-baf2-471b-81d9-a731b385912d",
+  "meta" : {
+    "lastUpdated" : "2017-05-11T17:57:38.724+08:00"
+  },
+  "type" : "searchset",
+  "total" : 5030,
+  "link" : [ {
+    "relation" : "self",
+    "url" : "http://10.10.15.38:8083/resources/Organization?_count=50"
+  }, {
+    "relation" : "next",
+    "url" : "http://10.10.15.38:8083/resources?_getpages=eb5628f6-183b-4460-b533-4a50e5e52512&_getpagesoffset=50&_count=50&_bundletype=searchset"
+  } ],
+  "entry" : [ {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Organization/2938365",
+    "resource" : {
+      "resourceType" : "Organization",
+      "id" : "2938365",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2017-04-27T15:06:33.746+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-end",
+        "valueBoolean" : true
+      }, {
+        "url" : "urn:oid:2.16.156.10011.2.3.2.62",
+        "valueCode" : "0311"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/131003718312556/his/sinosoft/v1/identifier/department-id",
+        "value" : "9"
+      } ],
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/dp-type",
+          "code" : "9"
+        } ]
+      },
+      "name" : "grk-感染科",
+      "partOf" : {
+        "reference" : "Organization/2938101"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Organization/2938245",
+    "resource" : {
+      "resourceType" : "Organization",
+      "id" : "2938245",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2017-04-27T11:38:25.776+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-end",
+        "valueBoolean" : true
+      }, {
+        "url" : "urn:oid:2.16.156.10011.2.3.2.62",
+        "valueCode" : "0311"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/131003718312556/his/sinosoft/v1/identifier/department-id",
+        "value" : "2"
+      } ],
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/dp-type",
+          "code" : "9"
+        } ]
+      },
+      "name" : "Test Department",
+      "partOf" : {
+        "reference" : "Organization/2938101"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Organization/2938101",
+    "resource" : {
+      "resourceType" : "Organization",
+      "id" : "2938101",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2017-04-27T10:53:07.915+08:00"
+      },
+      "extension" : [ {
+        "fhir_comments" : [ " 邮政编码 " ],
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/zipcode",
+        "valueString" : "065000"
+      }, {
+        "fhir_comments" : [ " 所在地区（区县） " ],
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/area",
+        "valueString" : "河北省廊坊市广阳区"
+      }, {
+        "fhir_comments" : [ " 医院经纬度 " ],
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/latandlon",
+        "valueString" : "39.317,116.431"
+      }, {
+        "fhir_comments" : [ " 医院等级 " ],
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/orggrade",
+        "valueString" : "三级甲等"
+      }, {
+        "fhir_comments" : [ " 医院简介 " ],
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/orgintroduce",
+        "valueString" : "中国石油天然气集团公司中心医院是伴随着中国石油工业发展成长起来的医疗卫生机构。始建于1974年，原为管道局职工医院。1994成为中国石油天 然气集团公司中心医院。医院为综合性三级甲等医院，承担临床医疗、教学、科研职能，承担企业员工健康保健和健康管理职能。是河北医科大学石油临床医学院、中国石油职业卫生技术服 务中心、中国石油突发公共卫生事件应急救援中心。 医院在职工作人员1255人，其中卫生专业技术人员952人，医师461人，护师62人。作为中国石油定点扶贫和援藏医疗支撑单位，医院坚持支援西部偏远油田医疗卫生工作，每年对新疆塔西南 分院进行技术支援和培训。承担西藏双湖、江西横峰、贵州习水、新疆等6个国家级贫困县医疗支援和卫生人员培训任务，每年组织医疗队到雪域高原开展巡诊。 成立中国石油医疗远程会诊中心，实现了通过网络进行远程会诊、远程查房、虚拟科室托管，使中国石油偏远地区职工享受优质医疗服务的目的。  "
+      }, {
+        "fhir_comments" : [ " 1（目前医院是否是正常营业状态。1开启；0关闭） " ],
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/orgstate",
+        "valueCode" : "1"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/131003718312556/his/sinosoft/v1/identifier/hospital-id",
+        "_system" : {
+          "fhir_comments" : [ " 医院ID号命名空间 " ]
+        },
+        "value" : "131003718312556",
+        "_value" : {
+          "fhir_comments" : [ " 医院ID号 " ]
+        }
+      } ],
+      "name" : "中国石油天然气集团公司中心医院",
+      "_name" : {
+        "fhir_comments" : [ " 医院名称 " ]
+      },
+      "telecom" : [ {
+        "system" : "phone",
+        "_system" : {
+          "fhir_comments" : [ " 医院联系方式代码 " ]
+        },
+        "value" : "0316-2075450",
+        "_value" : {
+          "fhir_comments" : [ " 医院咨询电话 " ]
+        },
+        "use" : "work"
+      } ],
+      "address" : [ {
+        "text" : "河北省廊坊市广阳区新开路51号"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Organization/1",
+    "resource" : {
+      "resourceType" : "Organization",
+      "id" : "1",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-11T08:30:16.021+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/boolean/if-end",
+        "valueBoolean" : false
+      }, {
+        "url" : "urn:oid:2.16.156.10011.2.3.2.62",
+        "valueCode" : "7"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/guan/his/sinosoft/v1/identifier/department-id",
+        "value" : "110"
+      } ],
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/dp-type",
+          "code" : "3"
+        } ]
+      },
+      "name" : "99",
+      "telecom" : [ {
+        "system" : "phone",
+        "value" : "5",
+        "use" : "work"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Organization/206",
+    "resource" : {
+      "resourceType" : "Organization",
+      "id" : "206",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-16T16:31:27.404+08:00"
+      },
+      "extension" : [ {
+        "url" : "urn:oid:2.16.156.10011.2.3.2.62",
+        "valueCode" : "default"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/department-id",
+        "value" : "03"
+      } ],
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/dp-type",
+          "code" : "6"
+        } ]
+      },
+      "name" : "护理单元",
+      "telecom" : [ {
+        "system" : "phone",
+        "value" : "0000",
+        "use" : "work"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Organization/207",
+    "resource" : {
+      "resourceType" : "Organization",
+      "id" : "207",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-16T16:31:34.923+08:00"
+      },
+      "extension" : [ {
+        "url" : "urn:oid:2.16.156.10011.2.3.2.62",
+        "valueCode" : "default"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/department-id",
+        "value" : "0301"
+      } ],
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/dp-type",
+          "code" : "6"
+        } ]
+      },
+      "name" : "内一科病区",
+      "telecom" : [ {
+        "system" : "phone",
+        "value" : "0000",
+        "use" : "work"
+      } ],
+      "partOf" : {
+        "reference" : "Organization/206"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Organization/570",
+    "resource" : {
+      "resourceType" : "Organization",
+      "id" : "570",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-16T17:28:19.853+08:00"
+      },
+      "extension" : [ {
+        "url" : "urn:oid:2.16.156.10011.2.3.2.62",
+        "valueCode" : "default"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/department-id",
+        "value" : "01"
+      } ],
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/dp-type",
+          "code" : "3"
+        } ]
+      },
+      "name" : "门诊科室",
+      "telecom" : [ {
+        "system" : "phone",
+        "value" : "0000",
+        "use" : "work"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Organization/571",
+    "resource" : {
+      "resourceType" : "Organization",
+      "id" : "571",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-16T17:28:21.160+08:00"
+      },
+      "extension" : [ {
+        "url" : "urn:oid:2.16.156.10011.2.3.2.62",
+        "valueCode" : "default"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/department-id",
+        "value" : "02"
+      } ],
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/dp-type",
+          "code" : "4"
+        } ]
+      },
+      "name" : "住院科室",
+      "telecom" : [ {
+        "system" : "phone",
+        "value" : "0000",
+        "use" : "work"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Organization/572",
+    "resource" : {
+      "resourceType" : "Organization",
+      "id" : "572",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-16T17:28:22.542+08:00"
+      },
+      "extension" : [ {
+        "url" : "urn:oid:2.16.156.10011.2.3.2.62",
+        "valueCode" : "default"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/department-id",
+        "value" : "03"
+      } ],
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/dp-type",
+          "code" : "6"
+        } ]
+      },
+      "name" : "护理单元",
+      "telecom" : [ {
+        "system" : "phone",
+        "value" : "0000",
+        "use" : "work"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Organization/573",
+    "resource" : {
+      "resourceType" : "Organization",
+      "id" : "573",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-16T17:28:23.998+08:00"
+      },
+      "extension" : [ {
+        "url" : "urn:oid:2.16.156.10011.2.3.2.62",
+        "valueCode" : "default"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/department-id",
+        "value" : "04"
+      } ],
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/dp-type",
+          "code" : "5"
+        } ]
+      },
+      "name" : "医技科室",
+      "telecom" : [ {
+        "system" : "phone",
+        "value" : "0000",
+        "use" : "work"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Organization/574",
+    "resource" : {
+      "resourceType" : "Organization",
+      "id" : "574",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-16T17:28:25.457+08:00"
+      },
+      "extension" : [ {
+        "url" : "urn:oid:2.16.156.10011.2.3.2.62",
+        "valueCode" : "default"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/department-id",
+        "value" : "05"
+      } ],
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/dp-type",
+          "code" : "7"
+        } ]
+      },
+      "name" : "办公机构",
+      "telecom" : [ {
+        "system" : "phone",
+        "value" : "0000",
+        "use" : "work"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Organization/575",
+    "resource" : {
+      "resourceType" : "Organization",
+      "id" : "575",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-16T17:28:26.763+08:00"
+      },
+      "extension" : [ {
+        "url" : "urn:oid:2.16.156.10011.2.3.2.62",
+        "valueCode" : "default"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/department-id",
+        "value" : "06"
+      } ],
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/dp-type",
+          "code" : "9"
+        } ]
+      },
+      "name" : "后勤管理部门",
+      "telecom" : [ {
+        "system" : "phone",
+        "value" : "0000",
+        "use" : "work"
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Organization/576",
+    "resource" : {
+      "resourceType" : "Organization",
+      "id" : "576",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-16T17:30:02.836+08:00"
+      },
+      "extension" : [ {
+        "url" : "urn:oid:2.16.156.10011.2.3.2.62",
+        "valueCode" : "default"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/department-id",
+        "value" : "0101"
+      } ],
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/dp-type",
+          "code" : "3"
+        } ]
+      },
+      "name" : "内一科门诊",
+      "telecom" : [ {
+        "system" : "phone",
+        "value" : "0000",
+        "use" : "work"
+      } ],
+      "partOf" : {
+        "reference" : "Organization/570"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Organization/577",
+    "resource" : {
+      "resourceType" : "Organization",
+      "id" : "577",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-16T17:30:04.219+08:00"
+      },
+      "extension" : [ {
+        "url" : "urn:oid:2.16.156.10011.2.3.2.62",
+        "valueCode" : "default"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/department-id",
+        "value" : "0102"
+      } ],
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/dp-type",
+          "code" : "3"
+        } ]
+      },
+      "name" : "内二科门诊",
+      "telecom" : [ {
+        "system" : "phone",
+        "value" : "0000",
+        "use" : "work"
+      } ],
+      "partOf" : {
+        "reference" : "Organization/570"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Organization/578",
+    "resource" : {
+      "resourceType" : "Organization",
+      "id" : "578",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-16T17:30:05.597+08:00"
+      },
+      "extension" : [ {
+        "url" : "urn:oid:2.16.156.10011.2.3.2.62",
+        "valueCode" : "default"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/department-id",
+        "value" : "0103"
+      } ],
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/dp-type",
+          "code" : "3"
+        } ]
+      },
+      "name" : "外一科门诊",
+      "telecom" : [ {
+        "system" : "phone",
+        "value" : "0000",
+        "use" : "work"
+      } ],
+      "partOf" : {
+        "reference" : "Organization/570"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Organization/579",
+    "resource" : {
+      "resourceType" : "Organization",
+      "id" : "579",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-16T17:30:07.154+08:00"
+      },
+      "extension" : [ {
+        "url" : "urn:oid:2.16.156.10011.2.3.2.62",
+        "valueCode" : "default"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/department-id",
+        "value" : "0104"
+      } ],
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/dp-type",
+          "code" : "3"
+        } ]
+      },
+      "name" : "外二科门诊",
+      "telecom" : [ {
+        "system" : "phone",
+        "value" : "0000",
+        "use" : "work"
+      } ],
+      "partOf" : {
+        "reference" : "Organization/570"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Organization/580",
+    "resource" : {
+      "resourceType" : "Organization",
+      "id" : "580",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-16T17:30:08.999+08:00"
+      },
+      "extension" : [ {
+        "url" : "urn:oid:2.16.156.10011.2.3.2.62",
+        "valueCode" : "default"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/department-id",
+        "value" : "0105"
+      } ],
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/dp-type",
+          "code" : "3"
+        } ]
+      },
+      "name" : "骨科门诊",
+      "telecom" : [ {
+        "system" : "phone",
+        "value" : "0000",
+        "use" : "work"
+      } ],
+      "partOf" : {
+        "reference" : "Organization/570"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Organization/581",
+    "resource" : {
+      "resourceType" : "Organization",
+      "id" : "581",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-16T17:30:52.701+08:00"
+      },
+      "extension" : [ {
+        "url" : "urn:oid:2.16.156.10011.2.3.2.62",
+        "valueCode" : "default"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/department-id",
+        "value" : "0106"
+      } ],
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/dp-type",
+          "code" : "3"
+        } ]
+      },
+      "name" : "妇产科门诊",
+      "telecom" : [ {
+        "system" : "phone",
+        "value" : "0000",
+        "use" : "work"
+      } ],
+      "partOf" : {
+        "reference" : "Organization/570"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Organization/582",
+    "resource" : {
+      "resourceType" : "Organization",
+      "id" : "582",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-16T17:30:54.283+08:00"
+      },
+      "extension" : [ {
+        "url" : "urn:oid:2.16.156.10011.2.3.2.62",
+        "valueCode" : "default"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/department-id",
+        "value" : "0107"
+      } ],
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/dp-type",
+          "code" : "3"
+        } ]
+      },
+      "name" : "皮肤科门诊",
+      "telecom" : [ {
+        "system" : "phone",
+        "value" : "0000",
+        "use" : "work"
+      } ],
+      "partOf" : {
+        "reference" : "Organization/570"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Organization/583",
+    "resource" : {
+      "resourceType" : "Organization",
+      "id" : "583",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-16T17:30:55.835+08:00"
+      },
+      "extension" : [ {
+        "url" : "urn:oid:2.16.156.10011.2.3.2.62",
+        "valueCode" : "default"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/department-id",
+        "value" : "0108"
+      } ],
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/dp-type",
+          "code" : "3"
+        } ]
+      },
+      "name" : "儿科门诊",
+      "telecom" : [ {
+        "system" : "phone",
+        "value" : "0000",
+        "use" : "work"
+      } ],
+      "partOf" : {
+        "reference" : "Organization/570"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Organization/584",
+    "resource" : {
+      "resourceType" : "Organization",
+      "id" : "584",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-16T17:30:57.397+08:00"
+      },
+      "extension" : [ {
+        "url" : "urn:oid:2.16.156.10011.2.3.2.62",
+        "valueCode" : "default"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/department-id",
+        "value" : "0109"
+      } ],
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/dp-type",
+          "code" : "3"
+        } ]
+      },
+      "name" : "口腔科门诊",
+      "telecom" : [ {
+        "system" : "phone",
+        "value" : "0000",
+        "use" : "work"
+      } ],
+      "partOf" : {
+        "reference" : "Organization/570"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Organization/585",
+    "resource" : {
+      "resourceType" : "Organization",
+      "id" : "585",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-16T17:30:58.911+08:00"
+      },
+      "extension" : [ {
+        "url" : "urn:oid:2.16.156.10011.2.3.2.62",
+        "valueCode" : "default"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/department-id",
+        "value" : "0110"
+      } ],
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/dp-type",
+          "code" : "3"
+        } ]
+      },
+      "name" : "眼科门诊",
+      "telecom" : [ {
+        "system" : "phone",
+        "value" : "0000",
+        "use" : "work"
+      } ],
+      "partOf" : {
+        "reference" : "Organization/570"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Organization/586",
+    "resource" : {
+      "resourceType" : "Organization",
+      "id" : "586",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-16T17:31:00.553+08:00"
+      },
+      "extension" : [ {
+        "url" : "urn:oid:2.16.156.10011.2.3.2.62",
+        "valueCode" : "default"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/department-id",
+        "value" : "0111"
+      } ],
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/dp-type",
+          "code" : "3"
+        } ]
+      },
+      "name" : "耳鼻喉科门诊",
+      "telecom" : [ {
+        "system" : "phone",
+        "value" : "0000",
+        "use" : "work"
+      } ],
+      "partOf" : {
+        "reference" : "Organization/570"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Organization/587",
+    "resource" : {
+      "resourceType" : "Organization",
+      "id" : "587",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-16T17:31:02.145+08:00"
+      },
+      "extension" : [ {
+        "url" : "urn:oid:2.16.156.10011.2.3.2.62",
+        "valueCode" : "default"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/department-id",
+        "value" : "0112"
+      } ],
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/dp-type",
+          "code" : "3"
+        } ]
+      },
+      "name" : "中医科门诊",
+      "telecom" : [ {
+        "system" : "phone",
+        "value" : "0000",
+        "use" : "work"
+      } ],
+      "partOf" : {
+        "reference" : "Organization/570"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Organization/588",
+    "resource" : {
+      "resourceType" : "Organization",
+      "id" : "588",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-16T17:31:33.941+08:00"
+      },
+      "extension" : [ {
+        "url" : "urn:oid:2.16.156.10011.2.3.2.62",
+        "valueCode" : "default"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/department-id",
+        "value" : "0113"
+      } ],
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/dp-type",
+          "code" : "3"
+        } ]
+      },
+      "name" : "体检中心",
+      "telecom" : [ {
+        "system" : "phone",
+        "value" : "0000",
+        "use" : "work"
+      } ],
+      "partOf" : {
+        "reference" : "Organization/570"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Organization/589",
+    "resource" : {
+      "resourceType" : "Organization",
+      "id" : "589",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-16T17:31:35.589+08:00"
+      },
+      "extension" : [ {
+        "url" : "urn:oid:2.16.156.10011.2.3.2.62",
+        "valueCode" : "default"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/department-id",
+        "value" : "0114"
+      } ],
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/dp-type",
+          "code" : "3"
+        } ]
+      },
+      "name" : "急诊科门诊",
+      "telecom" : [ {
+        "system" : "phone",
+        "value" : "0000",
+        "use" : "work"
+      } ],
+      "partOf" : {
+        "reference" : "Organization/570"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Organization/590",
+    "resource" : {
+      "resourceType" : "Organization",
+      "id" : "590",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-16T17:31:37.194+08:00"
+      },
+      "extension" : [ {
+        "url" : "urn:oid:2.16.156.10011.2.3.2.62",
+        "valueCode" : "default"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/department-id",
+        "value" : "0115"
+      } ],
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/dp-type",
+          "code" : "3"
+        } ]
+      },
+      "name" : "中西医结合科门诊",
+      "telecom" : [ {
+        "system" : "phone",
+        "value" : "0000",
+        "use" : "work"
+      } ],
+      "partOf" : {
+        "reference" : "Organization/570"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Organization/591",
+    "resource" : {
+      "resourceType" : "Organization",
+      "id" : "591",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-16T17:31:38.853+08:00"
+      },
+      "extension" : [ {
+        "url" : "urn:oid:2.16.156.10011.2.3.2.62",
+        "valueCode" : "default"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/department-id",
+        "value" : "0116"
+      } ],
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/dp-type",
+          "code" : "3"
+        } ]
+      },
+      "name" : "内镜科（门诊）",
+      "telecom" : [ {
+        "system" : "phone",
+        "value" : "0000",
+        "use" : "work"
+      } ],
+      "partOf" : {
+        "reference" : "Organization/570"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Organization/592",
+    "resource" : {
+      "resourceType" : "Organization",
+      "id" : "592",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-16T17:31:40.182+08:00"
+      },
+      "extension" : [ {
+        "url" : "urn:oid:2.16.156.10011.2.3.2.62",
+        "valueCode" : "default"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/department-id",
+        "value" : "0117"
+      } ],
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/dp-type",
+          "code" : "3"
+        } ]
+      },
+      "name" : "病理科（门诊）",
+      "telecom" : [ {
+        "system" : "phone",
+        "value" : "0000",
+        "use" : "work"
+      } ],
+      "partOf" : {
+        "reference" : "Organization/570"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Organization/593",
+    "resource" : {
+      "resourceType" : "Organization",
+      "id" : "593",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-16T17:31:41.795+08:00"
+      },
+      "extension" : [ {
+        "url" : "urn:oid:2.16.156.10011.2.3.2.62",
+        "valueCode" : "default"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/department-id",
+        "value" : "0118"
+      } ],
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/dp-type",
+          "code" : "3"
+        } ]
+      },
+      "name" : "手术室（门诊）",
+      "telecom" : [ {
+        "system" : "phone",
+        "value" : "0000",
+        "use" : "work"
+      } ],
+      "partOf" : {
+        "reference" : "Organization/570"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Organization/594",
+    "resource" : {
+      "resourceType" : "Organization",
+      "id" : "594",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-16T17:31:43.497+08:00"
+      },
+      "extension" : [ {
+        "url" : "urn:oid:2.16.156.10011.2.3.2.62",
+        "valueCode" : "default"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/department-id",
+        "value" : "0119"
+      } ],
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/dp-type",
+          "code" : "3"
+        } ]
+      },
+      "name" : "功能科（门诊）",
+      "telecom" : [ {
+        "system" : "phone",
+        "value" : "0000",
+        "use" : "work"
+      } ],
+      "partOf" : {
+        "reference" : "Organization/570"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Organization/595",
+    "resource" : {
+      "resourceType" : "Organization",
+      "id" : "595",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-16T17:31:45.208+08:00"
+      },
+      "extension" : [ {
+        "url" : "urn:oid:2.16.156.10011.2.3.2.62",
+        "valueCode" : "default"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/department-id",
+        "value" : "0120"
+      } ],
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/dp-type",
+          "code" : "3"
+        } ]
+      },
+      "name" : "放射科（门诊）",
+      "telecom" : [ {
+        "system" : "phone",
+        "value" : "0000",
+        "use" : "work"
+      } ],
+      "partOf" : {
+        "reference" : "Organization/570"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Organization/596",
+    "resource" : {
+      "resourceType" : "Organization",
+      "id" : "596",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-16T17:31:46.820+08:00"
+      },
+      "extension" : [ {
+        "url" : "urn:oid:2.16.156.10011.2.3.2.62",
+        "valueCode" : "default"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/department-id",
+        "value" : "0201"
+      } ],
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/dp-type",
+          "code" : "4"
+        } ]
+      },
+      "name" : "内一科住院",
+      "telecom" : [ {
+        "system" : "phone",
+        "value" : "0000",
+        "use" : "work"
+      } ],
+      "partOf" : {
+        "reference" : "Organization/571"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Organization/597",
+    "resource" : {
+      "resourceType" : "Organization",
+      "id" : "597",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-16T17:31:48.450+08:00"
+      },
+      "extension" : [ {
+        "url" : "urn:oid:2.16.156.10011.2.3.2.62",
+        "valueCode" : "default"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/department-id",
+        "value" : "0202"
+      } ],
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/dp-type",
+          "code" : "4"
+        } ]
+      },
+      "name" : "内二科住院",
+      "telecom" : [ {
+        "system" : "phone",
+        "value" : "0000",
+        "use" : "work"
+      } ],
+      "partOf" : {
+        "reference" : "Organization/571"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Organization/598",
+    "resource" : {
+      "resourceType" : "Organization",
+      "id" : "598",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-16T17:31:50.139+08:00"
+      },
+      "extension" : [ {
+        "url" : "urn:oid:2.16.156.10011.2.3.2.62",
+        "valueCode" : "default"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/department-id",
+        "value" : "0203"
+      } ],
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/dp-type",
+          "code" : "4"
+        } ]
+      },
+      "name" : "外科住院",
+      "telecom" : [ {
+        "system" : "phone",
+        "value" : "0000",
+        "use" : "work"
+      } ],
+      "partOf" : {
+        "reference" : "Organization/571"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Organization/599",
+    "resource" : {
+      "resourceType" : "Organization",
+      "id" : "599",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-16T17:31:51.565+08:00"
+      },
+      "extension" : [ {
+        "url" : "urn:oid:2.16.156.10011.2.3.2.62",
+        "valueCode" : "default"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/department-id",
+        "value" : "0204"
+      } ],
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/dp-type",
+          "code" : "4"
+        } ]
+      },
+      "name" : "外二科住院",
+      "telecom" : [ {
+        "system" : "phone",
+        "value" : "0000",
+        "use" : "work"
+      } ],
+      "partOf" : {
+        "reference" : "Organization/571"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Organization/600",
+    "resource" : {
+      "resourceType" : "Organization",
+      "id" : "600",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-16T17:31:53.062+08:00"
+      },
+      "extension" : [ {
+        "url" : "urn:oid:2.16.156.10011.2.3.2.62",
+        "valueCode" : "default"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/department-id",
+        "value" : "0205"
+      } ],
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/dp-type",
+          "code" : "4"
+        } ]
+      },
+      "name" : "骨科住院",
+      "telecom" : [ {
+        "system" : "phone",
+        "value" : "0000",
+        "use" : "work"
+      } ],
+      "partOf" : {
+        "reference" : "Organization/571"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Organization/601",
+    "resource" : {
+      "resourceType" : "Organization",
+      "id" : "601",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-16T17:31:54.715+08:00"
+      },
+      "extension" : [ {
+        "url" : "urn:oid:2.16.156.10011.2.3.2.62",
+        "valueCode" : "default"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/department-id",
+        "value" : "0206"
+      } ],
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/dp-type",
+          "code" : "4"
+        } ]
+      },
+      "name" : "妇产科住院",
+      "telecom" : [ {
+        "system" : "phone",
+        "value" : "0000",
+        "use" : "work"
+      } ],
+      "partOf" : {
+        "reference" : "Organization/571"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Organization/602",
+    "resource" : {
+      "resourceType" : "Organization",
+      "id" : "602",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-16T17:31:56.314+08:00"
+      },
+      "extension" : [ {
+        "url" : "urn:oid:2.16.156.10011.2.3.2.62",
+        "valueCode" : "default"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/department-id",
+        "value" : "0207"
+      } ],
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/dp-type",
+          "code" : "4"
+        } ]
+      },
+      "name" : "儿科住院",
+      "telecom" : [ {
+        "system" : "phone",
+        "value" : "0000",
+        "use" : "work"
+      } ],
+      "partOf" : {
+        "reference" : "Organization/571"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Organization/603",
+    "resource" : {
+      "resourceType" : "Organization",
+      "id" : "603",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-16T17:31:57.882+08:00"
+      },
+      "extension" : [ {
+        "url" : "urn:oid:2.16.156.10011.2.3.2.62",
+        "valueCode" : "default"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/department-id",
+        "value" : "0208"
+      } ],
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/dp-type",
+          "code" : "4"
+        } ]
+      },
+      "name" : "口腔科住院",
+      "telecom" : [ {
+        "system" : "phone",
+        "value" : "0000",
+        "use" : "work"
+      } ],
+      "partOf" : {
+        "reference" : "Organization/571"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Organization/604",
+    "resource" : {
+      "resourceType" : "Organization",
+      "id" : "604",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-16T17:31:59.645+08:00"
+      },
+      "extension" : [ {
+        "url" : "urn:oid:2.16.156.10011.2.3.2.62",
+        "valueCode" : "default"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/department-id",
+        "value" : "0209"
+      } ],
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/dp-type",
+          "code" : "4"
+        } ]
+      },
+      "name" : "眼科住院",
+      "telecom" : [ {
+        "system" : "phone",
+        "value" : "0000",
+        "use" : "work"
+      } ],
+      "partOf" : {
+        "reference" : "Organization/571"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Organization/605",
+    "resource" : {
+      "resourceType" : "Organization",
+      "id" : "605",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-16T17:32:01.389+08:00"
+      },
+      "extension" : [ {
+        "url" : "urn:oid:2.16.156.10011.2.3.2.62",
+        "valueCode" : "default"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/department-id",
+        "value" : "0210"
+      } ],
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/dp-type",
+          "code" : "4"
+        } ]
+      },
+      "name" : "耳鼻喉科住院",
+      "telecom" : [ {
+        "system" : "phone",
+        "value" : "0000",
+        "use" : "work"
+      } ],
+      "partOf" : {
+        "reference" : "Organization/571"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Organization/606",
+    "resource" : {
+      "resourceType" : "Organization",
+      "id" : "606",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-16T17:32:03.120+08:00"
+      },
+      "extension" : [ {
+        "url" : "urn:oid:2.16.156.10011.2.3.2.62",
+        "valueCode" : "default"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/department-id",
+        "value" : "0211"
+      } ],
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/dp-type",
+          "code" : "4"
+        } ]
+      },
+      "name" : "重症监护中心",
+      "telecom" : [ {
+        "system" : "phone",
+        "value" : "0000",
+        "use" : "work"
+      } ],
+      "partOf" : {
+        "reference" : "Organization/571"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Organization/607",
+    "resource" : {
+      "resourceType" : "Organization",
+      "id" : "607",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-16T17:32:05.020+08:00"
+      },
+      "extension" : [ {
+        "url" : "urn:oid:2.16.156.10011.2.3.2.62",
+        "valueCode" : "default"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/department-id",
+        "value" : "0212"
+      } ],
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/dp-type",
+          "code" : "4"
+        } ]
+      },
+      "name" : "感染科住院",
+      "telecom" : [ {
+        "system" : "phone",
+        "value" : "0000",
+        "use" : "work"
+      } ],
+      "partOf" : {
+        "reference" : "Organization/571"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Organization/608",
+    "resource" : {
+      "resourceType" : "Organization",
+      "id" : "608",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-16T17:32:06.871+08:00"
+      },
+      "extension" : [ {
+        "url" : "urn:oid:2.16.156.10011.2.3.2.62",
+        "valueCode" : "default"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/department-id",
+        "value" : "0213"
+      } ],
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/dp-type",
+          "code" : "4"
+        } ]
+      },
+      "name" : "中医科住院",
+      "telecom" : [ {
+        "system" : "phone",
+        "value" : "0000",
+        "use" : "work"
+      } ],
+      "partOf" : {
+        "reference" : "Organization/571"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Organization/609",
+    "resource" : {
+      "resourceType" : "Organization",
+      "id" : "609",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-16T17:32:08.724+08:00"
+      },
+      "extension" : [ {
+        "url" : "urn:oid:2.16.156.10011.2.3.2.62",
+        "valueCode" : "default"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/department-id",
+        "value" : "0214"
+      } ],
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/dp-type",
+          "code" : "4"
+        } ]
+      },
+      "name" : "内镜科（住院）",
+      "telecom" : [ {
+        "system" : "phone",
+        "value" : "0000",
+        "use" : "work"
+      } ],
+      "partOf" : {
+        "reference" : "Organization/571"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Organization/610",
+    "resource" : {
+      "resourceType" : "Organization",
+      "id" : "610",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-16T17:32:10.586+08:00"
+      },
+      "extension" : [ {
+        "url" : "urn:oid:2.16.156.10011.2.3.2.62",
+        "valueCode" : "default"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/department-id",
+        "value" : "0215"
+      } ],
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/dp-type",
+          "code" : "4"
+        } ]
+      },
+      "name" : "综合住院",
+      "telecom" : [ {
+        "system" : "phone",
+        "value" : "0000",
+        "use" : "work"
+      } ],
+      "partOf" : {
+        "reference" : "Organization/571"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Organization/611",
+    "resource" : {
+      "resourceType" : "Organization",
+      "id" : "611",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-16T17:32:12.399+08:00"
+      },
+      "extension" : [ {
+        "url" : "urn:oid:2.16.156.10011.2.3.2.62",
+        "valueCode" : "default"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/department-id",
+        "value" : "0301"
+      } ],
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/dp-type",
+          "code" : "6"
+        } ]
+      },
+      "name" : "内一科病区",
+      "telecom" : [ {
+        "system" : "phone",
+        "value" : "0000",
+        "use" : "work"
+      } ],
+      "partOf" : {
+        "reference" : "Organization/206"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Organization/612",
+    "resource" : {
+      "resourceType" : "Organization",
+      "id" : "612",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-16T17:32:14.597+08:00"
+      },
+      "extension" : [ {
+        "url" : "urn:oid:2.16.156.10011.2.3.2.62",
+        "valueCode" : "default"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/department-id",
+        "value" : "0302"
+      } ],
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/dp-type",
+          "code" : "6"
+        } ]
+      },
+      "name" : "内二科病区",
+      "telecom" : [ {
+        "system" : "phone",
+        "value" : "0000",
+        "use" : "work"
+      } ],
+      "partOf" : {
+        "reference" : "Organization/206"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/Organization/613",
+    "resource" : {
+      "resourceType" : "Organization",
+      "id" : "613",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-06-16T17:32:16.316+08:00"
+      },
+      "extension" : [ {
+        "url" : "urn:oid:2.16.156.10011.2.3.2.62",
+        "valueCode" : "default"
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/department-id",
+        "value" : "0304"
+      } ],
+      "type" : {
+        "coding" : [ {
+          "system" : "http://www.nestvision.com/platform/app/data/v1/code/dp-type",
+          "code" : "6"
+        } ]
+      },
+      "name" : "妇产科病区",
+      "telecom" : [ {
+        "system" : "phone",
+        "value" : "0000",
+        "use" : "work"
+      } ],
+      "partOf" : {
+        "reference" : "Organization/206"
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  } ]
+}

@@ -1,0 +1,4236 @@
+{
+  "resourceType" : "Bundle",
+  "id" : "d36f9793-8a06-4e9a-8a62-8eb88bec95d4",
+  "meta" : {
+    "lastUpdated" : "2017-05-11T17:57:33.616+08:00"
+  },
+  "type" : "searchset",
+  "total" : 66421,
+  "link" : [ {
+    "relation" : "self",
+    "url" : "http://10.10.15.38:8083/resources/MedicationOrder?_count=50"
+  }, {
+    "relation" : "next",
+    "url" : "http://10.10.15.38:8083/resources?_getpages=355a8e08-83fb-48e5-aff7-51f2bad8f210&_getpagesoffset=50&_count=50&_bundletype=searchset"
+  } ],
+  "entry" : [ {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationOrder/718151",
+    "resource" : {
+      "resourceType" : "MedicationOrder",
+      "id" : "718151",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-25T10:51:09.783+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240158"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/order-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/recipe-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/skintest-type",
+        "valueCode" : "3"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/c-med-num",
+        "valueDecimal" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "2g*18袋"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "02"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 27.31
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-number",
+        "valueDecimal" : 2
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 54.62
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-unit",
+        "valueString" : "盒"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/prescription-item-code",
+        "valueReference" : {
+          "reference" : "Medication/691813"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-prescription-id",
+        "value" : "CF1608250218_0"
+      } ],
+      "status" : "on-hold",
+      "encounter" : {
+        "reference" : "Encounter/718146"
+      },
+      "dateWritten" : "2016-08-25",
+      "prescriber" : {
+        "reference" : "Practitioner/239675"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 1,
+            "durationUnit" : "d"
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "1"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 2,
+          "unit" : "袋"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationOrder/718153",
+    "resource" : {
+      "resourceType" : "MedicationOrder",
+      "id" : "718153",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-25T10:52:17.134+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240158"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/order-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/recipe-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/skintest-type",
+        "valueCode" : "3"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/c-med-num",
+        "valueDecimal" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "0.5g*36片"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "03"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 19.4
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-number",
+        "valueDecimal" : 2
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 38.8
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-unit",
+        "valueString" : "盒"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/prescription-item-code",
+        "valueReference" : {
+          "reference" : "Medication/691352"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-prescription-id",
+        "value" : "CF1608250220_0"
+      } ],
+      "status" : "on-hold",
+      "encounter" : {
+        "reference" : "Encounter/718140"
+      },
+      "dateWritten" : "2016-08-25",
+      "prescriber" : {
+        "reference" : "Practitioner/239555"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 1,
+            "durationUnit" : "d"
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "1"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 1,
+          "unit" : "g"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationOrder/718155",
+    "resource" : {
+      "resourceType" : "MedicationOrder",
+      "id" : "718155",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-25T10:52:18.436+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240158"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/order-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/recipe-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/skintest-type",
+        "valueCode" : "3"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/c-med-num",
+        "valueDecimal" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "30丸*8袋"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "03"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 36
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-number",
+        "valueDecimal" : 2
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 72
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-unit",
+        "valueString" : "盒"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/prescription-item-code",
+        "valueReference" : {
+          "reference" : "Medication/692477"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-prescription-id",
+        "value" : "CF1608250220_2"
+      } ],
+      "status" : "on-hold",
+      "encounter" : {
+        "reference" : "Encounter/718140"
+      },
+      "dateWritten" : "2016-08-25",
+      "prescriber" : {
+        "reference" : "Practitioner/239555"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 1,
+            "durationUnit" : "d"
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "1"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 1,
+          "unit" : "袋"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationOrder/718156",
+    "resource" : {
+      "resourceType" : "MedicationOrder",
+      "id" : "718156",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-25T10:52:19.655+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240158"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/order-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/recipe-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/skintest-type",
+        "valueCode" : "3"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/c-med-num",
+        "valueDecimal" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "0.5g*36片"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "03"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 19.4
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-number",
+        "valueDecimal" : 2
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 38.8
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-unit",
+        "valueString" : "盒"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/prescription-item-code",
+        "valueReference" : {
+          "reference" : "Medication/691352"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-prescription-id",
+        "value" : "CF1608250220_0"
+      } ],
+      "status" : "on-hold",
+      "encounter" : {
+        "reference" : "Encounter/718140"
+      },
+      "dateWritten" : "2016-08-25",
+      "prescriber" : {
+        "reference" : "Practitioner/239555"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 1,
+            "durationUnit" : "d"
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "1"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 1,
+          "unit" : "g"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationOrder/718157",
+    "resource" : {
+      "resourceType" : "MedicationOrder",
+      "id" : "718157",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-25T10:52:20.256+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240158"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/order-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/recipe-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/skintest-type",
+        "valueCode" : "3"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/c-med-num",
+        "valueDecimal" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "6g*6袋"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "03"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 26.08
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-number",
+        "valueDecimal" : 2
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 52.16
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-unit",
+        "valueString" : "盒"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/prescription-item-code",
+        "valueReference" : {
+          "reference" : "Medication/692379"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-prescription-id",
+        "value" : "CF1608250220_1"
+      } ],
+      "status" : "on-hold",
+      "encounter" : {
+        "reference" : "Encounter/718140"
+      },
+      "dateWritten" : "2016-08-25",
+      "prescriber" : {
+        "reference" : "Practitioner/239555"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 1,
+            "durationUnit" : "d"
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "1"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 1,
+          "unit" : "袋"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationOrder/718158",
+    "resource" : {
+      "resourceType" : "MedicationOrder",
+      "id" : "718158",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-25T10:52:20.877+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240158"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/order-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/recipe-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/skintest-type",
+        "valueCode" : "3"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/c-med-num",
+        "valueDecimal" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "30丸*8袋"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "03"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 36
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-number",
+        "valueDecimal" : 2
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 72
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-unit",
+        "valueString" : "盒"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/prescription-item-code",
+        "valueReference" : {
+          "reference" : "Medication/692477"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-prescription-id",
+        "value" : "CF1608250220_2"
+      } ],
+      "status" : "on-hold",
+      "encounter" : {
+        "reference" : "Encounter/718140"
+      },
+      "dateWritten" : "2016-08-25",
+      "prescriber" : {
+        "reference" : "Practitioner/239555"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 1,
+            "durationUnit" : "d"
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "1"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 1,
+          "unit" : "袋"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationOrder/718163",
+    "resource" : {
+      "resourceType" : "MedicationOrder",
+      "id" : "718163",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-25T10:52:57.736+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240158"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/order-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/recipe-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/skintest-type",
+        "valueCode" : "3"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/c-med-num",
+        "valueDecimal" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "20g:100mg"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "02"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 27.82
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-number",
+        "valueDecimal" : 1
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 27.82
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-unit",
+        "valueString" : "支"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/prescription-item-code",
+        "valueReference" : {
+          "reference" : "Medication/692054"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-prescription-id",
+        "value" : "CF1608250221_0"
+      } ],
+      "status" : "on-hold",
+      "encounter" : {
+        "reference" : "Encounter/718161"
+      },
+      "dateWritten" : "2016-08-25",
+      "prescriber" : {
+        "reference" : "Practitioner/239682"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 1,
+            "durationUnit" : "d"
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "612"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 20,
+          "unit" : "g"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationOrder/718167",
+    "resource" : {
+      "resourceType" : "MedicationOrder",
+      "id" : "718167",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-25T10:54:00.593+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240158"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/order-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/recipe-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/skintest-type",
+        "valueCode" : "3"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/c-med-num",
+        "valueDecimal" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "0.5g*36片"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "03"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 19.4
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-number",
+        "valueDecimal" : 2
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 38.8
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-unit",
+        "valueString" : "盒"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/prescription-item-code",
+        "valueReference" : {
+          "reference" : "Medication/691352"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-prescription-id",
+        "value" : "CF1608250220_0"
+      } ],
+      "status" : "on-hold",
+      "encounter" : {
+        "reference" : "Encounter/718140"
+      },
+      "dateWritten" : "2016-08-25",
+      "prescriber" : {
+        "reference" : "Practitioner/239555"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 1,
+            "durationUnit" : "d"
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "1"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 1,
+          "unit" : "g"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationOrder/718168",
+    "resource" : {
+      "resourceType" : "MedicationOrder",
+      "id" : "718168",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-25T10:54:01.175+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240158"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/order-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/recipe-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/skintest-type",
+        "valueCode" : "3"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/c-med-num",
+        "valueDecimal" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "6g*6袋"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "03"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 26.08
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-number",
+        "valueDecimal" : 2
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 52.16
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-unit",
+        "valueString" : "盒"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/prescription-item-code",
+        "valueReference" : {
+          "reference" : "Medication/692379"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-prescription-id",
+        "value" : "CF1608250220_1"
+      } ],
+      "status" : "on-hold",
+      "encounter" : {
+        "reference" : "Encounter/718140"
+      },
+      "dateWritten" : "2016-08-25",
+      "prescriber" : {
+        "reference" : "Practitioner/239555"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 1,
+            "durationUnit" : "d"
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "1"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 1,
+          "unit" : "袋"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationOrder/718169",
+    "resource" : {
+      "resourceType" : "MedicationOrder",
+      "id" : "718169",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-25T10:54:01.763+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240158"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/order-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/recipe-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/skintest-type",
+        "valueCode" : "3"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/c-med-num",
+        "valueDecimal" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "30丸*8袋"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "03"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 36
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-number",
+        "valueDecimal" : 2
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 72
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-unit",
+        "valueString" : "盒"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/prescription-item-code",
+        "valueReference" : {
+          "reference" : "Medication/692477"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-prescription-id",
+        "value" : "CF1608250220_2"
+      } ],
+      "status" : "on-hold",
+      "encounter" : {
+        "reference" : "Encounter/718140"
+      },
+      "dateWritten" : "2016-08-25",
+      "prescriber" : {
+        "reference" : "Practitioner/239555"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 1,
+            "durationUnit" : "d"
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "1"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 1,
+          "unit" : "袋"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationOrder/718171",
+    "resource" : {
+      "resourceType" : "MedicationOrder",
+      "id" : "718171",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-25T10:54:03.014+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240158"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/order-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/recipe-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/skintest-type",
+        "valueCode" : "3"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/c-med-num",
+        "valueDecimal" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "1.6g*16袋"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "02"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 22.12
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-number",
+        "valueDecimal" : 1
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 22.12
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-unit",
+        "valueString" : "盒"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/prescription-item-code",
+        "valueReference" : {
+          "reference" : "Medication/691807"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-prescription-id",
+        "value" : "CF1608250220_1"
+      } ],
+      "status" : "on-hold",
+      "encounter" : {
+        "reference" : "Encounter/718140"
+      },
+      "dateWritten" : "2016-08-25",
+      "prescriber" : {
+        "reference" : "Practitioner/239555"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 1,
+            "durationUnit" : "d"
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "1"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 1,
+          "unit" : "袋"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationOrder/718172",
+    "resource" : {
+      "resourceType" : "MedicationOrder",
+      "id" : "718172",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-25T10:54:03.582+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240158"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/order-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/recipe-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/skintest-type",
+        "valueCode" : "3"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/c-med-num",
+        "valueDecimal" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "0.5g*36片"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "03"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 19.4
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-number",
+        "valueDecimal" : 2
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 38.8
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-unit",
+        "valueString" : "盒"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/prescription-item-code",
+        "valueReference" : {
+          "reference" : "Medication/691352"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-prescription-id",
+        "value" : "CF1608250220_0"
+      } ],
+      "status" : "on-hold",
+      "encounter" : {
+        "reference" : "Encounter/718140"
+      },
+      "dateWritten" : "2016-08-25",
+      "prescriber" : {
+        "reference" : "Practitioner/239555"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 1,
+            "durationUnit" : "d"
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "1"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 1,
+          "unit" : "g"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationOrder/718173",
+    "resource" : {
+      "resourceType" : "MedicationOrder",
+      "id" : "718173",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-25T10:54:04.154+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240158"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/order-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/recipe-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/skintest-type",
+        "valueCode" : "3"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/c-med-num",
+        "valueDecimal" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "6g*6袋"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "03"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 26.08
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-number",
+        "valueDecimal" : 2
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 52.16
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-unit",
+        "valueString" : "盒"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/prescription-item-code",
+        "valueReference" : {
+          "reference" : "Medication/692379"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-prescription-id",
+        "value" : "CF1608250220_1"
+      } ],
+      "status" : "on-hold",
+      "encounter" : {
+        "reference" : "Encounter/718140"
+      },
+      "dateWritten" : "2016-08-25",
+      "prescriber" : {
+        "reference" : "Practitioner/239555"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 1,
+            "durationUnit" : "d"
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "1"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 1,
+          "unit" : "袋"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationOrder/718174",
+    "resource" : {
+      "resourceType" : "MedicationOrder",
+      "id" : "718174",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-25T10:54:04.755+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240158"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/order-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/recipe-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/skintest-type",
+        "valueCode" : "3"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/c-med-num",
+        "valueDecimal" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "30丸*8袋"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "03"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 36
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-number",
+        "valueDecimal" : 2
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 72
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-unit",
+        "valueString" : "盒"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/prescription-item-code",
+        "valueReference" : {
+          "reference" : "Medication/692477"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-prescription-id",
+        "value" : "CF1608250220_2"
+      } ],
+      "status" : "on-hold",
+      "encounter" : {
+        "reference" : "Encounter/718140"
+      },
+      "dateWritten" : "2016-08-25",
+      "prescriber" : {
+        "reference" : "Practitioner/239555"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 1,
+            "durationUnit" : "d"
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "1"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 1,
+          "unit" : "袋"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationOrder/718175",
+    "resource" : {
+      "resourceType" : "MedicationOrder",
+      "id" : "718175",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-25T10:54:05.360+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240158"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/order-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/recipe-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/skintest-type",
+        "valueCode" : "3"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/c-med-num",
+        "valueDecimal" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "4g*10袋"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "02"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 2.8
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-number",
+        "valueDecimal" : 1
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 2.8
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-unit",
+        "valueString" : "盒"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/prescription-item-code",
+        "valueReference" : {
+          "reference" : "Medication/691890"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-prescription-id",
+        "value" : "CF1608250220_0"
+      } ],
+      "status" : "on-hold",
+      "encounter" : {
+        "reference" : "Encounter/718140"
+      },
+      "dateWritten" : "2016-08-25",
+      "prescriber" : {
+        "reference" : "Practitioner/239555"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 1,
+            "durationUnit" : "d"
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "1"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 1,
+          "unit" : "袋"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationOrder/718176",
+    "resource" : {
+      "resourceType" : "MedicationOrder",
+      "id" : "718176",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-25T10:54:06.020+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240158"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/order-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/recipe-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/skintest-type",
+        "valueCode" : "3"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/c-med-num",
+        "valueDecimal" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "1.6g*16袋"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "02"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 22.12
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-number",
+        "valueDecimal" : 1
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 22.12
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-unit",
+        "valueString" : "盒"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/prescription-item-code",
+        "valueReference" : {
+          "reference" : "Medication/691807"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-prescription-id",
+        "value" : "CF1608250220_1"
+      } ],
+      "status" : "on-hold",
+      "encounter" : {
+        "reference" : "Encounter/718140"
+      },
+      "dateWritten" : "2016-08-25",
+      "prescriber" : {
+        "reference" : "Practitioner/239555"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 1,
+            "durationUnit" : "d"
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "1"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 1,
+          "unit" : "袋"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationOrder/718154",
+    "resource" : {
+      "resourceType" : "MedicationOrder",
+      "id" : "718154",
+      "meta" : {
+        "versionId" : "2",
+        "lastUpdated" : "2017-03-14T12:48:24.559+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240115"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/order-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/recipe-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/skintest-type",
+        "valueCode" : "3"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/c-med-num",
+        "valueDecimal" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "0.5g*36片"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "03"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 19.4
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-number",
+        "valueDecimal" : 2
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 38.8
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-unit",
+        "valueString" : "盒"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/prescription-item-code",
+        "valueReference" : {
+          "reference" : "Medication/691595"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-prescription-id",
+        "value" : "CF1608250220_1"
+      } ],
+      "status" : "on-hold",
+      "patient" : {
+        "reference" : "Patient/1897799",
+        "_reference" : {
+          "fhir_comments" : [ " 院内患者ID " ]
+        },
+        "display" : "张二娃",
+        "_display" : {
+          "fhir_comments" : [ " 患者姓名 " ]
+        }
+      },
+      "encounter" : {
+        "reference" : "Encounter/718140"
+      },
+      "dateWritten" : "2016-08-25",
+      "prescriber" : {
+        "reference" : "Practitioner/239475"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 1,
+            "durationUnit" : "d"
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "1"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 1,
+          "unit" : "g"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationOrder/718180",
+    "resource" : {
+      "resourceType" : "MedicationOrder",
+      "id" : "718180",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-25T10:54:31.414+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240158"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/order-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/recipe-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/skintest-type",
+        "valueCode" : "3"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/c-med-num",
+        "valueDecimal" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "10ml:0.15g*12支"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "03"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 51.61
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-number",
+        "valueDecimal" : 2
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 103.22
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-unit",
+        "valueString" : "盒"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/prescription-item-code",
+        "valueReference" : {
+          "reference" : "Medication/691569"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-prescription-id",
+        "value" : "CF1608250216_0"
+      } ],
+      "status" : "on-hold",
+      "encounter" : {
+        "reference" : "Encounter/718143"
+      },
+      "dateWritten" : "2016-08-25",
+      "prescriber" : {
+        "reference" : "Practitioner/239666"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 7,
+            "durationUnit" : "d"
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "1"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 10,
+          "unit" : "ml"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationOrder/718405",
+    "resource" : {
+      "resourceType" : "MedicationOrder",
+      "id" : "718405",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-25T12:45:12.113+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240158"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/order-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/recipe-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/skintest-type",
+        "valueCode" : "3"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/c-med-num",
+        "valueDecimal" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "1ml:0.05g"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 0.15
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-number",
+        "valueDecimal" : 2
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 0.3
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-unit",
+        "valueString" : "支"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/prescription-item-code",
+        "valueReference" : {
+          "reference" : "Medication/691994"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-prescription-id",
+        "value" : "CF1608250253_0"
+      } ],
+      "status" : "on-hold",
+      "patient" : {
+        "reference" : "Patient/563246"
+      },
+      "encounter" : {
+        "reference" : "Encounter/718403"
+      },
+      "dateWritten" : "2016-08-25",
+      "prescriber" : {
+        "reference" : "Practitioner/239673"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 1,
+            "durationUnit" : "d"
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "403"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 0.1,
+          "unit" : "g"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationOrder/718407",
+    "resource" : {
+      "resourceType" : "MedicationOrder",
+      "id" : "718407",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-25T12:47:09.868+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240158"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/order-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/recipe-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/skintest-type",
+        "valueCode" : "3"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/c-med-num",
+        "valueDecimal" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "500mg*15袋"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "03"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 33.98
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-number",
+        "valueDecimal" : 1
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 33.98
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-unit",
+        "valueString" : "盒"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/prescription-item-code",
+        "valueReference" : {
+          "reference" : "Medication/691559"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-prescription-id",
+        "value" : "CF1608250253_2"
+      } ],
+      "status" : "on-hold",
+      "patient" : {
+        "reference" : "Patient/563246"
+      },
+      "encounter" : {
+        "reference" : "Encounter/718403"
+      },
+      "dateWritten" : "2016-08-25",
+      "prescriber" : {
+        "reference" : "Practitioner/239673"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 1,
+            "durationUnit" : "d"
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "1"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 1,
+          "unit" : "袋"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationOrder/718409",
+    "resource" : {
+      "resourceType" : "MedicationOrder",
+      "id" : "718409",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-25T12:49:09.657+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240158"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/order-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/recipe-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/skintest-type",
+        "valueCode" : "3"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/c-med-num",
+        "valueDecimal" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "100ml:1mg"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "03"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 12.63
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-number",
+        "valueDecimal" : 1
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 12.63
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-unit",
+        "valueString" : "瓶"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/prescription-item-code",
+        "valueReference" : {
+          "reference" : "Medication/692427"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-prescription-id",
+        "value" : "CF1608250253_1"
+      } ],
+      "status" : "on-hold",
+      "patient" : {
+        "reference" : "Patient/563246"
+      },
+      "encounter" : {
+        "reference" : "Encounter/718403"
+      },
+      "dateWritten" : "2016-08-25",
+      "prescriber" : {
+        "reference" : "Practitioner/239673"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 1,
+            "durationUnit" : "d"
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "1"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 3,
+          "unit" : "ml"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationOrder/718091",
+    "resource" : {
+      "resourceType" : "MedicationOrder",
+      "id" : "718091",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-25T10:41:24.839+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240158"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/order-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/recipe-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/skintest-type",
+        "valueCode" : "3"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/c-med-num",
+        "valueDecimal" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "0.25*12片"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "03"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 30.17
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-number",
+        "valueDecimal" : 1
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 30.17
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-unit",
+        "valueString" : "盒"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/prescription-item-code",
+        "valueReference" : {
+          "reference" : "Medication/692087"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-prescription-id",
+        "value" : "CF1608250201_0"
+      } ],
+      "status" : "on-hold",
+      "encounter" : {
+        "reference" : "Encounter/718084"
+      },
+      "dateWritten" : "2016-08-25",
+      "prescriber" : {
+        "reference" : "Practitioner/239688"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 3,
+            "durationUnit" : "d"
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "1"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 0.25,
+          "unit" : "g"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationOrder/718092",
+    "resource" : {
+      "resourceType" : "MedicationOrder",
+      "id" : "718092",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-25T10:41:25.816+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240158"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/order-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/recipe-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/skintest-type",
+        "valueCode" : "3"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/c-med-num",
+        "valueDecimal" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "0.3g*20粒"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "36"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 13.27
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-number",
+        "valueDecimal" : 1
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 13.27
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-unit",
+        "valueString" : "盒"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/prescription-item-code",
+        "valueReference" : {
+          "reference" : "Medication/691456"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-prescription-id",
+        "value" : "CF1608250201_0"
+      } ],
+      "status" : "on-hold",
+      "encounter" : {
+        "reference" : "Encounter/718084"
+      },
+      "dateWritten" : "2016-08-25",
+      "prescriber" : {
+        "reference" : "Practitioner/239688"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 3,
+            "durationUnit" : "d"
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "1"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 0.3,
+          "unit" : "g"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationOrder/718097",
+    "resource" : {
+      "resourceType" : "MedicationOrder",
+      "id" : "718097",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-25T10:42:42.624+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240158"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/order-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/recipe-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/skintest-type",
+        "valueCode" : "3"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/c-med-num",
+        "valueDecimal" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "120ml:0.12g"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 22.66
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-number",
+        "valueDecimal" : 1
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 22.66
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-unit",
+        "valueString" : "瓶"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/prescription-item-code",
+        "valueReference" : {
+          "reference" : "Medication/691622"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-prescription-id",
+        "value" : "CF1608250203_0"
+      } ],
+      "status" : "on-hold",
+      "encounter" : {
+        "reference" : "Encounter/718095"
+      },
+      "dateWritten" : "2016-08-25",
+      "prescriber" : {
+        "reference" : "Practitioner/239675"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 5,
+            "durationUnit" : "d"
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "1"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 2,
+          "unit" : "ml"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationOrder/718100",
+    "resource" : {
+      "resourceType" : "MedicationOrder",
+      "id" : "718100",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-25T10:42:59.439+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240158"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/order-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/recipe-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/skintest-type",
+        "valueCode" : "3"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/c-med-num",
+        "valueDecimal" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "36粒"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "04"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 38.88
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-number",
+        "valueDecimal" : 2
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 77.76
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-unit",
+        "valueString" : "盒"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/prescription-item-code",
+        "valueReference" : {
+          "reference" : "Medication/692105"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-prescription-id",
+        "value" : "CF1608250204_0"
+      } ],
+      "status" : "on-hold",
+      "encounter" : {
+        "reference" : "Encounter/715904"
+      },
+      "dateWritten" : "2016-08-25",
+      "prescriber" : {
+        "reference" : "Practitioner/239693"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 1,
+            "durationUnit" : "d"
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "1"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 2,
+          "unit" : "粒"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationOrder/718101",
+    "resource" : {
+      "resourceType" : "MedicationOrder",
+      "id" : "718101",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-25T10:43:23.095+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240158"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/order-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/recipe-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/skintest-type",
+        "valueCode" : "3"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/c-med-num",
+        "valueDecimal" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "0.1g*10片"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "02"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 19.3
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-number",
+        "valueDecimal" : 2
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 38.6
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-unit",
+        "valueString" : "盒"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/prescription-item-code",
+        "valueReference" : {
+          "reference" : "Medication/692937"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-prescription-id",
+        "value" : "CF1608250205_0"
+      } ],
+      "status" : "on-hold",
+      "encounter" : {
+        "reference" : "Encounter/717846"
+      },
+      "dateWritten" : "2016-08-25",
+      "prescriber" : {
+        "reference" : "Practitioner/239666"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 5,
+            "durationUnit" : "d"
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "1"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 0.1,
+          "unit" : "g"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationOrder/718102",
+    "resource" : {
+      "resourceType" : "MedicationOrder",
+      "id" : "718102",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-25T10:43:23.776+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240158"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/order-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/recipe-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/skintest-type",
+        "valueCode" : "3"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/c-med-num",
+        "valueDecimal" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "0.35g*48粒"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "03"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 34.67
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-number",
+        "valueDecimal" : 3
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 104.01
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-unit",
+        "valueString" : "盒"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/prescription-item-code",
+        "valueReference" : {
+          "reference" : "Medication/691834"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-prescription-id",
+        "value" : "CF1608250205_1"
+      } ],
+      "status" : "on-hold",
+      "encounter" : {
+        "reference" : "Encounter/717846"
+      },
+      "dateWritten" : "2016-08-25",
+      "prescriber" : {
+        "reference" : "Practitioner/239666"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 10,
+            "durationUnit" : "d"
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "1"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 4,
+          "unit" : "粒"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationOrder/718103",
+    "resource" : {
+      "resourceType" : "MedicationOrder",
+      "id" : "718103",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-25T10:43:48.666+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240158"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/order-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/recipe-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/skintest-type",
+        "valueCode" : "3"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/c-med-num",
+        "valueDecimal" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "0.25*12片"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "03"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 30.17
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-number",
+        "valueDecimal" : 1
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 30.17
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-unit",
+        "valueString" : "盒"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/prescription-item-code",
+        "valueReference" : {
+          "reference" : "Medication/692087"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-prescription-id",
+        "value" : "CF1608250206_0"
+      } ],
+      "status" : "on-hold",
+      "encounter" : {
+        "reference" : "Encounter/718098"
+      },
+      "dateWritten" : "2016-08-25",
+      "prescriber" : {
+        "reference" : "Practitioner/239694"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 1,
+            "durationUnit" : "d"
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "1"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 0.25,
+          "unit" : "g"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationOrder/718104",
+    "resource" : {
+      "resourceType" : "MedicationOrder",
+      "id" : "718104",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-25T10:43:49.422+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240158"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/order-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/recipe-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/skintest-type",
+        "valueCode" : "3"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/c-med-num",
+        "valueDecimal" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "4g*6袋"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "02"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 34.61
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-number",
+        "valueDecimal" : 2
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 69.22
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-unit",
+        "valueString" : "盒"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/prescription-item-code",
+        "valueReference" : {
+          "reference" : "Medication/692055"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-prescription-id",
+        "value" : "CF1608250206_0"
+      } ],
+      "status" : "on-hold",
+      "encounter" : {
+        "reference" : "Encounter/718098"
+      },
+      "dateWritten" : "2016-08-25",
+      "prescriber" : {
+        "reference" : "Practitioner/239694"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 4,
+            "durationUnit" : "d"
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "1"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 1,
+          "unit" : "袋"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationOrder/718105",
+    "resource" : {
+      "resourceType" : "MedicationOrder",
+      "id" : "718105",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-25T10:43:50.087+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240158"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/order-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/recipe-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/skintest-type",
+        "valueCode" : "3"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/c-med-num",
+        "valueDecimal" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "5ml:15mg"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "02"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 2
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-number",
+        "valueDecimal" : 1
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 2
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-unit",
+        "valueString" : "支"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/prescription-item-code",
+        "valueReference" : {
+          "reference" : "Medication/691691"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-prescription-id",
+        "value" : "CF1608250206_0"
+      } ],
+      "status" : "on-hold",
+      "encounter" : {
+        "reference" : "Encounter/718098"
+      },
+      "dateWritten" : "2016-08-25",
+      "prescriber" : {
+        "reference" : "Practitioner/239694"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 4,
+            "durationUnit" : "d"
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "9"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 6,
+          "unit" : "滴"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationOrder/718106",
+    "resource" : {
+      "resourceType" : "MedicationOrder",
+      "id" : "718106",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-25T10:43:50.795+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240158"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/order-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/recipe-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/skintest-type",
+        "valueCode" : "3"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/c-med-num",
+        "valueDecimal" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "1ml:5mg"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "36"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 0.57
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-number",
+        "valueDecimal" : 1
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 0.57
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-unit",
+        "valueString" : "支"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/prescription-item-code",
+        "valueReference" : {
+          "reference" : "Medication/691595"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-prescription-id",
+        "value" : "CF1608250206_0"
+      } ],
+      "status" : "on-hold",
+      "encounter" : {
+        "reference" : "Encounter/718098"
+      },
+      "dateWritten" : "2016-08-25",
+      "prescriber" : {
+        "reference" : "Practitioner/239694"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 4,
+            "durationUnit" : "d"
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "4"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 5,
+          "unit" : "mg"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationOrder/718107",
+    "resource" : {
+      "resourceType" : "MedicationOrder",
+      "id" : "718107",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-25T10:43:51.428+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240158"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/order-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/recipe-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/skintest-type",
+        "valueCode" : "3"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/c-med-num",
+        "valueDecimal" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "24片"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "52"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 4.87
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-number",
+        "valueDecimal" : 1
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 4.87
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-unit",
+        "valueString" : "袋"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/prescription-item-code",
+        "valueReference" : {
+          "reference" : "Medication/691712"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-prescription-id",
+        "value" : "CF1608250206_0"
+      } ],
+      "status" : "on-hold",
+      "encounter" : {
+        "reference" : "Encounter/718098"
+      },
+      "dateWritten" : "2016-08-25",
+      "prescriber" : {
+        "reference" : "Practitioner/239694"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 4,
+            "durationUnit" : "d"
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "9"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 1,
+          "unit" : "片"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationOrder/718113",
+    "resource" : {
+      "resourceType" : "MedicationOrder",
+      "id" : "718113",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-25T10:46:13.786+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240158"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/order-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/recipe-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/skintest-type",
+        "valueCode" : "3"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/c-med-num",
+        "valueDecimal" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "0.3%*8ml"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "02"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 22.88
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-number",
+        "valueDecimal" : 1
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 22.88
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-unit",
+        "valueString" : "支"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/prescription-item-code",
+        "valueReference" : {
+          "reference" : "Medication/693017"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-prescription-id",
+        "value" : "CF1608250209_0"
+      } ],
+      "status" : "on-hold",
+      "encounter" : {
+        "reference" : "Encounter/718108"
+      },
+      "dateWritten" : "2016-08-25",
+      "prescriber" : {
+        "reference" : "Practitioner/239686"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 1,
+            "durationUnit" : "d"
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "609"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 1,
+          "unit" : "滴"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationOrder/718114",
+    "resource" : {
+      "resourceType" : "MedicationOrder",
+      "id" : "718114",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-25T10:46:14.499+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240158"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/order-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/recipe-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/skintest-type",
+        "valueCode" : "3"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/c-med-num",
+        "valueDecimal" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "8ml:0.16g"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "02"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 11
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-number",
+        "valueDecimal" : 1
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 11
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-unit",
+        "valueString" : "支"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/prescription-item-code",
+        "valueReference" : {
+          "reference" : "Medication/692838"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-prescription-id",
+        "value" : "CF1608250209_1"
+      } ],
+      "status" : "on-hold",
+      "encounter" : {
+        "reference" : "Encounter/718108"
+      },
+      "dateWritten" : "2016-08-25",
+      "prescriber" : {
+        "reference" : "Practitioner/239686"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 1,
+            "durationUnit" : "d"
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "609"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 1,
+          "unit" : "ml"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationOrder/718115",
+    "resource" : {
+      "resourceType" : "MedicationOrder",
+      "id" : "718115",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-25T10:46:15.104+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240158"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/order-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/recipe-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/skintest-type",
+        "valueCode" : "3"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/c-med-num",
+        "valueDecimal" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "0.1g*10片"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "02"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 19.3
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-number",
+        "valueDecimal" : 1
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 19.3
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-unit",
+        "valueString" : "盒"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/prescription-item-code",
+        "valueReference" : {
+          "reference" : "Medication/692937"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-prescription-id",
+        "value" : "CF1608250209_0"
+      } ],
+      "status" : "on-hold",
+      "encounter" : {
+        "reference" : "Encounter/718108"
+      },
+      "dateWritten" : "2016-08-25",
+      "prescriber" : {
+        "reference" : "Practitioner/239686"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 1,
+            "durationUnit" : "d"
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "1"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 0.1,
+          "unit" : "g"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationOrder/718118",
+    "resource" : {
+      "resourceType" : "MedicationOrder",
+      "id" : "718118",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-25T10:46:57.891+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240158"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/order-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/recipe-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/skintest-type",
+        "valueCode" : "3"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/c-med-num",
+        "valueDecimal" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "0.3%*8ml"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "02"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 22.88
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-number",
+        "valueDecimal" : 1
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 22.88
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-unit",
+        "valueString" : "支"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/prescription-item-code",
+        "valueReference" : {
+          "reference" : "Medication/693017"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-prescription-id",
+        "value" : "CF1608250209_0"
+      } ],
+      "status" : "on-hold",
+      "encounter" : {
+        "reference" : "Encounter/718108"
+      },
+      "dateWritten" : "2016-08-25",
+      "prescriber" : {
+        "reference" : "Practitioner/239686"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 1,
+            "durationUnit" : "d"
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "609"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 1,
+          "unit" : "滴"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationOrder/718119",
+    "resource" : {
+      "resourceType" : "MedicationOrder",
+      "id" : "718119",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-25T10:46:58.466+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240158"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/order-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/recipe-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/skintest-type",
+        "valueCode" : "3"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/c-med-num",
+        "valueDecimal" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "8ml:0.16g"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "02"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 11
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-number",
+        "valueDecimal" : 1
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 11
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-unit",
+        "valueString" : "支"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/prescription-item-code",
+        "valueReference" : {
+          "reference" : "Medication/692838"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-prescription-id",
+        "value" : "CF1608250209_1"
+      } ],
+      "status" : "on-hold",
+      "encounter" : {
+        "reference" : "Encounter/718108"
+      },
+      "dateWritten" : "2016-08-25",
+      "prescriber" : {
+        "reference" : "Practitioner/239686"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 1,
+            "durationUnit" : "d"
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "609"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 1,
+          "unit" : "ml"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationOrder/718120",
+    "resource" : {
+      "resourceType" : "MedicationOrder",
+      "id" : "718120",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-25T10:46:59.062+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240158"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/order-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/recipe-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/skintest-type",
+        "valueCode" : "3"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/c-med-num",
+        "valueDecimal" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "0.25g*10s*2板"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "02"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 29.66
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-number",
+        "valueDecimal" : 1
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 29.66
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-unit",
+        "valueString" : "盒"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/prescription-item-code",
+        "valueReference" : {
+          "reference" : "Medication/692866"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-prescription-id",
+        "value" : "CF1608250209_0"
+      } ],
+      "status" : "on-hold",
+      "encounter" : {
+        "reference" : "Encounter/718108"
+      },
+      "dateWritten" : "2016-08-25",
+      "prescriber" : {
+        "reference" : "Practitioner/239686"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 1,
+            "durationUnit" : "d"
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "1"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 0.5,
+          "unit" : "g"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationOrder/718123",
+    "resource" : {
+      "resourceType" : "MedicationOrder",
+      "id" : "718123",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-25T10:47:00.852+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240158"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/order-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/recipe-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/skintest-type",
+        "valueCode" : "3"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/c-med-num",
+        "valueDecimal" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "0.3%*8ml"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "02"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 22.88
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-number",
+        "valueDecimal" : 1
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 22.88
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-unit",
+        "valueString" : "支"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/prescription-item-code",
+        "valueReference" : {
+          "reference" : "Medication/693017"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-prescription-id",
+        "value" : "CF1608250209_0"
+      } ],
+      "status" : "on-hold",
+      "encounter" : {
+        "reference" : "Encounter/718108"
+      },
+      "dateWritten" : "2016-08-25",
+      "prescriber" : {
+        "reference" : "Practitioner/239686"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 1,
+            "durationUnit" : "d"
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "609"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 1,
+          "unit" : "滴"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationOrder/718124",
+    "resource" : {
+      "resourceType" : "MedicationOrder",
+      "id" : "718124",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-25T10:47:01.414+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240158"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/order-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/recipe-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/skintest-type",
+        "valueCode" : "3"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/c-med-num",
+        "valueDecimal" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "8ml:0.16g"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "02"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 11
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-number",
+        "valueDecimal" : 1
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 11
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-unit",
+        "valueString" : "支"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/prescription-item-code",
+        "valueReference" : {
+          "reference" : "Medication/692838"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-prescription-id",
+        "value" : "CF1608250209_1"
+      } ],
+      "status" : "on-hold",
+      "encounter" : {
+        "reference" : "Encounter/718108"
+      },
+      "dateWritten" : "2016-08-25",
+      "prescriber" : {
+        "reference" : "Practitioner/239686"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 1,
+            "durationUnit" : "d"
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "609"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 1,
+          "unit" : "ml"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationOrder/718125",
+    "resource" : {
+      "resourceType" : "MedicationOrder",
+      "id" : "718125",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-25T10:47:02.002+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240158"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/order-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/recipe-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/skintest-type",
+        "valueCode" : "3"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/c-med-num",
+        "valueDecimal" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "0.25g*10s*2板"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "02"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 29.66
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-number",
+        "valueDecimal" : 1
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 29.66
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-unit",
+        "valueString" : "盒"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/prescription-item-code",
+        "valueReference" : {
+          "reference" : "Medication/692866"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-prescription-id",
+        "value" : "CF1608250209_0"
+      } ],
+      "status" : "on-hold",
+      "encounter" : {
+        "reference" : "Encounter/718108"
+      },
+      "dateWritten" : "2016-08-25",
+      "prescriber" : {
+        "reference" : "Practitioner/239686"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 1,
+            "durationUnit" : "d"
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "1"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 0.5,
+          "unit" : "g"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationOrder/718127",
+    "resource" : {
+      "resourceType" : "MedicationOrder",
+      "id" : "718127",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-25T10:47:03.204+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240158"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/order-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/recipe-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/skintest-type",
+        "valueCode" : "3"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/c-med-num",
+        "valueDecimal" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "20g:100mg"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "02"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 27.82
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-number",
+        "valueDecimal" : 2
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 55.64
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-unit",
+        "valueString" : "支"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/prescription-item-code",
+        "valueReference" : {
+          "reference" : "Medication/692054"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-prescription-id",
+        "value" : "CF1608250210_0"
+      } ],
+      "status" : "on-hold",
+      "encounter" : {
+        "reference" : "Encounter/718121"
+      },
+      "dateWritten" : "2016-08-25",
+      "prescriber" : {
+        "reference" : "Practitioner/239682"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 1,
+            "durationUnit" : "d"
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "612"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 20,
+          "unit" : "g"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationOrder/718130",
+    "resource" : {
+      "resourceType" : "MedicationOrder",
+      "id" : "718130",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-25T10:47:48.790+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240158"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/order-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/recipe-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/skintest-type",
+        "valueCode" : "3"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/c-med-num",
+        "valueDecimal" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "30mg*60片"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "03"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 65.04
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-number",
+        "valueDecimal" : 1
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 65.04
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-unit",
+        "valueString" : "盒"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/prescription-item-code",
+        "valueReference" : {
+          "reference" : "Medication/691606"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-prescription-id",
+        "value" : "CF1608250212_0"
+      } ],
+      "status" : "on-hold",
+      "encounter" : {
+        "reference" : "Encounter/715996"
+      },
+      "dateWritten" : "2016-08-25",
+      "prescriber" : {
+        "reference" : "Practitioner/239545"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 1,
+            "durationUnit" : "d"
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "1"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 15,
+          "unit" : "mg"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationOrder/718131",
+    "resource" : {
+      "resourceType" : "MedicationOrder",
+      "id" : "718131",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-25T10:47:49.472+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240158"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/order-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/recipe-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/skintest-type",
+        "valueCode" : "3"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/c-med-num",
+        "valueDecimal" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "0.25g*20粒"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "03"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 34.2
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-number",
+        "valueDecimal" : 2
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 68.4
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-unit",
+        "valueString" : "盒"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/prescription-item-code",
+        "valueReference" : {
+          "reference" : "Medication/692045"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-prescription-id",
+        "value" : "CF1608250212_1"
+      } ],
+      "status" : "on-hold",
+      "encounter" : {
+        "reference" : "Encounter/715996"
+      },
+      "dateWritten" : "2016-08-25",
+      "prescriber" : {
+        "reference" : "Practitioner/239545"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 1,
+            "durationUnit" : "d"
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "1"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 2,
+          "unit" : "粒"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationOrder/718132",
+    "resource" : {
+      "resourceType" : "MedicationOrder",
+      "id" : "718132",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-25T10:47:50.159+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240158"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/order-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/recipe-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/skintest-type",
+        "valueCode" : "3"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/c-med-num",
+        "valueDecimal" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "360粒"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "03"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 13.88
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-number",
+        "valueDecimal" : 2
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 27.76
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-unit",
+        "valueString" : "瓶"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/prescription-item-code",
+        "valueReference" : {
+          "reference" : "Medication/691908"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-prescription-id",
+        "value" : "CF1608250212_2"
+      } ],
+      "status" : "on-hold",
+      "encounter" : {
+        "reference" : "Encounter/715996"
+      },
+      "dateWritten" : "2016-08-25",
+      "prescriber" : {
+        "reference" : "Practitioner/239545"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 1,
+            "durationUnit" : "d"
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "1"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 30,
+          "unit" : "粒"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationOrder/718137",
+    "resource" : {
+      "resourceType" : "MedicationOrder",
+      "id" : "718137",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-25T10:48:04.949+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240158"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/order-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/recipe-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/skintest-type",
+        "valueCode" : "3"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/c-med-num",
+        "valueDecimal" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "250mg*10袋"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 20
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-number",
+        "valueDecimal" : 3
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 60
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-unit",
+        "valueString" : "盒"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/prescription-item-code",
+        "valueReference" : {
+          "reference" : "Medication/691652"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-prescription-id",
+        "value" : "CF1608250213_0"
+      } ],
+      "status" : "on-hold",
+      "encounter" : {
+        "reference" : "Encounter/718133"
+      },
+      "dateWritten" : "2016-08-25",
+      "prescriber" : {
+        "reference" : "Practitioner/239675"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 1,
+            "durationUnit" : "d"
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "1"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 250,
+          "unit" : "mg"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationOrder/718142",
+    "resource" : {
+      "resourceType" : "MedicationOrder",
+      "id" : "718142",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-25T10:49:46.853+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240158"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/order-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/recipe-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/skintest-type",
+        "valueCode" : "3"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/c-med-num",
+        "valueDecimal" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "6g*10袋"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "03"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 23.57
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-number",
+        "valueDecimal" : 2
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 47.14
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-unit",
+        "valueString" : "盒"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/prescription-item-code",
+        "valueReference" : {
+          "reference" : "Medication/693020"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-prescription-id",
+        "value" : "CF1608250215_0"
+      } ],
+      "status" : "on-hold",
+      "encounter" : {
+        "reference" : "Encounter/718039"
+      },
+      "dateWritten" : "2016-08-25",
+      "prescriber" : {
+        "reference" : "Practitioner/239638"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 1,
+            "durationUnit" : "d"
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "9"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 1,
+          "unit" : "袋"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationOrder/718145",
+    "resource" : {
+      "resourceType" : "MedicationOrder",
+      "id" : "718145",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-25T10:50:46.906+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240158"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/order-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/recipe-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/skintest-type",
+        "valueCode" : "3"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/c-med-num",
+        "valueDecimal" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "10ml:0.15g*12支"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "03"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 51.61
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-number",
+        "valueDecimal" : 2
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 103.22
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-unit",
+        "valueString" : "盒"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/prescription-item-code",
+        "valueReference" : {
+          "reference" : "Medication/691569"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-prescription-id",
+        "value" : "CF1608250216_0"
+      } ],
+      "status" : "on-hold",
+      "encounter" : {
+        "reference" : "Encounter/718143"
+      },
+      "dateWritten" : "2016-08-25",
+      "prescriber" : {
+        "reference" : "Practitioner/239666"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 7,
+            "durationUnit" : "d"
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "1"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 10,
+          "unit" : "ml"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationOrder/718363",
+    "resource" : {
+      "resourceType" : "MedicationOrder",
+      "id" : "718363",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-25T11:38:13.451+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240158"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/order-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/recipe-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/skintest-type",
+        "valueCode" : "3"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/c-med-num",
+        "valueDecimal" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "100ml"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "02"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 42.4
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-number",
+        "valueDecimal" : 2
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 84.8
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-unit",
+        "valueString" : "瓶"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/prescription-item-code",
+        "valueReference" : {
+          "reference" : "Medication/691558"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-prescription-id",
+        "value" : "CF1608250244_0"
+      } ],
+      "status" : "on-hold",
+      "encounter" : {
+        "reference" : "Encounter/718361"
+      },
+      "dateWritten" : "2016-08-25",
+      "prescriber" : {
+        "reference" : "Practitioner/239613"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 1,
+            "durationUnit" : "d"
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "605"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 100,
+          "unit" : "ml"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }, {
+    "fullUrl" : "http://10.10.15.38:8083/resources/MedicationOrder/718364",
+    "resource" : {
+      "resourceType" : "MedicationOrder",
+      "id" : "718364",
+      "meta" : {
+        "versionId" : "1",
+        "lastUpdated" : "2016-08-25T11:38:14.244+08:00"
+      },
+      "extension" : [ {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/order-dpid",
+        "valueReference" : {
+          "reference" : "Organization/240158"
+        }
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/order-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/recipe-type-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/skintest-type",
+        "valueCode" : "3"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/c-med-num",
+        "valueDecimal" : 0
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-spec",
+        "valueString" : "2.7g*6粒"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/code/freq-code",
+        "valueCode" : "01"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-price",
+        "valueDecimal" : 25
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-number",
+        "valueDecimal" : 1
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/number/item-amount",
+        "valueDecimal" : 25
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/text/item-unit",
+        "valueString" : "盒"
+      }, {
+        "url" : "http://www.nestvision.com/platform/app/data/v1/identifier/prescription-item-code",
+        "valueReference" : {
+          "reference" : "Medication/692029"
+        }
+      } ],
+      "identifier" : [ {
+        "system" : "http://www.nestvision.com/entity/hospital/130058273/his/sinosoft/v1/identifier/outpatient-prescription-id",
+        "value" : "CF1608250244_1"
+      } ],
+      "status" : "on-hold",
+      "encounter" : {
+        "reference" : "Encounter/718361"
+      },
+      "dateWritten" : "2016-08-25",
+      "prescriber" : {
+        "reference" : "Practitioner/239613"
+      },
+      "dosageInstruction" : [ {
+        "timing" : {
+          "repeat" : {
+            "duration" : 1,
+            "durationUnit" : "d"
+          }
+        },
+        "route" : {
+          "coding" : [ {
+            "system" : "http://www.nestvision.com/platform/app/data/v1/code/dosage-code",
+            "code" : "605"
+          } ]
+        },
+        "doseQuantity" : {
+          "value" : 1,
+          "unit" : "粒"
+        }
+      } ]
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  } ]
+}
