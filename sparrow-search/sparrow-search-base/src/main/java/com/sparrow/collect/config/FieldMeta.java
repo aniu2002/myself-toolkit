@@ -1,31 +1,27 @@
 package com.sparrow.collect.config;
 
-import com.sparrow.collect.analyze.IAnalyze;
-import com.sparrow.collect.format.StringFormat;
 import lombok.Getter;
 import lombok.Setter;
-import org.apache.lucene.document.Field;
 
 /**
  * Created by Administrator on 2019/2/20 0020.
  */
 @Setter
 @Getter
-public class FieldSetting {
-    private String name;
-    private FieldType type;
+public class FieldMeta {
+    private String type;
     /**
      * string format , default is null
      */
-    private StringFormat format;
+    private String format;
     /**
      * 是否存储字段值
      */
-    private Field.Store store;
+    private String store;
     /**
      * 分词器
      */
-    private IAnalyze analyzer;
+    private String analyzer;
     /**
      * 描述信息
      */
@@ -33,5 +29,5 @@ public class FieldSetting {
     /**
      * 权重设置
      */
-    private float boost;
+    private Float boost;
 }

@@ -102,6 +102,9 @@ public class FileIOUtil {
         return readString(getBufferedReader(file, encoding));
     }
 
+    public static String readFile(File file) {
+        return readString(getBufferedReader(file, DEFAULT_ENCODING));
+    }
 
     /**
      * 根据文件名，读取文件

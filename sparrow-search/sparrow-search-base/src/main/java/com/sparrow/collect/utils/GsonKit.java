@@ -28,6 +28,10 @@ public class GsonKit {
         return gson.fromJson(json, type);
     }
 
+    public static <T> T toBean(String json, Class<T> type) {
+        return gson.fromJson(json, type);
+    }
+
     public static String toJson(Object o) {
         return gson.toJson(o);
     }

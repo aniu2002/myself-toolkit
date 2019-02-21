@@ -7,5 +7,5 @@ import org.apache.lucene.search.Filter;
  */
 public interface SearchFilter {
     Filter filter();
-   // List<Filter> filters(FieldSetting setting, List<Ranger> ranger, Map<String, String> extend);
+   // List<Filter> filters(FieldMeta setting, List<Ranger> ranger, Map<String, String> extend);
 }

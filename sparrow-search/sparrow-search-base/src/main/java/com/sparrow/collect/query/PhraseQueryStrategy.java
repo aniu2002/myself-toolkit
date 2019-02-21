@@ -1,13 +1,12 @@
 package com.sparrow.collect.query;
 
 import com.sparrow.collect.analyze.IAnalyze;
-import com.sparrow.collect.config.FieldSetting;
+import com.sparrow.collect.config.FieldMeta;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.lucene.index.Term;
 import org.apache.lucene.search.BooleanClause;
 import org.apache.lucene.search.BooleanQuery;
 import org.apache.lucene.search.PhraseQuery;
-import org.apache.lucene.search.TermQuery;
 import org.apache.lucene.util.BytesRef;
 
 import java.util.List;
@@ -20,14 +19,14 @@ public class PhraseQueryStrategy implements QueryStrategy {
     private final String value;
 
     private IAnalyze analyze;
-    private FieldSetting setting;
+    private FieldMeta setting;
 
     public PhraseQueryStrategy(String fieldName, String value) {
         this.fieldName = fieldName;
         this.value = value;
     }
 
-    public void setSetting(FieldSetting setting) {
+    public void setSetting(FieldMeta setting) {
         this.setting = setting;
     }
 
