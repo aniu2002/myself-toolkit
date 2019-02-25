@@ -161,6 +161,10 @@ public class FileIOUtil {
         writeFile(new File(fileName), content, encode);
     }
 
+    public static void writeFile(File file, String content) {
+        writeFile(file, content, DEFAULT_ENCODING);
+    }
+
     public static void writeFile(File file, String content, String encode) {
         if (StringUtils.isEmpty(content))
             return;

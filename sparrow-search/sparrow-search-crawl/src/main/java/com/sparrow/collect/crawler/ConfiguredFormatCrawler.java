@@ -6,8 +6,8 @@ import com.sparrow.collect.crawler.data.CrawlerData;
 import com.sparrow.collect.crawler.data.EntryData;
 import com.sparrow.collect.crawler.data.SiteEntry;
 import com.sparrow.collect.crawler.listener.ListenerSupport;
-import com.sparrow.collect.format.DataFormat;
-import com.sparrow.collect.format.DataFormatFactory;
+import com.sparrow.collect.index.format.DataFormat;
+import com.sparrow.collect.index.format.DataFormatFactory;
 
 /**
  * Created by Administrator on 2016/11/29.

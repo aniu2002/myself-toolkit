@@ -44,6 +44,8 @@ public abstract class SearcherFactory {
         analyzeMap.put("comma", new CommaAnalyzer(Version.LUCENE_46));
         /*PerFieldAnalyzerWrapper  pfaw = new PerFieldAnalyzerWrapper(analyzeMap.get("default"), anaMap);
         fieldAnalyzes.put(seach, pfaw);*/
+//        analyzeMap.put("default",new StandardAnalyzer(Version.LUCENE_46));
+        analyzeMap.put("default",new IKAnalyzer());
     }
 
     public static IndexSearcher createSearcher() throws IOException {

@@ -1,9 +1,9 @@
 package com.sparrow.collect.strpro;
 
 
-import com.sparrow.collect.format.Splitter;
+import com.sparrow.collect.index.format.Splitter;
 import com.sparrow.collect.utils.StringKit;
-import com.sparrow.collect.format.WordSplitter;
+import com.sparrow.collect.index.format.WordSplitter;
 
 public class SplitStringProcessor implements IStringProcessor {
 

@@ -1,7 +1,7 @@
 package com.sparrow.collect.analyze;
 
-import com.sparrow.collect.config.ConfigIniter;
-import com.sparrow.collect.config.Contants;
+import com.sparrow.collect.index.config.ConfigIniter;
+import com.sparrow.collect.index.config.Contants;
 import com.sparrow.collect.exception.ConfigUpdateException;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -28,7 +28,7 @@ import java.util.concurrent.ConcurrentHashMap;
  * @author tanghongjun
  * @createTime 2014年5月22日 下午7:24:08
  */
-public class AnalyzerController extends ConfigIniter {
+public class AnalyzerController  {
 
     private Map<String, Analyzer> analyzeMap = new ConcurrentHashMap<String, Analyzer>();
     private Map<String, Analyzer> fieldAnalyzes = new ConcurrentHashMap<String, Analyzer>();

@@ -1,6 +1,6 @@
 package com.sparrow.collect.analyze;
 
-import com.dili.dd.searcher.common.utils.PropertiesLoader;
+import com.sparrow.collect.utils.PropertiesLoader;
 import org.ansj.lucene4.AnsjAnalysis;
 import org.ansj.lucene4.AnsjIndexAnalysis;
 import org.ansj.util.FilterModifWord;
