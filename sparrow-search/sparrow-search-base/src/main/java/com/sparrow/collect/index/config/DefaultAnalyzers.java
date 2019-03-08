@@ -1,5 +1,6 @@
 package com.sparrow.collect.index.config;
 
+import org.apache.commons.collections.MapUtils;
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.SynonymsAnalyzer;
 import org.apache.lucene.analysis.category.CategoryAnalyzer;
@@ -55,6 +56,20 @@ public class DefaultAnalyzers {
     public static Analyzer getPerFieldAnalyzer(List<FieldSetting> fieldSettings) {
         Map<String, Analyzer> anaMap = new HashMap(5);
         fieldSettings.forEach(k -> anaMap.put(k.getName(), k.getAnalyzer()));
+        return new PerFieldAnalyzerWrapper(DEFAULT_ANALYZER, anaMap);
+    }
+
+    public static Analyzer getPerFieldAnalyzer(Map<String, Analyzer> analyzerMap) {
+        if (MapUtils.isEmpty(analyzerMap))
+            return new IKAnalyzer(true);
+        return new PerFieldAnalyzerWrapper(DEFAULT_ANALYZER, analyzerMap);
+    }
+
+    public static Analyzer getPerFieldAnalyzerWithSetting(Map<String, FieldSetting> fieldSettingMap) {
+        if (MapUtils.isEmpty(fieldSettingMap))
+            return new IKAnalyzer(true);
+        Map<String, Analyzer> anaMap = new HashMap(5);
+        fieldSettingMap.forEach((k, v) -> anaMap.put(k, v.getAnalyzer()));
         return new PerFieldAnalyzerWrapper(DEFAULT_ANALYZER, anaMap);
     }
 }

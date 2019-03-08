@@ -1,90 +1,43 @@
 package com.sparrow.collect.index.space;
 
+import com.sparrow.collect.index.Constants;
+import com.sparrow.collect.index.SpaceType;
 import com.sparrow.collect.website.utils.CloseUtil;
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.StringUtils;
+import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.index.*;
 import org.apache.lucene.index.IndexWriterConfig.OpenMode;
 import org.apache.lucene.store.Directory;
-import org.apache.lucene.store.MMapDirectory;
 import org.apache.lucene.util.Version;
-import org.wltea.analyzer.lucene.IKAnalyzer;
 
+import java.io.Closeable;
 import java.io.File;
 import java.io.IOException;
-import java.util.List;
+import java.util.Arrays;
 import java.util.Map;
-import java.util.Properties;
+import java.util.Set;
 import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
-public abstract class IndexSpacer {
-    protected Properties config;
+@Slf4j
+public abstract class IndexSpacer implements IndexService, Closeable {
+    String index;
+    File dirPath;
+    ReadWriteLock rwLock = new ReentrantReadWriteLock();
     protected Directory directory;
     protected IndexReader reader;
     protected IndexWriter writer;
-    protected SpaceType spaceType;
-    protected String dirPath;
-    protected String searchID;
-    protected ReadWriteLock rwLock = new ReentrantReadWriteLock();
-    Log log = LogFactory.getLog(IndexSpacer.class);
+    private Analyzer analyzer;
 
-    public enum SpaceType {
-        RAM, DISK, REMOTE, RAM_DISK
+    public IndexSpacer(String index, String dirPath, Analyzer analyzer) {
+        this.index = index;
+        this.dirPath = this.createIndexDirectory(dirPath);
+        this.analyzer = analyzer;
     }
 
-    public IndexSpacer(Properties config, SpaceType type,
-                       String dirPath, String searchID) {
-        super();
-        this.config = config;
-        this.spaceType = type;
-        this.dirPath = dirPath;
-        this.searchID = searchID;
-    }
-
-    public void setConfig(Properties config) {
-        this.config = config;
-    }
-
-    public IndexSpacer(Properties config, Directory directory,
-                       IndexReader reader, IndexWriter writer,
-                       SpaceType type, String dirPath, String searchID) {
-        super();
-        this.config = config;
-        this.directory = directory;
-        this.reader = reader;
-        this.writer = writer;
-        this.spaceType = type;
-        this.dirPath = dirPath;
-        this.searchID = searchID;
-    }
-
-    public IndexSpacer(Properties config, Directory directory,
-                       IndexReader reader, IndexWriter writer,
-                       SpaceType type, String searchID) {
-        super();
-        this.config = config;
-        this.directory = directory;
-        this.reader = reader;
-        this.writer = writer;
-        this.spaceType = type;
-        this.searchID = searchID;
-    }
-
-    public String getDirPath() {
-        return dirPath;
-    }
-
-    public void sleep(long time) {
-        try {
-            Thread.sleep(time);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-    }
-
-    protected void close() {
+    public final void close() {
         if (reader != null) {
             CloseUtil.closeAndNull(reader);
         }
@@ -96,81 +49,31 @@ public abstract class IndexSpacer {
         }
     }
 
-    protected void initialize() throws IOException {
-        directory = new MMapDirectory(new File(dirPath));
-        writer = initIndexWriter(directory);
+    private File createIndexDirectory(String dirPath) {
+        String dir = dirPath;
+        if (StringUtils.isEmpty(dirPath))
+            dir = String.format("%s/%s", System.getProperty("user.home"), this.index);
+        File file = new File(dir);
+        if (file.exists() && file.isDirectory())
+            return file;
+        file.mkdirs();
+        return file;
+    }
+
+    public final void initialize() throws IOException {
+        Directory dir = this.initDirectory(this.dirPath);
+        if (dir == null) {
+            throw new IOException("Index path error : " + this.dirPath);
+        }
+        //new MMapDirectory(new File(dirPath));
+        this.writer = this.initIndexWriter(dir, analyzer);
         if (reader != null) {
-            reader = DirectoryReader.open(directory);
+            reader = DirectoryReader.open(dir);
         }
+        this.directory = dir;
     }
 
-    public void initDirectory() {
-        if (this.directory != null) {
-            return;
-        }
-        if (dirPath == null) {
-            return;
-        }
-        log.info("start init " + this.searchID + " ramDirectory...");
-        try {
-            this.directory = new MMapDirectory(new File(dirPath));
-            log.info("end  " + this.searchID + " ramDirectory init...");
-        } catch (IOException e) {
-            e.printStackTrace();
-            log.info(this.searchID + " Directory init fialed...");
-        }
-    }
-
-    public void initReader() {
-        if (this.reader != null) {
-            return;
-        }
-        reInitReader();
-    }
-
-    public void reInitReader() {
-        if (directory == null) {
-            return;
-        }
-        log.info("start init " + this.searchID + " Reader...");
-        IndexReader ireBean = checkANDGetReader(directory);
-        try {
-            if (reader != null) {
-                CloseUtil.closeAndNull(reader);
-            }
-            this.reader = ireBean;
-            log.info("end  " + this.searchID + " Reader init...");
-        } catch (Exception e) {
-            log.info(this.searchID + " indexReader init fialed...");
-        }
-
-    }
-
-    public void initWriter() {
-        if (this.writer != null) {
-            return;
-        }
-        reInitWriter();
-    }
-
-    public void reInitWriter() {
-        if (directory == null) {
-            return;
-        }
-        if (this.writer != null) {
-            CloseUtil.closeAndNull(writer);
-        }
-        log.info("start init " + this.searchID + " indexWriter...");
-        try {
-            writer = initIndexWriter(directory);
-            log.info("end  " + this.searchID + " indexWriter init...");
-        } catch (IOException e) {
-            e.printStackTrace();
-            log.info(this.searchID + " indexWriter init fialed...");
-        }
-    }
-
-    protected IndexWriter initIndexWriter(Directory directory)
+    private IndexWriter initIndexWriter(Directory directory, Analyzer analyzer)
             throws IOException {
         LogMergePolicy mergePolicy = new LogDocMergePolicy();
         // 索引基本配置
@@ -183,7 +86,7 @@ public abstract class IndexSpacer {
         // 值较大,适合批量建立索引和更快的搜索
         mergePolicy.setMaxMergeDocs(Integer.MAX_VALUE);
         IndexWriterConfig indexWriterConfig = new IndexWriterConfig(
-                Version.LUCENE_46, new IKAnalyzer(true)
+                Version.LUCENE_46, analyzer //new IKAnalyzer(true)
         );
         indexWriterConfig.setMaxBufferedDocs(10000);
         indexWriterConfig.setMergePolicy(mergePolicy);
@@ -192,61 +95,134 @@ public abstract class IndexSpacer {
         return new IndexWriter(directory, indexWriterConfig);
     }
 
-    public abstract IndexReader getReader();
-
-    public abstract IndexWriter getWriter();
-
-    public abstract boolean addDocs(Document... docs) throws IOException;
-
-    public abstract boolean delDocs(String... ids) throws IOException;
-
-    public abstract boolean updateDocs(Map<String, Document> idAndDocs)
-            throws IOException;
-
-    public abstract boolean updateDoc(String id, Document doc)
-            throws IOException;
-
-    public abstract int commit() throws IOException;
-
-    public abstract void rollback() throws IOException;
-
-    public SpaceType getSpaceType() {
-        return this.spaceType;
-    }
-
-    protected void checkANDGetReader(Directory dire, List<IndexReader> l) {
-        try {
-            if (dire != null && dire.listAll().length > 4) {
-                l.add(DirectoryReader.open(dire));
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    protected IndexReader checkANDGetReader(Directory dire) {
+    final IndexReader checkANDGetReader(Directory dire) {
         try {
             if (dire != null && dire.listAll().length > 4) {
                 return DirectoryReader.open(dire);
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            log.error("Check and get reader error : ", e);
         }
         return null;
     }
 
-    protected abstract void initIndexSpacer(String searchID, Properties config);
+    final void checkReader() {
+        if (reader == null) {
+            reader = checkANDGetReader(directory);
+        }
+    }
 
+    public final IndexReader getReader() {
+        checkReader();
+        return reader;
+    }
 
-    /**
-     * 获取master, slaver路径
-     * 验证完整性, 将完整->不完整; 新的->旧的.
-     *
-     * @param fileName
-     * @return
-     * @throws IOException
-     */
-    protected String getDiskPathBean(String fileName) throws IOException {
-        return fileName;
+    final void reInitWriter() {
+        if (directory == null) {
+            return;
+        }
+        if (this.writer != null) {
+            CloseUtil.closeAndNull(writer);
+        }
+        try {
+            writer = initIndexWriter(directory, this.analyzer);
+        } catch (IOException e) {
+            log.error("Initialize index writer error : ", e);
+        }
+    }
+
+    protected abstract SpaceType getSpaceType();
+
+    protected abstract Directory initDirectory(File dir);
+
+    @Override
+    public final boolean addDocuments(Document... docs) throws IOException {
+        try {
+            writer.addDocuments(Arrays.asList(docs));
+        } catch (IOException e) {
+            log.error("Add document error : ", e);
+        } finally {
+            rwLock.writeLock().unlock();
+        }
+        return true;
+    }
+
+    @Override
+    public final int commit() throws IOException {
+        int numDocs;
+        rwLock.writeLock().lock();
+        try {
+            // 优化操作
+            // writer.commit();
+            // writer.optimize();
+            writer.commit();
+            numDocs = writer.numDocs();
+            log.info("Commit RAM docs = {}", numDocs);
+        } finally {
+            rwLock.writeLock().unlock();
+        }
+        return numDocs;
+    }
+
+    @Override
+    public final void rollback() throws IOException {
+        rwLock.writeLock().lock();
+        try {
+            writer.rollback();
+        } catch (IOException e) {
+            log.error("Rollback error : ", e);
+        } finally {
+            rwLock.writeLock().unlock();
+        }
+    }
+
+    @Override
+    public final boolean deleteDocuments(String... ids) throws IOException {
+        rwLock.writeLock().lock();
+        try {
+            for (String id : ids) {
+                writer.deleteDocuments(new Term(Constants.RECORD_INDEX_ONLY_KEY_NAME, id));
+            }
+            // writer.commit();
+        } catch (IOException e) {
+            log.error("Delete document error : ", e);
+        } finally {
+            rwLock.writeLock().unlock();
+        }
+        return true;
+    }
+
+    @Override
+    public final boolean updateDocuments(Map<String, Document> idAndDocs)
+            throws IOException {
+        rwLock.writeLock().lock();
+        try {
+            Set<Map.Entry<String, Document>> set = idAndDocs.entrySet();
+            for (Map.Entry<String, Document> entry : set) {
+                writer.updateDocument(new Term(Constants.RECORD_INDEX_ONLY_KEY_NAME, entry.getKey()), entry.getValue());
+            }
+        } catch (IOException e) {
+            log.error("Update document map error : ", e);
+        } finally {
+            rwLock.writeLock().unlock();
+        }
+        return true;
+    }
+
+    @Override
+    public boolean updateDocument(String id, Document doc) throws IOException {
+        rwLock.writeLock().lock();
+        try {
+            writer.updateDocument(new Term(Constants.RECORD_INDEX_ONLY_KEY_NAME, id), doc);
+        } catch (IOException e) {
+            log.error("Update document error : ", e);
+        } finally {
+            rwLock.writeLock().unlock();
+        }
+        return true;
+    }
+
+    public int mergeIndexAndReOpen() throws IOException {
+        return 0;
     }
 }

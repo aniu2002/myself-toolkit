@@ -16,7 +16,6 @@ public class IndexSetting {
     private String index;
     private String alias;
     private String dataPath;
-    private String logsPath;
     private String configFile;
     private Map<String,Analyzer> analyzers;
     private Map<String,StringFormat> formats;

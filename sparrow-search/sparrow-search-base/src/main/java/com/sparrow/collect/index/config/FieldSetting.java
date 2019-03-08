@@ -1,6 +1,5 @@
 package com.sparrow.collect.index.config;
 
-import com.sparrow.collect.index.analyze.IAnalyze;
 import com.sparrow.collect.index.format.StringFormat;
 import lombok.Getter;
 import lombok.Setter;

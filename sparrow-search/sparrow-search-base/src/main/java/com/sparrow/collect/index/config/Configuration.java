@@ -80,7 +80,7 @@ public class Configuration {
         indexSetting.setIndex(index);
         indexSetting.setConfigFile(file.getPath());
         indexSetting.setDataPath(String.format("%s/%s", this.baseIndexDataPath, index));
-        indexSetting.setLogsPath(String.format("%s/%s", this.baseIndexLogsPath, index));
+//        indexSetting.setLogsPath(String.format("%s/%s", this.baseIndexLogsPath, index));
 
         Map<String, String> analyzersMetaMap = indexMeta.getAnalyzers();
         if (MapUtils.isNotEmpty(analyzersMetaMap)) {

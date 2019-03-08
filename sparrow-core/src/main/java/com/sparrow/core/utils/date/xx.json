@@ -1,0 +1,52 @@
+{
+  "from": 0,
+  "size": 20,
+  "post_filter": {
+    "bool": {
+      "must": [
+        {
+          "terms": {
+            "type": [
+              "110112",
+              "110106",
+              "200600",
+              "300300"
+            ],
+            "boost": 1
+          }
+        },
+        {
+          "terms": {
+            "who": [
+              "20190221010"
+            ],
+            "boost": 1
+          }
+        },
+        {
+          "terms": {
+            "dest": [
+              "192.168.2.201"
+            ],
+            "boost": 1
+          }
+        }
+      ],
+      "disable_coord": false,
+      "adjust_pure_negative": true,
+      "boost": 1
+    }
+  },
+  "version": false,
+  "explain": false,
+  "_source": {
+    "includes": [],
+    "excludes": [
+      "where",
+      "dest",
+      "who",
+      "which",
+      "what"
+    ]
+  }
+}

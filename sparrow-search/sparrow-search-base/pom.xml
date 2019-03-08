@@ -80,6 +80,16 @@
             <groupId>com.belerweb</groupId>
             <artifactId>pinyin4j</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.ansj</groupId>
+            <artifactId>ansj_lucene4_plug</artifactId>
+            <version>5.0.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.ansj</groupId>
+            <artifactId>ansj_seg</artifactId>
+            <version>5.0.2</version>
+        </dependency>
         <!-- GSON -->
         <dependency>
             <groupId>com.google.code.gson</groupId>
