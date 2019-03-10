@@ -26,7 +26,7 @@ public class Configuration {
     private String baseHome;
 
     private Configuration() {
-        settings = new HashMap(5, 0.9f);
+        settings = new HashMap<>();
         this.initializeIndexConfig();
     }
 
@@ -160,6 +160,10 @@ public class Configuration {
 
     public Collection<String> indexNames() {
         return settings.keySet();
+    }
+
+    public IndexSetting indexSetting(String indexName) {
+        return settings.get(indexName);
     }
 
     public Collection<IndexSetting> indexSettings() {

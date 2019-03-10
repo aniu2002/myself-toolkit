@@ -7,7 +7,7 @@ import java.util.Map;
  * Created by Administrator on 2019/2/21 0021.
  */
 public enum FieldType {
-    NONE(null), STRING("string"), LONG("long"), INT("int"), FLOAT("float"),
+    NONE(null), STRING("string"), LONG("long"), DATE("date"), INT("int"), FLOAT("float"),
     DOUBLE("double"), KEYWORD("keyword"), TEXT("text");
     final String value;
 

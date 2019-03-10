@@ -17,8 +17,16 @@ public class IndexSetting {
     private String alias;
     private String dataPath;
     private String configFile;
-    private Map<String,Analyzer> analyzers;
-    private Map<String,StringFormat> formats;
-    private Map<String,FieldSetting> fields;
+    private Map<String, Analyzer> analyzers;
+    private Map<String, StringFormat> formats;
+    private Map<String, FieldSetting> fields;
     private Analyzer analyzer;
+
+    public StringFormat getStringFormat(String fieldName) {
+        return formats == null ? null : formats.get(fieldName);
+    }
+
+    public FieldSetting getFieldSetting(String fieldName) {
+        return fields == null ? null : fields.get(fieldName);
+    }
 }
