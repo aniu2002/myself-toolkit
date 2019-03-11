@@ -39,6 +39,7 @@ public class DefaultAnalyzers {
         ANALYZER_MAP.put("comma", new CommaAnalyzer(Version.LUCENE_46));
         ANALYZER_MAP.put("default", new IKAnalyzer());
         DEFAULT_ANALYZER = new IKAnalyzer();
+        //DEFAULT_ANALYZER = new IKAnalyzer();
     }
 
     private DefaultAnalyzers() {
@@ -54,8 +55,12 @@ public class DefaultAnalyzers {
     }
 
     public static Analyzer getPerFieldAnalyzer(List<FieldSetting> fieldSettings) {
-        Map<String, Analyzer> anaMap = new HashMap(5);
-        fieldSettings.forEach(k -> anaMap.put(k.getName(), k.getAnalyzer()));
+        Map<String, Analyzer> anaMap = new HashMap();
+        fieldSettings.forEach(k -> {
+            if (k.getAnalyzer() != null) {
+                anaMap.put(k.getName(), k.getAnalyzer());
+            }
+        });
         return new PerFieldAnalyzerWrapper(DEFAULT_ANALYZER, anaMap);
     }
 
@@ -68,7 +73,7 @@ public class DefaultAnalyzers {
     public static Analyzer getPerFieldAnalyzerWithSetting(Map<String, FieldSetting> fieldSettingMap) {
         if (MapUtils.isEmpty(fieldSettingMap))
             return new IKAnalyzer(true);
-        Map<String, Analyzer> anaMap = new HashMap(5);
+        Map<String, Analyzer> anaMap = new HashMap<>();
         fieldSettingMap.forEach((k, v) -> anaMap.put(k, v.getAnalyzer()));
         return new PerFieldAnalyzerWrapper(DEFAULT_ANALYZER, anaMap);
     }

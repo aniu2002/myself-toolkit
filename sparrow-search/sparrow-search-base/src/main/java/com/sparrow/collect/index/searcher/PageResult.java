@@ -1,9 +1,6 @@
 package com.sparrow.collect.index.searcher;
 
-import lombok.Getter;
-import lombok.NonNull;
-import lombok.RequiredArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 /**
  * @author: Yzc
@@ -11,6 +8,7 @@ import lombok.Setter;
  */
 @Setter
 @Getter
+@Builder
 @RequiredArgsConstructor
 public class PageResult {
     @NonNull

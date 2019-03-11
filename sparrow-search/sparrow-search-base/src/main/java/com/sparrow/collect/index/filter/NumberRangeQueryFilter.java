@@ -22,6 +22,9 @@ public class NumberRangeQueryFilter implements SearchFilter {
         this.fieldName = fieldName;
         this.lower = lower;
         this.upper = upper;
+        if (lower != null && lower == upper) {
+            this.includeLower = true;
+        }
     }
 
     public void setLower(Number lower) {
@@ -38,6 +41,26 @@ public class NumberRangeQueryFilter implements SearchFilter {
 
     public void setIncludeUpper(boolean includeUpper) {
         this.includeUpper = includeUpper;
+    }
+
+    public NumberRangeQueryFilter lower(Number lower) {
+        this.lower = lower;
+        return this;
+    }
+
+    public NumberRangeQueryFilter upper(Number upper) {
+        this.upper = upper;
+        return this;
+    }
+
+    public NumberRangeQueryFilter includeLower(boolean includeLower) {
+        this.includeLower = includeLower;
+        return this;
+    }
+
+    public NumberRangeQueryFilter includeUpper(boolean includeUpper) {
+        this.includeUpper = includeUpper;
+        return this;
     }
 
     @Override

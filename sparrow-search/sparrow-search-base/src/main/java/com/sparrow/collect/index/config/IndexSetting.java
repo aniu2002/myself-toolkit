@@ -1,5 +1,6 @@
 package com.sparrow.collect.index.config;
 
+import com.sparrow.collect.index.format.DefaultStringFormat;
 import com.sparrow.collect.index.format.StringFormat;
 import lombok.Getter;
 import lombok.Setter;
@@ -13,6 +14,7 @@ import java.util.Map;
 @Setter
 @Getter
 public class IndexSetting {
+    private static final StringFormat DEFAULT_FORMAT = new DefaultStringFormat();
     private String index;
     private String alias;
     private String dataPath;
@@ -23,7 +25,7 @@ public class IndexSetting {
     private Analyzer analyzer;
 
     public StringFormat getStringFormat(String fieldName) {
-        return formats == null ? null : formats.get(fieldName);
+        return formats == null ? DEFAULT_FORMAT : formats.getOrDefault(fieldName,DEFAULT_FORMAT);
     }
 
     public FieldSetting getFieldSetting(String fieldName) {

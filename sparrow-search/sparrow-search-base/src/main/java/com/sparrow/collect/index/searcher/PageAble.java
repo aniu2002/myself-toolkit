@@ -10,6 +10,6 @@ import lombok.Setter;
 @Setter
 @Getter
 public class PageAble {
-    private int page;
-    private int size;
+    private int page = 1;
+    private int size = 100;
 }

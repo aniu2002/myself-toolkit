@@ -10,6 +10,7 @@ import org.apache.commons.collections.MapUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.document.Field;
+import org.apache.lucene.utils.StringUtil;
 
 import java.io.File;
 import java.util.*;
@@ -102,8 +103,11 @@ public class Configuration {
             Map<String, Analyzer> analyzerMap = indexSetting.getAnalyzers();
             Map<String, FieldSetting> fieldSettingMap = new HashMap(fieldMetaMap.size());
             fieldMetaMap.forEach((k, v) ->
-                    fieldSettingMap.put(k, this.createFieldSetting(k, v, analyzerMap,
-                            indexSetting.getFormats(), analyzerFieldSetting)));
+                    fieldSettingMap.put(k,
+                            this.createFieldSetting(k, v, analyzerMap,
+                                    indexSetting.getFormats(), analyzerFieldSetting)
+                    )
+            );
             indexSetting.setFields(fieldSettingMap);
             if (CollectionUtils.isEmpty(analyzerFieldSetting)) {
                 indexSetting.setAnalyzer(DefaultAnalyzers.getDefaultAnalyzer());
@@ -136,6 +140,9 @@ public class Configuration {
 
     private Analyzer getAnalyzer(String name, Map<String, Analyzer> analyzersMap) {
         Analyzer analyzer = null;
+        if (StringUtils.isEmpty(name)) {
+            return null;
+        }
         if (MapUtils.isNotEmpty(analyzersMap)) {
             analyzer = analyzersMap.get(name);
         }
