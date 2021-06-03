@@ -13,7 +13,7 @@
     <properties>
         <appname>sparrow-egg</appname>
         <slf4j.version>1.6.4</slf4j.version>
-        <httpclient.version>4.3.3</httpclient.version>
+        <httpclient.version>4.5.13</httpclient.version>
         <!--<poi.version>3.10-FINAL</poi.version>-->
         <pdfbox.version>1.8.0</pdfbox.version>
         <poi.version>3.14</poi.version>
