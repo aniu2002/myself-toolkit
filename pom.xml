@@ -15,7 +15,7 @@
         <slf4j.version>1.6.4</slf4j.version>
         <httpclient.version>4.3.3</httpclient.version>
         <!--<poi.version>3.10-FINAL</poi.version>-->
-        <pdfbox.version>1.8.0</pdfbox.version>
+        <pdfbox.version>1.8.16</pdfbox.version>
         <poi.version>3.14</poi.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.home>${env.JAVA_HOME}</java.home>
